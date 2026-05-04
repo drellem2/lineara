@@ -13,7 +13,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 
 from . import HARNESS_VERSION
-from .corpus import build_stream, corpus_snapshot, load_records
+from .corpus import build_stream, corpus_snapshot, load_records, sign_position_fingerprints
 from .hypothesis import (
     SHAPE_CANDIDATE_EQUATION_V1,
     SHAPE_V0,
@@ -21,12 +21,21 @@ from .hypothesis import (
     detect_shape,
     load_and_validate,
 )
-from .metrics import METRICS, compression_delta_v0, local_fit_v0
+from .metrics import (
+    METRICS,
+    EmpiricalBigramModel,
+    _sign_corpus_counts,
+    compression_delta_v0,
+    geographic_genre_fit_v1,
+    local_fit_v0,
+    local_fit_v1,
+)
 
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _DEFAULT_CORPUS = _REPO_ROOT / "corpus" / "all.jsonl"
 _DEFAULT_RESULTS = _REPO_ROOT / "results" / "experiments.jsonl"
+_DEFAULT_POOLS_DIR = _REPO_ROOT / "pools"
 _RESULT_SCHEMA_PATH = Path(__file__).parent / "schemas" / "result.v0.schema.json"
 
 
@@ -37,6 +46,10 @@ _DEFAULT_METRIC_FOR_SHAPE = {
     SHAPE_V0: "compression_delta_v0",
     SHAPE_CANDIDATE_EQUATION_V1: "local_fit_v0",
 }
+
+
+_LOCAL_FIT_METRICS = {"local_fit_v0", "local_fit_v1"}
+_CANDIDATE_EQUATION_METRICS = _LOCAL_FIT_METRICS | {"geographic_genre_fit_v1"}
 
 
 def _load_result_validator() -> Draft202012Validator:
@@ -117,6 +130,51 @@ def _build_v0_row(
     }
 
 
+def _load_pool_for(pool_path: Path | None, hypothesis: dict, repo_root: Path) -> dict | None:
+    """Load and pre-compute a pool context for v1 metrics.
+
+    Inference order:
+      1. Explicit ``pool_path`` argument.
+      2. ``hypothesis['source_pool']`` if a matching ``pools/<name>.yaml``
+         exists.
+      3. None (caller must error out if a v1 metric is selected).
+    """
+    import yaml
+
+    class _StringDateLoader(yaml.SafeLoader):
+        pass
+
+    _StringDateLoader.yaml_implicit_resolvers = {
+        k: [(tag, regexp) for tag, regexp in v if tag != "tag:yaml.org,2002:timestamp"]
+        for k, v in yaml.SafeLoader.yaml_implicit_resolvers.items()
+    }
+
+    candidates: list[Path] = []
+    if pool_path is not None:
+        candidates.append(pool_path)
+    src_pool = hypothesis.get("source_pool")
+    if src_pool:
+        candidates.append(repo_root / "pools" / f"{src_pool}.yaml")
+        # Curated hypotheses can have source_pool tags like "linear_b_carryover"
+        # or "random_scramble" with no matching pool YAML. Fall back to the
+        # aquitanian pool so the empirical bigram model has data; the
+        # geographic compat tables include a 'linear_b' region row.
+        candidates.append(repo_root / "pools" / "aquitanian.yaml")
+
+    for c in candidates:
+        if c.exists():
+            with c.open("r", encoding="utf-8") as fh:
+                pool = yaml.load(fh, Loader=_StringDateLoader)
+            sequences = [list(e["phonemes"]) for e in pool.get("entries", [])]
+            return {
+                "path": c,
+                "pool": pool,
+                "bigram_model": EmpiricalBigramModel.from_sequences(sequences),
+                "by_surface": {e["surface"]: e for e in pool.get("entries", [])},
+            }
+    return None
+
+
 def _build_candidate_equation_row(
     *,
     hypothesis: dict,
@@ -130,31 +188,87 @@ def _build_candidate_equation_row(
     ran_at: str,
     duration_ms: int,
     note: str,
+    pool_ctx: dict | None,
 ) -> dict:
-    if metric_name != "local_fit_v0":
+    if metric_name not in _CANDIDATE_EQUATION_METRICS:
         raise ValueError(
-            f"candidate_equation.v1 shape requires metric=local_fit_v0; got {metric_name!r}"
+            f"candidate_equation.v1 shape requires one of "
+            f"{sorted(_CANDIDATE_EQUATION_METRICS)}; got {metric_name!r}"
         )
     equation = hypothesis["equation"]
     record = _resolve_inscription(records, equation["inscription_id"])
     signs = _signs_from_equation(record, equation)
     phonemes = list(hypothesis["root"]["phonemes"])
-    result = local_fit_v0(stream, signs, phonemes)
-    return {
+
+    base = {
         "run_id": str(uuid.uuid4()),
         "hypothesis_path": rel_hyp,
         "hypothesis_hash": h_hash,
         "harness_version": HARNESS_VERSION,
         "metric": metric_name,
-        "score": result.score,
-        "score_control_z": result.score_control_z,
-        "metric_notes": result.metric_notes,
         "corpus_records_used": n_records,
         "corpus_snapshot": snapshot,
         "ran_at": ran_at,
         "duration_ms": duration_ms,
         "notes": note,
     }
+
+    if metric_name == "local_fit_v0":
+        result = local_fit_v0(stream, signs, phonemes)
+        base.update(
+            {
+                "score": float(result.score),
+                "score_control_z": float(result.score_control_z),
+                "metric_notes": result.metric_notes,
+            }
+        )
+    elif metric_name == "local_fit_v1":
+        if pool_ctx is None:
+            raise ValueError("local_fit_v1 requires a pool context (--pool)")
+        fingerprints = sign_position_fingerprints(stream)
+        sign_counts = _sign_corpus_counts(stream)
+        result = local_fit_v1(
+            stream,
+            signs,
+            phonemes,
+            pool_ctx["bigram_model"],
+            sign_counts=sign_counts,
+            fingerprints=fingerprints,
+        )
+        base.update(
+            {
+                "score": float(result.score),
+                "metric_notes": result.metric_notes,
+                "position_term": float(result.position_term),
+                "bigram_term": float(result.bigram_term),
+                "length_penalty": float(result.length_penalty),
+                "rare_sign_correction": float(result.rare_sign_correction),
+            }
+        )
+    elif metric_name == "geographic_genre_fit_v1":
+        if pool_ctx is None:
+            raise ValueError(
+                "geographic_genre_fit_v1 requires a pool context (--pool)"
+            )
+        surface = hypothesis["root"]["surface"]
+        entry = pool_ctx["by_surface"].get(surface)
+        region = entry.get("region") if entry else None
+        semantic_field = entry.get("semantic_field") if entry else None
+        result = geographic_genre_fit_v1(
+            region=region,
+            semantic_field=semantic_field,
+            site=record.get("site"),
+            genre_hint=record.get("genre_hint"),
+        )
+        base.update(
+            {
+                "score": float(result.score),
+                "metric_notes": result.metric_notes,
+                "region_compat": float(result.region_compat),
+                "semantic_compat": float(result.semantic_compat),
+            }
+        )
+    return base
 
 
 def score_hypothesis(
@@ -163,12 +277,18 @@ def score_hypothesis(
     note: str = "",
     corpus_path: Path = _DEFAULT_CORPUS,
     repo_root: Path = _REPO_ROOT,
+    pool_path: Path | None = None,
 ) -> dict:
     """Run one scoring pass and return the result row dict (not yet persisted).
 
     If ``metric_name`` is None, dispatches based on the hypothesis shape:
     ``hypothesis.v0`` → ``compression_delta_v0``, ``candidate_equation.v1``
     → ``local_fit_v0``.
+
+    For v1 metrics (local_fit_v1, geographic_genre_fit_v1), a pool YAML is
+    needed; ``pool_path`` overrides inference. When omitted, falls back
+    to ``hypothesis.source_pool`` → ``pools/<src>.yaml`` and finally to
+    ``pools/aquitanian.yaml`` so curated cross-pool hypotheses still score.
     """
     hypothesis = load_and_validate(hypothesis_path)
     h_hash = canonical_hash(hypothesis)
@@ -205,6 +325,9 @@ def score_hypothesis(
             note=note,
         )
     elif shape == SHAPE_CANDIDATE_EQUATION_V1:
+        pool_ctx: dict | None = None
+        if metric_name in ("local_fit_v1", "geographic_genre_fit_v1"):
+            pool_ctx = _load_pool_for(pool_path, hypothesis, repo_root)
         row = _build_candidate_equation_row(
             hypothesis=hypothesis,
             h_hash=h_hash,
@@ -217,6 +340,7 @@ def score_hypothesis(
             ran_at=ran_at,
             duration_ms=0,
             note=note,
+            pool_ctx=pool_ctx,
         )
     else:  # pragma: no cover - guarded earlier
         raise ValueError(f"unhandled hypothesis shape: {shape}")
@@ -261,6 +385,13 @@ def main(argv: list[str] | None = None) -> int:
         help="Repo root used to resolve relative paths and the corpus snapshot.",
     )
     parser.add_argument(
+        "--pool",
+        type=Path,
+        default=None,
+        help="Pool YAML path (used by v1 metrics; inferred from "
+        "hypothesis.source_pool when omitted).",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Score and print the row, but do not append to the result stream.",
@@ -273,6 +404,7 @@ def main(argv: list[str] | None = None) -> int:
         note=args.note,
         corpus_path=args.corpus,
         repo_root=args.repo_root,
+        pool_path=args.pool,
     )
     if not args.dry_run:
         append_row(row, args.results)

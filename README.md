@@ -61,10 +61,10 @@ python3 scripts/check_corpus.py           # SigLA word-pattern cross-check
 
 The harness scores a declarative hypothesis against the corpus and appends one row to `results/experiments.jsonl`. Two hypothesis shapes are supported, each paired with a default metric:
 
-| Shape | Discriminator | Default metric | Use for |
-|---|---|---|---|
-| `hypothesis.v0` (mapping) | (no `schema_version`) | `compression_delta_v0` | corpus-global sign→phoneme mappings |
-| `candidate_equation.v1` | `schema_version: candidate_equation.v1` | `local_fit_v0` | local "this span = this candidate root" hypotheses |
+| Shape | Discriminator | Default metric | Other metrics | Use for |
+|---|---|---|---|---|
+| `hypothesis.v0` (mapping) | (no `schema_version`) | `compression_delta_v0` | — | corpus-global sign→phoneme mappings |
+| `candidate_equation.v1` | `schema_version: candidate_equation.v1` | `local_fit_v0` | `local_fit_v1`, `geographic_genre_fit_v1` | local "this span = this candidate root" hypotheses |
 
 ```bash
 # Score a hypothesis and append the result row (auto-dispatches metric on shape).
@@ -88,18 +88,27 @@ The bulk path turns a substrate-root pool into thousands of candidate-equation h
 #    filenames; manifest is sorted by (pool_entry_index, inscription_id, span_start).
 python3 scripts/generate_candidates.py --pool aquitanian
 
-# 2. Run the sweep. Resumable: skips hypotheses already scored under the
-#    current corpus snapshot. Prints progress every 100 rows and a summary
-#    block + ASCII histogram at the end.
+# 2a. Run the sweep with the v0 metric. Resumable.
 python3 scripts/run_sweep.py --manifest hypotheses/auto/aquitanian.manifest.jsonl
+
+# 2b. Or run it with the v1 metrics (one row per hypothesis × metric).
+python3 scripts/run_sweep.py --manifest hypotheses/auto/aquitanian.manifest.jsonl \
+    --metrics local_fit_v1,geographic_genre_fit_v1
 
 # 3. Render the per-pool leaderboard snapshot.
 python3 scripts/rollup.py --metric local_fit_v0 --pool aquitanian --top 50 \
     --write results/rollup.aquitanian.md
+
+# 4. Or render a composite leaderboard joining v1 metrics by hypothesis.
+python3 scripts/rollup.py --pool aquitanian --top 50 \
+    --metrics local_fit_v1,geographic_genre_fit_v1 --weights 0.7,0.3 \
+    --normalize zscore --write results/rollup.aquitanian.composite.md
 ```
 
 Pool YAMLs live under `pools/<name>.yaml`, validated against `pools/schemas/pool.v1.schema.json`. The Aquitanian pool's source provenance and refresh procedure are documented in `pools/aquitanian.README.md`.
 
 The `local_fit_v0` metric scores a `candidate_equation.v1` hypothesis by combining a position-fit term (how well do the equation's signs' corpus position fingerprints match the proposed phonemes' expected position profiles?) with a phoneme-class bigram log-likelihood under a hardcoded Basque-style CV phonotactic prior. The result row carries a control-z computed against 200 random phoneme-permutations of the same alignment (seed=42); see the docstring on `harness.metrics.local_fit_v0` for the formula, what it does/does-not measure, and known v0 limitations.
+
+The `local_fit_v1` metric (mg-7dd1) is a re-formulation that returns a directly-comparable absolute score (no per-hypothesis z-collapse), uses an empirical phoneme bigram model trained on the active pool's surfaces (rather than a hardcoded class-bigram prior), length-normalizes per-pair, and applies a rare-sign correction. The `geographic_genre_fit_v1` metric is a categorical compat score in [0, 1] computed from (pool entry's region/semantic_field) × (inscription's site/genre_hint). Both v1 metrics' tradeoffs and acceptance-bar outcomes are documented in `docs/findings.md` under the mg-7dd1 entry.
 
 The harness depends on `pyyaml` and `jsonschema`; install with `pip install pyyaml jsonschema`.

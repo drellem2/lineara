@@ -2,30 +2,27 @@
 """Bulk sweep runner — score every hypothesis listed in a generator manifest.
 
 Reads ``hypotheses/auto/<pool>.manifest.jsonl``, scores each candidate
-against ``corpus/all.jsonl`` with the ``local_fit_v0`` metric, and appends
-one row per scoring run to ``results/experiments.jsonl``.
+against ``corpus/all.jsonl`` with one or more metrics, and appends one row
+per (hypothesis, metric) scoring run to ``results/experiments.jsonl``.
 
 The runner is **resumable**. Before scoring, it builds a set of
-``(hypothesis_hash, corpus_snapshot)`` pairs from the existing result
-stream and skips any manifest entry that already appears. So a re-run
-after a partial sweep only re-scores the new candidates; if neither the
-candidates nor the corpus have changed, the re-run is a no-op.
+``(hypothesis_hash, corpus_snapshot, metric)`` triples from the existing
+result stream and skips any (manifest entry × selected metric) pair that
+already appears. So a re-run after a partial sweep only re-scores the new
+work; if neither the candidates nor the corpus nor the metric set has
+changed, the re-run is a no-op.
 
 Performance. The full corpus, token stream, sign-position fingerprints,
-and corpus snapshot are computed once at startup and reused across all
-hypothesis scorings. Per-hypothesis work is dominated by the 200
-permutation rescores inside ``local_fit_v0``; on the existing 761-record
-corpus that costs ~1-3 ms per hypothesis. ~5,000 hypotheses fit
-comfortably under the 15-minute mg-f832 acceptance budget.
-
-End-of-run summary block:
-  * total runs, count beating z=+1.0 and z=+2.0, count below z=-1.0
-  * top 5 by score_control_z (with hypothesis_path)
-  * ASCII histogram of score_control_z over 10 buckets
+sign-corpus counts, corpus snapshot, and pool-derived empirical bigram
+model are computed once at startup and reused across all hypothesis
+scorings. Per-hypothesis work for ``local_fit_v0`` is dominated by the 200
+permutation rescores; ``local_fit_v1`` and ``geographic_genre_fit_v1`` are
+both O(equation length) at scoring time.
 
 Usage:
     python3 scripts/run_sweep.py --manifest hypotheses/auto/aquitanian.manifest.jsonl
-    python3 scripts/run_sweep.py --manifest <path> --note "first sweep"
+    python3 scripts/run_sweep.py --manifest <path> \\
+        --metrics local_fit_v1,geographic_genre_fit_v1
 """
 
 from __future__ import annotations
@@ -42,6 +39,7 @@ from pathlib import Path
 # Allow running as `python3 scripts/run_sweep.py` from anywhere.
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+import yaml
 from jsonschema import Draft202012Validator
 
 from harness import HARNESS_VERSION
@@ -57,19 +55,56 @@ from harness.hypothesis import (
     detect_shape,
     load_and_validate,
 )
-from harness.metrics import local_fit_v0
+from harness.metrics import (
+    EmpiricalBigramModel,
+    _sign_corpus_counts,
+    geographic_genre_fit_v1,
+    local_fit_v0,
+    local_fit_v1,
+)
 
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _DEFAULT_CORPUS = _REPO_ROOT / "corpus" / "all.jsonl"
 _DEFAULT_RESULTS = _REPO_ROOT / "results" / "experiments.jsonl"
 _RESULT_SCHEMA_PATH = _REPO_ROOT / "harness" / "schemas" / "result.v0.schema.json"
+_DEFAULT_POOLS_DIR = _REPO_ROOT / "pools"
+
+_SUPPORTED_METRICS = ("local_fit_v0", "local_fit_v1", "geographic_genre_fit_v1")
 
 
-def _existing_runs(results_path: Path) -> set[tuple[str, str]]:
-    """Return the (hypothesis_hash, corpus_snapshot) pairs already present in
-    the result stream. Used to skip re-scoring during a resume."""
-    seen: set[tuple[str, str]] = set()
+class _StringDateLoader(yaml.SafeLoader):
+    """SafeLoader variant that keeps ISO dates as strings."""
+
+
+_StringDateLoader.yaml_implicit_resolvers = {
+    k: [(tag, regexp) for tag, regexp in v if tag != "tag:yaml.org,2002:timestamp"]
+    for k, v in yaml.SafeLoader.yaml_implicit_resolvers.items()
+}
+
+
+def load_pool(pool_path: Path) -> dict:
+    with pool_path.open("r", encoding="utf-8") as fh:
+        return yaml.load(fh, Loader=_StringDateLoader)
+
+
+def build_pool_context(pool: dict) -> dict:
+    """Pre-compute the bigram model + surface→entry lookup from a pool YAML.
+
+    Returns:
+        ``{"bigram_model": EmpiricalBigramModel,
+           "by_surface": {surface: entry_dict}}``
+    """
+    sequences = [list(e["phonemes"]) for e in pool.get("entries", [])]
+    bigram_model = EmpiricalBigramModel.from_sequences(sequences)
+    by_surface = {e["surface"]: e for e in pool.get("entries", [])}
+    return {"bigram_model": bigram_model, "by_surface": by_surface}
+
+
+def _existing_runs(results_path: Path) -> set[tuple[str, str, str]]:
+    """Return the (hypothesis_hash, corpus_snapshot, metric) triples already
+    present in the result stream. Used to skip re-scoring during a resume."""
+    seen: set[tuple[str, str, str]] = set()
     if not results_path.exists():
         return seen
     with results_path.open("r", encoding="utf-8") as fh:
@@ -78,7 +113,13 @@ def _existing_runs(results_path: Path) -> set[tuple[str, str]]:
             if not line:
                 continue
             row = json.loads(line)
-            seen.add((row["hypothesis_hash"], row.get("corpus_snapshot", "")))
+            seen.add(
+                (
+                    row["hypothesis_hash"],
+                    row.get("corpus_snapshot", ""),
+                    row.get("metric", ""),
+                )
+            )
     return seen
 
 
@@ -102,9 +143,7 @@ def _resolve_inscription(records: list[dict], inscription_id: str) -> dict:
 
 def _signs_from_equation(record: dict, equation: dict) -> list[str]:
     """Pull syllabogram tokens within ``equation.span`` whose strings appear in
-    ``equation.sign_to_phoneme``. Mirrors ``harness.run._signs_from_equation``;
-    duplicated here so the sweep runner does not need to import the harness CLI
-    module just for this helper."""
+    ``equation.sign_to_phoneme``. Mirrors ``harness.run._signs_from_equation``."""
     tokens = record["tokens"]
     start, end = equation["span"]
     if start < 0 or end >= len(tokens):
@@ -127,67 +166,119 @@ def _signs_from_equation(record: dict, equation: dict) -> list[str]:
     return picked
 
 
+def _base_row(
+    *,
+    metric_name: str,
+    hypothesis_path: Path,
+    h_hash: str,
+    n_records: int,
+    snapshot: str,
+    ran_at: str,
+    note: str,
+    repo_root: Path,
+) -> dict:
+    try:
+        rel_hyp = str(hypothesis_path.resolve().relative_to(repo_root))
+    except ValueError:
+        rel_hyp = str(hypothesis_path)
+    return {
+        "run_id": str(uuid.uuid4()),
+        "hypothesis_path": rel_hyp,
+        "hypothesis_hash": h_hash,
+        "harness_version": HARNESS_VERSION,
+        "metric": metric_name,
+        "corpus_records_used": n_records,
+        "corpus_snapshot": snapshot,
+        "ran_at": ran_at,
+        "duration_ms": 0,
+        "notes": note,
+    }
+
+
 def _score_one(
     *,
+    metric_name: str,
     hypothesis_path: Path,
-    records: list[dict],
+    hypothesis: dict,
+    h_hash: str,
+    record: dict,
+    signs: list[str],
+    phonemes: list[str],
     stream: list[str],
+    fingerprints: dict[str, list[int]],
+    sign_counts: dict[str, int],
+    pool_ctx: dict | None,
     snapshot: str,
     n_records: int,
     note: str,
     repo_root: Path,
     result_validator: Draft202012Validator,
-) -> tuple[dict, str]:
-    """Load + validate + score one hypothesis. Returns (row, hypothesis_hash).
-
-    Uses the precomputed corpus context — no per-call corpus reload, no per-call
-    git snapshot probe — so this is cheap to call in a tight loop.
-    """
-    hypothesis = load_and_validate(hypothesis_path)
-    h_hash = canonical_hash(hypothesis)
-    shape = detect_shape(hypothesis)
-    if shape != SHAPE_CANDIDATE_EQUATION_V1:
-        raise ValueError(
-            f"sweep runner expects candidate_equation.v1 hypotheses; "
-            f"{hypothesis_path} has shape {shape!r}"
-        )
-    equation = hypothesis["equation"]
-    record = _resolve_inscription(records, equation["inscription_id"])
-    signs = _signs_from_equation(record, equation)
-    phonemes = list(hypothesis["root"]["phonemes"])
+) -> dict:
     started = time.monotonic()
     ran_at = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    # local_fit_v0 builds fingerprints from the stream internally; the cost is
-    # ~10ms per call which is acceptable in the bulk path.
-    result = local_fit_v0(stream, signs, phonemes)
-    duration_ms = int((time.monotonic() - started) * 1000)
+    row = _base_row(
+        metric_name=metric_name,
+        hypothesis_path=hypothesis_path,
+        h_hash=h_hash,
+        n_records=n_records,
+        snapshot=snapshot,
+        ran_at=ran_at,
+        note=note,
+        repo_root=repo_root,
+    )
 
-    try:
-        rel_hyp = str(hypothesis_path.resolve().relative_to(repo_root))
-    except ValueError:
-        rel_hyp = str(hypothesis_path)
+    if metric_name == "local_fit_v0":
+        result = local_fit_v0(stream, signs, phonemes)
+        row["score"] = float(result.score)
+        row["score_control_z"] = float(result.score_control_z)
+        row["metric_notes"] = result.metric_notes
+    elif metric_name == "local_fit_v1":
+        if pool_ctx is None:
+            raise ValueError("local_fit_v1 requires a pool context (--pool)")
+        result = local_fit_v1(
+            stream,
+            signs,
+            phonemes,
+            pool_ctx["bigram_model"],
+            sign_counts=sign_counts,
+            fingerprints=fingerprints,
+        )
+        row["score"] = float(result.score)
+        row["metric_notes"] = result.metric_notes
+        row["position_term"] = float(result.position_term)
+        row["bigram_term"] = float(result.bigram_term)
+        row["length_penalty"] = float(result.length_penalty)
+        row["rare_sign_correction"] = float(result.rare_sign_correction)
+    elif metric_name == "geographic_genre_fit_v1":
+        if pool_ctx is None:
+            raise ValueError(
+                "geographic_genre_fit_v1 requires a pool context (--pool)"
+            )
+        surface = hypothesis["root"]["surface"]
+        entry = pool_ctx["by_surface"].get(surface)
+        region = entry.get("region") if entry else None
+        semantic_field = entry.get("semantic_field") if entry else None
+        result = geographic_genre_fit_v1(
+            region=region,
+            semantic_field=semantic_field,
+            site=record.get("site"),
+            genre_hint=record.get("genre_hint"),
+        )
+        row["score"] = float(result.score)
+        row["metric_notes"] = result.metric_notes
+        row["region_compat"] = float(result.region_compat)
+        row["semantic_compat"] = float(result.semantic_compat)
+    else:
+        raise ValueError(
+            f"unsupported metric for sweep: {metric_name!r}; have {_SUPPORTED_METRICS}"
+        )
 
-    row = {
-        "run_id": str(uuid.uuid4()),
-        "hypothesis_path": rel_hyp,
-        "hypothesis_hash": h_hash,
-        "harness_version": HARNESS_VERSION,
-        "metric": "local_fit_v0",
-        "score": result.score,
-        "score_control_z": result.score_control_z,
-        "metric_notes": result.metric_notes,
-        "corpus_records_used": n_records,
-        "corpus_snapshot": snapshot,
-        "ran_at": ran_at,
-        "duration_ms": duration_ms,
-        "notes": note,
-    }
+    row["duration_ms"] = int((time.monotonic() - started) * 1000)
     result_validator.validate(row)
-    return row, h_hash
+    return row
 
 
 def _ascii_histogram(values: list[float], buckets: int = 10, width: int = 40) -> list[str]:
-    """Return ASCII histogram lines for a list of floats."""
     if not values:
         return ["(no values)"]
     lo = min(values)
@@ -209,40 +300,41 @@ def _ascii_histogram(values: list[float], buckets: int = 10, width: int = 40) ->
     return lines
 
 
-def _summary_block(rows: list[dict]) -> list[str]:
-    if not rows:
-        return ["No new rows scored."]
-    zs = [float(r.get("score_control_z", 0.0)) for r in rows]
-    n = len(zs)
-    n_z_gt_1 = sum(1 for z in zs if z > 1.0)
-    n_z_gt_2 = sum(1 for z in zs if z > 2.0)
-    n_z_lt_neg1 = sum(1 for z in zs if z < -1.0)
-    mean = sum(zs) / n
-    sd = math.sqrt(sum((z - mean) ** 2 for z in zs) / n)
-    median = sorted(zs)[n // 2]
-    top5 = sorted(rows, key=lambda r: -float(r.get("score_control_z", 0.0)))[:5]
-
+def _summary_block(rows_by_metric: dict[str, list[dict]]) -> list[str]:
     lines: list[str] = []
-    lines.append("=" * 72)
-    lines.append(f"sweep summary  ({n} runs)")
-    lines.append("-" * 72)
-    lines.append(f"  z > +1.0:  {n_z_gt_1}  ({100 * n_z_gt_1 / n:.1f}%)")
-    lines.append(f"  z > +2.0:  {n_z_gt_2}  ({100 * n_z_gt_2 / n:.1f}%)")
-    lines.append(f"  z < -1.0:  {n_z_lt_neg1}  ({100 * n_z_lt_neg1 / n:.1f}%)")
-    lines.append(f"  mean:      {mean:+.4f}")
-    lines.append(f"  median:    {median:+.4f}")
-    lines.append(f"  std:       {sd:.4f}")
-    lines.append("-" * 72)
-    lines.append("top 5 by score_control_z:")
-    for i, r in enumerate(top5, 1):
-        lines.append(
-            f"  {i}. z={float(r.get('score_control_z', 0.0)):+.4f}  "
-            f"score={r['score']:+.4f}  {r['hypothesis_path']}"
-        )
-    lines.append("-" * 72)
-    lines.append("score_control_z histogram (10 buckets):")
-    lines.extend(_ascii_histogram(zs, buckets=10))
-    lines.append("=" * 72)
+    if not rows_by_metric:
+        return ["No new rows scored."]
+    for metric_name, rows in rows_by_metric.items():
+        if not rows:
+            continue
+        is_local_v0 = metric_name == "local_fit_v0"
+        score_key = "score_control_z" if is_local_v0 else "score"
+        zs = [float(r.get(score_key, 0.0)) for r in rows]
+        n = len(zs)
+        mean = sum(zs) / n
+        sd = math.sqrt(sum((z - mean) ** 2 for z in zs) / n)
+        median = sorted(zs)[n // 2]
+        top5 = sorted(rows, key=lambda r: -float(r.get(score_key, 0.0)))[:5]
+
+        lines.append("=" * 72)
+        lines.append(f"sweep summary  ({n} runs, metric={metric_name})")
+        lines.append("-" * 72)
+        lines.append(f"  mean ({score_key}):   {mean:+.4f}")
+        lines.append(f"  median:              {median:+.4f}")
+        lines.append(f"  std:                 {sd:.4f}")
+        lines.append(f"  min:                 {min(zs):+.4f}")
+        lines.append(f"  max:                 {max(zs):+.4f}")
+        lines.append("-" * 72)
+        lines.append(f"top 5 by {score_key}:")
+        for i, r in enumerate(top5, 1):
+            lines.append(
+                f"  {i}. {score_key}={float(r.get(score_key, 0.0)):+.4f}  "
+                f"score={r['score']:+.4f}  {r['hypothesis_path']}"
+            )
+        lines.append("-" * 72)
+        lines.append(f"{score_key} histogram (10 buckets):")
+        lines.extend(_ascii_histogram(zs, buckets=10))
+        lines.append("=" * 72)
     return lines
 
 
@@ -254,8 +346,18 @@ def run(
     note: str,
     progress_every: int,
     repo_root: Path,
+    metrics: list[str] | None = None,
+    pool_path: Path | None = None,
 ) -> dict:
     """Drive the bulk sweep and return a summary dict."""
+    if not metrics:
+        metrics = ["local_fit_v0"]
+    for m in metrics:
+        if m not in _SUPPORTED_METRICS:
+            raise ValueError(
+                f"unsupported metric {m!r}; supported: {_SUPPORTED_METRICS}"
+            )
+
     manifest = _load_manifest(manifest_path)
     if not manifest:
         print(f"manifest is empty: {manifest_path}", file=sys.stderr)
@@ -264,74 +366,130 @@ def run(
     records = load_records(corpus_path)
     stream, n_records = build_stream(records)
     snapshot = corpus_snapshot(corpus_path, repo_root)
-    # Pre-warm the fingerprint table so the first scoring call doesn't pay the
-    # build cost twice: local_fit_v0 also builds it internally, but Python's
-    # function-local cost is negligible compared to the I/O we just amortized.
-    _ = sign_position_fingerprints(stream)
+    fingerprints = sign_position_fingerprints(stream)
+    sign_counts = _sign_corpus_counts(stream)
+
+    pool_ctx: dict | None = None
+    if pool_path is None:
+        # Default: infer from manifest filename ("aquitanian.manifest.jsonl"
+        # → pools/aquitanian.yaml). The pool is required only if a v1
+        # metric is selected; v0 path doesn't reference it.
+        inferred_name = manifest_path.name
+        if inferred_name.endswith(".manifest.jsonl"):
+            pool_name = inferred_name[: -len(".manifest.jsonl")]
+            candidate = _DEFAULT_POOLS_DIR / f"{pool_name}.yaml"
+            if candidate.exists():
+                pool_path = candidate
+    if pool_path is not None and pool_path.exists():
+        pool_ctx = build_pool_context(load_pool(pool_path))
+        print(
+            f"pool: {pool_path.relative_to(repo_root) if repo_root in pool_path.parents else pool_path}  |  "
+            f"entries: {len(pool_ctx['by_surface'])}  |  "
+            f"bigram vocab: {len(pool_ctx['bigram_model'].vocab)}",
+            file=sys.stderr,
+        )
+    elif any(m in ("local_fit_v1", "geographic_genre_fit_v1") for m in metrics):
+        raise ValueError(
+            "v1 metrics require a pool YAML; pass --pool or use a manifest "
+            "whose name matches a pool under pools/."
+        )
 
     result_validator = Draft202012Validator(
         json.loads(_RESULT_SCHEMA_PATH.read_text(encoding="utf-8"))
     )
 
     seen = _existing_runs(results_path)
+    n_already = sum(
+        1
+        for r in manifest
+        for m in metrics
+        if (r["hypothesis_hash"], snapshot, m) in seen
+    )
     print(
-        f"manifest: {len(manifest)} candidates  |  "
-        f"already in result stream for this snapshot: "
-        f"{sum(1 for r in manifest if (r['hypothesis_hash'], snapshot) in seen)}",
+        f"manifest: {len(manifest)} candidates × {len(metrics)} metric(s)  |  "
+        f"already in result stream for this snapshot+metric: {n_already}",
         file=sys.stderr,
     )
 
     results_path.parent.mkdir(parents=True, exist_ok=True)
-    scored_rows: list[dict] = []
+    rows_by_metric: dict[str, list[dict]] = {m: [] for m in metrics}
     skipped = 0
     started = time.monotonic()
+    scored_total = 0
 
     with results_path.open("a", encoding="utf-8") as result_fh:
         for i, manifest_row in enumerate(manifest, 1):
-            key = (manifest_row["hypothesis_hash"], snapshot)
-            if key in seen:
-                skipped += 1
-                continue
             hyp_path = repo_root / manifest_row["hypothesis_path"]
-            row, h_hash = _score_one(
-                hypothesis_path=hyp_path,
-                records=records,
-                stream=stream,
-                snapshot=snapshot,
-                n_records=n_records,
-                note=note,
-                repo_root=repo_root,
-                result_validator=result_validator,
-            )
-            # Defensive consistency check: manifest hash should match what
-            # the harness recomputes from the YAML on disk.
-            if h_hash != manifest_row["hypothesis_hash"]:
-                raise RuntimeError(
-                    f"manifest hash {manifest_row['hypothesis_hash']!r} "
-                    f"!= recomputed {h_hash!r} for {hyp_path}; manifest is "
-                    f"stale, regenerate with scripts/generate_candidates.py"
+            hypothesis = None
+            h_hash = None
+            record = None
+            signs = None
+            phonemes = None
+            for metric_name in metrics:
+                key = (manifest_row["hypothesis_hash"], snapshot, metric_name)
+                if key in seen:
+                    skipped += 1
+                    continue
+                if hypothesis is None:
+                    hypothesis = load_and_validate(hyp_path)
+                    h_hash = canonical_hash(hypothesis)
+                    shape = detect_shape(hypothesis)
+                    if shape != SHAPE_CANDIDATE_EQUATION_V1:
+                        raise ValueError(
+                            f"sweep runner expects candidate_equation.v1 hypotheses; "
+                            f"{hyp_path} has shape {shape!r}"
+                        )
+                    if h_hash != manifest_row["hypothesis_hash"]:
+                        raise RuntimeError(
+                            f"manifest hash {manifest_row['hypothesis_hash']!r} "
+                            f"!= recomputed {h_hash!r} for {hyp_path}; manifest is "
+                            f"stale, regenerate with scripts/generate_candidates.py"
+                        )
+                    equation = hypothesis["equation"]
+                    record = _resolve_inscription(records, equation["inscription_id"])
+                    signs = _signs_from_equation(record, equation)
+                    phonemes = list(hypothesis["root"]["phonemes"])
+                row = _score_one(
+                    metric_name=metric_name,
+                    hypothesis_path=hyp_path,
+                    hypothesis=hypothesis,
+                    h_hash=h_hash,
+                    record=record,
+                    signs=signs,
+                    phonemes=phonemes,
+                    stream=stream,
+                    fingerprints=fingerprints,
+                    sign_counts=sign_counts,
+                    pool_ctx=pool_ctx,
+                    snapshot=snapshot,
+                    n_records=n_records,
+                    note=note,
+                    repo_root=repo_root,
+                    result_validator=result_validator,
                 )
-            result_fh.write(json.dumps(row, ensure_ascii=False) + "\n")
-            result_fh.flush()
-            scored_rows.append(row)
-            seen.add(key)
-            if progress_every and len(scored_rows) % progress_every == 0:
-                elapsed = time.monotonic() - started
-                rate = len(scored_rows) / elapsed if elapsed > 0 else 0.0
-                print(
-                    f"  scored {len(scored_rows)} / {len(manifest) - skipped}  "
-                    f"({rate:.1f}/s, {elapsed:.0f}s elapsed)",
-                    file=sys.stderr,
-                )
+                result_fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+                result_fh.flush()
+                rows_by_metric[metric_name].append(row)
+                seen.add(key)
+                scored_total += 1
+                if progress_every and scored_total % progress_every == 0:
+                    elapsed = time.monotonic() - started
+                    rate = scored_total / elapsed if elapsed > 0 else 0.0
+                    print(
+                        f"  scored {scored_total}  "
+                        f"({rate:.1f}/s, {elapsed:.0f}s elapsed)",
+                        file=sys.stderr,
+                    )
 
     elapsed = time.monotonic() - started
     print(file=sys.stderr)
-    for line in _summary_block(scored_rows):
+    for line in _summary_block(rows_by_metric):
         print(line, file=sys.stderr)
 
     return {
         "manifest_rows": len(manifest),
-        "scored": len(scored_rows),
+        "metrics": list(metrics),
+        "scored": scored_total,
         "skipped_resumed": skipped,
         "elapsed_s": round(elapsed, 2),
         "snapshot": snapshot,
@@ -351,10 +509,25 @@ def main(argv: list[str] | None = None) -> int:
         "--note", default="", help="Free-form note attached to every result row."
     )
     parser.add_argument(
+        "--metrics",
+        default="local_fit_v0",
+        help=(
+            "Comma-separated list of metric names. "
+            f"Supported: {','.join(_SUPPORTED_METRICS)}. Default: local_fit_v0."
+        ),
+    )
+    parser.add_argument(
+        "--pool",
+        type=Path,
+        default=None,
+        help="Path to the pool YAML (e.g. pools/aquitanian.yaml). Required for "
+        "v1 metrics. Inferred from the manifest filename when omitted.",
+    )
+    parser.add_argument(
         "--progress-every",
         type=int,
-        default=100,
-        help="Print a progress line every N scored hypotheses (default: %(default)s).",
+        default=200,
+        help="Print a progress line every N scored runs (default: %(default)s).",
     )
     parser.add_argument(
         "--repo-root",
@@ -364,6 +537,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
+    metrics = [m.strip() for m in args.metrics.split(",") if m.strip()]
     summary = run(
         manifest_path=args.manifest,
         corpus_path=args.corpus,
@@ -371,6 +545,8 @@ def main(argv: list[str] | None = None) -> int:
         note=args.note,
         progress_every=args.progress_every,
         repo_root=args.repo_root,
+        metrics=metrics,
+        pool_path=args.pool,
     )
     print(json.dumps(summary, indent=2))
     return 0
