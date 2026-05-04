@@ -1,4 +1,5 @@
-"""Corpus loader and deterministic token-stream construction."""
+"""Corpus loader, deterministic token-stream construction, and corpus-level
+sign statistics that the local-fit metric reads."""
 
 from __future__ import annotations
 
@@ -8,6 +9,14 @@ from pathlib import Path
 from typing import Iterable
 
 from . import INSCRIPTION_BOUNDARY
+
+
+# Token classes from corpus_status.md tokenization rules. We treat any token
+# that is **not** a word-divider or boundary marker as part of the surrounding
+# word for position-in-word fingerprinting; non-syllabogram in-word tokens
+# (LOG:, FRAC:, [?]) participate in the word's length but are not themselves
+# fingerprinted as signs.
+WORD_BREAK_TOKENS = frozenset({"DIV", INSCRIPTION_BOUNDARY})
 
 
 def load_records(corpus_path: Path) -> list[dict]:
@@ -53,6 +62,62 @@ def apply_mapping(stream: list[str], mapping: dict[str, str]) -> list[str]:
     if not mapping:
         return list(stream)
     return [mapping.get(t, t) for t in stream]
+
+
+def iter_words(stream: list[str]) -> Iterable[list[str]]:
+    """Yield each maximal run of non-break tokens between word-break markers.
+
+    A "word" is the contiguous run between any two of {DIV, INSCRIPTION_BOUNDARY}
+    (or between such a marker and the start/end of the stream). Empty runs
+    (back-to-back markers) are skipped. The yielded list contains tokens
+    verbatim, including non-syllabogram in-word tokens (LOG:, FRAC:, [?]).
+    """
+    buf: list[str] = []
+    for tok in stream:
+        if tok in WORD_BREAK_TOKENS:
+            if buf:
+                yield buf
+                buf = []
+        else:
+            buf.append(tok)
+    if buf:
+        yield buf
+
+
+def sign_position_fingerprints(stream: list[str]) -> dict[str, list[int]]:
+    """Compute per-sign in-word position counts across the corpus.
+
+    Returns a dict mapping each token observed in any word to a 4-tuple of
+    integer counts ``[initial, medial, final, standalone]``:
+
+    * ``initial`` — first token of a word of length >= 2.
+    * ``medial`` — neither first nor last in a word of length >= 3.
+    * ``final``  — last token of a word of length >= 2.
+    * ``standalone`` — sole token in a word of length 1.
+
+    Word boundaries are ``DIV`` and ``INSCRIPTION_BOUNDARY`` (see ``iter_words``).
+    Non-syllabogram in-word tokens (LOG:, FRAC:, [?]) appear as their own
+    keys; the metric only ever queries syllabogram entries, but counting them
+    keeps the function self-contained.
+    """
+    counts: dict[str, list[int]] = {}
+    for word in iter_words(stream):
+        n = len(word)
+        if n == 0:
+            continue
+        if n == 1:
+            tok = word[0]
+            counts.setdefault(tok, [0, 0, 0, 0])[3] += 1
+            continue
+        for i, tok in enumerate(word):
+            row = counts.setdefault(tok, [0, 0, 0, 0])
+            if i == 0:
+                row[0] += 1
+            elif i == n - 1:
+                row[2] += 1
+            else:
+                row[1] += 1
+    return counts
 
 
 def corpus_snapshot(corpus_path: Path, repo_root: Path) -> str:

@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: aquit_in_PH6
+description: >
+  Aquitanian-substrate candidate. Tokens 0..1 of PH 6 (AB28 AB06) are tested
+  as Aquitanian /in/ "in / inside" — postpositional locative attested in
+  the Aquitanian funerary corpus (e.g. as a final element in deity names).
+author: pm-lineara
+created: 2026-05-04
+source_pool: aquitanian
+root:
+  surface: "in"
+  phonemes:
+    - "i"
+    - "n"
+  gloss_hint: "in / locative postposition (cf. Modern Basque -an inessive)"
+  citation: "Gorrochategui 1984, _Estudio sobre la onomástica indígena de Aquitania_, §27 (locative -in in compound theonyms); Trask 1997, _The History of Basque_, p. 220 (Aquitanian inessive evidence)."
+equation:
+  inscription_id: "PH 6"
+  span: [0, 1]
+  sign_to_phoneme:
+    AB28: i
+    AB06: n
+notes: |
+  Bucket: aquitanian_plausible (B4).
+  Prior expectation: MIXED. /i/ is V-class, /n/ is S-class. V->S = 0.40.
+  AB06 actual [.08,.43,.45,.04] is medial+final-balanced — close to the
+  S-class profile [.20,.55,.20,.05] (BC fit moderate). AB28 (mostly initial)
+  does not match V-class final preference cleanly.
+  PH 6 is a four-token inscription on a vase ('AB28 AB06 AB54 / DIV'),
+  exactly the kind of short two-word context where a locative postposition
+  could plausibly land.

@@ -1,0 +1,33 @@
+schema_version: candidate_equation.v1
+name: aquit_ir_HTWa1006
+description: >
+  Aquitanian-substrate candidate. Tokens 0..1 of HT Wa 1006 (AB28 AB76) are
+  tested as a hypothetical Aquitanian root /ir-/ "city / settlement"
+  (cf. Aquitanian Iri- in onomastics, Modern Basque (h)iri "town"). HT Wa
+  1006 is a single-word nodule; the two signs span the entire inscription.
+author: pm-lineara
+created: 2026-05-04
+source_pool: aquitanian
+root:
+  surface: "ir"
+  phonemes:
+    - "i"
+    - "r"
+  gloss_hint: "city / settlement (cf. Modern Basque iri/hiri)"
+  citation: "Trask 1997, _The History of Basque_, p. 268 (toponymic *iri-); Gorrochategui 1984, §41 (Aquitanian Iri- in personal names)."
+equation:
+  inscription_id: "HT Wa 1006"
+  span: [0, 1]
+  sign_to_phoneme:
+    AB28: i
+    AB76: r
+notes: |
+  Bucket: aquitanian_plausible (B3).
+  Prior expectation: MIXED, leaning POSITIVE. /i/ is V-class, /r/ is S-class.
+  V->S = 0.40 (typical CV-then-coda). AB76 actual [.02,.21,.74,.02] is
+  overwhelmingly word-final — perfect for an S-class /r/ when the
+  expected final mass is modest but non-zero. AB28 (44% initial) does not
+  fit V-class final-friendly profile cleanly. The full word AB28 AB76 is the
+  ENTIRE corpus span; this is a candidate two-sign place-name on a sealing.
+  HT Wa 1006-1009 all carry the same two-sign sequence — strong recurring
+  evidence of a fixed lexeme.

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/drellem2/lineara/harness/schemas/hypothesis.candidate_equation.v1.schema.json",
+  "title": "Lineara candidate-equation hypothesis (v1)",
+  "description": "A *local* hypothesis: a span of signs in one inscription is proposed to spell a candidate substrate root. Scored by the local_fit_v0 metric. Distinct from the existing global sign->phoneme mapping shape (hypothesis.v0); this shape is additive.",
+  "type": "object",
+  "required": ["schema_version", "name", "root", "equation"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "candidate_equation.v1",
+      "description": "Discriminator. The harness loader dispatches on this field."
+    },
+    "name": {
+      "type": "string",
+      "description": "Stable slug; should match the file basename. Mixed case permitted so inscription IDs (HT, ZA, KH, ...) read naturally.",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_]*$",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "description": {
+      "type": "string",
+      "description": "Free-form prose describing the hypothesis."
+    },
+    "author": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string",
+      "description": "ISO-8601 date the hypothesis was authored."
+    },
+    "source_pool": {
+      "type": "string",
+      "description": "Informational tag for the substrate pool the root was drawn from (e.g. 'aquitanian', 'pre_greek_toponym', 'linear_b_carryover'). The full pool ingest is a separate ticket; this field carries the intent."
+    },
+    "root": {
+      "type": "object",
+      "required": ["surface", "phonemes"],
+      "additionalProperties": false,
+      "properties": {
+        "surface": {
+          "type": "string",
+          "description": "Surface form of the candidate root (orthographic).",
+          "minLength": 1
+        },
+        "phonemes": {
+          "type": "array",
+          "description": "Ordered phoneme sequence. Length must equal the number of entries in equation.sign_to_phoneme.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "gloss_hint": {
+          "type": "string",
+          "description": "Translation hint (informal)."
+        },
+        "citation": {
+          "type": "string",
+          "description": "Where the root was sourced (Trask 1997 page X, Gorrochategui 1984, Beekes 2010, etc.)."
+        }
+      }
+    },
+    "equation": {
+      "type": "object",
+      "required": ["inscription_id", "span", "sign_to_phoneme"],
+      "additionalProperties": false,
+      "properties": {
+        "inscription_id": {
+          "type": "string",
+          "description": "Corpus record id (e.g. 'HT 31').",
+          "minLength": 1
+        },
+        "span": {
+          "type": "array",
+          "description": "Inclusive [start, end] over the inscription's tokens[] array. Both indices must lie within tokens; signs at non-syllabogram positions (DIV, LOG:, FRAC:, [?]) are not picked up by sign_to_phoneme.",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "sign_to_phoneme": {
+          "type": "object",
+          "description": "Ordered (Python 3.7+ insertion-order) sign->phoneme map. Keys are the corpus sign tokens that fall within span; one entry per phoneme in root.phonemes, in the same order. Mapping non-syllabogram tokens is not allowed.",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

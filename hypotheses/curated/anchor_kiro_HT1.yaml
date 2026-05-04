@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: anchor_kiro_HT1
+description: >
+  Linear-B carryover anchor. AB67-AB02 in HT 1 reads /ki-ro/ ("owed / deficit"),
+  the second canonical Linear-A accountancy term after ku-ro. Appears in
+  ~20 administrative tablets at the position a deficit subtotal would occupy.
+author: pm-lineara
+created: 2026-05-04
+source_pool: linear_b_carryover
+root:
+  surface: "kiro"
+  phonemes:
+    - "ki"
+    - "ro"
+  gloss_hint: "owed / deficit (Linear-A accountancy term)"
+  citation: "Younger 2020 (online edition), s.v. ki-ro; Palmer 1995, 'ku-ro and ki-ro in Linear A'; Ventris-Chadwick 1956 carryover values AB67=ki, AB02=ro."
+equation:
+  inscription_id: "HT 1"
+  span: [4, 5]
+  sign_to_phoneme:
+    AB67: ki
+    AB02: ro
+notes: |
+  Bucket: linear_b_carryover_anchor (A2).
+  Prior expectation: HIGH score with control_z well above 0. AB67 has 45%
+  initial / 26% medial / 22% final positions — close to the C-class profile
+  for /k/. AB02 is 78% final — close to the S-class expected profile for /r/.
+  Class bigram C->S = 0.10 (moderate); class start # -> C = 0.55 (typical CV
+  start). Should land near the upper end of the score distribution.

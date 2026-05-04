@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: aquit_ur_HT25a
+description: >
+  Aquitanian-substrate candidate. Tokens 7..8 of HT 25a (AB10 AB27) are tested
+  as Aquitanian /ur/ "water". Picked because AB10 (Linear-B carryover value
+  /u/) sits at the position a vowel should occupy, and AB27 (Linear-B value
+  /re/) carries an /r/ onset.
+author: pm-lineara
+created: 2026-05-04
+source_pool: aquitanian
+root:
+  surface: "ur"
+  phonemes:
+    - "u"
+    - "r"
+  gloss_hint: "water"
+  citation: "Trask 1997, _The History of Basque_, p. 99 (Aquitanian /ur/ 'water', attested in funerary inscriptions urs-, ur-c-, etc.); Gorrochategui 1984, _Estudio sobre la onomástica indígena de Aquitania_, §22."
+equation:
+  inscription_id: "HT 25a"
+  span: [7, 8]
+  sign_to_phoneme:
+    AB10: u
+    AB27: r
+notes: |
+  Bucket: aquitanian_plausible (B1).
+  Prior expectation: MIXED — score should fall somewhere between the
+  carryover and random-scramble buckets. /u/ is V-class, /r/ is S-class.
+  V->S transition = 0.40 (common Basque CV-then-coda pattern). AB27's actual
+  position fingerprint matters most for the position term; if AB27 is
+  medial-heavy it fits S-class (medial 0.55) well.
+  HT 25a tokens 7..8 are AB10 AB27 in the word 'AB10 AB27 AB40' (an
+  onomastic-looking three-sign word). The accountancy genre of HT 25a is
+  *not* incompatible with a place-name beginning with /ur-/ (cf. Spanish
+  toponyms Urgell, Urola).

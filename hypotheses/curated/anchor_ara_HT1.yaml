@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: anchor_ara_HT1
+description: >
+  Linear-B carryover anchor. AB08-AB60 reads /a-ra/ under standard
+  Ventris-Chadwick syllabogram values. AB08 AB60 begins the four-sign word
+  AB08 AB60 AB06 AB27 ("a-ra-na-re") at HT 1 [19..22], a candidate place-name
+  or theonym attested in several administrative tablets across Crete (HT,
+  KH, ZA).
+author: pm-lineara
+created: 2026-05-04
+source_pool: linear_b_carryover
+root:
+  surface: "ara"
+  phonemes:
+    - "a"
+    - "ra"
+  gloss_hint: "/a-ra/ — initial syllables of a recurring Linear-A onomastic"
+  citation: "Younger 2020 (online edition), corpus index s.v. AB08 AB60 sequences; Schoep 2002, ch. 4 (recurring onomastic strings); Ventris-Chadwick 1956 values AB08=a, AB60=ra."
+equation:
+  inscription_id: "HT 1"
+  span: [19, 20]
+  sign_to_phoneme:
+    AB08: a
+    AB60: ra
+notes: |
+  Bucket: linear_b_carryover_anchor (A3).
+  Prior expectation: HIGH-to-MEDIUM score. /a/ is V-class; /ra/ first-char is
+  'r' so S-class. Class start V is 0.30 (lower than C start 0.55); V->S = 0.40
+  (typical CV-syllable open onset). AB08 is 81% initial — matches V-class
+  initial weight 0.10 poorly, but the V profile gives credit for any non-zero
+  initial mass. AB60 is 14% I / 34% M / 46% F — fits S-class profile
+  [.20,.55,.20,.05] reasonably (medial-friendly is the dominant S signal).

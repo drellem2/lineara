@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: anchor_kuro_HT100
+description: >
+  Linear-B carryover anchor. AB81-AB02 in HT 100 reads /ku-ro/, the canonical
+  Linear-A accountancy term ("total / sum"). This is the best-attested
+  two-sign carryover sequence in the corpus — it appears at the totaling
+  position of dozens of accounting tablets.
+author: pm-lineara
+created: 2026-05-04
+source_pool: linear_b_carryover
+root:
+  surface: "kuro"
+  phonemes:
+    - "ku"
+    - "ro"
+  gloss_hint: "total / sum (Linear-A accountancy term)"
+  citation: "Younger, J. G., 'Linear A texts in phonetic transcription' (online edition), s.v. ku-ro; Schoep 2002, _The Administration of Neopalatial Crete_, ch. 4 on totaling formulae; Ventris-Chadwick 1956 carryover values AB81=ku, AB02=ro."
+equation:
+  inscription_id: "HT 100"
+  span: [12, 13]
+  sign_to_phoneme:
+    AB81: ku
+    AB02: ro
+notes: |
+  Bucket: linear_b_carryover_anchor (A1).
+  Prior expectation: HIGH score with control_z well above 0. /ku/ and /ro/
+  decompose to C-class and S-class respectively under our v0 phoneme classifier
+  (first-character heuristic). The class bigram C->S is moderately typical
+  under the Basque-style transition prior; AB02 is overwhelmingly word-final
+  (78%) which fits the S-class expected position profile reasonably.
+  If this hypothesis does not separate from the random_scramble bucket, the
+  metric is broken and we must revise.

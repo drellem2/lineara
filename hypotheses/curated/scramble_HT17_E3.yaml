@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: scramble_HT17_E3
+description: >
+  Random-scramble baseline. Same span as pgreek_korinth_HT17 (HT 17 [10,11],
+  AB31 AB02), but with random ASCII/IPA phonemes /o:/ + /q'/ chosen
+  uninformedly (a long mid-back vowel and an ejective uvular stop).
+author: pm-lineara
+created: 2026-05-04
+source_pool: random_scramble
+root:
+  surface: "oq"
+  phonemes:
+    - "oː"
+    - "qʼ"
+  gloss_hint: "(no semantic content; randomly selected IPA characters)"
+  citation: "Random IPA selection; not a real lexeme."
+equation:
+  inscription_id: "HT 17"
+  span: [10, 11]
+  sign_to_phoneme:
+    AB31: oː
+    AB02: qʼ
+notes: |
+  Bucket: random_scramble_baseline (E3).
+  Prior expectation: control_z near 0. /oː/ first-char 'o' → V-class.
+  /qʼ/ first-char 'q' → C-class. Class bigram V->C = 0.55 (typical).
+  Permutations: ['oː','qʼ'] and ['qʼ','oː'] swap classes between positions.
+  The signs are AB31 (initial-heavy) and AB02 (final-heavy); a vowel-final
+  position fits AB02 better; a consonant-initial fits AB31 better. The
+  *correct* alignment by class would be (AB31:qʼ, AB02:oː); since we
+  reversed it, the score should be NEAR-RANDOM.

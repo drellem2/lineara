@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: pgreek_uros_HT11a
+description: >
+  Pre-Greek toponym candidate. Tokens 16..17 of HT 11a (AB81 AB02) are
+  proposed as a /-r-os/ ending fragment from Pre-Greek -ros toponym formative
+  (cf. Aigeiros, Saiandros), with phonemes /r/ + /os/.
+author: pm-lineara
+created: 2026-05-04
+source_pool: pre_greek_toponym
+root:
+  surface: "ros"
+  phonemes:
+    - "r"
+    - "os"
+  gloss_hint: "/-ros/ — Pre-Greek -r-os toponym formative (Saros, Aigeiros)"
+  citation: "Beekes 2010, _Etymological Dictionary of Greek_, vol. 2 appendix on Pre-Greek -ros suffix; Furnée 1972 §§210-213."
+equation:
+  inscription_id: "HT 11a"
+  span: [16, 17]
+  sign_to_phoneme:
+    AB81: r
+    AB02: os
+notes: |
+  Bucket: pre_greek_toponym_plausible (D4).
+  Prior expectation: MIXED, leaning POSITIVE. /r/ S-class, /os/ first-char
+  'o' V-class. S->V = 0.50 (typical syllable onset). AB02 (78% final) is
+  excellent fit for V-class final-friendly. AB81 (62% initial) does not
+  match S-class expected (medial-heavy). Note: AB81 AB02 is the *signature*
+  Linear-A "ku-ro" sequence; we re-use it here under a deliberately
+  different phoneme proposal to test whether the metric distinguishes
+  candidate readings on the same sign sequence.

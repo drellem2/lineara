@@ -4,9 +4,14 @@
 Not committed as state — regenerate on demand. Append-only result history is
 the source of truth; this is a view over it.
 
+Per-metric ordering:
+  * compression_delta_v0 — sorted by ``score`` desc.
+  * local_fit_v0         — sorted by ``score_control_z`` desc.
+
 Examples:
   python3 scripts/rollup.py
   python3 scripts/rollup.py --metric compression_delta_v0
+  python3 scripts/rollup.py --metric local_fit_v0
   python3 scripts/rollup.py --top 20
 """
 
@@ -36,6 +41,48 @@ def load_rows(path: Path) -> list[dict]:
     return rows
 
 
+def _sort_key(row: dict) -> float:
+    """Per-metric sort key. Higher = better; we sort descending."""
+    if row["metric"] == "local_fit_v0":
+        return float(row.get("score_control_z", 0.0))
+    return float(row["score"])
+
+
+def _render_compression_delta(group: list[dict]) -> list[str]:
+    out = ["| rank | score | bps_baseline | bps_mapped | hypothesis | run_id | ran_at |"]
+    out.append("|---:|---:|---:|---:|---|---|---|")
+    for i, r in enumerate(group, 1):
+        out.append(
+            "| {rank} | {score:.4f} | {bb:.4f} | {bm:.4f} | `{hyp}` | `{rid}` | {at} |".format(
+                rank=i,
+                score=r["score"],
+                bb=r.get("bits_per_sign_baseline", float("nan")),
+                bm=r.get("bits_per_sign_mapped", float("nan")),
+                hyp=r["hypothesis_path"],
+                rid=r["run_id"][:8],
+                at=r["ran_at"],
+            )
+        )
+    return out
+
+
+def _render_local_fit(group: list[dict]) -> list[str]:
+    out = ["| rank | score_control_z | score | hypothesis | run_id | ran_at |"]
+    out.append("|---:|---:|---:|---|---|---|")
+    for i, r in enumerate(group, 1):
+        out.append(
+            "| {rank} | {z:.4f} | {score:.4f} | `{hyp}` | `{rid}` | {at} |".format(
+                rank=i,
+                z=float(r.get("score_control_z", 0.0)),
+                score=r["score"],
+                hyp=r["hypothesis_path"],
+                rid=r["run_id"][:8],
+                at=r["ran_at"],
+            )
+        )
+    return out
+
+
 def render(rows: list[dict], metric_filter: str | None, top: int | None) -> str:
     by_metric: dict[str, list[dict]] = defaultdict(list)
     for row in rows:
@@ -49,24 +96,15 @@ def render(rows: list[dict], metric_filter: str | None, top: int | None) -> str:
 
     out: list[str] = []
     for metric in sorted(by_metric):
-        group = sorted(by_metric[metric], key=lambda r: r["score"], reverse=True)
+        group = sorted(by_metric[metric], key=_sort_key, reverse=True)
+        n_total = len(by_metric[metric])
         if top is not None:
             group = group[:top]
-        out.append(f"## {metric} ({len(by_metric[metric])} rows)\n")
-        out.append("| rank | score | bps_baseline | bps_mapped | hypothesis | run_id | ran_at |")
-        out.append("|---:|---:|---:|---:|---|---|---|")
-        for i, r in enumerate(group, 1):
-            out.append(
-                "| {rank} | {score:.4f} | {bb:.4f} | {bm:.4f} | `{hyp}` | `{rid}` | {at} |".format(
-                    rank=i,
-                    score=r["score"],
-                    bb=r["bits_per_sign_baseline"],
-                    bm=r["bits_per_sign_mapped"],
-                    hyp=r["hypothesis_path"],
-                    rid=r["run_id"][:8],
-                    at=r["ran_at"],
-                )
-            )
+        out.append(f"## {metric} ({n_total} rows)\n")
+        if metric == "local_fit_v0":
+            out.extend(_render_local_fit(group))
+        else:
+            out.extend(_render_compression_delta(group))
         out.append("")
     return "\n".join(out) + "\n"
 

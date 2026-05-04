@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: aquit_wrong_ir_HT10a
+description: >
+  Aquitanian-substrate NEGATIVE CONTROL. Same root /ir/ "city" as
+  aquit_ir_HTWa1006, pinned to HT 10a tokens 4..5 (AB31 AB80) — both signs
+  are word-initial-friendly, so neither matches V-class (vowel /i/) nor
+  S-class (sonorant /r/) profiles.
+author: pm-lineara
+created: 2026-05-04
+source_pool: aquitanian
+root:
+  surface: "ir"
+  phonemes:
+    - "i"
+    - "r"
+  gloss_hint: "city / settlement (deliberately wrong placement)"
+  citation: "Trask 1997, _The History of Basque_, p. 268 (root reference); placement chosen to fail position-fit."
+equation:
+  inscription_id: "HT 10a"
+  span: [4, 5]
+  sign_to_phoneme:
+    AB31: i
+    AB80: r
+notes: |
+  Bucket: aquitanian_deliberately_wrong (C3).
+  Prior expectation: control_z near 0. Both signs are roughly initial+medial
+  in the corpus — wrong for V-class (which prefers final) and only marginal
+  for S-class.

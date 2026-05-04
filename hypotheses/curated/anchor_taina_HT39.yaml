@@ -1,0 +1,35 @@
+schema_version: candidate_equation.v1
+name: anchor_taina_HT39
+description: >
+  Linear-B carryover anchor. AB59-AB28-AB123 reads /ta-i-na/ under standard
+  Ventris-Chadwick values for AB59 (ta) and AB28 (i), with AB123 conventionally
+  read /na/ (Younger 2020 conjectured value). The three-sign string recurs
+  at the head of administrative tablets HT 9a, HT 9b, HT 39, HT 123a — strong
+  evidence of a fixed three-syllable lexeme; the canonical reading is a
+  toponym / onomastic stem.
+author: pm-lineara
+created: 2026-05-04
+source_pool: linear_b_carryover
+root:
+  surface: "taina"
+  phonemes:
+    - "ta"
+    - "i"
+    - "na"
+  gloss_hint: "/ta-i-na/ — recurring Linear-A onomastic stem (4+ attestations across HT)"
+  citation: "Younger 2020 (online edition), corpus index s.v. AB59 AB28 AB123 sequences (4 attestations: HT 9a, HT 9b, HT 39, HT 123a); Salgarella 2020, _Aegean Linear Script(s)_, p. 145; Ventris-Chadwick 1956 values AB59=ta, AB28=i; AB123 reading conjectural."
+equation:
+  inscription_id: "HT 39"
+  span: [0, 2]
+  sign_to_phoneme:
+    AB59: ta
+    AB28: i
+    AB123: na
+notes: |
+  Bucket: linear_b_carryover_anchor (A4).
+  Prior expectation: HIGH score with control_z well above 0. With 3 phonemes
+  the control distribution has 6 unique permutations, so the z signal is
+  finer-grained than the 2-phoneme cases. Class bigram path #->C->V->S =
+  0.55 * 0.85 * 0.40 (canonical CV...VS Basque-style word). AB123 has
+  modest corpus attestation; we use the V-class fallback for /na/'s position
+  fingerprint.

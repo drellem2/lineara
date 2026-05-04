@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: scramble_HT1_E4
+description: >
+  Random-scramble baseline. Same span as anchor_ara_HT1 (HT 1 [19,20],
+  AB08 AB60), but with random IPA phonemes /ʔ/ + /ɣ/ — a glottal stop and
+  a voiced velar fricative.
+author: pm-lineara
+created: 2026-05-04
+source_pool: random_scramble
+root:
+  surface: "ʔɣ"
+  phonemes:
+    - "ʔ"
+    - "ɣ"
+  gloss_hint: "(no semantic content; randomly selected IPA characters)"
+  citation: "Random IPA selection; not a real lexeme."
+equation:
+  inscription_id: "HT 1"
+  span: [19, 20]
+  sign_to_phoneme:
+    AB08: ʔ
+    AB60: ɣ
+notes: |
+  Bucket: random_scramble_baseline (E4).
+  Prior expectation: control_z near 0. /ʔ/ first-char → C-class (glottal
+  stop, not in V set or S set). /ɣ/ first-char → C-class. Both same class →
+  control std=0 → z forced to 0. This is a deliberately degenerate case to
+  exercise the v0 metric's std=0 handling on a random-bucket member.

@@ -1,0 +1,33 @@
+schema_version: candidate_equation.v1
+name: scramble_HT100_E1
+description: >
+  Random-scramble baseline. Same span as anchor_kuro_HT100 (HT 100 [12,13],
+  AB81 AB02), but with random IPA phonemes /q/ + /ʁ/ instead of any informed
+  proposal. /q/ is a uvular stop; /ʁ/ is a voiced uvular fricative — neither
+  is a likely realization of these signs in any extant substrate hypothesis.
+author: pm-lineara
+created: 2026-05-04
+source_pool: random_scramble
+root:
+  surface: "qʁ"
+  phonemes:
+    - "q"
+    - "ʁ"
+  gloss_hint: "(no semantic content; randomly selected IPA characters)"
+  citation: "Random IPA selection; not a real lexeme."
+equation:
+  inscription_id: "HT 100"
+  span: [12, 13]
+  sign_to_phoneme:
+    AB81: q
+    AB02: ʁ
+notes: |
+  Bucket: random_scramble_baseline (E1).
+  Prior expectation: control_z near 0. Random IPA phonemes have no a-priori
+  reason to align with corpus position fingerprints; permutations should
+  give a control distribution roughly centered on the actual score, so z
+  collapses. /q/ first-char → C-class; /ʁ/ first-char → C-class (uvular,
+  treated as consonant). C->C = 0.05 (rare). Both phonemes the same class
+  means permutations of THIS particular pair give identical scores, which
+  forces z=0 (handled in metric: std=0 -> z=0 with metric_notes flag).
+  This is the metric-degenerate case; treat the result as a sanity probe.

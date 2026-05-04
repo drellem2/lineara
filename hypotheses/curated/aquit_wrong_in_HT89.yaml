@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: aquit_wrong_in_HT89
+description: >
+  Aquitanian-substrate NEGATIVE CONTROL. Same root /in/ "in" as aquit_in_PH6,
+  pinned to HT 89 tokens 0..1 (AB08 AB31) — AB08 is 81% word-initial (wrong
+  for V-class /i/), AB31 is 58% word-initial (wrong for S-class /n/).
+author: pm-lineara
+created: 2026-05-04
+source_pool: aquitanian
+root:
+  surface: "in"
+  phonemes:
+    - "i"
+    - "n"
+  gloss_hint: "in / locative (deliberately wrong placement)"
+  citation: "Gorrochategui 1984, §27 (root reference); placement chosen to fail position-fit."
+equation:
+  inscription_id: "HT 89"
+  span: [0, 1]
+  sign_to_phoneme:
+    AB08: i
+    AB31: n
+notes: |
+  Bucket: aquitanian_deliberately_wrong (C4).
+  Prior expectation: control_z near 0. Both signs are heavily initial — V/S
+  class profiles both penalize this. Permutations are uniformly poor →
+  control distribution overlaps actual → z collapses.

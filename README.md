@@ -57,19 +57,28 @@ python3 scripts/build_corpus.py --strict  # round-trip + schema-validate
 python3 scripts/check_corpus.py           # SigLA word-pattern cross-check
 ```
 
-## Scoring harness (v0)
+## Scoring harness
 
-The v0 harness scores a declarative hypothesis against the corpus and appends one row to `results/experiments.jsonl`. One hypothesis shape (partial sign→phoneme mapping) and one metric (`compression_delta_v0`, zlib over a 2-byte symbol-id stream) for now; follow-up tickets add more.
+The harness scores a declarative hypothesis against the corpus and appends one row to `results/experiments.jsonl`. Two hypothesis shapes are supported, each paired with a default metric:
+
+| Shape | Discriminator | Default metric | Use for |
+|---|---|---|---|
+| `hypothesis.v0` (mapping) | (no `schema_version`) | `compression_delta_v0` | corpus-global sign→phoneme mappings |
+| `candidate_equation.v1` | `schema_version: candidate_equation.v1` | `local_fit_v0` | local "this span = this candidate root" hypotheses |
 
 ```bash
-# Score a hypothesis and append the result row.
+# Score a hypothesis and append the result row (auto-dispatches metric on shape).
 python3 -m harness.run hypotheses/identity.yaml
 python3 -m harness.run hypotheses/younger_ab54_ti.yaml --note "baseline rerun"
+python3 -m harness.run hypotheses/curated/anchor_kuro_HT100.yaml
 
-# View the leaderboard (regenerated on demand; not committed).
+# View per-metric leaderboards (regenerated on demand; not committed).
 python3 scripts/rollup.py
+python3 scripts/rollup.py --metric local_fit_v0
 ```
 
-Hypothesis YAMLs live under `hypotheses/`; their schema is `harness/schemas/hypothesis.v0.schema.json`. Each result row is validated against `harness/schemas/result.v0.schema.json`. The result stream is **append-only** — re-runs add new rows; rows are never edited or deleted. Every row carries `hypothesis_hash`, `harness_version`, and `corpus_snapshot` so a stale row whose hypothesis YAML has since been edited is detectable (hash mismatch) and ignorable.
+Hypothesis YAMLs live under `hypotheses/`; the curated test suite for the v1 candidate-equation shape is in `hypotheses/curated/`. Schemas: `harness/schemas/hypothesis.v0.schema.json`, `harness/schemas/hypothesis.candidate_equation.v1.schema.json`. Each result row is validated against `harness/schemas/result.v0.schema.json` (which carries `local_fit_v0`-specific optional fields `score_control_z` and `metric_notes`). The result stream is **append-only** — re-runs add new rows; rows are never edited or deleted. Every row carries `hypothesis_hash`, `harness_version`, and `corpus_snapshot` so a stale row whose hypothesis YAML has since been edited is detectable (hash mismatch) and ignorable.
+
+The `local_fit_v0` metric scores a `candidate_equation.v1` hypothesis by combining a position-fit term (how well do the equation's signs' corpus position fingerprints match the proposed phonemes' expected position profiles?) with a phoneme-class bigram log-likelihood under a hardcoded Basque-style CV phonotactic prior. The result row carries a control-z computed against 200 random phoneme-permutations of the same alignment (seed=42); see the docstring on `harness.metrics.local_fit_v0` for the formula, what it does/does-not measure, and known v0 limitations.
 
 The harness depends on `pyyaml` and `jsonschema`; install with `pip install pyyaml jsonschema`.

@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: aquit_wrong_ur_PA1
+description: >
+  Aquitanian-substrate NEGATIVE CONTROL. Same root /ur/ "water" as
+  aquit_ur_HT25a, but pinned to PA 1 tokens 0..1 (AB08 AB81), where neither
+  sign matches V-S phonotactics: AB08 is 81% word-initial (wrong for a
+  word-final-friendly /u/), AB81 is 62% word-initial (wrong for a
+  medial-friendly sonorant /r/).
+author: pm-lineara
+created: 2026-05-04
+source_pool: aquitanian
+root:
+  surface: "ur"
+  phonemes:
+    - "u"
+    - "r"
+  gloss_hint: "water (deliberately wrong placement)"
+  citation: "Trask 1997, _The History of Basque_, p. 99 (root reference); placement chosen to fail position-fit."
+equation:
+  inscription_id: "PA 1"
+  span: [0, 1]
+  sign_to_phoneme:
+    AB08: u
+    AB81: r
+notes: |
+  Bucket: aquitanian_deliberately_wrong (C1).
+  Prior expectation: control_z near 0 (LOW, near random). Both signs are
+  initial-heavy in the corpus, which clashes with the V (final-friendly) and
+  S (medial-friendly) expected position profiles. Permuting phonemes between
+  the two slots gives near-equally-bad position fits, so the control
+  distribution shifts toward the actual score and z collapses.
+  Kept identical to aquit_ur_HT25a in everything except inscription/span and
+  signs, so the bucket-A/B vs bucket-C comparison directly stress-tests the
+  metric's sensitivity to *placement*.

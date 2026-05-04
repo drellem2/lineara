@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: pgreek_korinth_HT17
+description: >
+  Pre-Greek toponym candidate. Tokens 10..11 of HT 17 (AB31 AB02) are
+  proposed as a /-nth-/ stem fragment (as in Korinth-os, Olynth-os,
+  Zakynth-os), where the proposed phoneme sequence is /n/ + /th/. The
+  -nthos suffix is one of the two best-attested Pre-Greek substrate suffixes
+  (Beekes 2010).
+author: pm-lineara
+created: 2026-05-04
+source_pool: pre_greek_toponym
+root:
+  surface: "nth"
+  phonemes:
+    - "n"
+    - "th"
+  gloss_hint: "/-nth-/ stem in Pre-Greek toponym suffix -nthos (Korinthos, Olynthos, Tiryns < *Tirintha)"
+  citation: "Beekes 2010, _Etymological Dictionary of Greek_, vol. 2 appendix on Pre-Greek substrate suffixes; Furnée 1972, _Die wichtigsten konsonantischen Erscheinungen des Vorgriechischen_, §§145-150."
+equation:
+  inscription_id: "HT 17"
+  span: [10, 11]
+  sign_to_phoneme:
+    AB31: n
+    AB02: th
+notes: |
+  Bucket: pre_greek_toponym_plausible (D1).
+  Prior expectation: MIXED. /n/ first-char is sonorant → S-class; /th/
+  first-char is 't' → C-class. S->C = 0.40 (typical onset cluster). Class
+  start # -> S = 0.15 (less common than # -> C = 0.55). AB02 (78% final) is
+  a poor fit for C-class (which expects 2% final), so position term will
+  drag the score down. AB31 (58% initial / 25% medial) fits S-class
+  [.20,.55,.20,.05] only weakly.
+  Note: this is a *suffix* candidate, not a root in the strict sense; we
+  treat it as a candidate-equation since it tests a small lexical fragment.

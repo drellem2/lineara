@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: aquit_ai_HT115b
+description: >
+  Aquitanian-substrate candidate. Tokens 37..38 of HT 115b (AB08 AB28) are
+  tested as Aquitanian /ai/ "slope / hillside" (Trask 1997 lists *ai- in
+  several toponyms; Modern Basque retains aitz "rocky outcrop"). Both signs
+  are well-attested syllabograms.
+author: pm-lineara
+created: 2026-05-04
+source_pool: aquitanian
+root:
+  surface: "ai"
+  phonemes:
+    - "a"
+    - "i"
+  gloss_hint: "slope / hillside (cf. Modern Basque aitz 'rocky outcrop')"
+  citation: "Trask 1997, _The History of Basque_, p. 256 (substrate root *ai-); Hualde & de Urbina 2003, _A Grammar of Basque_, on the aitz / aizko derivational family."
+equation:
+  inscription_id: "HT 115b"
+  span: [37, 38]
+  sign_to_phoneme:
+    AB08: a
+    AB28: i
+notes: |
+  Bucket: aquitanian_plausible (B2).
+  Prior expectation: MIXED. /a/ and /i/ are both V-class, so the class
+  bigram is V->V = 0.05 — RARE in Basque (hiatus is dispreferred). The
+  position term will dominate; AB08 (81% initial) and AB28 (44% initial) are
+  both initial-heavy, so neither fits the V-class final-friendly profile
+  cleanly. Expectation: this scores LOW even though the root is real, because
+  the class system collapses the two vowels and treats V->V as marked. A v0
+  metric limitation; documented.

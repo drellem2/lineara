@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: pgreek_inthos_HT95a
+description: >
+  Pre-Greek toponym candidate. Tokens 25..26 of HT 95a (AB76 AB10) are
+  tested as the nasal + dental fragment of an /-inthos/ ending, with proposed
+  phonemes /n/ + /th/. The /-nthos/ suffix is the second-most-attested
+  Pre-Greek toponym ending after -ssos.
+author: pm-lineara
+created: 2026-05-04
+source_pool: pre_greek_toponym
+root:
+  surface: "nth"
+  phonemes:
+    - "n"
+    - "th"
+  gloss_hint: "/n-th/ — Pre-Greek -nthos toponym fragment (Korinthos, Zakynthos, Tiryns)"
+  citation: "Beekes 2010, _Etymological Dictionary of Greek_, vol. 2 appendix s.v. -nthos; Furnée 1972 §§145-150."
+equation:
+  inscription_id: "HT 95a"
+  span: [25, 26]
+  sign_to_phoneme:
+    AB76: n
+    AB10: th
+notes: |
+  Bucket: pre_greek_toponym_plausible (D3).
+  Prior expectation: MIXED. /n/ S-class, /th/ C-class. S->C = 0.40. AB76
+  actual [.02,.21,.74,.02] is overwhelmingly final — moderate fit for S
+  (which expects 20% final). AB10 is rarer in the corpus; its position
+  fingerprint will dominate. Different signs from D1 (which uses AB31 AB02
+  for /n-th/) so the two D-bucket /n-th/ candidates are independent
+  observations of the same proposed phoneme-sequence under different
+  positional contexts.

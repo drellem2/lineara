@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: scramble_HT25a_E2
+description: >
+  Random-scramble baseline. Span HT 25a [7,8,9] (AB10 AB27 AB40), three signs,
+  with random IPA phonemes /ɛ/ + /m/ + /ɣ/ — uninformed assignment, no
+  substrate-language motivation.
+author: pm-lineara
+created: 2026-05-04
+source_pool: random_scramble
+root:
+  surface: "ɛmɣ"
+  phonemes:
+    - "ɛ"
+    - "m"
+    - "ɣ"
+  gloss_hint: "(no semantic content; randomly selected IPA characters)"
+  citation: "Random IPA selection; not a real lexeme."
+equation:
+  inscription_id: "HT 25a"
+  span: [7, 9]
+  sign_to_phoneme:
+    AB10: ɛ
+    AB27: m
+    AB40: ɣ
+notes: |
+  Bucket: random_scramble_baseline (E2).
+  Prior expectation: control_z near 0. Three phonemes give 6-permutation
+  control distribution → richer z than 2-phoneme cases. /ɛ/ V (vowel set
+  starts with 'a' but 'ɛ' first-char is 'ɛ' which is NOT in the ASCII vowel
+  set — so it falls to C-class actually). /m/ S, /ɣ/ C. Class structure
+  C-S-C is unusual under Basque CV phonotactics. Random assignment to signs
+  → no a-priori reason to expect high z; should average near 0.

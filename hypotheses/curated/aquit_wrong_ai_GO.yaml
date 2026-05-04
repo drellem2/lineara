@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: aquit_wrong_ai_GO_Wc_1a
+description: >
+  Aquitanian-substrate NEGATIVE CONTROL. Same root /ai/ as aquit_ai_HT115b
+  pinned to GO Wc 1a tokens 1..2 (AB31 AB58), where neither sign carries the
+  position profile of a V-class phoneme.
+author: pm-lineara
+created: 2026-05-04
+source_pool: aquitanian
+root:
+  surface: "ai"
+  phonemes:
+    - "a"
+    - "i"
+  gloss_hint: "slope / hillside (deliberately wrong placement)"
+  citation: "Trask 1997, _The History of Basque_, p. 256 (root reference); placement chosen to fail position-fit."
+equation:
+  inscription_id: "GO Wc 1a"
+  span: [1, 2]
+  sign_to_phoneme:
+    AB31: a
+    AB58: i
+notes: |
+  Bucket: aquitanian_deliberately_wrong (C2).
+  Prior expectation: control_z near 0. AB31 is 58% initial — V-class
+  (final-friendly) is a poor fit. AB58 actual is medial-heavy. The V->V
+  bigram is already rare (0.05), so the score is pinned low; permutations
+  give similarly low scores → z collapses toward 0.

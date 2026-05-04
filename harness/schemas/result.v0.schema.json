@@ -11,8 +11,6 @@
     "harness_version",
     "metric",
     "score",
-    "bits_per_sign_baseline",
-    "bits_per_sign_mapped",
     "corpus_records_used",
     "corpus_snapshot",
     "ran_at",
@@ -46,15 +44,23 @@
     },
     "score": {
       "type": "number",
-      "description": "Primary metric output. For compression_delta_v0: baseline_bits - mapped_bits (positive = compression improvement)."
+      "description": "Primary metric output. For compression_delta_v0: baseline_bits - mapped_bits (positive = compression improvement). For local_fit_v0: position_term + bigram_term, see harness/metrics.py."
+    },
+    "score_control_z": {
+      "type": "number",
+      "description": "Standardized score against a control distribution of N>=100 random phoneme-permutations of the same alignment, seeded for reproducibility. Present iff metric == 'local_fit_v0'."
+    },
+    "metric_notes": {
+      "type": "string",
+      "description": "Free-form notes from the metric (e.g. control parameters, sub-term breakdown). Present iff the metric emits them."
     },
     "bits_per_sign_baseline": {
       "type": "number",
-      "description": "Baseline encoding bits divided by the number of tokens in the stream (including the inscription-boundary marker)."
+      "description": "Baseline encoding bits divided by the number of tokens in the stream. Present iff metric == 'compression_delta_v0'."
     },
     "bits_per_sign_mapped": {
       "type": "number",
-      "description": "Mapped encoding bits divided by the number of tokens in the stream."
+      "description": "Mapped encoding bits divided by the number of tokens in the stream. Present iff metric == 'compression_delta_v0'."
     },
     "corpus_records_used": {
       "type": "integer",
