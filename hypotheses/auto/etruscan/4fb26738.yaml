@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_maru_ARKH_1a_21_24
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''maru''
+  pinned to ARKH 1a tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: maru
+  phonemes:
+  - m
+  - a
+  - r
+  - u
+  gloss_hint: priestly title; magistrate
+  citation: Bonfante & Bonfante 2002, glossary maru.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB73: m
+    AB67: a
+    AB31: r
+    AB24: u

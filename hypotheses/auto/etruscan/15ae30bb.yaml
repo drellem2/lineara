@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_aiser_KN_Zf_13_13_17
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''aiser''
+  pinned to KN Zf 13 tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: aiser
+  phonemes:
+  - a
+  - i
+  - s
+  - e
+  - r
+  gloss_hint: gods (plural)
+  citation: Bonfante & Bonfante 2002, glossary aiser.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB04: a
+    AB53: i
+    AB23: s
+    AB08: e
+    AB57: r

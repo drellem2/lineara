@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_velia_ARKH_5_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''velia''
+  pinned to ARKH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: velia
+  phonemes:
+  - v
+  - e
+  - l
+  - i
+  - a
+  gloss_hint: Velia (common female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: v
+    AB51: e
+    AB30: l
+    AB59: i
+    AB06: a

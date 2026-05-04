@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cezp_GO_Wc_1a_0_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cezp''
+  pinned to GO Wc 1a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cezp
+  phonemes:
+  - c
+  - e
+  - z
+  - p
+  gloss_hint: eight
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: c
+    AB31: e
+    AB58: z
+    AB80: p

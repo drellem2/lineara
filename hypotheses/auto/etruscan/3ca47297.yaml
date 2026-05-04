@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_uni_ARKH_1a_21_23
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''uni''
+  pinned to ARKH 1a tokens [21..23].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: uni
+  phonemes:
+  - u
+  - n
+  - i
+  gloss_hint: Uni (queen of gods, ~Juno)
+  citation: Bonfante & Bonfante 2002, glossary uni; Pyrgi tablets.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 21
+  - 23
+  sign_to_phoneme:
+    AB73: u
+    AB67: n
+    AB31: i

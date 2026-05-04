@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_zatlath_KN_Zf_13_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''zatlath''
+  pinned to KN Zf 13 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: zatlath
+  phonemes:
+  - z
+  - a
+  - t
+  - l
+  - a
+  - th
+  gloss_hint: title (uncertain; civic)
+  citation: Bonfante & Bonfante 2002, glossary zatlath.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: z
+    AB27: a
+    AB24: t
+    AB41: l
+    AB07: a
+    A301: th

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_aule_HT_115a_10_13
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''aule''
+  pinned to HT 115a tokens [10..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: aule
+  phonemes:
+  - a
+  - u
+  - l
+  - e
+  gloss_hint: Aule (common male praenomen, ~Aulus)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    AB59: a
+    AB80: u
+    AB55: l
+    AB40: e

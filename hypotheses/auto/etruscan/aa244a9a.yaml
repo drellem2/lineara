@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_fleres_HT_Zb_158b_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''fleres''
+  pinned to HT Zb 158b tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: fleres
+  phonemes:
+  - f
+  - l
+  - e
+  - r
+  - e
+  - s
+  gloss_hint: statue, votive figure
+  citation: Bonfante & Bonfante 2002, glossary fleres.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB58: f
+    AB67: l
+    AB53: e
+    AB04: r
+    AB28: e
+    AB57: s

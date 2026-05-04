@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_chimth_HT_115a_0_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''chimth''
+  pinned to HT 115a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: chimth
+  phonemes:
+  - ch
+  - i
+  - m
+  - th
+  gloss_hint: at, near (preposition)
+  citation: Bonfante & Bonfante 2002, glossary chimth.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB47: ch
+    AB55: i
+    AB60: m
+    AB56: th

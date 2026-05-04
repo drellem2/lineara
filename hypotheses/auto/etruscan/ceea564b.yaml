@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_lautni_KN_Zc_7_16_21
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''lautni''
+  pinned to KN Zc 7 tokens [16..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: lautni
+  phonemes:
+  - l
+  - a
+  - u
+  - t
+  - n
+  - i
+  gloss_hint: freedman, household member
+  citation: Bonfante & Bonfante 2002, glossary lautni.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 16
+  - 21
+  sign_to_phoneme:
+    AB60: l
+    AB08: a
+    AB06: u
+    AB24: t
+    AB40: n
+    AB39: i

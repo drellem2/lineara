@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cesu_HT_115a_0_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cesu''
+  pinned to HT 115a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cesu
+  phonemes:
+  - c
+  - e
+  - s
+  - u
+  gloss_hint: lies (in tomb)
+  citation: Bonfante & Bonfante 2002, glossary cesu; funerary verb.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB47: c
+    AB55: e
+    AB60: s
+    AB56: u

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan__uthina_KN_Zf_13_4_9
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''śuthina''
+  pinned to KN Zf 13 tokens [4..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: śuthina
+  phonemes:
+  - s
+  - u
+  - th
+  - i
+  - n
+  - a
+  gloss_hint: for the tomb (funerary marker on grave goods)
+  citation: Bonfante & Bonfante 2002, glossary śuthina; common on bronze grave goods.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 9
+  sign_to_phoneme:
+    AB07: s
+    A301: u
+    AB39: th
+    AB44: i
+    AB03: n
+    AB57: a

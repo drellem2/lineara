@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_in_ARKH_1a_17_18
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''in''
+  pinned to ARKH 1a tokens [17..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: in
+  phonemes:
+  - i
+  - n
+  gloss_hint: him, that one
+  citation: Bonfante & Bonfante 2002, ch. 5 pronouns.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 17
+  - 18
+  sign_to_phoneme:
+    AB08: i
+    AB03: n

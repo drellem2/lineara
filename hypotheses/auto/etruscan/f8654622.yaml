@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tul_ARKH_2_8_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tul''
+  pinned to ARKH 2 tokens [8..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tul
+  phonemes:
+  - t
+  - u
+  - l
+  gloss_hint: stone marker, terminus
+  citation: Bonfante & Bonfante 2002, glossary tul.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 10
+  sign_to_phoneme:
+    AB08: t
+    AB41: u
+    AB01: l

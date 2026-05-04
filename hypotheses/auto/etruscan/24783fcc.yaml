@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_huth_HT_108_13_15
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''huth''
+  pinned to HT 108 tokens [13..15].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: huth
+  phonemes:
+  - h
+  - u
+  - th
+  gloss_hint: four (or six; debated)
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals (debated value).
+equation:
+  inscription_id: HT 108
+  span:
+  - 13
+  - 15
+  sign_to_phoneme:
+    AB51: h
+    AB58: u
+    AB30: th

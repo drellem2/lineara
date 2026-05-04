@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_avil_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''avil''
+  pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: avil
+  phonemes:
+  - a
+  - v
+  - i
+  - l
+  gloss_hint: year
+  citation: Bonfante & Bonfante 2002, glossary avil; pervasive in epitaphs.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: a
+    AB58: v
+    AB47: i
+    AB04: l

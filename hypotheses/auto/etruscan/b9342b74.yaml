@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_sa_ARKH_2_17_19
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''sa''
+  pinned to ARKH 2 tokens [17..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: sa
+  phonemes:
+  - s
+  - a
+  gloss_hint: six (or four; debated)
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals (debated value).
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 17
+  - 19
+  sign_to_phoneme:
+    AB45: s
+    AB118: a

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nesna_GO_Wc_1a_1_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nesna''
+  pinned to GO Wc 1a tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nesna
+  phonemes:
+  - n
+  - e
+  - s
+  - n
+  - a
+  gloss_hint: of the dead, funerary
+  citation: Bonfante & Bonfante 2002, glossary nesna.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB31: n
+    AB58: e
+    AB80: s
+    AB28: n
+    AB09: a

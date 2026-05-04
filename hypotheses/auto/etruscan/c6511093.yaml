@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nurph_HT_115a_37_40
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nurph''
+  pinned to HT 115a tokens [37..40].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nurph
+  phonemes:
+  - n
+  - u
+  - r
+  - ph
+  gloss_hint: nine
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 37
+  - 40
+  sign_to_phoneme:
+    AB08: n
+    AB09: u
+    AB57: r
+    A718: ph

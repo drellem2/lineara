@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_aclus_HT_115a_9_13
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''aclus''
+  pinned to HT 115a tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: aclus
+  phonemes:
+  - a
+  - c
+  - l
+  - u
+  - s
+  gloss_hint: month name (Aclus)
+  citation: Bonfante & Bonfante 2002, glossary aclus.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB53: a
+    AB59: c
+    AB80: l
+    AB55: u
+    AB40: s

@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ar_ARKH_6_1_2
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ar''
+  pinned to ARKH 6 tokens [1..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ar
+  phonemes:
+  - a
+  - r
+  gloss_hint: do, make (verb root)
+  citation: Bonfante & Bonfante 2002, glossary ar.
+equation:
+  inscription_id: ARKH 6
+  span:
+  - 1
+  - 2
+  sign_to_phoneme:
+    AB06: a
+    AB69: r

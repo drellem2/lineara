@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ar_ARKH_4a_14_16
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ar''
+  pinned to ARKH 4a tokens [14..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ar
+  phonemes:
+  - a
+  - r
+  gloss_hint: do, make (verb root)
+  citation: Bonfante & Bonfante 2002, glossary ar.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 14
+  - 16
+  sign_to_phoneme:
+    AB58: a
+    AB47: r

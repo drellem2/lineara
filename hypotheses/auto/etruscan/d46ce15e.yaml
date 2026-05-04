@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nepos_HT_Wc_3017a_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nepos''
+  pinned to HT Wc 3017a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nepos
+  phonemes:
+  - n
+  - e
+  - p
+  - o
+  - s
+  gloss_hint: descendant (loan from Latin?)
+  citation: Bonfante & Bonfante 2002, glossary nepos (Latin loan; included for cross-checking).
+equation:
+  inscription_id: HT Wc 3017a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB16: n
+    AB81: e
+    AB27: p
+    AB06: o
+    A306: s

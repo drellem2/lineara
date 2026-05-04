@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_vinum_KN_Zc_7_15_19
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''vinum''
+  pinned to KN Zc 7 tokens [15..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: vinum
+  phonemes:
+  - v
+  - i
+  - n
+  - u
+  - m
+  gloss_hint: wine
+  citation: Bonfante & Bonfante 2002, glossary vinum.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 19
+  sign_to_phoneme:
+    AB31: v
+    AB60: i
+    AB08: n
+    AB06: u
+    AB24: m

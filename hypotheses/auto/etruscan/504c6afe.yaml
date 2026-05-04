@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_vinum_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''vinum''
+  pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: vinum
+  phonemes:
+  - v
+  - i
+  - n
+  - u
+  - m
+  gloss_hint: wine
+  citation: Bonfante & Bonfante 2002, glossary vinum.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: v
+    AB41: i
+    AB01: n
+    AB05: u
+    AB28: m

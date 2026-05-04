@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_capra_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''capra''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: capra
+  phonemes:
+  - c
+  - a
+  - p
+  - r
+  - a
+  gloss_hint: goat
+  citation: Bonfante & Bonfante 2002, glossary capra; cf. Latin loan.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: c
+    AB26: a
+    AB78: p
+    AB76: r
+    AB10: a

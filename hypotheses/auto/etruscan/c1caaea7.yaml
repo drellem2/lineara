@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_papals_HT_122b_13_18
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''papals''
+  pinned to HT 122b tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: papals
+  phonemes:
+  - p
+  - a
+  - p
+  - a
+  - l
+  - s
+  gloss_hint: grandchild (paternal)
+  citation: Bonfante & Bonfante 2002, glossary papals.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB08: p
+    AB60: a
+    AB65: p
+    AB10: a
+    AB45: l
+    AB17: s

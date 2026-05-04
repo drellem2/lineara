@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ati_HT_104_20_22
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ati''
+  pinned to HT 104 tokens [20..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ati
+  phonemes:
+  - a
+  - t
+  - i
+  gloss_hint: mother
+  citation: Bonfante & Bonfante 2002, glossary ati.
+equation:
+  inscription_id: HT 104
+  span:
+  - 20
+  - 22
+  sign_to_phoneme:
+    AB01: a
+    AB58: t
+    AB37: i

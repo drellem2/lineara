@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_fleres_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''fleres''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: fleres
+  phonemes:
+  - f
+  - l
+  - e
+  - r
+  - e
+  - s
+  gloss_hint: statue, votive figure
+  citation: Bonfante & Bonfante 2002, glossary fleres.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: f
+    AB45: l
+    AB26: e
+    AB78: r
+    AB76: e
+    AB10: s

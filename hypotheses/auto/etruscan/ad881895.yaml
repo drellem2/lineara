@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thui_ARKH_2_16_19
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thui''
+  pinned to ARKH 2 tokens [16..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thui
+  phonemes:
+  - th
+  - u
+  - i
+  gloss_hint: here
+  citation: Bonfante & Bonfante 2002, glossary thui.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 16
+  - 19
+  sign_to_phoneme:
+    AB09: th
+    AB45: u
+    AB118: i

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_svalce_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''svalce''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: svalce
+  phonemes:
+  - s
+  - v
+  - a
+  - l
+  - c
+  - e
+  gloss_hint: lived
+  citation: Bonfante & Bonfante 2002, glossary svalce.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: s
+    AB45: v
+    AB26: a
+    AB78: l
+    AB76: c
+    AB10: e

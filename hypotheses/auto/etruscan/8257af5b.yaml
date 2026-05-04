@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_vacl_HT_104_5_8
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''vacl''
+  pinned to HT 104 tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: vacl
+  phonemes:
+  - v
+  - a
+  - c
+  - l
+  gloss_hint: libation
+  citation: Bonfante & Bonfante 2002, glossary vacl.
+equation:
+  inscription_id: HT 104
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB01: v
+    AB81: a
+    AB09: c
+    AB24: l

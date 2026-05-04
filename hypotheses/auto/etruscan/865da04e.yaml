@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_usil_ARKH_2_9_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''usil''
+  pinned to ARKH 2 tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: usil
+  phonemes:
+  - u
+  - s
+  - i
+  - l
+  gloss_hint: sun
+  citation: Bonfante & Bonfante 2002, glossary usil.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: u
+    AB01: s
+    AB05: i
+    AB28: l

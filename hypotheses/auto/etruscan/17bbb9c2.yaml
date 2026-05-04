@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tinia_HT_128a_5_9
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tinia''
+  pinned to HT 128a tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tinia
+  phonemes:
+  - t
+  - i
+  - n
+  - i
+  - a
+  gloss_hint: Tinia (chief god)
+  citation: Bonfante & Bonfante 2002, glossary tinia.
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB69: t
+    AB26: i
+    AB56: n
+    AB09: i
+    AB13: a

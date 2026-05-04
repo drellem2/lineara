@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_catha_HT_13_30_33
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''catha''
+  pinned to HT 13 tokens [30..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: catha
+  phonemes:
+  - c
+  - a
+  - th
+  - a
+  gloss_hint: Catha (sun deity)
+  citation: Bonfante & Bonfante 2002, glossary catha.
+equation:
+  inscription_id: HT 13
+  span:
+  - 30
+  - 33
+  sign_to_phoneme:
+    AB28: c
+    AB51: a
+    AB24: th
+    AB41: a

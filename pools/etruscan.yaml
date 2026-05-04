@@ -1,0 +1,1085 @@
+pool: etruscan
+source_citation: |
+  Bonfante, G., & Bonfante, L. (2002). The Etruscan Language: An Introduction
+    (revised ed.). Manchester / New York: Manchester University Press.
+    [the canonical English-language reference grammar; chapters 4 (alphabet
+     and phonology), 5 (morphology), and the glossary in the appendix
+     covering well-attested vocabulary.]
+  Pallottino, M. (1968). Testimonia Linguae Etruscae (TLE), 2nd ed. Florence:
+    La Nuova Italia. [the standard inscription numbering used in citations
+     below; e.g. "TLE 1" = Cippus Perusinus.]
+  Etruscan Texts Project (ETP), University of Massachusetts Amherst.
+    https://etp.classics.umass.edu  [searchable corpus of ~13,000 Etruscan
+     inscriptions; used for attestation cross-checks and frequency.]
+  Public-domain Etruscan inscriptions (1st millennium BCE to 1st c. CE).
+    The originals are out of copyright; secondary-source citations cover
+    Bonfante & Bonfante 2002 and Pallottino's TLE inscription numbers.
+license: |
+  Cited fair-use of the secondary sources (Bonfante & Bonfante 2002 and
+  Pallottino's TLE) for compilation of root surface, phoneme, gloss, and
+  attestation fields. Underlying inscriptions are in the public domain.
+fetched_at: "2026-05-04T00:00:00Z"
+entries:
+  # ---------------------------------------------------------------------
+  # Numerals (Bonfante & Bonfante 2002, ch. 5; the Tabula Cortonensis and
+  # the dice from Tuscania anchor the lower digits.)
+  # ---------------------------------------------------------------------
+  - surface: thu
+    phonemes: [th, u]
+    gloss: one
+    semantic_field: number
+    attestations: [thu, thunz, thunś]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals; dice of Tuscania.
+  - surface: zal
+    phonemes: [z, a, l]
+    gloss: two
+    semantic_field: number
+    attestations: [zal, esal, esals, zalvs]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+  - surface: ci
+    phonemes: [c, i]
+    gloss: three
+    semantic_field: number
+    attestations: [ci, cis, civi]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals; dice of Tuscania.
+  - surface: huth
+    phonemes: [h, u, th]
+    gloss: four (or six; debated)
+    semantic_field: number
+    attestations: [huth, huths]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals (debated value).
+  - surface: mach
+    phonemes: [m, a, ch]
+    gloss: five
+    semantic_field: number
+    attestations: [mach, machs]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+  - surface: sa
+    phonemes: [s, a]
+    gloss: six (or four; debated)
+    semantic_field: number
+    attestations: [sa, sas, śa]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals (debated value).
+  - surface: semph
+    phonemes: [s, e, m, ph]
+    gloss: seven
+    semantic_field: number
+    attestations: [semph, semphalch]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+  - surface: cezp
+    phonemes: [c, e, z, p]
+    gloss: eight
+    semantic_field: number
+    attestations: [cezp, cezpalch]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+  - surface: nurph
+    phonemes: [n, u, r, ph]
+    gloss: nine
+    semantic_field: number
+    attestations: [nurph, nurphzi]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+  - surface: sar
+    phonemes: [s, a, r]
+    gloss: ten
+    semantic_field: number
+    attestations: [sar, sarvenas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+  - surface: zathrum
+    phonemes: [z, a, th, r, u, m]
+    gloss: twenty
+    semantic_field: number
+    attestations: [zathrum, zathrums]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+  - surface: cealch
+    phonemes: [c, e, a, l, ch]
+    gloss: thirty
+    semantic_field: number
+    attestations: [cealchs, cealchls]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+  - surface: muvalch
+    phonemes: [m, u, v, a, l, ch]
+    gloss: fifty (or forty; debated)
+    semantic_field: number
+    attestations: [muvalch, muvalchls]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals (debated).
+  - surface: semphalch
+    phonemes: [s, e, m, ph, a, l, ch]
+    gloss: seventy
+    semantic_field: number
+    attestations: [semphalch]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 numerals (decadal forms).
+
+  # ---------------------------------------------------------------------
+  # Kinship (Bonfante & Bonfante 2002, glossary; pervasive in funerary
+  # inscriptions on sarcophagi and cinerary urns from Tarquinia, Cerveteri,
+  # Volterra, and Perugia.)
+  # ---------------------------------------------------------------------
+  - surface: clan
+    phonemes: [c, l, a, n]
+    gloss: son
+    semantic_field: kin
+    attestations: [clan, clans, clanti, clenar]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary clan; ubiquitous funerary epitaph.
+  - surface: sech
+    phonemes: [s, e, ch]
+    gloss: daughter
+    semantic_field: kin
+    attestations: [sech, sec, secn]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary sech; funerary epitaphs.
+  - surface: puia
+    phonemes: [p, u, i, a]
+    gloss: wife
+    semantic_field: kin
+    attestations: [puia, puiac]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary puia; cf. TLE 887.
+  - surface: ati
+    phonemes: [a, t, i]
+    gloss: mother
+    semantic_field: kin
+    attestations: [ati, atis, atial]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary ati.
+  - surface: apa
+    phonemes: [a, p, a]
+    gloss: father
+    semantic_field: kin
+    attestations: [apa, apas, apana]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary apa.
+  - surface: ruva
+    phonemes: [r, u, v, a]
+    gloss: brother
+    semantic_field: kin
+    attestations: [ruva, ruvas, ruvfial]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary ruva.
+  - surface: papa
+    phonemes: [p, a, p, a]
+    gloss: grandfather
+    semantic_field: kin
+    attestations: [papa, papals, papacs]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary papa.
+  - surface: papals
+    phonemes: [p, a, p, a, l, s]
+    gloss: grandchild (paternal)
+    semantic_field: kin
+    attestations: [papals, papalser]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary papals.
+  - surface: tetals
+    phonemes: [t, e, t, a, l, s]
+    gloss: grandchild (maternal)
+    semantic_field: kin
+    attestations: [tetals, teta]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary tetals.
+  - surface: nefts
+    phonemes: [n, e, f, t, s]
+    gloss: nephew, grandson
+    semantic_field: kin
+    attestations: [nefts, neftś, nefś]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary nefts.
+  - surface: lautn
+    phonemes: [l, a, u, t, n]
+    gloss: family, gens
+    semantic_field: kin
+    attestations: [lautn, lautni, lautun]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary lautn.
+  - surface: lautni
+    phonemes: [l, a, u, t, n, i]
+    gloss: freedman, household member
+    semantic_field: kin
+    attestations: [lautni, lautnial, lautnitha]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary lautni.
+  - surface: lautnitha
+    phonemes: [l, a, u, t, n, i, th, a]
+    gloss: freedwoman
+    semantic_field: kin
+    attestations: [lautnitha, lautnithal]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary lautnitha.
+  - surface: nene
+    phonemes: [n, e, n, e]
+    gloss: nurse, grandmother
+    semantic_field: kin
+    attestations: [nene, nenes]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary nene.
+  - surface: etera
+    phonemes: [e, t, e, r, a]
+    gloss: slave, dependent
+    semantic_field: kin
+    attestations: [etera, eteri, eteras]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary etera.
+
+  # ---------------------------------------------------------------------
+  # Religion (Bonfante & Bonfante 2002, glossary; the Liber Linteus and
+  # Tabula Capuana provide the longest religious texts.)
+  # ---------------------------------------------------------------------
+  - surface: ais
+    phonemes: [a, i, s]
+    gloss: god
+    semantic_field: religion
+    attestations: [ais, aiser, aisuna]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary ais.
+  - surface: aiser
+    phonemes: [a, i, s, e, r]
+    gloss: gods (plural)
+    semantic_field: religion
+    attestations: [aiser, aisera, aiseras]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary aiser.
+  - surface: eis
+    phonemes: [e, i, s]
+    gloss: god (variant)
+    semantic_field: religion
+    attestations: [eis, eisera, eiser]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary eis.
+  - surface: fanu
+    phonemes: [f, a, n, u]
+    gloss: sanctuary, sacred place
+    semantic_field: religion
+    attestations: [fanu, fanus]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary fanu.
+  - surface: fler
+    phonemes: [f, l, e, r]
+    gloss: offering, sacrifice
+    semantic_field: religion
+    attestations: [fler, flers, flerchva]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary fler.
+  - surface: fleres
+    phonemes: [f, l, e, r, e, s]
+    gloss: statue, votive figure
+    semantic_field: religion
+    attestations: [fleres, flereś]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary fleres.
+  - surface: tin
+    phonemes: [t, i, n]
+    gloss: Tinia (chief god, ~Jupiter); also "day"
+    semantic_field: religion
+    attestations: [tin, tins, tinia, tinias]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary tin/tinia.
+  - surface: tinia
+    phonemes: [t, i, n, i, a]
+    gloss: Tinia (chief god)
+    semantic_field: religion
+    attestations: [tinia, tinias, tiniaial]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary tinia.
+  - surface: uni
+    phonemes: [u, n, i]
+    gloss: Uni (queen of gods, ~Juno)
+    semantic_field: religion
+    attestations: [uni, unial, unialth]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary uni; Pyrgi tablets.
+  - surface: menerva
+    phonemes: [m, e, n, e, r, v, a]
+    gloss: Menerva (~Minerva)
+    semantic_field: religion
+    attestations: [menerva, menervas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary menerva.
+  - surface: nethuns
+    phonemes: [n, e, th, u, n, s]
+    gloss: Nethuns (~Neptune)
+    semantic_field: religion
+    attestations: [nethuns, nethunsl]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary nethuns.
+  - surface: thesan
+    phonemes: [th, e, s, a, n]
+    gloss: dawn (goddess)
+    semantic_field: religion
+    attestations: [thesan, thesans]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary thesan.
+  - surface: velkans
+    phonemes: [v, e, l, k, a, n, s]
+    gloss: Velkans (~Volcanus)
+    semantic_field: religion
+    attestations: [velkans, velchans]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary velkans.
+  - surface: selvans
+    phonemes: [s, e, l, v, a, n, s]
+    gloss: Selvans (~Silvanus)
+    semantic_field: religion
+    attestations: [selvans, selvansl]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary selvans.
+  - surface: catha
+    phonemes: [c, a, th, a]
+    gloss: Catha (sun deity)
+    semantic_field: religion
+    attestations: [catha, cathas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary catha.
+  - surface: usil
+    phonemes: [u, s, i, l]
+    gloss: sun
+    semantic_field: religion
+    attestations: [usil, usils]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary usil.
+  - surface: tivr
+    phonemes: [t, i, v, r]
+    gloss: moon, month
+    semantic_field: time
+    attestations: [tivr, tivrs, tiur]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary tivr.
+  - surface: tiu
+    phonemes: [t, i, u]
+    gloss: month (variant of tivr)
+    semantic_field: time
+    attestations: [tiu, tiur, tius]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary tiu.
+  - surface: alpan
+    phonemes: [a, l, p, a, n]
+    gloss: gift, votive
+    semantic_field: religion
+    attestations: [alpan, alpnu, alpnus]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary alpan.
+  - surface: cver
+    phonemes: [c, v, e, r]
+    gloss: gift, dedication
+    semantic_field: religion
+    attestations: [cver, cvera, cveras]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary cver.
+  - surface: mlach
+    phonemes: [m, l, a, ch]
+    gloss: good, beautiful (votive context)
+    semantic_field: religion
+    attestations: [mlach, mlacas, mlacut]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary mlach.
+  - surface: cepen
+    phonemes: [c, e, p, e, n]
+    gloss: priest
+    semantic_field: religion
+    attestations: [cepen, cepens]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary cepen; Liber Linteus.
+  - surface: hanthe
+    phonemes: [h, a, n, th, e]
+    gloss: in front, before (ritual)
+    semantic_field: religion
+    attestations: [hanthe, hanthi]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary hanthe.
+  - surface: sath
+    phonemes: [s, a, th]
+    gloss: bond, ritual obligation
+    semantic_field: religion
+    attestations: [sath, sathnal]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary sath.
+  - surface: suthi
+    phonemes: [s, u, th, i]
+    gloss: tomb
+    semantic_field: religion
+    attestations: [suthi, suthina, suthil, śuthi]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary suthi; ubiquitous in funerary inscriptions.
+  - surface: hinthial
+    phonemes: [h, i, n, th, i, a, l]
+    gloss: shadow, soul of the dead
+    semantic_field: religion
+    attestations: [hinthial, hinthi]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary hinthial.
+
+  # ---------------------------------------------------------------------
+  # Verbs (Bonfante & Bonfante 2002, ch. 5 morphology; mostly attested in
+  # third-person past forms in dedicatory and funerary contexts.)
+  # ---------------------------------------------------------------------
+  - surface: turuce
+    phonemes: [t, u, r, u, c, e]
+    gloss: gave, dedicated (perfective)
+    semantic_field: function
+    attestations: [turuce, turce, turunce]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary turuce; votive verb.
+  - surface: turce
+    phonemes: [t, u, r, c, e]
+    gloss: gave (variant of turuce)
+    semantic_field: function
+    attestations: [turce, turuce]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary turce.
+  - surface: muluvanece
+    phonemes: [m, u, l, u, v, a, n, e, c, e]
+    gloss: dedicated
+    semantic_field: function
+    attestations: [muluvanece, mulvanice, muluvenece]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary muluvanece.
+  - surface: zinece
+    phonemes: [z, i, n, e, c, e]
+    gloss: made
+    semantic_field: function
+    attestations: [zinece, zinace]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary zinece.
+  - surface: ziche
+    phonemes: [z, i, ch, e]
+    gloss: wrote, inscribed
+    semantic_field: function
+    attestations: [ziche, zich, zichu]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary ziche.
+  - surface: amce
+    phonemes: [a, m, c, e]
+    gloss: was
+    semantic_field: function
+    attestations: [amce, ame]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary amce.
+  - surface: ame
+    phonemes: [a, m, e]
+    gloss: is
+    semantic_field: function
+    attestations: [ame, am]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary ame.
+  - surface: svalce
+    phonemes: [s, v, a, l, c, e]
+    gloss: lived
+    semantic_field: function
+    attestations: [svalce, svalas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary svalce.
+  - surface: lupuce
+    phonemes: [l, u, p, u, c, e]
+    gloss: died
+    semantic_field: function
+    attestations: [lupuce, lupu, lup]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary lupuce.
+  - surface: cerichunce
+    phonemes: [c, e, r, i, ch, u, n, c, e]
+    gloss: built, erected
+    semantic_field: function
+    attestations: [cerichunce, cerichu, cerichi]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary cerichunce.
+  - surface: tece
+    phonemes: [t, e, c, e]
+    gloss: placed, set up
+    semantic_field: function
+    attestations: [tece, tec]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary tece.
+  - surface: alike
+    phonemes: [a, l, i, k, e]
+    gloss: gave (variant)
+    semantic_field: function
+    attestations: [alike, alce, alceriu]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary alike.
+  - surface: trin
+    phonemes: [t, r, i, n]
+    gloss: said, spoke
+    semantic_field: function
+    attestations: [trin, trinth]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary trin.
+  - surface: ar
+    phonemes: [a, r]
+    gloss: do, make (verb root)
+    semantic_field: function
+    attestations: [ar, ara, aratus]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary ar.
+  - surface: cesu
+    phonemes: [c, e, s, u]
+    gloss: lies (in tomb)
+    semantic_field: function
+    attestations: [cesu, ces]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary cesu; funerary verb.
+
+  # ---------------------------------------------------------------------
+  # Civic / titles / political (Bonfante & Bonfante 2002, glossary;
+  # mostly attested in epitaphs and the Tabula Cortonensis.)
+  # ---------------------------------------------------------------------
+  - surface: zilath
+    phonemes: [z, i, l, a, th]
+    gloss: magistrate
+    semantic_field: function
+    attestations: [zilath, zilac, zilachnu, zilachnce]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary zilath.
+  - surface: zilac
+    phonemes: [z, i, l, a, c]
+    gloss: magistrate (variant)
+    semantic_field: function
+    attestations: [zilac, zilath, zilachnu]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary zilac.
+  - surface: maru
+    phonemes: [m, a, r, u]
+    gloss: priestly title; magistrate
+    semantic_field: function
+    attestations: [maru, maruchva, maru]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary maru.
+  - surface: purth
+    phonemes: [p, u, r, th]
+    gloss: title (uncertain; magistrate)
+    semantic_field: function
+    attestations: [purth, purthne, purthnes]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary purth.
+  - surface: camthi
+    phonemes: [c, a, m, th, i]
+    gloss: magistrate / title
+    semantic_field: function
+    attestations: [camthi, camthial]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary camthi.
+  - surface: lauchum
+    phonemes: [l, a, u, ch, u, m]
+    gloss: king
+    semantic_field: function
+    attestations: [lauchum, lauchme]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary lauchum.
+  - surface: tamera
+    phonemes: [t, a, m, e, r, a]
+    gloss: chamber, office (~tamiae)
+    semantic_field: function
+    attestations: [tamera, tamerae]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary tamera.
+  - surface: spura
+    phonemes: [s, p, u, r, a]
+    gloss: city
+    semantic_field: place
+    attestations: [spura, spural, spureni]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary spura.
+  - surface: spural
+    phonemes: [s, p, u, r, a, l]
+    gloss: of the city, civic
+    semantic_field: place
+    attestations: [spural, spurana, spurani]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary spural.
+  - surface: methlum
+    phonemes: [m, e, th, l, u, m]
+    gloss: district, region
+    semantic_field: place
+    attestations: [methlum, methlumeric]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary methlum.
+  - surface: tular
+    phonemes: [t, u, l, a, r]
+    gloss: boundary, border
+    semantic_field: place
+    attestations: [tular, tularu, tularis]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary tular.
+  - surface: tul
+    phonemes: [t, u, l]
+    gloss: stone marker, terminus
+    semantic_field: place
+    attestations: [tul, tular]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary tul.
+
+  # ---------------------------------------------------------------------
+  # Time
+  # ---------------------------------------------------------------------
+  - surface: avil
+    phonemes: [a, v, i, l]
+    gloss: year
+    semantic_field: time
+    attestations: [avil, avils, aviles]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary avil; pervasive in epitaphs.
+  - surface: avils
+    phonemes: [a, v, i, l, s]
+    gloss: of years (genitive)
+    semantic_field: time
+    attestations: [avils, avilχva]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary avils.
+  - surface: ril
+    phonemes: [r, i, l]
+    gloss: at the age of (epitaph formula)
+    semantic_field: time
+    attestations: [ril, rilχ, rils]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary ril.
+  - surface: lupum
+    phonemes: [l, u, p, u, m]
+    gloss: dead at (epitaph)
+    semantic_field: time
+    attestations: [lupum, lupu]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary lupum.
+  - surface: zelar
+    phonemes: [z, e, l, a, r]
+    gloss: time, ritual time-period
+    semantic_field: time
+    attestations: [zelar, zelarvenas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary zelar.
+
+  # ---------------------------------------------------------------------
+  # Pronouns / demonstratives (Bonfante & Bonfante 2002, ch. 5)
+  # ---------------------------------------------------------------------
+  - surface: mi
+    phonemes: [m, i]
+    gloss: I (also "this is")
+    semantic_field: function
+    attestations: [mi, mini]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 pronouns; "mi" opens many votives.
+  - surface: mini
+    phonemes: [m, i, n, i]
+    gloss: me (accusative)
+    semantic_field: function
+    attestations: [mini, min]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 pronouns.
+  - surface: ca
+    phonemes: [c, a]
+    gloss: this
+    semantic_field: function
+    attestations: [ca, cn, cen, cei]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 demonstratives.
+  - surface: cn
+    phonemes: [c, n]
+    gloss: this (accusative)
+    semantic_field: function
+    attestations: [cn, cen]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 demonstratives.
+  - surface: ita
+    phonemes: [i, t, a]
+    gloss: that
+    semantic_field: function
+    attestations: [ita, itan, itun]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 demonstratives.
+  - surface: ipa
+    phonemes: [i, p, a]
+    gloss: who, which (relative)
+    semantic_field: function
+    attestations: [ipa, ipas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 pronouns.
+  - surface: an
+    phonemes: [a, n]
+    gloss: who, he (relative)
+    semantic_field: function
+    attestations: [an, ana]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 pronouns.
+  - surface: in
+    phonemes: [i, n]
+    gloss: him, that one
+    semantic_field: function
+    attestations: [in, inpa]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 pronouns.
+  - surface: nac
+    phonemes: [n, a, c]
+    gloss: as, when
+    semantic_field: function
+    attestations: [nac, naca, nacnva]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 conjunctions.
+  - surface: etnam
+    phonemes: [e, t, n, a, m]
+    gloss: and, also
+    semantic_field: function
+    attestations: [etnam, etn]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 conjunctions.
+
+  # ---------------------------------------------------------------------
+  # Body, animals, agriculture, food, dwelling (limited Etruscan corpus
+  # for these fields; Bonfante & Bonfante 2002 glossary entries.)
+  # ---------------------------------------------------------------------
+  - surface: capi
+    phonemes: [c, a, p, i]
+    gloss: jar, vessel (also "hand"?)
+    semantic_field: commodity
+    attestations: [capi, capen]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary capi.
+  - surface: hupnina
+    phonemes: [h, u, p, n, i, n, a]
+    gloss: bedroom, cubicle (in tomb)
+    semantic_field: dwelling
+    attestations: [hupnina, hupnis]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary hupnina.
+  - surface: vinum
+    phonemes: [v, i, n, u, m]
+    gloss: wine
+    semantic_field: commodity
+    attestations: [vinum, vina]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary vinum.
+  - surface: rasna
+    phonemes: [r, a, s, n, a]
+    gloss: Etruscan (people; the Etruscan endonym)
+    semantic_field: place
+    attestations: [rasna, rasnal, rasnas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary rasna.
+  - surface: leu
+    phonemes: [l, e, u]
+    gloss: lion (in some readings)
+    semantic_field: animal
+    attestations: [leu, leus]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary leu (uncertain).
+  - surface: capra
+    phonemes: [c, a, p, r, a]
+    gloss: goat
+    semantic_field: animal
+    attestations: [capra, capras]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary capra; cf. Latin loan.
+
+  # ---------------------------------------------------------------------
+  # Common name elements / famous gentilicia (Bonfante & Bonfante 2002,
+  # ch. 5 onomastics; widespread on funerary urns from Volterra and
+  # Perugia.)
+  # ---------------------------------------------------------------------
+  - surface: arnth
+    phonemes: [a, r, n, th]
+    gloss: Arnth (very common male praenomen)
+    semantic_field: kin
+    attestations: [arnth, arnthal, arnths]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+  - surface: aule
+    phonemes: [a, u, l, e]
+    gloss: Aule (common male praenomen, ~Aulus)
+    semantic_field: kin
+    attestations: [aule, aules, aulesa]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+  - surface: larth
+    phonemes: [l, a, r, th]
+    gloss: Larth (common male praenomen)
+    semantic_field: kin
+    attestations: [larth, larthal, larths]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+  - surface: laris
+    phonemes: [l, a, r, i, s]
+    gloss: Laris (common male praenomen)
+    semantic_field: kin
+    attestations: [laris, larisal, larisa]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+  - surface: vel
+    phonemes: [v, e, l]
+    gloss: Vel (very common male praenomen)
+    semantic_field: kin
+    attestations: [vel, vels, velus]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+  - surface: thana
+    phonemes: [th, a, n, a]
+    gloss: Thana (common female praenomen)
+    semantic_field: kin
+    attestations: [thana, thanas, thanal]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+  - surface: thanchvil
+    phonemes: [th, a, n, ch, v, i, l]
+    gloss: Thanchvil (common female praenomen, ~Tanaquil)
+    semantic_field: kin
+    attestations: [thanchvil, thanchvils]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+  - surface: ramtha
+    phonemes: [r, a, m, th, a]
+    gloss: Ramtha (common female praenomen)
+    semantic_field: kin
+    attestations: [ramtha, ramthas, ramthal]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+  - surface: velia
+    phonemes: [v, e, l, i, a]
+    gloss: Velia (common female praenomen)
+    semantic_field: kin
+    attestations: [velia, velias]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+  - surface: hasti
+    phonemes: [h, a, s, t, i]
+    gloss: Hasti (female praenomen)
+    semantic_field: kin
+    attestations: [hasti, hastia, hastial]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+
+  # ---------------------------------------------------------------------
+  # Religious / liturgical (Liber Linteus, Tabula Capuana — the longest
+  # connected Etruscan religious texts.)
+  # ---------------------------------------------------------------------
+  - surface: nethsrac
+    phonemes: [n, e, th, s, r, a, c]
+    gloss: liturgical title; haruspex
+    semantic_field: religion
+    attestations: [nethsrac, nethsracs]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary nethsrac.
+  - surface: trutnu
+    phonemes: [t, r, u, t, n, u]
+    gloss: priestly title (haruspex / diviner)
+    semantic_field: religion
+    attestations: [trutnu, trutnvt]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary trutnu.
+  - surface: cletram
+    phonemes: [c, l, e, t, r, a, m]
+    gloss: bier, litter (ritual)
+    semantic_field: religion
+    attestations: [cletram, cletra]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary cletram.
+  - surface: spureri
+    phonemes: [s, p, u, r, e, r, i]
+    gloss: sacrifice for the city (ritual)
+    semantic_field: religion
+    attestations: [spureri, spurana]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary spureri.
+  - surface: vacl
+    phonemes: [v, a, c, l]
+    gloss: libation
+    semantic_field: religion
+    attestations: [vacl, vacla, vaclr]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary vacl.
+  - surface: hanthin
+    phonemes: [h, a, n, th, i, n]
+    gloss: in front, before (ritual variant)
+    semantic_field: religion
+    attestations: [hanthin]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary hanthin.
+  - surface: cilth
+    phonemes: [c, i, l, th]
+    gloss: citadel, sacred precinct
+    semantic_field: religion
+    attestations: [cilth, cilths]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary cilth.
+  - surface: nesna
+    phonemes: [n, e, s, n, a]
+    gloss: of the dead, funerary
+    semantic_field: religion
+    attestations: [nesna, nesnas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary nesna.
+  - surface: selva
+    phonemes: [s, e, l, v, a]
+    gloss: forest, sacred grove
+    semantic_field: religion
+    attestations: [selva, selvas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary selva.
+  - surface: ana
+    phonemes: [a, n, a]
+    gloss: votive name suffix ("of/for")
+    semantic_field: religion
+    attestations: [ana, anal]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary ana.
+
+  # ---------------------------------------------------------------------
+  # Adjectives and qualifiers
+  # ---------------------------------------------------------------------
+  - surface: zich
+    phonemes: [z, i, ch]
+    gloss: written, inscribed (root)
+    semantic_field: descriptor
+    attestations: [zich, zichu, ziche]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary zich.
+  - surface: nepos
+    phonemes: [n, e, p, o, s]
+    gloss: descendant (loan from Latin?)
+    semantic_field: kin
+    attestations: [nepos]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary nepos (Latin loan; included for cross-checking).
+  - surface: chia
+    phonemes: [ch, i, a]
+    gloss: with, together
+    semantic_field: function
+    attestations: [chia, chian]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary chia.
+  - surface: śuthina
+    phonemes: [s, u, th, i, n, a]
+    gloss: for the tomb (funerary marker on grave goods)
+    semantic_field: religion
+    attestations: [śuthina, suthina, suthinas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary śuthina; common on bronze grave goods.
+  - surface: thui
+    phonemes: [th, u, i]
+    gloss: here
+    semantic_field: function
+    attestations: [thui, thuis]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary thui.
+  - surface: ipei
+    phonemes: [i, p, e, i]
+    gloss: there, where
+    semantic_field: function
+    attestations: [ipei, ipeic]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary ipei.
+  - surface: thunchulth
+    phonemes: [th, u, n, ch, u, l, th]
+    gloss: at one time, once
+    semantic_field: time
+    attestations: [thunchulth]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary thunchulth.
+  - surface: matam
+    phonemes: [m, a, t, a, m]
+    gloss: above, before
+    semantic_field: function
+    attestations: [matam, matan]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary matam.
+  - surface: cape
+    phonemes: [c, a, p, e]
+    gloss: container, vessel (also "hand"?)
+    semantic_field: commodity
+    attestations: [cape, capen]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary cape.
+  - surface: thapna
+    phonemes: [th, a, p, n, a]
+    gloss: cup, drinking vessel
+    semantic_field: commodity
+    attestations: [thapna, thapnas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary thapna.
+
+  # ---------------------------------------------------------------------
+  # Months (Bonfante & Bonfante 2002, ch. 5; Liber Linteus calendar
+  # references.)
+  # ---------------------------------------------------------------------
+  - surface: velcitanus
+    phonemes: [v, e, l, c, i, t, a, n, u, s]
+    gloss: month of Velcitanus
+    semantic_field: time
+    attestations: [velcitanus, velcitnaus]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary velcitanus.
+  - surface: aclus
+    phonemes: [a, c, l, u, s]
+    gloss: month name (Aclus)
+    semantic_field: time
+    attestations: [aclus]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary aclus.
+  - surface: hermi
+    phonemes: [h, e, r, m, i]
+    gloss: month name (Hermi)
+    semantic_field: time
+    attestations: [hermi, hermial]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary hermi.
+  - surface: caitim
+    phonemes: [c, a, i, t, i, m]
+    gloss: month name (Caitim)
+    semantic_field: time
+    attestations: [caitim, caita]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary caitim.
+
+  # ---------------------------------------------------------------------
+  # Less-common attested vocabulary (Bonfante & Bonfante 2002 glossary)
+  # ---------------------------------------------------------------------
+  - surface: zatlath
+    phonemes: [z, a, t, l, a, th]
+    gloss: title (uncertain; civic)
+    semantic_field: function
+    attestations: [zatlath, zatlas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary zatlath.
+  - surface: hilarthune
+    phonemes: [h, i, l, a, r, th, u, n, e]
+    gloss: festive title (uncertain)
+    semantic_field: religion
+    attestations: [hilarthune, hilarthun]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary hilarthune.
+  - surface: tisce
+    phonemes: [t, i, s, c, e]
+    gloss: place name, location
+    semantic_field: place
+    attestations: [tisce]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary tisce.
+  - surface: penthuna
+    phonemes: [p, e, n, th, u, n, a]
+    gloss: stone-marker, cippus
+    semantic_field: place
+    attestations: [penthuna, penthnas]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary penthuna.
+  - surface: chimth
+    phonemes: [ch, i, m, th]
+    gloss: at, near (preposition)
+    semantic_field: function
+    attestations: [chimth, chimthm]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary chimth.
+  - surface: enac
+    phonemes: [e, n, a, c]
+    gloss: then, afterward
+    semantic_field: function
+    attestations: [enac]
+    region: etruria
+    citation: Bonfante & Bonfante 2002, glossary enac.

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nethuns_KN_Zf_13_6_11
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nethuns''
+  pinned to KN Zf 13 tokens [6..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nethuns
+  phonemes:
+  - n
+  - e
+  - th
+  - u
+  - n
+  - s
+  gloss_hint: Nethuns (~Neptune)
+  citation: Bonfante & Bonfante 2002, glossary nethuns.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 11
+  sign_to_phoneme:
+    AB39: n
+    AB44: e
+    AB03: th
+    AB57: u
+    AB59: n
+    AB53: s

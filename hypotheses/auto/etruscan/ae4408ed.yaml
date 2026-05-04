@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_rasna_HT_122b_14_18
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''rasna''
+  pinned to HT 122b tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: rasna
+  phonemes:
+  - r
+  - a
+  - s
+  - n
+  - a
+  gloss_hint: Etruscan (people; the Etruscan endonym)
+  citation: Bonfante & Bonfante 2002, glossary rasna.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB60: r
+    AB65: a
+    AB10: s
+    AB45: n
+    AB17: a

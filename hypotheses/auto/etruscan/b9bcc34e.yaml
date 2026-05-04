@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nepos_KN_Zc_6_20_25
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nepos''
+  pinned to KN Zc 6 tokens [20..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nepos
+  phonemes:
+  - n
+  - e
+  - p
+  - o
+  - s
+  gloss_hint: descendant (loan from Latin?)
+  citation: Bonfante & Bonfante 2002, glossary nepos (Latin loan; included for cross-checking).
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 20
+  - 25
+  sign_to_phoneme:
+    AB81: n
+    AB55: e
+    AB10: p
+    AB28: o
+    AB79: s

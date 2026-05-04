@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_puia_ARKH_4a_19_22
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''puia''
+  pinned to ARKH 4a tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: puia
+  phonemes:
+  - p
+  - u
+  - i
+  - a
+  gloss_hint: wife
+  citation: Bonfante & Bonfante 2002, glossary puia; cf. TLE 887.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB39: p
+    AB37: u
+    AB24: i
+    AB08: a

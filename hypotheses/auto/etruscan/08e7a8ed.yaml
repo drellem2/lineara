@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cealch_HT_115a_9_13
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cealch''
+  pinned to HT 115a tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cealch
+  phonemes:
+  - c
+  - e
+  - a
+  - l
+  - ch
+  gloss_hint: thirty
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB53: c
+    AB59: e
+    AB80: a
+    AB55: l
+    AB40: ch

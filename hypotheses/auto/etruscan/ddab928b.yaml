@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tiu_HT_108_1_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tiu''
+  pinned to HT 108 tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tiu
+  phonemes:
+  - t
+  - i
+  - u
+  gloss_hint: month (variant of tivr)
+  citation: Bonfante & Bonfante 2002, glossary tiu.
+equation:
+  inscription_id: HT 108
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB27: t
+    AB59: i
+    AB06: u

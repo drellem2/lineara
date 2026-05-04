@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cver_ARKH_2_21_24
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cver''
+  pinned to ARKH 2 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cver
+  phonemes:
+  - c
+  - v
+  - e
+  - r
+  gloss_hint: gift, dedication
+  citation: Bonfante & Bonfante 2002, glossary cver.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB08: c
+    AB58: v
+    AB50: e
+    AB54: r

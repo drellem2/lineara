@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_arnth_ARKH_4a_19_22
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''arnth''
+  pinned to ARKH 4a tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: arnth
+  phonemes:
+  - a
+  - r
+  - n
+  - th
+  gloss_hint: Arnth (very common male praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB39: a
+    AB37: r
+    AB24: n
+    AB08: th

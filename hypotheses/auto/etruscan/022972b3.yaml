@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_turce_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''turce''
+  pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: turce
+  phonemes:
+  - t
+  - u
+  - r
+  - c
+  - e
+  gloss_hint: gave (variant of turuce)
+  citation: Bonfante & Bonfante 2002, glossary turce.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: t
+    AB03: u
+    AB81: r
+    AB55: c
+    AB10: e

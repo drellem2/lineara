@@ -92,7 +92,20 @@ Linear A decipherment attempts.
     from a small sourced lookup table; semantic compat reads
     (pool-semantic_field × inscription-genre_hint). Missing or unmapped
     pairs fall back to neutral 0.5. Diagnostic terms `region_compat`
-    and `semantic_compat` persisted on each row.
+    and `semantic_compat` persisted on each row. mg-23cc extended
+    the region-compat table to recognize `etruria` as the geographic
+    tag for the Etruscan pool (parallel with `aquitania`).
+  - `partial_mapping_compression_delta_v0` (mg-23cc) — corpus-side
+    third axis. Wraps `compression_delta_v0`: takes a candidate
+    equation's `sign_to_phoneme` dict, treats it as a partial global
+    mapping, and computes `baseline_bits − mapped_bits` over the
+    full corpus stream. Within a single Aquitanian surface (~47
+    candidates that share a root), local_fit_v1's bigram term is
+    identical, so this axis is the only within-surface
+    discriminator. Distribution sd ≈ 110 bits, range ~900 bits;
+    within-surface SDs of 50-100 bits across all surfaces with
+    ≥30 candidates. Diagnostic terms `bits_per_sign_baseline` and
+    `bits_per_sign_mapped` persisted on each row.
 - Result stream: append-only `results/experiments.jsonl`, validated against
   `harness/schemas/result.v0.schema.json`. Every row carries
   `hypothesis_hash`, `harness_version`, `corpus_snapshot`, and `metric` so
@@ -388,8 +401,270 @@ Full top-50 in `results/rollup.aquitanian.composite.md`.
 - `--metrics m1,m2 --weights w1,w2 --normalize zscore` flags added to
   `scripts/rollup.py` for the composite leaderboard.
 
+### Findings from mg-23cc (harness v3: partial_mapping_compression_delta_v0 + Etruscan pool + triple-axis composite, 2026-05-04)
+
+This ticket added a **third, structurally orthogonal scoring axis** —
+`partial_mapping_compression_delta_v0`, a corpus-side metric — and a
+**second substrate pool** (Etruscan, 143 entries from Bonfante &
+Bonfante 2002 / Pallottino TLE / ETP), then ran every Aquitanian +
+Etruscan candidate under all three v1 metrics for a triple-axis
+composite leaderboard. The headline finding is **mixed**: the metric
+*massively* passes the within-surface discrimination test (the central
+question for this ticket — see below), but **fails** the n=4 plausible-
+vs-deliberately-wrong Aquitanian curated gate, the same gate v0 and v1
+of the local-fit metric also missed.
+
+**`partial_mapping_compression_delta_v0` distribution (12,210
+candidates: 7,190 Aquitanian + 5,966 Etruscan + 20 curated).**
+
+| stat | aquitanian (n=7,190) | etruscan (n=5,966) | combined bulk (n=13,156) |
+|---|---:|---:|---:|
+| mean         | -90.85   | -106.10   | -97.77   |
+| median       | -96.00   | -112.00   | -104.00  |
+| sd           | 109.85   | 111.16    | 110.71   |
+| min          | -424.00  | -472.00   | -472.00  |
+| max          | +448.00  | +336.00   | +448.00  |
+| top-1% mean  | +258.33  | +235.07   | +248.49  |
+| top-1% mean − median | +354.33 | +347.07 | +352.49 |
+
+The score is in raw bits (`baseline_bits − mapped_bits`). The
+distribution is **wide** (sd ~110 bits, range ~900 bits) and the top-1%
+mean clears the median by ~352 bits — a genuinely heavy-tailed signal
+that responds non-trivially to the partial mapping. Most candidates
+score negative (the partial mapping makes things slightly worse —
+expected, since most candidate equations cover signs that occur few
+times); the discriminating signal is the small fraction whose mapping
+covers high-frequency signs in the corpus.
+
+**Within-surface discrimination test (the central question for this
+ticket).** Within a single Aquitanian surface (~47 candidates that
+share the same root), local_fit_v1's bigram term is identical, so
+within-surface discrimination must come from corpus-side. The mg-7dd1
+diagnosis predicted this would be the bottleneck. We tested it:
+
+| surface (Aquitanian) | n | sd of pmcd | range | min..max |
+|---|---:|---:|---:|---:|
+| ur                | 50 | 55.47  | 256  | -168..+88 |
+| sukalde           | 13 | 50.07  | 168  | -360..-192 |
+| hil               | 50 | 69.13  | 232  | -176..+56 |
+| haran             | 50 | 81.52  | 408  | -240..+168 |
+| etxe              | 50 | 82.74  | 376  | -64..+312 |
+| sembe             | 50 | 94.75  | 464  | (table) |
+| seni              | 50 | 76.04  | 376  | (table) |
+| atta              | 50 | 97.45  | 360  | (table) |
+| larre             | 50 | 70.49  | 320  | (table) |
+| hanna             | 50 | 94.68  | 480  | (table) |
+
+**Acceptance gate: SD > 5 bits ⇒ metric is doing within-surface work.**
+**All 20 Aquitanian surfaces with ≥30 candidates clear it; SDs run
+50–100 bits, ~10–20× the threshold. Within-surface discrimination is
+the strongest behavior of this metric. The corpus-side signal mg-7dd1
+predicted is real and large.**
+
+**Discrimination gate on n=4 plausible vs n=4 wrong Aquitanian
+(mg-fb23).** The acceptance criterion required plausible median −
+wrong median ≥ +5 bits. **FAIL.**
+
+| bucket | scores | median |
+|---|---|---:|
+| plausible | -96, -56, -24, +72 | -40 |
+| wrong (deliberate) | -32, -24, -16, +40 | -20 |
+
+Plausible − wrong = **−20 bits** (wrong scores HIGHER than plausible on
+the median). The corpus-side metric **also** does not separate
+plausible-context Aquitanian readings from deliberately-wrong-context
+on the n=4 hand-curated buckets, even though it produces a strong
+within-surface spread on the bulk distribution. Per the ticket's
+"ship-the-null" rule, the metric is shipped as written; the
+implication is that *neither* the local-fit signals (v0/v1) *nor* the
+corpus-side compression signal carry the within-surface
+plausibility-vs-misplacement information the curated bucket targets.
+The discrimination signal these metrics carry is real (within-surface
+SDs of 50-100 bits are not noise) but the *direction* of variation
+isn't aligned with "plausible context yes/no" on n=4. Whether n=4 is
+just too small to detect a small true effect is an open question;
+n=20+ curated buckets would be needed to address it.
+
+**Cross-pool distribution shapes.**
+
+| metric | aquitanian | etruscan |
+|---|---:|---:|
+| local_fit_v1 mean / sd          | -2.663 / 0.299 | -2.744 / 0.213 |
+| local_fit_v1 range              | [-3.78, -1.86] | [-3.73, -2.24] |
+| pmcd mean / sd                  | -90.85 / 109.85 | -106.10 / 111.16 |
+| geographic_genre_fit_v1 mean    | +0.452          | +0.574          |
+| geographic_genre_fit_v1 sd      | 0.108           | 0.107           |
+| geographic_genre_fit_v1 range   | [0.25, 0.70]    | [0.35, 0.80]    |
+
+The geographic compat score *is* doing what the polecat-recommended v2
+direction predicted: **Etruscan candidates score systematically higher
+on geographic_genre_fit_v1 (+0.574 mean vs +0.452 for Aquitanian),
+because etruria × Cretan-site = 0.5 vs aquitania × Cretan-site = 0.25
+in the lookup table. The filter is no longer pinned at a single value
+on every Aquitanian-only candidate — it now exercises both rows of
+the table.**
+
+The pmcd distribution is similarly-shaped across both pools (sd ~110,
+heavy negative tail with a positive top-1%) — pleasing, because it
+suggests the corpus-side metric is *not* pool-dependent. local_fit_v1
+is narrower on Etruscan (sd 0.213 vs 0.299), which is consistent with
+the empirical bigram model being trained on Etruscan's smaller pool
+(143 entries vs 153) and tighter phoneme inventory (no /o/, more
+aspirate digraphs).
+
+**Top-10 composite_v3 review (0.4 local_fit_v1 + 0.3 pmcd + 0.3
+geographic_genre_fit, all z-normalized over the joined 13,156-row
+result set).**
+
+| rank | composite | pool | surface | inscription | site | genre |
+|---:|---:|---|---|---|---|---|
+| 1  | +1.74 | aquitanian | hamar  | HT Wc 3017a | Haghia Triada  | accountancy |
+| 2  | +1.61 | aquitanian | hanna  | KN Zc 6     | Knossos        | votive_or_inscription |
+| 3  | +1.61 | etruscan   | ana    | ARKH 2      | Arkhanes       | accountancy |
+| 4  | +1.56 | aquitanian | bere   | HT 128a     | Haghia Triada  | accountancy |
+| 5  | +1.54 | aquitanian | bi     | ARKH 5      | Arkhanes       | accountancy |
+| 6  | +1.52 | aquitanian | bi     | ARKH 3b     | Arkhanes       | accountancy |
+| 7  | +1.52 | aquitanian | ere    | ARKH 2      | Arkhanes       | accountancy |
+| 8  | +1.51 | aquitanian | hamar  | HT 110a     | Haghia Triada  | accountancy |
+| 9  | +1.47 | aquitanian | senben | KN Zc 6     | Knossos        | votive_or_inscription |
+| 10 | +1.45 | aquitanian | bere   | HT 12       | Haghia Triada  | accountancy |
+
+- **7 distinct surfaces** in the top 10 (hamar×2, hanna, ana, bere×2,
+  bi×2, ere, senben). The composite is **noticeably more diverse than
+  mg-7dd1's local_fit_v1 top-50 (49/50 = 98% one surface "harri")** —
+  the addition of pmcd as a third axis breaks single-surface
+  domination by rewarding partial mappings whose signs happen to be
+  high-frequency, regardless of the surface they came from.
+- **4 distinct sites** (Haghia Triada × 4, Arkhanes × 4, Knossos × 2).
+  Less site-skew than the v2 composite (which was 7×HT, 2×KN, 2×ARKH,
+  1×GO).
+- **2 genres** (accountancy × 8, votive_or_inscription × 2). The two
+  votive entries land on KN Zc 6, the same Knossos votive inscription
+  that drove much of mg-f832/mg-7dd1's leader-board action — the
+  signal is durable across metric rotations.
+- **Pool diversity: 9/10 Aquitanian, 1/10 Etruscan.** Etruscan only
+  reaches the top with `ana` (ritual/votive name suffix; +1.61). In
+  the top-50, Aquitanian is 34/50, Etruscan 16/50 — Etruscan competes
+  but does not dominate. The deficit is on local_fit_v1: Etruscan's
+  narrower distribution (sd 0.213) means even its best candidates
+  score lower in z-units than Aquitanian's best.
+- **Length artifact reset.** The mg-7dd1 v1 leaderboard was 49/50
+  five-sign equations (the length penalty's sweet spot). The v3
+  composite top-50 is more length-mixed because the pmcd term rewards
+  high-frequency sign coverage, which often comes from 2–3 sign
+  equations on common signs. Bi (2 phonemes) gets 11/50 entries;
+  hamar (5 phonemes) gets 7/50.
+
+**Etruscan pool-quality observation.** Per the policy of surfacing
+real-world biases as findings: the Etruscan pool is **strongly
+biased toward religious / funerary / kin vocabulary** (143 entries:
+36 religion, 39 function, 26 kin, 14 number, 12 time, 8 place, 4
+commodity, 2 animal, 1 dwelling, 1 descriptor). This is not a pool
+defect — it reflects what's preserved in the Etruscan corpus
+(funerary urns, sarcophagi, Liber Linteus, Tabula Capuana). The
+consequence for scoring: most Etruscan candidates score
+geographic_genre_fit_v1 = 0.5 (religion × accountancy = 0.25 plus
+α=0.4 region weight) or 0.65 (kin × accountancy = 0.5), versus
+Aquitanian's 0.4 (kin × accountancy = 0.5 with aquitania × Crete =
+0.25). The bias means **Etruscan systematically outperforms
+Aquitanian on the geographic axis but underperforms on local_fit_v1
+under the same composite weights** — which the leaderboard reflects.
+
+**What worked.**
+- The corpus-side metric **does** discriminate within-surface, with
+  SDs 50-100 bits across all 20 surfaces with ≥30 candidates. The
+  central diagnosis from mg-7dd1 — that within-surface
+  discrimination must come from corpus-side — was directionally
+  correct. The metric is doing the work.
+- Multi-pool data exercises geographic_genre_fit_v1 properly. The
+  filter now produces meaningful pool-level differences (+0.452 vs
+  +0.574) where mg-7dd1's single-pool run had it pinned at one row.
+- The triple-axis composite leaderboard breaks the
+  single-surface-dominance pathology mg-7dd1 reported (49/50 same
+  surface → 11/50 maximum in v3, 7 surfaces represented in top-10).
+- 5,966 Etruscan candidates emitted from 143 pool entries (within
+  the 1,000-10,000 acceptance window). Generator filter rejected 0
+  single-class entries; capped 106 entries at 50 candidates each.
+- Determinism preserved end-to-end: re-running the sweep is a no-op
+  via the resume key.
+
+**What did not work / null findings.**
+- **The plausible-vs-deliberately-wrong gate failed for the third
+  metric in a row.** v0 (mg-fb23): identical medians. v1 (mg-7dd1):
+  +0.14. v3 pmcd (this ticket): -20 bits (plausible *lower* than
+  wrong). The n=4 hand-curated bucket is repeatedly indistinguishable
+  under three structurally different metrics; either (a) the metrics
+  collectively miss the plausibility signal, or (b) n=4 is too small
+  to detect what's actually there. Future v4 work needs to expand
+  the curated bucket before chasing more metric variants.
+- **Etruscan does not dominate the leaderboard despite the geographic
+  filter favoring it.** The local_fit_v1 narrowness on Etruscan
+  cancels the geographic advantage when the composite weights are
+  even (0.4/0.3/0.3); a heavier pmcd weight or geographic weight
+  would change this — but tuning weights to make Etruscan win is
+  exactly the motivated-reasoning failure mode the harness was built
+  to avoid.
+
+**Operational artifacts.**
+- 7,190 Aquitanian × 1 new metric = **7,190 new pmcd rows**.
+- 5,966 Etruscan candidates × 3 metrics = **17,898 new Etruscan rows**
+  (local_fit_v1 + pmcd + geographic_genre_fit_v1).
+- 20 curated × 1 new metric = **20 new pmcd rows** on the curated
+  hypotheses (rescore for completeness).
+- Total stream after merge: **46,742 rows**, up from 21,634 at
+  mg-7dd1 merge.
+- Three new committed leaderboards: `results/rollup.composite_v3.md`
+  (top-50 across both pools), `results/rollup.aquitanian.composite_v3.md`
+  (top-50 Aquitanian only), `results/rollup.etruscan.composite_v3.md`
+  (top-50 Etruscan only).
+- `pools/etruscan.yaml` (143 entries) + `pools/etruscan.README.md`
+  (phonology + bias caveats) committed.
+- `harness/tests/test_partial_mapping_compression_delta.py` (7 tests)
+  committed and passing alongside the existing 30 tests.
+- `harness/metrics._GG1_REGION_COMPAT` extended with `etruria` rows
+  (parallel with `aquitania` for the Aquitanian pool — the
+  geographic-tag convention).
+- `scripts/rollup.py` extended with `--by source-pool` for the
+  composite path; `_render_composite` factored through a per-table
+  helper so the same function renders both global and per-pool views.
+- `scripts/generate_candidates.py` slugs the surface for the
+  hypothesis name (Etruscan śuthina contains a non-ASCII character;
+  the schema's name pattern is ASCII-only). Aquitanian regenerates
+  byte-identically (no surface-character changes there).
+
+**Proposed v4 directions** (deferred; filing intentionally not done
+in this ticket per scope-of-work norm).
+- Expand the plausible-vs-wrong curated bucket from n=4 to n=20+
+  before re-attempting the discrimination gate; three different
+  metrics have now missed it on n=4.
+- **Pre-Greek toponym pool** as a third pool — the polecat's
+  remaining v2 multi-pool direction. region_compat = 1.0 for
+  pre_greek × Crete; the geographic axis would carry an even
+  stronger pool-level signal.
+- **Held-out empirical bigram** (leave-one-out over pool entries)
+  remains queued; this ticket added a corpus-side axis instead, but
+  the held-out bigram is independently worth running.
+- **Cross-corpus position prior**: the position fingerprints are
+  still computed on the same Linear-A corpus the metric scores
+  against, which is partly circular. A Linear-B reference corpus
+  for fingerprinting would break the circularity.
+- **Publication-trigger thresholding**: the v3 composite distribution
+  is the first one that's heavy-tailed enough to consider thresholding
+  against (top-1% mean − median ~ 352 bits on pmcd). Defer to a
+  separate ticket.
+
 ## Known metric limitations
 
+- **Three metrics in a row missed the n=4 plausible-vs-wrong gate.**
+  `local_fit_v0` (mg-fb23): identical medians. `local_fit_v1` (mg-7dd1):
+  +0.14 v1-units. `partial_mapping_compression_delta_v0` (mg-23cc):
+  -20 bits (wrong actually scored *higher*). All three metrics
+  exercise structurally different signals (local position+phonotactic
+  prior vs corpus-side compression delta), so the open question is
+  whether n=4 is too small to detect a true signal or whether the
+  signals just don't carry the within-surface placement information
+  the curated bucket targets. Resolving requires expanding the
+  curated bucket to n=20+; deferred to a future ticket.
 - **`local_fit_v1` did not solve the plausible-vs-wrong discrimination
   problem and produced a narrower bulk distribution than the
   acceptance bars require.** See mg-7dd1 for the v0 → v1 diagnostic and
@@ -444,14 +719,18 @@ geographic-vs-genre filter and metric refinement are scoped follow-ups.*
 
 ## What we have NOT yet tried
 
+- **Expanded plausible-vs-wrong curated bucket (n=20+).** Three
+  metrics missed the n=4 gate; before attempting v4 metric variants
+  the bucket must grow. Queued.
 - **`local_fit_v2`.** A v2 of the local-fit metric is needed; v1
   (mg-7dd1) shipped as a null finding on three of four discrimination
   bars. Proposed directions in mg-7dd1's findings entry: held-out
   empirical bigram, per-pair length normalization, cross-corpus
-  position prior, multi-pool composite. Queued.
-- **Etruscan pool ingest.** Same schema as Aquitanian, mechanical follow-on.
+  position prior. The "multi-pool composite" direction is now closed
+  by mg-23cc. Remaining v2 directions still queued.
 - **Pre-Greek toponym pool ingest.** Substrate-style data with natural fit
-  to the geographic-vs-genre filter.
+  to the geographic-vs-genre filter (region_compat = 1.0 for
+  pre_greek × Crete). Queued.
 - **Younger / GORILA cross-validation pull.** Second corpus for
   cross-checking high-z candidates.
 - **Additional metrics:** mutual information of (sign, position-in-word)

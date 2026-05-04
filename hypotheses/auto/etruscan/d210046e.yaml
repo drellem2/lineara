@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_purth_HT_119_11_14
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''purth''
+  pinned to HT 119 tokens [11..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: purth
+  phonemes:
+  - p
+  - u
+  - r
+  - th
+  gloss_hint: title (uncertain; magistrate)
+  citation: Bonfante & Bonfante 2002, glossary purth.
+equation:
+  inscription_id: HT 119
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    AB81: p
+    AB56: u
+    AB06: r
+    AB69: th

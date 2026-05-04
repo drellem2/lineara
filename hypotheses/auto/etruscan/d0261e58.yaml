@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_alike_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''alike''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: alike
+  phonemes:
+  - a
+  - l
+  - i
+  - k
+  - e
+  gloss_hint: gave (variant)
+  citation: Bonfante & Bonfante 2002, glossary alike.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: a
+    AB26: l
+    AB78: i
+    AB76: k
+    AB10: e

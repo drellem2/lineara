@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nene_ARKH_5_0_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nene''
+  pinned to ARKH 5 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nene
+  phonemes:
+  - n
+  - e
+  - n
+  - e
+  gloss_hint: nurse, grandmother
+  citation: Bonfante & Bonfante 2002, glossary nene.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: n
+    AB51: e
+    AB30: n
+    AB59: e

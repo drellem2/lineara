@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ana_ARKH_1a_10_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ana''
+  pinned to ARKH 1a tokens [10..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ana
+  phonemes:
+  - a
+  - n
+  - a
+  gloss_hint: votive name suffix ("of/for")
+  citation: Bonfante & Bonfante 2002, glossary ana.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 10
+  - 12
+  sign_to_phoneme:
+    AB08: a
+    AB58: n
+    AB73: a

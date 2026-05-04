@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nefts_ARKH_5_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nefts''
+  pinned to ARKH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nefts
+  phonemes:
+  - n
+  - e
+  - f
+  - t
+  - s
+  gloss_hint: nephew, grandson
+  citation: Bonfante & Bonfante 2002, glossary nefts.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: n
+    AB51: e
+    AB30: f
+    AB59: t
+    AB06: s

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_zinece_KN_Zc_7_14_19
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''zinece''
+  pinned to KN Zc 7 tokens [14..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: zinece
+  phonemes:
+  - z
+  - i
+  - n
+  - e
+  - c
+  - e
+  gloss_hint: made
+  citation: Bonfante & Bonfante 2002, glossary zinece.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 19
+  sign_to_phoneme:
+    AB57: z
+    AB31: i
+    AB60: n
+    AB08: e
+    AB06: c
+    AB24: e

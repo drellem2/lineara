@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nurph_ARKH_2_21_24
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nurph''
+  pinned to ARKH 2 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nurph
+  phonemes:
+  - n
+  - u
+  - r
+  - ph
+  gloss_hint: nine
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB08: n
+    AB58: u
+    AB50: r
+    AB54: ph

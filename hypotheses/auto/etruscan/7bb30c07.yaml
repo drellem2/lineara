@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_capra_GO_Wc_1a_1_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''capra''
+  pinned to GO Wc 1a tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: capra
+  phonemes:
+  - c
+  - a
+  - p
+  - r
+  - a
+  gloss_hint: goat
+  citation: Bonfante & Bonfante 2002, glossary capra; cf. Latin loan.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB31: c
+    AB58: a
+    AB80: p
+    AB28: r
+    AB09: a

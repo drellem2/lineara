@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ita_HT_108_0_2
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ita''
+  pinned to HT 108 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ita
+  phonemes:
+  - i
+  - t
+  - a
+  gloss_hint: that
+  citation: Bonfante & Bonfante 2002, ch. 5 demonstratives.
+equation:
+  inscription_id: HT 108
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB67: i
+    AB27: t
+    AB59: a

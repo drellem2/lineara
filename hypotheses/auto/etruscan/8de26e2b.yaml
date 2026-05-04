@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_etera_HT_104_5_9
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''etera''
+  pinned to HT 104 tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: etera
+  phonemes:
+  - e
+  - t
+  - e
+  - r
+  - a
+  gloss_hint: slave, dependent
+  citation: Bonfante & Bonfante 2002, glossary etera.
+equation:
+  inscription_id: HT 104
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB01: e
+    AB81: t
+    AB09: e
+    AB24: r
+    AB37: a

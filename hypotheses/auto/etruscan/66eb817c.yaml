@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cepen_KN_Zf_13_4_8
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cepen''
+  pinned to KN Zf 13 tokens [4..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cepen
+  phonemes:
+  - c
+  - e
+  - p
+  - e
+  - n
+  gloss_hint: priest
+  citation: Bonfante & Bonfante 2002, glossary cepen; Liber Linteus.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    AB07: c
+    A301: e
+    AB39: p
+    AB44: e
+    AB03: n

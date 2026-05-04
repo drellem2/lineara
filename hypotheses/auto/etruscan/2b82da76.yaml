@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thunchulth_KN_Zc_7_14_20
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thunchulth''
+  pinned to KN Zc 7 tokens [14..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thunchulth
+  phonemes:
+  - th
+  - u
+  - n
+  - ch
+  - u
+  - l
+  - th
+  gloss_hint: at one time, once
+  citation: Bonfante & Bonfante 2002, glossary thunchulth.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 20
+  sign_to_phoneme:
+    AB57: th
+    AB31: u
+    AB60: n
+    AB08: ch
+    AB06: u
+    AB24: l
+    AB40: th

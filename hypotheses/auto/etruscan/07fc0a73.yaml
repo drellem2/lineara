@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_trutnu_KN_Zc_7_15_20
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''trutnu''
+  pinned to KN Zc 7 tokens [15..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: trutnu
+  phonemes:
+  - t
+  - r
+  - u
+  - t
+  - n
+  - u
+  gloss_hint: priestly title (haruspex / diviner)
+  citation: Bonfante & Bonfante 2002, glossary trutnu.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 20
+  sign_to_phoneme:
+    AB31: t
+    AB60: r
+    AB08: u
+    AB06: t
+    AB24: n
+    AB40: u

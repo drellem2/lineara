@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cver_HT_104_5_8
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cver''
+  pinned to HT 104 tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cver
+  phonemes:
+  - c
+  - v
+  - e
+  - r
+  gloss_hint: gift, dedication
+  citation: Bonfante & Bonfante 2002, glossary cver.
+equation:
+  inscription_id: HT 104
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB01: c
+    AB81: v
+    AB09: e
+    AB24: r

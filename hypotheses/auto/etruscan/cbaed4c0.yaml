@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_lupuce_KN_Zf_13_5_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''lupuce''
+  pinned to KN Zf 13 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: lupuce
+  phonemes:
+  - l
+  - u
+  - p
+  - u
+  - c
+  - e
+  gloss_hint: died
+  citation: Bonfante & Bonfante 2002, glossary lupuce.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    A301: l
+    AB39: u
+    AB44: p
+    AB03: u
+    AB57: c
+    AB59: e

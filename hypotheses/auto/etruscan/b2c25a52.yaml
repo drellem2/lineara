@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tamera_GO_Wc_1a_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tamera''
+  pinned to GO Wc 1a tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tamera
+  phonemes:
+  - t
+  - a
+  - m
+  - e
+  - r
+  - a
+  gloss_hint: chamber, office (~tamiae)
+  citation: Bonfante & Bonfante 2002, glossary tamera.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: t
+    AB31: a
+    AB58: m
+    AB80: e
+    AB28: r
+    AB09: a

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_sath_HT_108_1_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''sath''
+  pinned to HT 108 tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: sath
+  phonemes:
+  - s
+  - a
+  - th
+  gloss_hint: bond, ritual obligation
+  citation: Bonfante & Bonfante 2002, glossary sath.
+equation:
+  inscription_id: HT 108
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB27: s
+    AB59: a
+    AB06: th

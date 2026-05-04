@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_menerva_KN_Zf_13_6_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''menerva''
+  pinned to KN Zf 13 tokens [6..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: menerva
+  phonemes:
+  - m
+  - e
+  - n
+  - e
+  - r
+  - v
+  - a
+  gloss_hint: Menerva (~Minerva)
+  citation: Bonfante & Bonfante 2002, glossary menerva.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 12
+  sign_to_phoneme:
+    AB39: m
+    AB44: e
+    AB03: n
+    AB57: e
+    AB59: r
+    AB53: v
+    AB09: a

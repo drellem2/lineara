@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_muluvanece_KN_Zf_13_3_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''muluvanece''
+  pinned to KN Zf 13 tokens [3..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: muluvanece
+  phonemes:
+  - m
+  - u
+  - l
+  - u
+  - v
+  - a
+  - n
+  - e
+  - c
+  - e
+  gloss_hint: dedicated
+  citation: Bonfante & Bonfante 2002, glossary muluvanece.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 12
+  sign_to_phoneme:
+    AB41: m
+    AB07: u
+    A301: l
+    AB39: u
+    AB44: v
+    AB03: a
+    AB57: n
+    AB59: e
+    AB53: c
+    AB09: e

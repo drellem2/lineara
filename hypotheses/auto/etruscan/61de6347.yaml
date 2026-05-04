@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_velkans_KN_Zc_6_4_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''velkans''
+  pinned to KN Zc 6 tokens [4..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: velkans
+  phonemes:
+  - v
+  - e
+  - l
+  - k
+  - a
+  - n
+  - s
+  gloss_hint: Velkans (~Volcanus)
+  citation: Bonfante & Bonfante 2002, glossary velkans.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    AB08: v
+    AB07: e
+    AB01: l
+    AB67: k
+    AB37: a
+    AB03: n
+    AB81: s

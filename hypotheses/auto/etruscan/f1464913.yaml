@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_chia_HT_104_7_9
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''chia''
+  pinned to HT 104 tokens [7..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: chia
+  phonemes:
+  - ch
+  - i
+  - a
+  gloss_hint: with, together
+  citation: Bonfante & Bonfante 2002, glossary chia.
+equation:
+  inscription_id: HT 104
+  span:
+  - 7
+  - 9
+  sign_to_phoneme:
+    AB09: ch
+    AB24: i
+    AB37: a

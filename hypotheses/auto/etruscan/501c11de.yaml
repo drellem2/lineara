@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_aiser_GO_Wc_1a_1_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''aiser''
+  pinned to GO Wc 1a tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: aiser
+  phonemes:
+  - a
+  - i
+  - s
+  - e
+  - r
+  gloss_hint: gods (plural)
+  citation: Bonfante & Bonfante 2002, glossary aiser.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB31: a
+    AB58: i
+    AB80: s
+    AB28: e
+    AB09: r

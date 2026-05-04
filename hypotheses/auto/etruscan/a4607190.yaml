@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_hanthe_KN_Zc_6_19_24
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''hanthe''
+  pinned to KN Zc 6 tokens [19..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: hanthe
+  phonemes:
+  - h
+  - a
+  - n
+  - th
+  - e
+  gloss_hint: in front, before (ritual)
+  citation: Bonfante & Bonfante 2002, glossary hanthe.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 24
+  sign_to_phoneme:
+    AB03: h
+    AB81: a
+    AB55: n
+    AB10: th
+    AB28: e

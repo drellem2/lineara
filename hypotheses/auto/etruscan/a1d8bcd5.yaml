@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_trin_ARKH_2_8_11
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''trin''
+  pinned to ARKH 2 tokens [8..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: trin
+  phonemes:
+  - t
+  - r
+  - i
+  - n
+  gloss_hint: said, spoke
+  citation: Bonfante & Bonfante 2002, glossary trin.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    AB08: t
+    AB41: r
+    AB01: i
+    AB05: n

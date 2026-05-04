@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_aiser_HT_103_5_9
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''aiser''
+  pinned to HT 103 tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: aiser
+  phonemes:
+  - a
+  - i
+  - s
+  - e
+  - r
+  gloss_hint: gods (plural)
+  citation: Bonfante & Bonfante 2002, glossary aiser.
+equation:
+  inscription_id: HT 103
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB56: a
+    AB01: i
+    AB81: s
+    AB09: e
+    AB24: r

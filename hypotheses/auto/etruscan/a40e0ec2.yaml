@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_etnam_KN_Zc_7_16_20
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''etnam''
+  pinned to KN Zc 7 tokens [16..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: etnam
+  phonemes:
+  - e
+  - t
+  - n
+  - a
+  - m
+  gloss_hint: and, also
+  citation: Bonfante & Bonfante 2002, ch. 5 conjunctions.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 16
+  - 20
+  sign_to_phoneme:
+    AB60: e
+    AB08: t
+    AB06: n
+    AB24: a
+    AB40: m

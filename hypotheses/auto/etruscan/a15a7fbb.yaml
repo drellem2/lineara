@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_trutnu_SY_Za_4_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''trutnu''
+  pinned to SY Za 4 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: trutnu
+  phonemes:
+  - t
+  - r
+  - u
+  - t
+  - n
+  - u
+  gloss_hint: priestly title (haruspex / diviner)
+  citation: Bonfante & Bonfante 2002, glossary trutnu.
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: t
+    AB59: r
+    AB28: u
+    A301: t
+    AB54: n
+    AB57: u

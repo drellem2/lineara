@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_maru_HT_123b_42_45
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''maru''
+  pinned to HT 123b tokens [42..45].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: maru
+  phonemes:
+  - m
+  - a
+  - r
+  - u
+  gloss_hint: priestly title; magistrate
+  citation: Bonfante & Bonfante 2002, glossary maru.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 42
+  - 45
+  sign_to_phoneme:
+    AB51: m
+    AB80: a
+    AB28: r
+    AB06: u

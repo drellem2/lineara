@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cape_ARKH_2_21_24
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cape''
+  pinned to ARKH 2 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cape
+  phonemes:
+  - c
+  - a
+  - p
+  - e
+  gloss_hint: container, vessel (also "hand"?)
+  citation: Bonfante & Bonfante 2002, glossary cape.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB08: c
+    AB58: a
+    AB50: p
+    AB54: e

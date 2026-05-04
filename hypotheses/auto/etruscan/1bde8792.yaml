@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_lupum_GO_Wc_1a_1_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''lupum''
+  pinned to GO Wc 1a tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: lupum
+  phonemes:
+  - l
+  - u
+  - p
+  - u
+  - m
+  gloss_hint: dead at (epitaph)
+  citation: Bonfante & Bonfante 2002, glossary lupum.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB31: l
+    AB58: u
+    AB80: p
+    AB28: u
+    AB09: m

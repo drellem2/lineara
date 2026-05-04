@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ipa_ARKH_4a_14_17
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ipa''
+  pinned to ARKH 4a tokens [14..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ipa
+  phonemes:
+  - i
+  - p
+  - a
+  gloss_hint: who, which (relative)
+  citation: Bonfante & Bonfante 2002, ch. 5 pronouns.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB58: i
+    AB47: p
+    AB04: a

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_velia_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''velia''
+  pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: velia
+  phonemes:
+  - v
+  - e
+  - l
+  - i
+  - a
+  gloss_hint: Velia (common female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: v
+    AB67: e
+    AB59: l
+    AB06: i
+    AB41: a

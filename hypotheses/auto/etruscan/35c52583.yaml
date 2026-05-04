@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_fler_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''fler''
+  pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: fler
+  phonemes:
+  - f
+  - l
+  - e
+  - r
+  gloss_hint: offering, sacrifice
+  citation: Bonfante & Bonfante 2002, glossary fler.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: f
+    AB58: l
+    AB47: e
+    AB04: r

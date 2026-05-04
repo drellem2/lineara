@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_larth_HT_123b_25_28
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''larth''
+  pinned to HT 123b tokens [25..28].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: larth
+  phonemes:
+  - l
+  - a
+  - r
+  - th
+  gloss_hint: Larth (common male praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 25
+  - 28
+  sign_to_phoneme:
+    AB69: l
+    AB02: a
+    AB07: r
+    AB01: th

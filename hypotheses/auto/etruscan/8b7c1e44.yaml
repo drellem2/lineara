@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cealch_HT_Zb_158b_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cealch''
+  pinned to HT Zb 158b tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cealch
+  phonemes:
+  - c
+  - e
+  - a
+  - l
+  - ch
+  gloss_hint: thirty
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB58: c
+    AB67: e
+    AB53: a
+    AB04: l
+    AB28: ch

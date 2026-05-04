@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nefts_HT_90_14_18
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nefts''
+  pinned to HT 90 tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nefts
+  phonemes:
+  - n
+  - e
+  - f
+  - t
+  - s
+  gloss_hint: nephew, grandson
+  citation: Bonfante & Bonfante 2002, glossary nefts.
+equation:
+  inscription_id: HT 90
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB41: n
+    AB26: e
+    AB80: f
+    AB53: t
+    AB66: s

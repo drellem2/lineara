@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_matam_HT_90_14_18
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''matam''
+  pinned to HT 90 tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: matam
+  phonemes:
+  - m
+  - a
+  - t
+  - a
+  - m
+  gloss_hint: above, before
+  citation: Bonfante & Bonfante 2002, glossary matam.
+equation:
+  inscription_id: HT 90
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB41: m
+    AB26: a
+    AB80: t
+    AB53: a
+    AB66: m

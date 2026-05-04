@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_papals_KN_Zf_13_5_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''papals''
+  pinned to KN Zf 13 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: papals
+  phonemes:
+  - p
+  - a
+  - p
+  - a
+  - l
+  - s
+  gloss_hint: grandchild (paternal)
+  citation: Bonfante & Bonfante 2002, glossary papals.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    A301: p
+    AB39: a
+    AB44: p
+    AB03: a
+    AB57: l
+    AB59: s

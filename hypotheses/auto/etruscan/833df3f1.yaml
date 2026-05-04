@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_svalce_HT_122b_13_18
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''svalce''
+  pinned to HT 122b tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: svalce
+  phonemes:
+  - s
+  - v
+  - a
+  - l
+  - c
+  - e
+  gloss_hint: lived
+  citation: Bonfante & Bonfante 2002, glossary svalce.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB08: s
+    AB60: v
+    AB65: a
+    AB10: l
+    AB45: c
+    AB17: e

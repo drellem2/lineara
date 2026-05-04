@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_hasti_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''hasti''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: hasti
+  phonemes:
+  - h
+  - a
+  - s
+  - t
+  - i
+  gloss_hint: Hasti (female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: h
+    AB07: a
+    AB06: s
+    AB58: t
+    AB77: i

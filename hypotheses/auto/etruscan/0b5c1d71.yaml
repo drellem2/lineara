@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_zilac_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''zilac''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: zilac
+  phonemes:
+  - z
+  - i
+  - l
+  - a
+  - c
+  gloss_hint: magistrate (variant)
+  citation: Bonfante & Bonfante 2002, glossary zilac.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: z
+    AB26: i
+    AB78: l
+    AB76: a
+    AB10: c

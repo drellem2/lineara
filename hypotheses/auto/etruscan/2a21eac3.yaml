@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_velia_HT_Wc_3017a_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''velia''
+  pinned to HT Wc 3017a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: velia
+  phonemes:
+  - v
+  - e
+  - l
+  - i
+  - a
+  gloss_hint: Velia (common female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: HT Wc 3017a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB16: v
+    AB81: e
+    AB27: l
+    AB06: i
+    A306: a

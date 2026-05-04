@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tetals_KN_Zc_6_5_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tetals''
+  pinned to KN Zc 6 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tetals
+  phonemes:
+  - t
+  - e
+  - t
+  - a
+  - l
+  - s
+  gloss_hint: grandchild (maternal)
+  citation: Bonfante & Bonfante 2002, glossary tetals.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    AB07: t
+    AB01: e
+    AB67: t
+    AB37: a
+    AB03: l
+    AB81: s

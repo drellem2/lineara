@@ -752,12 +752,34 @@ _GG1_REGION_COMPAT: dict[tuple[str, str], float] = {
     ("pre_greek", "Arkhanes"): 1.0,
     ("pre_greek", "Kea"): 0.75,  # Kea is Cycladic but pre-Greek substrate likely
     ("pre_greek", "Mycenae"): 0.5,  # mainland; less direct
-    # Etruscan: Mediterranean substrate, plausible but indirect.
+    # Etruscan: Mediterranean substrate, plausible but indirect. The
+    # `etruscan` rows are the original mg-7dd1 keys (kept for back-compat
+    # with curated cross-pool hypotheses); the `etruria` rows are the
+    # geographic tag actually used by pools/etruscan.yaml entries (mg-23cc
+    # adds the second pool, parallel with `aquitania` for Aquitanian).
     ("etruscan", "Haghia Triada"): 0.5,
     ("etruscan", "Khania"): 0.5,
     ("etruscan", "Phaistos"): 0.5,
     ("etruscan", "Zakros"): 0.5,
     ("etruscan", "Knossos"): 0.5,
+    ("etruria", "Haghia Triada"): 0.5,
+    ("etruria", "Khania"): 0.5,
+    ("etruria", "Phaistos"): 0.5,
+    ("etruria", "Zakros"): 0.5,
+    ("etruria", "Knossos"): 0.5,
+    ("etruria", "Mallia"): 0.5,
+    ("etruria", "Arkhanes"): 0.5,
+    ("etruria", "Kea"): 0.5,
+    ("etruria", "Tylissos"): 0.5,
+    ("etruria", "Gournia"): 0.5,
+    ("etruria", "Pyrgos"): 0.5,
+    ("etruria", "Haghios Stephanos"): 0.5,
+    ("etruria", "Kythera"): 0.5,
+    ("etruria", "Melos"): 0.5,
+    ("etruria", "Mycenae"): 0.5,
+    ("etruria", "Papoura"): 0.5,
+    ("etruria", "Psykhro"): 0.5,
+    ("etruria", "Syme"): 0.5,
     # Linear-B carryover values: Knossos privileged.
     ("linear_b", "Knossos"): 1.0,
     ("linear_b", "Haghia Triada"): 0.5,
@@ -908,9 +930,117 @@ def geographic_genre_fit_v1(
     )
 
 
+# ---------------------------------------------------------------------------
+# partial_mapping_compression_delta_v0
+# ---------------------------------------------------------------------------
+#
+# Wrapper around compression_delta_v0 that scores a candidate_equation.v1
+# hypothesis as if its sign_to_phoneme dict were a global partial mapping.
+# Lifted as its own metric (not just a re-call of compression_delta_v0)
+# because the dispatch sites distinguish on metric *name* and the result row
+# carries `metric` verbatim — so the same numeric machinery, viewed under
+# this name, is a structurally orthogonal axis to local_fit_v1
+# (corpus-side compression delta vs corpus-side per-sign position fit).
+#
+# Per mg-23cc rationale: within one Aquitanian surface (e.g. "ur") the
+# bigram term is identical across all 47 candidates that share the surface,
+# so within-surface discrimination MUST come from a corpus-side metric. The
+# signed delta is the discriminator: positive deltas indicate the candidate's
+# partial mapping compresses the corpus better; negative deltas indicate it
+# makes things worse. Both are informative, and both can vary within a
+# surface because different inscription windows pin the candidate to
+# different sign sets.
+
+
+@dataclass(frozen=True)
+class PartialMappingCompressionResult:
+    """Result of ``partial_mapping_compression_delta_v0`` on one candidate-
+    equation hypothesis."""
+
+    score: float
+    bits_per_sign_baseline: float
+    bits_per_sign_mapped: float
+    baseline_bits: int
+    mapped_bits: int
+    stream_length: int
+    contributing_signs: tuple[str, ...]
+    metric_notes: str
+
+
+def partial_mapping_compression_delta_v0(
+    stream: list[str],
+    signs: list[str],
+    phonemes: list[str],
+) -> PartialMappingCompressionResult:
+    """Score a candidate equation by treating its sign_to_phoneme dict as a
+    partial global mapping and computing ``compression_delta_v0``.
+
+    **What it measures.** Given an equation that pins one inscription span to
+    a candidate substrate root, take the local sign→phoneme dict and apply
+    it *globally* across the whole corpus stream. The resulting compression
+    delta (``baseline_bits − mapped_bits``) is the corpus-side score: how
+    much better (positive) or worse (negative) does this partial mapping
+    compress the entire corpus, not just the one window the equation was
+    derived from?
+
+    **Why this is structurally orthogonal to local_fit_v1.** local_fit_v1
+    asks "does this span fit this root well *here*?". This metric asks
+    "does this implied partial mapping compress *globally*?". Two equations
+    that share a surface (e.g. all ~47 Aquitanian "ur" candidates) have
+    identical local position/bigram terms but pin to different sign sets,
+    so they disagree on this metric — the within-surface discriminator that
+    mg-7dd1 diagnosed missing.
+
+    **Determinism.** Identical (stream, signs, phonemes) ⇒ byte-identical
+    score. Reuses the frozen-for-v0 zlib-L9 + 2-byte symbol encoder.
+
+    **What invalidates it.**
+      * (a) Most candidate equations cover signs that occur few times in the
+        corpus, so the mapped stream is ~99% identical to the baseline and
+        the delta is ~0. That is the *expected* behavior; the discriminator
+        is the small fraction of equations whose mapping covers frequent
+        signs. The distribution being mostly-zero is a feature.
+      * (b) DEFLATE's byte-aligned output rounds away small permutation
+        effects on tiny corpora; on the 761-record SigLA snapshot the
+        signal is well above the rounding floor for high-frequency signs,
+        but a fragmentary corpus would degrade discrimination.
+    """
+    if not signs:
+        raise ValueError("partial_mapping_compression_delta_v0: equation has no signs")
+    if len(signs) != len(phonemes):
+        raise ValueError(
+            f"partial_mapping_compression_delta_v0: |signs|={len(signs)} != "
+            f"|phonemes|={len(phonemes)}"
+        )
+    mapping = dict(zip(signs, phonemes))
+    if len(mapping) != len(signs):
+        raise ValueError(
+            f"partial_mapping_compression_delta_v0: signs must be pairwise distinct; got {signs!r}"
+        )
+    base = compression_delta_v0(stream, mapping)
+    notes = (
+        f"partial_mapping_compression_delta_v0: signs=[{','.join(signs)}], "
+        f"phonemes=[{','.join(phonemes)}]; "
+        f"baseline_bits={base.baseline_bits}, mapped_bits={base.mapped_bits}; "
+        f"bits_per_sign_baseline={base.bits_per_sign_baseline:.4f}, "
+        f"bits_per_sign_mapped={base.bits_per_sign_mapped:.4f}"
+    )
+    return PartialMappingCompressionResult(
+        score=float(base.score),
+        bits_per_sign_baseline=float(base.bits_per_sign_baseline),
+        bits_per_sign_mapped=float(base.bits_per_sign_mapped),
+        baseline_bits=int(base.baseline_bits),
+        mapped_bits=int(base.mapped_bits),
+        stream_length=int(base.stream_length),
+        contributing_signs=tuple(signs),
+        metric_notes=notes,
+    )
+
+
 METRICS = {
     "compression_delta_v0": compression_delta_v0,
     "local_fit_v0": local_fit_v0,
     "local_fit_v1": local_fit_v1,
     "geographic_genre_fit_v1": geographic_genre_fit_v1,
+    "partial_mapping_compression_delta_v0": partial_mapping_compression_delta_v0,
 }

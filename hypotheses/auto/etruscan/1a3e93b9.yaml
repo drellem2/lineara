@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_rasna_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''rasna''
+  pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: rasna
+  phonemes:
+  - r
+  - a
+  - s
+  - n
+  - a
+  gloss_hint: Etruscan (people; the Etruscan endonym)
+  citation: Bonfante & Bonfante 2002, glossary rasna.
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: r
+    AB67: a
+    AB59: s
+    AB06: n
+    AB41: a

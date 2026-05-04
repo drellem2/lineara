@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_velia_KN_Zf_13_9_13
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''velia''
+  pinned to KN Zf 13 tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: velia
+  phonemes:
+  - v
+  - e
+  - l
+  - i
+  - a
+  gloss_hint: Velia (common female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB57: v
+    AB59: e
+    AB53: l
+    AB09: i
+    AB04: a

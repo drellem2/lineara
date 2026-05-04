@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_aiser_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''aiser''
+  pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: aiser
+  phonemes:
+  - a
+  - i
+  - s
+  - e
+  - r
+  gloss_hint: gods (plural)
+  citation: Bonfante & Bonfante 2002, glossary aiser.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: a
+    AB41: i
+    AB01: s
+    AB05: e
+    AB28: r

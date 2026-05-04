@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_alpan_KN_Zc_7_16_20
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''alpan''
+  pinned to KN Zc 7 tokens [16..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: alpan
+  phonemes:
+  - a
+  - l
+  - p
+  - a
+  - n
+  gloss_hint: gift, votive
+  citation: Bonfante & Bonfante 2002, glossary alpan.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 16
+  - 20
+  sign_to_phoneme:
+    AB60: a
+    AB08: l
+    AB06: p
+    AB24: a
+    AB40: n

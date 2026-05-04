@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_capra_KH_5_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''capra''
+  pinned to KH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: capra
+  phonemes:
+  - c
+  - a
+  - p
+  - r
+  - a
+  gloss_hint: goat
+  citation: Bonfante & Bonfante 2002, glossary capra; cf. Latin loan.
+equation:
+  inscription_id: KH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: c
+    AB01: a
+    AB67: p
+    AB41: r
+    AB77: a

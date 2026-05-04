@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_zathrum_KN_Zc_7_14_19
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''zathrum''
+  pinned to KN Zc 7 tokens [14..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: zathrum
+  phonemes:
+  - z
+  - a
+  - th
+  - r
+  - u
+  - m
+  gloss_hint: twenty
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 19
+  sign_to_phoneme:
+    AB57: z
+    AB31: a
+    AB60: th
+    AB08: r
+    AB06: u
+    AB24: m

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cealch_KH_10_12_16
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cealch''
+  pinned to KH 10 tokens [12..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cealch
+  phonemes:
+  - c
+  - e
+  - a
+  - l
+  - ch
+  gloss_hint: thirty
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: KH 10
+  span:
+  - 12
+  - 16
+  sign_to_phoneme:
+    AB08: c
+    AB67: e
+    AB39: a
+    AB38: l
+    AB04: ch

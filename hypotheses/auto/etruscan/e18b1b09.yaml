@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_sech_ARKH_1a_22_24
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''sech''
+  pinned to ARKH 1a tokens [22..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: sech
+  phonemes:
+  - s
+  - e
+  - ch
+  gloss_hint: daughter
+  citation: Bonfante & Bonfante 2002, glossary sech; funerary epitaphs.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 22
+  - 24
+  sign_to_phoneme:
+    AB67: s
+    AB31: e
+    AB24: ch

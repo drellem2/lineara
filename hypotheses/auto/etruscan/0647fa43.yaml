@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_chia_ARKH_2_16_19
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''chia''
+  pinned to ARKH 2 tokens [16..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: chia
+  phonemes:
+  - ch
+  - i
+  - a
+  gloss_hint: with, together
+  citation: Bonfante & Bonfante 2002, glossary chia.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 16
+  - 19
+  sign_to_phoneme:
+    AB09: ch
+    AB45: i
+    AB118: a

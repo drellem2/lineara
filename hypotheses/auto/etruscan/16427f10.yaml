@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_vinum_GO_Wc_1a_1_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''vinum''
+  pinned to GO Wc 1a tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: vinum
+  phonemes:
+  - v
+  - i
+  - n
+  - u
+  - m
+  gloss_hint: wine
+  citation: Bonfante & Bonfante 2002, glossary vinum.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB31: v
+    AB58: i
+    AB80: n
+    AB28: u
+    AB09: m

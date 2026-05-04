@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_hanthe_HT_Zb_158b_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''hanthe''
+  pinned to HT Zb 158b tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: hanthe
+  phonemes:
+  - h
+  - a
+  - n
+  - th
+  - e
+  gloss_hint: in front, before (ritual)
+  citation: Bonfante & Bonfante 2002, glossary hanthe.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB58: h
+    AB67: a
+    AB53: n
+    AB04: th
+    AB28: e

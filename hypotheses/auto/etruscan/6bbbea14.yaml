@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tin_HT_108_18_20
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tin''
+  pinned to HT 108 tokens [18..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tin
+  phonemes:
+  - t
+  - i
+  - n
+  gloss_hint: Tinia (chief god, ~Jupiter); also "day"
+  citation: Bonfante & Bonfante 2002, glossary tin/tinia.
+equation:
+  inscription_id: HT 108
+  span:
+  - 18
+  - 20
+  sign_to_phoneme:
+    AB76: t
+    AB37: i
+    AB65: n

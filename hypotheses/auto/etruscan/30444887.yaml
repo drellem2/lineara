@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_fanu_HT_123b_42_45
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''fanu''
+  pinned to HT 123b tokens [42..45].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: fanu
+  phonemes:
+  - f
+  - a
+  - n
+  - u
+  gloss_hint: sanctuary, sacred place
+  citation: Bonfante & Bonfante 2002, glossary fanu.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 42
+  - 45
+  sign_to_phoneme:
+    AB51: f
+    AB80: a
+    AB28: n
+    AB06: u

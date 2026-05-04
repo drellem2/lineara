@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cletram_KN_Zf_13_4_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cletram''
+  pinned to KN Zf 13 tokens [4..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cletram
+  phonemes:
+  - c
+  - l
+  - e
+  - t
+  - r
+  - a
+  - m
+  gloss_hint: bier, litter (ritual)
+  citation: Bonfante & Bonfante 2002, glossary cletram.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    AB07: c
+    A301: l
+    AB39: e
+    AB44: t
+    AB03: r
+    AB57: a
+    AB59: m

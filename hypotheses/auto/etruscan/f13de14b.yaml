@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_suthi_HT_122b_14_17
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''suthi''
+  pinned to HT 122b tokens [14..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: suthi
+  phonemes:
+  - s
+  - u
+  - th
+  - i
+  gloss_hint: tomb
+  citation: Bonfante & Bonfante 2002, glossary suthi; ubiquitous in funerary inscriptions.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB60: s
+    AB65: u
+    AB10: th
+    AB45: i

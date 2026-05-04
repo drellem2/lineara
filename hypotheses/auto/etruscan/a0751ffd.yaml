@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cape_HT_117a_38_41
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cape''
+  pinned to HT 117a tokens [38..41].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cape
+  phonemes:
+  - c
+  - a
+  - p
+  - e
+  gloss_hint: container, vessel (also "hand"?)
+  citation: Bonfante & Bonfante 2002, glossary cape.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 38
+  - 41
+  sign_to_phoneme:
+    AB73: c
+    AB26: a
+    AB59: p
+    AB60: e

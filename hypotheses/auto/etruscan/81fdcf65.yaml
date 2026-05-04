@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_turuce_KN_Zc_6_19_25
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''turuce''
+  pinned to KN Zc 6 tokens [19..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: turuce
+  phonemes:
+  - t
+  - u
+  - r
+  - u
+  - c
+  - e
+  gloss_hint: gave, dedicated (perfective)
+  citation: Bonfante & Bonfante 2002, glossary turuce; votive verb.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 25
+  sign_to_phoneme:
+    AB03: t
+    AB81: u
+    AB55: r
+    AB10: u
+    AB28: c
+    AB79: e

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_hanthin_SY_Za_4_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''hanthin''
+  pinned to SY Za 4 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: hanthin
+  phonemes:
+  - h
+  - a
+  - n
+  - th
+  - i
+  - n
+  gloss_hint: in front, before (ritual variant)
+  citation: Bonfante & Bonfante 2002, glossary hanthin.
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: h
+    AB59: a
+    AB28: n
+    A301: th
+    AB54: i
+    AB57: n

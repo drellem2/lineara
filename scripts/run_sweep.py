@@ -61,6 +61,7 @@ from harness.metrics import (
     geographic_genre_fit_v1,
     local_fit_v0,
     local_fit_v1,
+    partial_mapping_compression_delta_v0,
 )
 
 
@@ -70,7 +71,12 @@ _DEFAULT_RESULTS = _REPO_ROOT / "results" / "experiments.jsonl"
 _RESULT_SCHEMA_PATH = _REPO_ROOT / "harness" / "schemas" / "result.v0.schema.json"
 _DEFAULT_POOLS_DIR = _REPO_ROOT / "pools"
 
-_SUPPORTED_METRICS = ("local_fit_v0", "local_fit_v1", "geographic_genre_fit_v1")
+_SUPPORTED_METRICS = (
+    "local_fit_v0",
+    "local_fit_v1",
+    "geographic_genre_fit_v1",
+    "partial_mapping_compression_delta_v0",
+)
 
 
 class _StringDateLoader(yaml.SafeLoader):
@@ -249,6 +255,12 @@ def _score_one(
         row["bigram_term"] = float(result.bigram_term)
         row["length_penalty"] = float(result.length_penalty)
         row["rare_sign_correction"] = float(result.rare_sign_correction)
+    elif metric_name == "partial_mapping_compression_delta_v0":
+        result = partial_mapping_compression_delta_v0(stream, signs, phonemes)
+        row["score"] = float(result.score)
+        row["metric_notes"] = result.metric_notes
+        row["bits_per_sign_baseline"] = float(result.bits_per_sign_baseline)
+        row["bits_per_sign_mapped"] = float(result.bits_per_sign_mapped)
     elif metric_name == "geographic_genre_fit_v1":
         if pool_ctx is None:
             raise ValueError(

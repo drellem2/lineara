@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thu_ARKH_2_22_23
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thu''
+  pinned to ARKH 2 tokens [22..23].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thu
+  phonemes:
+  - th
+  - u
+  gloss_hint: one
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals; dice of Tuscania.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 22
+  - 23
+  sign_to_phoneme:
+    AB58: th
+    AB50: u

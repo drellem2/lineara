@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ipei_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ipei''
+  pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ipei
+  phonemes:
+  - i
+  - p
+  - e
+  - i
+  gloss_hint: there, where
+  citation: Bonfante & Bonfante 2002, glossary ipei.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: i
+    AB58: p
+    AB47: e
+    AB04: i

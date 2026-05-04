@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tular_KN_Zc_6_19_24
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tular''
+  pinned to KN Zc 6 tokens [19..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tular
+  phonemes:
+  - t
+  - u
+  - l
+  - a
+  - r
+  gloss_hint: boundary, border
+  citation: Bonfante & Bonfante 2002, glossary tular.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 24
+  sign_to_phoneme:
+    AB03: t
+    AB81: u
+    AB55: l
+    AB10: a
+    AB28: r

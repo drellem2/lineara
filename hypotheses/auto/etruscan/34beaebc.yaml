@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_usil_HT_115a_10_13
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''usil''
+  pinned to HT 115a tokens [10..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: usil
+  phonemes:
+  - u
+  - s
+  - i
+  - l
+  gloss_hint: sun
+  citation: Bonfante & Bonfante 2002, glossary usil.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    AB59: u
+    AB80: s
+    AB55: i
+    AB40: l

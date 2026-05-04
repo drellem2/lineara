@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_etera_KH_5_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''etera''
+  pinned to KH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: etera
+  phonemes:
+  - e
+  - t
+  - e
+  - r
+  - a
+  gloss_hint: slave, dependent
+  citation: Bonfante & Bonfante 2002, glossary etera.
+equation:
+  inscription_id: KH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: e
+    AB01: t
+    AB67: e
+    AB41: r
+    AB77: a

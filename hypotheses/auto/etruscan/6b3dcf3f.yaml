@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_etera_KN_Zc_6_6_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''etera''
+  pinned to KN Zc 6 tokens [6..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: etera
+  phonemes:
+  - e
+  - t
+  - e
+  - r
+  - a
+  gloss_hint: slave, dependent
+  citation: Bonfante & Bonfante 2002, glossary etera.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 6
+  - 10
+  sign_to_phoneme:
+    AB01: e
+    AB67: t
+    AB37: e
+    AB03: r
+    AB81: a

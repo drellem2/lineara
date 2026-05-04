@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_mlach_HT_117a_63_66
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''mlach''
+  pinned to HT 117a tokens [63..66].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: mlach
+  phonemes:
+  - m
+  - l
+  - a
+  - ch
+  gloss_hint: good, beautiful (votive context)
+  citation: Bonfante & Bonfante 2002, glossary mlach.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 63
+  - 66
+  sign_to_phoneme:
+    AB70: m
+    AB31: l
+    AB28: a
+    AB37: ch

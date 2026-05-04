@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_lautni_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''lautni''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: lautni
+  phonemes:
+  - l
+  - a
+  - u
+  - t
+  - n
+  - i
+  gloss_hint: freedman, household member
+  citation: Bonfante & Bonfante 2002, glossary lautni.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: l
+    AB45: a
+    AB26: u
+    AB78: t
+    AB76: n
+    AB10: i

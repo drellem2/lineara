@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cepen_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cepen''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cepen
+  phonemes:
+  - c
+  - e
+  - p
+  - e
+  - n
+  gloss_hint: priest
+  citation: Bonfante & Bonfante 2002, glossary cepen; Liber Linteus.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: c
+    AB31: e
+    AB58: p
+    AB80: e
+    AB28: n

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_trutnu_HT_122b_13_18
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''trutnu''
+  pinned to HT 122b tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: trutnu
+  phonemes:
+  - t
+  - r
+  - u
+  - t
+  - n
+  - u
+  gloss_hint: priestly title (haruspex / diviner)
+  citation: Bonfante & Bonfante 2002, glossary trutnu.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB08: t
+    AB60: r
+    AB65: u
+    AB10: t
+    AB45: n
+    AB17: u

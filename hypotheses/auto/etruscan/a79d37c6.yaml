@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thesan_HT_128a_5_9
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thesan''
+  pinned to HT 128a tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thesan
+  phonemes:
+  - th
+  - e
+  - s
+  - a
+  - n
+  gloss_hint: dawn (goddess)
+  citation: Bonfante & Bonfante 2002, glossary thesan.
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB69: th
+    AB26: e
+    AB56: s
+    AB09: a
+    AB13: n

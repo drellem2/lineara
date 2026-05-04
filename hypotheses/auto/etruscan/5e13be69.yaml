@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_leu_HT_108_9_11
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''leu''
+  pinned to HT 108 tokens [9..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: leu
+  phonemes:
+  - l
+  - e
+  - u
+  gloss_hint: lion (in some readings)
+  citation: Bonfante & Bonfante 2002, glossary leu (uncertain).
+equation:
+  inscription_id: HT 108
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB07: l
+    AB06: e
+    AB02: u

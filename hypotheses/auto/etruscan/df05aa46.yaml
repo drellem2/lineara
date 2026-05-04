@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_lautn_KN_Zc_7_15_19
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''lautn''
+  pinned to KN Zc 7 tokens [15..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: lautn
+  phonemes:
+  - l
+  - a
+  - u
+  - t
+  - n
+  gloss_hint: family, gens
+  citation: Bonfante & Bonfante 2002, glossary lautn.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 19
+  sign_to_phoneme:
+    AB31: l
+    AB60: a
+    AB08: u
+    AB06: t
+    AB24: n

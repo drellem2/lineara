@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_hasti_KN_Zf_13_7_11
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''hasti''
+  pinned to KN Zf 13 tokens [7..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: hasti
+  phonemes:
+  - h
+  - a
+  - s
+  - t
+  - i
+  gloss_hint: Hasti (female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 7
+  - 11
+  sign_to_phoneme:
+    AB44: h
+    AB03: a
+    AB57: s
+    AB59: t
+    AB53: i

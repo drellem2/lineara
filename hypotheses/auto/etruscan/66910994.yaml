@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_lupum_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''lupum''
+  pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: lupum
+  phonemes:
+  - l
+  - u
+  - p
+  - u
+  - m
+  gloss_hint: dead at (epitaph)
+  citation: Bonfante & Bonfante 2002, glossary lupum.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: l
+    AB03: u
+    AB81: p
+    AB55: u
+    AB10: m

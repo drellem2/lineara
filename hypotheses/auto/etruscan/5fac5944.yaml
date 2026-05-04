@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cepen_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cepen''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cepen
+  phonemes:
+  - c
+  - e
+  - p
+  - e
+  - n
+  gloss_hint: priest
+  citation: Bonfante & Bonfante 2002, glossary cepen; Liber Linteus.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: c
+    AB26: e
+    AB78: p
+    AB76: e
+    AB10: n

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tamera_KN_Zc_7_16_21
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tamera''
+  pinned to KN Zc 7 tokens [16..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tamera
+  phonemes:
+  - t
+  - a
+  - m
+  - e
+  - r
+  - a
+  gloss_hint: chamber, office (~tamiae)
+  citation: Bonfante & Bonfante 2002, glossary tamera.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 16
+  - 21
+  sign_to_phoneme:
+    AB60: t
+    AB08: a
+    AB06: m
+    AB24: e
+    AB40: r
+    AB39: a

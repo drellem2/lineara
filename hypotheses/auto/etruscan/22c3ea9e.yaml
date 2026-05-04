@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tisce_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tisce''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tisce
+  phonemes:
+  - t
+  - i
+  - s
+  - c
+  - e
+  gloss_hint: place name, location
+  citation: Bonfante & Bonfante 2002, glossary tisce.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: t
+    AB26: i
+    AB78: s
+    AB76: c
+    AB10: e

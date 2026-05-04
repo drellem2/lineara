@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_capi_HT_115a_10_13
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''capi''
+  pinned to HT 115a tokens [10..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: capi
+  phonemes:
+  - c
+  - a
+  - p
+  - i
+  gloss_hint: jar, vessel (also "hand"?)
+  citation: Bonfante & Bonfante 2002, glossary capi.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    AB59: c
+    AB80: a
+    AB55: p
+    AB40: i

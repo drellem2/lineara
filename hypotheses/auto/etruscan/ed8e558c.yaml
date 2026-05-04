@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_lautnitha_KN_Zc_7_14_21
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''lautnitha''
+  pinned to KN Zc 7 tokens [14..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: lautnitha
+  phonemes:
+  - l
+  - a
+  - u
+  - t
+  - n
+  - i
+  - th
+  - a
+  gloss_hint: freedwoman
+  citation: Bonfante & Bonfante 2002, glossary lautnitha.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 21
+  sign_to_phoneme:
+    AB57: l
+    AB31: a
+    AB60: u
+    AB08: t
+    AB06: n
+    AB24: i
+    AB40: th
+    AB39: a

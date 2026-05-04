@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thana_GO_Wc_1a_0_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thana''
+  pinned to GO Wc 1a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thana
+  phonemes:
+  - th
+  - a
+  - n
+  - a
+  gloss_hint: Thana (common female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: th
+    AB31: a
+    AB58: n
+    AB80: a

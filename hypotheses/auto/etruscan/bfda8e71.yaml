@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thana_HT_103_19_22
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thana''
+  pinned to HT 103 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thana
+  phonemes:
+  - th
+  - a
+  - n
+  - a
+  gloss_hint: Thana (common female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: HT 103
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB01: th
+    AB81: a
+    AB09: n
+    AB24: a

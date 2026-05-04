@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cerichunce_KN_Zf_13_4_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cerichunce''
+  pinned to KN Zf 13 tokens [4..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cerichunce
+  phonemes:
+  - c
+  - e
+  - r
+  - i
+  - ch
+  - u
+  - n
+  - c
+  - e
+  gloss_hint: built, erected
+  citation: Bonfante & Bonfante 2002, glossary cerichunce.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 12
+  sign_to_phoneme:
+    AB07: c
+    A301: e
+    AB39: r
+    AB44: i
+    AB03: ch
+    AB57: u
+    AB59: n
+    AB53: c
+    AB09: e

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nethuns_GO_Wc_1a_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nethuns''
+  pinned to GO Wc 1a tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nethuns
+  phonemes:
+  - n
+  - e
+  - th
+  - u
+  - n
+  - s
+  gloss_hint: Nethuns (~Neptune)
+  citation: Bonfante & Bonfante 2002, glossary nethuns.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: n
+    AB31: e
+    AB58: th
+    AB80: u
+    AB28: n
+    AB09: s

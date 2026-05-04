@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cilth_ARKH_2_9_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cilth''
+  pinned to ARKH 2 tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cilth
+  phonemes:
+  - c
+  - i
+  - l
+  - th
+  gloss_hint: citadel, sacred precinct
+  citation: Bonfante & Bonfante 2002, glossary cilth.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: c
+    AB01: i
+    AB05: l
+    AB28: th

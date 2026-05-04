@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tivr_HT_104_6_9
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tivr''
+  pinned to HT 104 tokens [6..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tivr
+  phonemes:
+  - t
+  - i
+  - v
+  - r
+  gloss_hint: moon, month
+  citation: Bonfante & Bonfante 2002, glossary tivr.
+equation:
+  inscription_id: HT 104
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    AB81: t
+    AB09: i
+    AB24: v
+    AB37: r

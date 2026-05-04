@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tisce_KN_Zc_7_17_21
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tisce''
+  pinned to KN Zc 7 tokens [17..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tisce
+  phonemes:
+  - t
+  - i
+  - s
+  - c
+  - e
+  gloss_hint: place name, location
+  citation: Bonfante & Bonfante 2002, glossary tisce.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 17
+  - 21
+  sign_to_phoneme:
+    AB08: t
+    AB06: i
+    AB24: s
+    AB40: c
+    AB39: e

@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ci_ARKH_4a_13_14
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ci''
+  pinned to ARKH 4a tokens [13..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ci
+  phonemes:
+  - c
+  - i
+  gloss_hint: three
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals; dice of Tuscania.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 14
+  sign_to_phoneme:
+    AB45: c
+    AB58: i

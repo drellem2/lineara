@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_enac_HT_12_0_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''enac''
+  pinned to HT 12 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: enac
+  phonemes:
+  - e
+  - n
+  - a
+  - c
+  gloss_hint: then, afterward
+  citation: Bonfante & Bonfante 2002, glossary enac.
+equation:
+  inscription_id: HT 12
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB16: e
+    AB37: n
+    AB01: a
+    AB04: c

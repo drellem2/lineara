@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_vinum_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''vinum''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: vinum
+  phonemes:
+  - v
+  - i
+  - n
+  - u
+  - m
+  gloss_hint: wine
+  citation: Bonfante & Bonfante 2002, glossary vinum.
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: v
+    AB07: i
+    AB06: n
+    AB58: u
+    AB77: m

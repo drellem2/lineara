@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_semph_HT_117a_8_11
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''semph''
+  pinned to HT 117a tokens [8..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: semph
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  gloss_hint: seven
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    AB10: s
+    AB73: e
+    AB06: m
+    AB41: ph

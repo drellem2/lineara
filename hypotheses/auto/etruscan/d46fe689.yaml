@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_trutnu_GO_Wc_1a_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''trutnu''
+  pinned to GO Wc 1a tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: trutnu
+  phonemes:
+  - t
+  - r
+  - u
+  - t
+  - n
+  - u
+  gloss_hint: priestly title (haruspex / diviner)
+  citation: Bonfante & Bonfante 2002, glossary trutnu.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: t
+    AB31: r
+    AB58: u
+    AB80: t
+    AB28: n
+    AB09: u

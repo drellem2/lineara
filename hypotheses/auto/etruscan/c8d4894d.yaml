@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thu_ARKH_4b_11_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thu''
+  pinned to ARKH 4b tokens [11..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thu
+  phonemes:
+  - th
+  - u
+  gloss_hint: one
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals; dice of Tuscania.
+equation:
+  inscription_id: ARKH 4b
+  span:
+  - 11
+  - 12
+  sign_to_phoneme:
+    AB08: th
+    AB67: u

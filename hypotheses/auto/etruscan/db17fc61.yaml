@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_muvalch_KN_Zf_13_2_7
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''muvalch''
+  pinned to KN Zf 13 tokens [2..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: muvalch
+  phonemes:
+  - m
+  - u
+  - v
+  - a
+  - l
+  - ch
+  gloss_hint: fifty (or forty; debated)
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals (debated).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 7
+  sign_to_phoneme:
+    AB24: m
+    AB41: u
+    AB07: v
+    A301: a
+    AB39: l
+    AB44: ch

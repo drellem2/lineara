@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tece_HT_103_5_8
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tece''
+  pinned to HT 103 tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tece
+  phonemes:
+  - t
+  - e
+  - c
+  - e
+  gloss_hint: placed, set up
+  citation: Bonfante & Bonfante 2002, glossary tece.
+equation:
+  inscription_id: HT 103
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB56: t
+    AB01: e
+    AB81: c
+    AB09: e

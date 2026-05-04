@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_papa_HT_13_0_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''papa''
+  pinned to HT 13 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: papa
+  phonemes:
+  - p
+  - a
+  - p
+  - a
+  gloss_hint: grandfather
+  citation: Bonfante & Bonfante 2002, glossary papa.
+equation:
+  inscription_id: HT 13
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB77: p
+    AB10: a
+    AB45: p
+    AB59: a

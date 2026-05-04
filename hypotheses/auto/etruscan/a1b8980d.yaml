@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_zilath_KH_5_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''zilath''
+  pinned to KH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: zilath
+  phonemes:
+  - z
+  - i
+  - l
+  - a
+  - th
+  gloss_hint: magistrate
+  citation: Bonfante & Bonfante 2002, glossary zilath.
+equation:
+  inscription_id: KH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: z
+    AB01: i
+    AB67: l
+    AB41: a
+    AB77: th

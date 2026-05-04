@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cepen_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cepen''
+  pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cepen
+  phonemes:
+  - c
+  - e
+  - p
+  - e
+  - n
+  gloss_hint: priest
+  citation: Bonfante & Bonfante 2002, glossary cepen; Liber Linteus.
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: c
+    AB67: e
+    AB59: p
+    AB06: e
+    AB41: n

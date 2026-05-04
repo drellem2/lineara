@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_camthi_HT_115a_9_13
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''camthi''
+  pinned to HT 115a tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: camthi
+  phonemes:
+  - c
+  - a
+  - m
+  - th
+  - i
+  gloss_hint: magistrate / title
+  citation: Bonfante & Bonfante 2002, glossary camthi.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB53: c
+    AB59: a
+    AB80: m
+    AB55: th
+    AB40: i

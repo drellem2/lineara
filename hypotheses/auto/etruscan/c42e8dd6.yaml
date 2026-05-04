@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_trin_HT_119_11_14
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''trin''
+  pinned to HT 119 tokens [11..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: trin
+  phonemes:
+  - t
+  - r
+  - i
+  - n
+  gloss_hint: said, spoke
+  citation: Bonfante & Bonfante 2002, glossary trin.
+equation:
+  inscription_id: HT 119
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    AB81: t
+    AB56: r
+    AB06: i
+    AB69: n

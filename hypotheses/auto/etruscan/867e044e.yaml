@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_muvalch_KN_Zc_6_5_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''muvalch''
+  pinned to KN Zc 6 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: muvalch
+  phonemes:
+  - m
+  - u
+  - v
+  - a
+  - l
+  - ch
+  gloss_hint: fifty (or forty; debated)
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals (debated).
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    AB07: m
+    AB01: u
+    AB67: v
+    AB37: a
+    AB03: l
+    AB81: ch

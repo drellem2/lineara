@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ziche_GO_Wc_1a_1_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ziche''
+  pinned to GO Wc 1a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ziche
+  phonemes:
+  - z
+  - i
+  - ch
+  - e
+  gloss_hint: wrote, inscribed
+  citation: Bonfante & Bonfante 2002, glossary ziche.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB31: z
+    AB58: i
+    AB80: ch
+    AB28: e

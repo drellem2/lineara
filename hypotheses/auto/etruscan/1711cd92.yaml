@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_alike_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''alike''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: alike
+  phonemes:
+  - a
+  - l
+  - i
+  - k
+  - e
+  gloss_hint: gave (variant)
+  citation: Bonfante & Bonfante 2002, glossary alike.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: a
+    AB31: l
+    AB58: i
+    AB80: k
+    AB28: e

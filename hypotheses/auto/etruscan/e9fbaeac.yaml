@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_semphalch_KN_Zc_6_4_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''semphalch''
+  pinned to KN Zc 6 tokens [4..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: semphalch
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  - a
+  - l
+  - ch
+  gloss_hint: seventy
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals (decadal forms).
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    AB08: s
+    AB07: e
+    AB01: m
+    AB67: ph
+    AB37: a
+    AB03: l
+    AB81: ch

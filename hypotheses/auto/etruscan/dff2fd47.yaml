@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan__uthina_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''śuthina''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: śuthina
+  phonemes:
+  - s
+  - u
+  - th
+  - i
+  - n
+  - a
+  gloss_hint: for the tomb (funerary marker on grave goods)
+  citation: Bonfante & Bonfante 2002, glossary śuthina; common on bronze grave goods.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: s
+    AB45: u
+    AB26: th
+    AB78: i
+    AB76: n
+    AB10: a

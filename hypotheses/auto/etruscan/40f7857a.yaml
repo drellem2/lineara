@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_amce_HT_1_19_22
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''amce''
+  pinned to HT 1 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: amce
+  phonemes:
+  - a
+  - m
+  - c
+  - e
+  gloss_hint: was
+  citation: Bonfante & Bonfante 2002, glossary amce.
+equation:
+  inscription_id: HT 1
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB08: a
+    AB60: m
+    AB06: c
+    AB27: e

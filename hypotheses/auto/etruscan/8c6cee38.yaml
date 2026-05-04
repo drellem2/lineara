@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nesna_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nesna''
+  pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nesna
+  phonemes:
+  - n
+  - e
+  - s
+  - n
+  - a
+  gloss_hint: of the dead, funerary
+  citation: Bonfante & Bonfante 2002, glossary nesna.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: n
+    AB41: e
+    AB01: s
+    AB05: n
+    AB28: a

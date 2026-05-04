@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ipei_HT_120_21_24
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ipei''
+  pinned to HT 120 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ipei
+  phonemes:
+  - i
+  - p
+  - e
+  - i
+  gloss_hint: there, where
+  citation: Bonfante & Bonfante 2002, glossary ipei.
+equation:
+  inscription_id: HT 120
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB67: i
+    AB27: p
+    AB59: e
+    AB06: i

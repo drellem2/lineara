@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_aclus_HT_Zb_158b_1_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''aclus''
+  pinned to HT Zb 158b tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: aclus
+  phonemes:
+  - a
+  - c
+  - l
+  - u
+  - s
+  gloss_hint: month name (Aclus)
+  citation: Bonfante & Bonfante 2002, glossary aclus.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB67: a
+    AB53: c
+    AB04: l
+    AB28: u
+    AB57: s

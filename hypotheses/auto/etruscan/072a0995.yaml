@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_eis_ARKH_2_14_16
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''eis''
+  pinned to ARKH 2 tokens [14..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: eis
+  phonemes:
+  - e
+  - i
+  - s
+  gloss_hint: god (variant)
+  citation: Bonfante & Bonfante 2002, glossary eis.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 16
+  sign_to_phoneme:
+    AB79: e
+    A301: i
+    AB09: s

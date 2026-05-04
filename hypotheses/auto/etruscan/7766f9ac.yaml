@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_turce_HT_Zb_159_1_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''turce''
+  pinned to HT Zb 159 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: turce
+  phonemes:
+  - t
+  - u
+  - r
+  - c
+  - e
+  gloss_hint: gave (variant of turuce)
+  citation: Bonfante & Bonfante 2002, glossary turce.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB06: t
+    AB55: u
+    AB41: r
+    AB57: c
+    AB09: e

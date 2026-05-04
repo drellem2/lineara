@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_puia_HT_103_19_22
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''puia''
+  pinned to HT 103 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: puia
+  phonemes:
+  - p
+  - u
+  - i
+  - a
+  gloss_hint: wife
+  citation: Bonfante & Bonfante 2002, glossary puia; cf. TLE 887.
+equation:
+  inscription_id: HT 103
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB01: p
+    AB81: u
+    AB09: i
+    AB24: a

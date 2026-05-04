@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_matam_KN_Zc_7_15_19
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''matam''
+  pinned to KN Zc 7 tokens [15..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: matam
+  phonemes:
+  - m
+  - a
+  - t
+  - a
+  - m
+  gloss_hint: above, before
+  citation: Bonfante & Bonfante 2002, glossary matam.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 19
+  sign_to_phoneme:
+    AB31: m
+    AB60: a
+    AB08: t
+    AB06: a
+    AB24: m

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_fleres_KN_Zf_13_3_8
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''fleres''
+  pinned to KN Zf 13 tokens [3..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: fleres
+  phonemes:
+  - f
+  - l
+  - e
+  - r
+  - e
+  - s
+  gloss_hint: statue, votive figure
+  citation: Bonfante & Bonfante 2002, glossary fleres.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 8
+  sign_to_phoneme:
+    AB41: f
+    AB07: l
+    A301: e
+    AB39: r
+    AB44: e
+    AB03: s

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tin_ARKH_2_16_19
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tin''
+  pinned to ARKH 2 tokens [16..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tin
+  phonemes:
+  - t
+  - i
+  - n
+  gloss_hint: Tinia (chief god, ~Jupiter); also "day"
+  citation: Bonfante & Bonfante 2002, glossary tin/tinia.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 16
+  - 19
+  sign_to_phoneme:
+    AB09: t
+    AB45: i
+    AB118: n

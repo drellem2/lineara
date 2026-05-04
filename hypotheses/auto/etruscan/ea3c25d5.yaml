@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ziche_ARKH_2_9_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ziche''
+  pinned to ARKH 2 tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ziche
+  phonemes:
+  - z
+  - i
+  - ch
+  - e
+  gloss_hint: wrote, inscribed
+  citation: Bonfante & Bonfante 2002, glossary ziche.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: z
+    AB01: i
+    AB05: ch
+    AB28: e

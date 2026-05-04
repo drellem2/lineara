@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_penthuna_KN_Zc_6_4_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''penthuna''
+  pinned to KN Zc 6 tokens [4..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: penthuna
+  phonemes:
+  - p
+  - e
+  - n
+  - th
+  - u
+  - n
+  - a
+  gloss_hint: stone-marker, cippus
+  citation: Bonfante & Bonfante 2002, glossary penthuna.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    AB08: p
+    AB07: e
+    AB01: n
+    AB67: th
+    AB37: u
+    AB03: n
+    AB81: a

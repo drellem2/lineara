@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_ruva_ARKH_4a_19_22
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''ruva''
+  pinned to ARKH 4a tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: ruva
+  phonemes:
+  - r
+  - u
+  - v
+  - a
+  gloss_hint: brother
+  citation: Bonfante & Bonfante 2002, glossary ruva.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB39: r
+    AB37: u
+    AB24: v
+    AB08: a

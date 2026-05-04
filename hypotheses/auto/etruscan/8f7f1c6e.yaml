@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_hupnina_KN_Zc_7_15_21
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''hupnina''
+  pinned to KN Zc 7 tokens [15..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: hupnina
+  phonemes:
+  - h
+  - u
+  - p
+  - n
+  - i
+  - n
+  - a
+  gloss_hint: bedroom, cubicle (in tomb)
+  citation: Bonfante & Bonfante 2002, glossary hupnina.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 21
+  sign_to_phoneme:
+    AB31: h
+    AB60: u
+    AB08: p
+    AB06: n
+    AB24: i
+    AB40: n
+    AB39: a

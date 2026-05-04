@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_spureri_KN_Zf_13_4_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''spureri''
+  pinned to KN Zf 13 tokens [4..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: spureri
+  phonemes:
+  - s
+  - p
+  - u
+  - r
+  - e
+  - r
+  - i
+  gloss_hint: sacrifice for the city (ritual)
+  citation: Bonfante & Bonfante 2002, glossary spureri.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    AB07: s
+    A301: p
+    AB39: u
+    AB44: r
+    AB03: e
+    AB57: r
+    AB59: i

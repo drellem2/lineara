@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_spural_HT_Zb_158b_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''spural''
+  pinned to HT Zb 158b tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: spural
+  phonemes:
+  - s
+  - p
+  - u
+  - r
+  - a
+  - l
+  gloss_hint: of the city, civic
+  citation: Bonfante & Bonfante 2002, glossary spural.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB58: s
+    AB67: p
+    AB53: u
+    AB04: r
+    AB28: a
+    AB57: l

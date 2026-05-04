@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_mini_HT_122b_32_35
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''mini''
+  pinned to HT 122b tokens [32..35].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: mini
+  phonemes:
+  - m
+  - i
+  - n
+  - i
+  gloss_hint: me (accusative)
+  citation: Bonfante & Bonfante 2002, ch. 5 pronouns.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 32
+  - 35
+  sign_to_phoneme:
+    AB11: m
+    AB05: i
+    AB81: n
+    AB02: i

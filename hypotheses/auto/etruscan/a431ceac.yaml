@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thapna_KN_Zf_13_3_7
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thapna''
+  pinned to KN Zf 13 tokens [3..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thapna
+  phonemes:
+  - th
+  - a
+  - p
+  - n
+  - a
+  gloss_hint: cup, drinking vessel
+  citation: Bonfante & Bonfante 2002, glossary thapna.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 7
+  sign_to_phoneme:
+    AB41: th
+    AB07: a
+    A301: p
+    AB39: n
+    AB44: a

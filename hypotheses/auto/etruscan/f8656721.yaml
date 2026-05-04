@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cezp_HT_117a_39_42
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cezp''
+  pinned to HT 117a tokens [39..42].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cezp
+  phonemes:
+  - c
+  - e
+  - z
+  - p
+  gloss_hint: eight
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 39
+  - 42
+  sign_to_phoneme:
+    AB26: c
+    AB59: e
+    AB60: z
+    AB27: p

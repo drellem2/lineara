@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tin_GO_Wc_1a_3_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tin''
+  pinned to GO Wc 1a tokens [3..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tin
+  phonemes:
+  - t
+  - i
+  - n
+  gloss_hint: Tinia (chief god, ~Jupiter); also "day"
+  citation: Bonfante & Bonfante 2002, glossary tin/tinia.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 3
+  - 5
+  sign_to_phoneme:
+    AB80: t
+    AB28: i
+    AB09: n

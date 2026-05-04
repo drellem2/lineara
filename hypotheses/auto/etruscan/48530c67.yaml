@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_lupum_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''lupum''
+  pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: lupum
+  phonemes:
+  - l
+  - u
+  - p
+  - u
+  - m
+  gloss_hint: dead at (epitaph)
+  citation: Bonfante & Bonfante 2002, glossary lupum.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: l
+    AB41: u
+    AB01: p
+    AB05: u
+    AB28: m

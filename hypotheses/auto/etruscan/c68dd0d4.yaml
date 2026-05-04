@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_zal_ARKH_2_8_10
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''zal''
+  pinned to ARKH 2 tokens [8..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  gloss_hint: two
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 10
+  sign_to_phoneme:
+    AB08: z
+    AB41: a
+    AB01: l

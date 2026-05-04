@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cealch_KN_Zf_13_1_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cealch''
+  pinned to KN Zf 13 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cealch
+  phonemes:
+  - c
+  - e
+  - a
+  - l
+  - ch
+  gloss_hint: thirty
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB27: c
+    AB24: e
+    AB41: a
+    AB07: l
+    A301: ch

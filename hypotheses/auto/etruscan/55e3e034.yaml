@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan__uthina_HT_Zb_158b_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''śuthina''
+  pinned to HT Zb 158b tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: śuthina
+  phonemes:
+  - s
+  - u
+  - th
+  - i
+  - n
+  - a
+  gloss_hint: for the tomb (funerary marker on grave goods)
+  citation: Bonfante & Bonfante 2002, glossary śuthina; common on bronze grave goods.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB58: s
+    AB67: u
+    AB53: th
+    AB04: i
+    AB28: n
+    AB57: a

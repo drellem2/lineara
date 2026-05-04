@@ -189,7 +189,11 @@ def _build_hypothesis_doc(
 
     citation = entry.get("citation") or "see pool source_citation"
     surface = entry["surface"]
-    name = f"auto_{pool_name}_{surface}_{_slug(inscription['id'])}_{span_start}_{span_end}"
+    # Slug the surface too: pools may carry non-ASCII characters in the
+    # surface form (e.g. Etruscan śuthina), but the hypothesis-name schema
+    # restricts ``name`` to [A-Za-z0-9_]. The surface itself is preserved
+    # verbatim under ``root.surface``; only the name slug is sanitized.
+    name = f"auto_{pool_name}_{_slug(surface)}_{_slug(inscription['id'])}_{span_start}_{span_end}"
     name = _trim_name(name)
 
     description = (

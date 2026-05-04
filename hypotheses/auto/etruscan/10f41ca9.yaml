@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thanchvil_KN_Zf_13_12_18
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thanchvil''
+  pinned to KN Zf 13 tokens [12..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thanchvil
+  phonemes:
+  - th
+  - a
+  - n
+  - ch
+  - v
+  - i
+  - l
+  gloss_hint: Thanchvil (common female praenomen, ~Tanaquil)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 18
+  sign_to_phoneme:
+    AB09: th
+    AB04: a
+    AB53: n
+    AB23: ch
+    AB08: v
+    AB57: i
+    AB81: l

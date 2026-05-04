@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_svalce_SY_Za_4_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''svalce''
+  pinned to SY Za 4 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: svalce
+  phonemes:
+  - s
+  - v
+  - a
+  - l
+  - c
+  - e
+  gloss_hint: lived
+  citation: Bonfante & Bonfante 2002, glossary svalce.
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: s
+    AB59: v
+    AB28: a
+    A301: l
+    AB54: c
+    AB57: e

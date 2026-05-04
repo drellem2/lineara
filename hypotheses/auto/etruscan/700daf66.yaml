@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_lautn_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''lautn''
+  pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: lautn
+  phonemes:
+  - l
+  - a
+  - u
+  - t
+  - n
+  gloss_hint: family, gens
+  citation: Bonfante & Bonfante 2002, glossary lautn.
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: l
+    AB45: a
+    AB80: u
+    A323: t
+    AB06: n

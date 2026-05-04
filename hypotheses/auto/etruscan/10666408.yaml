@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_selvans_KN_Zc_6_18_25
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''selvans''
+  pinned to KN Zc 6 tokens [18..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: selvans
+  phonemes:
+  - s
+  - e
+  - l
+  - v
+  - a
+  - n
+  - s
+  gloss_hint: Selvans (~Silvanus)
+  citation: Bonfante & Bonfante 2002, glossary selvans.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 25
+  sign_to_phoneme:
+    AB06: s
+    AB03: e
+    AB81: l
+    AB55: v
+    AB10: a
+    AB28: n
+    AB79: s

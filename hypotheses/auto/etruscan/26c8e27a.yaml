@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_avils_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''avils''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: avils
+  phonemes:
+  - a
+  - v
+  - i
+  - l
+  - s
+  gloss_hint: of years (genitive)
+  citation: Bonfante & Bonfante 2002, glossary avils.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: a
+    AB26: v
+    AB78: i
+    AB76: l
+    AB10: s

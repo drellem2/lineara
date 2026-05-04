@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_selva_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''selva''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: selva
+  phonemes:
+  - s
+  - e
+  - l
+  - v
+  - a
+  gloss_hint: forest, sacred grove
+  citation: Bonfante & Bonfante 2002, glossary selva.
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: s
+    AB07: e
+    AB06: l
+    AB58: v
+    AB77: a

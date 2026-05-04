@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thana_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thana''
+  pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thana
+  phonemes:
+  - th
+  - a
+  - n
+  - a
+  gloss_hint: Thana (common female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: th
+    AB58: a
+    AB47: n
+    AB04: a

@@ -44,7 +44,7 @@
     },
     "score": {
       "type": "number",
-      "description": "Primary metric output. For compression_delta_v0: baseline_bits - mapped_bits (positive = compression improvement). For local_fit_v0: position_term + bigram_term. For local_fit_v1: A*pos + B*bigram - C*length_penalty - D*rare_sign. For geographic_genre_fit_v1: alpha*region_compat + (1-alpha)*semantic_compat ∈ [0,1]. See harness/metrics.py."
+      "description": "Primary metric output. For compression_delta_v0: baseline_bits - mapped_bits (positive = compression improvement). For partial_mapping_compression_delta_v0: same delta computed by treating the candidate equation's sign_to_phoneme dict as a partial global mapping. For local_fit_v0: position_term + bigram_term. For local_fit_v1: A*pos + B*bigram - C*length_penalty - D*rare_sign. For geographic_genre_fit_v1: alpha*region_compat + (1-alpha)*semantic_compat ∈ [0,1]. See harness/metrics.py."
     },
     "score_control_z": {
       "type": "number",
@@ -80,11 +80,11 @@
     },
     "bits_per_sign_baseline": {
       "type": "number",
-      "description": "Baseline encoding bits divided by the number of tokens in the stream. Present iff metric == 'compression_delta_v0'."
+      "description": "Baseline encoding bits divided by the number of tokens in the stream. Present iff metric is compression_delta_v0 or partial_mapping_compression_delta_v0."
     },
     "bits_per_sign_mapped": {
       "type": "number",
-      "description": "Mapped encoding bits divided by the number of tokens in the stream. Present iff metric == 'compression_delta_v0'."
+      "description": "Mapped encoding bits divided by the number of tokens in the stream. Present iff metric is compression_delta_v0 or partial_mapping_compression_delta_v0."
     },
     "corpus_records_used": {
       "type": "integer",

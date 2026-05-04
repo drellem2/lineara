@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_svalce_KN_Zf_13_12_17
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''svalce''
+  pinned to KN Zf 13 tokens [12..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: svalce
+  phonemes:
+  - s
+  - v
+  - a
+  - l
+  - c
+  - e
+  gloss_hint: lived
+  citation: Bonfante & Bonfante 2002, glossary svalce.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 17
+  sign_to_phoneme:
+    AB09: s
+    AB04: v
+    AB53: a
+    AB23: l
+    AB08: c
+    AB57: e

@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_an_ARKH_5_3_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''an''
+  pinned to ARKH 5 tokens [3..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: an
+  phonemes:
+  - a
+  - n
+  gloss_hint: who, he (relative)
+  citation: Bonfante & Bonfante 2002, ch. 5 pronouns.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 3
+  - 4
+  sign_to_phoneme:
+    AB59: a
+    AB06: n

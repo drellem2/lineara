@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nethsrac_KN_Zf_13_5_11
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nethsrac''
+  pinned to KN Zf 13 tokens [5..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nethsrac
+  phonemes:
+  - n
+  - e
+  - th
+  - s
+  - r
+  - a
+  - c
+  gloss_hint: liturgical title; haruspex
+  citation: Bonfante & Bonfante 2002, glossary nethsrac.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 11
+  sign_to_phoneme:
+    A301: n
+    AB39: e
+    AB44: th
+    AB03: s
+    AB57: r
+    AB59: a
+    AB53: c

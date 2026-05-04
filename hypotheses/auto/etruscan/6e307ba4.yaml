@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_hanthe_HT_115a_9_13
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''hanthe''
+  pinned to HT 115a tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: hanthe
+  phonemes:
+  - h
+  - a
+  - n
+  - th
+  - e
+  gloss_hint: in front, before (ritual)
+  citation: Bonfante & Bonfante 2002, glossary hanthe.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB53: h
+    AB59: a
+    AB80: n
+    AB55: th
+    AB40: e

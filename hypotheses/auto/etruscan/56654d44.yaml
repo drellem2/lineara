@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_nefts_KN_Zc_7_14_18
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''nefts''
+  pinned to KN Zc 7 tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: nefts
+  phonemes:
+  - n
+  - e
+  - f
+  - t
+  - s
+  gloss_hint: nephew, grandson
+  citation: Bonfante & Bonfante 2002, glossary nefts.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB57: n
+    AB31: e
+    AB60: f
+    AB08: t
+    AB06: s

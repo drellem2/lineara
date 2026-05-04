@@ -29,6 +29,7 @@ from .metrics import (
     geographic_genre_fit_v1,
     local_fit_v0,
     local_fit_v1,
+    partial_mapping_compression_delta_v0,
 )
 
 
@@ -49,7 +50,10 @@ _DEFAULT_METRIC_FOR_SHAPE = {
 
 
 _LOCAL_FIT_METRICS = {"local_fit_v0", "local_fit_v1"}
-_CANDIDATE_EQUATION_METRICS = _LOCAL_FIT_METRICS | {"geographic_genre_fit_v1"}
+_CANDIDATE_EQUATION_METRICS = _LOCAL_FIT_METRICS | {
+    "geographic_genre_fit_v1",
+    "partial_mapping_compression_delta_v0",
+}
 
 
 def _load_result_validator() -> Draft202012Validator:
@@ -245,6 +249,16 @@ def _build_candidate_equation_row(
                 "rare_sign_correction": float(result.rare_sign_correction),
             }
         )
+    elif metric_name == "partial_mapping_compression_delta_v0":
+        result = partial_mapping_compression_delta_v0(stream, signs, phonemes)
+        base.update(
+            {
+                "score": float(result.score),
+                "metric_notes": result.metric_notes,
+                "bits_per_sign_baseline": float(result.bits_per_sign_baseline),
+                "bits_per_sign_mapped": float(result.bits_per_sign_mapped),
+            }
+        )
     elif metric_name == "geographic_genre_fit_v1":
         if pool_ctx is None:
             raise ValueError(
@@ -328,6 +342,7 @@ def score_hypothesis(
         pool_ctx: dict | None = None
         if metric_name in ("local_fit_v1", "geographic_genre_fit_v1"):
             pool_ctx = _load_pool_for(pool_path, hypothesis, repo_root)
+        # partial_mapping_compression_delta_v0 needs only the corpus stream.
         row = _build_candidate_equation_row(
             hypothesis=hypothesis,
             h_hash=h_hash,

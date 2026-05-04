@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_camthi_KN_Zf_13_8_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''camthi''
+  pinned to KN Zf 13 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: camthi
+  phonemes:
+  - c
+  - a
+  - m
+  - th
+  - i
+  gloss_hint: magistrate / title
+  citation: Bonfante & Bonfante 2002, glossary camthi.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB03: c
+    AB57: a
+    AB59: m
+    AB53: th
+    AB09: i

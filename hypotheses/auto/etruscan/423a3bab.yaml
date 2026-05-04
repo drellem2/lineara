@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_caitim_KN_Zf_13_6_11
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''caitim''
+  pinned to KN Zf 13 tokens [6..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: caitim
+  phonemes:
+  - c
+  - a
+  - i
+  - t
+  - i
+  - m
+  gloss_hint: month name (Caitim)
+  citation: Bonfante & Bonfante 2002, glossary caitim.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 11
+  sign_to_phoneme:
+    AB39: c
+    AB44: a
+    AB03: i
+    AB57: t
+    AB59: i
+    AB53: m

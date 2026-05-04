@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_fler_HT_119_11_14
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''fler''
+  pinned to HT 119 tokens [11..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: fler
+  phonemes:
+  - f
+  - l
+  - e
+  - r
+  gloss_hint: offering, sacrifice
+  citation: Bonfante & Bonfante 2002, glossary fler.
+equation:
+  inscription_id: HT 119
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    AB81: f
+    AB56: l
+    AB06: e
+    AB69: r

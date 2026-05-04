@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_selva_KN_Zc_7_17_21
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''selva''
+  pinned to KN Zc 7 tokens [17..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: selva
+  phonemes:
+  - s
+  - e
+  - l
+  - v
+  - a
+  gloss_hint: forest, sacred grove
+  citation: Bonfante & Bonfante 2002, glossary selva.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 17
+  - 21
+  sign_to_phoneme:
+    AB08: s
+    AB06: e
+    AB24: l
+    AB40: v
+    AB39: a

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_mini_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''mini''
+  pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: mini
+  phonemes:
+  - m
+  - i
+  - n
+  - i
+  gloss_hint: me (accusative)
+  citation: Bonfante & Bonfante 2002, ch. 5 pronouns.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: m
+    AB58: i
+    AB47: n
+    AB04: i

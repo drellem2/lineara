@@ -226,86 +226,58 @@ def _render_per_pool_summary(rows: list[dict], top: int) -> list[str]:
     return out
 
 
-def _render_composite(
+def _composite_table(
     rows: list[dict],
     metrics: list[str],
     weights: list[float],
     normalize: str,
     top: int | None,
-    pool_filter: str | None,
+    *,
+    title_suffix: str = "",
 ) -> str:
-    """Join rows across `metrics` by (hypothesis_path, hypothesis_hash) and
-    sort by the weighted z-normalized composite.
-
-    Each hypothesis must have one row per metric in `metrics` after
-    filtering; hypotheses missing any metric are dropped (with a count
-    reported in the rendered output).
-    """
-    if len(metrics) != len(weights):
-        raise ValueError(
-            f"need one weight per metric; got {len(metrics)} metrics and {len(weights)} weights"
-        )
-    if normalize not in ("zscore", "none"):
-        raise ValueError(f"unknown normalize mode: {normalize!r}")
-
-    if pool_filter:
-        rows = [r for r in rows if (_infer_pool(r) or "unspecified") == pool_filter]
-
+    """One composite leaderboard table (used standalone or per-pool)."""
     by_metric: dict[str, dict[tuple[str, str], dict]] = {m: {} for m in metrics}
     for row in rows:
         m = row.get("metric")
         if m not in by_metric:
             continue
         key = (row["hypothesis_path"], row["hypothesis_hash"])
-        # If multiple rows for the same (path, hash, metric), prefer the most
-        # recent (latest ran_at). Re-runs append; the rollup should reflect
-        # the freshest score under that snapshot.
         cur = by_metric[m].get(key)
         if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
             by_metric[m][key] = row
 
-    # Intersection of keys across all metrics — only hypotheses scored under
-    # every requested metric participate in the composite.
     if not metrics:
         return "_(no metrics provided)_\n"
     keys = set(by_metric[metrics[0]])
     for m in metrics[1:]:
         keys &= set(by_metric[m])
-
-    n_intersect = len(keys)
     if not keys:
         return f"_(no hypotheses scored under all of {metrics})_\n"
 
     ordered_keys = sorted(keys)
-
-    # Per-metric raw scores in the same key order.
     raw: dict[str, list[float]] = {}
     for m in metrics:
         score_key = _primary_score_key_for_metric(m)
         raw[m] = [float(by_metric[m][k].get(score_key, 0.0)) for k in ordered_keys]
-
     if normalize == "zscore":
         norm = {m: _zscore(raw[m]) for m in metrics}
     else:
         norm = raw
-
-    composites: list[float] = []
-    for i in range(len(ordered_keys)):
-        composites.append(sum(weights[j] * norm[m][i] for j, m in enumerate(metrics)))
-
-    # Sort by composite desc.
+    composites = [
+        sum(weights[j] * norm[m][i] for j, m in enumerate(metrics))
+        for i in range(len(ordered_keys))
+    ]
     order = sorted(range(len(ordered_keys)), key=lambda i: -composites[i])
     if top is not None:
         order = order[:top]
 
     out: list[str] = []
-    if pool_filter:
-        out.append(f"_(filter: pool={pool_filter!r})_\n")
-    out.append("# Composite leaderboard\n")
+    if title_suffix:
+        out.append(f"## Composite leaderboard {title_suffix}\n")
     out.append(
         f"Metrics: {', '.join(f'{m} (w={w})' for m, w in zip(metrics, weights))}.  "
         f"Normalization: {normalize}.  "
-        f"Hypotheses scored under all metrics: {n_intersect}."
+        f"Hypotheses scored under all metrics: {len(keys)}."
     )
     out.append("")
     header_cells = ["rank", "composite"]
@@ -329,6 +301,77 @@ def _render_composite(
         out.append("| " + " | ".join(cells) + " |")
     out.append("")
     return "\n".join(out) + "\n"
+
+
+def _render_composite(
+    rows: list[dict],
+    metrics: list[str],
+    weights: list[float],
+    normalize: str,
+    top: int | None,
+    pool_filter: str | None,
+    by_source_pool: bool = False,
+) -> str:
+    """Join rows across `metrics` by (hypothesis_path, hypothesis_hash) and
+    sort by the weighted z-normalized composite.
+
+    Each hypothesis must have one row per metric in `metrics` after
+    filtering; hypotheses missing any metric are dropped (with a count
+    reported in the rendered output).
+
+    With ``by_source_pool=True``, additionally emit per-pool composite
+    leaderboards side-by-side under the global one. Each pool's own
+    z-normalization is computed within that pool, so per-pool tables
+    measure within-pool ranks (not relative-to-other-pools ranks).
+    """
+    if len(metrics) != len(weights):
+        raise ValueError(
+            f"need one weight per metric; got {len(metrics)} metrics and {len(weights)} weights"
+        )
+    if normalize not in ("zscore", "none"):
+        raise ValueError(f"unknown normalize mode: {normalize!r}")
+
+    if pool_filter:
+        rows = [r for r in rows if (_infer_pool(r) or "unspecified") == pool_filter]
+
+    out_chunks: list[str] = []
+    out_chunks.append("# Composite leaderboard\n")
+    if pool_filter:
+        out_chunks.append(f"_(filter: pool={pool_filter!r})_\n")
+    out_chunks.append(
+        _composite_table(
+            rows,
+            metrics=metrics,
+            weights=weights,
+            normalize=normalize,
+            top=top,
+            title_suffix="(all pools)" if not pool_filter else f"(pool: {pool_filter})",
+        )
+    )
+
+    if by_source_pool:
+        # Side-by-side per-pool composites. Z-normalize within each pool.
+        rows_by_pool: dict[str, list[dict]] = defaultdict(list)
+        for row in rows:
+            rows_by_pool[_infer_pool(row) or "unspecified"].append(row)
+        out_chunks.append("\n---\n\n# Per-pool composite leaderboards\n\n")
+        out_chunks.append(
+            "_(each pool is z-normalized within itself; ranks are within-pool, "
+            "not directly comparable across pools)_\n\n"
+        )
+        for pool in sorted(rows_by_pool):
+            out_chunks.append(
+                _composite_table(
+                    rows_by_pool[pool],
+                    metrics=metrics,
+                    weights=weights,
+                    normalize=normalize,
+                    top=top,
+                    title_suffix=f"(pool: {pool}, n_rows={len(rows_by_pool[pool])})",
+                )
+            )
+
+    return "".join(out_chunks)
 
 
 def render(
@@ -470,6 +513,7 @@ def main(argv: list[str] | None = None) -> int:
             normalize=args.normalize,
             top=args.top,
             pool_filter=args.pool,
+            by_source_pool=(args.by == "source-pool"),
         )
     else:
         text = render(

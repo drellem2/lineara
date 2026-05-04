@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_thapna_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''thapna''
+  pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: thapna
+  phonemes:
+  - th
+  - a
+  - p
+  - n
+  - a
+  gloss_hint: cup, drinking vessel
+  citation: Bonfante & Bonfante 2002, glossary thapna.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: th
+    AB41: a
+    AB01: p
+    AB05: n
+    AB28: a

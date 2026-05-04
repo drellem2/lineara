@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_cesu_ARKH_2_14_17
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''cesu''
+  pinned to ARKH 2 tokens [14..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: cesu
+  phonemes:
+  - c
+  - e
+  - s
+  - u
+  gloss_hint: lies (in tomb)
+  citation: Bonfante & Bonfante 2002, glossary cesu; funerary verb.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB79: c
+    A301: e
+    AB09: s
+    AB45: u

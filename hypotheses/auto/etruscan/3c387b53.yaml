@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_methlum_HT_Zb_159_0_5
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''methlum''
+  pinned to HT Zb 159 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: methlum
+  phonemes:
+  - m
+  - e
+  - th
+  - l
+  - u
+  - m
+  gloss_hint: district, region
+  citation: Bonfante & Bonfante 2002, glossary methlum.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: m
+    AB06: e
+    AB55: th
+    AB41: l
+    AB57: u
+    AB09: m

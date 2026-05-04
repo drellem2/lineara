@@ -64,7 +64,7 @@ The harness scores a declarative hypothesis against the corpus and appends one r
 | Shape | Discriminator | Default metric | Other metrics | Use for |
 |---|---|---|---|---|
 | `hypothesis.v0` (mapping) | (no `schema_version`) | `compression_delta_v0` | — | corpus-global sign→phoneme mappings |
-| `candidate_equation.v1` | `schema_version: candidate_equation.v1` | `local_fit_v0` | `local_fit_v1`, `geographic_genre_fit_v1` | local "this span = this candidate root" hypotheses |
+| `candidate_equation.v1` | `schema_version: candidate_equation.v1` | `local_fit_v0` | `local_fit_v1`, `geographic_genre_fit_v1`, `partial_mapping_compression_delta_v0` | local "this span = this candidate root" hypotheses |
 
 ```bash
 # Score a hypothesis and append the result row (auto-dispatches metric on shape).
@@ -110,5 +110,26 @@ Pool YAMLs live under `pools/<name>.yaml`, validated against `pools/schemas/pool
 The `local_fit_v0` metric scores a `candidate_equation.v1` hypothesis by combining a position-fit term (how well do the equation's signs' corpus position fingerprints match the proposed phonemes' expected position profiles?) with a phoneme-class bigram log-likelihood under a hardcoded Basque-style CV phonotactic prior. The result row carries a control-z computed against 200 random phoneme-permutations of the same alignment (seed=42); see the docstring on `harness.metrics.local_fit_v0` for the formula, what it does/does-not measure, and known v0 limitations.
 
 The `local_fit_v1` metric (mg-7dd1) is a re-formulation that returns a directly-comparable absolute score (no per-hypothesis z-collapse), uses an empirical phoneme bigram model trained on the active pool's surfaces (rather than a hardcoded class-bigram prior), length-normalizes per-pair, and applies a rare-sign correction. The `geographic_genre_fit_v1` metric is a categorical compat score in [0, 1] computed from (pool entry's region/semantic_field) × (inscription's site/genre_hint). Both v1 metrics' tradeoffs and acceptance-bar outcomes are documented in `docs/findings.md` under the mg-7dd1 entry.
+
+The `partial_mapping_compression_delta_v0` metric (mg-23cc) is the corpus-side third axis. It treats a `candidate_equation.v1` hypothesis's `sign_to_phoneme` dict as a *partial global* mapping and runs `compression_delta_v0` on the whole corpus. The signed delta (positive = corpus compresses better, negative = worse) varies *within* a single surface (~47 candidates of "ur" disagree on it because they pin to different sign sets), where `local_fit_v1`'s bigram term is identical. See the v3 composite recipe under "Bulk pipeline" below and the mg-23cc findings entry.
+
+```bash
+# Triple-axis composite leaderboard combining all three v1 axes.
+python3 scripts/rollup.py --top 50 \
+    --metrics local_fit_v1,partial_mapping_compression_delta_v0,geographic_genre_fit_v1 \
+    --weights 0.4,0.3,0.3 --normalize zscore \
+    --write results/rollup.composite_v3.md
+
+# Per-pool views — same metrics, restricted by --pool.
+python3 scripts/rollup.py --pool aquitanian --top 50 \
+    --metrics local_fit_v1,partial_mapping_compression_delta_v0,geographic_genre_fit_v1 \
+    --weights 0.4,0.3,0.3 --normalize zscore \
+    --write results/rollup.aquitanian.composite_v3.md
+
+# Side-by-side per-pool tables under the global composite.
+python3 scripts/rollup.py --top 25 --by source-pool \
+    --metrics local_fit_v1,partial_mapping_compression_delta_v0,geographic_genre_fit_v1 \
+    --weights 0.4,0.3,0.3 --normalize zscore
+```
 
 The harness depends on `pyyaml` and `jsonschema`; install with `pip install pyyaml jsonschema`.

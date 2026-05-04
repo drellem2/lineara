@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_amce_GO_Wc_1a_1_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''amce''
+  pinned to GO Wc 1a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: amce
+  phonemes:
+  - a
+  - m
+  - c
+  - e
+  gloss_hint: was
+  citation: Bonfante & Bonfante 2002, glossary amce.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB31: a
+    AB58: m
+    AB80: c
+    AB28: e

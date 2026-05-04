@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_zilac_KN_Zc_6_20_25
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''zilac''
+  pinned to KN Zc 6 tokens [20..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: zilac
+  phonemes:
+  - z
+  - i
+  - l
+  - a
+  - c
+  gloss_hint: magistrate (variant)
+  citation: Bonfante & Bonfante 2002, glossary zilac.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 20
+  - 25
+  sign_to_phoneme:
+    AB81: z
+    AB55: i
+    AB10: l
+    AB28: a
+    AB79: c

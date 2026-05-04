@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_aclus_HT_Wc_3017a_0_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''aclus''
+  pinned to HT Wc 3017a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: aclus
+  phonemes:
+  - a
+  - c
+  - l
+  - u
+  - s
+  gloss_hint: month name (Aclus)
+  citation: Bonfante & Bonfante 2002, glossary aclus.
+equation:
+  inscription_id: HT Wc 3017a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB16: a
+    AB81: c
+    AB27: l
+    AB06: u
+    A306: s

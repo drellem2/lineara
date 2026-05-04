@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_catha_HT_117a_39_42
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''catha''
+  pinned to HT 117a tokens [39..42].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: catha
+  phonemes:
+  - c
+  - a
+  - th
+  - a
+  gloss_hint: Catha (sun deity)
+  citation: Bonfante & Bonfante 2002, glossary catha.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 39
+  - 42
+  sign_to_phoneme:
+    AB26: c
+    AB59: a
+    AB60: th
+    AB27: a

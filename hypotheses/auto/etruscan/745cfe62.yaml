@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_avil_HT_117a_0_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''avil''
+  pinned to HT 117a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: avil
+  phonemes:
+  - a
+  - v
+  - i
+  - l
+  gloss_hint: year
+  citation: Bonfante & Bonfante 2002, glossary avil; pervasive in epitaphs.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB80: a
+    AB77: v
+    AB53: i
+    AB04: l

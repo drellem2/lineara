@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_tiu_ARKH_5_2_4
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''tiu''
+  pinned to ARKH 5 tokens [2..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: tiu
+  phonemes:
+  - t
+  - i
+  - u
+  gloss_hint: month (variant of tivr)
+  citation: Bonfante & Bonfante 2002, glossary tiu.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 2
+  - 4
+  sign_to_phoneme:
+    AB30: t
+    AB59: i
+    AB06: u

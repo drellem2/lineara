@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_chimth_GO_Wc_1a_0_3
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''chimth''
+  pinned to GO Wc 1a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: chimth
+  phonemes:
+  - ch
+  - i
+  - m
+  - th
+  gloss_hint: at, near (preposition)
+  citation: Bonfante & Bonfante 2002, glossary chimth.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: ch
+    AB31: i
+    AB58: m
+    AB80: th

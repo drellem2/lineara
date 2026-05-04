@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_etruscan_fanu_ARKH_2_15_19
+description: 'Auto-generated candidate equation: pool=''etruscan'' entry surface=''fanu''
+  pinned to ARKH 2 tokens [15..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: etruscan
+root:
+  surface: fanu
+  phonemes:
+  - f
+  - a
+  - n
+  - u
+  gloss_hint: sanctuary, sacred place
+  citation: Bonfante & Bonfante 2002, glossary fanu.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 15
+  - 19
+  sign_to_phoneme:
+    A301: f
+    AB09: a
+    AB45: n
+    AB118: u
