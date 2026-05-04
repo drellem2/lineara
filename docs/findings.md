@@ -1155,6 +1155,221 @@ built from pool entries in document order, and the null-bigram path
 has no source of randomness. `harness/tests/test_pool_dispatch.py`
 asserts byte-identical scores across two consecutive sweep runs.
 
+## Findings from mg-f419
+
+mg-c2af pivoted to per-surface ranking and then closed with the explicit
+caveat: *“Toponym dominates because the diagnostic substrate suffixes
+recur frequently in the Linear-A corpus — but a frequent recurrence
+pattern is what we'd see for any substrate whose phoneme inventory
+happens to overlap the syllabogram set at the right structural points.”*
+mg-f419 builds the matched controls that test that caveat.
+
+Three phonotactically-matched scramble pools were generated
+(`pools/control_aquitanian.yaml`, `.control_etruscan.yaml`,
+`.control_toponym.yaml`), each sharing its substrate's phoneme inventory
+and length distribution but with surfaces drawn IID from the substrate's
+marginal phoneme frequencies (`scripts/build_control_pools.py`,
+deterministic seed = sha256(`"control_pool:<pool>"`)[:16]). The control
+pools were run end-to-end through the same generator + sweep pipeline,
+adding **30,898** rows to `results/experiments.jsonl` (128,349 total).
+Per-surface aggregation was then computed for each substrate-control pair
+(`scripts/compare_substrate_vs_control.py`,
+`results/rollup.surface_aggregated.with_controls.md`).
+
+### Headline answer — none of the three substrate pools clear their controls
+
+For each pool, Mann-Whitney U on per-surface medians (substrate vs
+control), Cliff's δ, and the rank of the highest-ranked control surface
+in the interleaved leaderboard:
+
+| comparison                              | n_sub | n_ctrl | Δmedian | U      | z      | p (2-tail) | Cliff δ | top-control rank |
+|-----------------------------------------|------:|-------:|--------:|-------:|-------:|-----------:|--------:|-----------------:|
+| aquitanian vs control_aquitanian        |   153 |    139 |   -60.0 | 9381.5 | -1.740 |     0.0818 | -0.118  |              #1  |
+| etruscan   vs control_etruscan          |   138 |    129 |   -76.0 | 6740.0 | -3.431 |     0.0006 | -0.243  |              #1  |
+| toponym    vs control_toponym           |    88 |     85 |   -50.0 | 3123.5 | -1.875 |     0.0608 | -0.165  |              #1  |
+
+All three Cliff's δ values are **negative**: the substrate pools'
+per-surface medians are *lower* than the matched-phonotactics controls.
+For Etruscan the difference is significant in the *wrong* direction
+(p = 0.0006). For Aquitanian and toponym the effect is marginal but the
+sign is the same. In every case the highest-ranked surface in the
+interleaved (substrate ⊕ control) leaderboard is a *control* surface, not
+a substrate one — i.e. there is no “separation” between the substrate
+top of leaderboard and the control top of leaderboard.
+
+The reading is blunt: at the per-surface aggregation level, the substrate
+hypothesis as currently tested is not distinguishable from a same-
+phonotactics random scramble. Or in plainer English: the per-surface
+leaderboard ranks any pool whose phoneme inventory and length distribution
+overlap the Linear-A syllabogram set — the substrate identity of the pool
+adds no signal on top of the phonotactics.
+
+### The /-ssos/ family under control
+
+The /-ssos/ substrate-suffix family was the most striking signal in
+mg-c2af's leaderboard (toponym `ssos` rank 1 at median +240, `assos`
+rank 3 at +180, `knossos` rank 2 at +184). Under the matched control:
+
+- The toponym pool's top control surface is `amrrrrh` (control_toponym,
+  median +320). It outranks every substrate toponym surface — so the
+  /-ssos/ family no longer leads even the interleaved toponym ranking.
+- The control pool also produced a `osossa` surface (median +240,
+  best +520 on KN Zc 6) that ties the substrate `ssos` exactly. `osossa`
+  is a synthetic random draw from the toponym phoneme inventory; it
+  happens to contain the same /sso/ cluster.
+- Other -sso-bearing controls in the toponym leaderboard top-15:
+  `ssoo` (#6 at +152), `aas` (#8 at +96), `ssn` (#9 at +96), `msssrap`
+  (#10 at +88), `sstsnhm` (#17 at +80). These are random
+  concatenations.
+
+**Interpretation.** The /-ssos/ family signal is real in the sense that
+it's a true compression-improving structural pattern in the Linear-A
+syllabogram stream — but the signal lives in the /sso/ phoneme cluster,
+not in the substrate-toponym claim. Any source of the same /sso/ pattern
+gets the same boost. mg-c2af's flagged-as-suspect signal turns out to be
+suspect.
+
+### Per-pool detail
+
+`results/rollup.surface_aggregated.with_controls.md` carries the full
+interleaved top-30 plus the top-20 control surfaces for each pool. Salient
+control surfaces that beat substrate at the top of each pool:
+
+- **Aquitanian:** control `ehaahee` (#1, median +264, best +728 on
+  KN Zc 6) outranks every substrate Aquitanian surface; substrate
+  `alaba` (the prior #1 Aquitanian surface from mg-c2af) drops to
+  interleaved-rank #2.
+- **Etruscan:** control `tllumtrh` (#1) and several other long control
+  strings outrank the substrate top (`nene`, `papa`); substrate's
+  per-surface median distribution is shifted left of the control's by
+  ~76 pmcd points.
+- **Toponym:** control `amrrrrh` (#1, median +320) leads. The /-ssos/
+  family and full toponym surfaces (Knossos, Phaistos, etc.) are
+  interleaved among long control surfaces.
+
+### Rank 9–17 tie diagnosis
+
+mg-c2af's per-surface leaderboard had nine surfaces (`ama`, `ere`, `etxe`,
+`iri`, `non`, `ana`, `apa`, `ala`, `sos`) from three pools all tied at
+identical median pmcd +84.00 / best pmcd +312.00, all best inscription
+ARKH 2. Diagnosis:
+
+1. **All nine surfaces share the same 50 candidate windows.** The bulk
+   generator picks the first 50 length-3 syllabogram windows from the
+   sorted-by-id corpus where the syllabograms are pairwise distinct
+   (`scripts/generate_candidates.py --cap-per-entry 50`). For
+   3-phoneme surfaces the first 50 such windows are identical regardless
+   of phoneme content, since the cap fires before the corpus is fully
+   walked.
+2. **PMCD is byte-aligned compression delta and is insensitive to single-
+   character phoneme substitutions on short candidates.** When we compare
+   the per-window pmcd score for `ama` vs `ere` vs `etxe` vs `ana` vs
+   `apa` vs `ala` etc. on the same window, the scores agree to the byte
+   on **48 of 50 windows** (the only divergences are toponym `sos`,
+   which differs by 8 bits on 2 windows because /s/ has different
+   surrounding-context bigram interactions in the DEFLATE window). zlib
+   L9's output is byte-aligned, so substituting one 1-character phoneme
+   for another rarely crosses a byte boundary on a 4,935-token corpus.
+3. **The control pools confirm this.** `control_aquitanian` produces the
+   same pattern: `hah` and `tit` (length-3 controls) tie at median +84 /
+   best +312 on ARKH 2, identical to the substrate ties.
+   `control_toponym` produces a similar ARKH 2 +312 tie cluster
+   (`ala`, `ana`, `thnth`).
+
+So the rank 9-17 tie is a **combined generator-side and metric-side
+artifact**: the generator emits structurally identical 3-phoneme
+candidates across pools, and the metric is too coarse to distinguish
+their phoneme content. This is not a metric error — pmcd is correctly
+reporting that those 50 windows have a fixed compression-delta when
+mapped under any one-character phoneme triple — but it is a *reportable*
+artifact when reading the per-surface leaderboard. Recommendation: a
+separate small ticket should add per-window deduplication at generation
+time so the result stream stops paying compute for structurally identical
+candidates that differ only in surface phoneme strings. Filed as
+follow-up; not addressed in this ticket per its scope note.
+
+### Implications — fork in the research road
+
+The mg-f419 ticket's brief asked: *if substrate clears, the next research
+move is cross-corpus position prior; if substrate does not clear, the
+candidate-equation framing or the metric needs a fundamentally different
+signal axis.*
+
+The data clearly land on the second fork. None of the three substrate
+pools clear their phonotactic-control baselines on per-surface medians.
+Concrete consequences:
+
+- The per-surface ranking has no remaining decipherment-relevant signal
+  under the current metrics. mg-c2af's top-K surfaces (toponym `ssos`/
+  `knossos`/`assos`, Aquitanian `alaba`/`atta`, Etruscan `nene`/`papa`)
+  should be downgraded — they are not “the most substrate-plausible
+  surfaces in the data,” they are “the surfaces whose phonotactics best
+  exploit DEFLATE's byte-aligned compressibility on the syllabogram
+  stream.” The substrate identity of the pool is not contributing.
+- Cross-corpus position prior (Linear-B / GORILA reference) was queued
+  as the natural next step *if* substrate cleared. Since it didn't, this
+  is no longer the highest-priority direction. It would still be useful
+  for sharpening the position-fit term in `local_fit_v1`, but it does not
+  address the diagnosis above.
+- The candidate-equation framing needs reframing. Two structural changes
+  would respond directly to the mg-f419 finding:
+  1. **Pair-up against control during scoring.** Score every candidate
+     pair (substrate, matched-control) and report the substrate-minus-
+     control delta as the headline metric, instead of substrate score
+     in isolation. The aggregator becomes substrate-vs-control by
+     construction.
+  2. **A signal axis that DOES distinguish substrate from random.**
+     The current pmcd + local_fit_v1 + gg1 axes all miss it. Candidates:
+     held-out per-pool bigram likelihood (mg-7c8c #1 — pool-LOO over
+     entries — would also matter for substrate selection), corpus-side
+     phoneme-prediction perplexity under a learned phoneme model
+     (Younger 2000 used a similar approach to argue against random
+     substrates), or a sign-prediction perplexity under the candidate
+     mapping. None are quick to build, but each is a structural pivot
+     that would address the mg-f419 finding.
+- The methodological humility from mg-c2af was warranted. The
+  per-surface leaderboard re-projection produced an interpretable ranking
+  but the ranking did not survive its own most-natural control. mg-f419
+  is the kind of negative result the mission brief said to take
+  seriously — it changes the priority of the upcoming work.
+
+### Artifacts shipped
+
+- `pools/control_aquitanian.yaml`, `pools/control_etruscan.yaml`,
+  `pools/control_toponym.yaml` — three phonotactic-control pools.
+  Same entry counts (153 / 143 / 112), same length distribution, same
+  phoneme inventory subset. Deterministic.
+- `pools/control_aquitanian.README.md`, `.control_etruscan.README.md`,
+  `.control_toponym.README.md` — per-pool README documenting the
+  matching algorithm with a side-by-side phoneme histogram and a length
+  distribution match table.
+- `scripts/build_control_pools.py` — idempotent control-pool builder.
+- `scripts/compare_substrate_vs_control.py` — Mann-Whitney U + Cliff's
+  δ on per-surface medians, plus the interleaved leaderboard renderer.
+- `harness/tests/test_control_pools.py` — phonotactic-equivalence smoke
+  test on a synthetic 8-entry pool plus a sanity check on the committed
+  control YAMLs.
+- `hypotheses/auto/control_<pool>/`, `.manifest.jsonl` — bulk-generated
+  control candidates (6,490 + 5,542 + 3,417 = 15,449 candidates).
+- `results/experiments.jsonl` — 30,898 new rows (15,449 candidates × 2
+  metrics: `partial_mapping_compression_delta_v0`, `geographic_genre_fit_v1`).
+  Stream size 97,451 → **128,349** rows.
+- `results/rollup.surface_aggregated.with_controls.md` — interleaved
+  substrate-vs-control leaderboard with stats per pool.
+- `results/rollup.surface_aggregated.control_aquitanian.md`,
+  `.control_etruscan.md`, `.control_toponym.md` — per-control-pool
+  per-surface leaderboards.
+
+### Determinism
+
+Control pool generation is fully deterministic — the seed is derived
+from a hash of the substrate pool name (`sha256("control_pool:<pool>")
+[:16]`) and `random.choices` is the only RNG. Re-running
+`scripts/build_control_pools.py` produces byte-identical YAMLs;
+asserted by `harness/tests/test_control_pools.py::test_determinism_byte_identical`.
+Sweep results inherit the existing `--force-rescore` resume protocol
+from mg-c2af.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;
@@ -1211,20 +1426,38 @@ asserts byte-identical scores across two consecutive sweep runs.
 
 *Preliminary — see "Known metric limitations" above for caveats. A high z
 on `local_fit_v0` is necessary but probably not sufficient evidence; the
-geographic-vs-genre filter and metric refinement are scoped follow-ups.*
+geographic-vs-genre filter and metric refinement are scoped follow-ups.
+**Per mg-f419, the per-surface ranking does not survive a phonotactic-
+control comparison; the leaderboard entries below should be downgraded
+in confidence accordingly.***
 
 - **Linear-B carryover anchors** (`hypotheses/curated/anchor_*.yaml`): all
   four scored z ≥ +1.140 on `local_fit_v0` (mg-fb23). `anchor_taina_HT39`
   reached z = +1.964. These are the strongest in-corpus reading anchors
-  drawn from a known-related script.
+  drawn from a known-related script. (Anchors come from a known-related
+  script; mg-f419's negative result on substrate pools does not directly
+  affect anchor confidence, since the anchor surfaces are derived from
+  a known mapping rather than a substrate hypothesis.)
 - **Bulk Aquitanian leaders** (mg-f832, top-10 by `score_control_z`): the
   surfaces `sukalde` (Trask 1997, "kitchen / hearth"), `hil` ("dead, kill"),
   and `haran` lead at z > +2.0. `sukalde` placements concentrate on
   Knossos Zc/Zf inscriptions; `hil` on ARKH 4b/5; `haran` on HT Wc 3010.
-  Full leaderboard in `results/rollup.aquitanian.md`.
+  Full leaderboard in `results/rollup.aquitanian.md`. (mg-f419 controls
+  were not run on `local_fit_v0`, only on pmcd + gg1; the v0 leaderboard
+  has not been directly tested against phonotactic controls but the
+  same artifact pattern is plausible at v0.)
 
 ## What we have NOT yet tried
 
+- **A signal axis that distinguishes substrate from same-phonotactics
+  random.** mg-f419's headline finding: pmcd, local_fit_v1, and gg1 all
+  miss this distinction. Until at least one metric clears the matched-
+  control baseline, the ranking outputs are not load-bearing. Priority-
+  ordered candidates: substrate-vs-control delta as the primary score
+  (paired difference per surface), per-pool LOO held-out bigram
+  likelihood (mg-7c8c #1, also a substrate-discriminator), corpus-side
+  sign-prediction perplexity under the candidate mapping, learned
+  phoneme-model perplexity (Younger 2000 style).
 - **`local_fit_v2`.** A v2 of the local-fit metric is needed; v1
   (mg-7dd1) shipped as a null finding on three of four discrimination
   bars and mg-7c8c confirmed at n=20 that the within-surface
@@ -1233,7 +1466,18 @@ geographic-vs-genre filter and metric refinement are scoped follow-ups.*
   held-out empirical bigram, cross-corpus position prior,
   pool-specific bigram models in the sweep runner. The corpus-
   derived phoneme model (drop the substrate-pool prior altogether)
-  is the "harder direction" alternative.
+  is the "harder direction" alternative. mg-f419 makes the
+  *control-paired* version of any of these the natural shape:
+  score (substrate – matched-control) rather than substrate alone.
+- **Cross-corpus position prior (Linear-B / GORILA reference).** Was
+  queued as the natural follow-up *if* substrate cleared mg-f419's
+  control test. Since it didn't, this is no longer the highest-priority
+  direction — it sharpens local_fit_v1's position term but does not
+  address the substrate-vs-control collapse mg-f419 surfaced.
+- **Per-window / per-(sign-set, inscription) deduplication at generation
+  time.** mg-f419 surfaced the rank 9-17 tie as a generator-side
+  artifact (50-window cap fires identically across all 3-phoneme
+  surfaces of any pool). Filed as a small follow-up ticket.
 - **Younger / GORILA cross-validation pull.** Second corpus for
   cross-checking high-z candidates.
 - **Additional metrics:** mutual information of (sign, position-in-word)
