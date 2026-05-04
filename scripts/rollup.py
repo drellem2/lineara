@@ -9,8 +9,17 @@ allowed because the rollup is a deterministic function of the result
 stream, not a hand-edited artifact.
 
 Per-metric ordering:
-  * compression_delta_v0 — sorted by ``score`` desc.
-  * local_fit_v0         — sorted by ``score_control_z`` desc.
+  * compression_delta_v0    — sorted by ``score`` desc.
+  * local_fit_v0            — sorted by ``score_control_z`` desc.
+  * local_fit_v1            — sorted by ``score`` desc.
+  * geographic_genre_fit_v1 — sorted by ``score`` desc.
+
+**Composite leaderboard.** With ``--metrics m1,m2[,...]`` and matching
+``--weights w1,w2[,...]`` the rollup joins rows by (hypothesis_path,
+hypothesis_hash) across the listed metrics, z-normalizes each metric's
+column independently within the joined set, and sorts by the
+weighted sum of z-normalized scores. The composite ranking is rendered
+with all participating score columns visible.
 
 Examples:
   python3 scripts/rollup.py
@@ -19,6 +28,9 @@ Examples:
   python3 scripts/rollup.py --metric local_fit_v0 --by source-pool
   python3 scripts/rollup.py --metric local_fit_v0 --pool aquitanian --top 50 \
       --write results/rollup.aquitanian.md
+  python3 scripts/rollup.py --pool aquitanian --top 50 \
+      --metrics local_fit_v1,geographic_genre_fit_v1 --weights 0.7,0.3 \
+      --normalize zscore --write results/rollup.aquitanian.composite.md
 """
 
 from __future__ import annotations
@@ -53,6 +65,25 @@ def _sort_key(row: dict) -> float:
     if row["metric"] == "local_fit_v0":
         return float(row.get("score_control_z", 0.0))
     return float(row["score"])
+
+
+def _primary_score_key_for_metric(metric: str) -> str:
+    """Field name carrying the higher-is-better score for a metric."""
+    if metric == "local_fit_v0":
+        return "score_control_z"
+    return "score"
+
+
+def _zscore(values: list[float]) -> list[float]:
+    """Standardize to zero mean, unit std. Falls back to all-zeros if std == 0."""
+    if not values:
+        return []
+    mean = sum(values) / len(values)
+    var = sum((v - mean) ** 2 for v in values) / len(values)
+    sd = math.sqrt(var)
+    if sd < 1e-12:
+        return [0.0] * len(values)
+    return [(v - mean) / sd for v in values]
 
 
 def _infer_pool(row: dict) -> str | None:
@@ -95,6 +126,46 @@ def _render_local_fit(group: list[dict]) -> list[str]:
                 rank=i,
                 z=float(r.get("score_control_z", 0.0)),
                 score=r["score"],
+                hyp=r["hypothesis_path"],
+                rid=r["run_id"][:8],
+                at=r["ran_at"],
+            )
+        )
+    return out
+
+
+def _render_local_fit_v1(group: list[dict]) -> list[str]:
+    out = [
+        "| rank | score | pos | bigram | length_pen | rare_sign | hypothesis | run_id | ran_at |"
+    ]
+    out.append("|---:|---:|---:|---:|---:|---:|---|---|---|")
+    for i, r in enumerate(group, 1):
+        out.append(
+            "| {rank} | {score:+.4f} | {pos:+.4f} | {bi:+.4f} | {lp:.4f} | {rs:.3f} | `{hyp}` | `{rid}` | {at} |".format(
+                rank=i,
+                score=r["score"],
+                pos=float(r.get("position_term", 0.0)),
+                bi=float(r.get("bigram_term", 0.0)),
+                lp=float(r.get("length_penalty", 0.0)),
+                rs=float(r.get("rare_sign_correction", 0.0)),
+                hyp=r["hypothesis_path"],
+                rid=r["run_id"][:8],
+                at=r["ran_at"],
+            )
+        )
+    return out
+
+
+def _render_geographic_genre(group: list[dict]) -> list[str]:
+    out = ["| rank | score | region_compat | semantic_compat | hypothesis | run_id | ran_at |"]
+    out.append("|---:|---:|---:|---:|---|---|---|")
+    for i, r in enumerate(group, 1):
+        out.append(
+            "| {rank} | {score:.4f} | {rc:.4f} | {sc:.4f} | `{hyp}` | `{rid}` | {at} |".format(
+                rank=i,
+                score=r["score"],
+                rc=float(r.get("region_compat", 0.0)),
+                sc=float(r.get("semantic_compat", 0.0)),
                 hyp=r["hypothesis_path"],
                 rid=r["run_id"][:8],
                 at=r["ran_at"],
@@ -155,6 +226,111 @@ def _render_per_pool_summary(rows: list[dict], top: int) -> list[str]:
     return out
 
 
+def _render_composite(
+    rows: list[dict],
+    metrics: list[str],
+    weights: list[float],
+    normalize: str,
+    top: int | None,
+    pool_filter: str | None,
+) -> str:
+    """Join rows across `metrics` by (hypothesis_path, hypothesis_hash) and
+    sort by the weighted z-normalized composite.
+
+    Each hypothesis must have one row per metric in `metrics` after
+    filtering; hypotheses missing any metric are dropped (with a count
+    reported in the rendered output).
+    """
+    if len(metrics) != len(weights):
+        raise ValueError(
+            f"need one weight per metric; got {len(metrics)} metrics and {len(weights)} weights"
+        )
+    if normalize not in ("zscore", "none"):
+        raise ValueError(f"unknown normalize mode: {normalize!r}")
+
+    if pool_filter:
+        rows = [r for r in rows if (_infer_pool(r) or "unspecified") == pool_filter]
+
+    by_metric: dict[str, dict[tuple[str, str], dict]] = {m: {} for m in metrics}
+    for row in rows:
+        m = row.get("metric")
+        if m not in by_metric:
+            continue
+        key = (row["hypothesis_path"], row["hypothesis_hash"])
+        # If multiple rows for the same (path, hash, metric), prefer the most
+        # recent (latest ran_at). Re-runs append; the rollup should reflect
+        # the freshest score under that snapshot.
+        cur = by_metric[m].get(key)
+        if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
+            by_metric[m][key] = row
+
+    # Intersection of keys across all metrics — only hypotheses scored under
+    # every requested metric participate in the composite.
+    if not metrics:
+        return "_(no metrics provided)_\n"
+    keys = set(by_metric[metrics[0]])
+    for m in metrics[1:]:
+        keys &= set(by_metric[m])
+
+    n_intersect = len(keys)
+    if not keys:
+        return f"_(no hypotheses scored under all of {metrics})_\n"
+
+    ordered_keys = sorted(keys)
+
+    # Per-metric raw scores in the same key order.
+    raw: dict[str, list[float]] = {}
+    for m in metrics:
+        score_key = _primary_score_key_for_metric(m)
+        raw[m] = [float(by_metric[m][k].get(score_key, 0.0)) for k in ordered_keys]
+
+    if normalize == "zscore":
+        norm = {m: _zscore(raw[m]) for m in metrics}
+    else:
+        norm = raw
+
+    composites: list[float] = []
+    for i in range(len(ordered_keys)):
+        composites.append(sum(weights[j] * norm[m][i] for j, m in enumerate(metrics)))
+
+    # Sort by composite desc.
+    order = sorted(range(len(ordered_keys)), key=lambda i: -composites[i])
+    if top is not None:
+        order = order[:top]
+
+    out: list[str] = []
+    if pool_filter:
+        out.append(f"_(filter: pool={pool_filter!r})_\n")
+    out.append("# Composite leaderboard\n")
+    out.append(
+        f"Metrics: {', '.join(f'{m} (w={w})' for m, w in zip(metrics, weights))}.  "
+        f"Normalization: {normalize}.  "
+        f"Hypotheses scored under all metrics: {n_intersect}."
+    )
+    out.append("")
+    header_cells = ["rank", "composite"]
+    for m in metrics:
+        if normalize == "zscore":
+            header_cells.append(f"{m} (z)")
+        header_cells.append(m)
+    header_cells += ["hypothesis", "ran_at_v1"]
+    out.append("| " + " | ".join(header_cells) + " |")
+    out.append("|---:|---:|" + "---:|" * (len(header_cells) - 3) + "---|---|")
+    primary_metric = metrics[0]
+    for rank, i in enumerate(order, 1):
+        k = ordered_keys[i]
+        cells = [str(rank), f"{composites[i]:+.4f}"]
+        for j, m in enumerate(metrics):
+            if normalize == "zscore":
+                cells.append(f"{norm[m][i]:+.4f}")
+            cells.append(f"{raw[m][i]:+.4f}")
+        cells.append(f"`{k[0]}`")
+        cells.append(by_metric[primary_metric][k].get("ran_at", ""))
+        out.append("| " + " | ".join(cells) + " |")
+    out.append("")
+    return "\n".join(out) + "\n"
+
+
 def render(
     rows: list[dict],
     metric_filter: str | None,
@@ -204,6 +380,10 @@ def render(
             ordered = ordered[:top]
         if metric == "local_fit_v0":
             out.extend(_render_local_fit(ordered))
+        elif metric == "local_fit_v1":
+            out.extend(_render_local_fit_v1(ordered))
+        elif metric == "geographic_genre_fit_v1":
+            out.extend(_render_geographic_genre(ordered))
         else:
             out.extend(_render_compression_delta(ordered))
         out.append("")
@@ -248,6 +428,25 @@ def main(argv: list[str] | None = None) -> int:
         "rows by inferred source pool.",
     )
     parser.add_argument(
+        "--metrics",
+        default=None,
+        help="Comma-separated metric list for the COMPOSITE leaderboard "
+        "(e.g. 'local_fit_v1,geographic_genre_fit_v1'). Mutually exclusive "
+        "with --metric.",
+    )
+    parser.add_argument(
+        "--weights",
+        default=None,
+        help="Comma-separated weights matching --metrics (e.g. '0.7,0.3'). "
+        "Required with --metrics.",
+    )
+    parser.add_argument(
+        "--normalize",
+        choices=["zscore", "none"],
+        default="zscore",
+        help="Per-metric normalization for the composite ranking. Default: zscore.",
+    )
+    parser.add_argument(
         "--write",
         type=Path,
         default=None,
@@ -257,13 +456,29 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     rows = load_rows(args.results)
-    text = render(
-        rows,
-        metric_filter=args.metric,
-        pool_filter=args.pool,
-        top=args.top,
-        by_source_pool=(args.by == "source-pool"),
-    )
+    if args.metrics:
+        if args.metric:
+            parser.error("--metric and --metrics are mutually exclusive")
+        if not args.weights:
+            parser.error("--weights is required with --metrics")
+        metrics = [m.strip() for m in args.metrics.split(",") if m.strip()]
+        weights = [float(w.strip()) for w in args.weights.split(",") if w.strip()]
+        text = _render_composite(
+            rows,
+            metrics=metrics,
+            weights=weights,
+            normalize=args.normalize,
+            top=args.top,
+            pool_filter=args.pool,
+        )
+    else:
+        text = render(
+            rows,
+            metric_filter=args.metric,
+            pool_filter=args.pool,
+            top=args.top,
+            by_source_pool=(args.by == "source-pool"),
+        )
     if args.write:
         args.write.parent.mkdir(parents=True, exist_ok=True)
         args.write.write_text(text, encoding="utf-8")

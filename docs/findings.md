@@ -79,6 +79,20 @@ Linear A decipherment attempts.
     under a hardcoded Basque-style CV phonotactic prior. Each row records
     `score_control_z` standardized against 200 random
     phoneme-permutations (seed=42, frozen for v0).
+  - `local_fit_v1` (mg-7dd1) — absolute-units variant. Mean per-pair
+    `log(BC + floor)` position term + mean per-bigram log-prob under an
+    *empirical* bigram model trained on the active pool's surfaces +
+    a `1/n` length penalty + a rare-sign correction (signs with corpus
+    count < 5). No per-hypothesis z, so cross-hypothesis ranks are
+    directly comparable. Diagnostic terms `position_term`, `bigram_term`,
+    `length_penalty`, `rare_sign_correction` persisted on each row.
+  - `geographic_genre_fit_v1` (mg-7dd1) — categorical compat score in
+    [0, 1] from `α * region_compat + (1 - α) * semantic_compat`,
+    α=0.4 default. Region compat reads (pool-region × inscription-site)
+    from a small sourced lookup table; semantic compat reads
+    (pool-semantic_field × inscription-genre_hint). Missing or unmapped
+    pairs fall back to neutral 0.5. Diagnostic terms `region_compat`
+    and `semantic_compat` persisted on each row.
 - Result stream: append-only `results/experiments.jsonl`, validated against
   `harness/schemas/result.v0.schema.json`. Every row carries
   `hypothesis_hash`, `harness_version`, `corpus_snapshot`, and `metric` so
@@ -89,10 +103,13 @@ Linear A decipherment attempts.
   are never edited or deleted.
 - Bulk pipeline: `scripts/generate_candidates.py` turns a substrate-root
   pool YAML into thousands of candidate-equation hypotheses;
-  `scripts/run_sweep.py` is resumable (skips hypotheses already scored
-  under the current corpus snapshot) and prints a histogram + summary at
+  `scripts/run_sweep.py --metrics m1,m2 [--pool ...]` is resumable
+  (resume key is `(hash, snapshot, metric)`, so each metric can be
+  re-run independently) and prints a per-metric histogram + summary at
   the end; `scripts/rollup.py --pool <name>` renders a per-pool
-  leaderboard.
+  leaderboard, or with `--metrics m1,m2 --weights w1,w2 --normalize zscore`
+  produces a composite leaderboard joining rows across metrics by
+  hypothesis.
 
 ## Findings by ticket (chronological, append-only)
 
@@ -213,8 +230,172 @@ Linear A decipherment attempts.
 - 7,190 + 20 (mg-fb23) + 4 (mg-d5ef) = **7,214 result rows total** in
   `results/experiments.jsonl` after this sweep.
 
+### Findings from mg-7dd1 (harness v2: local_fit_v1 + geographic_genre_fit_v1, 2026-05-04)
+
+This ticket replaced the per-hypothesis-z-normalized `local_fit_v0` with
+an absolute-units `local_fit_v1` metric, added a categorical
+`geographic_genre_fit_v1` cheap-test multiplier, and produced a
+composite leaderboard. **The headline finding is a null:** v1 missed
+three of the four discrimination acceptance bars set by the ticket.
+Per the brief's "ship-the-null-rather-than-tweak-the-constants" rule,
+the metric is shipped as written; v2 directions are listed below.
+
+**v0 → v1 distribution shift (7,190 Aquitanian candidates).**
+
+| stat                        | v0 (`score_control_z`) | v1 (`score`)        |
+|-----------------------------|-----------------------:|--------------------:|
+| mean                        | +1.1534                | -2.6633             |
+| median                      | +1.3078                | -2.6632             |
+| std                         | 0.6694                 | 0.2995              |
+| range                       | [-1.97, +2.12] (4.09)  | [-3.78, -1.86] (1.92) |
+| top-1% mean                 | +1.9661                | -1.9586             |
+| top-1% mean − median        | +0.658                 | +0.705              |
+| max 0.5-wide window count   | 3,298 / 7,190 (45.9%)  | 4,224 / 7,190 (58.7%) |
+| max bucket (10-bucket histogram) | n/a               | 1,695 / 7,190 (23.6%) |
+| n at top of mass            | 5,348 (74.4%) z>+1     | 57 (0.8%) score>-2.05 |
+
+The v1 distribution is **narrower in absolute units than v0's z**, so the
+"top-1% beats the median by ≥ 2.0 v1-units" bar can't be hit (the entire
+range is only 1.92 v1-units wide). The "≤ 25% in any 0.5-wide band" bar
+is also missed; v1 is more concentrated in absolute units because
+length-normalization removed the longest-equation tail and rare-sign
+correction trimmed the bottom. This is a structural property of the
+formulation, not tweakable noise.
+
+**Length artifact reversal.** mg-f832's v0 top-50 was dominated by
+3-sign equations (34/50 = 68%) — the predicted "longest sums of
+log-probs are most negative" artifact. v1 top-50 is dominated by
+5-sign equations (49/50 = 98%); the length penalty did its job, but
+the swap from "shortest dominates" to "exactly 5 dominates" suggests
+the per-unit-length tradeoff between the position term and the length
+penalty is too sharp at C=1.0. A future v2 might explore length-aware
+**per-pair** position discounting rather than a flat 1/n term.
+
+**Discrimination acceptance bars (4 total, 1 PASS / 3 FAIL).**
+
+| Bar | Description | Required | Observed | Status |
+|---|---|---:|---:|:---:|
+| 1 | Linear-B-anchor median > random-scramble median (n=4 each) | strictly > | -4.5433 vs -4.6693, diff +0.13 | ✅ PASS |
+| 2a | top-1% mean − median ≥ 2.0 v1-units (bulk n=7,190) | ≥ 2.0 | +0.7046 | ❌ FAIL |
+| 2b | ≤ 25% of bulk candidates in any 0.5-wide score band | ≤ 25% | 58.7% | ❌ FAIL |
+| 3 | plausible-Aquitanian median − wrong-Aquitanian median (n=4 each) | ≥ 1.0 v1-unit | +0.1408 | ❌ FAIL |
+
+The v1 metric IS more discriminative than v0 in spirit (cross-hypothesis
+absolute scores instead of per-hypothesis z-collapse, empirical bigram
+prior trained on the active pool's own surfaces, length-normalized,
+rare-sign-corrected), but **does not separate plausible from
+deliberately-wrong Aquitanian readings on the n=4 hand-curated
+buckets** — the same gap mg-fb23 found in v0. v1 *also* failed to
+spread the bulk distribution wide enough to satisfy bars 2a and 2b. The
+"absolute-units score" design target was met; the "discriminative
+absolute-units score" target was not.
+
+**Why the bigram_term contributes near-zero discrimination.** The
+empirical bigram model is trained on the same pool surfaces that the
+hypotheses are drawn from, so within one pool entry's ~47 bulk
+candidates the bigram_term is identical (same phoneme sequence). The
+bigram term distinguishes between *pool entries* (different surfaces),
+not between candidates of the same surface. The position term carries
+all the within-surface signal, and the position term's range at the
+mean-per-pair scale is ~[-0.5, 0]. v2 should consider a held-out
+phoneme model (leave-one-out over pool entries) or a corpus-side
+phoneme prior built from a non-substrate source.
+
+**`geographic_genre_fit_v1` distribution (7,190 bulk candidates).**
+
+mean=+0.4518, median=+0.4000, std=0.108, range=[0.250, 0.700].
+The score is a structural categorical compat in [0, 1]; the histogram
+is multi-modal (delta-spikes at 0.25, 0.40, 0.55, 0.70) reflecting the
+small lookup tables. Aquitanian/basque_substrate × any Linear-A site is
+fixed at 0.25 (region_compat); semantic_field × accountancy carries the
+discriminating signal at 0.25 / 0.50 / 0.75 / 1.00. With α=0.4 default,
+the four observed score points are 0.4*0.25 + 0.6*{0.25, 0.50, 0.75,
+1.0} = {0.25, 0.40, 0.55, 0.70}. As designed, this is a coarse
+multiplier, not a fine-grained metric.
+
+**Composite leaderboard top-10 diversity** (0.7 *
+`local_fit_v1`(z) + 0.3 * `geographic_genre_fit_v1`(z)):
+
+- 10 / 10 distinct (root, inscription) pairings
+- 4 distinct sites: Haghia Triada × 5, Knossos × 2, Arkhanes × 2, Gournia × 1
+- 2 semantic fields: number × 4, nature × 6
+- 3 genre hints: accountancy × 7, unknown × 2, votive_or_inscription × 1
+
+Surface forms in the top-10: `harri` (rock; nature) and `hamar`
+(ten; number) — the latter benefits heavily from the
+semantic_field=number × genre_hint=accountancy lookup table entry
+(1.0). The composite IS structurally orthogonal to the pure-`local_fit_v1`
+top-50 (which is 49/50 5-sign equations all sharing surface
+`harri`-or-similar): the geographic compat lifts shorter
+number-field roots back into contention.
+
+Full top-50 in `results/rollup.aquitanian.composite.md`.
+
+**Null-finding section: what v1 did not improve.**
+
+- The plausible-vs-deliberately-wrong-Aquitanian gap (mg-fb23's open
+  question). v0 had identical medians; v1 has +0.14 v1-units of
+  separation, far short of the +1.0 target. The metric still cannot
+  distinguish "real-substrate-root in plausible context" from "the same
+  root in deliberately-wrong context" on n=4 curated buckets.
+- The bulk distribution flatness target. v1's range is bounded by
+  the position-term's mean-per-pair scale, which is small. A wider
+  spread would require either a more discriminative per-pair signal
+  (e.g., per-phoneme position profile fitted to a held-out corpus
+  rather than the same one we score against) or a complementary signal
+  altogether.
+- The "absolute scores cleanly compare across pool entries" target —
+  partially met. Cross-entry comparisons are now meaningful, but the
+  cross-entry variance is dominated by length effects (top-50 is 98%
+  5-sign equations).
+
+**Proposed v2 directions.**
+
+- *Held-out empirical bigram*: leave-one-out over pool entries when
+  scoring, so the bigram term is not zero-information for the surface
+  being tested.
+- *Per-pair length normalization*: replace flat 1/n length penalty
+  with a per-pair correction that doesn't favor a single sweet-spot
+  length. Worth exploring whether `score / sqrt(n)` produces a flatter
+  length distribution at the top of the leaderboard.
+- *Cross-corpus position prior*: build the expected-position
+  distribution for each phoneme from an independent corpus
+  (Linear-B / GORILA Younger), so the position-fit signal stops being
+  partly circular (currently both fingerprint and prior come from the
+  same Linear-A corpus).
+- *Per-inscription scoring weight*: many top-10 entries land on
+  Haghia Triada simply because HT dominates the corpus (372 / 761).
+  An "inscription difficulty"-aware scoring would let small-corpus
+  sites contribute proportionally.
+- *Multi-pool composite*: once Etruscan / Pre-Greek pools land, the
+  geographic_genre_fit_v1 metric will become more discriminative
+  (region_compat=1.0 for pre_greek × Crete vs 0.25 for aquitania ×
+  Crete is a real signal that's currently not exercised).
+
+**Operational artifacts.**
+
+- 7,190 × 2 + 20 × 2 = **14,420 new result rows** appended to
+  `results/experiments.jsonl` under the v1 metrics. Total stream:
+  21,634 rows.
+- `results/rollup.aquitanian.composite.md` committed with the top-50
+  composite leaderboard (z-normalized 0.7/0.3 weighted).
+- `harness/tests/test_local_fit_v1.py` and
+  `harness/tests/test_geographic_genre_fit.py` exercise both metrics
+  on toy corpora; existing 16 tests still pass.
+- `HARNESS_VERSION` bumped from `v0` to `v1`. Sweep-runner resume key
+  bumped from `(hash, snapshot)` to `(hash, snapshot, metric)` so the
+  same hypothesis can hold one row per metric.
+- `--metrics m1,m2 --weights w1,w2 --normalize zscore` flags added to
+  `scripts/rollup.py` for the composite leaderboard.
+
 ## Known metric limitations
 
+- **`local_fit_v1` did not solve the plausible-vs-wrong discrimination
+  problem and produced a narrower bulk distribution than the
+  acceptance bars require.** See mg-7dd1 for the v0 → v1 diagnostic and
+  proposed v2 directions. The v0 limitations below remain on record
+  because v0 rows are still in the result stream and v0's behavior is
+  the baseline against which v2 will be measured.
 - **`local_fit_v0` plausible-vs-wrong discrimination is the most important
   open methodological question.** The n=4 mg-fb23 buckets showed the metric
   separating real readings from random nonsense (anchor median +1.14 vs
@@ -263,13 +444,11 @@ geographic-vs-genre filter and metric refinement are scoped follow-ups.*
 
 ## What we have NOT yet tried
 
-- **Geographic-vs-genre second-stage filter.** Re-rank the leaderboard by
-  whether the candidate root's `region` and `semantic_field` match the
-  inscription's findspot and `genre_hint`. The cheap-test multiplier from
-  the mission brief. Queued for after mg-f832; not yet scoped.
-- **`local_fit_v0` metric refinement.** Address the plausible-vs-wrong
-  indistinguishability finding using the bulk distribution as evidence
-  (n=4 buckets in mg-fb23 were too small to drive design). Queued.
+- **`local_fit_v2`.** A v2 of the local-fit metric is needed; v1
+  (mg-7dd1) shipped as a null finding on three of four discrimination
+  bars. Proposed directions in mg-7dd1's findings entry: held-out
+  empirical bigram, per-pair length normalization, cross-corpus
+  position prior, multi-pool composite. Queued.
 - **Etruscan pool ingest.** Same schema as Aquitanian, mechanical follow-on.
 - **Pre-Greek toponym pool ingest.** Substrate-style data with natural fit
   to the geographic-vs-genre filter.

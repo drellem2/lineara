@@ -44,7 +44,7 @@
     },
     "score": {
       "type": "number",
-      "description": "Primary metric output. For compression_delta_v0: baseline_bits - mapped_bits (positive = compression improvement). For local_fit_v0: position_term + bigram_term, see harness/metrics.py."
+      "description": "Primary metric output. For compression_delta_v0: baseline_bits - mapped_bits (positive = compression improvement). For local_fit_v0: position_term + bigram_term. For local_fit_v1: A*pos + B*bigram - C*length_penalty - D*rare_sign. For geographic_genre_fit_v1: alpha*region_compat + (1-alpha)*semantic_compat ∈ [0,1]. See harness/metrics.py."
     },
     "score_control_z": {
       "type": "number",
@@ -53,6 +53,30 @@
     "metric_notes": {
       "type": "string",
       "description": "Free-form notes from the metric (e.g. control parameters, sub-term breakdown). Present iff the metric emits them."
+    },
+    "position_term": {
+      "type": "number",
+      "description": "Mean log(BC + floor) over (sign, phoneme) pairs. Present iff metric == 'local_fit_v1'."
+    },
+    "bigram_term": {
+      "type": "number",
+      "description": "Mean log P(p_i | p_{i-1}) over the equation's bigrams under the empirical pool LM. Present iff metric == 'local_fit_v1'."
+    },
+    "length_penalty": {
+      "type": "number",
+      "description": "1 / n_phonemes. Present iff metric == 'local_fit_v1'."
+    },
+    "rare_sign_correction": {
+      "type": "number",
+      "description": "Fraction of the equation's signs that occur fewer than the rare-sign threshold times in the corpus stream. Present iff metric == 'local_fit_v1'."
+    },
+    "region_compat": {
+      "type": "number",
+      "description": "Region × site categorical compat in [0,1]. Present iff metric == 'geographic_genre_fit_v1'."
+    },
+    "semantic_compat": {
+      "type": "number",
+      "description": "Semantic-field × genre_hint categorical compat in [0,1]. Present iff metric == 'geographic_genre_fit_v1'."
     },
     "bits_per_sign_baseline": {
       "type": "number",

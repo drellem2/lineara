@@ -400,7 +400,517 @@ def local_fit_v0(
     )
 
 
+# ---------------------------------------------------------------------------
+# local_fit_v1
+# ---------------------------------------------------------------------------
+#
+# v1 design (mg-7dd1) addresses the discrimination problem documented in
+# mg-f832: under v0 the per-hypothesis 200-permutation z-normalization
+# collapsed cross-hypothesis variance, and 74.4% of bulk Aquitanian
+# candidates landed at z > 1. v1 drops the per-hypothesis z entirely and
+# returns a directly-comparable absolute score, builds the bigram prior
+# empirically from the active pool's surfaces (so it adapts to whichever
+# substrate is being tested), normalizes by length so 2-sign equations do
+# not dominate, and penalizes equations whose signs are very rare in the
+# corpus.
+#
+# Formula (constants documented in source — can be tuned without breaking
+# the schema):
+#
+#   local_fit_v1(eq) =
+#       + A * mean_position_compat(eq)
+#       + B * mean_empirical_bigram_logprob(eq, pool)
+#       - C * length_penalty(eq)
+#       - D * rare_sign_correction(eq, corpus)
+#
+# where each term is in roughly comparable per-sign units:
+#   * mean_position_compat  ∈ [-7, 0]  (0 = perfect position fit at every sign)
+#   * mean_empirical_bigram ∈ [-7, 0]  (0 = bigrams are exactly as common as max-prob bigram)
+#   * length_penalty(eq)    = 1/n      so 2-sign eqs lose 0.5 * C, 4-sign eqs lose 0.25 * C
+#   * rare_sign_correction  = (# signs with corpus count < RARE_SIGN_THRESHOLD) / n
+#
+# All four terms are byte-deterministic given (corpus stream, pool, signs,
+# phonemes). No randomness, no permutation control — the design target is
+# *cross-hypothesis* discrimination, so a per-hypothesis control is not the
+# right tool.
+
+# Constants frozen for v1. Bumping any of them is a metric_version bump.
+_LF1_A_POSITION = 1.0
+_LF1_B_BIGRAM = 1.0
+_LF1_C_LENGTH_PENALTY = 1.0
+_LF1_D_RARE_SIGN = 0.5
+_LF1_RARE_SIGN_THRESHOLD = 5
+_LF1_BIGRAM_ALPHA = 1.0  # Laplace smoothing constant for the empirical bigram LM.
+_LF1_START = "<S>"  # word-start sentinel for the empirical bigram LM
+_LF1_END = "<E>"    # word-end sentinel
+
+
+@dataclass(frozen=True)
+class EmpiricalBigramModel:
+    """Empirical phoneme-pair distribution learned from a pool's surfaces.
+
+    Built once from a list-of-phoneme-sequences (the pool entries' phoneme
+    lists). Add-`alpha` Laplace smoothing over the closed-vocabulary the
+    sequences span (plus the start/end sentinels). The smoothing keeps log
+    P bounded for unseen bigrams without the metric having to special-case
+    them. ``log_prob(prev, cur)`` is a pure function of the model + inputs.
+    """
+
+    bigram_counts: dict[tuple[str, str], int]
+    unigram_counts: dict[str, int]
+    vocab: tuple[str, ...]  # tuple for stable hashing/printing
+    alpha: float
+
+    @classmethod
+    def from_sequences(
+        cls, sequences: list[list[str]], alpha: float = _LF1_BIGRAM_ALPHA
+    ) -> "EmpiricalBigramModel":
+        bigram: dict[tuple[str, str], int] = {}
+        unigram: dict[str, int] = {}
+        vocab_set: set[str] = {_LF1_START, _LF1_END}
+        for seq in sequences:
+            tokens = [_LF1_START, *seq, _LF1_END]
+            for tok in tokens:
+                vocab_set.add(tok)
+                unigram[tok] = unigram.get(tok, 0) + 1
+            for prev, cur in zip(tokens[:-1], tokens[1:]):
+                bigram[(prev, cur)] = bigram.get((prev, cur), 0) + 1
+        # Sorted vocab for deterministic representation.
+        vocab = tuple(sorted(vocab_set))
+        return cls(
+            bigram_counts=dict(bigram),
+            unigram_counts=dict(unigram),
+            vocab=vocab,
+            alpha=alpha,
+        )
+
+    def log_prob(self, prev: str, cur: str) -> float:
+        """log P(cur | prev) under add-`alpha` Laplace smoothing."""
+        v = len(self.vocab)
+        num = self.bigram_counts.get((prev, cur), 0) + self.alpha
+        den = self.unigram_counts.get(prev, 0) + self.alpha * v
+        # den > 0 always (alpha > 0, v > 0); num > 0 always.
+        return math.log(num / den)
+
+
+@dataclass(frozen=True)
+class LocalFitV1Result:
+    """Result of ``local_fit_v1`` on one candidate-equation hypothesis."""
+
+    score: float
+    metric_notes: str
+    # Diagnostic breakdown (persisted for analysis, not used in the sort key):
+    position_term: float
+    bigram_term: float
+    length_penalty: float
+    rare_sign_correction: float
+    n_pairs_scored: int
+
+
+def _sign_corpus_counts(stream: list[str]) -> dict[str, int]:
+    """Count how many times each token appears anywhere in the corpus stream.
+
+    Used by the rare-sign correction term. Boundary markers are not counted
+    (they are not signs)."""
+    counts: dict[str, int] = {}
+    for tok in stream:
+        if tok == "INS_BOUNDARY" or tok == "DIV":
+            continue
+        counts[tok] = counts.get(tok, 0) + 1
+    return counts
+
+
+def _mean_position_compat(
+    signs: list[str], phonemes: list[str], fingerprints: dict[str, list[int]]
+) -> float:
+    """Mean over (sign, phoneme) pairs of log(Bhattacharyya + floor)."""
+    total = sum(
+        _position_fit(s, p, fingerprints) for s, p in zip(signs, phonemes)
+    )
+    return total / max(len(signs), 1)
+
+
+def _mean_empirical_bigram_logprob(
+    phonemes: list[str], model: EmpiricalBigramModel
+) -> float:
+    """Mean over (n+1) bigrams of log P under the empirical pool LM.
+
+    Bigrams include the (<S>, p_0) start transition and the (p_{n-1}, <E>)
+    end transition, so a single-phoneme equation gets 2 bigrams scored. This
+    keeps the term well-defined at every length.
+    """
+    if not phonemes:
+        return 0.0
+    seq = [_LF1_START, *phonemes, _LF1_END]
+    bigrams = list(zip(seq[:-1], seq[1:]))
+    total = sum(model.log_prob(a, b) for a, b in bigrams)
+    return total / len(bigrams)
+
+
+def _length_penalty(n: int) -> float:
+    """1/n. Short equations pay more. Returns 0 for n=0 (degenerate)."""
+    if n <= 0:
+        return 0.0
+    return 1.0 / n
+
+
+def _rare_sign_correction(
+    signs: list[str], sign_counts: dict[str, int], threshold: int
+) -> float:
+    """Fraction of the equation's signs that occur fewer than `threshold`
+    times anywhere in the corpus stream. Range [0, 1]."""
+    if not signs:
+        return 0.0
+    rare = sum(1 for s in signs if sign_counts.get(s, 0) < threshold)
+    return rare / len(signs)
+
+
+def local_fit_v1(
+    stream: list[str],
+    signs: list[str],
+    phonemes: list[str],
+    bigram_model: EmpiricalBigramModel,
+    *,
+    sign_counts: dict[str, int] | None = None,
+    fingerprints: dict[str, list[int]] | None = None,
+) -> LocalFitV1Result:
+    """Score a candidate-equation alignment with the v1 local-fit metric.
+
+    **What it measures.** Same intent as v0 (does this span = this root)
+    but with cross-hypothesis-comparable absolute units, an
+    empirically-learned bigram prior over the active pool, a length
+    penalty, and a rare-sign correction. See the module-level comment block
+    above for the formula and constants.
+
+    **Why no control z.** v0 used per-hypothesis permutation z to isolate
+    order-of-phonemes from sign-rarity, but the price was that ranks of
+    different hypotheses were no longer directly comparable: every
+    hypothesis was standardized by its own permutation distribution. v1's
+    target is a leaderboard that *is* directly comparable across
+    hypotheses, so we keep the absolute score. (The v0 metric is still
+    available unchanged for callers that want the contrastive view.)
+
+    **Why empirical bigrams.** v0's class-bigram LM was hardcoded to a
+    Basque-style CV phonotactic prior. That works for an Aquitanian pool
+    but is a poor fit for, e.g., a Pre-Greek toponym pool with consonant
+    clusters. The empirical model is built from the active pool's
+    own surface forms, so it adapts automatically.
+
+    **Why length-normalize and rare-sign-correct.** Both were diagnosed in
+    mg-f832: the v0 leaderboard's top is dominated by 2-sign equations
+    (cumulative log-prob is less negative when fewer terms are summed),
+    and several top entries pin to signs that occur < 5 times in the
+    corpus (so the position fingerprint is dominated by 1-2 observations
+    and the metric is over-confident). v1 attenuates both effects.
+
+    **Determinism.** Identical inputs ⇒ byte-identical score. The empirical
+    bigram model is built deterministically from the pool sequences (in
+    insertion order); `_sign_corpus_counts` is order-independent.
+
+    **What invalidates it.**
+      * (a) Pool is too small (< ~20 entries) ⇒ empirical bigram is
+        dominated by smoothing rather than data.
+      * (b) Pool has no overlap with the target script's phoneme inventory
+        ⇒ all bigrams hit the smoothing floor and the bigram term goes
+        flat across hypotheses.
+      * (c) Corpus is fragmentary ⇒ position fingerprints are noisy and
+        the position term degenerates toward the floor (same caveat as v0).
+    """
+    if not signs:
+        raise ValueError("local_fit_v1: equation has no signs")
+    if len(signs) != len(phonemes):
+        raise ValueError(
+            f"local_fit_v1: |signs|={len(signs)} != |phonemes|={len(phonemes)}"
+        )
+
+    if fingerprints is None:
+        fingerprints = sign_position_fingerprints(stream)
+    if sign_counts is None:
+        sign_counts = _sign_corpus_counts(stream)
+
+    pos_mean = _mean_position_compat(signs, phonemes, fingerprints)
+    bi_mean = _mean_empirical_bigram_logprob(phonemes, bigram_model)
+    lp = _length_penalty(len(phonemes))
+    rsc = _rare_sign_correction(signs, sign_counts, _LF1_RARE_SIGN_THRESHOLD)
+
+    score = (
+        _LF1_A_POSITION * pos_mean
+        + _LF1_B_BIGRAM * bi_mean
+        - _LF1_C_LENGTH_PENALTY * lp
+        - _LF1_D_RARE_SIGN * rsc
+    )
+
+    notes = (
+        f"local_fit_v1: pos={pos_mean:.4f}, bigram={bi_mean:.4f}, "
+        f"length_penalty={lp:.4f}, rare_sign={rsc:.4f}; "
+        f"A={_LF1_A_POSITION}, B={_LF1_B_BIGRAM}, "
+        f"C={_LF1_C_LENGTH_PENALTY}, D={_LF1_D_RARE_SIGN}, "
+        f"rare_threshold={_LF1_RARE_SIGN_THRESHOLD}, "
+        f"alpha={_LF1_BIGRAM_ALPHA}, vocab={len(bigram_model.vocab)}"
+    )
+    return LocalFitV1Result(
+        score=float(score),
+        metric_notes=notes,
+        position_term=float(pos_mean),
+        bigram_term=float(bi_mean),
+        length_penalty=float(lp),
+        rare_sign_correction=float(rsc),
+        n_pairs_scored=len(signs),
+    )
+
+
+# ---------------------------------------------------------------------------
+# geographic_genre_fit_v1
+# ---------------------------------------------------------------------------
+#
+# Categorical compatibility between the pool entry's (region, semantic_field)
+# and the inscription's (site, genre_hint). A second, structurally
+# orthogonal score column on each result row — used as a cheap-test
+# multiplier alongside local_fit_v1.
+#
+# Score:
+#   geographic_genre_fit_v1(eq) = α * region_compat + (1 - α) * semantic_compat
+# where α ∈ [0, 1], default 0.4 (semantic carries more weight per the brief
+# "subject matter of the tablets it fits").
+#
+# The lookup tables are deliberately small and opinionated. Each entry is a
+# standalone declarative statement with a brief rationale. See the brief for
+# the v1 mandate: "a small, opinionated, sourced table is more useful than a
+# vast unsourced one."
+
+_GG1_DEFAULT_ALPHA = 0.4
+_GG1_NEUTRAL = 0.5  # used for missing/unclassified fields and unmapped pairs
+
+
+# Region × site compatibility. Sites are SigLA's site labels; regions are
+# the pool entry's `region` field. Higher = better fit.
+#
+# Rationale (per brief):
+#   * Aquitanian → Cretan / Aegean Linear-A sites: substrate-hypothesis
+#     allows ancient Mediterranean cognates → 0.25 (small but positive).
+#   * Pre-Greek toponym → Crete: 1.0 (toponyms are exactly the data class).
+#   * Etruscan → Crete: 0.5 (Mediterranean substrate ties; not as direct).
+#   * Linear-B carryover → Knossos: 1.0 (Knossos is *the* Linear-B site).
+#   * Linear-B carryover → other Linear-A sites: 0.5 (carryover values
+#     transfer broadly, but Knossos is privileged).
+#   * Random scramble → anything: 0.5 (no claim).
+#
+# Sources:
+#   - Beekes, _Etymological Dictionary of Greek_ (2010), pre-Greek substrate
+#     in Aegean toponyms.
+#   - Trask 1997 ch. 2 on the Vasconic / Pre-IE substrate hypothesis.
+#   - Schoep 2002, Linear-A administrative geography (which sites kept
+#     Linear-A vs Linear-B records during the Neopalatial transition).
+_GG1_REGION_COMPAT: dict[tuple[str, str], float] = {
+    # Aquitanian / Vasconic substrate against Aegean Linear-A sites.
+    ("aquitania", "Haghia Triada"): 0.25,
+    ("aquitania", "Khania"): 0.25,
+    ("aquitania", "Phaistos"): 0.25,
+    ("aquitania", "Zakros"): 0.25,
+    ("aquitania", "Knossos"): 0.25,
+    ("aquitania", "Mallia"): 0.25,
+    ("aquitania", "Arkhanes"): 0.25,
+    ("aquitania", "Kea"): 0.25,
+    ("aquitania", "Tylissos"): 0.25,
+    ("aquitania", "Gournia"): 0.25,
+    ("aquitania", "Pyrgos"): 0.25,
+    ("aquitania", "Haghios Stephanos"): 0.25,
+    ("aquitania", "Kythera"): 0.25,
+    ("aquitania", "Melos"): 0.25,
+    ("aquitania", "Mycenae"): 0.25,
+    ("aquitania", "Papoura"): 0.25,
+    ("aquitania", "Psykhro"): 0.25,
+    ("aquitania", "Syme"): 0.25,
+    # Same but for the basque_substrate region tag (kept symmetric with
+    # aquitania — both refer to the same substrate hypothesis under the
+    # current pool taxonomy).
+    ("basque_substrate", "Haghia Triada"): 0.25,
+    ("basque_substrate", "Khania"): 0.25,
+    ("basque_substrate", "Phaistos"): 0.25,
+    ("basque_substrate", "Zakros"): 0.25,
+    ("basque_substrate", "Knossos"): 0.25,
+    ("basque_substrate", "Mallia"): 0.25,
+    ("basque_substrate", "Arkhanes"): 0.25,
+    ("basque_substrate", "Kea"): 0.25,
+    ("basque_substrate", "Tylissos"): 0.25,
+    ("basque_substrate", "Gournia"): 0.25,
+    ("basque_substrate", "Pyrgos"): 0.25,
+    ("basque_substrate", "Haghios Stephanos"): 0.25,
+    ("basque_substrate", "Kythera"): 0.25,
+    ("basque_substrate", "Melos"): 0.25,
+    ("basque_substrate", "Mycenae"): 0.25,
+    ("basque_substrate", "Papoura"): 0.25,
+    ("basque_substrate", "Psykhro"): 0.25,
+    ("basque_substrate", "Syme"): 0.25,
+    # Pre-Greek toponym → Crete is the strongest case.
+    ("pre_greek", "Haghia Triada"): 1.0,
+    ("pre_greek", "Khania"): 1.0,
+    ("pre_greek", "Phaistos"): 1.0,
+    ("pre_greek", "Zakros"): 1.0,
+    ("pre_greek", "Knossos"): 1.0,
+    ("pre_greek", "Mallia"): 1.0,
+    ("pre_greek", "Arkhanes"): 1.0,
+    ("pre_greek", "Kea"): 0.75,  # Kea is Cycladic but pre-Greek substrate likely
+    ("pre_greek", "Mycenae"): 0.5,  # mainland; less direct
+    # Etruscan: Mediterranean substrate, plausible but indirect.
+    ("etruscan", "Haghia Triada"): 0.5,
+    ("etruscan", "Khania"): 0.5,
+    ("etruscan", "Phaistos"): 0.5,
+    ("etruscan", "Zakros"): 0.5,
+    ("etruscan", "Knossos"): 0.5,
+    # Linear-B carryover values: Knossos privileged.
+    ("linear_b", "Knossos"): 1.0,
+    ("linear_b", "Haghia Triada"): 0.5,
+    ("linear_b", "Khania"): 0.5,
+    ("linear_b", "Phaistos"): 0.5,
+    ("linear_b", "Zakros"): 0.5,
+    ("linear_b", "Mallia"): 0.5,
+    ("linear_b", "Arkhanes"): 0.5,
+}
+
+
+# Semantic-field × genre compatibility. Genre comes from the inscription's
+# `genre_hint`; semantic_field from the pool entry. Most Linear-A
+# inscriptions are accountancy (742/772 in SigLA), so most of the table is
+# about how well a given semantic field fits an accountancy tablet.
+#
+# Rationale: agriculture/food/animal/place/function/number all directly fit
+# accountancy ledgers (commodities, totals, recipients); kin (people) fits
+# moderately (recipient names but not the subject); descriptor/morphology
+# are weakly relevant; weaponry / religious-dedication fit votive/inscription
+# genre but not accountancy.
+_GG1_SEMANTIC_COMPAT: dict[tuple[str, str], float] = {
+    # Strong fits to accountancy tablets.
+    ("agriculture", "accountancy"): 0.75,
+    ("food", "accountancy"): 0.75,
+    ("animal", "accountancy"): 0.75,
+    ("place", "accountancy"): 0.75,
+    ("function", "accountancy"): 0.75,
+    ("number", "accountancy"): 1.0,
+    ("commodity", "accountancy"): 1.0,
+    # Moderate fits to accountancy tablets.
+    ("kin", "accountancy"): 0.5,
+    ("dwelling", "accountancy"): 0.5,
+    ("nature", "accountancy"): 0.5,
+    ("body", "accountancy"): 0.5,
+    ("time", "accountancy"): 0.5,
+    # Weak fits to accountancy tablets.
+    ("descriptor", "accountancy"): 0.25,
+    ("morphology", "accountancy"): 0.25,
+    ("weaponry", "accountancy"): 0.25,
+    ("religious", "accountancy"): 0.25,
+    # Votive / inscription genre.
+    ("religious", "votive_or_inscription"): 1.0,
+    ("kin", "votive_or_inscription"): 0.75,
+    ("descriptor", "votive_or_inscription"): 0.5,
+    ("place", "votive_or_inscription"): 0.5,
+    ("nature", "votive_or_inscription"): 0.5,
+    ("agriculture", "votive_or_inscription"): 0.25,
+    ("food", "votive_or_inscription"): 0.25,
+    ("animal", "votive_or_inscription"): 0.25,
+    ("number", "votive_or_inscription"): 0.25,
+    # Administrative genre — similar to accountancy but slightly different
+    # focus (records of decisions / personnel rather than commodities).
+    ("function", "administrative"): 0.75,
+    ("kin", "administrative"): 0.75,
+    ("place", "administrative"): 0.75,
+    ("number", "administrative"): 0.75,
+    ("descriptor", "administrative"): 0.5,
+    ("agriculture", "administrative"): 0.5,
+    ("food", "administrative"): 0.5,
+    ("animal", "administrative"): 0.5,
+    ("nature", "administrative"): 0.25,
+    ("dwelling", "administrative"): 0.5,
+    ("body", "administrative"): 0.25,
+    ("religious", "administrative"): 0.5,
+    ("morphology", "administrative"): 0.25,
+    ("time", "administrative"): 0.5,
+    ("weaponry", "administrative"): 0.5,
+}
+
+
+@dataclass(frozen=True)
+class GeographicGenreFitResult:
+    """Result of ``geographic_genre_fit_v1`` on one candidate equation."""
+
+    score: float
+    metric_notes: str
+    region_compat: float
+    semantic_compat: float
+    # Inputs the score was derived from (handy for diagnostics).
+    region: str
+    semantic_field: str
+    site: str
+    genre_hint: str
+
+
+def _lookup_compat(
+    table: dict[tuple[str, str], float], a: str | None, b: str | None
+) -> tuple[float, str]:
+    """Look up a compat score in the table. Returns (score, source) where
+    `source` is one of {"table", "missing-a", "missing-b", "unmapped"}.
+
+    Missing or empty fields → neutral 0.5; unmapped pairs → neutral 0.5
+    (with a note so the caller can distinguish 'no data' from 'in table').
+    """
+    if not a:
+        return _GG1_NEUTRAL, "missing-a"
+    if not b:
+        return _GG1_NEUTRAL, "missing-b"
+    if (a, b) in table:
+        return table[(a, b)], "table"
+    return _GG1_NEUTRAL, "unmapped"
+
+
+def geographic_genre_fit_v1(
+    *,
+    region: str | None,
+    semantic_field: str | None,
+    site: str | None,
+    genre_hint: str | None,
+    alpha: float = _GG1_DEFAULT_ALPHA,
+) -> GeographicGenreFitResult:
+    """Categorical compatibility between (region, semantic_field) and
+    (site, genre_hint).
+
+    Score in [0, 1]. Deterministic. No control distribution — this is a
+    structural score, not a contrastive one. Missing/empty inputs and
+    unmapped pairs both fall back to a 0.5 neutral.
+
+    α defaults to 0.4: semantic carries more weight because the genre_hint
+    (accountancy / votive / administrative / unknown) is a stronger signal
+    of subject-matter fit than the site-level region mapping in the
+    current taxonomy.
+    """
+    if not (0.0 <= alpha <= 1.0):
+        raise ValueError(f"alpha must be in [0,1]; got {alpha}")
+    region_v, region_src = _lookup_compat(_GG1_REGION_COMPAT, region, site)
+    semantic_v, semantic_src = _lookup_compat(
+        _GG1_SEMANTIC_COMPAT, semantic_field, genre_hint
+    )
+    score = alpha * region_v + (1.0 - alpha) * semantic_v
+    notes = (
+        f"geographic_genre_fit_v1: alpha={alpha}, "
+        f"region_compat={region_v:.4f} ({region_src}, "
+        f"region={region!r}, site={site!r}), "
+        f"semantic_compat={semantic_v:.4f} ({semantic_src}, "
+        f"semantic_field={semantic_field!r}, genre_hint={genre_hint!r})"
+    )
+    return GeographicGenreFitResult(
+        score=float(score),
+        metric_notes=notes,
+        region_compat=float(region_v),
+        semantic_compat=float(semantic_v),
+        region=region or "",
+        semantic_field=semantic_field or "",
+        site=site or "",
+        genre_hint=genre_hint or "",
+    )
+
+
 METRICS = {
     "compression_delta_v0": compression_delta_v0,
     "local_fit_v0": local_fit_v0,
+    "local_fit_v1": local_fit_v1,
+    "geographic_genre_fit_v1": geographic_genre_fit_v1,
 }
