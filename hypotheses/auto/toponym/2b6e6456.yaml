@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_parnassos_KN_Zf_13_3_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''parnassos''
+  pinned to KN Zf 13 tokens [3..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: parnassos
+  phonemes:
+  - p
+  - a
+  - r
+  - n
+  - a
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Parnassos (sacred mountain)
+  citation: Beekes 2010 s.v. Parnassos; Furnée 1972 §122.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 11
+  sign_to_phoneme:
+    AB41: p
+    AB07: a
+    A301: r
+    AB39: n
+    AB44: a
+    AB03: s
+    AB57: s
+    AB59: o
+    AB53: s

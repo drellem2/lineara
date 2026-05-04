@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_olous_KN_Zf_13_12_16
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''olous''
+  pinned to KN Zf 13 tokens [12..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: olous
+  phonemes:
+  - o
+  - l
+  - o
+  - u
+  - s
+  gloss_hint: Olous (NE Cretan coast)
+  citation: Beekes 2010 s.v. Olous.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 16
+  sign_to_phoneme:
+    AB09: o
+    AB04: l
+    AB53: o
+    AB23: u
+    AB08: s

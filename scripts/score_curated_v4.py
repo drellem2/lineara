@@ -69,6 +69,14 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--note", default="mg-7c8c curated v4 sweep", help="note attached to each row"
     )
+    parser.add_argument(
+        "--force-rescore",
+        action="store_true",
+        help="Always append; ignore the (hash, snapshot, metric) resume cache. "
+        "Used by mg-c2af to re-score the 100 curated hypotheses under the "
+        "fixed pool-bigram dispatch (the snapshot is unchanged so the resume "
+        "cache would otherwise skip every row).",
+    )
     args = parser.parse_args(argv)
 
     metrics = [m.strip() for m in args.metrics.split(",") if m.strip()]
@@ -80,7 +88,7 @@ def main(argv: list[str] | None = None) -> int:
                 continue
             manifest_rows.append(json.loads(line))
 
-    seen = _existing_keys(args.results)
+    seen = set() if args.force_rescore else _existing_keys(args.results)
     scored = 0
     skipped = 0
     started = time.monotonic()

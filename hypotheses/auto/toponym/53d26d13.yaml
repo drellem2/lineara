@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_efe_HT_117a_8_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''efe''
+  pinned to HT 117a tokens [8..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: efe
+  phonemes:
+  - e
+  - p
+  - h
+  - e
+  gloss_hint: ephe- (initial fragment; Ephesos / Apaša)
+  citation: Beekes 2010 s.v. Ephesos.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    AB10: e
+    AB73: p
+    AB06: h
+    AB41: e

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_sparta_KN_Zf_13_6_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''sparta''
+  pinned to KN Zf 13 tokens [6..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: sparta
+  phonemes:
+  - s
+  - p
+  - a
+  - r
+  - t
+  - a
+  gloss_hint: Sparta (Lakonia)
+  citation: Beekes 2010 s.v. Sparta; Furnée 1972.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 11
+  sign_to_phoneme:
+    AB39: s
+    AB44: p
+    AB03: a
+    AB57: r
+    AB59: t
+    AB53: a

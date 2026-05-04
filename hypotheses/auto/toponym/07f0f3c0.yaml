@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_sos_ARKH_1a_10_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''sos''
+  pinned to ARKH 1a tokens [10..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: sos
+  phonemes:
+  - s
+  - o
+  - s
+  gloss_hint: -sos (Pre-Greek substrate ending; reduced -ssos variant)
+  citation: Beekes 2010 vol. 2 §3 on the -ssos > -sos reflex.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 10
+  - 12
+  sign_to_phoneme:
+    AB08: s
+    AB58: o
+    AB73: s

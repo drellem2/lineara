@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_salaminos_KN_Zf_13_1_9
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''salaminos''
+  pinned to KN Zf 13 tokens [1..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: salaminos
+  phonemes:
+  - s
+  - a
+  - l
+  - a
+  - m
+  - i
+  - n
+  - o
+  - s
+  gloss_hint: Salamis (Saronic island)
+  citation: Beekes 2010 s.v. Salamis.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 9
+  sign_to_phoneme:
+    AB27: s
+    AB24: a
+    AB41: l
+    AB07: a
+    A301: m
+    AB39: i
+    AB44: n
+    AB03: o
+    AB57: s

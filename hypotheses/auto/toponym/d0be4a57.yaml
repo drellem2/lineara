@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_sparta_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''sparta''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: sparta
+  phonemes:
+  - s
+  - p
+  - a
+  - r
+  - t
+  - a
+  gloss_hint: Sparta (Lakonia)
+  citation: Beekes 2010 s.v. Sparta; Furnée 1972.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: s
+    AB45: p
+    AB26: a
+    AB78: r
+    AB76: t
+    AB10: a

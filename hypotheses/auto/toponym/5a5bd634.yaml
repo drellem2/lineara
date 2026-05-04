@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_kuzikos_KN_Zc_6_4_10
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''kuzikos''
+  pinned to KN Zc 6 tokens [4..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: kuzikos
+  phonemes:
+  - k
+  - u
+  - z
+  - i
+  - k
+  - o
+  - s
+  gloss_hint: Kyzikos (Propontic city)
+  citation: Beekes 2010 s.v. Kyzikos.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    AB08: k
+    AB07: u
+    AB01: z
+    AB67: i
+    AB37: k
+    AB03: o
+    AB81: s

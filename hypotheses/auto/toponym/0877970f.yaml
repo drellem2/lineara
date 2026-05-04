@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_aksos_HT_Zb_159_1_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''aksos''
+  pinned to HT Zb 159 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: aksos
+  phonemes:
+  - a
+  - k
+  - s
+  - o
+  - s
+  gloss_hint: Axos (central-Cretan town with -ksos suffix)
+  citation: Kretschmer 1896 §57 on -ksos; Beekes 2010 s.v. Axos.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB06: a
+    AB55: k
+    AB41: s
+    AB57: o
+    AB09: s

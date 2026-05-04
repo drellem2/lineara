@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tarra_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tarra''
+  pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tarra
+  phonemes:
+  - t
+  - a
+  - r
+  - r
+  - a
+  gloss_hint: Tarra (south-Cretan town in Kretschmer's substrate roster)
+  citation: Kretschmer 1896 §54; Beekes vol. 2 follows.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: t
+    AB03: a
+    AB81: r
+    AB55: r
+    AB10: a

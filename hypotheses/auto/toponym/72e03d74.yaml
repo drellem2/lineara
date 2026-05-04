@@ -1,0 +1,44 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_halikarnassos_KN_Zf_13_1_13
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''halikarnassos''
+  pinned to KN Zf 13 tokens [1..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: halikarnassos
+  phonemes:
+  - h
+  - a
+  - l
+  - i
+  - k
+  - a
+  - r
+  - n
+  - a
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Halikarnassos (Carian coast town)
+  citation: Beekes 2010 s.v. Halikarnassos.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 13
+  sign_to_phoneme:
+    AB27: h
+    AB24: a
+    AB41: l
+    AB07: i
+    A301: k
+    AB39: a
+    AB44: r
+    AB03: n
+    AB57: a
+    AB59: s
+    AB53: s
+    AB09: o
+    AB04: s

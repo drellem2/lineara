@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_chios_KN_Zb_5_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''chios''
+  pinned to KN Zb 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: chios
+  phonemes:
+  - k
+  - h
+  - i
+  - o
+  - s
+  gloss_hint: Chios (East-Aegean island)
+  citation: Beekes 2010 s.v. Chios.
+equation:
+  inscription_id: KN Zb 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: k
+    AB69: h
+    AB53: i
+    AB41: o
+    AB37: s

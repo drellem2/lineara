@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_thera_HT_123b_25_28
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''thera''
+  pinned to HT 123b tokens [25..28].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  gloss_hint: Thera (Cycladic island)
+  citation: Beekes 2010 s.v. Thera.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 25
+  - 28
+  sign_to_phoneme:
+    AB69: th
+    AB02: e
+    AB07: r
+    AB01: a

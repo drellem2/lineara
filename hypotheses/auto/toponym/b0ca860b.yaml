@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lasaia_KN_Zf_13_12_17
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lasaia''
+  pinned to KN Zf 13 tokens [12..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lasaia
+  phonemes:
+  - l
+  - a
+  - s
+  - a
+  - i
+  - a
+  gloss_hint: Lasaia (Cretan southern town)
+  citation: Beekes 2010 s.v. Lasaia.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 17
+  sign_to_phoneme:
+    AB09: l
+    AB04: a
+    AB53: s
+    AB23: a
+    AB08: i
+    AB57: a

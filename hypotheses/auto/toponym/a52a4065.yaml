@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_naxos_KN_Zf_13_5_10
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''naxos''
+  pinned to KN Zf 13 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: naxos
+  phonemes:
+  - n
+  - a
+  - k
+  - s
+  - o
+  - s
+  gloss_hint: Naxos (Cycladic island, largest)
+  citation: Beekes 2010 s.v. Naxos; aksos / -aksos substrate suffix.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    A301: n
+    AB39: a
+    AB44: k
+    AB03: s
+    AB57: o
+    AB59: s

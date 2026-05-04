@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lyktos_HT_122b_13_18
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lyktos''
+  pinned to HT 122b tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lyktos
+  phonemes:
+  - l
+  - u
+  - k
+  - t
+  - o
+  - s
+  gloss_hint: Lyktos (Cretan central highland town)
+  citation: Beekes 2010 s.v. Lyktos; Linear-B ru-ki-to (Knossos tablets).
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB08: l
+    AB60: u
+    AB65: k
+    AB10: t
+    AB45: o
+    AB17: s

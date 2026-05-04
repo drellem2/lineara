@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_argos_KN_Zc_6_6_10
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''argos''
+  pinned to KN Zc 6 tokens [6..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: argos
+  phonemes:
+  - a
+  - r
+  - g
+  - o
+  - s
+  gloss_hint: Argos (Argolid; older Argeia substrate stem)
+  citation: Beekes 2010 s.v. Argos; Furnée 1972.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 6
+  - 10
+  sign_to_phoneme:
+    AB01: a
+    AB67: r
+    AB37: g
+    AB03: o
+    AB81: s

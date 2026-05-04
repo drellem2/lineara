@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tarsos_KN_Zc_6_5_10
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tarsos''
+  pinned to KN Zc 6 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tarsos
+  phonemes:
+  - t
+  - a
+  - r
+  - s
+  - o
+  - s
+  gloss_hint: Tarsos (Cilician town)
+  citation: Beekes 2010 s.v. Tarsos; possibly older ʔaršuwa.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    AB07: t
+    AB01: a
+    AB67: r
+    AB37: s
+    AB03: o
+    AB81: s

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_kno_HT_1_15_17
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''kno''
+  pinned to HT 1 tokens [15..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: kno
+  phonemes:
+  - k
+  - n
+  - o
+  gloss_hint: kno- (initial fragment of Knossos and the -nVssos onset family)
+  citation: Beekes 2010 s.v. Knossos; mg-c2af fragmentation rule.
+equation:
+  inscription_id: HT 1
+  span:
+  - 15
+  - 17
+  sign_to_phoneme:
+    AB81: k
+    AB56: n
+    AB55: o

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_iassos_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''iassos''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: iassos
+  phonemes:
+  - i
+  - a
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Iassos (Carian coast town)
+  citation: Beekes 2010 s.v. Iassos.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: i
+    AB45: a
+    AB26: s
+    AB78: s
+    AB76: o
+    AB10: s

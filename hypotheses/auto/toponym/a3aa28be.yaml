@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_les_HT_108_18_20
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''les''
+  pinned to HT 108 tokens [18..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: les
+  phonemes:
+  - l
+  - e
+  - s
+  gloss_hint: les- (initial fragment; Lesbos)
+  citation: Beekes 2010 s.v. Lesbos.
+equation:
+  inscription_id: HT 108
+  span:
+  - 18
+  - 20
+  sign_to_phoneme:
+    AB76: l
+    AB37: e
+    AB65: s

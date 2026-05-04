@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_mnos_ARKH_2_9_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''mnos''
+  pinned to ARKH 2 tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: mnos
+  phonemes:
+  - m
+  - n
+  - o
+  - s
+  gloss_hint: -mnos (Pre-Greek substrate suffix; Lemnos / Kalymnos)
+  citation: Beekes 2010 vol. 2 appendix; Furnée 1972.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: m
+    AB01: n
+    AB05: o
+    AB28: s

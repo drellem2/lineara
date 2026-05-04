@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_efe_GO_Wc_1a_2_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''efe''
+  pinned to GO Wc 1a tokens [2..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: efe
+  phonemes:
+  - e
+  - p
+  - h
+  - e
+  gloss_hint: ephe- (initial fragment; Ephesos / Apaša)
+  citation: Beekes 2010 s.v. Ephesos.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    AB58: e
+    AB80: p
+    AB28: h
+    AB09: e

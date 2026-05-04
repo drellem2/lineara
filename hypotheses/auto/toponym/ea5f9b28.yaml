@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_pulos_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''pulos''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: pulos
+  phonemes:
+  - p
+  - u
+  - l
+  - o
+  - s
+  gloss_hint: Pylos (Messenian Mycenaean palace)
+  citation: Beekes 2010 s.v. Pylos; Linear-B pu-ro.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: p
+    AB31: u
+    AB58: l
+    AB80: o
+    AB28: s

@@ -1,0 +1,40 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_aleksandros_KN_Zf_13_2_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''aleksandros''
+  pinned to KN Zf 13 tokens [2..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: aleksandros
+  phonemes:
+  - a
+  - l
+  - e
+  - k
+  - s
+  - a
+  - n
+  - d
+  - r
+  - o
+  - s
+  gloss_hint: Aleksandros (substrate-derived theonym; per Kretschmer)
+  citation: Kretschmer 1896; Hittite Alaksandu treaty (Beekes vol. 2).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 12
+  sign_to_phoneme:
+    AB24: a
+    AB41: l
+    AB07: e
+    A301: k
+    AB39: s
+    AB44: a
+    AB03: n
+    AB57: d
+    AB59: r
+    AB53: o
+    AB09: s

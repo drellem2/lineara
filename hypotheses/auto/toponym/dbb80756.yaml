@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tiruns_SY_Za_4_0_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tiruns''
+  pinned to SY Za 4 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tiruns
+  phonemes:
+  - t
+  - i
+  - r
+  - u
+  - n
+  - s
+  gloss_hint: Tiryns (Argolid Mycenaean site, pre-Greek name)
+  citation: Beekes 2010 s.v. Tiryns.
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: t
+    AB59: i
+    AB28: r
+    A301: u
+    AB54: n
+    AB57: s

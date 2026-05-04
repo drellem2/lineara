@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_mukenai_KN_Zf_13_5_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''mukenai''
+  pinned to KN Zf 13 tokens [5..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: mukenai
+  phonemes:
+  - m
+  - u
+  - k
+  - e
+  - n
+  - a
+  - i
+  gloss_hint: Mykenai (Mycenae)
+  citation: Beekes 2010 s.v. Mukenai; argued non-IE substrate.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 11
+  sign_to_phoneme:
+    A301: m
+    AB39: u
+    AB44: k
+    AB03: e
+    AB57: n
+    AB59: a
+    AB53: i

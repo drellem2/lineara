@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ina_HT_108_13_15
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ina''
+  pinned to HT 108 tokens [13..15].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ina
+  phonemes:
+  - i
+  - n
+  - a
+  gloss_hint: -ina / ina- (substrate cluster fragment; broad CV-CV)
+  citation: Furnée 1972.
+equation:
+  inscription_id: HT 108
+  span:
+  - 13
+  - 15
+  sign_to_phoneme:
+    AB51: i
+    AB58: n
+    AB30: a

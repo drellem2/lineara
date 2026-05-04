@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_amnisos_KN_Zf_13_6_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''amnisos''
+  pinned to KN Zf 13 tokens [6..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: amnisos
+  phonemes:
+  - a
+  - m
+  - n
+  - i
+  - s
+  - o
+  - s
+  gloss_hint: Amnisos (Cretan port)
+  citation: Beekes 2010 s.v. Amnisos; Furnée 1972 §122.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 12
+  sign_to_phoneme:
+    AB39: a
+    AB44: m
+    AB03: n
+    AB57: i
+    AB59: s
+    AB53: o
+    AB09: s

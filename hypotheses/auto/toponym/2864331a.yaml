@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_rhytion_KN_Zf_13_12_18
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''rhytion''
+  pinned to KN Zf 13 tokens [12..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: rhytion
+  phonemes:
+  - r
+  - h
+  - u
+  - t
+  - i
+  - o
+  - n
+  gloss_hint: Rhytion (south-Cretan town)
+  citation: Beekes 2010 s.v. Rhytion; Linear-B carryover ru-ki-to.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 18
+  sign_to_phoneme:
+    AB09: r
+    AB04: h
+    AB53: u
+    AB23: t
+    AB08: i
+    AB57: o
+    AB81: n

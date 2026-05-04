@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_orchomenos_KN_Zf_13_2_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''orchomenos''
+  pinned to KN Zf 13 tokens [2..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: orchomenos
+  phonemes:
+  - o
+  - r
+  - k
+  - h
+  - o
+  - m
+  - e
+  - n
+  - o
+  - s
+  gloss_hint: Orchomenos (Boeotian Mycenaean palace)
+  citation: Beekes 2010 s.v. Orchomenos; Linear-B e-ko-me-no.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 11
+  sign_to_phoneme:
+    AB24: o
+    AB41: r
+    AB07: k
+    A301: h
+    AB39: o
+    AB44: m
+    AB03: e
+    AB57: n
+    AB59: o
+    AB53: s

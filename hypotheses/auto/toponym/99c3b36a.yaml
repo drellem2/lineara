@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ikaria_HT_Zb_158b_0_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ikaria''
+  pinned to HT Zb 158b tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ikaria
+  phonemes:
+  - i
+  - k
+  - a
+  - r
+  - i
+  - a
+  gloss_hint: Ikaria (Aegean island)
+  citation: Beekes 2010 s.v. Ikaria.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB58: i
+    AB67: k
+    AB53: a
+    AB04: r
+    AB28: i
+    AB57: a

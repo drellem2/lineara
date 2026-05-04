@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tarra_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tarra''
+  pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tarra
+  phonemes:
+  - t
+  - a
+  - r
+  - r
+  - a
+  gloss_hint: Tarra (south-Cretan town in Kretschmer's substrate roster)
+  citation: Kretschmer 1896 §54; Beekes vol. 2 follows.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: t
+    AB41: a
+    AB01: r
+    AB05: r
+    AB28: a

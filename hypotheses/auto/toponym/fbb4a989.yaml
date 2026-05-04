@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_minoa_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''minoa''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: minoa
+  phonemes:
+  - m
+  - i
+  - n
+  - o
+  - a
+  gloss_hint: Minoa (multiple Cretan / Aegean coastal sites named for Minos)
+  citation: Beekes 2010 s.v. Minos; cf. Mukenai-pattern -nVa toponyms.
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: m
+    AB07: i
+    AB06: n
+    AB58: o
+    AB77: a

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_aios_HT_127a_4_7
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''aios''
+  pinned to HT 127a tokens [4..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: aios
+  phonemes:
+  - a
+  - i
+  - o
+  - s
+  gloss_hint: -aios (Pre-Greek substrate adjective suffix)
+  citation: Beekes 2010 vol. 2 appendix.
+equation:
+  inscription_id: HT 127a
+  span:
+  - 4
+  - 7
+  sign_to_phoneme:
+    A629: a
+    AB01: i
+    AB47: o
+    AB81: s

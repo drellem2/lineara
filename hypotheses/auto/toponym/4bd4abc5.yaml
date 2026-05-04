@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_thebai_KH_10_12_16
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''thebai''
+  pinned to KH 10 tokens [12..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: thebai
+  phonemes:
+  - th
+  - e
+  - b
+  - a
+  - i
+  gloss_hint: Thebai (Boeotian Mycenaean palace site)
+  citation: Beekes 2010 s.v. Thebai; Linear-B te-qa-i.
+equation:
+  inscription_id: KH 10
+  span:
+  - 12
+  - 16
+  sign_to_phoneme:
+    AB08: th
+    AB67: e
+    AB39: b
+    AB38: a
+    AB04: i

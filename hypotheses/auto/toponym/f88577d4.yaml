@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_olunthos_KN_Zf_13_6_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''olunthos''
+  pinned to KN Zf 13 tokens [6..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: olunthos
+  phonemes:
+  - o
+  - l
+  - u
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: Olynthos (Chalkidike town with -nthos suffix)
+  citation: Beekes 2010 s.v. Olynthos; Furnée 1972 §123.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 12
+  sign_to_phoneme:
+    AB39: o
+    AB44: l
+    AB03: u
+    AB57: n
+    AB59: th
+    AB53: o
+    AB09: s

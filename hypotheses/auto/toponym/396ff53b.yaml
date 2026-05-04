@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_aios_GO_Wc_1a_0_3
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''aios''
+  pinned to GO Wc 1a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: aios
+  phonemes:
+  - a
+  - i
+  - o
+  - s
+  gloss_hint: -aios (Pre-Greek substrate adjective suffix)
+  citation: Beekes 2010 vol. 2 appendix.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: a
+    AB31: i
+    AB58: o
+    AB80: s

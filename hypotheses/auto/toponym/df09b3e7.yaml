@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_gor_ARKH_5_1_3
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''gor''
+  pinned to ARKH 5 tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: gor
+  phonemes:
+  - g
+  - o
+  - r
+  gloss_hint: gor- (initial fragment; Gortyn)
+  citation: Beekes 2010 s.v. Gortyn.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB51: g
+    AB30: o
+    AB59: r

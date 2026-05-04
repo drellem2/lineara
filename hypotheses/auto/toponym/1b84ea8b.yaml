@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_korinthos_KN_Zf_13_5_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''korinthos''
+  pinned to KN Zf 13 tokens [5..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: korinthos
+  phonemes:
+  - k
+  - o
+  - r
+  - i
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: Korinthos (Corinth)
+  citation: Beekes 2010 s.v. Korinthos; Furnée 1972 §123 (-nthos suffix).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 12
+  sign_to_phoneme:
+    A301: k
+    AB39: o
+    AB44: r
+    AB03: i
+    AB57: n
+    AB59: th
+    AB53: o
+    AB09: s

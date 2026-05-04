@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_hymettos_KN_Zc_7_14_21
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''hymettos''
+  pinned to KN Zc 7 tokens [14..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: hymettos
+  phonemes:
+  - h
+  - u
+  - m
+  - e
+  - t
+  - t
+  - o
+  - s
+  gloss_hint: Hymettos (Athenian mountain)
+  citation: Beekes 2010 s.v. Hymettos; Furnée 1972 §124 (-ttos suffix).
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 21
+  sign_to_phoneme:
+    AB57: h
+    AB31: u
+    AB60: m
+    AB08: e
+    AB06: t
+    AB24: t
+    AB40: o
+    AB39: s

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_smurna_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''smurna''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: smurna
+  phonemes:
+  - s
+  - m
+  - u
+  - r
+  - n
+  - a
+  gloss_hint: Smyrna (Ionian coast city; pre-Greek)
+  citation: Beekes 2010 s.v. Smyrna; substrate -na suffix.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: s
+    AB45: m
+    AB26: u
+    AB78: r
+    AB76: n
+    AB10: a

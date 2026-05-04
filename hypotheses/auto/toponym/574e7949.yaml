@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tegea_HT_Zb_158b_1_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tegea''
+  pinned to HT Zb 158b tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tegea
+  phonemes:
+  - t
+  - e
+  - g
+  - e
+  - a
+  gloss_hint: Tegea (Arcadian town; pre-Greek)
+  citation: Beekes 2010 s.v. Tegea; Furnée 1972.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB67: t
+    AB53: e
+    AB04: g
+    AB28: e
+    AB57: a

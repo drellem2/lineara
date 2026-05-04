@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_pulos_HT_128a_5_9
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''pulos''
+  pinned to HT 128a tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: pulos
+  phonemes:
+  - p
+  - u
+  - l
+  - o
+  - s
+  gloss_hint: Pylos (Messenian Mycenaean palace)
+  citation: Beekes 2010 s.v. Pylos; Linear-B pu-ro.
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB69: p
+    AB26: u
+    AB56: l
+    AB09: o
+    AB13: s

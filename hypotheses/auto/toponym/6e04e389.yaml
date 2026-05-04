@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_melos_KN_Zf_13_8_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''melos''
+  pinned to KN Zf 13 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: melos
+  phonemes:
+  - m
+  - e
+  - l
+  - o
+  - s
+  gloss_hint: Melos (Cycladic island; Linear-A inscription site)
+  citation: Beekes 2010 s.v. Melos; Linear-A finds at Phylakopi.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB03: m
+    AB57: e
+    AB59: l
+    AB53: o
+    AB09: s

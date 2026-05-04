@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lemnos_KN_Zf_13_8_13
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lemnos''
+  pinned to KN Zf 13 tokens [8..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lemnos
+  phonemes:
+  - l
+  - e
+  - m
+  - n
+  - o
+  - s
+  gloss_hint: Lemnos (Aegean island; non-Greek inscriptions attested)
+  citation: Beekes 2010 s.v. Lemnos; Eteocretan/Tyrrhenian connection (Beekes vol.
+    2 §6).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 8
+  - 13
+  sign_to_phoneme:
+    AB03: l
+    AB57: e
+    AB59: m
+    AB53: n
+    AB09: o
+    AB04: s

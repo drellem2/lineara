@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_par_ARKH_5_6_8
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''par''
+  pinned to ARKH 5 tokens [6..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: par
+  phonemes:
+  - p
+  - a
+  - r
+  gloss_hint: par- (initial fragment; Parnassos / Paros)
+  citation: Beekes 2010 s.v. Parnassos.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 6
+  - 8
+  sign_to_phoneme:
+    AB08: p
+    AB01: a
+    AB02: r

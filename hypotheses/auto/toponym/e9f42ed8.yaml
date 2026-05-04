@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_aso_HT_108_9_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''aso''
+  pinned to HT 108 tokens [9..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: aso
+  phonemes:
+  - a
+  - s
+  - o
+  gloss_hint: -aso- (substrate cluster preceding -s; Knossos = kno + as + sos)
+  citation: Furnée 1972 §122.
+equation:
+  inscription_id: HT 108
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB07: a
+    AB06: s
+    AB02: o

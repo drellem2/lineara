@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_muke_HT_119_11_14
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''muke''
+  pinned to HT 119 tokens [11..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: muke
+  phonemes:
+  - m
+  - u
+  - k
+  - e
+  gloss_hint: muke- (initial fragment; Mukenai / Mycenae)
+  citation: Beekes 2010 s.v. Mukenai.
+equation:
+  inscription_id: HT 119
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    AB81: m
+    AB56: u
+    AB06: k
+    AB69: e

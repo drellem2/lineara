@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_aptara_KN_Zf_13_6_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''aptara''
+  pinned to KN Zf 13 tokens [6..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: aptara
+  phonemes:
+  - a
+  - p
+  - t
+  - a
+  - r
+  - a
+  gloss_hint: Aptara (NW Cretan town)
+  citation: Beekes 2010 s.v. Aptara; Linear-B Aptarwa.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 11
+  sign_to_phoneme:
+    AB39: a
+    AB44: p
+    AB03: t
+    AB57: a
+    AB59: r
+    AB53: a

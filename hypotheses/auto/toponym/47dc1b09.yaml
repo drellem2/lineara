@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_nax_HT_123b_42_45
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''nax''
+  pinned to HT 123b tokens [42..45].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: nax
+  phonemes:
+  - n
+  - a
+  - k
+  - s
+  gloss_hint: nak- / nax- (initial fragment; Naxos)
+  citation: Beekes 2010 s.v. Naxos.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 42
+  - 45
+  sign_to_phoneme:
+    AB51: n
+    AB80: a
+    AB28: k
+    AB06: s

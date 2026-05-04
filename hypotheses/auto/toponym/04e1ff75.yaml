@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ephesos_KN_Zc_7_14_20
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ephesos''
+  pinned to KN Zc 7 tokens [14..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ephesos
+  phonemes:
+  - e
+  - p
+  - h
+  - e
+  - s
+  - o
+  - s
+  gloss_hint: Ephesos (Ionian coast major city; pre-Greek Apaša)
+  citation: Beekes 2010 s.v. Ephesos; Hittite Apaša carryover.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 20
+  sign_to_phoneme:
+    AB57: e
+    AB31: p
+    AB60: h
+    AB08: e
+    AB06: s
+    AB24: o
+    AB40: s

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_andos_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''andos''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: andos
+  phonemes:
+  - a
+  - n
+  - d
+  - o
+  - s
+  gloss_hint: -andos (substrate ending; broader -nd- family)
+  citation: Furnée 1972 §128.
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: a
+    AB07: n
+    AB06: d
+    AB58: o
+    AB77: s

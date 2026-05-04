@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ala_ARKH_1a_22_24
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ala''
+  pinned to ARKH 1a tokens [22..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ala
+  phonemes:
+  - a
+  - l
+  - a
+  gloss_hint: ala- (substrate cluster fragment)
+  citation: Furnée 1972; Kretschmer 1896 §57 on /ala-/ substrate.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 22
+  - 24
+  sign_to_phoneme:
+    AB67: a
+    AB31: l
+    AB24: a

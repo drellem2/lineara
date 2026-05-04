@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ikaria_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ikaria''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ikaria
+  phonemes:
+  - i
+  - k
+  - a
+  - r
+  - i
+  - a
+  gloss_hint: Ikaria (Aegean island)
+  citation: Beekes 2010 s.v. Ikaria.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: i
+    AB45: k
+    AB26: a
+    AB78: r
+    AB76: i
+    AB10: a

@@ -107,6 +107,25 @@ def build_pool_context(pool: dict) -> dict:
     return {"bigram_model": bigram_model, "by_surface": by_surface}
 
 
+def build_pool_registry(pools_dir: Path) -> dict[str, dict]:
+    """Load every ``pools/*.yaml`` and return ``{pool_name: pool_ctx}``.
+
+    Pool-specific bigram dispatch (mg-c2af). Each candidate hypothesis
+    declares its ``source_pool`` and the runner selects the matching
+    bigram model from this registry; falling back to a single sweep-wide
+    pool produced uninterpretable rare-sign penalties for cross-pool
+    candidates (mg-7c8c). Files are loaded in sorted basename order so
+    the resulting models are byte-identical across re-runs.
+    """
+    registry: dict[str, dict] = {}
+    if not pools_dir.exists():
+        return registry
+    for path in sorted(pools_dir.glob("*.yaml")):
+        pool = load_pool(path)
+        registry[pool["pool"]] = build_pool_context(pool)
+    return registry
+
+
 def _existing_runs(results_path: Path) -> set[tuple[str, str, str]]:
     """Return the (hypothesis_hash, corpus_snapshot, metric) triples already
     present in the result stream. Used to skip re-scoring during a resume."""
@@ -239,20 +258,25 @@ def _score_one(
         row["score_control_z"] = float(result.score_control_z)
         row["metric_notes"] = result.metric_notes
     elif metric_name == "local_fit_v1":
-        if pool_ctx is None:
-            raise ValueError("local_fit_v1 requires a pool context (--pool)")
+        # Pool-specific dispatch (mg-c2af): pool_ctx may be None for
+        # hypotheses whose source_pool has no matching pool YAML; the
+        # metric handles that by skipping the bigram term and rescaling
+        # the position weight.
+        bigram_model = pool_ctx["bigram_model"] if pool_ctx is not None else None
         result = local_fit_v1(
             stream,
             signs,
             phonemes,
-            pool_ctx["bigram_model"],
+            bigram_model,
             sign_counts=sign_counts,
             fingerprints=fingerprints,
         )
         row["score"] = float(result.score)
         row["metric_notes"] = result.metric_notes
         row["position_term"] = float(result.position_term)
-        row["bigram_term"] = float(result.bigram_term)
+        row["bigram_term"] = (
+            float(result.bigram_term) if result.bigram_term is not None else None
+        )
         row["length_penalty"] = float(result.length_penalty)
         row["rare_sign_correction"] = float(result.rare_sign_correction)
     elif metric_name == "partial_mapping_compression_delta_v0":
@@ -262,13 +286,21 @@ def _score_one(
         row["bits_per_sign_baseline"] = float(result.bits_per_sign_baseline)
         row["bits_per_sign_mapped"] = float(result.bits_per_sign_mapped)
     elif metric_name == "geographic_genre_fit_v1":
-        if pool_ctx is None:
-            raise ValueError(
-                "geographic_genre_fit_v1 requires a pool context (--pool)"
-            )
+        # Pool-specific dispatch (mg-c2af): if pool_ctx is None, fall
+        # back to the hypothesis's source_pool tag for the region (the
+        # _GG1_REGION_COMPAT lookup table covers cross-pool tags like
+        # 'linear_b'). Semantic_field becomes None and falls back to
+        # neutral 0.5 — anchors and scrambles don't carry semantic_field
+        # since they aren't pool entries.
         surface = hypothesis["root"]["surface"]
-        entry = pool_ctx["by_surface"].get(surface)
-        region = entry.get("region") if entry else None
+        entry = (
+            pool_ctx["by_surface"].get(surface) if pool_ctx is not None else None
+        )
+        region = entry.get("region") if entry else hypothesis.get("source_pool")
+        if region == "linear_b_carryover":
+            region = "linear_b"
+        elif region == "pre_greek_toponym":
+            region = "pre_greek"
         semantic_field = entry.get("semantic_field") if entry else None
         result = geographic_genre_fit_v1(
             region=region,
@@ -360,8 +392,18 @@ def run(
     repo_root: Path,
     metrics: list[str] | None = None,
     pool_path: Path | None = None,
+    pools_dir: Path | None = None,
+    force_rescore: bool = False,
 ) -> dict:
-    """Drive the bulk sweep and return a summary dict."""
+    """Drive the bulk sweep and return a summary dict.
+
+    Pool-specific bigram dispatch (mg-c2af): the runner builds a registry
+    of all pools under ``pools_dir`` and selects each hypothesis's
+    bigram model via its ``source_pool`` tag. ``pool_path``, when
+    supplied, becomes a single-pool override applied to every
+    hypothesis (legacy behavior; useful for diagnostic re-runs that
+    deliberately ignore source_pool).
+    """
     if not metrics:
         metrics = ["local_fit_v0"]
     for m in metrics:
@@ -381,36 +423,46 @@ def run(
     fingerprints = sign_position_fingerprints(stream)
     sign_counts = _sign_corpus_counts(stream)
 
-    pool_ctx: dict | None = None
-    if pool_path is None:
-        # Default: infer from manifest filename ("aquitanian.manifest.jsonl"
-        # → pools/aquitanian.yaml). The pool is required only if a v1
-        # metric is selected; v0 path doesn't reference it.
-        inferred_name = manifest_path.name
-        if inferred_name.endswith(".manifest.jsonl"):
-            pool_name = inferred_name[: -len(".manifest.jsonl")]
-            candidate = _DEFAULT_POOLS_DIR / f"{pool_name}.yaml"
-            if candidate.exists():
-                pool_path = candidate
+    if pools_dir is None:
+        pools_dir = _DEFAULT_POOLS_DIR
+
+    forced_pool_ctx: dict | None = None
     if pool_path is not None and pool_path.exists():
-        pool_ctx = build_pool_context(load_pool(pool_path))
+        forced_pool_ctx = build_pool_context(load_pool(pool_path))
+        try:
+            display = pool_path.relative_to(repo_root)
+        except ValueError:
+            display = pool_path
         print(
-            f"pool: {pool_path.relative_to(repo_root) if repo_root in pool_path.parents else pool_path}  |  "
-            f"entries: {len(pool_ctx['by_surface'])}  |  "
-            f"bigram vocab: {len(pool_ctx['bigram_model'].vocab)}",
+            f"forced pool override: {display}  |  "
+            f"entries: {len(forced_pool_ctx['by_surface'])}  |  "
+            f"bigram vocab: {len(forced_pool_ctx['bigram_model'].vocab)}",
             file=sys.stderr,
         )
-    elif any(m in ("local_fit_v1", "geographic_genre_fit_v1") for m in metrics):
+
+    pool_registry = build_pool_registry(pools_dir)
+    if pool_registry:
+        print(
+            "pool registry: "
+            + ", ".join(
+                f"{name}({len(ctx['by_surface'])})"
+                for name, ctx in sorted(pool_registry.items())
+            ),
+            file=sys.stderr,
+        )
+    elif forced_pool_ctx is None and any(
+        m in ("local_fit_v1", "geographic_genre_fit_v1") for m in metrics
+    ):
         raise ValueError(
-            "v1 metrics require a pool YAML; pass --pool or use a manifest "
-            "whose name matches a pool under pools/."
+            "v1 metrics require pool YAMLs under pools/; none found and no "
+            "--pool override given."
         )
 
     result_validator = Draft202012Validator(
         json.loads(_RESULT_SCHEMA_PATH.read_text(encoding="utf-8"))
     )
 
-    seen = _existing_runs(results_path)
+    seen = set() if force_rescore else _existing_runs(results_path)
     n_already = sum(
         1
         for r in manifest
@@ -437,6 +489,7 @@ def run(
             record = None
             signs = None
             phonemes = None
+            pool_ctx: dict | None = None
             for metric_name in metrics:
                 key = (manifest_row["hypothesis_hash"], snapshot, metric_name)
                 if key in seen:
@@ -461,6 +514,17 @@ def run(
                     record = _resolve_inscription(records, equation["inscription_id"])
                     signs = _signs_from_equation(record, equation)
                     phonemes = list(hypothesis["root"]["phonemes"])
+                    # Pool-specific bigram dispatch (mg-c2af). Forced
+                    # override wins when supplied; otherwise look up
+                    # by hypothesis.source_pool. Unmatched ⇒ None,
+                    # which the v1 metric handles by skipping bigram.
+                    if forced_pool_ctx is not None:
+                        pool_ctx = forced_pool_ctx
+                    else:
+                        src_pool = hypothesis.get("source_pool")
+                        pool_ctx = (
+                            pool_registry.get(src_pool) if src_pool else None
+                        )
                 row = _score_one(
                     metric_name=metric_name,
                     hypothesis_path=hyp_path,
@@ -532,8 +596,17 @@ def main(argv: list[str] | None = None) -> int:
         "--pool",
         type=Path,
         default=None,
-        help="Path to the pool YAML (e.g. pools/aquitanian.yaml). Required for "
-        "v1 metrics. Inferred from the manifest filename when omitted.",
+        help="Path to a single pool YAML to FORCE for every hypothesis. "
+        "Default behavior (recommended) is per-hypothesis dispatch via "
+        "source_pool against pools/ — this flag exists for diagnostic "
+        "re-runs that deliberately ignore source_pool.",
+    )
+    parser.add_argument(
+        "--pools-dir",
+        type=Path,
+        default=_DEFAULT_POOLS_DIR,
+        help="Directory of pool YAMLs used for per-hypothesis source_pool "
+        "dispatch (default: pools/).",
     )
     parser.add_argument(
         "--progress-every",
@@ -547,6 +620,12 @@ def main(argv: list[str] | None = None) -> int:
         default=_REPO_ROOT,
         help="Repo root used for hypothesis-path resolution and corpus snapshot.",
     )
+    parser.add_argument(
+        "--force-rescore",
+        action="store_true",
+        help="Always append; ignore the (hash, snapshot, metric) resume cache. "
+        "Used by mg-c2af to re-score under the fixed pool-bigram dispatch.",
+    )
     args = parser.parse_args(argv)
 
     metrics = [m.strip() for m in args.metrics.split(",") if m.strip()]
@@ -559,6 +638,8 @@ def main(argv: list[str] | None = None) -> int:
         repo_root=args.repo_root,
         metrics=metrics,
         pool_path=args.pool,
+        pools_dir=args.pools_dir,
+        force_rescore=args.force_rescore,
     )
     print(json.dumps(summary, indent=2))
     return 0

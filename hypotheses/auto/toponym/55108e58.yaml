@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_melitos_KN_Zf_13_5_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''melitos''
+  pinned to KN Zf 13 tokens [5..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: melitos
+  phonemes:
+  - m
+  - i
+  - l
+  - e
+  - t
+  - o
+  - s
+  gloss_hint: Miletos (Ionian coast major city; Hittite Millawanda)
+  citation: Beekes 2010 s.v. Miletos; Hittite-Anatolian carryover.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 11
+  sign_to_phoneme:
+    A301: m
+    AB39: i
+    AB44: l
+    AB03: e
+    AB57: t
+    AB59: o
+    AB53: s

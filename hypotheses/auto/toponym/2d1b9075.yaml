@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_paros_HT_95a_21_25
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''paros''
+  pinned to HT 95a tokens [21..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  gloss_hint: Paros (Cycladic island)
+  citation: Beekes 2010 s.v. Paros.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 25
+  sign_to_phoneme:
+    AB07: p
+    AB45: a
+    AB26: r
+    AB78: o
+    AB76: s

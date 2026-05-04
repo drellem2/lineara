@@ -201,6 +201,7 @@ class SweepRunnerTest(unittest.TestCase):
             note=note,
             progress_every=0,
             repo_root=self.tmp,
+            pools_dir=self.pools_dir,
         )
 
     def _read_yaml_dir(self) -> dict[str, str]:

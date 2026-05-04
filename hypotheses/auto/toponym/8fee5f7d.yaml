@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_phai_HT_120_21_24
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''phai''
+  pinned to HT 120 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: phai
+  phonemes:
+  - p
+  - h
+  - a
+  - i
+  gloss_hint: phai- (initial fragment; Phaistos)
+  citation: Beekes 2010 s.v. Phaistos.
+equation:
+  inscription_id: HT 120
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB67: p
+    AB27: h
+    AB59: a
+    AB06: i

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_per_GO_Wc_1a_0_2
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''per''
+  pinned to GO Wc 1a tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: per
+  phonemes:
+  - p
+  - e
+  - r
+  gloss_hint: per- (initial fragment; Pergamos / Persa)
+  citation: Beekes 2010 s.v. Pergamos.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB08: p
+    AB31: e
+    AB58: r

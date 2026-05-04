@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ther_ARKH_2_9_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ther''
+  pinned to ARKH 2 tokens [9..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ther
+  phonemes:
+  - th
+  - e
+  - r
+  gloss_hint: ther- (initial fragment; Thera)
+  citation: Beekes 2010 s.v. Thera.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB41: th
+    AB01: e
+    AB05: r

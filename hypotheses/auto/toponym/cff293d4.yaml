@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_priene_KN_Zc_6_19_25
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''priene''
+  pinned to KN Zc 6 tokens [19..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: priene
+  phonemes:
+  - p
+  - r
+  - i
+  - e
+  - n
+  - e
+  gloss_hint: Priene (Ionian coast city)
+  citation: Beekes 2010 s.v. Priene.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 25
+  sign_to_phoneme:
+    AB03: p
+    AB81: r
+    AB55: i
+    AB10: e
+    AB28: n
+    AB79: e

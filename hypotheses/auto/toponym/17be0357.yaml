@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_athenai_KN_Zc_6_18_24
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''athenai''
+  pinned to KN Zc 6 tokens [18..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: athenai
+  phonemes:
+  - a
+  - th
+  - e
+  - n
+  - a
+  - i
+  gloss_hint: Athenai (Athens; cf. pre-Greek Athena)
+  citation: Beekes 2010 s.v. Athena (substrate goddess).
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 24
+  sign_to_phoneme:
+    AB06: a
+    AB03: th
+    AB81: e
+    AB55: n
+    AB10: a
+    AB28: i

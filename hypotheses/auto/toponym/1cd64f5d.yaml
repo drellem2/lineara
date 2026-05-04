@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lukia_KN_Zc_6_19_24
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lukia''
+  pinned to KN Zc 6 tokens [19..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lukia
+  phonemes:
+  - l
+  - u
+  - k
+  - i
+  - a
+  gloss_hint: Lykia (Lycia; SW Anatolia)
+  citation: Beekes 2010 s.v. Lykia; Hittite Lukka.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 24
+  sign_to_phoneme:
+    AB03: l
+    AB81: u
+    AB55: k
+    AB10: i
+    AB28: a

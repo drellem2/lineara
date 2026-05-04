@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_olous_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''olous''
+  pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: olous
+  phonemes:
+  - o
+  - l
+  - o
+  - u
+  - s
+  gloss_hint: Olous (NE Cretan coast)
+  citation: Beekes 2010 s.v. Olous.
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: o
+    AB45: l
+    AB80: o
+    A323: u
+    AB06: s

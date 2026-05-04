@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_olympos_KN_Zc_7_15_21
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''olympos''
+  pinned to KN Zc 7 tokens [15..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: olympos
+  phonemes:
+  - o
+  - l
+  - u
+  - m
+  - p
+  - o
+  - s
+  gloss_hint: Olympos (sacred mountain; pre-Greek)
+  citation: Beekes 2010 s.v. Olympos; argued non-IE substrate.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 21
+  sign_to_phoneme:
+    AB31: o
+    AB60: l
+    AB08: u
+    AB06: m
+    AB24: p
+    AB40: o
+    AB39: s

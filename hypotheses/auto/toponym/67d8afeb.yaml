@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_per_HT_104_13_15
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''per''
+  pinned to HT 104 tokens [13..15].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: per
+  phonemes:
+  - p
+  - e
+  - r
+  gloss_hint: per- (initial fragment; Pergamos / Persa)
+  citation: Beekes 2010 s.v. Pergamos.
+equation:
+  inscription_id: HT 104
+  span:
+  - 13
+  - 15
+  sign_to_phoneme:
+    AB28: p
+    AB51: e
+    AB37: r

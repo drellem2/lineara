@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ala_HT_108_0_2
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ala''
+  pinned to HT 108 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ala
+  phonemes:
+  - a
+  - l
+  - a
+  gloss_hint: ala- (substrate cluster fragment)
+  citation: Furnée 1972; Kretschmer 1896 §57 on /ala-/ substrate.
+equation:
+  inscription_id: HT 108
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB67: a
+    AB27: l
+    AB59: a

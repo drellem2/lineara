@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_par_HT_108_1_3
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''par''
+  pinned to HT 108 tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: par
+  phonemes:
+  - p
+  - a
+  - r
+  gloss_hint: par- (initial fragment; Parnassos / Paros)
+  citation: Beekes 2010 s.v. Parnassos.
+equation:
+  inscription_id: HT 108
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB27: p
+    AB59: a
+    AB06: r

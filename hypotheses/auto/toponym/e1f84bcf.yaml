@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_melos_HT_122b_13_17
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''melos''
+  pinned to HT 122b tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: melos
+  phonemes:
+  - m
+  - e
+  - l
+  - o
+  - s
+  gloss_hint: Melos (Cycladic island; Linear-A inscription site)
+  citation: Beekes 2010 s.v. Melos; Linear-A finds at Phylakopi.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB08: m
+    AB60: e
+    AB65: l
+    AB10: o
+    AB45: s

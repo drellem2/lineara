@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_itanos_KN_Zc_6_18_24
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''itanos''
+  pinned to KN Zc 6 tokens [18..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: itanos
+  phonemes:
+  - i
+  - t
+  - a
+  - n
+  - o
+  - s
+  gloss_hint: Itanos (Cretan eastern town)
+  citation: Beekes 2010 s.v. Itanos.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 24
+  sign_to_phoneme:
+    AB06: i
+    AB03: t
+    AB81: a
+    AB55: n
+    AB10: o
+    AB28: s

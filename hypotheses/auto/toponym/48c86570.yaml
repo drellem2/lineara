@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tarsos_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tarsos''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tarsos
+  phonemes:
+  - t
+  - a
+  - r
+  - s
+  - o
+  - s
+  gloss_hint: Tarsos (Cilician town)
+  citation: Beekes 2010 s.v. Tarsos; possibly older ʔaršuwa.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: t
+    AB45: a
+    AB26: r
+    AB78: s
+    AB76: o
+    AB10: s

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_kuthera_GO_Wc_1a_0_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''kuthera''
+  pinned to GO Wc 1a tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: kuthera
+  phonemes:
+  - k
+  - u
+  - th
+  - e
+  - r
+  - a
+  gloss_hint: Kythera (south-Aegean island; Linear-A site)
+  citation: Beekes 2010 s.v. Kythera.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: k
+    AB31: u
+    AB58: th
+    AB80: e
+    AB28: r
+    AB09: a

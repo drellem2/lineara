@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lesbos_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lesbos''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lesbos
+  phonemes:
+  - l
+  - e
+  - s
+  - b
+  - o
+  - s
+  gloss_hint: Lesbos (Aegean island)
+  citation: Beekes 2010 s.v. Lesbos.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: l
+    AB45: e
+    AB26: s
+    AB78: b
+    AB76: o
+    AB10: s

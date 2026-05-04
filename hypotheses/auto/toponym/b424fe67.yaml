@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_krete_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''krete''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: krete
+  phonemes:
+  - k
+  - r
+  - e
+  - t
+  - e
+  gloss_hint: Krete (Crete itself)
+  citation: Beekes 2010 s.v. Krete; argued non-IE substrate.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: k
+    AB31: r
+    AB58: e
+    AB80: t
+    AB28: e

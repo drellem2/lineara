@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_gor_GO_Wc_1a_2_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''gor''
+  pinned to GO Wc 1a tokens [2..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: gor
+  phonemes:
+  - g
+  - o
+  - r
+  gloss_hint: gor- (initial fragment; Gortyn)
+  citation: Beekes 2010 s.v. Gortyn.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 2
+  - 4
+  sign_to_phoneme:
+    AB58: g
+    AB80: o
+    AB28: r

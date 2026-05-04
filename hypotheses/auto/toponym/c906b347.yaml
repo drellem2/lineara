@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_olu_HT_104_20_22
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''olu''
+  pinned to HT 104 tokens [20..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: olu
+  phonemes:
+  - o
+  - l
+  - u
+  gloss_hint: olu- (initial fragment; Olympos / Olunthos / Olous)
+  citation: Beekes 2010 s.v. Olympos.
+equation:
+  inscription_id: HT 104
+  span:
+  - 20
+  - 22
+  sign_to_phoneme:
+    AB01: o
+    AB58: l
+    AB37: u

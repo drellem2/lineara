@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_aspendos_KN_Zf_13_3_10
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''aspendos''
+  pinned to KN Zf 13 tokens [3..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: aspendos
+  phonemes:
+  - a
+  - s
+  - p
+  - e
+  - n
+  - d
+  - o
+  - s
+  gloss_hint: Aspendos (Pamphylian river-mouth town)
+  citation: Beekes 2010 s.v. Aspendos; Furnée 1972 §128 (-ndos suffix).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 10
+  sign_to_phoneme:
+    AB41: a
+    AB07: s
+    A301: p
+    AB39: e
+    AB44: n
+    AB03: d
+    AB57: o
+    AB59: s

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_itanos_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''itanos''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: itanos
+  phonemes:
+  - i
+  - t
+  - a
+  - n
+  - o
+  - s
+  gloss_hint: Itanos (Cretan eastern town)
+  citation: Beekes 2010 s.v. Itanos.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: i
+    AB45: t
+    AB26: a
+    AB78: n
+    AB76: o
+    AB10: s

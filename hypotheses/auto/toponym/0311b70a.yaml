@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_andos_HT_Zb_159_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''andos''
+  pinned to HT Zb 159 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: andos
+  phonemes:
+  - a
+  - n
+  - d
+  - o
+  - s
+  gloss_hint: -andos (substrate ending; broader -nd- family)
+  citation: Furnée 1972 §128.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: a
+    AB06: n
+    AB55: d
+    AB41: o
+    AB57: s

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_krete_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''krete''
+  pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: krete
+  phonemes:
+  - k
+  - r
+  - e
+  - t
+  - e
+  gloss_hint: Krete (Crete itself)
+  citation: Beekes 2010 s.v. Krete; argued non-IE substrate.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: k
+    AB03: r
+    AB81: e
+    AB55: t
+    AB10: e

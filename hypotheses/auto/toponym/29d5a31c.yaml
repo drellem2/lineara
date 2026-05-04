@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lemnos_GO_Wc_1a_0_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lemnos''
+  pinned to GO Wc 1a tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lemnos
+  phonemes:
+  - l
+  - e
+  - m
+  - n
+  - o
+  - s
+  gloss_hint: Lemnos (Aegean island; non-Greek inscriptions attested)
+  citation: Beekes 2010 s.v. Lemnos; Eteocretan/Tyrrhenian connection (Beekes vol.
+    2 §6).
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: l
+    AB31: e
+    AB58: m
+    AB80: n
+    AB28: o
+    AB09: s

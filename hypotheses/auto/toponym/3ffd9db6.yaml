@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_hierapytna_KN_Zf_13_3_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''hierapytna''
+  pinned to KN Zf 13 tokens [3..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: hierapytna
+  phonemes:
+  - h
+  - i
+  - e
+  - r
+  - a
+  - p
+  - u
+  - t
+  - n
+  - a
+  gloss_hint: Hierapytna (south-east Cretan coast)
+  citation: Beekes 2010 s.v. Hierapytna; substrate -tna suffix.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 12
+  sign_to_phoneme:
+    AB41: h
+    AB07: i
+    A301: e
+    AB39: r
+    AB44: a
+    AB03: p
+    AB57: u
+    AB59: t
+    AB53: n
+    AB09: a

@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_kalumnos_KN_Zc_7_14_21
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''kalumnos''
+  pinned to KN Zc 7 tokens [14..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: kalumnos
+  phonemes:
+  - k
+  - a
+  - l
+  - u
+  - m
+  - n
+  - o
+  - s
+  gloss_hint: Kalymnos (Dodecanese island)
+  citation: Beekes 2010 s.v. Kalumnos.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 21
+  sign_to_phoneme:
+    AB57: k
+    AB31: a
+    AB60: l
+    AB08: u
+    AB06: m
+    AB24: n
+    AB40: o
+    AB39: s

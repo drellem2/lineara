@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lyktos_GO_Wc_1a_0_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lyktos''
+  pinned to GO Wc 1a tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lyktos
+  phonemes:
+  - l
+  - u
+  - k
+  - t
+  - o
+  - s
+  gloss_hint: Lyktos (Cretan central highland town)
+  citation: Beekes 2010 s.v. Lyktos; Linear-B ru-ki-to (Knossos tablets).
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: l
+    AB31: u
+    AB58: k
+    AB80: t
+    AB28: o
+    AB09: s

@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_knossos_KN_Zf_13_2_8
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''knossos''
+  pinned to KN Zf 13 tokens [2..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: knossos
+  phonemes:
+  - k
+  - n
+  - o
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Knossos (Cretan palatial site)
+  citation: Beekes 2010 vol. 2 s.v. Knossos; Furnée 1972 §122 (-ssos suffix).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 8
+  sign_to_phoneme:
+    AB24: k
+    AB41: n
+    AB07: o
+    A301: s
+    AB39: s
+    AB44: o
+    AB03: s

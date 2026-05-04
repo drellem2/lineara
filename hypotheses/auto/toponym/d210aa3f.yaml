@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lab_HT_108_9_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lab''
+  pinned to HT 108 tokens [9..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lab
+  phonemes:
+  - l
+  - a
+  - b
+  gloss_hint: lab- (initial fragment; Lebena via /la/-)
+  citation: Kretschmer 1896; Beekes vol. 2 on Pre-Greek lab- cluster.
+equation:
+  inscription_id: HT 108
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB07: l
+    AB06: a
+    AB02: b

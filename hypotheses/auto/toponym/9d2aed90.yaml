@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_dikte_HT_110a_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''dikte''
+  pinned to HT 110a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: dikte
+  phonemes:
+  - d
+  - i
+  - k
+  - t
+  - e
+  gloss_hint: Dikte (sacred mountain, eastern Crete)
+  citation: Beekes 2010 s.v. Dikte; argued non-IE substrate.
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB41: d
+    AB51: i
+    AB34: k
+    AB81: t
+    AB73: e

@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lykabettos_KN_Zf_13_4_13
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lykabettos''
+  pinned to KN Zf 13 tokens [4..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lykabettos
+  phonemes:
+  - l
+  - u
+  - k
+  - a
+  - b
+  - e
+  - t
+  - t
+  - o
+  - s
+  gloss_hint: Lykabettos (Athenian hill)
+  citation: Beekes 2010 s.v. Lykabettos.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 13
+  sign_to_phoneme:
+    AB07: l
+    A301: u
+    AB39: k
+    AB44: a
+    AB03: b
+    AB57: e
+    AB59: t
+    AB53: t
+    AB09: o
+    AB04: s

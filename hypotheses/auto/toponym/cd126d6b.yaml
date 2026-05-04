@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_smurna_KN_Zf_13_3_8
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''smurna''
+  pinned to KN Zf 13 tokens [3..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: smurna
+  phonemes:
+  - s
+  - m
+  - u
+  - r
+  - n
+  - a
+  gloss_hint: Smyrna (Ionian coast city; pre-Greek)
+  citation: Beekes 2010 s.v. Smyrna; substrate -na suffix.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 8
+  sign_to_phoneme:
+    AB41: s
+    AB07: m
+    A301: u
+    AB39: r
+    AB44: n
+    AB03: a

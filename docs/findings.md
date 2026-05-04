@@ -904,6 +904,257 @@ lookup) — D, A, E all fall back to 0.5.
 - No metrics or harness internals modified — this is a
   methodology ticket per the brief.
 
+## Findings from mg-c2af
+
+Three coupled changes shipped: (a) pool-specific bigram dispatch in
+`harness.run` and `scripts/run_sweep.py`, (b) toponym pool expansion
+from 35 → 112 entries with derived fragment surfaces, (c) per-surface
+aggregation as a new `scripts/rollup.py --by surface` mode and
+committed leaderboards. mg-7c8c diagnosed two separate problems —
+the runner was falling back to the Aquitanian bigram model for
+non-Aquitanian candidates, and the metrics genuinely cannot grade
+within-surface plausibility-of-context at any feasible n. mg-c2af
+fixes the first and pivots research strategy in light of the second.
+
+### Pool-bigram dispatch fix — pre/post score deltas (n=100 curated)
+
+The 100 mg-7c8c curated hypotheses were re-scored under the fixed
+runner. The fix's largest effect lands on the curated buckets whose
+`source_pool` did not match a `pools/<name>.yaml` (anchors with
+`source_pool: linear_b_carryover`, scrambles with
+`source_pool: random_scramble`, and `pre_greek_toponym` curated
+fragments). Previously these hypotheses were silently routed through
+the Aquitanian bigram model — every bigram of their phonemes hit the
+smoothing floor, dragging their `local_fit_v1` scores far below
+the level pool-matched candidates were graded at. With pool dispatch
+in place these hypotheses now use a `null` bigram model and the
+metric rescales the position weight to compensate (see
+`harness/metrics.py local_fit_v1` for the renormalization formula).
+
+Median `local_fit_v1` change by curated bucket (n=20 each post-fix):
+
+| bucket           | pre median | post median | Δmedian |
+|------------------|-----------:|------------:|--------:|
+| anchor           |    -4.4781 |     -0.6709 | +3.8072 |
+| scramble         |    -4.0600 |     -0.6422 | +3.4179 |
+| plausible (Aqu.) |    -2.8573 |     -2.7863 | +0.0710 |
+| wrong (Aqu.)     |    -2.6871 |     -2.7168 | -0.0297 |
+
+Anchors and scrambles jumped by ~+3.5 because they're now scored
+under the null-bigram path; plausible/wrong Aquitanian buckets are
+nearly unchanged because they were already getting the right pool's
+bigram and the per-letter position overrides do most of the work.
+Per-hypothesis Δscore: n=80, mean=+1.49, range [-0.11, +3.88].
+
+### Anchor-vs-scramble direction flip — partly resolved
+
+mg-7c8c flagged that `anchor < scramble` under `local_fit_v1` was
+the wrong direction (real Linear-B carryover readings should beat
+random IPA at the same span). Pre-fix Cliff δ(anchor, scramble) =
+**-0.69** (large effect, wrong direction). Post-fix Cliff δ =
+**-0.03** (essentially zero — no separation). The wrong-direction
+*magnitude* collapsed almost entirely, but the metric still does
+not pick anchors out from scrambles in this curated set.
+
+Why the residual: anchors and scrambles share signs by construction
+(they pin the same span; only the proposed phonemes differ). With
+the bigram term excluded for both, the score is
+`(A+B)*pos - C*length_penalty - D*rare_sign`. The position term's
+discrimination depends on whether the anchor's phonemes (real
+Linear-A carryovers like `ku-ro`) have per-letter position-profile
+overrides in `harness/metrics._PHON_POSITION_OVERRIDES` and whether
+the scramble's phonemes (random IPA like `q-ʁ`) fall back to the
+class-default profile. For most curated pairs the override and
+default differ only by ~0.13 log-units per sign — well within
+within-bucket dispersion at n=20. The fix corrected the magnitude
+confound (anchors are no longer punished by wrong-pool vocabulary);
+the discrimination ceiling is the position-term resolution itself,
+which is already known to be a v1 limit (mg-7c8c power calc).
+
+### Toponym bulk distribution shape (3,567 candidates, post-fix)
+
+The toponym pool expanded to 112 entries (35 full toponyms + 33
+derived fragment surfaces + 44 additional Beekes/Furnée/Kretschmer
+toponyms). The `scripts/generate_candidates.py --pool toponym` run
+emitted 3,567 candidates (cap_per_entry=50). Distribution:
+
+| metric                                       |    mean |  median |     sd | top 1% |
+|----------------------------------------------|--------:|--------:|-------:|-------:|
+| local_fit_v1                                 |  -2.473 |  -2.467 |  0.399 | -1.740 |
+| partial_mapping_compression_delta_v0 (pmcd)  | -93.253 | -104.00 | 129.09 | +296.0 |
+| geographic_genre_fit_v1                      |  +0.650 |  +0.700 |  0.111 | +0.850 |
+
+Comparison to Aquitanian (mg-23cc + mg-c2af re-score, 7,190 cand.):
+local_fit_v1 mean **-2.66** (sd 0.30), pmcd median **-96** (sd 110,
+top-1% +208), geo mean **+0.45**. Comparison to Etruscan (mg-23cc +
+mg-c2af re-score, 5,966 cand.): local_fit_v1 mean **-2.74** (sd
+0.21), pmcd median **-112** (sd 111, top-1% +192), geo mean **+0.57**.
+
+Toponym leads on every axis: highest local_fit_v1 mean, highest pmcd
+top-1%, highest geographic mean (the `pre_greek × Crete = 1.0`
+region-compat row pays off as designed). The toponym local_fit_v1
+sd is wider (0.40 vs Aqu. 0.30 vs Etr. 0.21) because the pool now
+has its own bigram model and the metric is finally discriminating
+between fragment families with different consonant-cluster structure.
+
+### Per-surface top-20 leaderboard (across all pools)
+
+Top 20 (pool, surface) pairs by per-surface median pmcd over
+≥10-candidate groups (`results/rollup.surface_aggregated.md`):
+
+| rank | pool        | surface  |   n | median_pmcd | best_pmcd | best_inscription |
+|-----:|-------------|----------|----:|------------:|----------:|------------------|
+|    1 | toponym     | ssos     |  50 |     +240.00 |   +520.00 | HT 110a          |
+|    2 | toponym     | knossos  |  13 |     +184.00 |   +536.00 | KN Zc 6          |
+|    3 | toponym     | assos    |  50 |     +180.00 |   +480.00 | KN Zc 6          |
+|    4 | aquitanian  | alaba    |  50 |     +172.00 |   +448.00 | ARKH 2           |
+|    5 | etruscan    | nene     |  50 |     +172.00 |   +288.00 | HT 117a          |
+|    6 | etruscan    | papa     |  50 |     +172.00 |   +288.00 | HT 117a          |
+|    7 | aquitanian  | atta     |  50 |     +160.00 |   +328.00 | HT 108           |
+|    8 | toponym     | lasaia   |  24 |     +124.00 |   +264.00 | KN Zc 6          |
+|    9 | aquitanian  | ama      |  50 |      +84.00 |   +312.00 | ARKH 2           |
+|   10 | aquitanian  | ere      |  50 |      +84.00 |   +312.00 | ARKH 2           |
+|   11 | aquitanian  | etxe     |  50 |      +84.00 |   +312.00 | ARKH 2           |
+|   12 | aquitanian  | iri      |  50 |      +84.00 |   +312.00 | ARKH 2           |
+|   13 | aquitanian  | non      |  50 |      +84.00 |   +312.00 | ARKH 2           |
+|   14 | etruscan    | ana      |  50 |      +84.00 |   +312.00 | ARKH 2           |
+|   15 | etruscan    | apa      |  50 |      +84.00 |   +312.00 | ARKH 2           |
+|   16 | toponym     | ala      |  50 |      +84.00 |   +312.00 | ARKH 2           |
+|   17 | toponym     | sos      |  50 |      +84.00 |   +312.00 | ARKH 2           |
+|   18 | toponym     | aptara   |  24 |      +80.00 |   +368.00 | KN Zc 6          |
+|   19 | etruscan    | matam    |  50 |      +76.00 |   +288.00 | GO Wc 1a         |
+|   20 | aquitanian  | hanna    |  50 |      +72.00 |   +400.00 | KN Zc 6          |
+
+Pool composition of the top-20: **toponym 7**, aquitanian 8,
+etruscan 5. Toponym does dominate the high-median band (3 of top 4),
+driven entirely by the substrate-suffix family `-ssos/-sos/-assos`
+(ranks 1, 3, 17 are pure suffix fragments; rank 2 is the full
+Knossos surface; rank 8 is Lasaia which contains the same -saia
+diagnostic; rank 16 is the substrate-cluster /ala-/). This is the
+expected pattern under Beekes 2010 vol. 2 §3-5: the diagnostic
+substrate suffixes are exactly the pieces that recur frequently
+in any Aegean-substrate signal.
+
+`results/rollup.surface_aggregated.md` (top-50 across all pools)
+plus per-pool views (`.aquitanian.md`, `.etruscan.md`,
+`.toponym.md`) committed.
+
+### Per-surface vs per-candidate ranking — the central methodological question
+
+Top-20 *individual* candidates by pmcd are dominated by toponym
+(17 of 20 are toponym surfaces; 11 of the top-50 are `ssos`
+fragment candidates). The top-20 *per-surface* leaderboard is
+similarly dominated (7 of 20 are toponym). At first glance the
+two views look like the same projection.
+
+The differences worth noting:
+
+* **`alaba`/`atta` (Aquitanian) and `nene`/`papa` (Etruscan)** climb
+  the per-surface ranking even though only ~4 of their candidates
+  appear in the top-50 individual list. They get there because they
+  have many mid-range candidates: per-surface n=50, per-surface
+  median +160-+172. This is the "many positive landings, no single
+  outlier" pattern the brief flagged as the kind of evidence a
+  per-surface ranking should privilege. (In the per-candidate top-10
+  composite from mg-23cc — `hamar`, `hanna`, `ana`, `bere`, `bi`,
+  `ere`, `senben` — these are different surfaces from the per-surface
+  leaders entirely, except `ana`.)
+* **`hanna`** is the converse pattern: per-surface rank 20 (median
+  +72) but only 1 of its candidates appears in the top-50 individual.
+  Single high-z outlier on KN Zc 6 driving its mg-23cc composite
+  rank, no broad-corpus signal.
+* **The /-ssos/ fragment family** dominates by per-surface AND
+  per-candidate. This is consistent with the substrate hypothesis
+  in a stronger way than any single Aquitanian or Etruscan surface:
+  the signal is broad-corpus, not concentrated on one inscription.
+* **Many Aquitanian/Etruscan/toponym surfaces tie at median +84**
+  (ranks 9-17 all): these are 3-phoneme surfaces whose candidate
+  windows happen to share a small number of frequent sign triples.
+  The metric is not discriminating between them at the per-surface
+  level. 9 surfaces with identical median+best across three pools
+  is a generator-side artifact — they all pin to the same handful
+  of frequent inscription windows.
+
+**The methodologically important finding.** The per-surface
+leaderboard re-projects much of the per-candidate composite top-K
+(toponym dominance, /-ssos/ family, high-median Aquitanian roots),
+but it surfaces a different sub-leader (`alaba`, `atta`, `nene`,
+`papa`) that the per-candidate composite misses. These four are
+moderately substrate-plausible roots in their respective pools and
+their per-surface signal is "many candidates compressing the corpus,
+none anomalously high" rather than "one inscription that fits this
+root unusually well". This is a real distinction.
+
+### What this strategy does NOT tell us
+
+The per-surface ranking is silent on **which inscription each
+surface fits**. The very thing we cannot grade — within-surface
+plausibility-of-context — remains ungraded under per-surface
+aggregation. A surface that dominates the per-surface leaderboard
+because it landed productively on 30 different inscriptions is
+indistinguishable, in this view, from a surface that landed on the
+same inscription 30 times. The aggregate compresses across exactly
+the axis we care about most. Use this leaderboard to **rank pools
+and surface families**, not to claim "this inscription says that".
+
+For the same reason, the per-surface ranking does not validate
+the substrate hypothesis as such. Toponym dominates because the
+diagnostic substrate suffixes recur frequently in the Linear-A
+corpus — but a frequent recurrence pattern is what we'd see for
+*any* substrate whose phoneme inventory happens to overlap the
+syllabogram set at the right structural points. The next move is
+either (a) cross-corpus position prior (Linear-B / GORILA reference
+per the mg-7c8c "out of scope" list, deferred) or (b) per-surface
+controls — score the same surface aggregation against a
+phonotactically-matched scramble pool and see whether the substrate
+pool's median pmcd actually clears the scramble baseline.
+
+### Artifacts shipped
+
+- `harness/run.py`, `scripts/run_sweep.py`: pool-specific bigram
+  dispatch (per-hypothesis lookup against a registry built from
+  `pools/`); falls back to `null` bigram for hypotheses with no
+  pool match. Backward-compatible `--pool` flag preserved as a
+  diagnostic override.
+- `harness/metrics.py local_fit_v1`: accepts `bigram_model=None`
+  and rescales position weight by `(A + B)/A` so pool-matched and
+  pool-unmatched scores remain on the same scale.
+- `harness/schemas/result.v0.schema.json`: `bigram_term` may be
+  null (with a documentation note pointing to the renormalization).
+- `harness/tests/test_pool_dispatch.py`: covers (a) Aquitanian →
+  Aquitanian bigram, (b) Etruscan → Etruscan, (c) toponym → toponym,
+  (d) anchor / scramble → null/excluded; plus a sweep-runner
+  end-to-end check and a determinism assertion (re-runs are
+  byte-identical).
+- `pools/toponym.yaml`: 112 entries (was 35), full toponyms and
+  derived fragment surfaces; `pools/toponym.README.md` documents
+  the fragmentation rule.
+- `harness/metrics._GG1_REGION_COMPAT`: `pre_greek` × Cretan-site
+  coverage extended to all 18 Cretan corpus sites (Tylissos,
+  Gournia, Pyrgos, etc.) so toponym candidates landing on minor
+  sites hit the substrate-favoring 1.0 row instead of the unmapped
+  neutral 0.5.
+- `scripts/rollup.py --by surface`: per-surface aggregation mode;
+  outputs `results/rollup.surface_aggregated*.md`.
+- `scripts/score_curated_v4.py`, `scripts/run_sweep.py`:
+  `--force-rescore` flag bypasses the resume cache, used to
+  generate post-fix rows on the unchanged corpus snapshot.
+- 50,469 new result rows appended to `results/experiments.jsonl`
+  (300 curated re-scores + 21,570 Aquitanian re-scores +
+  17,898 Etruscan re-scores + 10,701 toponym new). Total stream
+  size: 46,982 → **97,451 rows**.
+- `results/rollup.surface_aggregated.md` (top-50 across all pools),
+  `.aquitanian.md`, `.etruscan.md`, `.toponym.md` (per-pool views).
+
+### Determinism
+
+Pool dispatch is fully deterministic. Re-running the same hypothesis
+under the same corpus snapshot produces byte-identical scores: the
+pool registry is loaded in sorted basename order, bigram models are
+built from pool entries in document order, and the null-bigram path
+has no source of randomness. `harness/tests/test_pool_dispatch.py`
+asserts byte-identical scores across two consecutive sweep runs.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;

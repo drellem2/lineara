@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_aksos_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''aksos''
+  pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: aksos
+  phonemes:
+  - a
+  - k
+  - s
+  - o
+  - s
+  gloss_hint: Axos (central-Cretan town with -ksos suffix)
+  citation: Kretschmer 1896 §57 on -ksos; Beekes 2010 s.v. Axos.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: a
+    AB41: k
+    AB01: s
+    AB05: o
+    AB28: s

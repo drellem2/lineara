@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_mnos_HT_117a_72_75
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''mnos''
+  pinned to HT 117a tokens [72..75].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: mnos
+  phonemes:
+  - m
+  - n
+  - o
+  - s
+  gloss_hint: -mnos (Pre-Greek substrate suffix; Lemnos / Kalymnos)
+  citation: Beekes 2010 vol. 2 appendix; Furnée 1972.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 72
+  - 75
+  sign_to_phoneme:
+    AB01: m
+    AB24: n
+    AB81: o
+    AB37: s

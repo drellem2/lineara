@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ter_HT_1_15_17
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ter''
+  pinned to HT 1 tokens [15..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ter
+  phonemes:
+  - t
+  - e
+  - r
+  gloss_hint: ter- (initial fragment; Termessos)
+  citation: Beekes 2010 s.v. Termessos.
+equation:
+  inscription_id: HT 1
+  span:
+  - 15
+  - 17
+  sign_to_phoneme:
+    AB81: t
+    AB56: e
+    AB55: r

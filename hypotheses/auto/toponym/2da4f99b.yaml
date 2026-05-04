@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_gortyn_HT_Zb_159_0_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''gortyn''
+  pinned to HT Zb 159 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: gortyn
+  phonemes:
+  - g
+  - o
+  - r
+  - t
+  - u
+  - n
+  gloss_hint: Gortyn (Cretan southern Mesara plain)
+  citation: Beekes 2010 s.v. Gortyn.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: g
+    AB06: o
+    AB55: r
+    AB41: t
+    AB57: u
+    AB09: n

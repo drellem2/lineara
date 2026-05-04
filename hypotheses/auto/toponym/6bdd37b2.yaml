@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_mna_HT_103_19_21
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''mna''
+  pinned to HT 103 tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: mna
+  phonemes:
+  - m
+  - n
+  - a
+  gloss_hint: -mna (Pre-Greek substrate suffix variant)
+  citation: Furnée 1972.
+equation:
+  inscription_id: HT 103
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB01: m
+    AB81: n
+    AB09: a

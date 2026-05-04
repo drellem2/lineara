@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_telmessos_KN_Zf_13_4_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''telmessos''
+  pinned to KN Zf 13 tokens [4..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: telmessos
+  phonemes:
+  - t
+  - e
+  - l
+  - m
+  - e
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Telmessos (Lycian coast town)
+  citation: Beekes 2010 s.v. Telmessos.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 12
+  sign_to_phoneme:
+    AB07: t
+    A301: e
+    AB39: l
+    AB44: m
+    AB03: e
+    AB57: s
+    AB59: s
+    AB53: o
+    AB09: s

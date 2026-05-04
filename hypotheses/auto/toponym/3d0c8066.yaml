@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tirintha_KN_Zc_6_4_10
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tirintha''
+  pinned to KN Zc 6 tokens [4..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tirintha
+  phonemes:
+  - t
+  - i
+  - r
+  - i
+  - n
+  - th
+  - a
+  gloss_hint: Tirintha (Argolid; cf. Tiryns - alternate -ntha form)
+  citation: Furnée 1972 §123; Beekes vol. 2.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    AB08: t
+    AB07: i
+    AB01: r
+    AB67: i
+    AB37: n
+    AB03: th
+    AB81: a

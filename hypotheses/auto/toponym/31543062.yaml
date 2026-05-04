@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tegea_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tegea''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tegea
+  phonemes:
+  - t
+  - e
+  - g
+  - e
+  - a
+  gloss_hint: Tegea (Arcadian town; pre-Greek)
+  citation: Beekes 2010 s.v. Tegea; Furnée 1972.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: t
+    AB31: e
+    AB58: g
+    AB80: e
+    AB28: a

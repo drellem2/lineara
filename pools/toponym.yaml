@@ -288,3 +288,571 @@ entries:
     attestations: [MELOS]
     region: pre_greek
     citation: Beekes 2010 s.v. Melos; Linear-A finds at Phylakopi.
+
+  # --------------------------------------------------------------------
+  # mg-c2af expansion (35 → 100+ entries). Adds:
+  #   - additional Aegean / Anatolian / Crete substrate toponyms drawn
+  #     from Beekes 2010 vol. 2 appendix and Furnée 1972 §§120-128;
+  #   - Kretschmer 1896 _Einleitung_ for older substrate-name proposals
+  #     (used sparingly, treated as a third-tier source);
+  #   - DERIVED FRAGMENT SURFACES for the diagnostic substrate suffixes
+  #     and a handful of high-frequency toponym onsets. Per the brief
+  #     (mg-c2af), full toponym surfaces are too long for typical
+  #     Linear-A windows; the suffix family /-ssos/, /-nthos/, /-ttos/
+  #     etc. is what actually maps onto short syllabogram windows in
+  #     accountancy tablets. See pools/toponym.README.md for the
+  #     fragmentation rule.
+  # --------------------------------------------------------------------
+
+  # ---- additional Cretan toponyms ------------------------------------
+  - surface: rhytion
+    phonemes: [r, h, u, t, i, o, n]
+    gloss: Rhytion (south-Cretan town)
+    semantic_field: place
+    attestations: [RHYTION, RUTION]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Rhytion; Linear-B carryover ru-ki-to.
+  - surface: dikte
+    phonemes: [d, i, k, t, e]
+    gloss: Dikte (sacred mountain, eastern Crete)
+    semantic_field: place
+    attestations: [DIKTE]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Dikte; argued non-IE substrate.
+  - surface: ida
+    phonemes: [i, d, a]
+    gloss: Ida (sacred mountain, central Crete)
+    semantic_field: place
+    attestations: [IDA, IDE]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Ida; pre-Greek substrate per Beekes.
+  - surface: lyktos
+    phonemes: [l, u, k, t, o, s]
+    gloss: Lyktos (Cretan central highland town)
+    semantic_field: place
+    attestations: [LYKTOS, LUKTOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Lyktos; Linear-B ru-ki-to (Knossos tablets).
+  - surface: minoa
+    phonemes: [m, i, n, o, a]
+    gloss: Minoa (multiple Cretan / Aegean coastal sites named for Minos)
+    semantic_field: place
+    attestations: [MINOA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Minos; cf. Mukenai-pattern -nVa toponyms.
+  - surface: aptara
+    phonemes: [a, p, t, a, r, a]
+    gloss: Aptara (NW Cretan town)
+    semantic_field: place
+    attestations: [APTARA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Aptara; Linear-B Aptarwa.
+  - surface: hierapytna
+    phonemes: [h, i, e, r, a, p, u, t, n, a]
+    gloss: Hierapytna (south-east Cretan coast)
+    semantic_field: place
+    attestations: [HIERAPYTNA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Hierapytna; substrate -tna suffix.
+  - surface: olous
+    phonemes: [o, l, o, u, s]
+    gloss: Olous (NE Cretan coast)
+    semantic_field: place
+    attestations: [OLOUS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Olous.
+  - surface: poikilassos
+    phonemes: [p, o, i, k, i, l, a, s, s, o, s]
+    gloss: Poikilassos (south-Cretan town with -ssos suffix)
+    semantic_field: place
+    attestations: [POIKILASSOS]
+    region: pre_greek
+    citation: Furnée 1972 §122; Beekes vol. 2 appendix.
+  - surface: phalasarna
+    phonemes: [p, h, a, l, a, s, a, r, n, a]
+    gloss: Phalasarna (NW Cretan port)
+    semantic_field: place
+    attestations: [PHALASARNA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Phalasarna.
+
+  # ---- additional Anatolian / Cycladic / Greek mainland substrate ----
+  - surface: assos
+    phonemes: [a, s, s, o, s]
+    gloss: Assos (Troad coastal town)
+    semantic_field: place
+    attestations: [ASSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Assos; -ssos suffix.
+  - surface: ephesos
+    phonemes: [e, p, h, e, s, o, s]
+    gloss: Ephesos (Ionian coast major city; pre-Greek Apaša)
+    semantic_field: place
+    attestations: [EPHESOS, APASA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Ephesos; Hittite Apaša carryover.
+  - surface: pergamos
+    phonemes: [p, e, r, g, a, m, o, s]
+    gloss: Pergamos / Pergamon (Mysian highland city)
+    semantic_field: place
+    attestations: [PERGAMOS, PERGAMON]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Pergamos.
+  - surface: smurna
+    phonemes: [s, m, u, r, n, a]
+    gloss: Smyrna (Ionian coast city; pre-Greek)
+    semantic_field: place
+    attestations: [SMURNA, SMYRNA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Smyrna; substrate -na suffix.
+  - surface: kuzikos
+    phonemes: [k, u, z, i, k, o, s]
+    gloss: Kyzikos (Propontic city)
+    semantic_field: place
+    attestations: [KYZIKOS, KUZIKOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Kyzikos.
+  - surface: priene
+    phonemes: [p, r, i, e, n, e]
+    gloss: Priene (Ionian coast city)
+    semantic_field: place
+    attestations: [PRIENE]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Priene.
+  - surface: melitos
+    phonemes: [m, i, l, e, t, o, s]
+    gloss: Miletos (Ionian coast major city; Hittite Millawanda)
+    semantic_field: place
+    attestations: [MILETOS, MILLAWANDA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Miletos; Hittite-Anatolian carryover.
+  - surface: lukia
+    phonemes: [l, u, k, i, a]
+    gloss: Lykia (Lycia; SW Anatolia)
+    semantic_field: place
+    attestations: [LUKIA, LYKIA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Lykia; Hittite Lukka.
+  - surface: salaminos
+    phonemes: [s, a, l, a, m, i, n, o, s]
+    gloss: Salamis (Saronic island)
+    semantic_field: place
+    attestations: [SALAMINOS, SALAMIS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Salamis.
+  - surface: tegea
+    phonemes: [t, e, g, e, a]
+    gloss: Tegea (Arcadian town; pre-Greek)
+    semantic_field: place
+    attestations: [TEGEA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Tegea; Furnée 1972.
+  - surface: samos
+    phonemes: [s, a, m, o, s]
+    gloss: Samos (East-Aegean island)
+    semantic_field: place
+    attestations: [SAMOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Samos.
+  - surface: ikaria
+    phonemes: [i, k, a, r, i, a]
+    gloss: Ikaria (Aegean island)
+    semantic_field: place
+    attestations: [IKARIA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Ikaria.
+  - surface: chios
+    phonemes: [k, h, i, o, s]
+    gloss: Chios (East-Aegean island)
+    semantic_field: place
+    attestations: [CHIOS, KHIOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Chios.
+  - surface: andros
+    phonemes: [a, n, d, r, o, s]
+    gloss: Andros (Cycladic island)
+    semantic_field: place
+    attestations: [ANDROS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Andros.
+  - surface: tenos
+    phonemes: [t, e, n, o, s]
+    gloss: Tenos (Cycladic island)
+    semantic_field: place
+    attestations: [TENOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Tenos.
+  - surface: keos
+    phonemes: [k, e, o, s]
+    gloss: Keos (Cycladic island; Linear-A inscription site)
+    semantic_field: place
+    attestations: [KEOS, KEA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Keos; Linear-A finds at Ayia Irini.
+  - surface: kuthera
+    phonemes: [k, u, th, e, r, a]
+    gloss: Kythera (south-Aegean island; Linear-A site)
+    semantic_field: place
+    attestations: [KYTHERA, KUTHERA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Kythera.
+  - surface: krete
+    phonemes: [k, r, e, t, e]
+    gloss: Krete (Crete itself)
+    semantic_field: place
+    attestations: [KRETE]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Krete; argued non-IE substrate.
+  - surface: argos
+    phonemes: [a, r, g, o, s]
+    gloss: Argos (Argolid; older Argeia substrate stem)
+    semantic_field: place
+    attestations: [ARGOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Argos; Furnée 1972.
+  - surface: pulos
+    phonemes: [p, u, l, o, s]
+    gloss: Pylos (Messenian Mycenaean palace)
+    semantic_field: place
+    attestations: [PYLOS, PULOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Pylos; Linear-B pu-ro.
+  - surface: thebai
+    phonemes: [th, e, b, a, i]
+    gloss: Thebai (Boeotian Mycenaean palace site)
+    semantic_field: place
+    attestations: [THEBAI]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Thebai; Linear-B te-qa-i.
+  - surface: orchomenos
+    phonemes: [o, r, k, h, o, m, e, n, o, s]
+    gloss: Orchomenos (Boeotian Mycenaean palace)
+    semantic_field: place
+    attestations: [ORCHOMENOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Orchomenos; Linear-B e-ko-me-no.
+  - surface: sparta
+    phonemes: [s, p, a, r, t, a]
+    gloss: Sparta (Lakonia)
+    semantic_field: place
+    attestations: [SPARTA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Sparta; Furnée 1972.
+  - surface: olunthos
+    phonemes: [o, l, u, n, th, o, s]
+    gloss: Olynthos (Chalkidike town with -nthos suffix)
+    semantic_field: place
+    attestations: [OLYNTHOS, OLUNTHOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Olynthos; Furnée 1972 §123.
+  - surface: tirintha
+    phonemes: [t, i, r, i, n, th, a]
+    gloss: Tirintha (Argolid; cf. Tiryns - alternate -ntha form)
+    semantic_field: place
+    attestations: [TIRINTHA]
+    region: pre_greek
+    citation: Furnée 1972 §123; Beekes vol. 2.
+  - surface: zakuntos
+    phonemes: [z, a, k, u, n, t, o, s]
+    gloss: Zakynthos (Ionian island; -nthos family)
+    semantic_field: place
+    attestations: [ZAKUNTHOS, ZAKYNTHOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Zakynthos; Furnée 1972 §123.
+
+  # ---- DERIVED FRAGMENT SURFACES (mg-c2af) ---------------------------
+  # The diagnostic substrate suffixes and high-frequency onsets emit
+  # their own fragment-surface entries so the bulk generator can pin
+  # them to short syllabogram windows. These do not denote independent
+  # toponyms; they're the substrate-cluster building blocks.
+  # See pools/toponym.README.md for the fragmentation rule.
+  # ---- the -ssos / -sos suffix family --------------------------------
+  - surface: ssos
+    phonemes: [s, s, o, s]
+    gloss: -ssos (Pre-Greek substrate suffix, Knossos / Tylissos / Parnassos / Halikarnassos)
+    semantic_field: morphology
+    attestations: [KNOSSOS, TULISSOS, PARNASSOS, HALIKARNASSOS, ASSOS, IASSOS, TERMESSOS, TELMESSOS, POIKILASSOS]
+    region: pre_greek
+    citation: Beekes 2010 vol. 2 §§3-5 on -ssos; Furnée 1972 §122.
+  - surface: sos
+    phonemes: [s, o, s]
+    gloss: -sos (Pre-Greek substrate ending; reduced -ssos variant)
+    semantic_field: morphology
+    attestations: [TARSOS, MELOS, NAXOS, PAROS, SAMOS]
+    region: pre_greek
+    citation: Beekes 2010 vol. 2 §3 on the -ssos > -sos reflex.
+  - surface: aso
+    phonemes: [a, s, o]
+    gloss: -aso- (substrate cluster preceding -s; Knossos = kno + as + sos)
+    semantic_field: morphology
+    region: pre_greek
+    citation: Furnée 1972 §122.
+  # ---- the -nthos suffix family --------------------------------------
+  - surface: nthos
+    phonemes: [n, th, o, s]
+    gloss: -nthos (Pre-Greek substrate suffix; Korinthos / Probalinthos / Hyakinthos / Olynthos)
+    semantic_field: morphology
+    attestations: [KORINTHOS, PROBALINTHOS, HYAKINTHOS, OLUNTHOS, ZAKUNTHOS, ERUMANTHOS]
+    region: pre_greek
+    citation: Beekes 2010 vol. 2 §4 on -nthos; Furnée 1972 §123.
+  - surface: nthe
+    phonemes: [n, th, e]
+    gloss: -nthe- (Pre-Greek substrate cluster, palatal variant)
+    semantic_field: morphology
+    region: pre_greek
+    citation: Furnée 1972 §123.
+  - surface: ntha
+    phonemes: [n, th, a]
+    gloss: -ntha (Pre-Greek substrate suffix variant; Tirintha / Atalanta)
+    semantic_field: morphology
+    attestations: [TIRINTHA]
+    region: pre_greek
+    citation: Furnée 1972 §123.
+  # ---- the -ttos / -tos suffix family --------------------------------
+  - surface: ttos
+    phonemes: [t, t, o, s]
+    gloss: -ttos (Attic substrate suffix; Hymettos / Lykabettos / Ardettos)
+    semantic_field: morphology
+    attestations: [HUMETTOS, LUKABETTOS, ARDETTOS]
+    region: pre_greek
+    citation: Beekes 2010 vol. 2 §5 on -ttos; Furnée 1972 §124.
+  - surface: tos
+    phonemes: [t, o, s]
+    gloss: -tos (Pre-Greek substrate ending; phonotactically common)
+    semantic_field: morphology
+    attestations: [PHAISTOS, ITANOS, LYKTOS, MILETOS]
+    region: pre_greek
+    citation: Beekes 2010 vol. 2 §5; Furnée 1972 §124.
+  # ---- the -ndos / -nthos cousin suffix family -----------------------
+  - surface: ndos
+    phonemes: [n, d, o, s]
+    gloss: -ndos (Anatolian / Pamphylian substrate suffix; Aspendos)
+    semantic_field: morphology
+    attestations: [ASPENDOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Aspendos; Furnée 1972 §128.
+  - surface: andos
+    phonemes: [a, n, d, o, s]
+    gloss: -andos (substrate ending; broader -nd- family)
+    semantic_field: morphology
+    region: pre_greek
+    citation: Furnée 1972 §128.
+  # ---- the -mnos / -mna suffix family --------------------------------
+  - surface: mnos
+    phonemes: [m, n, o, s]
+    gloss: -mnos (Pre-Greek substrate suffix; Lemnos / Kalymnos)
+    semantic_field: morphology
+    attestations: [LEMNOS, KALUMNOS]
+    region: pre_greek
+    citation: Beekes 2010 vol. 2 appendix; Furnée 1972.
+  - surface: mna
+    phonemes: [m, n, a]
+    gloss: -mna (Pre-Greek substrate suffix variant)
+    semantic_field: morphology
+    region: pre_greek
+    citation: Furnée 1972.
+  # ---- the -aios / -aia suffix family --------------------------------
+  - surface: aios
+    phonemes: [a, i, o, s]
+    gloss: -aios (Pre-Greek substrate adjective suffix)
+    semantic_field: morphology
+    region: pre_greek
+    citation: Beekes 2010 vol. 2 appendix.
+  - surface: aia
+    phonemes: [a, i, a]
+    gloss: -aia (Pre-Greek substrate suffix; Lasaia)
+    semantic_field: morphology
+    attestations: [LASAIA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Lasaia.
+  # ---- diagnostic onsets (initial fragments of the toponym list) -----
+  - surface: kno
+    phonemes: [k, n, o]
+    gloss: kno- (initial fragment of Knossos and the -nVssos onset family)
+    semantic_field: morphology
+    attestations: [KNOSSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Knossos; mg-c2af fragmentation rule.
+  - surface: kor
+    phonemes: [k, o, r]
+    gloss: kor- (initial fragment; Korinthos / Korakos)
+    semantic_field: morphology
+    attestations: [KORINTHOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Korinthos.
+  - surface: par
+    phonemes: [p, a, r]
+    gloss: par- (initial fragment; Parnassos / Paros)
+    semantic_field: morphology
+    attestations: [PARNASSOS, PAROS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Parnassos.
+  - surface: tul
+    phonemes: [t, u, l]
+    gloss: tul- (initial fragment; Tylissos)
+    semantic_field: morphology
+    attestations: [TULISSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Tylissos.
+  - surface: hum
+    phonemes: [h, u, m]
+    gloss: hum- (initial fragment; Hymettos)
+    semantic_field: morphology
+    attestations: [HUMETTOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Hymettos.
+  - surface: hua
+    phonemes: [h, u, a]
+    gloss: hua- (initial fragment; Hyakinthos / Huakinthos)
+    semantic_field: morphology
+    attestations: [HUAKINTHOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Hyakinthos.
+  - surface: olu
+    phonemes: [o, l, u]
+    gloss: olu- (initial fragment; Olympos / Olunthos / Olous)
+    semantic_field: morphology
+    attestations: [OLUMPOS, OLUNTHOS, OLOUS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Olympos.
+  - surface: muke
+    phonemes: [m, u, k, e]
+    gloss: muke- (initial fragment; Mukenai / Mycenae)
+    semantic_field: morphology
+    attestations: [MUKENAI]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Mukenai.
+  - surface: ami
+    phonemes: [a, m, i]
+    gloss: ami- (initial fragment; Amnisos)
+    semantic_field: morphology
+    attestations: [AMNISOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Amnisos.
+  - surface: gor
+    phonemes: [g, o, r]
+    gloss: gor- (initial fragment; Gortyn)
+    semantic_field: morphology
+    attestations: [GORTYN]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Gortyn.
+  - surface: ala
+    phonemes: [a, l, a]
+    gloss: ala- (substrate cluster fragment)
+    semantic_field: morphology
+    region: pre_greek
+    citation: Furnée 1972; Kretschmer 1896 §57 on /ala-/ substrate.
+  - surface: ina
+    phonemes: [i, n, a]
+    gloss: -ina / ina- (substrate cluster fragment; broad CV-CV)
+    semantic_field: morphology
+    region: pre_greek
+    citation: Furnée 1972.
+  - surface: phai
+    phonemes: [p, h, a, i]
+    gloss: phai- (initial fragment; Phaistos)
+    semantic_field: morphology
+    attestations: [PHAISTOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Phaistos.
+  - surface: ter
+    phonemes: [t, e, r]
+    gloss: ter- (initial fragment; Termessos)
+    semantic_field: morphology
+    attestations: [TERMESSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Termessos.
+  - surface: lab
+    phonemes: [l, a, b]
+    gloss: lab- (initial fragment; Lebena via /la/-)
+    semantic_field: morphology
+    attestations: [LABRUS]
+    region: pre_greek
+    citation: Kretschmer 1896; Beekes vol. 2 on Pre-Greek lab- cluster.
+  - surface: per
+    phonemes: [p, e, r]
+    gloss: per- (initial fragment; Pergamos / Persa)
+    semantic_field: morphology
+    attestations: [PERGAMOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Pergamos.
+  - surface: efe
+    phonemes: [e, p, h, e]
+    gloss: ephe- (initial fragment; Ephesos / Apaša)
+    semantic_field: morphology
+    attestations: [EPHESOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Ephesos.
+  - surface: smu
+    phonemes: [s, m, u]
+    gloss: smu- (initial fragment; Smyrna)
+    semantic_field: morphology
+    attestations: [SMURNA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Smyrna.
+  - surface: prie
+    phonemes: [p, r, i, e]
+    gloss: prie- (initial fragment; Priene)
+    semantic_field: morphology
+    attestations: [PRIENE]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Priene.
+  - surface: les
+    phonemes: [l, e, s]
+    gloss: les- (initial fragment; Lesbos)
+    semantic_field: morphology
+    attestations: [LESBOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Lesbos.
+  - surface: lem
+    phonemes: [l, e, m]
+    gloss: lem- (initial fragment; Lemnos)
+    semantic_field: morphology
+    attestations: [LEMNOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Lemnos.
+  - surface: ther
+    phonemes: [th, e, r]
+    gloss: ther- (initial fragment; Thera)
+    semantic_field: morphology
+    attestations: [THERA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Thera.
+  - surface: nax
+    phonemes: [n, a, k, s]
+    gloss: nak- / nax- (initial fragment; Naxos)
+    semantic_field: morphology
+    attestations: [NAXOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Naxos.
+
+  # ---- additional Kretschmer 1896 substrate proposals ----------------
+  # (used sparingly, third-tier source per the brief)
+  - surface: tarra
+    phonemes: [t, a, r, r, a]
+    gloss: Tarra (south-Cretan town in Kretschmer's substrate roster)
+    semantic_field: place
+    attestations: [TARRA]
+    region: pre_greek
+    citation: Kretschmer 1896 §54; Beekes vol. 2 follows.
+  - surface: aksos
+    phonemes: [a, k, s, o, s]
+    gloss: Axos (central-Cretan town with -ksos suffix)
+    semantic_field: place
+    attestations: [AKSOS, AXOS]
+    region: pre_greek
+    citation: Kretschmer 1896 §57 on -ksos; Beekes 2010 s.v. Axos.
+  - surface: tulisos
+    phonemes: [t, u, l, i, s, o, s]
+    gloss: Tulisos (alternate spelling of Tylissos with single -s-)
+    semantic_field: place
+    attestations: [TULISOS]
+    region: pre_greek
+    citation: Kretschmer 1896 §57; Beekes 2010 s.v. Tulissos.
+  - surface: aleksandros
+    phonemes: [a, l, e, k, s, a, n, d, r, o, s]
+    gloss: Aleksandros (substrate-derived theonym; per Kretschmer)
+    semantic_field: place
+    attestations: [ALEKSANDROS, ALAKSANDU]
+    region: pre_greek
+    citation: Kretschmer 1896; Hittite Alaksandu treaty (Beekes vol. 2).

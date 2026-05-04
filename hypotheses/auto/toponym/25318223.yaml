@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tegea_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tegea''
+  pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tegea
+  phonemes:
+  - t
+  - e
+  - g
+  - e
+  - a
+  gloss_hint: Tegea (Arcadian town; pre-Greek)
+  citation: Beekes 2010 s.v. Tegea; Furnée 1972.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: t
+    AB41: e
+    AB01: g
+    AB05: e
+    AB28: a

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ter_HT_103_7_9
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ter''
+  pinned to HT 103 tokens [7..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ter
+  phonemes:
+  - t
+  - e
+  - r
+  gloss_hint: ter- (initial fragment; Termessos)
+  citation: Beekes 2010 s.v. Termessos.
+equation:
+  inscription_id: HT 103
+  span:
+  - 7
+  - 9
+  sign_to_phoneme:
+    AB81: t
+    AB09: e
+    AB24: r

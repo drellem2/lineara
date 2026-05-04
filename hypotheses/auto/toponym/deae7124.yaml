@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_samos_HT_Zb_159_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''samos''
+  pinned to HT Zb 159 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: samos
+  phonemes:
+  - s
+  - a
+  - m
+  - o
+  - s
+  gloss_hint: Samos (East-Aegean island)
+  citation: Beekes 2010 s.v. Samos.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: s
+    AB06: a
+    AB55: m
+    AB41: o
+    AB57: s

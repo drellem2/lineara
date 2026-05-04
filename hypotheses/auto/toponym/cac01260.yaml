@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lem_ARKH_5_2_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lem''
+  pinned to ARKH 5 tokens [2..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lem
+  phonemes:
+  - l
+  - e
+  - m
+  gloss_hint: lem- (initial fragment; Lemnos)
+  citation: Beekes 2010 s.v. Lemnos.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 2
+  - 4
+  sign_to_phoneme:
+    AB30: l
+    AB59: e
+    AB06: m

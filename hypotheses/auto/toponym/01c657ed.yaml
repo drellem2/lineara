@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_keos_ARKH_5_0_3
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''keos''
+  pinned to ARKH 5 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: keos
+  phonemes:
+  - k
+  - e
+  - o
+  - s
+  gloss_hint: Keos (Cycladic island; Linear-A inscription site)
+  citation: Beekes 2010 s.v. Keos; Linear-A finds at Ayia Irini.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: k
+    AB51: e
+    AB30: o
+    AB59: s

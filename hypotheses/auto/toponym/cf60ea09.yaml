@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ttos_HT_119_11_14
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ttos''
+  pinned to HT 119 tokens [11..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ttos
+  phonemes:
+  - t
+  - t
+  - o
+  - s
+  gloss_hint: -ttos (Attic substrate suffix; Hymettos / Lykabettos / Ardettos)
+  citation: Beekes 2010 vol. 2 §5 on -ttos; Furnée 1972 §124.
+equation:
+  inscription_id: HT 119
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    AB81: t
+    AB56: t
+    AB06: o
+    AB69: s

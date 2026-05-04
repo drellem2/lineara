@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_minoa_KN_Zc_7_16_20
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''minoa''
+  pinned to KN Zc 7 tokens [16..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: minoa
+  phonemes:
+  - m
+  - i
+  - n
+  - o
+  - a
+  gloss_hint: Minoa (multiple Cretan / Aegean coastal sites named for Minos)
+  citation: Beekes 2010 s.v. Minos; cf. Mukenai-pattern -nVa toponyms.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 16
+  - 20
+  sign_to_phoneme:
+    AB60: m
+    AB08: i
+    AB06: n
+    AB24: o
+    AB40: a

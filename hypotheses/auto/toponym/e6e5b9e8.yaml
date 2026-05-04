@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_assos_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''assos''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: assos
+  phonemes:
+  - a
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Assos (Troad coastal town)
+  citation: Beekes 2010 s.v. Assos; -ssos suffix.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: a
+    AB31: s
+    AB58: s
+    AB80: o
+    AB28: s

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ndos_HT_13_0_3
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ndos''
+  pinned to HT 13 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ndos
+  phonemes:
+  - n
+  - d
+  - o
+  - s
+  gloss_hint: -ndos (Anatolian / Pamphylian substrate suffix; Aspendos)
+  citation: Beekes 2010 s.v. Aspendos; Furnée 1972 §128.
+equation:
+  inscription_id: HT 13
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB77: n
+    AB10: d
+    AB45: o
+    AB59: s

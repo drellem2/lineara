@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_minoa_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''minoa''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: minoa
+  phonemes:
+  - m
+  - i
+  - n
+  - o
+  - a
+  gloss_hint: Minoa (multiple Cretan / Aegean coastal sites named for Minos)
+  citation: Beekes 2010 s.v. Minos; cf. Mukenai-pattern -nVa toponyms.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: m
+    AB26: i
+    AB78: n
+    AB76: o
+    AB10: a

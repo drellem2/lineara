@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_les_ARKH_5_0_2
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''les''
+  pinned to ARKH 5 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: les
+  phonemes:
+  - l
+  - e
+  - s
+  gloss_hint: les- (initial fragment; Lesbos)
+  citation: Beekes 2010 s.v. Lesbos.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB08: l
+    AB51: e
+    AB30: s

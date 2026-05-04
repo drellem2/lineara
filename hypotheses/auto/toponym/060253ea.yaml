@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ssos_GO_Wc_1a_1_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ssos''
+  pinned to GO Wc 1a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ssos
+  phonemes:
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: -ssos (Pre-Greek substrate suffix, Knossos / Tylissos / Parnassos /
+    Halikarnassos)
+  citation: Beekes 2010 vol. 2 §§3-5 on -ssos; Furnée 1972 §122.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB31: s
+    AB58: s
+    AB80: o
+    AB28: s

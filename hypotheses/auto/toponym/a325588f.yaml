@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_chios_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''chios''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: chios
+  phonemes:
+  - k
+  - h
+  - i
+  - o
+  - s
+  gloss_hint: Chios (East-Aegean island)
+  citation: Beekes 2010 s.v. Chios.
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: k
+    AB07: h
+    AB06: i
+    AB58: o
+    AB77: s

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_hua_HT_104_7_9
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''hua''
+  pinned to HT 104 tokens [7..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: hua
+  phonemes:
+  - h
+  - u
+  - a
+  gloss_hint: hua- (initial fragment; Hyakinthos / Huakinthos)
+  citation: Beekes 2010 s.v. Hyakinthos.
+equation:
+  inscription_id: HT 104
+  span:
+  - 7
+  - 9
+  sign_to_phoneme:
+    AB09: h
+    AB24: u
+    AB37: a

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lasaia_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lasaia''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lasaia
+  phonemes:
+  - l
+  - a
+  - s
+  - a
+  - i
+  - a
+  gloss_hint: Lasaia (Cretan southern town)
+  citation: Beekes 2010 s.v. Lasaia.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: l
+    AB45: a
+    AB26: s
+    AB78: a
+    AB76: i
+    AB10: a

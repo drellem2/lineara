@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_dikte_KN_Zf_13_3_7
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''dikte''
+  pinned to KN Zf 13 tokens [3..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: dikte
+  phonemes:
+  - d
+  - i
+  - k
+  - t
+  - e
+  gloss_hint: Dikte (sacred mountain, eastern Crete)
+  citation: Beekes 2010 s.v. Dikte; argued non-IE substrate.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 7
+  sign_to_phoneme:
+    AB41: d
+    AB07: i
+    A301: k
+    AB39: t
+    AB44: e

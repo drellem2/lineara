@@ -196,6 +196,230 @@ def _stats(values: list[float]) -> dict:
     }
 
 
+# ---------------------------------------------------------------------------
+# Per-surface aggregation (mg-c2af)
+# ---------------------------------------------------------------------------
+#
+# mg-7c8c power calculation: the v3 metrics genuinely cannot grade
+# *within-surface* plausibility-of-context at any feasible n. mg-c2af pivots
+# to per-surface aggregate ranking — read the corpus-wide signal of "how well
+# does this substrate root match SOMEWHERE in the corpus" rather than "where
+# does this root land". The metric distribution that survives this re-projection
+# is partial_mapping_compression_delta_v0 (pmcd): each candidate's signed delta
+# is corpus-side, so aggregating across the candidates that share a surface is
+# a meaningful measurement.
+#
+# This rollup is a new VIEW over the existing result stream, not a new metric.
+# It does NOT recompute pmcd; it groups existing rows by (pool, surface) and
+# reports median, mean, sd, fraction-above-0, and the best inscription.
+
+_PMCD = "partial_mapping_compression_delta_v0"
+_GG1 = "geographic_genre_fit_v1"
+
+
+def _surface_index_from_manifests(repo_root: Path) -> dict[str, tuple[str, str]]:
+    """Build a hypothesis_hash → (pool, surface) lookup from the auto manifests.
+
+    Each ``hypotheses/auto/<pool>.manifest.jsonl`` row carries the pool name
+    and the ``pool_entry_surface``. Loading them gives us a fast hash-to-
+    surface lookup for the bulk rollup.
+    """
+    out: dict[str, tuple[str, str]] = {}
+    auto_dir = repo_root / "hypotheses" / "auto"
+    if not auto_dir.exists():
+        return out
+    for manifest in sorted(auto_dir.glob("*.manifest.jsonl")):
+        with manifest.open("r", encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                row = json.loads(line)
+                out[row["hypothesis_hash"]] = (
+                    row["pool"],
+                    row["pool_entry_surface"],
+                )
+    return out
+
+
+def _latest_rows_by(
+    rows: list[dict], metrics: tuple[str, ...]
+) -> dict[str, dict[tuple[str, str], dict]]:
+    """For each metric, keep only the latest row per (hypothesis_path, hash).
+
+    The result stream is append-only; mg-c2af re-scoring left two rows per
+    (hash, metric) for some hypotheses (one before and one after the fix).
+    The aggregator must use the post-fix row, which is keyed by ``ran_at``
+    being later. Returns ``{metric: {(hyp_path, hash): row}}``.
+    """
+    by_metric: dict[str, dict[tuple[str, str], dict]] = {m: {} for m in metrics}
+    for row in rows:
+        m = row.get("metric")
+        if m not in by_metric:
+            continue
+        key = (row["hypothesis_path"], row["hypothesis_hash"])
+        cur = by_metric[m].get(key)
+        if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
+            by_metric[m][key] = row
+    return by_metric
+
+
+def _aggregate_surfaces(
+    rows: list[dict],
+    repo_root: Path,
+    pool_filter: str | None,
+    min_candidates: int = 10,
+) -> list[dict]:
+    """Group rows by (pool, surface) and compute per-surface aggregates.
+
+    Surface lookup: for ``hypotheses/auto/<pool>/...`` rows, the manifest
+    JSONL carries the pool_entry_surface. Curated rows are dropped from
+    the surface aggregation (they are individual probes, not bulk
+    candidates that share a surface).
+    """
+    surface_idx = _surface_index_from_manifests(repo_root)
+
+    pmcd = _latest_rows_by(rows, (_PMCD, _GG1))[_PMCD]
+    gg1 = _latest_rows_by(rows, (_PMCD, _GG1))[_GG1]
+
+    # Group by (pool, surface).
+    by_key: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for (hyp_path, hyp_hash), row in pmcd.items():
+        info = surface_idx.get(hyp_hash)
+        if info is None:
+            continue  # curated / non-bulk row — excluded from surface rollup
+        pool, surface = info
+        if pool_filter and pool != pool_filter:
+            continue
+        by_key[(pool, surface)].append(row)
+
+    # Per-surface aggregates.
+    out: list[dict] = []
+    for (pool, surface), group in sorted(by_key.items()):
+        n = len(group)
+        if n < min_candidates:
+            continue
+        scores = [float(r["score"]) for r in group]
+        scores_sorted = sorted(scores)
+        mean = sum(scores) / n
+        sd = math.sqrt(sum((s - mean) ** 2 for s in scores) / n)
+        if n % 2 == 1:
+            median = scores_sorted[n // 2]
+        else:
+            median = 0.5 * (scores_sorted[n // 2 - 1] + scores_sorted[n // 2])
+        frac_positive = sum(1 for s in scores if s > 0) / n
+        best_idx = max(range(n), key=lambda i: scores[i])
+        best_row = group[best_idx]
+        # Per-surface mean of geographic_genre_fit_v1, looked up by
+        # (hyp_path, hash) since gg1 is per-row not per-surface.
+        gg_scores: list[float] = []
+        for row in group:
+            key = (row["hypothesis_path"], row["hypothesis_hash"])
+            gg_row = gg1.get(key)
+            if gg_row is not None:
+                gg_scores.append(float(gg_row["score"]))
+        gg_mean = sum(gg_scores) / len(gg_scores) if gg_scores else float("nan")
+        # Inscription id: pull from the hypothesis_path tail (the file is
+        # named by sha8 of the hash, but ran_id and hash are not enough on
+        # their own). Re-read the YAML for the inscription_id.
+        best_inscription = _inscription_from_yaml(
+            repo_root / best_row["hypothesis_path"]
+        )
+        out.append(
+            {
+                "pool": pool,
+                "surface": surface,
+                "n_candidates": n,
+                "median_pmcd": median,
+                "mean_pmcd": mean,
+                "sd_pmcd": sd,
+                "frac_positive": frac_positive,
+                "best_score": scores[best_idx],
+                "best_inscription": best_inscription,
+                "geographic_mean": gg_mean,
+            }
+        )
+    return out
+
+
+def _inscription_from_yaml(yaml_path: Path) -> str:
+    """Read just enough of a hypothesis YAML to extract the inscription_id.
+
+    Cheap parse — we don't want a full YAML load per row, but the regex is
+    sufficient because the bulk-emitter uses a fixed key order.
+    """
+    if not yaml_path.exists():
+        return ""
+    try:
+        text = yaml_path.read_text(encoding="utf-8")
+    except OSError:
+        return ""
+    for line in text.splitlines():
+        line = line.strip()
+        if line.startswith("inscription_id:"):
+            value = line.split(":", 1)[1].strip().strip('"').strip("'")
+            return value
+    return ""
+
+
+def _render_surface_aggregation(
+    aggregates: list[dict],
+    top: int | None = 50,
+    title: str = "Per-surface aggregation by median pmcd",
+) -> str:
+    """Render an aggregates list as markdown."""
+    out: list[str] = []
+    out.append(f"# {title}\n")
+    out.append(
+        "Per-surface aggregation of `partial_mapping_compression_delta_v0` "
+        "(pmcd) over candidates that share a (pool, surface) pair. "
+        "Surfaces with fewer than 10 candidates are dropped; only the "
+        "latest row per (hypothesis_path, hash) is counted (so post-fix "
+        "rescores from mg-c2af replace prior runs)."
+    )
+    out.append("")
+    out.append("Columns:")
+    out.append("- **n_candidates**: number of candidates with this surface in this pool")
+    out.append("- **median_pmcd / mean_pmcd / sd_pmcd**: per-surface aggregates of pmcd")
+    out.append("- **frac_positive**: fraction of candidates with pmcd > 0 (i.e. the partial mapping compresses the corpus)")
+    out.append("- **best_inscription**: inscription on which this surface scored its highest pmcd")
+    out.append("- **geographic_mean**: per-surface mean of geographic_genre_fit_v1")
+    out.append("")
+    if not aggregates:
+        out.append("_(no surfaces with ≥10 candidates)_")
+        return "\n".join(out) + "\n"
+    ranked = sorted(aggregates, key=lambda a: -a["median_pmcd"])
+    if top is not None:
+        ranked = ranked[:top]
+    out.append(
+        "| rank | pool | surface | n | median_pmcd | mean_pmcd | sd_pmcd | "
+        "frac_positive | best_pmcd | best_inscription | geo_mean |"
+    )
+    out.append("|---:|---|---|---:|---:|---:|---:|---:|---:|---|---:|")
+    for i, a in enumerate(ranked, 1):
+        out.append(
+            "| {i} | {p} | `{s}` | {n} | {med:+.4f} | {mean:+.4f} | {sd:.4f} | "
+            "{fp:.3f} | {best:+.4f} | {ins} | {gg:+.4f} |".format(
+                i=i,
+                p=a["pool"],
+                s=a["surface"],
+                n=a["n_candidates"],
+                med=a["median_pmcd"],
+                mean=a["mean_pmcd"],
+                sd=a["sd_pmcd"],
+                fp=a["frac_positive"],
+                best=a["best_score"],
+                ins=a["best_inscription"],
+                gg=a["geographic_mean"],
+            )
+        )
+    out.append("")
+    out.append(
+        f"_({len(ranked)} of {len(aggregates)} surfaces shown.)_"
+    )
+    return "\n".join(out) + "\n"
+
+
 def _render_per_pool_summary(rows: list[dict], top: int) -> list[str]:
     """Group local_fit_v0 rows by inferred source pool and render a summary."""
     by_pool: dict[str, list[dict]] = defaultdict(list)
@@ -465,10 +689,27 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--by",
-        choices=["source-pool"],
+        choices=["source-pool", "surface"],
         default=None,
-        help="Append a grouped summary section. 'source-pool' groups local_fit_v0 "
-        "rows by inferred source pool.",
+        help="Append a grouped summary section. 'source-pool' groups "
+        "local_fit_v0 rows by inferred source pool; 'surface' aggregates "
+        "partial_mapping_compression_delta_v0 (pmcd) per (pool, surface) "
+        "tuple over the bulk auto/<pool>/ candidates and renders a "
+        "leaderboard sorted by median pmcd (mg-c2af).",
+    )
+    parser.add_argument(
+        "--repo-root",
+        type=Path,
+        default=_REPO_ROOT,
+        help="Repo root used to resolve hypothesis manifests for the "
+        "per-surface aggregation (default: %(default)s).",
+    )
+    parser.add_argument(
+        "--min-candidates",
+        type=int,
+        default=10,
+        help="Minimum number of candidates per (pool, surface) pair to "
+        "include in the surface aggregation (default: %(default)s).",
     )
     parser.add_argument(
         "--metrics",
@@ -499,6 +740,31 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     rows = load_rows(args.results)
+    if args.by == "surface":
+        # Per-surface aggregation is its own top-level mode (not a side
+        # block on the per-metric leaderboard, because it groups across
+        # metrics).
+        aggregates = _aggregate_surfaces(
+            rows,
+            repo_root=args.repo_root,
+            pool_filter=args.pool,
+            min_candidates=args.min_candidates,
+        )
+        title = "Per-surface aggregation by median pmcd"
+        if args.pool:
+            title += f" — pool: {args.pool}"
+        else:
+            title += " — all pools"
+        text = _render_surface_aggregation(
+            aggregates, top=args.top, title=title
+        )
+        if args.write:
+            args.write.parent.mkdir(parents=True, exist_ok=True)
+            args.write.write_text(text, encoding="utf-8")
+            print(f"wrote {args.write}", file=sys.stderr)
+        else:
+            sys.stdout.write(text)
+        return 0
     if args.metrics:
         if args.metric:
             parser.error("--metric and --metrics are mutually exclusive")

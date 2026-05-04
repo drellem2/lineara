@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_erymanthos_KN_Zf_13_4_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''erymanthos''
+  pinned to KN Zf 13 tokens [4..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: erymanthos
+  phonemes:
+  - e
+  - r
+  - u
+  - m
+  - a
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: Erymanthos (Arcadian mountain)
+  citation: Beekes 2010 s.v. Erymanthos.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 12
+  sign_to_phoneme:
+    AB07: e
+    A301: r
+    AB39: u
+    AB44: m
+    AB03: a
+    AB57: n
+    AB59: th
+    AB53: o
+    AB09: s

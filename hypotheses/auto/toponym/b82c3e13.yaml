@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_priene_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''priene''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: priene
+  phonemes:
+  - p
+  - r
+  - i
+  - e
+  - n
+  - e
+  gloss_hint: Priene (Ionian coast city)
+  citation: Beekes 2010 s.v. Priene.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: p
+    AB45: r
+    AB26: i
+    AB78: e
+    AB76: n
+    AB10: e

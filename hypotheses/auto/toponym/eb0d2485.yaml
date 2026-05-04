@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_andos_KN_Zc_6_19_24
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''andos''
+  pinned to KN Zc 6 tokens [19..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: andos
+  phonemes:
+  - a
+  - n
+  - d
+  - o
+  - s
+  gloss_hint: -andos (substrate ending; broader -nd- family)
+  citation: Furnée 1972 §128.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 24
+  sign_to_phoneme:
+    AB03: a
+    AB81: n
+    AB55: d
+    AB10: o
+    AB28: s

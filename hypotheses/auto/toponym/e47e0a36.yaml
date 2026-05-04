@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tiruns_HT_Zb_158b_0_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tiruns''
+  pinned to HT Zb 158b tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tiruns
+  phonemes:
+  - t
+  - i
+  - r
+  - u
+  - n
+  - s
+  gloss_hint: Tiryns (Argolid Mycenaean site, pre-Greek name)
+  citation: Beekes 2010 s.v. Tiryns.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB58: t
+    AB67: i
+    AB53: r
+    AB04: u
+    AB28: n
+    AB57: s

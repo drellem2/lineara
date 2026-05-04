@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ami_HT_1_11_13
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ami''
+  pinned to HT 1 tokens [11..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ami
+  phonemes:
+  - a
+  - m
+  - i
+  gloss_hint: ami- (initial fragment; Amnisos)
+  citation: Beekes 2010 s.v. Amnisos.
+equation:
+  inscription_id: HT 1
+  span:
+  - 11
+  - 13
+  sign_to_phoneme:
+    AB07: a
+    AB17: m
+    AB44: i

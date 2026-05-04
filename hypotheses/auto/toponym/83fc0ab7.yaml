@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_dikte_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''dikte''
+  pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: dikte
+  phonemes:
+  - d
+  - i
+  - k
+  - t
+  - e
+  gloss_hint: Dikte (sacred mountain, eastern Crete)
+  citation: Beekes 2010 s.v. Dikte; argued non-IE substrate.
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: d
+    AB67: i
+    AB59: k
+    AB06: t
+    AB41: e

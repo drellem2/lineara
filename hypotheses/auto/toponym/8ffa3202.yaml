@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_kor_HT_104_19_21
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''kor''
+  pinned to HT 104 tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: kor
+  phonemes:
+  - k
+  - o
+  - r
+  gloss_hint: kor- (initial fragment; Korinthos / Korakos)
+  citation: Beekes 2010 s.v. Korinthos.
+equation:
+  inscription_id: HT 104
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB03: k
+    AB01: o
+    AB58: r

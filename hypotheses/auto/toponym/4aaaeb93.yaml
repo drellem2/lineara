@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lesbos_KN_Zf_13_3_8
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lesbos''
+  pinned to KN Zf 13 tokens [3..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lesbos
+  phonemes:
+  - l
+  - e
+  - s
+  - b
+  - o
+  - s
+  gloss_hint: Lesbos (Aegean island)
+  citation: Beekes 2010 s.v. Lesbos.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 8
+  sign_to_phoneme:
+    AB41: l
+    AB07: e
+    A301: s
+    AB39: b
+    AB44: o
+    AB03: s

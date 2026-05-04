@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ina_ARKH_2_10_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ina''
+  pinned to ARKH 2 tokens [10..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ina
+  phonemes:
+  - i
+  - n
+  - a
+  gloss_hint: -ina / ina- (substrate cluster fragment; broad CV-CV)
+  citation: Furnée 1972.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 10
+  - 12
+  sign_to_phoneme:
+    AB01: i
+    AB05: n
+    AB28: a

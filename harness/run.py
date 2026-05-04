@@ -134,48 +134,72 @@ def _build_v0_row(
     }
 
 
-def _load_pool_for(pool_path: Path | None, hypothesis: dict, repo_root: Path) -> dict | None:
-    """Load and pre-compute a pool context for v1 metrics.
+class _StringDateLoader:
+    """Lazy-imported yaml loader that keeps ISO-8601 dates as strings."""
 
-    Inference order:
-      1. Explicit ``pool_path`` argument.
-      2. ``hypothesis['source_pool']`` if a matching ``pools/<name>.yaml``
-         exists.
-      3. None (caller must error out if a v1 metric is selected).
-    """
+    _loader: type | None = None
+
+    @classmethod
+    def get(cls) -> type:
+        if cls._loader is not None:
+            return cls._loader
+        import yaml
+
+        class _Loader(yaml.SafeLoader):
+            pass
+
+        _Loader.yaml_implicit_resolvers = {
+            k: [(tag, regexp) for tag, regexp in v if tag != "tag:yaml.org,2002:timestamp"]
+            for k, v in yaml.SafeLoader.yaml_implicit_resolvers.items()
+        }
+        cls._loader = _Loader
+        return _Loader
+
+
+def _build_pool_ctx(pool_path: Path) -> dict:
+    """Load one pool YAML and return ``{path, pool, bigram_model, by_surface}``."""
     import yaml
 
-    class _StringDateLoader(yaml.SafeLoader):
-        pass
-
-    _StringDateLoader.yaml_implicit_resolvers = {
-        k: [(tag, regexp) for tag, regexp in v if tag != "tag:yaml.org,2002:timestamp"]
-        for k, v in yaml.SafeLoader.yaml_implicit_resolvers.items()
+    with pool_path.open("r", encoding="utf-8") as fh:
+        pool = yaml.load(fh, Loader=_StringDateLoader.get())
+    sequences = [list(e["phonemes"]) for e in pool.get("entries", [])]
+    return {
+        "path": pool_path,
+        "pool": pool,
+        "bigram_model": EmpiricalBigramModel.from_sequences(sequences),
+        "by_surface": {e["surface"]: e for e in pool.get("entries", [])},
     }
 
-    candidates: list[Path] = []
-    if pool_path is not None:
-        candidates.append(pool_path)
+
+def _load_pool_for(pool_path: Path | None, hypothesis: dict, repo_root: Path) -> dict | None:
+    """Load the pool context that matches this hypothesis's ``source_pool``.
+
+    Pool-specific dispatch (mg-c2af). Picking the bigram model from the
+    *hypothesis's* declared ``source_pool`` rather than from a sweep-wide
+    fallback is the central correctness fix: routing an Etruscan-pool
+    candidate through the Aquitanian bigram (or vice versa) makes scores
+    incomparable across pools, because the candidate's phonemes are
+    not in the wrong-pool's vocabulary and every bigram hits the
+    smoothing floor.
+
+    Inference order:
+      1. Explicit ``pool_path`` argument (override; bypasses
+         hypothesis dispatch). Used by the harness CLI's ``--pool``
+         flag for one-off scoring.
+      2. ``hypothesis['source_pool']`` ⇒ ``pools/<source_pool>.yaml``
+         (the normal path).
+      3. ``None``. Curated cross-pool tags like ``linear_b_carryover`` /
+         ``random_scramble`` / ``pre_greek_toponym`` resolve to None
+         here, and the v1 metric in turn skips the bigram term and
+         rescales the position weight (see ``local_fit_v1``).
+    """
+    if pool_path is not None and pool_path.exists():
+        return _build_pool_ctx(pool_path)
     src_pool = hypothesis.get("source_pool")
     if src_pool:
-        candidates.append(repo_root / "pools" / f"{src_pool}.yaml")
-        # Curated hypotheses can have source_pool tags like "linear_b_carryover"
-        # or "random_scramble" with no matching pool YAML. Fall back to the
-        # aquitanian pool so the empirical bigram model has data; the
-        # geographic compat tables include a 'linear_b' region row.
-        candidates.append(repo_root / "pools" / "aquitanian.yaml")
-
-    for c in candidates:
-        if c.exists():
-            with c.open("r", encoding="utf-8") as fh:
-                pool = yaml.load(fh, Loader=_StringDateLoader)
-            sequences = [list(e["phonemes"]) for e in pool.get("entries", [])]
-            return {
-                "path": c,
-                "pool": pool,
-                "bigram_model": EmpiricalBigramModel.from_sequences(sequences),
-                "by_surface": {e["surface"]: e for e in pool.get("entries", [])},
-            }
+        candidate = repo_root / "pools" / f"{src_pool}.yaml"
+        if candidate.exists():
+            return _build_pool_ctx(candidate)
     return None
 
 
@@ -227,15 +251,18 @@ def _build_candidate_equation_row(
             }
         )
     elif metric_name == "local_fit_v1":
-        if pool_ctx is None:
-            raise ValueError("local_fit_v1 requires a pool context (--pool)")
+        # Pool-specific dispatch: pool_ctx may be None for hypotheses
+        # whose source_pool tag has no matching pool YAML (anchors,
+        # scrambles, cross-pool curated fragments). In that case the
+        # bigram term is excluded; see local_fit_v1 docstring.
         fingerprints = sign_position_fingerprints(stream)
         sign_counts = _sign_corpus_counts(stream)
+        bigram_model = pool_ctx["bigram_model"] if pool_ctx is not None else None
         result = local_fit_v1(
             stream,
             signs,
             phonemes,
-            pool_ctx["bigram_model"],
+            bigram_model,
             sign_counts=sign_counts,
             fingerprints=fingerprints,
         )
@@ -244,7 +271,11 @@ def _build_candidate_equation_row(
                 "score": float(result.score),
                 "metric_notes": result.metric_notes,
                 "position_term": float(result.position_term),
-                "bigram_term": float(result.bigram_term),
+                "bigram_term": (
+                    float(result.bigram_term)
+                    if result.bigram_term is not None
+                    else None
+                ),
                 "length_penalty": float(result.length_penalty),
                 "rare_sign_correction": float(result.rare_sign_correction),
             }
@@ -260,13 +291,25 @@ def _build_candidate_equation_row(
             }
         )
     elif metric_name == "geographic_genre_fit_v1":
-        if pool_ctx is None:
-            raise ValueError(
-                "geographic_genre_fit_v1 requires a pool context (--pool)"
-            )
+        # Geographic compat falls back to neutral 0.5 for hypotheses
+        # whose source_pool has no matching pool YAML (e.g. anchors with
+        # source_pool="linear_b_carryover" — the pre-existing
+        # _GG1_REGION_COMPAT lookup table includes ('linear_b', site)
+        # rows, so the metric still produces a meaningful score even
+        # when the pool YAML is absent).
         surface = hypothesis["root"]["surface"]
-        entry = pool_ctx["by_surface"].get(surface)
-        region = entry.get("region") if entry else None
+        entry = (
+            pool_ctx["by_surface"].get(surface)
+            if pool_ctx is not None else None
+        )
+        region = entry.get("region") if entry else hypothesis.get("source_pool")
+        # Map curated cross-pool source_pool tags to the region tags the
+        # _GG1_REGION_COMPAT table actually uses. Anchors carry
+        # source_pool="linear_b_carryover" but the lookup keys are "linear_b".
+        if region == "linear_b_carryover":
+            region = "linear_b"
+        elif region == "pre_greek_toponym":
+            region = "pre_greek"
         semantic_field = entry.get("semantic_field") if entry else None
         result = geographic_genre_fit_v1(
             region=region,

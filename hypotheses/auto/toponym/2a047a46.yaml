@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_termessos_KN_Zf_13_1_9
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''termessos''
+  pinned to KN Zf 13 tokens [1..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: termessos
+  phonemes:
+  - t
+  - e
+  - r
+  - m
+  - e
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Termessos (Pisidian fortress town)
+  citation: Beekes 2010 s.v. Termessos; Furnée 1972 §122.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 9
+  sign_to_phoneme:
+    AB27: t
+    AB24: e
+    AB41: r
+    AB07: m
+    A301: e
+    AB39: s
+    AB44: s
+    AB03: o
+    AB57: s

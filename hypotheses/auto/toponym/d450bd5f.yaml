@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_muke_ARKH_2_9_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''muke''
+  pinned to ARKH 2 tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: muke
+  phonemes:
+  - m
+  - u
+  - k
+  - e
+  gloss_hint: muke- (initial fragment; Mukenai / Mycenae)
+  citation: Beekes 2010 s.v. Mukenai.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: m
+    AB01: u
+    AB05: k
+    AB28: e

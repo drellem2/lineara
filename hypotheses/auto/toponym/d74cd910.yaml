@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_kno_GO_Wc_1a_1_3
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''kno''
+  pinned to GO Wc 1a tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: kno
+  phonemes:
+  - k
+  - n
+  - o
+  gloss_hint: kno- (initial fragment of Knossos and the -nVssos onset family)
+  citation: Beekes 2010 s.v. Knossos; mg-c2af fragmentation rule.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB31: k
+    AB58: n
+    AB80: o

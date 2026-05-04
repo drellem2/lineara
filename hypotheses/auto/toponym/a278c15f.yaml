@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_mna_ARKH_4a_13_16
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''mna''
+  pinned to ARKH 4a tokens [13..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: mna
+  phonemes:
+  - m
+  - n
+  - a
+  gloss_hint: -mna (Pre-Greek substrate suffix variant)
+  citation: Furnée 1972.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 16
+  sign_to_phoneme:
+    AB45: m
+    AB58: n
+    AB47: a

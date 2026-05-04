@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_kuthera_KN_Zc_6_19_25
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''kuthera''
+  pinned to KN Zc 6 tokens [19..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: kuthera
+  phonemes:
+  - k
+  - u
+  - th
+  - e
+  - r
+  - a
+  gloss_hint: Kythera (south-Aegean island; Linear-A site)
+  citation: Beekes 2010 s.v. Kythera.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 25
+  sign_to_phoneme:
+    AB03: k
+    AB81: u
+    AB55: th
+    AB10: e
+    AB28: r
+    AB79: a

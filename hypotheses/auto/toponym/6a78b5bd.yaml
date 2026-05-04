@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ttos_ARKH_2_14_17
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ttos''
+  pinned to ARKH 2 tokens [14..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ttos
+  phonemes:
+  - t
+  - t
+  - o
+  - s
+  gloss_hint: -ttos (Attic substrate suffix; Hymettos / Lykabettos / Ardettos)
+  citation: Beekes 2010 vol. 2 §5 on -ttos; Furnée 1972 §124.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB79: t
+    A301: t
+    AB09: o
+    AB45: s

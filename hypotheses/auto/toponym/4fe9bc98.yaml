@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lebena_KN_Zf_13_8_13
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lebena''
+  pinned to KN Zf 13 tokens [8..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lebena
+  phonemes:
+  - l
+  - e
+  - b
+  - e
+  - n
+  - a
+  gloss_hint: Lebena (Cretan southern coast site)
+  citation: Beekes 2010 s.v. Lebena.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 8
+  - 13
+  sign_to_phoneme:
+    AB03: l
+    AB57: e
+    AB59: b
+    AB53: e
+    AB09: n
+    AB04: a

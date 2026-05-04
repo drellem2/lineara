@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_athenai_HT_Zb_158b_0_5
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''athenai''
+  pinned to HT Zb 158b tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: athenai
+  phonemes:
+  - a
+  - th
+  - e
+  - n
+  - a
+  - i
+  gloss_hint: Athenai (Athens; cf. pre-Greek Athena)
+  citation: Beekes 2010 s.v. Athena (substrate goddess).
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB58: a
+    AB67: th
+    AB53: e
+    AB04: n
+    AB28: a
+    AB57: i

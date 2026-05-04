@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tulissos_KN_Zf_13_5_12
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tulissos''
+  pinned to KN Zf 13 tokens [5..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tulissos
+  phonemes:
+  - t
+  - u
+  - l
+  - i
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Tylissos (Cretan minor palace)
+  citation: Beekes 2010 s.v. Tulissos; Furnée 1972 §122.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 12
+  sign_to_phoneme:
+    A301: t
+    AB39: u
+    AB44: l
+    AB03: i
+    AB57: s
+    AB59: s
+    AB53: o
+    AB09: s

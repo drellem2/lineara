@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_kor_ARKH_2_21_23
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''kor''
+  pinned to ARKH 2 tokens [21..23].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: kor
+  phonemes:
+  - k
+  - o
+  - r
+  gloss_hint: kor- (initial fragment; Korinthos / Korakos)
+  citation: Beekes 2010 s.v. Korinthos.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 21
+  - 23
+  sign_to_phoneme:
+    AB08: k
+    AB58: o
+    AB50: r

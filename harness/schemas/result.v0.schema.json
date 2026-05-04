@@ -59,8 +59,8 @@
       "description": "Mean log(BC + floor) over (sign, phoneme) pairs. Present iff metric == 'local_fit_v1'."
     },
     "bigram_term": {
-      "type": "number",
-      "description": "Mean log P(p_i | p_{i-1}) over the equation's bigrams under the empirical pool LM. Present iff metric == 'local_fit_v1'."
+      "type": ["number", "null"],
+      "description": "Mean log P(p_i | p_{i-1}) over the equation's bigrams under the empirical pool LM. Present iff metric == 'local_fit_v1'. Null when the hypothesis's source_pool has no matching pool YAML (anchors, scrambles, manually-curated cross-pool fragments) — the bigram term is excluded from the metric sum and the position term is rescaled in compensation; see harness/metrics.py local_fit_v1."
     },
     "length_penalty": {
       "type": "number",

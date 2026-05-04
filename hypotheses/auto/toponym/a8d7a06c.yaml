@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tos_HT_108_0_2
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tos''
+  pinned to HT 108 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tos
+  phonemes:
+  - t
+  - o
+  - s
+  gloss_hint: -tos (Pre-Greek substrate ending; phonotactically common)
+  citation: Beekes 2010 vol. 2 §5; Furnée 1972 §124.
+equation:
+  inscription_id: HT 108
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB67: t
+    AB27: o
+    AB59: s

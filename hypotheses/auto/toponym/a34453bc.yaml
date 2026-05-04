@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_kudonia_KN_Zf_13_5_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''kudonia''
+  pinned to KN Zf 13 tokens [5..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: kudonia
+  phonemes:
+  - k
+  - u
+  - d
+  - o
+  - n
+  - i
+  - a
+  gloss_hint: Kydonia (NW Cretan town, modern Khania)
+  citation: Beekes 2010 s.v. Kudonia.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 11
+  sign_to_phoneme:
+    A301: k
+    AB39: u
+    AB44: d
+    AB03: o
+    AB57: n
+    AB59: i
+    AB53: a

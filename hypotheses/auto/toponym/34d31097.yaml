@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_andros_KN_Zf_13_6_11
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''andros''
+  pinned to KN Zf 13 tokens [6..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: andros
+  phonemes:
+  - a
+  - n
+  - d
+  - r
+  - o
+  - s
+  gloss_hint: Andros (Cycladic island)
+  citation: Beekes 2010 s.v. Andros.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 11
+  sign_to_phoneme:
+    AB39: a
+    AB44: n
+    AB03: d
+    AB57: r
+    AB59: o
+    AB53: s

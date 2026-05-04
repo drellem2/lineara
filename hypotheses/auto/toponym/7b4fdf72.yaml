@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_gortyn_KN_Zc_6_18_24
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''gortyn''
+  pinned to KN Zc 6 tokens [18..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: gortyn
+  phonemes:
+  - g
+  - o
+  - r
+  - t
+  - u
+  - n
+  gloss_hint: Gortyn (Cretan southern Mesara plain)
+  citation: Beekes 2010 s.v. Gortyn.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 24
+  sign_to_phoneme:
+    AB06: g
+    AB03: o
+    AB81: r
+    AB55: t
+    AB10: u
+    AB28: n

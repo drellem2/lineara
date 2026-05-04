@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_efe_ARKH_1a_10_13
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''efe''
+  pinned to ARKH 1a tokens [10..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: efe
+  phonemes:
+  - e
+  - p
+  - h
+  - e
+  gloss_hint: ephe- (initial fragment; Ephesos / Apaša)
+  citation: Beekes 2010 s.v. Ephesos.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    AB08: e
+    AB58: p
+    AB73: h
+    AB118: e

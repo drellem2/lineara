@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_mnos_GO_Wc_1a_0_3
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''mnos''
+  pinned to GO Wc 1a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: mnos
+  phonemes:
+  - m
+  - n
+  - o
+  - s
+  gloss_hint: -mnos (Pre-Greek substrate suffix; Lemnos / Kalymnos)
+  citation: Beekes 2010 vol. 2 appendix; Furnée 1972.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: m
+    AB31: n
+    AB58: o
+    AB80: s

@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_praisos_KN_Zf_13_3_9
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''praisos''
+  pinned to KN Zf 13 tokens [3..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: praisos
+  phonemes:
+  - p
+  - r
+  - a
+  - i
+  - s
+  - o
+  - s
+  gloss_hint: Praisos (Eastern Cretan town with Eteocretan inscriptions)
+  citation: Beekes 2010 s.v. Praisos; Furnée 1972 §122.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 9
+  sign_to_phoneme:
+    AB41: p
+    AB07: r
+    A301: a
+    AB39: i
+    AB44: s
+    AB03: o
+    AB57: s

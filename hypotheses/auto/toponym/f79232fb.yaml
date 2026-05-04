@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_nthos_ARKH_2_15_19
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''nthos''
+  pinned to ARKH 2 tokens [15..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: nthos
+  phonemes:
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: -nthos (Pre-Greek substrate suffix; Korinthos / Probalinthos / Hyakinthos
+    / Olynthos)
+  citation: Beekes 2010 vol. 2 §4 on -nthos; Furnée 1972 §123.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 15
+  - 19
+  sign_to_phoneme:
+    A301: n
+    AB09: th
+    AB45: o
+    AB118: s

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tiruns_KN_Zc_6_4_9
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tiruns''
+  pinned to KN Zc 6 tokens [4..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tiruns
+  phonemes:
+  - t
+  - i
+  - r
+  - u
+  - n
+  - s
+  gloss_hint: Tiryns (Argolid Mycenaean site, pre-Greek name)
+  citation: Beekes 2010 s.v. Tiryns.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 4
+  - 9
+  sign_to_phoneme:
+    AB08: t
+    AB07: i
+    AB01: r
+    AB67: u
+    AB37: n
+    AB03: s

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tenos_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tenos''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tenos
+  phonemes:
+  - t
+  - e
+  - n
+  - o
+  - s
+  gloss_hint: Tenos (Cycladic island)
+  citation: Beekes 2010 s.v. Tenos.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: t
+    AB31: e
+    AB58: n
+    AB80: o
+    AB28: s

@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_hyakinthos_KN_Zf_13_2_10
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''hyakinthos''
+  pinned to KN Zf 13 tokens [2..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: hyakinthos
+  phonemes:
+  - h
+  - u
+  - a
+  - k
+  - i
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: Hyakinthos (pre-Greek deity / mountain name)
+  citation: Beekes 2010 s.v. Hyakinthos; Furnée 1972 §123.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 10
+  sign_to_phoneme:
+    AB24: h
+    AB41: u
+    AB07: a
+    A301: k
+    AB39: i
+    AB44: n
+    AB03: th
+    AB57: o
+    AB59: s

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_ntha_ARKH_2_22_24
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''ntha''
+  pinned to ARKH 2 tokens [22..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ntha
+  phonemes:
+  - n
+  - th
+  - a
+  gloss_hint: -ntha (Pre-Greek substrate suffix variant; Tirintha / Atalanta)
+  citation: Furnée 1972 §123.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 22
+  - 24
+  sign_to_phoneme:
+    AB58: n
+    AB50: th
+    AB54: a

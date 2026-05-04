@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_andos_KH_10_12_16
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''andos''
+  pinned to KH 10 tokens [12..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: andos
+  phonemes:
+  - a
+  - n
+  - d
+  - o
+  - s
+  gloss_hint: -andos (substrate ending; broader -nd- family)
+  citation: Furnée 1972 §128.
+equation:
+  inscription_id: KH 10
+  span:
+  - 12
+  - 16
+  sign_to_phoneme:
+    AB08: a
+    AB67: n
+    AB39: d
+    AB38: o
+    AB04: s

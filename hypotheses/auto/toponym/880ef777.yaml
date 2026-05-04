@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_tulisos_KN_Zf_13_1_7
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''tulisos''
+  pinned to KN Zf 13 tokens [1..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tulisos
+  phonemes:
+  - t
+  - u
+  - l
+  - i
+  - s
+  - o
+  - s
+  gloss_hint: Tulisos (alternate spelling of Tylissos with single -s-)
+  citation: Kretschmer 1896 §57; Beekes 2010 s.v. Tulissos.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 7
+  sign_to_phoneme:
+    AB27: t
+    AB24: u
+    AB41: l
+    AB07: i
+    A301: s
+    AB39: o
+    AB44: s

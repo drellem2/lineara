@@ -495,13 +495,21 @@ class EmpiricalBigramModel:
 
 @dataclass(frozen=True)
 class LocalFitV1Result:
-    """Result of ``local_fit_v1`` on one candidate-equation hypothesis."""
+    """Result of ``local_fit_v1`` on one candidate-equation hypothesis.
+
+    ``bigram_term`` is ``None`` when the caller passed ``bigram_model=None``
+    (e.g. anchor / scramble / cross-pool curated hypotheses for which no
+    matching pool yaml exists). In that case the bigram contribution is
+    excluded from ``score`` and the position term is rescaled to occupy
+    its weight (see ``local_fit_v1`` for the exact formula). This keeps
+    pool-matched and pool-unmatched scores on a comparable scale.
+    """
 
     score: float
     metric_notes: str
     # Diagnostic breakdown (persisted for analysis, not used in the sort key):
     position_term: float
-    bigram_term: float
+    bigram_term: float | None
     length_penalty: float
     rare_sign_correction: float
     n_pairs_scored: int
@@ -569,7 +577,7 @@ def local_fit_v1(
     stream: list[str],
     signs: list[str],
     phonemes: list[str],
-    bigram_model: EmpiricalBigramModel,
+    bigram_model: EmpiricalBigramModel | None,
     *,
     sign_counts: dict[str, int] | None = None,
     fingerprints: dict[str, list[int]] | None = None,
@@ -581,6 +589,29 @@ def local_fit_v1(
     empirically-learned bigram prior over the active pool, a length
     penalty, and a rare-sign correction. See the module-level comment block
     above for the formula and constants.
+
+    **Pool-specific bigram dispatch (mg-c2af).** ``bigram_model`` must be
+    the bigram model built from the hypothesis's own ``source_pool`` (so
+    Aquitanian candidates score against the Aquitanian pool's bigram
+    statistics, Etruscan against Etruscan, toponym against toponym).
+    Routing a non-pool candidate (anchor / scramble / cross-pool curated
+    fragment) through *another* pool's bigram model produces uninterpretable
+    rare-sign-style penalties: the candidate's phonemes simply don't
+    appear in that pool's vocabulary, so every bigram hits the smoothing
+    floor and the term becomes a fixed cross-hypothesis penalty rather
+    than a discriminator. mg-7c8c documented the resulting confound: anchor
+    (real) candidates scored *lower* than random IPA scrambles because the
+    runner had been falling back to the Aquitanian bigram for both.
+
+    The fix: when the runner cannot match the hypothesis's source_pool to
+    a pool YAML, it passes ``bigram_model=None`` here. The bigram term
+    is then excluded from the metric sum and reported as ``None`` in the
+    result row's ``bigram_term`` field. The position term is rescaled to
+    weight ``A + B`` (rather than just ``A``) so the absolute score
+    remains on the same scale as pool-matched scores: each additive term
+    is per-sign in roughly [-7, 0], and skipping one term without
+    rescaling would shift unmatched scores upward by ~|B*bigram| relative
+    to matched scores.
 
     **Why no control z.** v0 used per-hypothesis permutation z to isolate
     order-of-phonemes from sign-rarity, but the price was that ranks of
@@ -605,7 +636,9 @@ def local_fit_v1(
 
     **Determinism.** Identical inputs ⇒ byte-identical score. The empirical
     bigram model is built deterministically from the pool sequences (in
-    insertion order); `_sign_corpus_counts` is order-independent.
+    insertion order); `_sign_corpus_counts` is order-independent. The
+    null-bigram code path is also fully deterministic — it simply skips
+    one term and rescales the rest.
 
     **What invalidates it.**
       * (a) Pool is too small (< ~20 entries) ⇒ empirical bigram is
@@ -629,30 +662,47 @@ def local_fit_v1(
         sign_counts = _sign_corpus_counts(stream)
 
     pos_mean = _mean_position_compat(signs, phonemes, fingerprints)
-    bi_mean = _mean_empirical_bigram_logprob(phonemes, bigram_model)
     lp = _length_penalty(len(phonemes))
     rsc = _rare_sign_correction(signs, sign_counts, _LF1_RARE_SIGN_THRESHOLD)
 
-    score = (
-        _LF1_A_POSITION * pos_mean
-        + _LF1_B_BIGRAM * bi_mean
-        - _LF1_C_LENGTH_PENALTY * lp
-        - _LF1_D_RARE_SIGN * rsc
-    )
-
-    notes = (
-        f"local_fit_v1: pos={pos_mean:.4f}, bigram={bi_mean:.4f}, "
-        f"length_penalty={lp:.4f}, rare_sign={rsc:.4f}; "
-        f"A={_LF1_A_POSITION}, B={_LF1_B_BIGRAM}, "
-        f"C={_LF1_C_LENGTH_PENALTY}, D={_LF1_D_RARE_SIGN}, "
-        f"rare_threshold={_LF1_RARE_SIGN_THRESHOLD}, "
-        f"alpha={_LF1_BIGRAM_ALPHA}, vocab={len(bigram_model.vocab)}"
-    )
+    if bigram_model is None:
+        # No matching pool. Skip the bigram term entirely and rescale the
+        # position weight so the additive sum stays on the same scale
+        # (A + B) * pos rather than A * pos + B * 0. Document via notes.
+        bi_mean: float | None = None
+        score = (
+            (_LF1_A_POSITION + _LF1_B_BIGRAM) * pos_mean
+            - _LF1_C_LENGTH_PENALTY * lp
+            - _LF1_D_RARE_SIGN * rsc
+        )
+        notes = (
+            f"local_fit_v1: pos={pos_mean:.4f}, bigram=null (no pool match), "
+            f"length_penalty={lp:.4f}, rare_sign={rsc:.4f}; "
+            f"A_eff={_LF1_A_POSITION + _LF1_B_BIGRAM} (A+B; bigram excluded), "
+            f"C={_LF1_C_LENGTH_PENALTY}, D={_LF1_D_RARE_SIGN}, "
+            f"rare_threshold={_LF1_RARE_SIGN_THRESHOLD}"
+        )
+    else:
+        bi_mean = _mean_empirical_bigram_logprob(phonemes, bigram_model)
+        score = (
+            _LF1_A_POSITION * pos_mean
+            + _LF1_B_BIGRAM * bi_mean
+            - _LF1_C_LENGTH_PENALTY * lp
+            - _LF1_D_RARE_SIGN * rsc
+        )
+        notes = (
+            f"local_fit_v1: pos={pos_mean:.4f}, bigram={bi_mean:.4f}, "
+            f"length_penalty={lp:.4f}, rare_sign={rsc:.4f}; "
+            f"A={_LF1_A_POSITION}, B={_LF1_B_BIGRAM}, "
+            f"C={_LF1_C_LENGTH_PENALTY}, D={_LF1_D_RARE_SIGN}, "
+            f"rare_threshold={_LF1_RARE_SIGN_THRESHOLD}, "
+            f"alpha={_LF1_BIGRAM_ALPHA}, vocab={len(bigram_model.vocab)}"
+        )
     return LocalFitV1Result(
         score=float(score),
         metric_notes=notes,
         position_term=float(pos_mean),
-        bigram_term=float(bi_mean),
+        bigram_term=(float(bi_mean) if bi_mean is not None else None),
         length_penalty=float(lp),
         rare_sign_correction=float(rsc),
         n_pairs_scored=len(signs),
@@ -742,7 +792,12 @@ _GG1_REGION_COMPAT: dict[tuple[str, str], float] = {
     ("basque_substrate", "Papoura"): 0.25,
     ("basque_substrate", "Psykhro"): 0.25,
     ("basque_substrate", "Syme"): 0.25,
-    # Pre-Greek toponym → Crete is the strongest case.
+    # Pre-Greek toponym → Crete is the strongest case. mg-c2af expands
+    # this row to every Cretan site that appears in the SigLA corpus
+    # so toponym candidates landing on minor sites (Tylissos, Gournia,
+    # Pyrgos, Haghios Stephanos, Psykhro, Papoura, Syme) hit the
+    # by_surface lookup at full weight (1.0) rather than the unmapped
+    # neutral 0.5. The Cycladic / mainland sites stay at 0.75 / 0.5.
     ("pre_greek", "Haghia Triada"): 1.0,
     ("pre_greek", "Khania"): 1.0,
     ("pre_greek", "Phaistos"): 1.0,
@@ -750,6 +805,15 @@ _GG1_REGION_COMPAT: dict[tuple[str, str], float] = {
     ("pre_greek", "Knossos"): 1.0,
     ("pre_greek", "Mallia"): 1.0,
     ("pre_greek", "Arkhanes"): 1.0,
+    ("pre_greek", "Tylissos"): 1.0,  # mg-c2af: Cretan minor palace
+    ("pre_greek", "Gournia"): 1.0,   # mg-c2af: Cretan town
+    ("pre_greek", "Pyrgos"): 1.0,    # mg-c2af: Cretan villa site
+    ("pre_greek", "Papoura"): 1.0,   # mg-c2af: Cretan inscription site
+    ("pre_greek", "Psykhro"): 1.0,   # mg-c2af: Cretan cave (Diktaian)
+    ("pre_greek", "Syme"): 1.0,      # mg-c2af: Cretan rural sanctuary
+    ("pre_greek", "Haghios Stephanos"): 0.75,  # mg-c2af: Lakonian, off-Crete
+    ("pre_greek", "Kythera"): 0.75,  # mg-c2af: Lakonian island, near-Crete
+    ("pre_greek", "Melos"): 0.75,    # mg-c2af: Cycladic island, Linear-A site
     ("pre_greek", "Kea"): 0.75,  # Kea is Cycladic but pre-Greek substrate likely
     ("pre_greek", "Mycenae"): 0.5,  # mainland; less direct
     # Etruscan: Mediterranean substrate, plausible but indirect. The

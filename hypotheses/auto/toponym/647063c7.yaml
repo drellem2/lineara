@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_iassos_KN_Zf_13_13_18
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''iassos''
+  pinned to KN Zf 13 tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: iassos
+  phonemes:
+  - i
+  - a
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Iassos (Carian coast town)
+  citation: Beekes 2010 s.v. Iassos.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB04: i
+    AB53: a
+    AB23: s
+    AB08: s
+    AB57: o
+    AB81: s

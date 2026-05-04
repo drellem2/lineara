@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_phalasarna_KN_Zf_13_4_13
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''phalasarna''
+  pinned to KN Zf 13 tokens [4..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: phalasarna
+  phonemes:
+  - p
+  - h
+  - a
+  - l
+  - a
+  - s
+  - a
+  - r
+  - n
+  - a
+  gloss_hint: Phalasarna (NW Cretan port)
+  citation: Beekes 2010 s.v. Phalasarna.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 13
+  sign_to_phoneme:
+    AB07: p
+    A301: h
+    AB39: a
+    AB44: l
+    AB03: a
+    AB57: s
+    AB59: a
+    AB53: r
+    AB09: n
+    AB04: a

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_lab_ARKH_2_8_10
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''lab''
+  pinned to ARKH 2 tokens [8..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: lab
+  phonemes:
+  - l
+  - a
+  - b
+  gloss_hint: lab- (initial fragment; Lebena via /la/-)
+  citation: Kretschmer 1896; Beekes vol. 2 on Pre-Greek lab- cluster.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 10
+  sign_to_phoneme:
+    AB08: l
+    AB41: a
+    AB01: b

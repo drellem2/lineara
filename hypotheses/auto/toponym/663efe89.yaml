@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_prie_HT_104_19_22
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''prie''
+  pinned to HT 104 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: prie
+  phonemes:
+  - p
+  - r
+  - i
+  - e
+  gloss_hint: prie- (initial fragment; Priene)
+  citation: Beekes 2010 s.v. Priene.
+equation:
+  inscription_id: HT 104
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB03: p
+    AB01: r
+    AB58: i
+    AB37: e

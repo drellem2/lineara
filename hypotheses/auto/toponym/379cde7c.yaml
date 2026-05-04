@@ -1,0 +1,40 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_poikilassos_KN_Zf_13_0_10
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''poikilassos''
+  pinned to KN Zf 13 tokens [0..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: poikilassos
+  phonemes:
+  - p
+  - o
+  - i
+  - k
+  - i
+  - l
+  - a
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Poikilassos (south-Cretan town with -ssos suffix)
+  citation: Furnée 1972 §122; Beekes vol. 2 appendix.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 10
+  sign_to_phoneme:
+    AB08: p
+    AB27: o
+    AB24: i
+    AB41: k
+    AB07: i
+    A301: l
+    AB39: a
+    AB44: s
+    AB03: s
+    AB57: o
+    AB59: s

@@ -1,0 +1,40 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_probalinthos_KN_Zf_13_0_10
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''probalinthos''
+  pinned to KN Zf 13 tokens [0..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: probalinthos
+  phonemes:
+  - p
+  - r
+  - o
+  - b
+  - a
+  - l
+  - i
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: Probalinthos (Attic deme on Marathon)
+  citation: Beekes 2010 s.v. Probalinthos; Furnée 1972 §123.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 10
+  sign_to_phoneme:
+    AB08: p
+    AB27: r
+    AB24: o
+    AB41: b
+    AB07: a
+    A301: l
+    AB39: i
+    AB44: n
+    AB03: th
+    AB57: o
+    AB59: s

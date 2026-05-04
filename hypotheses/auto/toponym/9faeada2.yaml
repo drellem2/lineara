@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_toponym_thera_ARKH_1a_10_13
+description: 'Auto-generated candidate equation: pool=''toponym'' entry surface=''thera''
+  pinned to ARKH 1a tokens [10..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  gloss_hint: Thera (Cycladic island)
+  citation: Beekes 2010 s.v. Thera.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    AB08: th
+    AB58: e
+    AB73: r
+    AB118: a
