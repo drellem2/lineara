@@ -1,0 +1,9 @@
+name: identity
+description: >
+  Empty mapping. Sanity check that the harness's baseline-vs-mapped path is a
+  no-op when nothing is rewritten. Score must be exactly 0 under
+  compression_delta_v0 (the two payloads are byte-identical, so the two zlib
+  outputs are byte-identical).
+author: pm-lineara
+created: 2026-05-04
+mapping: {}

@@ -56,3 +56,20 @@ python3 scripts/parse_sigla.py            # write corpus/<site>/<id>.json + all.
 python3 scripts/build_corpus.py --strict  # round-trip + schema-validate
 python3 scripts/check_corpus.py           # SigLA word-pattern cross-check
 ```
+
+## Scoring harness (v0)
+
+The v0 harness scores a declarative hypothesis against the corpus and appends one row to `results/experiments.jsonl`. One hypothesis shape (partial sign→phoneme mapping) and one metric (`compression_delta_v0`, zlib over a 2-byte symbol-id stream) for now; follow-up tickets add more.
+
+```bash
+# Score a hypothesis and append the result row.
+python3 -m harness.run hypotheses/identity.yaml
+python3 -m harness.run hypotheses/younger_ab54_ti.yaml --note "baseline rerun"
+
+# View the leaderboard (regenerated on demand; not committed).
+python3 scripts/rollup.py
+```
+
+Hypothesis YAMLs live under `hypotheses/`; their schema is `harness/schemas/hypothesis.v0.schema.json`. Each result row is validated against `harness/schemas/result.v0.schema.json`. The result stream is **append-only** — re-runs add new rows; rows are never edited or deleted. Every row carries `hypothesis_hash`, `harness_version`, and `corpus_snapshot` so a stale row whose hypothesis YAML has since been edited is detectable (hash mismatch) and ignorable.
+
+The harness depends on `pyyaml` and `jsonschema`; install with `pip install pyyaml jsonschema`.

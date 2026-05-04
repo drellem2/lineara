@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/drellem2/lineara/harness/schemas/result.v0.schema.json",
+  "title": "Lineara harness result row (v0)",
+  "description": "One row appended to results/experiments.jsonl per scoring run. The file is append-only: rows are never edited or deleted.",
+  "type": "object",
+  "required": [
+    "run_id",
+    "hypothesis_path",
+    "hypothesis_hash",
+    "harness_version",
+    "metric",
+    "score",
+    "bits_per_sign_baseline",
+    "bits_per_sign_mapped",
+    "corpus_records_used",
+    "corpus_snapshot",
+    "ran_at",
+    "duration_ms",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "description": "UUID4 generated per scoring run. Unique across the entire result history.",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "hypothesis_path": {
+      "type": "string",
+      "description": "Repo-relative path to the hypothesis YAML at the time of the run."
+    },
+    "hypothesis_hash": {
+      "type": "string",
+      "description": "sha256 over the canonicalized hypothesis (sha256:<hex>). Lets readers detect rows whose hypothesis source has been edited since the run.",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "harness_version": {
+      "type": "string",
+      "description": "Schema/coder generation tag. Bump when the metric or stream construction changes in a way that breaks bit-comparability.",
+      "minLength": 1
+    },
+    "metric": {
+      "type": "string",
+      "description": "Name of the metric used to score this row."
+    },
+    "score": {
+      "type": "number",
+      "description": "Primary metric output. For compression_delta_v0: baseline_bits - mapped_bits (positive = compression improvement)."
+    },
+    "bits_per_sign_baseline": {
+      "type": "number",
+      "description": "Baseline encoding bits divided by the number of tokens in the stream (including the inscription-boundary marker)."
+    },
+    "bits_per_sign_mapped": {
+      "type": "number",
+      "description": "Mapped encoding bits divided by the number of tokens in the stream."
+    },
+    "corpus_records_used": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of corpus records that contributed at least one token to the stream (i.e. n_signs > 0 records after filtering)."
+    },
+    "corpus_snapshot": {
+      "type": "string",
+      "description": "Identifier of the corpus snapshot used for the run. Format 'git:<sha>' for committed corpora; 'sha256:<hex>' for content-hashed snapshots."
+    },
+    "ran_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC RFC-3339 timestamp at the start of the run."
+    },
+    "duration_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Wall-clock duration of the scoring run in milliseconds."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Operator note attached at submission time (e.g. via --note). Empty string when none provided."
+    }
+  }
+}

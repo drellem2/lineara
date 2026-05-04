@@ -1,0 +1,15 @@
+name: younger_ab54_ti
+description: >
+  Test Younger's reading of AB54 as /ti/. Single-sign mapping; baseline sanity
+  check that the harness produces a non-zero compression delta on a real (if
+  weak) hypothesis. We are not claiming the reading; we are measuring how a
+  one-sign assignment moves the metric.
+author: pm-lineara
+created: 2026-05-04
+notes: >
+  Younger, J. G., 'Linear A texts in phonetic transcription' (online edition).
+  AB54 is one of the better-attested syllabogram readings carried over from
+  Linear B. Single-sign hypothesis is intentionally narrow — a partial mapping
+  is the v0 contract.
+mapping:
+  AB54: ti
