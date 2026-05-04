@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_zahar_HT_Wc_3017a_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''zahar''
+  pinned to HT Wc 3017a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: zahar
+  phonemes:
+  - z
+  - a
+  - h
+  - a
+  - r
+  gloss_hint: old
+  citation: Trask 1997 ch. 3; cf. Aq. SAHAR-.
+equation:
+  inscription_id: HT Wc 3017a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB16: z
+    AB81: a
+    AB27: h
+    AB06: a
+    A306: r

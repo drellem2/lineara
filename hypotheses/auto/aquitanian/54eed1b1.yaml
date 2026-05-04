@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_bi_ARKH_4a_21_22
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''bi''
+  pinned to ARKH 4a tokens [21..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: bi
+  phonemes:
+  - b
+  - i
+  gloss_hint: two
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 21
+  - 22
+  sign_to_phoneme:
+    AB24: b
+    AB08: i

@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_su_ARKH_6_1_2
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''su''
+  pinned to ARKH 6 tokens [1..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: su
+  phonemes:
+  - s
+  - u
+  gloss_hint: fire
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 6
+  span:
+  - 1
+  - 2
+  sign_to_phoneme:
+    AB06: s
+    AB69: u

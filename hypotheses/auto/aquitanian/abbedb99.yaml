@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_izar_HT_122b_13_16
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''izar''
+  pinned to HT 122b tokens [13..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: izar
+  phonemes:
+  - i
+  - z
+  - a
+  - r
+  gloss_hint: star
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 16
+  sign_to_phoneme:
+    AB08: i
+    AB60: z
+    AB65: a
+    AB10: r

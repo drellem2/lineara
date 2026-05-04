@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_ur_ARKH_4a_13_14
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''ur''
+  pinned to ARKH 4a tokens [13..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ur
+  phonemes:
+  - u
+  - r
+  gloss_hint: water
+  citation: Trask 1997 ch. 3 (Basque ur 'water'; matches Aq. UR- in toponyms).
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 14
+  sign_to_phoneme:
+    AB45: u
+    AB58: r

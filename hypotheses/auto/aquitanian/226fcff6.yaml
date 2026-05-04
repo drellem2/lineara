@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_mahats_HT_115a_9_13
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''mahats''
+  pinned to HT 115a tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: mahats
+  phonemes:
+  - m
+  - a
+  - h
+  - a
+  - ts
+  gloss_hint: grape
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB53: m
+    AB59: a
+    AB80: h
+    AB55: a
+    AB40: ts

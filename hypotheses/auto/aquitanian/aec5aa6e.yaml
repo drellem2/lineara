@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_ikusi_KN_Zc_7_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''ikusi''
+  pinned to KN Zc 7 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ikusi
+  phonemes:
+  - i
+  - k
+  - u
+  - s
+  - i
+  gloss_hint: see
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: i
+    AB77: k
+    AB55: u
+    AB74: s
+    AB37: i

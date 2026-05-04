@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_handi_KH_5_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''handi''
+  pinned to KH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: handi
+  phonemes:
+  - h
+  - a
+  - n
+  - d
+  - i
+  gloss_hint: big
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: h
+    AB01: a
+    AB67: n
+    AB41: d
+    AB77: i

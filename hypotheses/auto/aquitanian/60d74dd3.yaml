@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_bat_HT_108_9_11
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''bat''
+  pinned to HT 108 tokens [9..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: bat
+  phonemes:
+  - b
+  - a
+  - t
+  gloss_hint: one
+  citation: Trask 1997 ch. 4 (numerals).
+equation:
+  inscription_id: HT 108
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB07: b
+    AB06: a
+    AB02: t

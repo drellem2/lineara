@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_non_ARKH_1a_11_13
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''non''
+  pinned to ARKH 1a tokens [11..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: non
+  phonemes:
+  - n
+  - o
+  - n
+  gloss_hint: where
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 11
+  - 13
+  sign_to_phoneme:
+    AB58: n
+    AB73: o
+    AB118: n

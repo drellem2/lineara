@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_lur_HT_108_0_2
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''lur''
+  pinned to HT 108 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  gloss_hint: earth, ground
+  citation: Gorrochategui 1984, Aq. LUR- compound element; Basque lur.
+equation:
+  inscription_id: HT 108
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB67: l
+    AB27: u
+    AB59: r

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_haize_KN_Zc_7_17_21
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''haize''
+  pinned to KN Zc 7 tokens [17..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: haize
+  phonemes:
+  - h
+  - a
+  - i
+  - z
+  - e
+  gloss_hint: wind
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 17
+  - 21
+  sign_to_phoneme:
+    AB08: h
+    AB06: a
+    AB24: i
+    AB40: z
+    AB39: e

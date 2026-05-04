@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_esne_HT_128a_6_9
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''esne''
+  pinned to HT 128a tokens [6..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: esne
+  phonemes:
+  - e
+  - s
+  - n
+  - e
+  gloss_hint: milk
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 128a
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    AB26: e
+    AB56: s
+    AB09: n
+    AB13: e

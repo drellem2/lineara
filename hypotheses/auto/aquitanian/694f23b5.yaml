@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_hesi_ARKH_2_8_11
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''hesi''
+  pinned to ARKH 2 tokens [8..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: hesi
+  phonemes:
+  - h
+  - e
+  - s
+  - i
+  gloss_hint: hedge, fence
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    AB08: h
+    AB41: e
+    AB01: s
+    AB05: i

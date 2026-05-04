@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_ere_ARKH_5_0_2
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''ere''
+  pinned to ARKH 5 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ere
+  phonemes:
+  - e
+  - r
+  - e
+  gloss_hint: also
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB08: e
+    AB51: r
+    AB30: e

@@ -77,7 +77,28 @@ python3 scripts/rollup.py
 python3 scripts/rollup.py --metric local_fit_v0
 ```
 
-Hypothesis YAMLs live under `hypotheses/`; the curated test suite for the v1 candidate-equation shape is in `hypotheses/curated/`. Schemas: `harness/schemas/hypothesis.v0.schema.json`, `harness/schemas/hypothesis.candidate_equation.v1.schema.json`. Each result row is validated against `harness/schemas/result.v0.schema.json` (which carries `local_fit_v0`-specific optional fields `score_control_z` and `metric_notes`). The result stream is **append-only** — re-runs add new rows; rows are never edited or deleted. Every row carries `hypothesis_hash`, `harness_version`, and `corpus_snapshot` so a stale row whose hypothesis YAML has since been edited is detectable (hash mismatch) and ignorable.
+Hypothesis YAMLs live under `hypotheses/`; the curated test suite for the v1 candidate-equation shape is in `hypotheses/curated/`, and bulk-generated hypotheses from the Aquitanian pool live under `hypotheses/auto/aquitanian/`. Schemas: `harness/schemas/hypothesis.v0.schema.json`, `harness/schemas/hypothesis.candidate_equation.v1.schema.json`. Each result row is validated against `harness/schemas/result.v0.schema.json` (which carries `local_fit_v0`-specific optional fields `score_control_z` and `metric_notes`). The result stream is **append-only** — re-runs add new rows; rows are never edited or deleted. Every row carries `hypothesis_hash`, `harness_version`, and `corpus_snapshot` so a stale row whose hypothesis YAML has since been edited is detectable (hash mismatch) and ignorable.
+
+## Bulk pipeline (substrate root pools)
+
+The bulk path turns a substrate-root pool into thousands of candidate-equation hypotheses, scores them all, and renders a leaderboard:
+
+```bash
+# 1. Generate candidate hypotheses from a pool. Idempotent + content-addressed
+#    filenames; manifest is sorted by (pool_entry_index, inscription_id, span_start).
+python3 scripts/generate_candidates.py --pool aquitanian
+
+# 2. Run the sweep. Resumable: skips hypotheses already scored under the
+#    current corpus snapshot. Prints progress every 100 rows and a summary
+#    block + ASCII histogram at the end.
+python3 scripts/run_sweep.py --manifest hypotheses/auto/aquitanian.manifest.jsonl
+
+# 3. Render the per-pool leaderboard snapshot.
+python3 scripts/rollup.py --metric local_fit_v0 --pool aquitanian --top 50 \
+    --write results/rollup.aquitanian.md
+```
+
+Pool YAMLs live under `pools/<name>.yaml`, validated against `pools/schemas/pool.v1.schema.json`. The Aquitanian pool's source provenance and refresh procedure are documented in `pools/aquitanian.README.md`.
 
 The `local_fit_v0` metric scores a `candidate_equation.v1` hypothesis by combining a position-fit term (how well do the equation's signs' corpus position fingerprints match the proposed phonemes' expected position profiles?) with a phoneme-class bigram log-likelihood under a hardcoded Basque-style CV phonotactic prior. The result row carries a control-z computed against 200 random phoneme-permutations of the same alignment (seed=42); see the docstring on `harness.metrics.local_fit_v0` for the formula, what it does/does-not measure, and known v0 limitations.
 

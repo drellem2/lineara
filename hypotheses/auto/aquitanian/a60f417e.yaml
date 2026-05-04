@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_sei_HT_108_18_20
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''sei''
+  pinned to HT 108 tokens [18..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: sei
+  phonemes:
+  - s
+  - e
+  - i
+  gloss_hint: six
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: HT 108
+  span:
+  - 18
+  - 20
+  sign_to_phoneme:
+    AB76: s
+    AB37: e
+    AB65: i

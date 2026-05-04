@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_arrain_SY_Za_4_0_5
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''arrain''
+  pinned to SY Za 4 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: arrain
+  phonemes:
+  - a
+  - r
+  - r
+  - a
+  - i
+  - n
+  gloss_hint: fish
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: a
+    AB59: r
+    AB28: r
+    A301: a
+    AB54: i
+    AB57: n

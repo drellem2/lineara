@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_andere_KN_Zf_13_7_12
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''andere''
+  pinned to KN Zf 13 tokens [7..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: andere
+  phonemes:
+  - a
+  - n
+  - d
+  - e
+  - r
+  - e
+  gloss_hint: lady, woman of standing
+  citation: Gorrochategui 1984, Aquitanian theonym/anthroponym ANDERE; Trask 1997
+    ch. 3 (Basque cognate andere).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 7
+  - 12
+  sign_to_phoneme:
+    AB44: a
+    AB03: n
+    AB57: d
+    AB59: e
+    AB53: r
+    AB09: e

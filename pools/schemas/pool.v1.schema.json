@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/drellem2/lineara/pools/schemas/pool.v1.schema.json",
+  "title": "Lineara substrate root pool (v1)",
+  "description": "A named collection of substrate-language root entries. Each entry is a candidate root that the bulk generator can pin against syllabogram windows in the Linear A corpus.",
+  "type": "object",
+  "required": ["pool", "source_citation", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "pool": {
+      "type": "string",
+      "description": "Stable slug for the pool; should match the YAML file basename. Used as a tag on every emitted candidate-equation hypothesis.",
+      "pattern": "^[a-z0-9][a-z0-9_]*$",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "source_citation": {
+      "type": "string",
+      "description": "Multiline citation block. Names every secondary or primary source the entries draw from.",
+      "minLength": 1
+    },
+    "license": {
+      "type": "string",
+      "description": "Notes on the licensing / fair-use posture for the cited material."
+    },
+    "fetched_at": {
+      "type": "string",
+      "description": "ISO-8601 timestamp at which the pool was compiled."
+    },
+    "entries": {
+      "type": "array",
+      "description": "Pool entries; one candidate root per entry.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["surface", "phonemes"],
+        "additionalProperties": false,
+        "properties": {
+          "surface": {
+            "type": "string",
+            "description": "Surface form of the root (orthographic).",
+            "minLength": 1
+          },
+          "phonemes": {
+            "type": "array",
+            "description": "Ordered phoneme sequence. Multi-character phonemes (tx, tz, ts) are permitted; the local_fit_v0 metric classifies them by their first character.",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "gloss": {
+            "type": "string",
+            "description": "English gloss (informal)."
+          },
+          "semantic_field": {
+            "type": "string",
+            "description": "Coarse semantic category. Forward-compat with the geographic-vs-genre filter follow-up."
+          },
+          "attestations": {
+            "type": "array",
+            "description": "Surface forms attested in the source(s). Optional but useful for downstream filtering.",
+            "items": {"type": "string"}
+          },
+          "region": {
+            "type": "string",
+            "description": "Geographic-cultural origin tag (e.g. 'aquitania', 'basque_substrate', 'pre_greek')."
+          },
+          "citation": {
+            "type": "string",
+            "description": "Per-entry source pointer (Trask 1997 chapter X, Gorrochategui 1984 §Y, etc.)."
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

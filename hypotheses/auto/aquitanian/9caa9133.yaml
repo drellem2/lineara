@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_ardi_HT_12_0_3
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''ardi''
+  pinned to HT 12 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ardi
+  phonemes:
+  - a
+  - r
+  - d
+  - i
+  gloss_hint: sheep
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 12
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB16: a
+    AB37: r
+    AB01: d
+    AB04: i

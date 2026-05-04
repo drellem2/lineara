@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_zuri_HT_103_6_9
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''zuri''
+  pinned to HT 103 tokens [6..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: zuri
+  phonemes:
+  - z
+  - u
+  - r
+  - i
+  gloss_hint: white
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    AB01: z
+    AB81: u
+    AB09: r
+    AB24: i

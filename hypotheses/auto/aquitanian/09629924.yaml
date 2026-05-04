@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_hartu_HT_Zb_158b_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''hartu''
+  pinned to HT Zb 158b tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: hartu
+  phonemes:
+  - h
+  - a
+  - r
+  - t
+  - u
+  gloss_hint: take
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB58: h
+    AB67: a
+    AB53: r
+    AB04: t
+    AB28: u

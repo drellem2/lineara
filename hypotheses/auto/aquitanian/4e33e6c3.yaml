@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_nescato_KN_Zf_13_4_10
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''nescato''
+  pinned to KN Zf 13 tokens [4..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: nescato
+  phonemes:
+  - n
+  - e
+  - s
+  - c
+  - a
+  - t
+  - o
+  gloss_hint: little girl
+  citation: Gorrochategui 1984; diminutive of nesca.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    AB07: n
+    A301: e
+    AB39: s
+    AB44: c
+    AB03: a
+    AB57: t
+    AB59: o

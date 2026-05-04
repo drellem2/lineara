@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_anai_ARKH_2_14_17
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''anai''
+  pinned to ARKH 2 tokens [14..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: anai
+  phonemes:
+  - a
+  - n
+  - a
+  - i
+  gloss_hint: brother
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB79: a
+    A301: n
+    AB09: a
+    AB45: i

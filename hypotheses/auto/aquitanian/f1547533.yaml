@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_nahi_HT_120_21_24
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''nahi''
+  pinned to HT 120 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: nahi
+  phonemes:
+  - n
+  - a
+  - h
+  - i
+  gloss_hint: want, desire
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 120
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB67: n
+    AB27: a
+    AB59: h
+    AB06: i

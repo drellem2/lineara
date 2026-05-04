@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_sei_ARKH_2_0_2
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''sei''
+  pinned to ARKH 2 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: sei
+  phonemes:
+  - s
+  - e
+  - i
+  gloss_hint: six
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB41: s
+    AB01: e
+    AB04: i

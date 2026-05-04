@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_sori_HT_122a_22_25
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''sori''
+  pinned to HT 122a tokens [22..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: sori
+  phonemes:
+  - s
+  - o
+  - r
+  - i
+  gloss_hint: hawk (proposed)
+  citation: Gorrochategui 1984, Aq. SORI- onomastic element.
+equation:
+  inscription_id: HT 122a
+  span:
+  - 22
+  - 25
+  sign_to_phoneme:
+    AB57: s
+    AB73: o
+    AB01: r
+    AB27: i

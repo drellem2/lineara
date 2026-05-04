@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_iri_GO_Wc_1a_3_5
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''iri''
+  pinned to GO Wc 1a tokens [3..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: iri
+  phonemes:
+  - i
+  - r
+  - i
+  gloss_hint: town, settlement
+  citation: Trask 1997 ch. 3; cf. Aq. ILI-/ULI- in Iliberri etc.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 3
+  - 5
+  sign_to_phoneme:
+    AB80: i
+    AB28: r
+    AB09: i

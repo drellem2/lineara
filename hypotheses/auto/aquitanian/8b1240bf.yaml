@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_zazpi_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''zazpi''
+  pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: zazpi
+  phonemes:
+  - z
+  - a
+  - z
+  - p
+  - i
+  gloss_hint: seven
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: z
+    AB45: a
+    AB80: z
+    A323: p
+    AB06: i
