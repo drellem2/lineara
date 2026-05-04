@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_leiho_HT_Wc_3017a_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''leiho''
+  pinned to HT Wc 3017a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: leiho
+  phonemes:
+  - l
+  - e
+  - i
+  - h
+  - o
+  gloss_hint: window
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Wc 3017a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB16: l
+    AB81: e
+    AB27: i
+    AB06: h
+    A306: o

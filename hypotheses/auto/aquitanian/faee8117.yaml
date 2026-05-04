@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_berri_HT_122b_14_18
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''berri''
+  pinned to HT 122b tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: berri
+  phonemes:
+  - b
+  - e
+  - r
+  - r
+  - i
+  gloss_hint: new
+  citation: Trask 1997 ch. 3; cf. Aq. ILIBERRI 'new town'.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB60: b
+    AB65: e
+    AB10: r
+    AB45: r
+    AB17: i

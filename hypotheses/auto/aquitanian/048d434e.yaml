@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_gatz_HT_103_6_8
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''gatz''
+  pinned to HT 103 tokens [6..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: gatz
+  phonemes:
+  - g
+  - a
+  - tz
+  gloss_hint: salt
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 6
+  - 8
+  sign_to_phoneme:
+    AB01: g
+    AB81: a
+    AB09: tz

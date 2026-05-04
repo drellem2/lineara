@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_zubi_HT_117a_0_3
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''zubi''
+  pinned to HT 117a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: zubi
+  phonemes:
+  - z
+  - u
+  - b
+  - i
+  gloss_hint: bridge
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB80: z
+    AB77: u
+    AB53: b
+    AB04: i

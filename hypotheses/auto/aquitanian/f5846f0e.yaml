@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_argi_HT_122b_15_18
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''argi''
+  pinned to HT 122b tokens [15..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: argi
+  phonemes:
+  - a
+  - r
+  - g
+  - i
+  gloss_hint: light
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 15
+  - 18
+  sign_to_phoneme:
+    AB65: a
+    AB10: r
+    AB45: g
+    AB17: i

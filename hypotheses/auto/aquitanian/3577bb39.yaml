@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_erori_KN_Zf_13_9_13
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''erori''
+  pinned to KN Zf 13 tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: erori
+  phonemes:
+  - e
+  - r
+  - o
+  - r
+  - i
+  gloss_hint: fall
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB57: e
+    AB59: r
+    AB53: o
+    AB09: r
+    AB04: i

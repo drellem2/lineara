@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_mendi_HT_128a_5_9
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''mendi''
+  pinned to HT 128a tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: mendi
+  phonemes:
+  - m
+  - e
+  - n
+  - d
+  - i
+  gloss_hint: mountain
+  citation: Trask 1997 ch. 3 (Basque mendi).
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB69: m
+    AB26: e
+    AB56: n
+    AB09: d
+    AB13: i

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_bat_ARKH_1a_22_24
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''bat''
+  pinned to ARKH 1a tokens [22..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: bat
+  phonemes:
+  - b
+  - a
+  - t
+  gloss_hint: one
+  citation: Trask 1997 ch. 4 (numerals).
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 22
+  - 24
+  sign_to_phoneme:
+    AB67: b
+    AB31: a
+    AB24: t

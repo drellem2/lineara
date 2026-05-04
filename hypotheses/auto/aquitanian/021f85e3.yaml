@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_bels_ARKH_1a_21_24
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''bels''
+  pinned to ARKH 1a tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: bels
+  phonemes:
+  - b
+  - e
+  - l
+  - s
+  gloss_hint: black, raven
+  citation: Gorrochategui 1984, Aq. BELS-/BELES-; Basque beltz (Trask 1997 ch. 3).
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB73: b
+    AB67: e
+    AB31: l
+    AB24: s

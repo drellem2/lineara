@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_bost_HT_13_0_3
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''bost''
+  pinned to HT 13 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: bost
+  phonemes:
+  - b
+  - o
+  - s
+  - t
+  gloss_hint: five
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: HT 13
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB77: b
+    AB10: o
+    AB45: s
+    AB59: t

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_idiar_HT_Zb_159_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''idiar''
+  pinned to HT Zb 159 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: idiar
+  phonemes:
+  - i
+  - d
+  - i
+  - a
+  - r
+  gloss_hint: ox-related (proposed)
+  citation: Gorrochategui 1984, Aq. IDI- element; Basque idi 'ox'.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: i
+    AB06: d
+    AB55: i
+    AB41: a
+    AB57: r

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_tolose_SY_Za_4_0_5
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''tolose''
+  pinned to SY Za 4 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: tolose
+  phonemes:
+  - t
+  - o
+  - l
+  - o
+  - s
+  - e
+  gloss_hint: fortified town
+  citation: Gorrochategui 1984; cf. toponym Tolosa (modern Toulouse, Tolosa GI).
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: t
+    AB59: o
+    AB28: l
+    A301: o
+    AB54: s
+    AB57: e

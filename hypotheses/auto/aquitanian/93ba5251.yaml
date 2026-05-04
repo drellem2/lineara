@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_gatz_GO_Wc_1a_0_2
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''gatz''
+  pinned to GO Wc 1a tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: gatz
+  phonemes:
+  - g
+  - a
+  - tz
+  gloss_hint: salt
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB08: g
+    AB31: a
+    AB58: tz

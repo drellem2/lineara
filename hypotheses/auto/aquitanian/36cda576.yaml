@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_belar_KH_5_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''belar''
+  pinned to KH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: belar
+  phonemes:
+  - b
+  - e
+  - l
+  - a
+  - r
+  gloss_hint: grass
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: b
+    AB01: e
+    AB67: l
+    AB41: a
+    AB77: r

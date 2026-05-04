@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_nire_ARKH_1a_21_24
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''nire''
+  pinned to ARKH 1a tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: nire
+  phonemes:
+  - n
+  - i
+  - r
+  - e
+  gloss_hint: my
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB73: n
+    AB67: i
+    AB31: r
+    AB24: e

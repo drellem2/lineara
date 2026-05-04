@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_idiar_KN_Zf_13_5_9
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''idiar''
+  pinned to KN Zf 13 tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: idiar
+  phonemes:
+  - i
+  - d
+  - i
+  - a
+  - r
+  gloss_hint: ox-related (proposed)
+  citation: Gorrochategui 1984, Aq. IDI- element; Basque idi 'ox'.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    A301: i
+    AB39: d
+    AB44: i
+    AB03: a
+    AB57: r

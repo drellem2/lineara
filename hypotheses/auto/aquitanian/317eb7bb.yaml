@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_haran_KN_Zc_6_5_9
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''haran''
+  pinned to KN Zc 6 tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: haran
+  phonemes:
+  - h
+  - a
+  - r
+  - a
+  - n
+  gloss_hint: valley
+  citation: Trask 1997 ch. 3 (Basque haran).
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB07: h
+    AB01: a
+    AB67: r
+    AB37: a
+    AB03: n

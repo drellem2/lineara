@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_txiki_ARKH_2_9_12
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''txiki''
+  pinned to ARKH 2 tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: txiki
+  phonemes:
+  - tx
+  - i
+  - k
+  - i
+  gloss_hint: small
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: tx
+    AB01: i
+    AB05: k
+    AB28: i

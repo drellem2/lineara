@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_lo_ARKH_4b_5_6
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''lo''
+  pinned to ARKH 4b tokens [5..6].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: lo
+  phonemes:
+  - l
+  - o
+  gloss_hint: sleep
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 4b
+  span:
+  - 5
+  - 6
+  sign_to_phoneme:
+    AB45: l
+    AB73: o

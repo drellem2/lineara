@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_esku_HT_115a_9_12
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''esku''
+  pinned to HT 115a tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: esku
+  phonemes:
+  - e
+  - s
+  - k
+  - u
+  gloss_hint: hand
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB53: e
+    AB59: s
+    AB80: k
+    AB55: u

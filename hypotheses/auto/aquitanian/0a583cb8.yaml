@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_harri_KN_Zf_13_12_16
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''harri''
+  pinned to KN Zf 13 tokens [12..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: harri
+  phonemes:
+  - h
+  - a
+  - r
+  - r
+  - i
+  gloss_hint: stone
+  citation: Trask 1997 ch. 3 (Basque harri).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 16
+  sign_to_phoneme:
+    AB09: h
+    AB04: a
+    AB53: r
+    AB23: r
+    AB08: i

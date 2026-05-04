@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_eta_HT_103_20_22
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''eta''
+  pinned to HT 103 tokens [20..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: eta
+  phonemes:
+  - e
+  - t
+  - a
+  gloss_hint: and
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 20
+  - 22
+  sign_to_phoneme:
+    AB81: e
+    AB09: t
+    AB24: a

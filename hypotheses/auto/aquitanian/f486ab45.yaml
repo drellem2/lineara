@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_anai_HT_123b_42_45
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''anai''
+  pinned to HT 123b tokens [42..45].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: anai
+  phonemes:
+  - a
+  - n
+  - a
+  - i
+  gloss_hint: brother
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 42
+  - 45
+  sign_to_phoneme:
+    AB51: a
+    AB80: n
+    AB28: a
+    AB06: i

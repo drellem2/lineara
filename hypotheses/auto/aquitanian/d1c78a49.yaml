@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_eguzki_SY_Za_4_0_5
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''eguzki''
+  pinned to SY Za 4 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: eguzki
+  phonemes:
+  - e
+  - g
+  - u
+  - z
+  - k
+  - i
+  gloss_hint: sun
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: e
+    AB59: g
+    AB28: u
+    A301: z
+    AB54: k
+    AB57: i

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_nola_HT_104_5_8
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''nola''
+  pinned to HT 104 tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: nola
+  phonemes:
+  - n
+  - o
+  - l
+  - a
+  gloss_hint: how
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 104
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB01: n
+    AB81: o
+    AB09: l
+    AB24: a

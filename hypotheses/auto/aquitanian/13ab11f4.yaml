@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_seme_ARKH_2_8_11
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''seme''
+  pinned to ARKH 2 tokens [8..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: seme
+  phonemes:
+  - s
+  - e
+  - m
+  - e
+  gloss_hint: son
+  citation: Trask 1997 ch. 3; cf. Aq. SEMBE.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    AB08: s
+    AB41: e
+    AB01: m
+    AB05: e

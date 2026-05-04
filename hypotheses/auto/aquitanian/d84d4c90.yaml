@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_belar_KN_Zc_6_19_24
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''belar''
+  pinned to KN Zc 6 tokens [19..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: belar
+  phonemes:
+  - b
+  - e
+  - l
+  - a
+  - r
+  gloss_hint: grass
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 24
+  sign_to_phoneme:
+    AB03: b
+    AB81: e
+    AB55: l
+    AB10: a
+    AB28: r

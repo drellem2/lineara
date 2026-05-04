@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_larre_HT_110a_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''larre''
+  pinned to HT 110a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: larre
+  phonemes:
+  - l
+  - a
+  - r
+  - r
+  - e
+  gloss_hint: pasture, moor
+  citation: Gorrochategui 1984, Aq. theonym LARRAHI; Basque larre.
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB41: l
+    AB51: a
+    AB34: r
+    AB81: r
+    AB73: e

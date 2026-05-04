@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_harri_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''harri''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: harri
+  phonemes:
+  - h
+  - a
+  - r
+  - r
+  - i
+  gloss_hint: stone
+  citation: Trask 1997 ch. 3 (Basque harri).
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: h
+    AB07: a
+    AB06: r
+    AB58: r
+    AB77: i

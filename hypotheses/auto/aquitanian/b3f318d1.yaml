@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_ako_ARKH_4a_13_16
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''ako''
+  pinned to ARKH 4a tokens [13..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ako
+  phonemes:
+  - a
+  - c
+  - o
+  gloss_hint: derivational suffix
+  citation: Gorrochategui 1984, Aq. -AKO/-AKKO suffix.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 16
+  sign_to_phoneme:
+    AB45: a
+    AB58: c
+    AB47: o

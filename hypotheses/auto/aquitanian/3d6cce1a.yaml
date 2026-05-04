@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_sudur_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''sudur''
+  pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: sudur
+  phonemes:
+  - s
+  - u
+  - d
+  - u
+  - r
+  gloss_hint: nose
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: s
+    AB41: u
+    AB01: d
+    AB05: u
+    AB28: r

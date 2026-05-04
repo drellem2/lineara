@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_tolose_KN_Zf_13_4_9
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''tolose''
+  pinned to KN Zf 13 tokens [4..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: tolose
+  phonemes:
+  - t
+  - o
+  - l
+  - o
+  - s
+  - e
+  gloss_hint: fortified town
+  citation: Gorrochategui 1984; cf. toponym Tolosa (modern Toulouse, Tolosa GI).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 9
+  sign_to_phoneme:
+    AB07: t
+    A301: o
+    AB39: l
+    AB44: o
+    AB03: s
+    AB57: e

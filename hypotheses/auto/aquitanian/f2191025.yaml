@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_ahuntz_HT_122b_13_17
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''ahuntz''
+  pinned to HT 122b tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ahuntz
+  phonemes:
+  - a
+  - h
+  - u
+  - n
+  - tz
+  gloss_hint: goat
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB08: a
+    AB60: h
+    AB65: u
+    AB10: n
+    AB45: tz

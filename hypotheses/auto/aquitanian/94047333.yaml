@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_ile_ARKH_5_0_2
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''ile''
+  pinned to ARKH 5 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ile
+  phonemes:
+  - i
+  - l
+  - e
+  gloss_hint: hair
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB08: i
+    AB51: l
+    AB30: e

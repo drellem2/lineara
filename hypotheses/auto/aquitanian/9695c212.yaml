@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_txakur_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''txakur''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: txakur
+  phonemes:
+  - tx
+  - a
+  - k
+  - u
+  - r
+  gloss_hint: dog
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: tx
+    AB26: a
+    AB78: k
+    AB76: u
+    AB10: r

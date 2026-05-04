@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_mendi_KN_Zc_7_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''mendi''
+  pinned to KN Zc 7 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: mendi
+  phonemes:
+  - m
+  - e
+  - n
+  - d
+  - i
+  gloss_hint: mountain
+  citation: Trask 1997 ch. 3 (Basque mendi).
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: m
+    AB77: e
+    AB55: n
+    AB74: d
+    AB37: i

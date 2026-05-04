@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_zazpi_KN_Zf_13_5_9
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''zazpi''
+  pinned to KN Zf 13 tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: zazpi
+  phonemes:
+  - z
+  - a
+  - z
+  - p
+  - i
+  gloss_hint: seven
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    A301: z
+    AB39: a
+    AB44: z
+    AB03: p
+    AB57: i

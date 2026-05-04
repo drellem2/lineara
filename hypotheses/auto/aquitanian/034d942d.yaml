@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_senben_KN_Zf_13_13_18
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''senben''
+  pinned to KN Zf 13 tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: senben
+  phonemes:
+  - s
+  - e
+  - n
+  - b
+  - e
+  - n
+  gloss_hint: son (variant)
+  citation: Gorrochategui 1984; variant of SEMBE.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB04: s
+    AB53: e
+    AB23: n
+    AB08: b
+    AB57: e
+    AB81: n

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_ardi_GO_Wc_1a_1_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''ardi''
+  pinned to GO Wc 1a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ardi
+  phonemes:
+  - a
+  - r
+  - d
+  - i
+  gloss_hint: sheep
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB31: a
+    AB58: r
+    AB80: d
+    AB28: i

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_aita_ARKH_5_0_3
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''aita''
+  pinned to ARKH 5 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: aita
+  phonemes:
+  - a
+  - i
+  - t
+  - a
+  gloss_hint: father
+  citation: Trask 1997 ch. 3; cf. Aq. ATTA.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: a
+    AB51: i
+    AB30: t
+    AB59: a

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_sudur_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''sudur''
+  pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: sudur
+  phonemes:
+  - s
+  - u
+  - d
+  - u
+  - r
+  gloss_hint: nose
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: s
+    AB67: u
+    AB59: d
+    AB06: u
+    AB41: r

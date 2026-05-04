@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_buru_HT_104_6_9
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''buru''
+  pinned to HT 104 tokens [6..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: buru
+  phonemes:
+  - b
+  - u
+  - r
+  - u
+  gloss_hint: head
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 104
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    AB81: b
+    AB09: u
+    AB24: r
+    AB37: u

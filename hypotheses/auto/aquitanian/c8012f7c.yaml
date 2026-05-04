@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_zer_GO_Wc_1a_0_2
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''zer''
+  pinned to GO Wc 1a tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: zer
+  phonemes:
+  - z
+  - e
+  - r
+  gloss_hint: what
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB08: z
+    AB31: e
+    AB58: r

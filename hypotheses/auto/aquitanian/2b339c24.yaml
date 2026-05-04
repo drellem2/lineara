@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_entzun_KN_Zc_7_0_4
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''entzun''
+  pinned to KN Zc 7 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: entzun
+  phonemes:
+  - e
+  - n
+  - tz
+  - u
+  - n
+  gloss_hint: hear
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: e
+    AB77: n
+    AB55: tz
+    AB74: u
+    AB37: n

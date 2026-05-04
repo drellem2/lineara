@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_hura_ARKH_2_8_11
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''hura''
+  pinned to ARKH 2 tokens [8..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: hura
+  phonemes:
+  - h
+  - u
+  - r
+  - a
+  gloss_hint: yon, that-yonder
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    AB08: h
+    AB41: u
+    AB01: r
+    AB05: a

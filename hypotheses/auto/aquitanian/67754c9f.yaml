@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_zortzi_KH_10_12_16
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''zortzi''
+  pinned to KH 10 tokens [12..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: zortzi
+  phonemes:
+  - z
+  - o
+  - r
+  - tz
+  - i
+  gloss_hint: eight
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: KH 10
+  span:
+  - 12
+  - 16
+  sign_to_phoneme:
+    AB08: z
+    AB67: o
+    AB39: r
+    AB38: tz
+    AB04: i

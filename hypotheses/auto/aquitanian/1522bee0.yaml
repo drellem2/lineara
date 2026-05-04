@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_gorri_KN_Zf_13_1_5
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''gorri''
+  pinned to KN Zf 13 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: gorri
+  phonemes:
+  - g
+  - o
+  - r
+  - r
+  - i
+  gloss_hint: red
+  citation: Trask 1997 ch. 3; cf. Aq. BAIGOR 'red valley'.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB27: g
+    AB24: o
+    AB41: r
+    AB07: r
+    A301: i

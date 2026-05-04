@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_ardo_HT_115a_9_12
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''ardo''
+  pinned to HT 115a tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ardo
+  phonemes:
+  - a
+  - r
+  - d
+  - o
+  gloss_hint: wine
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB53: a
+    AB59: r
+    AB80: d
+    AB55: o

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_eman_HT_13_0_3
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''eman''
+  pinned to HT 13 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: eman
+  phonemes:
+  - e
+  - m
+  - a
+  - n
+  gloss_hint: give
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 13
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB77: e
+    AB10: m
+    AB45: a
+    AB59: n

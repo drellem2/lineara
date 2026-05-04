@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_ohe_ARKH_4b_11_13
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''ohe''
+  pinned to ARKH 4b tokens [11..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ohe
+  phonemes:
+  - o
+  - h
+  - e
+  gloss_hint: bed
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 4b
+  span:
+  - 11
+  - 13
+  sign_to_phoneme:
+    AB08: o
+    AB67: h
+    AB02: e

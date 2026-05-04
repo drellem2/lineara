@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_izar_ARKH_4a_19_22
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''izar''
+  pinned to ARKH 4a tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: izar
+  phonemes:
+  - i
+  - z
+  - a
+  - r
+  gloss_hint: star
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB39: i
+    AB37: z
+    AB24: a
+    AB08: r

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_etxe_GO_Wc_1a_1_3
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''etxe''
+  pinned to GO Wc 1a tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: etxe
+  phonemes:
+  - e
+  - tx
+  - e
+  gloss_hint: house
+  citation: Trask 1997 ch. 3 (Basque etxe).
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB31: e
+    AB58: tx
+    AB80: e

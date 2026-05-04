@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_aquitanian_katu_HT_128a_13_16
+description: 'Auto-generated candidate equation: pool=''aquitanian'' entry surface=''katu''
+  pinned to HT 128a tokens [13..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: katu
+  phonemes:
+  - k
+  - a
+  - t
+  - u
+  gloss_hint: cat
+  citation: Trask 1997 ch. 3 (Latin loan, but inherited form).
+equation:
+  inscription_id: HT 128a
+  span:
+  - 13
+  - 16
+  sign_to_phoneme:
+    AB54: k
+    AB69: a
+    AB80: t
+    AB27: u
