@@ -2165,6 +2165,240 @@ two of the three substrate pools. Specifically:
     toponym gate fails so decisively (p ≈ 0.92) that no top-K
     relaxation will rescue it without changing the procedure.
 
+## Findings from mg-0f97
+
+mg-d26d's right-tail bayesian gate cleared on 2/3 substrate pools —
+the first acceptance-gate clear in the project. mg-0f97 validates
+that result by cross-substrate negative control: rescore each pool's
+v8 + v9 substrate + matched-control records under the *other*
+substrate's external phoneme LM (Aquitanian under the Etruscan LM,
+Etruscan under the Basque LM) and re-run the same right-tail
+posterior gate. If the v10 separation is real substrate signal, it
+should collapse under the wrong LM. If the separation persists, the
+v10 metric is preferring a character distribution regardless of the
+substrate-LM relationship, which would invalidate the substrate
+specificity claim. The ticket also bundles a per-inscription
+right-tail concentration analysis: for each Linear A inscription, how
+many v10 top-20 substrate surfaces have positive paired-diff records
+on it? (Both pieces operate on existing v8 + v9 + v10 data — pure
+analysis layer, no new corpus, no new metric.)
+
+**Headline result: validation is mixed.** Etruscan validates cleanly;
+Aquitanian validates only partially. The 2/3 v10 pass should be
+reported as one strong-validation pool + one weak-validation pool,
+not as a single uniform substrate result.
+
+| pool       | v10 same-LM gate (mg-d26d) | v11 cross-LM gate (mg-0f97)  | validation outcome              |
+|------------|:--------------------------:|:----------------------------:|:--------------------------------|
+| aquitanian | PASS, MW p=3.22e-05        | PASS, MW p=0.0205 (etr LM)   | **partial** — signal persists under wrong LM at p<0.05 |
+| etruscan   | PASS, MW p=5.21e-04        | FAIL, MW p=0.591 (bsq LM)    | **holds** — substrate-LM specificity confirmed |
+| toponym    | FAIL, MW p=0.92            | (not run; v10 already FAIL)  | n/a                             |
+
+The Etruscan validation is exactly the discriminating outcome the
+ticket was designed to detect: under the Basque LM, the Etruscan
+substrate top-20 (median posterior 0.9615) does not separate from
+its matched control top-20 (median 0.9535) — MW U = 192.0, p = 0.591.
+The v10 Etruscan PASS therefore reflects substrate-LM-specific
+phonotactic match, not a metric artifact.
+
+The Aquitanian validation is the worrying outcome. Under the Etruscan
+LM, the Aquitanian substrate top-20 still beats its matched control
+top-20 at p = 0.0205. The substrate-side median posterior (0.9808) is
+identical to the same-LM case; the control-side median moves slightly
+(0.9512 → 0.9422) but is the same order of magnitude; the MW U drops
+from 345.0 to 275.5. Substrate beat its control on ~14/20 head-to-head
+rank pairs even under the *wrong* LM. Reading this conservatively:
+the Aquitanian top-20 surfaces have a phonotactic profile that *both*
+the Basque and Etruscan LMs partially reward over the matched-control
+sampler — the LM choice is not the only thing pulling substrate >
+control on the Aquitanian side. Possible explanations (none confirmed
+by this ticket):
+  * The control sampler for `control_aquitanian` may not be tightly
+    matched on Aquitanian-style phonotactics — the controls might
+    have moved into a low-LM-density corner that *any* substrate-style
+    LM would punish, regardless of which substrate.
+  * The Aquitanian substrate surfaces may exhibit a "natural-language
+    phonotactic profile" property that is shared by Basque and
+    Etruscan — both are real-language LMs trained on word-form
+    distributions; if Aquitanian roots happen to be plausible word
+    forms in either tradition, both LMs reward them.
+  * A subset of the v10 Aquitanian top-20 (e.g. `aitz`, `hesi`,
+    `itsaso`, `argi`, `ate`, `beltz`) appears in the cross-LM top-20
+    for Aquitanian substrate as well, alongside new entries (`bels`,
+    `hara`, `hezur`, `hil`, `mahats`, `sori`, `sei`, `hamar`,
+    `haran`, `hori`, `zahar`, `seme`); the ranking is reshuffled, not
+    merely scaled. That reshuffling rules out the simplest "the metric
+    just prefers all of them" story but does not localize the
+    confound.
+
+**The Etruscan side is doing what we want.** The v10 Etruscan
+substrate PASS is now backed by a clean cross-substrate negative
+control: when scored under the Basque LM (which has no historical or
+phonotactic relationship to Etruscan), substrate and control are
+indistinguishable in the right tail. The Etruscan top-20 surfaces
+(`larth`, `aiser`, `matam`, `avils`, `camthi`, `chimth`, `hanthe`,
+`laris`, `nac`, `sech`, `thana`, `zelar`, `caitim`, `thesan`,
+`spureri`, `thanchvil`, `suthi`, `mach`, `arnth`, `sath`) reflect a
+phonotactic match to *Etruscan-like text* and not to any
+"natural-language" prior the Basque LM also recognizes.
+
+**The Aquitanian side is a yellow flag, not a red flag.** The cross-LM
+result's p-value (0.0205) is a 5x weaker separation than the same-LM
+result (3.22e-05), meaning the Etruscan LM is *worse* at confirming
+Aquitanian substrate than the Basque LM is — the LM choice does
+contribute. But the cross-LM separation is still present, which means
+the Aquitanian PASS in v10 is *partly* but not *entirely* attributable
+to the substrate-LM specificity. Conservative reporting: the v10
+Aquitanian result needs further investigation before publication-shape
+claims; the v10 Etruscan result does not.
+
+**Per-inscription right-tail concentration analysis.** Of 185 Linear
+A inscriptions in the working set, 43 have ≥1 v10 top-20 substrate
+surface with positive paired-diff evidence and 40 have ≥2. The
+top-30-by-raw-count is dominated by long accountancy tablets at
+Haghia Triada / Arkhanes / Gournia (where the substrate generator
+emits many records per inscription, so even moderate per-record
+positive rates compound into high raw counts). The top-30-by-density
+(raw count divided by total v8+v9 records targeting the inscription)
+better reflects "this inscription is genuinely amenable to substrate
+readings." Top-density inscriptions:
+
+| rank | inscription | site | genre | n_top20 | n_records | density |
+|-----:|:------------|:-----|:------|--------:|----------:|--------:|
+|    1 | `HT Wc 3010`  | Haghia Triada | accountancy            | 14 |  76 | 0.184 |
+|    2 | `HT Wc 3017a` | Haghia Triada | accountancy            | 14 |  76 | 0.184 |
+|    3 | `KH 60`       | Khania        | accountancy            | 14 |  76 | 0.184 |
+|    4 | `KN Zb 5`     | Knossos       | unknown                | 14 |  76 | 0.184 |
+|    5 | `HT 90`       | Haghia Triada | accountancy            | 14 |  94 | 0.149 |
+|    6 | `KH 10`       | Khania        | accountancy            | 14 | 100 | 0.140 |
+|    7 | `KH 5`        | Khania        | accountancy            | 14 | 110 | 0.127 |
+|    8 | `HT 127a`     | Haghia Triada | accountancy            | 12 | 100 | 0.120 |
+|    9 | `HT 12`       | Haghia Triada | accountancy            | 12 | 102 | 0.118 |
+|   10 | `ARKH 6`      | Arkhanes      | accountancy            | 10 |  85 | 0.118 |
+
+The full top-30-by-count and top-30-by-density tables, with the
+specific top-20 surfaces present per inscription, are in
+`results/rollup.right_tail_inscription_concentration.md`. Two
+patterns are visible:
+
+  * **Cluster A (accountancy + Etruscan-substrate-heavy).** Knossos
+    Zc/Zf, Haghia Triada Wc / Zb, Khania accountancy tablets (`KH 60`,
+    `KH 10`, `KH 5`), and HT Wc commodity records. The ~14 top-20
+    surfaces present on these tablets are the Etruscan religious /
+    praenomen / time-reference cluster (`aiser`, `avils`, `bihotz`,
+    `camthi`, `entzun`, `hanna`, `hanthe`, `itsaso`, `laris`, `matam`,
+    `thesan`, `zelai`, `zelar`, `zortzi`, plus `caitim` /
+    `thanchvil` / `spureri` on the Knossos votive subset). Genre and
+    site are consistent: short-line accountancy / votive tablets.
+    These are the Etruscan-side concentration candidates and inherit
+    the Etruscan validation outcome (substrate-LM-specific signal).
+  * **Cluster B (longer accountancy at HT / ARKH / GO with mixed
+    Aquitanian + Etruscan top-20).** `GO Wc 1a`, `ARKH 5`, `HT 104`,
+    `HT 103`, `ARKH 2`, etc. show 23–38 distinct top-20 surfaces. The
+    surface mix is broader (more Aquitanian-side surfaces present:
+    `aitz`, `ako`, `ate`, `eki`, `hau`, `oin`, `ona`, `argi`, `nahi`)
+    plus the Etruscan side. Conservatively these inscriptions inherit
+    the Aquitanian partial-validation caveat — the per-inscription
+    concentration is real but the substrate-LM-specificity of the
+    underlying signal is weaker.
+
+These per-inscription findings are the first publication-shape
+research output of this project: they identify specific Linear A
+tablets that concentrate substrate evidence and would reward
+domain-expert review (especially the Khania / Knossos votive subset,
+where substrate concentration is high *and* the Etruscan-side gate
+validates cleanly). However they should be reported with the validation
+caveat baked in — Cluster B's Aquitanian concentration is on a result
+that did not fully validate.
+
+**Multi-root all-top20 v9 signatures: empty, as expected.** The
+ticket also asked for v9 signatures whose constituent surfaces are
+all in v10 top-20. Across both passing pools, **0** signatures meet
+this strict criterion (12 aquitanian + 30 etruscan have ≥1 top-20
+constituent; 0 + 1 have ≥2). This is consistent with the mg-bef2
+documented v9 greedy-fill bias toward short, high-frequency surfaces
+(`ur`, `lur`, `seni`, `sembe`, `su`); v10's top-20 surfaces are
+length 4–7 and rarely fit the leftover slots after the greedy fill
+places its preferred short roots. The full filtered table (≥1 top-20
+constituent, n=23 substrate signatures, 17 substrate wins / 6
+substrate losses on paired_diff) is in
+`results/rollup.multi_top20_signatures.md`. Notable substrate-wins:
+`PH 7a [0..17] larth+larth+zal+zal` (paired_diff +0.6373),
+`HT 108 [0..15] aitz+lur+seni` (+1.1444), `HT 108 [0..11] aitz+seni`
+(+1.3461), `SY Za 4 [3..12] larth+zal` (+1.0978),
+`HT 115a [0..15] aiser+semph` (+0.8961). Substrate-losses cluster on
+`HT 104` (4 signatures, all losses) — worth flagging for v12
+investigation.
+
+**What does this tell us about the project's status.**
+
+The ticket framed two scenarios at submission time: (a) validation
+holds + per-inscription concentration is non-trivial → publishable-
+claim status; (b) validation fails OR per-inscription evidence too
+dispersed → further investigation. Neither scenario applies cleanly:
+
+  * **Etruscan substrate**: substrate-LM-specific signal validated
+    cleanly. Per-inscription concentration is non-trivial (Cluster A
+    above). This pool is at publishable-claim status: the v10 right-
+    tail PASS on Etruscan reflects a substrate-LM-specific phonotactic
+    match, and a defined set of inscriptions (Cluster A) concentrate
+    that match.
+  * **Aquitanian substrate**: substrate-LM-specificity is partial.
+    Per-inscription concentration is real but inherits the cross-LM
+    weakness. This pool is at "needs further investigation" status:
+    publishable-shape claims should wait for either (i) a tighter
+    matched-control sampler that closes the cross-LM weak separation,
+    or (ii) a sister-syllabary positive control (Linear-B reference
+    corpus, the polecat's "(b)" option from mg-d26d) that confirms
+    the v10 Aquitanian PASS reflects substrate signal rather than
+    natural-language-LM bias.
+
+**Operational notes for v11.**
+
+  * Records cross-LM rescored: 17,813 Aquitanian + control_Aquitanian
+    (under Etruscan LM) + 15,677 Etruscan + control_Etruscan (under
+    Basque LM) = 33,490 hypothesis × LM pairs. New rows are appended
+    to `results/experiments.external_phoneme_perplexity_v0.jsonl`
+    with `language=` set to the swapped LM; existing same-LM rows
+    are not modified. The v10 same-LM bayesian rollup
+    (`scripts/per_surface_bayesian_rollup.py`) is updated to filter
+    rows by `(hash, language)` so cross-LM rows do not contaminate
+    same-LM aggregation; re-running the rollup against the now-
+    augmented file produces byte-identical output to the v10
+    committed `rollup.bayesian_posterior.{aquitanian,etruscan,
+    toponym}.md`.
+  * Cross-LM rescore wall time: ~54 s for all 4 pools on a fresh
+    laptop (the metric is char-bigram log-prob over O(stream-length)
+    per hypothesis; the corpus stream and LM tables are reused
+    across all hypotheses).
+  * The cross-LM rescore script (`scripts/cross_lm_rescore.py`) is
+    idempotent on `(hypothesis_hash, language)` pairs — a re-run is
+    a no-op once the pairs are present.
+  * Toponym pool was excluded from cross-LM rescoring by ticket
+    decision: v10 already failed for toponym (control-sampler issue,
+    documented in mg-d26d), so the cross-LM control would not be
+    informative there.
+  * Per-inscription rollup (`scripts/right_tail_inscription_concentration.py`)
+    and multi-root signature rollup (`scripts/multi_top20_signatures.py`)
+    are deterministic given the same result stream + manifests.
+  * The v10 top-20 substrate surface lists are hardcoded in the
+    per-inscription rollup at module level (rather than recomputed
+    from the bayesian posterior on every run) so the per-inscription
+    leaderboard is reproducible *as a downstream analysis of v10's
+    published top-20*; if the upstream ranking ever shifts due to a
+    tie-breaking change, the per-inscription rollup will keep
+    pointing at the v10-published surfaces unless the constants are
+    updated explicitly.
+  * **Out of scope for this ticket** (deferred to v12 + later):
+    Linear-B reference corpus pull (sister-syllabary positive control
+    if validation holds, alternative-prior test if it doesn't);
+    toponym control re-sampling; manuscript-side narrative;
+    Phoenician / Sumerian / other substrate pools; domain-expert
+    review of top-K. The validation outcome here makes the Linear-B
+    pull more tractable to scope (positive control on Etruscan side,
+    alternative-prior test on Aquitanian side — both directions are
+    informative) but does not pre-empt the v12 brief.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;

@@ -82,6 +82,19 @@ _DEFAULT_NMIN = 10
 _DEFAULT_TOP_PER_POOL = 50
 _DEFAULT_TOP_K_GATE = 20
 
+# Default same-LM dispatch: substrate-pool name → external phoneme LM.
+# Mirrors ``scripts/run_sweep._EXT_POOL_LANGUAGE``. Used to *filter* the
+# row stream so cross-LM rows added by mg-0f97's negative control do
+# not contaminate the same-LM rollup. Override via --language-dispatch.
+_DEFAULT_LANGUAGE_DISPATCH: dict[str, str] = {
+    "aquitanian": "basque",
+    "control_aquitanian": "basque",
+    "etruscan": "etruscan",
+    "control_etruscan": "etruscan",
+    "toponym": "basque",
+    "control_toponym": "basque",
+}
+
 
 # ---------------------------------------------------------------------------
 # Loaders
@@ -101,9 +114,18 @@ def _load_manifest(path: Path) -> list[dict]:
     return rows
 
 
-def _load_score_rows(results_dir: Path) -> dict[str, dict]:
-    """hash → most-recent-by-ran_at result row for the bayesian metric."""
-    out: dict[str, dict] = {}
+def _load_score_rows(results_dir: Path) -> dict[tuple[str, str], dict]:
+    """(hash, language) → most-recent-by-ran_at result row for the bayesian
+    metric.
+
+    Keying on (hypothesis_hash, language) lets multiple LM rescores of
+    the same hypothesis coexist in the result stream — important for
+    mg-0f97's cross-LM negative control, which appends rows with the
+    *swapped* substrate LM under the same hypothesis_hash. Callers select
+    the row for a given (hash, expected_language) pair via
+    :func:`pick_score_row`.
+    """
+    out: dict[tuple[str, str], dict] = {}
     paths = [
         results_dir / "experiments.jsonl",
         results_dir / f"experiments.{_METRIC}.jsonl",
@@ -122,10 +144,21 @@ def _load_score_rows(results_dir: Path) -> dict[str, dict]:
                 h = row.get("hypothesis_hash")
                 if not h:
                     continue
-                cur = out.get(h)
+                lang = row.get("language", "")
+                key = (h, lang)
+                cur = out.get(key)
                 if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
-                    out[h] = row
+                    out[key] = row
     return out
+
+
+def pick_score_row(
+    score_rows: dict[tuple[str, str], dict],
+    h_hash: str,
+    language: str,
+) -> dict | None:
+    """Look up the most-recent score row for a given (hash, language)."""
+    return score_rows.get((h_hash, language))
 
 
 def _load_pool_phonemes(pools_dir: Path) -> dict[str, list[list[str]]]:
@@ -181,8 +214,9 @@ def build_v8_records(
     *,
     pool: str,
     auto_dir: Path,
-    score_rows: dict[str, dict],
+    score_rows: dict[tuple[str, str], dict],
     pool_phonemes: dict[str, list[list[str]]],
+    language_dispatch: dict[str, str],
 ) -> list[dict]:
     """Return one paired_diff record per substrate v8 candidate that has
     an exact-window control match in ``control_<pool>``. Each record
@@ -203,11 +237,13 @@ def build_v8_records(
 
     sub_phon = pool_phonemes.get(pool, [])
     ctrl_phon = pool_phonemes.get(f"control_{pool}", [])
+    sub_lang = language_dispatch.get(pool, "")
+    ctrl_lang = language_dispatch.get(f"control_{pool}", sub_lang)
 
     records: list[dict] = []
     for sub in sub_rows:
         sub_hash = sub["hypothesis_hash"]
-        sub_score_row = score_rows.get(sub_hash)
+        sub_score_row = pick_score_row(score_rows, sub_hash, sub_lang)
         if sub_score_row is None:
             continue
         key = (sub["inscription_id"], int(sub["span_start"]), int(sub["span_end"]))
@@ -220,7 +256,7 @@ def build_v8_records(
         best_d = math.inf
         for c in sorted(candidates, key=lambda r: r["hypothesis_hash"]):
             c_hash = c["hypothesis_hash"]
-            if c_hash not in score_rows:
+            if pick_score_row(score_rows, c_hash, ctrl_lang) is None:
                 continue
             c_seq = ctrl_phon[c["pool_entry_index"]] if ctrl_phon else []
             d = _edit_distance(sub_seq, c_seq)
@@ -229,7 +265,7 @@ def build_v8_records(
                 best = c
         if best is None:
             continue
-        ctrl_score_row = score_rows.get(best["hypothesis_hash"])
+        ctrl_score_row = pick_score_row(score_rows, best["hypothesis_hash"], ctrl_lang)
         if ctrl_score_row is None:
             continue
         sub_score = float(sub_score_row.get("score", 0.0))
@@ -260,7 +296,8 @@ def build_v9_records(
     *,
     pool: str,
     auto_dir: Path,
-    score_rows: dict[str, dict],
+    score_rows: dict[tuple[str, str], dict],
+    language_dispatch: dict[str, str],
 ) -> list[dict]:
     """Return one paired_diff record per substrate v9 signature that has
     a matched control (paired_substrate_hash). Carries both substrate
@@ -277,14 +314,17 @@ def build_v9_records(
     for row in ctrl_rows:
         ctrl_by_paired[row["paired_substrate_hash"]] = row
 
+    sub_lang = language_dispatch.get(pool, "")
+    ctrl_lang = language_dispatch.get(f"control_{pool}", sub_lang)
+
     records: list[dict] = []
     for sub in sub_rows:
         sub_hash = sub["hypothesis_hash"]
         ctrl = ctrl_by_paired.get(sub_hash)
         if ctrl is None:
             continue
-        sub_score_row = score_rows.get(sub_hash)
-        ctrl_score_row = score_rows.get(ctrl["hypothesis_hash"])
+        sub_score_row = pick_score_row(score_rows, sub_hash, sub_lang)
+        ctrl_score_row = pick_score_row(score_rows, ctrl["hypothesis_hash"], ctrl_lang)
         if sub_score_row is None or ctrl_score_row is None:
             continue
         sub_score = float(sub_score_row.get("score", 0.0))
@@ -630,6 +670,7 @@ def render_pool_md(
     top_per_pool: int,
     top_k_gate: int,
     n_min: int,
+    title_suffix: str = "",
 ) -> tuple[str, dict]:
     pool_rows = [r for r in rows if r["substrate_pool"] == pool]
     sub_rows = [r for r in pool_rows if r["side"] == "substrate"]
@@ -647,7 +688,10 @@ def render_pool_md(
     interleaved = sorted(pool_rows, key=lambda r: -r["effective_score"])[:top_per_pool]
 
     out: list[str] = []
-    out.append(f"# Per-surface bayesian posterior — pool={pool} (mg-d26d)\n")
+    suffix = f" {title_suffix}" if title_suffix else ""
+    out.append(
+        f"# Per-surface bayesian posterior — pool={pool}{suffix} (mg-d26d)\n"
+    )
     out.append(
         f"Generated by `scripts/per_surface_bayesian_rollup.py`. Metric: "
         f"`{_METRIC}`. Posterior over θ_S = P(this surface beats its "
@@ -736,9 +780,13 @@ def render_combined_md(
     top_per_pool: int,
     top_k_gate: int,
     n_min: int,
+    title_suffix: str = "",
 ) -> str:
     out: list[str] = []
-    out.append("# Per-surface bayesian posterior — combined view (mg-d26d)\n")
+    suffix = f" {title_suffix}" if title_suffix else ""
+    out.append(
+        f"# Per-surface bayesian posterior — combined view{suffix} (mg-d26d)\n"
+    )
     out.append(
         f"Generated by `scripts/per_surface_bayesian_rollup.py`. Metric: "
         f"`{_METRIC}`. Reframes the v8 + v9 paired-diff aggregation as a "
@@ -834,6 +882,38 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--top-per-pool", type=int, default=_DEFAULT_TOP_PER_POOL)
     parser.add_argument("--top-k-gate", type=int, default=_DEFAULT_TOP_K_GATE)
     parser.add_argument(
+        "--language-dispatch",
+        type=str,
+        default=None,
+        help=(
+            "JSON object mapping pool name → external phoneme LM name "
+            "(used to filter rows in the result stream by language). "
+            "Defaults to the same-LM dispatch (aquitanian→basque, "
+            "etruscan→etruscan, toponym→basque, control_*→same as "
+            "their substrate). Pass a swapped dispatch to compute the "
+            "cross-LM negative-control posteriors (mg-0f97)."
+        ),
+    )
+    parser.add_argument(
+        "--out-suffix",
+        type=str,
+        default="",
+        help=(
+            "Optional filename suffix appended to the per-pool / combined "
+            "output paths (e.g. '.aquitanian_under_etruscan_lm'). Empty "
+            "string preserves the legacy filenames."
+        ),
+    )
+    parser.add_argument(
+        "--title-suffix",
+        type=str,
+        default="",
+        help=(
+            "Optional title suffix appended to the rendered Markdown "
+            "headers. Default empty (legacy)."
+        ),
+    )
+    parser.add_argument(
         "--summary-json",
         type=Path,
         default=None,
@@ -842,6 +922,13 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     pools = [p.strip() for p in args.pools.split(",") if p.strip()]
+
+    if args.language_dispatch:
+        language_dispatch = dict(_DEFAULT_LANGUAGE_DISPATCH)
+        language_dispatch.update(json.loads(args.language_dispatch))
+    else:
+        language_dispatch = dict(_DEFAULT_LANGUAGE_DISPATCH)
+
     score_rows = _load_score_rows(args.results_dir)
     pool_phonemes = _load_pool_phonemes(args.pools_dir)
 
@@ -853,6 +940,7 @@ def main(argv: list[str] | None = None) -> int:
                 auto_dir=args.auto_dir,
                 score_rows=score_rows,
                 pool_phonemes=pool_phonemes,
+                language_dispatch=language_dispatch,
             )
         )
         all_records.extend(
@@ -860,6 +948,7 @@ def main(argv: list[str] | None = None) -> int:
                 pool=pool,
                 auto_dir=args.auto_sig_dir,
                 score_rows=score_rows,
+                language_dispatch=language_dispatch,
             )
         )
 
@@ -874,8 +963,10 @@ def main(argv: list[str] | None = None) -> int:
             top_per_pool=args.top_per_pool,
             top_k_gate=args.top_k_gate,
             n_min=args.n_min,
+            title_suffix=args.title_suffix,
         )
-        out_path = args.results_dir / f"rollup.bayesian_posterior.{pool}.md"
+        out_name = f"rollup.bayesian_posterior.{pool}{args.out_suffix}.md"
+        out_path = args.results_dir / out_name
         out_path.write_text(text, encoding="utf-8")
         print(f"wrote {out_path}", file=sys.stderr)
         summaries.append(summary)
@@ -886,8 +977,10 @@ def main(argv: list[str] | None = None) -> int:
         top_per_pool=args.top_per_pool,
         top_k_gate=args.top_k_gate,
         n_min=args.n_min,
+        title_suffix=args.title_suffix,
     )
-    combined_path = args.results_dir / "rollup.bayesian_posterior.md"
+    combined_name = f"rollup.bayesian_posterior{args.out_suffix}.md"
+    combined_path = args.results_dir / combined_name
     combined_path.write_text(combined, encoding="utf-8")
     print(f"wrote {combined_path}", file=sys.stderr)
 
