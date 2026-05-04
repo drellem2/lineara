@@ -27,3 +27,13 @@ pogo's docs, pogo's docs win.
   pointed to by sidecar config.
 - Null results are reported with the same rigor as positive ones. A
   polecat whose hypothesis scored null still ships the JSONL row.
+- **Findings log.** Every merge that produces a substantive observation —
+  a metric value, a distribution shape, a methodology choice that shapes
+  future work, a discovered limitation — appends a "## Findings from
+  mg-XXXX" subsection to `docs/findings.md`. The polecat's
+  merge-readiness check fails if an experiment-shipping ticket merges
+  without a findings update. Tickets that do not produce findings (e.g.
+  pure scaffolding, build-tooling) note this explicitly with a one-line
+  "no new findings" entry rather than skipping. The roadmap
+  (`docs/roadmap.md`) tracks **what we're doing**; findings tracks **what
+  we've learned** — they are complementary, not duplicates.
