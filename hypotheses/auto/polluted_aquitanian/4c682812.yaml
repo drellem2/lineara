@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_zuri_HT_115a_10_13
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''zuri'' pinned to HT 115a tokens [10..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: zuri
+  phonemes:
+  - z
+  - u
+  - r
+  - i
+  gloss_hint: white
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    AB59: z
+    AB80: u
+    AB55: r
+    AB40: i

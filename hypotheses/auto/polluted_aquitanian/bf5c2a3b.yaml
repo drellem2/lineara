@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_katu_HT_1_19_22
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''katu'' pinned to HT 1 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: katu
+  phonemes:
+  - k
+  - a
+  - t
+  - u
+  gloss_hint: cat
+  citation: Trask 1997 ch. 3 (Latin loan, but inherited form).
+equation:
+  inscription_id: HT 1
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB08: k
+    AB60: a
+    AB06: t
+    AB27: u

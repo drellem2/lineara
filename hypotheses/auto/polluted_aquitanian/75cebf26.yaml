@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_itsaso_HT_122b_14_18
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''itsaso'' pinned to HT 122b tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: itsaso
+  phonemes:
+  - i
+  - ts
+  - a
+  - s
+  - o
+  gloss_hint: sea
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB60: i
+    AB65: ts
+    AB10: a
+    AB45: s
+    AB17: o

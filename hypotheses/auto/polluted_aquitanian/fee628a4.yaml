@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_belar_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''belar'' pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: belar
+  phonemes:
+  - b
+  - e
+  - l
+  - a
+  - r
+  gloss_hint: grass
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: b
+    AB07: e
+    AB06: l
+    AB58: a
+    AB77: r

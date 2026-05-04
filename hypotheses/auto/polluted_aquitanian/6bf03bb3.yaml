@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_lohi_GO_Wc_1a_2_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''lohi'' pinned to GO Wc 1a tokens [2..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: lohi
+  phonemes:
+  - l
+  - o
+  - h
+  - i
+  gloss_hint: mud, mire
+  citation: Gorrochategui 1984, Aq. LOHI-; Basque lohi (Trask 1997).
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    AB58: l
+    AB80: o
+    AB28: h
+    AB09: i

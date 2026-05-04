@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_andere_KN_Zc_7_14_19
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''andere'' pinned to KN Zc 7 tokens [14..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: andere
+  phonemes:
+  - a
+  - n
+  - d
+  - e
+  - r
+  - e
+  gloss_hint: lady, woman of standing
+  citation: Gorrochategui 1984, Aquitanian theonym/anthroponym ANDERE; Trask 1997
+    ch. 3 (Basque cognate andere).
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 19
+  sign_to_phoneme:
+    AB57: a
+    AB31: n
+    AB60: d
+    AB08: e
+    AB06: r
+    AB24: e

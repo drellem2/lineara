@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_noiz_ARKH_5_0_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''noiz'' pinned to ARKH 5 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: noiz
+  phonemes:
+  - n
+  - o
+  - i
+  - z
+  gloss_hint: when
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: n
+    AB51: o
+    AB30: i
+    AB59: z

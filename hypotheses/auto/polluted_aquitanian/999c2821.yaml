@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_eman_HT_122b_32_35
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''eman'' pinned to HT 122b tokens [32..35].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: eman
+  phonemes:
+  - e
+  - m
+  - a
+  - n
+  gloss_hint: give
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 32
+  - 35
+  sign_to_phoneme:
+    AB11: e
+    AB05: m
+    AB81: a
+    AB02: n

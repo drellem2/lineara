@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_ikusi_KN_Zf_13_7_11
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''ikusi'' pinned to KN Zf 13 tokens [7..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: ikusi
+  phonemes:
+  - i
+  - k
+  - u
+  - s
+  - i
+  gloss_hint: see
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 7
+  - 11
+  sign_to_phoneme:
+    AB44: i
+    AB03: k
+    AB57: u
+    AB59: s
+    AB53: i

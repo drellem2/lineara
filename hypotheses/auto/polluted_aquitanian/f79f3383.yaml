@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_bizi_HT_128a_5_8
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''bizi'' pinned to HT 128a tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: bizi
+  phonemes:
+  - b
+  - i
+  - z
+  - i
+  gloss_hint: alive, life
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB69: b
+    AB26: i
+    AB56: z
+    AB09: i

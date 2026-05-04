@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_lohi_ARKH_2_14_17
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''lohi'' pinned to ARKH 2 tokens [14..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: lohi
+  phonemes:
+  - l
+  - o
+  - h
+  - i
+  gloss_hint: mud, mire
+  citation: Gorrochategui 1984, Aq. LOHI-; Basque lohi (Trask 1997).
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB79: l
+    A301: o
+    AB09: h
+    AB45: i

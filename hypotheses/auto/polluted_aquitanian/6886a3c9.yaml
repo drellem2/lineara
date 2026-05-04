@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_eguzki_KN_Zf_13_0_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''eguzki'' pinned to KN Zf 13 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: eguzki
+  phonemes:
+  - e
+  - g
+  - u
+  - z
+  - k
+  - i
+  gloss_hint: sun
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: e
+    AB27: g
+    AB24: u
+    AB41: z
+    AB07: k
+    A301: i

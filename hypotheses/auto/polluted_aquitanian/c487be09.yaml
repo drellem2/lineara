@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_lore_HT_115a_9_12
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''lore'' pinned to HT 115a tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: lore
+  phonemes:
+  - l
+  - o
+  - r
+  - e
+  gloss_hint: flower
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB53: l
+    AB59: o
+    AB80: r
+    AB55: e

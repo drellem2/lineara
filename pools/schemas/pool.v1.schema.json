@@ -73,6 +73,11 @@
           },
           "notes": {
             "type": "string"
+          },
+          "provenance": {
+            "type": "string",
+            "description": "Source provenance of this entry. 'real' = drawn from an attested language source. 'conjectural' = synthetic test-artifact entry (e.g. for the held-out pool-curation pollution test, mg-6b73). Optional; defaults to 'real' when omitted.",
+            "enum": ["real", "conjectural"]
           }
         }
       }

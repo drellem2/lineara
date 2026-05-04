@@ -1,0 +1,3839 @@
+pool: polluted_aquitanian
+source_citation: 'DELIBERATELY POLLUTED test pool generated from aquitanian.yaml (mg-6b73).
+  Half real, half conjectural — a test artifact for the held-out pool-curation test,
+  NOT a substrate claim. Conjectural surfaces are drawn from the aquitanian pool''s
+  marginal phoneme-frequency histogram and length distribution under deterministic
+  seed 0xb4b7c1f037ead5f1 (sha256("polluted_aquitanian:conjectural")[:16]). See pools/polluted_aquitanian.README.md
+  for the full construction algorithm and a prominent warning that this pool exists
+  only to test the framework''s curation-sensitivity.
+
+  '
+license: 'Mixed: real entries inherit the underlying aquitanian pool''s license (cited
+  fair-use of Trask 1997 and Gorrochategui 1984). Conjectural entries are synthetic
+  data with no source-text content, released under the same terms as the lineara repo.
+
+  '
+fetched_at: '2026-05-04T00:00:00Z'
+entries:
+- surface: andere
+  phonemes:
+  - a
+  - n
+  - d
+  - e
+  - r
+  - e
+  gloss: lady, woman of standing
+  semantic_field: kin
+  attestations:
+  - ANDERE
+  - ANDERESENI
+  - ANDEREXO
+  - ANDOSSI
+  region: aquitania
+  citation: Gorrochategui 1984, Aquitanian theonym/anthroponym ANDERE; Trask 1997
+    ch. 3 (Basque cognate andere).
+  provenance: real
+- surface: sembe
+  phonemes:
+  - s
+  - e
+  - m
+  - b
+  - e
+  gloss: son
+  semantic_field: kin
+  attestations:
+  - SEMBE
+  - SENBE
+  - SEMBETAR
+  - SEMBECCO
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. SEMBE/SENBE; Basque cognate seme (Trask 1997 ch.
+    3).
+  provenance: real
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  gloss: child, kin
+  semantic_field: kin
+  attestations:
+  - SENI
+  - SENIPONNIS
+  - SENICCO
+  - SENIXSO
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. SENI- name element; Basque sein "child" (Trask
+    1997).
+  provenance: real
+- surface: nesca
+  phonemes:
+  - n
+  - e
+  - s
+  - c
+  - a
+  gloss: girl
+  semantic_field: kin
+  attestations:
+  - NESCATO
+  - NESKATO
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. NESCATO; Basque neska (Trask 1997 ch. 3).
+  provenance: real
+- surface: cison
+  phonemes:
+  - c
+  - i
+  - s
+  - o
+  - n
+  gloss: man
+  semantic_field: kin
+  attestations:
+  - CISON
+  - CISSON
+  - CISONTEN
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. CISON; Basque cognate gizon (Trask 1997).
+  provenance: real
+- surface: atta
+  phonemes:
+  - a
+  - t
+  - t
+  - a
+  gloss: father
+  semantic_field: kin
+  attestations:
+  - ATTA
+  - ATTACONIS
+  - ATTASUS
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. ATTA; Basque aita (Trask 1997 ch. 3).
+  provenance: real
+- surface: umme
+  phonemes:
+  - u
+  - m
+  - m
+  - e
+  gloss: child
+  semantic_field: kin
+  attestations:
+  - UMME
+  - UMMESAHAR
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. UMME-; Basque ume (Trask 1997).
+  provenance: real
+- surface: bels
+  phonemes:
+  - b
+  - e
+  - l
+  - s
+  gloss: black, raven
+  semantic_field: nature
+  attestations:
+  - BELS
+  - BELES
+  - BELEX
+  - BELSCO
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. BELS-/BELES-; Basque beltz (Trask 1997 ch. 3).
+  provenance: real
+- surface: ilun
+  phonemes:
+  - i
+  - l
+  - u
+  - n
+  gloss: dark
+  semantic_field: descriptor
+  attestations:
+  - ILUN
+  - ILUNNO
+  - ILUNNOSI
+  - ASTOILUN
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. ILUN-; Basque ilun (Trask 1997 ch. 3).
+  provenance: real
+- surface: ilur
+  phonemes:
+  - i
+  - l
+  - u
+  - r
+  gloss: dark (variant of ilun)
+  semantic_field: descriptor
+  attestations:
+  - ILURBERRIXO
+  - ILURI
+  - ILURO
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. ILUR- variant; cf. toponym Iluro (Oloron).
+  provenance: real
+- surface: lohi
+  phonemes:
+  - l
+  - o
+  - h
+  - i
+  gloss: mud, mire
+  semantic_field: nature
+  attestations:
+  - LOHI
+  - LOHITTON
+  - LOHIXSI
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. LOHI-; Basque lohi (Trask 1997).
+  provenance: real
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  gloss: earth, ground
+  semantic_field: nature
+  attestations:
+  - LURBEL
+  - LURBERRI
+  - LURUNNI
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. LUR- compound element; Basque lur.
+  provenance: real
+- surface: hars
+  phonemes:
+  - h
+  - a
+  - r
+  - s
+  gloss: bear
+  semantic_field: nature
+  attestations:
+  - HARS
+  - HARSI
+  - HARSUS
+  - HARSORI
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. HARS-; Basque hartz (Trask 1997 ch. 3).
+  provenance: real
+- surface: leher
+  phonemes:
+  - l
+  - e
+  - h
+  - e
+  - r
+  gloss: pine
+  semantic_field: nature
+  attestations:
+  - LEHER
+  - LEHERENNO
+  - LEHERENN
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. theonym LEHERENNO; Basque leher.
+  provenance: real
+- surface: sori
+  phonemes:
+  - s
+  - o
+  - r
+  - i
+  gloss: hawk (proposed)
+  semantic_field: nature
+  attestations:
+  - SORI
+  - SORIXO
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. SORI- onomastic element.
+  provenance: real
+- surface: hauten
+  phonemes:
+  - h
+  - a
+  - u
+  - t
+  - e
+  - n
+  gloss: great (proposed)
+  semantic_field: descriptor
+  attestations:
+  - HAUTEN
+  - HAUTENSI
+  - HAVTAN
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. HAUTEN-/HAVTAN-.
+  provenance: real
+- surface: tolose
+  phonemes:
+  - t
+  - o
+  - l
+  - o
+  - s
+  - e
+  gloss: fortified town
+  semantic_field: place
+  attestations:
+  - TOLOSA
+  - TOLOSE
+  region: aquitania
+  citation: Gorrochategui 1984; cf. toponym Tolosa (modern Toulouse, Tolosa GI).
+  provenance: real
+- surface: baigor
+  phonemes:
+  - b
+  - a
+  - i
+  - g
+  - o
+  - r
+  gloss: red valley
+  semantic_field: place
+  attestations:
+  - BAIGORRIX
+  - BAIGORRIXO
+  region: aquitania
+  citation: Gorrochategui 1984, theonym BAIGORRIX; Basque ibai 'river' + gorri 'red'.
+  provenance: real
+- surface: larre
+  phonemes:
+  - l
+  - a
+  - r
+  - r
+  - e
+  gloss: pasture, moor
+  semantic_field: nature
+  attestations:
+  - LARRAHI
+  - LARRAHE
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. theonym LARRAHI; Basque larre.
+  provenance: real
+- surface: itur
+  phonemes:
+  - i
+  - t
+  - u
+  - r
+  gloss: spring, fountain
+  semantic_field: nature
+  attestations:
+  - ITURISSA
+  - ITURRI
+  region: aquitania
+  citation: Gorrochategui 1984; Basque iturri (Trask 1997).
+  provenance: real
+- surface: aitz
+  phonemes:
+  - a
+  - i
+  - tz
+  gloss: rock, crag
+  semantic_field: nature
+  attestations:
+  - AITS
+  - ATSU
+  region: aquitania
+  citation: Gorrochategui 1984; Basque aitz/haitz (Trask 1997 ch. 3).
+  provenance: real
+- surface: hox
+  phonemes:
+  - h
+  - o
+  - x
+  gloss: cold (proposed)
+  semantic_field: descriptor
+  attestations:
+  - HOX
+  - HOXI
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. HOX- onomastic element; cf. Basque hotz.
+  provenance: real
+- surface: nescato
+  phonemes:
+  - n
+  - e
+  - s
+  - c
+  - a
+  - t
+  - o
+  gloss: little girl
+  semantic_field: kin
+  attestations:
+  - NESCATO
+  region: aquitania
+  citation: Gorrochategui 1984; diminutive of nesca.
+  provenance: real
+- surface: senben
+  phonemes:
+  - s
+  - e
+  - n
+  - b
+  - e
+  - n
+  gloss: son (variant)
+  semantic_field: kin
+  attestations:
+  - SENBEN
+  region: aquitania
+  citation: Gorrochategui 1984; variant of SEMBE.
+  provenance: real
+- surface: edun
+  phonemes:
+  - e
+  - d
+  - u
+  - n
+  gloss: have, possess (proposed verbal stem)
+  semantic_field: function
+  attestations:
+  - EDUNN
+  - EDUNNI
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. EDUNN-; Basque verbal *edun.
+  provenance: real
+- surface: hanna
+  phonemes:
+  - h
+  - a
+  - n
+  - n
+  - a
+  gloss: brother (proposed)
+  semantic_field: kin
+  attestations:
+  - HANNA
+  - HANNIA
+  - HANNICCO
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. HANN- element; cf. Basque anaia.
+  provenance: real
+- surface: idiar
+  phonemes:
+  - i
+  - d
+  - i
+  - a
+  - r
+  gloss: ox-related (proposed)
+  semantic_field: nature
+  attestations:
+  - IDIATTE
+  - IDIATTI
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. IDI- element; Basque idi 'ox'.
+  provenance: real
+- surface: ako
+  phonemes:
+  - a
+  - c
+  - o
+  gloss: derivational suffix
+  semantic_field: morphology
+  attestations:
+  - ENNEBOXI-AKO
+  - NESCAT-AKO
+  region: aquitania
+  citation: Gorrochategui 1984, Aq. -AKO/-AKKO suffix.
+  provenance: real
+- surface: hara
+  phonemes:
+  - h
+  - a
+  - r
+  - a
+  gloss: stone, rock
+  semantic_field: nature
+  attestations:
+  - HARRI
+  - HARSI
+  region: aquitania
+  citation: Gorrochategui 1984; Basque harri (Trask 1997 ch. 3).
+  provenance: real
+- surface: gison
+  phonemes:
+  - g
+  - i
+  - s
+  - o
+  - n
+  gloss: man (modern reflex of CISON)
+  semantic_field: kin
+  attestations:
+  - CISON
+  region: aquitania
+  citation: Gorrochategui 1984; Basque gizon (modern Basque).
+  provenance: real
+- surface: ur
+  phonemes:
+  - u
+  - r
+  gloss: water
+  semantic_field: nature
+  attestations:
+  - URI
+  - URBE
+  - URDIN
+  region: basque_substrate
+  citation: Trask 1997 ch. 3 (Basque ur 'water'; matches Aq. UR- in toponyms).
+  provenance: real
+- surface: ibai
+  phonemes:
+  - i
+  - b
+  - a
+  - i
+  gloss: river
+  semantic_field: nature
+  attestations:
+  - IBAI
+  - IBAIA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. BAIGOR / BAI- prefix.
+  provenance: real
+- surface: iri
+  phonemes:
+  - i
+  - r
+  - i
+  gloss: town, settlement
+  semantic_field: place
+  attestations:
+  - IRI
+  - ULI
+  - ILI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. ILI-/ULI- in Iliberri etc.
+  provenance: real
+- surface: mendi
+  phonemes:
+  - m
+  - e
+  - n
+  - d
+  - i
+  gloss: mountain
+  semantic_field: nature
+  attestations:
+  - MENDI
+  - MENDIA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3 (Basque mendi).
+  provenance: real
+- surface: haran
+  phonemes:
+  - h
+  - a
+  - r
+  - a
+  - n
+  gloss: valley
+  semantic_field: nature
+  attestations:
+  - HARAN
+  - ARAN
+  region: basque_substrate
+  citation: Trask 1997 ch. 3 (Basque haran).
+  provenance: real
+- surface: harri
+  phonemes:
+  - h
+  - a
+  - r
+  - r
+  - i
+  gloss: stone
+  semantic_field: nature
+  attestations:
+  - HARRI
+  - ARRI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3 (Basque harri).
+  provenance: real
+- surface: hartz
+  phonemes:
+  - h
+  - a
+  - r
+  - tz
+  gloss: bear
+  semantic_field: nature
+  attestations:
+  - HARTZ
+  - ARTZ
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. HARS-.
+  provenance: real
+- surface: etxe
+  phonemes:
+  - e
+  - tx
+  - e
+  gloss: house
+  semantic_field: dwelling
+  attestations:
+  - ETXE
+  - ECHE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3 (Basque etxe).
+  provenance: real
+- surface: gizon
+  phonemes:
+  - g
+  - i
+  - z
+  - o
+  - n
+  gloss: man
+  semantic_field: kin
+  attestations:
+  - GIZON
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. CISON.
+  provenance: real
+- surface: ama
+  phonemes:
+  - a
+  - m
+  - a
+  gloss: mother
+  semantic_field: kin
+  attestations:
+  - AMA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: aita
+  phonemes:
+  - a
+  - i
+  - t
+  - a
+  gloss: father
+  semantic_field: kin
+  attestations:
+  - AITA
+  - ATTA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. ATTA.
+  provenance: real
+- surface: seme
+  phonemes:
+  - s
+  - e
+  - m
+  - e
+  gloss: son
+  semantic_field: kin
+  attestations:
+  - SEME
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. SEMBE.
+  provenance: real
+- surface: alaba
+  phonemes:
+  - a
+  - l
+  - a
+  - b
+  - a
+  gloss: daughter
+  semantic_field: kin
+  attestations:
+  - ALABA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ume
+  phonemes:
+  - u
+  - m
+  - e
+  gloss: child, young
+  semantic_field: kin
+  attestations:
+  - UME
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. UMME.
+  provenance: real
+- surface: anai
+  phonemes:
+  - a
+  - n
+  - a
+  - i
+  gloss: brother
+  semantic_field: kin
+  attestations:
+  - ANAI
+  - ANAIA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: arreba
+  phonemes:
+  - a
+  - r
+  - r
+  - e
+  - b
+  - a
+  gloss: sister (of a man)
+  semantic_field: kin
+  attestations:
+  - ARREBA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: zahar
+  phonemes:
+  - z
+  - a
+  - h
+  - a
+  - r
+  gloss: old
+  semantic_field: descriptor
+  attestations:
+  - ZAHAR
+  - SAHAR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. SAHAR-.
+  provenance: real
+- surface: berri
+  phonemes:
+  - b
+  - e
+  - r
+  - r
+  - i
+  gloss: new
+  semantic_field: descriptor
+  attestations:
+  - BERRI
+  - BERR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. ILIBERRI 'new town'.
+  provenance: real
+- surface: handi
+  phonemes:
+  - h
+  - a
+  - n
+  - d
+  - i
+  gloss: big
+  semantic_field: descriptor
+  attestations:
+  - HANDI
+  - ANDI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: txiki
+  phonemes:
+  - tx
+  - i
+  - k
+  - i
+  gloss: small
+  semantic_field: descriptor
+  attestations:
+  - TXIKI
+  - TIPI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: zuri
+  phonemes:
+  - z
+  - u
+  - r
+  - i
+  gloss: white
+  semantic_field: descriptor
+  attestations:
+  - ZURI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: gorri
+  phonemes:
+  - g
+  - o
+  - r
+  - r
+  - i
+  gloss: red
+  semantic_field: descriptor
+  attestations:
+  - GORRI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. BAIGOR 'red valley'.
+  provenance: real
+- surface: beltz
+  phonemes:
+  - b
+  - e
+  - l
+  - tz
+  gloss: black
+  semantic_field: descriptor
+  attestations:
+  - BELTZ
+  - BELS
+  region: basque_substrate
+  citation: Trask 1997 ch. 3; cf. Aq. BELS-.
+  provenance: real
+- surface: bat
+  phonemes:
+  - b
+  - a
+  - t
+  gloss: one
+  semantic_field: number
+  attestations:
+  - BAT
+  region: basque_substrate
+  citation: Trask 1997 ch. 4 (numerals).
+  provenance: real
+- surface: bi
+  phonemes:
+  - b
+  - i
+  gloss: two
+  semantic_field: number
+  attestations:
+  - BI
+  - BIGA
+  region: basque_substrate
+  citation: Trask 1997 ch. 4.
+  provenance: real
+- surface: hiru
+  phonemes:
+  - h
+  - i
+  - r
+  - u
+  gloss: three
+  semantic_field: number
+  attestations:
+  - HIRU
+  - IRU
+  region: basque_substrate
+  citation: Trask 1997 ch. 4.
+  provenance: real
+- surface: lau
+  phonemes:
+  - l
+  - a
+  - u
+  gloss: four
+  semantic_field: number
+  attestations:
+  - LAU
+  region: basque_substrate
+  citation: Trask 1997 ch. 4.
+  provenance: real
+- surface: bost
+  phonemes:
+  - b
+  - o
+  - s
+  - t
+  gloss: five
+  semantic_field: number
+  attestations:
+  - BOST
+  - BORTZ
+  region: basque_substrate
+  citation: Trask 1997 ch. 4.
+  provenance: real
+- surface: sei
+  phonemes:
+  - s
+  - e
+  - i
+  gloss: six
+  semantic_field: number
+  attestations:
+  - SEI
+  region: basque_substrate
+  citation: Trask 1997 ch. 4.
+  provenance: real
+- surface: zazpi
+  phonemes:
+  - z
+  - a
+  - z
+  - p
+  - i
+  gloss: seven
+  semantic_field: number
+  attestations:
+  - ZAZPI
+  region: basque_substrate
+  citation: Trask 1997 ch. 4.
+  provenance: real
+- surface: zortzi
+  phonemes:
+  - z
+  - o
+  - r
+  - tz
+  - i
+  gloss: eight
+  semantic_field: number
+  attestations:
+  - ZORTZI
+  region: basque_substrate
+  citation: Trask 1997 ch. 4.
+  provenance: real
+- surface: hamar
+  phonemes:
+  - h
+  - a
+  - m
+  - a
+  - r
+  gloss: ten
+  semantic_field: number
+  attestations:
+  - HAMAR
+  - AMAR
+  region: basque_substrate
+  citation: Trask 1997 ch. 4.
+  provenance: real
+- surface: begi
+  phonemes:
+  - b
+  - e
+  - g
+  - i
+  gloss: eye
+  semantic_field: body
+  attestations:
+  - BEGI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: esku
+  phonemes:
+  - e
+  - s
+  - k
+  - u
+  gloss: hand
+  semantic_field: body
+  attestations:
+  - ESKU
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: oin
+  phonemes:
+  - o
+  - i
+  - n
+  gloss: foot
+  semantic_field: body
+  attestations:
+  - OIN
+  - OIÑ
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: buru
+  phonemes:
+  - b
+  - u
+  - r
+  - u
+  gloss: head
+  semantic_field: body
+  attestations:
+  - BURU
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: bihotz
+  phonemes:
+  - b
+  - i
+  - h
+  - o
+  - tz
+  gloss: heart
+  semantic_field: body
+  attestations:
+  - BIHOTZ
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: aho
+  phonemes:
+  - a
+  - h
+  - o
+  gloss: mouth
+  semantic_field: body
+  attestations:
+  - AHO
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: hagin
+  phonemes:
+  - h
+  - a
+  - g
+  - i
+  - n
+  gloss: tooth
+  semantic_field: body
+  attestations:
+  - HAGIN
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: mihi
+  phonemes:
+  - m
+  - i
+  - h
+  - i
+  gloss: tongue
+  semantic_field: body
+  attestations:
+  - MIHI
+  - MII
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: belarri
+  phonemes:
+  - b
+  - e
+  - l
+  - a
+  - r
+  - r
+  - i
+  gloss: ear
+  semantic_field: body
+  attestations:
+  - BELARRI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: sudur
+  phonemes:
+  - s
+  - u
+  - d
+  - u
+  - r
+  gloss: nose
+  semantic_field: body
+  attestations:
+  - SUDUR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ile
+  phonemes:
+  - i
+  - l
+  - e
+  gloss: hair
+  semantic_field: body
+  attestations:
+  - ILE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: odol
+  phonemes:
+  - o
+  - d
+  - o
+  - l
+  gloss: blood
+  semantic_field: body
+  attestations:
+  - ODOL
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: hezur
+  phonemes:
+  - h
+  - e
+  - z
+  - u
+  - r
+  gloss: bone
+  semantic_field: body
+  attestations:
+  - HEZUR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: haragi
+  phonemes:
+  - h
+  - a
+  - r
+  - a
+  - g
+  - i
+  gloss: flesh, meat
+  semantic_field: body
+  attestations:
+  - HARAGI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: su
+  phonemes:
+  - s
+  - u
+  gloss: fire
+  semantic_field: nature
+  attestations:
+  - SU
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: izar
+  phonemes:
+  - i
+  - z
+  - a
+  - r
+  gloss: star
+  semantic_field: nature
+  attestations:
+  - IZAR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ilargi
+  phonemes:
+  - i
+  - l
+  - a
+  - r
+  - g
+  - i
+  gloss: moon
+  semantic_field: nature
+  attestations:
+  - ILARGI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: eguzki
+  phonemes:
+  - e
+  - g
+  - u
+  - z
+  - k
+  - i
+  gloss: sun
+  semantic_field: nature
+  attestations:
+  - EGUZKI
+  - EKI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: eki
+  phonemes:
+  - e
+  - k
+  - i
+  gloss: sun (short form)
+  semantic_field: nature
+  attestations:
+  - EKI
+  - EGI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: argi
+  phonemes:
+  - a
+  - r
+  - g
+  - i
+  gloss: light
+  semantic_field: nature
+  attestations:
+  - ARGI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: egun
+  phonemes:
+  - e
+  - g
+  - u
+  - n
+  gloss: day
+  semantic_field: time
+  attestations:
+  - EGUN
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: gau
+  phonemes:
+  - g
+  - a
+  - u
+  gloss: night
+  semantic_field: time
+  attestations:
+  - GAU
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: izotz
+  phonemes:
+  - i
+  - z
+  - o
+  - tz
+  gloss: ice, frost
+  semantic_field: nature
+  attestations:
+  - IZOTZ
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: euri
+  phonemes:
+  - e
+  - u
+  - r
+  - i
+  gloss: rain
+  semantic_field: nature
+  attestations:
+  - EURI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: haize
+  phonemes:
+  - h
+  - a
+  - i
+  - z
+  - e
+  gloss: wind
+  semantic_field: nature
+  attestations:
+  - HAIZE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: itsaso
+  phonemes:
+  - i
+  - ts
+  - a
+  - s
+  - o
+  gloss: sea
+  semantic_field: nature
+  attestations:
+  - ITSASO
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: zelai
+  phonemes:
+  - z
+  - e
+  - l
+  - a
+  - i
+  gloss: meadow, plain
+  semantic_field: nature
+  attestations:
+  - ZELAI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: baso
+  phonemes:
+  - b
+  - a
+  - s
+  - o
+  gloss: forest
+  semantic_field: nature
+  attestations:
+  - BASO
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: zubi
+  phonemes:
+  - z
+  - u
+  - b
+  - i
+  gloss: bridge
+  semantic_field: place
+  attestations:
+  - ZUBI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: bide
+  phonemes:
+  - b
+  - i
+  - d
+  - e
+  gloss: way, road
+  semantic_field: place
+  attestations:
+  - BIDE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: hesi
+  phonemes:
+  - h
+  - e
+  - s
+  - i
+  gloss: hedge, fence
+  semantic_field: place
+  attestations:
+  - HESI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ate
+  phonemes:
+  - a
+  - t
+  - e
+  gloss: door
+  semantic_field: dwelling
+  attestations:
+  - ATE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: leiho
+  phonemes:
+  - l
+  - e
+  - i
+  - h
+  - o
+  gloss: window
+  semantic_field: dwelling
+  attestations:
+  - LEIHO
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: sukalde
+  phonemes:
+  - s
+  - u
+  - k
+  - a
+  - l
+  - d
+  - e
+  gloss: kitchen, hearth
+  semantic_field: dwelling
+  attestations:
+  - SUKALDE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3 (sukalde as compound of su 'fire' + kalde).
+  provenance: real
+- surface: ohe
+  phonemes:
+  - o
+  - h
+  - e
+  gloss: bed
+  semantic_field: dwelling
+  attestations:
+  - OHE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: belar
+  phonemes:
+  - b
+  - e
+  - l
+  - a
+  - r
+  gloss: grass
+  semantic_field: nature
+  attestations:
+  - BELAR
+  - BEDAR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: lore
+  phonemes:
+  - l
+  - o
+  - r
+  - e
+  gloss: flower
+  semantic_field: nature
+  attestations:
+  - LORE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: zuhaitz
+  phonemes:
+  - z
+  - u
+  - h
+  - a
+  - i
+  - tz
+  gloss: tree
+  semantic_field: nature
+  attestations:
+  - ZUHAITZ
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: zur
+  phonemes:
+  - z
+  - u
+  - r
+  gloss: wood
+  semantic_field: nature
+  attestations:
+  - ZUR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ardi
+  phonemes:
+  - a
+  - r
+  - d
+  - i
+  gloss: sheep
+  semantic_field: animal
+  attestations:
+  - ARDI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: behi
+  phonemes:
+  - b
+  - e
+  - h
+  - i
+  gloss: cow
+  semantic_field: animal
+  attestations:
+  - BEHI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: zaldi
+  phonemes:
+  - z
+  - a
+  - l
+  - d
+  - i
+  gloss: horse
+  semantic_field: animal
+  attestations:
+  - ZALDI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: txerri
+  phonemes:
+  - tx
+  - e
+  - r
+  - r
+  - i
+  gloss: pig
+  semantic_field: animal
+  attestations:
+  - TXERRI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ahuntz
+  phonemes:
+  - a
+  - h
+  - u
+  - n
+  - tz
+  gloss: goat
+  semantic_field: animal
+  attestations:
+  - AHUNTZ
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: txakur
+  phonemes:
+  - tx
+  - a
+  - k
+  - u
+  - r
+  gloss: dog
+  semantic_field: animal
+  attestations:
+  - TXAKUR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: katu
+  phonemes:
+  - k
+  - a
+  - t
+  - u
+  gloss: cat
+  semantic_field: animal
+  attestations:
+  - KATU
+  region: basque_substrate
+  citation: Trask 1997 ch. 3 (Latin loan, but inherited form).
+  provenance: real
+- surface: hegazti
+  phonemes:
+  - h
+  - e
+  - g
+  - a
+  - z
+  - t
+  - i
+  gloss: bird
+  semantic_field: animal
+  attestations:
+  - HEGAZTI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: arrain
+  phonemes:
+  - a
+  - r
+  - r
+  - a
+  - i
+  - n
+  gloss: fish
+  semantic_field: animal
+  attestations:
+  - ARRAIN
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: gari
+  phonemes:
+  - g
+  - a
+  - r
+  - i
+  gloss: wheat
+  semantic_field: food
+  attestations:
+  - GARI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: arto
+  phonemes:
+  - a
+  - r
+  - t
+  - o
+  gloss: corn, millet
+  semantic_field: food
+  attestations:
+  - ARTO
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ogi
+  phonemes:
+  - o
+  - g
+  - i
+  gloss: bread
+  semantic_field: food
+  attestations:
+  - OGI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: esne
+  phonemes:
+  - e
+  - s
+  - n
+  - e
+  gloss: milk
+  semantic_field: food
+  attestations:
+  - ESNE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: gatz
+  phonemes:
+  - g
+  - a
+  - tz
+  gloss: salt
+  semantic_field: food
+  attestations:
+  - GATZ
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ardo
+  phonemes:
+  - a
+  - r
+  - d
+  - o
+  gloss: wine
+  semantic_field: food
+  attestations:
+  - ARDO
+  - ARNO
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: olio
+  phonemes:
+  - o
+  - l
+  - i
+  - o
+  gloss: oil
+  semantic_field: food
+  attestations:
+  - OLIO
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ezti
+  phonemes:
+  - e
+  - z
+  - t
+  - i
+  gloss: honey
+  semantic_field: food
+  attestations:
+  - EZTI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: mahats
+  phonemes:
+  - m
+  - a
+  - h
+  - a
+  - ts
+  gloss: grape
+  semantic_field: food
+  attestations:
+  - MAHATS
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: sagar
+  phonemes:
+  - s
+  - a
+  - g
+  - a
+  - r
+  gloss: apple
+  semantic_field: food
+  attestations:
+  - SAGAR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: lan
+  phonemes:
+  - l
+  - a
+  - n
+  gloss: work
+  semantic_field: function
+  attestations:
+  - LAN
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: lo
+  phonemes:
+  - l
+  - o
+  gloss: sleep
+  semantic_field: function
+  attestations:
+  - LO
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: hil
+  phonemes:
+  - h
+  - i
+  - l
+  gloss: dead, kill
+  semantic_field: function
+  attestations:
+  - HIL
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: bizi
+  phonemes:
+  - b
+  - i
+  - z
+  - i
+  gloss: alive, life
+  semantic_field: function
+  attestations:
+  - BIZI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: jan
+  phonemes:
+  - j
+  - a
+  - n
+  gloss: eat
+  semantic_field: function
+  attestations:
+  - JAN
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: edan
+  phonemes:
+  - e
+  - d
+  - a
+  - n
+  gloss: drink
+  semantic_field: function
+  attestations:
+  - EDAN
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ikusi
+  phonemes:
+  - i
+  - k
+  - u
+  - s
+  - i
+  gloss: see
+  semantic_field: function
+  attestations:
+  - IKUSI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: entzun
+  phonemes:
+  - e
+  - n
+  - tz
+  - u
+  - n
+  gloss: hear
+  semantic_field: function
+  attestations:
+  - ENTZUN
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: hartu
+  phonemes:
+  - h
+  - a
+  - r
+  - t
+  - u
+  gloss: take
+  semantic_field: function
+  attestations:
+  - HARTU
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: eman
+  phonemes:
+  - e
+  - m
+  - a
+  - n
+  gloss: give
+  semantic_field: function
+  attestations:
+  - EMAN
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ekarri
+  phonemes:
+  - e
+  - k
+  - a
+  - r
+  - r
+  - i
+  gloss: bring
+  semantic_field: function
+  attestations:
+  - EKARRI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: erori
+  phonemes:
+  - e
+  - r
+  - o
+  - r
+  - i
+  gloss: fall
+  semantic_field: function
+  attestations:
+  - ERORI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: nahi
+  phonemes:
+  - n
+  - a
+  - h
+  - i
+  gloss: want, desire
+  semantic_field: function
+  attestations:
+  - NAHI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: behar
+  phonemes:
+  - b
+  - e
+  - h
+  - a
+  - r
+  gloss: need
+  semantic_field: function
+  attestations:
+  - BEHAR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ona
+  phonemes:
+  - o
+  - n
+  - a
+  gloss: good (the good)
+  semantic_field: descriptor
+  attestations:
+  - 'ON'
+  - ONA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: gaitz
+  phonemes:
+  - g
+  - a
+  - i
+  - tz
+  gloss: bad, ill
+  semantic_field: descriptor
+  attestations:
+  - GAITZ
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: nor
+  phonemes:
+  - n
+  - o
+  - r
+  gloss: who
+  semantic_field: function
+  attestations:
+  - NOR
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: zer
+  phonemes:
+  - z
+  - e
+  - r
+  gloss: what
+  semantic_field: function
+  attestations:
+  - ZER
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: non
+  phonemes:
+  - n
+  - o
+  - n
+  gloss: where
+  semantic_field: function
+  attestations:
+  - NON
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: noiz
+  phonemes:
+  - n
+  - o
+  - i
+  - z
+  gloss: when
+  semantic_field: function
+  attestations:
+  - NOIZ
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: nola
+  phonemes:
+  - n
+  - o
+  - l
+  - a
+  gloss: how
+  semantic_field: function
+  attestations:
+  - NOLA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: bai
+  phonemes:
+  - b
+  - a
+  - i
+  gloss: 'yes'
+  semantic_field: function
+  attestations:
+  - BAI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ez
+  phonemes:
+  - e
+  - z
+  gloss: no, not
+  semantic_field: function
+  attestations:
+  - EZ
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: eta
+  phonemes:
+  - e
+  - t
+  - a
+  gloss: and
+  semantic_field: function
+  attestations:
+  - ETA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: ere
+  phonemes:
+  - e
+  - r
+  - e
+  gloss: also
+  semantic_field: function
+  attestations:
+  - ERE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: nire
+  phonemes:
+  - n
+  - i
+  - r
+  - e
+  gloss: my
+  semantic_field: function
+  attestations:
+  - NIRE
+  - NERE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: hire
+  phonemes:
+  - h
+  - i
+  - r
+  - e
+  gloss: thy
+  semantic_field: function
+  attestations:
+  - HIRE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: bere
+  phonemes:
+  - b
+  - e
+  - r
+  - e
+  gloss: his/her
+  semantic_field: function
+  attestations:
+  - BERE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: gure
+  phonemes:
+  - g
+  - u
+  - r
+  - e
+  gloss: our
+  semantic_field: function
+  attestations:
+  - GURE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: zure
+  phonemes:
+  - z
+  - u
+  - r
+  - e
+  gloss: your
+  semantic_field: function
+  attestations:
+  - ZURE
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: hau
+  phonemes:
+  - h
+  - a
+  - u
+  gloss: this
+  semantic_field: function
+  attestations:
+  - HAU
+  - AU
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: hori
+  phonemes:
+  - h
+  - o
+  - r
+  - i
+  gloss: that
+  semantic_field: function
+  attestations:
+  - HORI
+  - ORI
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: hura
+  phonemes:
+  - h
+  - u
+  - r
+  - a
+  gloss: yon, that-yonder
+  semantic_field: function
+  attestations:
+  - HURA
+  - URA
+  region: basque_substrate
+  citation: Trask 1997 ch. 3.
+  provenance: real
+- surface: rtzrzod
+  phonemes:
+  - r
+  - tz
+  - r
+  - z
+  - o
+  - d
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: jzzua
+  phonemes:
+  - j
+  - z
+  - z
+  - u
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: oaas
+  phonemes:
+  - o
+  - a
+  - a
+  - s
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ergcn
+  phonemes:
+  - e
+  - r
+  - g
+  - c
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: anoka
+  phonemes:
+  - a
+  - n
+  - o
+  - k
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: unda
+  phonemes:
+  - u
+  - n
+  - d
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: obrr
+  phonemes:
+  - o
+  - b
+  - r
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ilae
+  phonemes:
+  - i
+  - l
+  - a
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: zimr
+  phonemes:
+  - z
+  - i
+  - m
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rsgi
+  phonemes:
+  - r
+  - s
+  - g
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ogri
+  phonemes:
+  - o
+  - g
+  - r
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ema
+  phonemes:
+  - e
+  - m
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rlji
+  phonemes:
+  - r
+  - l
+  - j
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: lbrod
+  phonemes:
+  - l
+  - b
+  - r
+  - o
+  - d
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: scti
+  phonemes:
+  - s
+  - c
+  - t
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: zogrns
+  phonemes:
+  - z
+  - o
+  - g
+  - r
+  - n
+  - s
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ezzszn
+  phonemes:
+  - e
+  - z
+  - z
+  - s
+  - z
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: iaeeel
+  phonemes:
+  - i
+  - a
+  - e
+  - e
+  - e
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: buheu
+  phonemes:
+  - b
+  - u
+  - h
+  - e
+  - u
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rrbi
+  phonemes:
+  - r
+  - r
+  - b
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: eil
+  phonemes:
+  - e
+  - i
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: taa
+  phonemes:
+  - t
+  - a
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: gsraatr
+  phonemes:
+  - g
+  - s
+  - r
+  - a
+  - a
+  - t
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: aanbae
+  phonemes:
+  - a
+  - a
+  - n
+  - b
+  - a
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: raao
+  phonemes:
+  - r
+  - a
+  - a
+  - o
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: zsseh
+  phonemes:
+  - z
+  - s
+  - s
+  - e
+  - h
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: errah
+  phonemes:
+  - e
+  - r
+  - r
+  - a
+  - h
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: grg
+  phonemes:
+  - g
+  - r
+  - g
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: hhzr
+  phonemes:
+  - h
+  - h
+  - z
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ihtznn
+  phonemes:
+  - i
+  - h
+  - tz
+  - n
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ah
+  phonemes:
+  - a
+  - h
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: nuor
+  phonemes:
+  - n
+  - u
+  - o
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: arr
+  phonemes:
+  - a
+  - r
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ieuhu
+  phonemes:
+  - i
+  - e
+  - u
+  - h
+  - u
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: reusb
+  phonemes:
+  - r
+  - e
+  - u
+  - s
+  - b
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: eoezd
+  phonemes:
+  - e
+  - o
+  - e
+  - z
+  - d
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: tzgie
+  phonemes:
+  - tz
+  - g
+  - i
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rik
+  phonemes:
+  - r
+  - i
+  - k
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: gbloi
+  phonemes:
+  - g
+  - b
+  - l
+  - o
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ekr
+  phonemes:
+  - e
+  - k
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rime
+  phonemes:
+  - r
+  - i
+  - m
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: oira
+  phonemes:
+  - o
+  - i
+  - r
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: eabiu
+  phonemes:
+  - e
+  - a
+  - b
+  - i
+  - u
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: asa
+  phonemes:
+  - a
+  - s
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: itee
+  phonemes:
+  - i
+  - t
+  - e
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: oerler
+  phonemes:
+  - o
+  - e
+  - r
+  - l
+  - e
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: arnho
+  phonemes:
+  - a
+  - r
+  - n
+  - h
+  - o
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: eonlr
+  phonemes:
+  - e
+  - o
+  - n
+  - l
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ooatsl
+  phonemes:
+  - o
+  - o
+  - a
+  - ts
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rize
+  phonemes:
+  - r
+  - i
+  - z
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: eints
+  phonemes:
+  - e
+  - i
+  - n
+  - ts
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: nmela
+  phonemes:
+  - n
+  - m
+  - e
+  - l
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: zemb
+  phonemes:
+  - z
+  - e
+  - m
+  - b
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: agn
+  phonemes:
+  - a
+  - g
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ir
+  phonemes:
+  - i
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: uinp
+  phonemes:
+  - u
+  - i
+  - n
+  - p
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: uid
+  phonemes:
+  - u
+  - i
+  - d
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: nrji
+  phonemes:
+  - n
+  - r
+  - j
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rni
+  phonemes:
+  - r
+  - n
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: txclsn
+  phonemes:
+  - tx
+  - c
+  - l
+  - s
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: selku
+  phonemes:
+  - s
+  - e
+  - l
+  - k
+  - u
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: zhnsz
+  phonemes:
+  - z
+  - h
+  - n
+  - s
+  - z
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: mnir
+  phonemes:
+  - m
+  - n
+  - i
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: aari
+  phonemes:
+  - a
+  - a
+  - r
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: eir
+  phonemes:
+  - e
+  - i
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: huol
+  phonemes:
+  - h
+  - u
+  - o
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: czort
+  phonemes:
+  - c
+  - z
+  - o
+  - r
+  - t
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: eca
+  phonemes:
+  - e
+  - c
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: riamu
+  phonemes:
+  - r
+  - i
+  - a
+  - m
+  - u
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: iaab
+  phonemes:
+  - i
+  - a
+  - a
+  - b
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: reheuie
+  phonemes:
+  - r
+  - e
+  - h
+  - e
+  - u
+  - i
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: masua
+  phonemes:
+  - m
+  - a
+  - s
+  - u
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: eol
+  phonemes:
+  - e
+  - o
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rzlr
+  phonemes:
+  - r
+  - z
+  - l
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: nghat
+  phonemes:
+  - n
+  - g
+  - h
+  - a
+  - t
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: absecl
+  phonemes:
+  - a
+  - b
+  - s
+  - e
+  - c
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: al
+  phonemes:
+  - a
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: siak
+  phonemes:
+  - s
+  - i
+  - a
+  - k
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ghatzda
+  phonemes:
+  - g
+  - h
+  - a
+  - tz
+  - d
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: hzhnia
+  phonemes:
+  - h
+  - z
+  - h
+  - n
+  - i
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ahe
+  phonemes:
+  - a
+  - h
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: izsg
+  phonemes:
+  - i
+  - z
+  - s
+  - g
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: aaal
+  phonemes:
+  - a
+  - a
+  - a
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: als
+  phonemes:
+  - a
+  - l
+  - s
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: onbr
+  phonemes:
+  - o
+  - n
+  - b
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: earz
+  phonemes:
+  - e
+  - a
+  - r
+  - z
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: nzben
+  phonemes:
+  - n
+  - z
+  - b
+  - e
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: aiedn
+  phonemes:
+  - a
+  - i
+  - e
+  - d
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: nierr
+  phonemes:
+  - n
+  - i
+  - e
+  - r
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: enra
+  phonemes:
+  - e
+  - n
+  - r
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ukrl
+  phonemes:
+  - u
+  - k
+  - r
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: uihi
+  phonemes:
+  - u
+  - i
+  - h
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: buds
+  phonemes:
+  - b
+  - u
+  - d
+  - s
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ebu
+  phonemes:
+  - e
+  - b
+  - u
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: iigbn
+  phonemes:
+  - i
+  - i
+  - g
+  - b
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ldhreuu
+  phonemes:
+  - l
+  - d
+  - h
+  - r
+  - e
+  - u
+  - u
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: uza
+  phonemes:
+  - u
+  - z
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: bmeea
+  phonemes:
+  - b
+  - m
+  - e
+  - e
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: slrr
+  phonemes:
+  - s
+  - l
+  - r
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: laaigi
+  phonemes:
+  - l
+  - a
+  - a
+  - i
+  - g
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rzr
+  phonemes:
+  - r
+  - z
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rrea
+  phonemes:
+  - r
+  - r
+  - e
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: bzee
+  phonemes:
+  - b
+  - z
+  - e
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: hhrke
+  phonemes:
+  - h
+  - h
+  - r
+  - k
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: aleoa
+  phonemes:
+  - a
+  - l
+  - e
+  - o
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: eeuen
+  phonemes:
+  - e
+  - e
+  - u
+  - e
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: aeiak
+  phonemes:
+  - a
+  - e
+  - i
+  - a
+  - k
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: helo
+  phonemes:
+  - h
+  - e
+  - l
+  - o
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: zirsiaa
+  phonemes:
+  - z
+  - i
+  - r
+  - s
+  - i
+  - a
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: leruir
+  phonemes:
+  - l
+  - e
+  - r
+  - u
+  - i
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: btzha
+  phonemes:
+  - b
+  - tz
+  - h
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: zimu
+  phonemes:
+  - z
+  - i
+  - m
+  - u
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: hri
+  phonemes:
+  - h
+  - r
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: dzua
+  phonemes:
+  - d
+  - z
+  - u
+  - a
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: etg
+  phonemes:
+  - e
+  - t
+  - g
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ooes
+  phonemes:
+  - o
+  - o
+  - e
+  - s
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ouir
+  phonemes:
+  - o
+  - u
+  - i
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: dhoc
+  phonemes:
+  - d
+  - h
+  - o
+  - c
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: oeall
+  phonemes:
+  - o
+  - e
+  - a
+  - l
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: gdrrh
+  phonemes:
+  - g
+  - d
+  - r
+  - r
+  - h
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: aer
+  phonemes:
+  - a
+  - e
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: te
+  phonemes:
+  - t
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: her
+  phonemes:
+  - h
+  - e
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: airg
+  phonemes:
+  - a
+  - i
+  - r
+  - g
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: bsr
+  phonemes:
+  - b
+  - s
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: txhkn
+  phonemes:
+  - tx
+  - h
+  - k
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ehsrd
+  phonemes:
+  - e
+  - h
+  - s
+  - r
+  - d
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: lehak
+  phonemes:
+  - l
+  - e
+  - h
+  - a
+  - k
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: uratt
+  phonemes:
+  - u
+  - r
+  - a
+  - t
+  - t
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: dgmi
+  phonemes:
+  - d
+  - g
+  - m
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rzsrtr
+  phonemes:
+  - r
+  - z
+  - s
+  - r
+  - t
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: aanah
+  phonemes:
+  - a
+  - a
+  - n
+  - a
+  - h
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: onli
+  phonemes:
+  - o
+  - n
+  - l
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: aaoru
+  phonemes:
+  - a
+  - a
+  - o
+  - r
+  - u
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ore
+  phonemes:
+  - o
+  - r
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: dsii
+  phonemes:
+  - d
+  - s
+  - i
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: hie
+  phonemes:
+  - h
+  - i
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: uti
+  phonemes:
+  - u
+  - t
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: iul
+  phonemes:
+  - i
+  - u
+  - l
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: trns
+  phonemes:
+  - t
+  - r
+  - n
+  - s
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rbtxt
+  phonemes:
+  - r
+  - b
+  - tx
+  - t
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: stn
+  phonemes:
+  - s
+  - t
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: si
+  phonemes:
+  - s
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: air
+  phonemes:
+  - a
+  - i
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: nti
+  phonemes:
+  - n
+  - t
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rsoi
+  phonemes:
+  - r
+  - s
+  - o
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: ritzr
+  phonemes:
+  - r
+  - i
+  - tz
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: easn
+  phonemes:
+  - e
+  - a
+  - s
+  - n
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: urbi
+  phonemes:
+  - u
+  - r
+  - b
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: egrr
+  phonemes:
+  - e
+  - g
+  - r
+  - r
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: rai
+  phonemes:
+  - r
+  - a
+  - i
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: abek
+  phonemes:
+  - a
+  - b
+  - e
+  - k
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.
+- surface: coie
+  phonemes:
+  - c
+  - o
+  - i
+  - e
+  region: aquitania
+  provenance: conjectural
+  citation: Synthetic conjectural entry generated by scripts/build_polluted_pool.py
+    from the aquitanian pool's marginal phoneme distribution and length distribution.
+    Test artifact for the held-out pool-curation test (mg-6b73); not a substrate claim.

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_txakur_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''txakur'' pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: txakur
+  phonemes:
+  - tx
+  - a
+  - k
+  - u
+  - r
+  gloss_hint: dog
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: tx
+    AB45: a
+    AB80: k
+    A323: u
+    AB06: r

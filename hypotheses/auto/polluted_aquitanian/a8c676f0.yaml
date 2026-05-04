@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_arrain_HT_122b_13_18
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''arrain'' pinned to HT 122b tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: arrain
+  phonemes:
+  - a
+  - r
+  - r
+  - a
+  - i
+  - n
+  gloss_hint: fish
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB08: a
+    AB60: r
+    AB65: r
+    AB10: a
+    AB45: i
+    AB17: n

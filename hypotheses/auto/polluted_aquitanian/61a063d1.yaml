@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_handi_ARKH_5_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''handi'' pinned to ARKH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: handi
+  phonemes:
+  - h
+  - a
+  - n
+  - d
+  - i
+  gloss_hint: big
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: h
+    AB51: a
+    AB30: n
+    AB59: d
+    AB06: i

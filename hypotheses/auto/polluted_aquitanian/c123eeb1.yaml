@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_sagar_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''sagar'' pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: sagar
+  phonemes:
+  - s
+  - a
+  - g
+  - a
+  - r
+  gloss_hint: apple
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: s
+    AB45: a
+    AB80: g
+    A323: a
+    AB06: r

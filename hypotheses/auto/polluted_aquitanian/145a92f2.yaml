@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_zuri_HT_104_19_22
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''zuri'' pinned to HT 104 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: zuri
+  phonemes:
+  - z
+  - u
+  - r
+  - i
+  gloss_hint: white
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 104
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB03: z
+    AB01: u
+    AB58: r
+    AB37: i

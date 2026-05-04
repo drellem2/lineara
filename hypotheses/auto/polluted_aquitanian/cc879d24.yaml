@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_zure_HT_117a_38_41
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''zure'' pinned to HT 117a tokens [38..41].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: zure
+  phonemes:
+  - z
+  - u
+  - r
+  - e
+  gloss_hint: your
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 38
+  - 41
+  sign_to_phoneme:
+    AB73: z
+    AB26: u
+    AB59: r
+    AB60: e

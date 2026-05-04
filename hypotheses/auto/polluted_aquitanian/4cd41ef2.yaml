@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_euri_HT_12_0_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''euri'' pinned to HT 12 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: euri
+  phonemes:
+  - e
+  - u
+  - r
+  - i
+  gloss_hint: rain
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 12
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB16: e
+    AB37: u
+    AB01: r
+    AB04: i

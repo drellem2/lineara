@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_senben_HT_Zb_159_0_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''senben'' pinned to HT Zb 159 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: senben
+  phonemes:
+  - s
+  - e
+  - n
+  - b
+  - e
+  - n
+  gloss_hint: son (variant)
+  citation: Gorrochategui 1984; variant of SEMBE.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: s
+    AB06: e
+    AB55: n
+    AB41: b
+    AB57: e
+    AB09: n

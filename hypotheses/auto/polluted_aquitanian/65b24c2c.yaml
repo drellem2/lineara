@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_ardo_HT_117a_0_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''ardo'' pinned to HT 117a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: ardo
+  phonemes:
+  - a
+  - r
+  - d
+  - o
+  gloss_hint: wine
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB80: a
+    AB77: r
+    AB53: d
+    AB04: o

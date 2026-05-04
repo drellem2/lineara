@@ -82,6 +82,7 @@ _SUBSTRATE_POOLS: tuple[str, ...] = (
     "etruscan",
     "toponym",
     "linear_b_carryover",
+    "polluted_aquitanian",
 )
 _DEFAULT_NMIN = 10
 _DEFAULT_TOP_PER_POOL = 50
@@ -100,6 +101,8 @@ _DEFAULT_LANGUAGE_DISPATCH: dict[str, str] = {
     "control_toponym": "basque",
     "linear_b_carryover": "mycenaean_greek",
     "control_linear_b_carryover": "mycenaean_greek",
+    "polluted_aquitanian": "basque",
+    "control_polluted_aquitanian": "basque",
 }
 
 
@@ -133,10 +136,15 @@ def _load_score_rows(results_dir: Path) -> dict[tuple[str, str], dict]:
     :func:`pick_score_row`.
     """
     out: dict[tuple[str, str], dict] = {}
+    # Primary stream + per-metric sidecar + per-pool sidecars
+    # (e.g. ``experiments.external_phoneme_perplexity_v0.polluted.jsonl``,
+    # added in mg-6b73 to keep individual files under GitHub's 100 MB
+    # push-size limit).
     paths = [
         results_dir / "experiments.jsonl",
         results_dir / f"experiments.{_METRIC}.jsonl",
     ]
+    paths.extend(sorted(results_dir.glob(f"experiments.{_METRIC}.*.jsonl")))
     for path in paths:
         if not path.exists():
             continue

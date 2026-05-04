@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_zaldi_KN_Zf_13_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''zaldi'' pinned to KN Zf 13 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: zaldi
+  phonemes:
+  - z
+  - a
+  - l
+  - d
+  - i
+  gloss_hint: horse
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: z
+    AB27: a
+    AB24: l
+    AB41: d
+    AB07: i

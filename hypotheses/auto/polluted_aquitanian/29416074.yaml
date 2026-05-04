@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_bide_HT_122b_14_17
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''bide'' pinned to HT 122b tokens [14..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: bide
+  phonemes:
+  - b
+  - i
+  - d
+  - e
+  gloss_hint: way, road
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB60: b
+    AB65: i
+    AB10: d
+    AB45: e

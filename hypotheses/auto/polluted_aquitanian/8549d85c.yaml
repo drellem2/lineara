@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_ezti_HT_122b_13_16
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''ezti'' pinned to HT 122b tokens [13..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: ezti
+  phonemes:
+  - e
+  - z
+  - t
+  - i
+  gloss_hint: honey
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 16
+  sign_to_phoneme:
+    AB08: e
+    AB60: z
+    AB65: t
+    AB10: i

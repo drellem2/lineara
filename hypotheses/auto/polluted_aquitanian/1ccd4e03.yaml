@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_egun_GO_Wc_1a_0_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''egun'' pinned to GO Wc 1a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: egun
+  phonemes:
+  - e
+  - g
+  - u
+  - n
+  gloss_hint: day
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: e
+    AB31: g
+    AB58: u
+    AB80: n

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_hartz_HT_123b_25_28
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''hartz'' pinned to HT 123b tokens [25..28].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: hartz
+  phonemes:
+  - h
+  - a
+  - r
+  - tz
+  gloss_hint: bear
+  citation: Trask 1997 ch. 3; cf. Aq. HARS-.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 25
+  - 28
+  sign_to_phoneme:
+    AB69: h
+    AB02: a
+    AB07: r
+    AB01: tz

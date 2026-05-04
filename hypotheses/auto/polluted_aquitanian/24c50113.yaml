@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_buru_GO_Wc_1a_1_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''buru'' pinned to GO Wc 1a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: buru
+  phonemes:
+  - b
+  - u
+  - r
+  - u
+  gloss_hint: head
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB31: b
+    AB58: u
+    AB80: r
+    AB28: u

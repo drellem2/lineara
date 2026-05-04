@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_hil_GO_Wc_1a_3_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''hil'' pinned to GO Wc 1a tokens [3..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: hil
+  phonemes:
+  - h
+  - i
+  - l
+  gloss_hint: dead, kill
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 3
+  - 5
+  sign_to_phoneme:
+    AB80: h
+    AB28: i
+    AB09: l

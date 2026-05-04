@@ -46,7 +46,13 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent
 _DEFAULT_POOLS_DIR = _REPO_ROOT / "pools"
 _POOL_SCHEMA_PATH = _DEFAULT_POOLS_DIR / "schemas" / "pool.v1.schema.json"
 
-_SUBSTRATE_POOLS = ("aquitanian", "etruscan", "toponym", "linear_b_carryover")
+_SUBSTRATE_POOLS = (
+    "aquitanian",
+    "etruscan",
+    "toponym",
+    "linear_b_carryover",
+    "polluted_aquitanian",
+)
 _REDRAW_LIMIT = 50
 
 

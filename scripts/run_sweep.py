@@ -90,6 +90,19 @@ _SIDECAR_METRICS = frozenset({
     "external_phoneme_perplexity_v0",
 })
 
+# Per-pool sidecar tags keyed on hypothesis.source_pool. When a
+# (metric, pool) pair appears in this map, the runner appends to the
+# tagged sidecar ``experiments.<metric>.<tag>.jsonl`` rather than the
+# default sidecar. Used to keep each .jsonl under GitHub's 100 MB push
+# limit (mg-6b73 split out the polluted_aquitanian rows so the primary
+# external_phoneme_perplexity_v0 sidecar stays under cap).
+# Both the substrate pool and its matched control share the tag so the
+# paired_diff rollup loads them together.
+_PER_POOL_SIDECAR_TAG: dict[str, str] = {
+    "polluted_aquitanian": "polluted",
+    "control_polluted_aquitanian": "polluted",
+}
+
 # Pool → external-language-model mapping for external_phoneme_perplexity_v0.
 # Aquitanian uses Basque (modern descendant of the substrate); Etruscan
 # uses its own model; toponym uses Basque as a substrate-style stand-in
@@ -111,6 +124,12 @@ _EXT_POOL_LANGUAGE: dict[str, str] = {
     # known case.
     "linear_b_carryover": "mycenaean_greek",
     "control_linear_b_carryover": "mycenaean_greek",
+    # mg-6b73: polluted Aquitanian pool — 50/50 real + conjectural
+    # entries — held-out pool-curation test for harness v14. Substrate
+    # routes through the Basque LM (same as clean Aquitanian); matched
+    # control mirrors that LM choice so paired_diff cancels the LM out.
+    "polluted_aquitanian": "basque",
+    "control_polluted_aquitanian": "basque",
 }
 
 # Metrics that the candidate_signature.v1 shape supports. The signature
@@ -120,8 +139,27 @@ _EXT_POOL_LANGUAGE: dict[str, str] = {
 _SIGNATURE_METRICS = frozenset({"external_phoneme_perplexity_v0"})
 
 
-def _sidecar_path(repo_root: Path, metric: str) -> Path:
+def _sidecar_path(repo_root: Path, metric: str, tag: str | None = None) -> Path:
+    """Return the sidecar path for ``metric``, optionally with a per-pool
+    ``tag`` suffix. ``tag=None`` ⇒ default per-metric sidecar; otherwise
+    ``experiments.<metric>.<tag>.jsonl``."""
+    if tag:
+        return repo_root / "results" / f"experiments.{metric}.{tag}.jsonl"
     return repo_root / "results" / f"experiments.{metric}.jsonl"
+
+
+def _all_sidecar_paths(repo_root: Path, metric: str) -> list[Path]:
+    """Every sidecar that may carry rows for ``metric``: the default plus
+    every tagged sidecar declared in :data:`_PER_POOL_SIDECAR_TAG`. Used
+    by the resume-cache to seen-set rows across all sidecars."""
+    paths = [_sidecar_path(repo_root, metric)]
+    seen: set[Path] = set(paths)
+    for tag in sorted(set(_PER_POOL_SIDECAR_TAG.values())):
+        p = _sidecar_path(repo_root, metric, tag)
+        if p not in seen:
+            paths.append(p)
+            seen.add(p)
+    return paths
 
 _SUPPORTED_METRICS = (
     "local_fit_v0",
@@ -195,9 +233,9 @@ def _existing_runs(
     paths: list[Path] = [results_path]
     for m in metrics:
         if m in _SIDECAR_METRICS:
-            sp = _sidecar_path(repo_root, m)
-            if sp.resolve() != results_path.resolve():
-                paths.append(sp)
+            for sp in _all_sidecar_paths(repo_root, m):
+                if sp.resolve() != results_path.resolve() and sp not in paths:
+                    paths.append(sp)
     for p in paths:
         if not p.exists():
             continue
@@ -654,7 +692,10 @@ def run(
     # (e.g. sign_prediction_perplexity_v0) write to their own file; all
     # other metrics still go to the primary stream. The sidecars exist
     # because the primary file is approaching GitHub's push-size limit.
+    # Per-pool sidecars (mg-6b73) further partition the metric sidecar by
+    # ``source_pool`` tag to keep individual files under cap.
     metric_streams: dict[str, "object"] = {}
+    metric_pool_streams: dict[tuple[str, str], "object"] = {}
     primary_fh = results_path.open("a", encoding="utf-8")
     sidecar_fhs: list = [primary_fh]
     for m in metrics:
@@ -664,8 +705,25 @@ def run(
             fh = sp.open("a", encoding="utf-8")
             metric_streams[m] = fh
             sidecar_fhs.append(fh)
+            for tag in sorted(set(_PER_POOL_SIDECAR_TAG.values())):
+                tagged_path = _sidecar_path(repo_root, m, tag)
+                tagged_fh = tagged_path.open("a", encoding="utf-8")
+                metric_pool_streams[(m, tag)] = tagged_fh
+                sidecar_fhs.append(tagged_fh)
         else:
             metric_streams[m] = primary_fh
+
+    def _resolve_stream(metric_name: str, source_pool: str | None) -> "object":
+        """Pick the right output stream for ``(metric, source_pool)``.
+
+        Per-pool sidecar wins over the per-metric sidecar; per-metric
+        sidecar wins over the primary stream.
+        """
+        if source_pool is not None:
+            tag = _PER_POOL_SIDECAR_TAG.get(source_pool)
+            if tag is not None and (metric_name, tag) in metric_pool_streams:
+                return metric_pool_streams[(metric_name, tag)]
+        return metric_streams[metric_name]
 
     try:
         for i, manifest_row in enumerate(manifest, 1):
@@ -757,7 +815,9 @@ def run(
                     repo_root=repo_root,
                     result_validator=result_validator,
                 )
-                target_fh = metric_streams[metric_name]
+                target_fh = _resolve_stream(
+                    metric_name, hypothesis.get("source_pool")
+                )
                 target_fh.write(json.dumps(row, ensure_ascii=False) + "\n")
                 target_fh.flush()
                 rows_by_metric[metric_name].append(row)

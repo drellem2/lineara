@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_itur_ARKH_2_21_24
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''itur'' pinned to ARKH 2 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: itur
+  phonemes:
+  - i
+  - t
+  - u
+  - r
+  gloss_hint: spring, fountain
+  citation: Gorrochategui 1984; Basque iturri (Trask 1997).
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB08: i
+    AB58: t
+    AB50: u
+    AB54: r

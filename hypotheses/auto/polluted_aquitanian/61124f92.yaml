@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_behar_HT_Zb_158b_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''behar'' pinned to HT Zb 158b tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: behar
+  phonemes:
+  - b
+  - e
+  - h
+  - a
+  - r
+  gloss_hint: need
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB58: b
+    AB67: e
+    AB53: h
+    AB04: a
+    AB28: r

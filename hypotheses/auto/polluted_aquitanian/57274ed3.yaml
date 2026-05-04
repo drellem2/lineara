@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_gure_HT_119_11_14
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''gure'' pinned to HT 119 tokens [11..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: gure
+  phonemes:
+  - g
+  - u
+  - r
+  - e
+  gloss_hint: our
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 119
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    AB81: g
+    AB56: u
+    AB06: r
+    AB69: e

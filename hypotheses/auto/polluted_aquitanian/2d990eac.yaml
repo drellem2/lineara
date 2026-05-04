@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_gizon_HT_115a_9_13
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''gizon'' pinned to HT 115a tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: gizon
+  phonemes:
+  - g
+  - i
+  - z
+  - o
+  - n
+  gloss_hint: man
+  citation: Trask 1997 ch. 3; cf. Aq. CISON.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB53: g
+    AB59: i
+    AB80: z
+    AB55: o
+    AB40: n

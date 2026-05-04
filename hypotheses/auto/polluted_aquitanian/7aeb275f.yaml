@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_hesi_ARKH_5_0_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''hesi'' pinned to ARKH 5 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: hesi
+  phonemes:
+  - h
+  - e
+  - s
+  - i
+  gloss_hint: hedge, fence
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: h
+    AB51: e
+    AB30: s
+    AB59: i

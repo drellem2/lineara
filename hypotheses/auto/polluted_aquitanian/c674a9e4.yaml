@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_itsaso_KN_Zf_13_7_11
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''itsaso'' pinned to KN Zf 13 tokens [7..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: itsaso
+  phonemes:
+  - i
+  - ts
+  - a
+  - s
+  - o
+  gloss_hint: sea
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 7
+  - 11
+  sign_to_phoneme:
+    AB44: i
+    AB03: ts
+    AB57: a
+    AB59: s
+    AB53: o

@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_ur_ARKH_4a_14_16
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''ur'' pinned to ARKH 4a tokens [14..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: ur
+  phonemes:
+  - u
+  - r
+  gloss_hint: water
+  citation: Trask 1997 ch. 3 (Basque ur 'water'; matches Aq. UR- in toponyms).
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 14
+  - 16
+  sign_to_phoneme:
+    AB58: u
+    AB47: r

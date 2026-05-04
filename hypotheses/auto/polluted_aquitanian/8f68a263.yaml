@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_su_ARKH_4b_11_12
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''su'' pinned to ARKH 4b tokens [11..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: su
+  phonemes:
+  - s
+  - u
+  gloss_hint: fire
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 4b
+  span:
+  - 11
+  - 12
+  sign_to_phoneme:
+    AB08: s
+    AB67: u

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_sei_HT_108_1_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''sei'' pinned to HT 108 tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: sei
+  phonemes:
+  - s
+  - e
+  - i
+  gloss_hint: six
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: HT 108
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB27: s
+    AB59: e
+    AB06: i

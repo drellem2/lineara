@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_nire_HT_115a_37_40
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''nire'' pinned to HT 115a tokens [37..40].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: nire
+  phonemes:
+  - n
+  - i
+  - r
+  - e
+  gloss_hint: my
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 37
+  - 40
+  sign_to_phoneme:
+    AB08: n
+    AB09: i
+    AB57: r
+    A718: e

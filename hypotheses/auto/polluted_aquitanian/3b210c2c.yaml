@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_zaldi_HT_110a_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''zaldi'' pinned to HT 110a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: zaldi
+  phonemes:
+  - z
+  - a
+  - l
+  - d
+  - i
+  gloss_hint: horse
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB41: z
+    AB51: a
+    AB34: l
+    AB81: d
+    AB73: i

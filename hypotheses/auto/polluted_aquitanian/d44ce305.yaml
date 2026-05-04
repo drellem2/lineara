@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_hori_HT_122b_32_35
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''hori'' pinned to HT 122b tokens [32..35].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: hori
+  phonemes:
+  - h
+  - o
+  - r
+  - i
+  gloss_hint: that
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 32
+  - 35
+  sign_to_phoneme:
+    AB11: h
+    AB05: o
+    AB81: r
+    AB02: i

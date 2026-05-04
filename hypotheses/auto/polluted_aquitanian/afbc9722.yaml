@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_sudur_KN_Zc_7_14_18
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''sudur'' pinned to KN Zc 7 tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: sudur
+  phonemes:
+  - s
+  - u
+  - d
+  - u
+  - r
+  gloss_hint: nose
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB57: s
+    AB31: u
+    AB60: d
+    AB08: u
+    AB06: r

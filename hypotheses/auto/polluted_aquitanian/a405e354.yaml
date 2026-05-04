@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_ohe_HT_104_19_21
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''ohe'' pinned to HT 104 tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: ohe
+  phonemes:
+  - o
+  - h
+  - e
+  gloss_hint: bed
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 104
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB03: o
+    AB01: h
+    AB58: e

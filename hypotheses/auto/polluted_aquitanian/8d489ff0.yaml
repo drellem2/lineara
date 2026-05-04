@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_bide_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''bide'' pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: bide
+  phonemes:
+  - b
+  - i
+  - d
+  - e
+  gloss_hint: way, road
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: b
+    AB58: i
+    AB47: d
+    AB04: e

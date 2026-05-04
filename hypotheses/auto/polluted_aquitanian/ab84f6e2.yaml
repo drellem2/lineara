@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_gaitz_HT_13_0_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''gaitz'' pinned to HT 13 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: gaitz
+  phonemes:
+  - g
+  - a
+  - i
+  - tz
+  gloss_hint: bad, ill
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 13
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB77: g
+    AB10: a
+    AB45: i
+    AB59: tz

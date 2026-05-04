@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_lo_ARKH_3b_6_7
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''lo'' pinned to ARKH 3b tokens [6..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: lo
+  phonemes:
+  - l
+  - o
+  gloss_hint: sleep
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 3b
+  span:
+  - 6
+  - 7
+  sign_to_phoneme:
+    AB39: l
+    A314: o

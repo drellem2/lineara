@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_larre_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''larre'' pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: larre
+  phonemes:
+  - l
+  - a
+  - r
+  - r
+  - e
+  gloss_hint: pasture, moor
+  citation: Gorrochategui 1984, Aq. theonym LARRAHI; Basque larre.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: l
+    AB41: a
+    AB01: r
+    AB05: r
+    AB28: e

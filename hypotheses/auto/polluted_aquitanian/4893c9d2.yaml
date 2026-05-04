@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_hesi_HT_103_5_8
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''hesi'' pinned to HT 103 tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: hesi
+  phonemes:
+  - h
+  - e
+  - s
+  - i
+  gloss_hint: hedge, fence
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB56: h
+    AB01: e
+    AB81: s
+    AB09: i

@@ -2831,6 +2831,201 @@ pattern detection, manuscript-shape per-sign reading claims.
 * `docs/findings_summary.md` — manuscript-shape narrative, updated
   with the v13 verdict.
 
+## Findings from mg-6b73
+
+### Headline
+
+**The polluted Aquitanian pool clears the v10 right-tail bayesian
+gate at p = 2.74e-05 — almost identical to v10's clean-pool PASS
+(p = 3.22e-05).** The framework's PASS signal is **tolerant of 50%
+conjectural pollution**: injecting 153 phonotactically-matched but
+synthetic surfaces alongside the 153 real Aquitanian roots does
+not collapse the gate.
+
+This is the pre-registered binary discriminator for the two
+readings of v12+v13 (mg-c216):
+
+- **Reading #1 (substrate-LM-phonotactic kinship at the surface
+  aggregate)** — *supported.* The framework genuinely detects that
+  Aquitanian-shaped surfaces (real or synthetic) score better
+  under the Basque LM than under their matched scramble control.
+  The PASS does not depend on every entry being a real substrate
+  root.
+- **Reading #2 (curation-sensitivity)** — *undermined as a
+  wholesale account.* The framework's gate is not a "uniformly-
+  clean substrate pool" detector; mixed-cleanness pools clear it
+  too. The Linear-B v12 positive-control failure (mg-4664) must
+  therefore have a different explanation — most plausibly small
+  N (12 anchors), short anchor surfaces, or a Linear-B-specific
+  structural issue, not curation-sensitivity per se.
+
+### Provenance breakdown of the polluted-pool top-20
+
+Of the top-20 substrate posteriors in the polluted pool:
+
+- **9 of 20 (45%)** carry `provenance: real`.
+- **11 of 20 (55%)** carry `provenance: conjectural`.
+
+This is **almost exactly the 50/50 split of the underlying pool**.
+A real-vs-conjectural one-tail Mann-Whitney U on the two top-20
+sets gave p = 0.98 (i.e. real surfaces do *not* dominate the right
+tail; if anything, conjecturals are marginally tighter). The
+framework cannot distinguish real from conjectural surfaces
+within a mixed pool — its discriminator is phonotactic shape, not
+underlying provenance.
+
+This is consistent with v13's coherence finding (median per-
+surface coherence 0.18; high-frequency signs scatter across
+the alphabet at entropy 3.7-3.9 bits): the framework is reacting
+to *aggregate phonotactic match* between Linear-A windows and
+Basque-LM-likely phoneme strings, not to whether any particular
+surface is a "real" root.
+
+### Comparison to v10 clean-Aquitanian
+
+| pool                | n_top | median(top sub) | median(top ctrl) | MW U | p (one-tail)   | gate |
+|---------------------|------:|----------------:|-----------------:|-----:|---------------:|:----:|
+| polluted_aquitanian | 20    | 0.9808          | 0.9572           | 340  | 2.74e-05       | PASS |
+| aquitanian (v10)    | 20    | 0.9808          | 0.9512           | 345  | 3.22e-05       | PASS |
+
+The two PASS magnitudes are within a factor of ~1.2× of each
+other. The polluted pool's substrate top-K median is identical
+(0.9808 — both pools have many substrate surfaces tied at n=50,
+k=50 due to the cap-per-entry=50 generator setting); the only
+difference is in the control top-K, which is slightly higher in
+the polluted-pool case (0.9572 vs 0.9512) because the polluted
+pool has 2× the entries and therefore 2× the candidate windows
+the controls compete over, marginally raising the control's
+right-tail.
+
+### Distribution shift on real surfaces
+
+Of the 153 surfaces present in both rollups (clean Aquitanian
+right-tail and polluted-pool right-tail, real-provenance only):
+
+| pool                | mean posterior | median posterior | min   | max   |
+|---------------------|---------------:|-----------------:|------:|------:|
+| clean Aquitanian    | 0.5033         | 0.5192           | 0.012 | 0.982 |
+| polluted Aquitanian | 0.5086         | 0.5000           | 0.019 | 0.981 |
+
+- Mean Δ (polluted − clean):   **+0.0053**
+- Median Δ:                    **+0.0192**
+- Pos / neg / zero counts:     **+80 / −69 / =0: 4**
+
+In aggregate the bulk distribution of real-surface posteriors
+barely moves (Δ ≈ 0). But individual surfaces shift dramatically:
+some real surfaces drop from posterior 0.98 → 0.02 (`egun`,
+`oin`, `hara`) while others jump from 0.02 → 0.98 (`ikusi`,
+`anai`, `bost`). This is the per-window competition effect:
+when a window has more candidates competing for the same
+sign↔phoneme assignment, which surface "wins" depends on which
+candidate happens to match the LM best, and adding 153
+conjecturals reshuffles those win/loss outcomes for the real
+surfaces. The bulk distribution is stable; individual surface
+identity is not.
+
+This is *another* nail in the per-sign-reading-claim coffin:
+even within a single re-run, the assignment of high-posterior
+surfaces is unstable to non-substrate-meaningful pool changes.
+v13's coherence test ruled this out at the per-sign level;
+v14 confirms it at the per-surface level.
+
+### What v14 changes about the manuscript narrative
+
+Combined with v12's Linear-B negative result and v13's per-sign
+incoherence, the v14 PASS-on-pollution result tightens the
+manuscript-shape claim to:
+
+> The framework reliably detects substrate-LM-phonotactic kinship
+> at the population level for any pool whose phoneme + length
+> distribution is drawn from the substrate's own marginal
+> distribution. It does **not** detect "real substrate
+> vocabulary" (clean and polluted pools PASS equally), and it
+> does **not** support per-sign reading claims (v13 coherence
+> 0.18 vs 0.6 acceptance bar). The PASS is a structural
+> phonotactic-overlap signal between Linear-A and the candidate
+> substrate's character-bigram model — not a decipherment.
+
+### Acceptance gate (re-stated for the audit trail)
+
+Pre-registered (mg-c216 brief, mg-6b73 ticket): one-tail Mann-
+Whitney U on the polluted-pool top-20 substrate posteriors vs the
+top-20 matched-control posteriors; p < 0.05 with substrate >
+control passes. Result: **U = 340.0, p = 2.74e-05, PASS** with
+median(substrate top-20) = 0.9808 vs median(control top-20) =
+0.9572.
+
+### Construction artifact disclosure
+
+`pools/polluted_aquitanian.yaml` is a deliberately-polluted test
+pool. Half of its 306 entries are real Aquitanian roots; the
+other half are synthetic conjectural surfaces drawn from the
+real pool's phoneme + length distribution under deterministic
+seed `0xb4b7c1f037ead5f1` (`sha256("polluted_aquitanian:
+conjectural")[:16]`). The pool's README warns prominently that
+it is a test artifact, not a substrate claim. Future ticket-
+holders stumbling on this YAML must not derive secondary
+artifacts from it (gloss tables, dictionaries, downstream
+training).
+
+### Determinism and reproducibility
+
+Pool builder, candidate generator, sweep runner, bayesian
+rollup, and provenance analysis are all deterministic. Re-
+running the v14 pipeline from the polluted-pool YAML and the
+existing corpus produces byte-identical artifacts. No RNG
+anywhere in the analysis path.
+
+### Out of scope and follow-ups
+
+The v14 binary result is now in. Follow-up tickets that the
+result *could* motivate (none filed yet):
+
+- **v15: pollution-level sweep.** Run the same pipeline at 10%,
+  25%, 75% conjectural pollution to characterize how the gate
+  p-value scales with curation noise. v14's PASS at 50% suggests
+  the gate is essentially insensitive to pollution within the
+  same phoneme-distribution shape, but quantifying the gradient
+  could rule out a sharp threshold near 100%.
+- **v15 alternative: cross-language pollution.** Pollute with
+  conjecturals drawn from a *different* language's phonotactic
+  shape (Greek Wikipedia char-bigrams, Linear-B carryover, etc.)
+  and see whether that breaks the PASS. v14 only tested
+  pollution from the substrate's own distribution; cross-language
+  pollution tests whether the gate has any phonotactic-shape
+  selectivity.
+- **Linear-B v12 follow-up.** The v14 result rules out
+  curation-sensitivity as the explanation for v12's Linear-B
+  positive-control failure. The remaining candidate explanations
+  are small N, short anchor surfaces, anchor-pool curation
+  errors. Separate ticket if anyone wants to chase this.
+
+### See also
+
+- `results/rollup.bayesian_posterior.polluted_aquitanian.md` —
+  full per-surface bayesian posterior leaderboard, top-20
+  side-by-side, gate computation. Generated by the existing
+  `scripts/per_surface_bayesian_rollup.py`.
+- `results/rollup.bayesian_posterior.polluted_aquitanian.provenance.md`
+  — v14-specific provenance breakdown of the top-20, real-vs-
+  conjectural sanity check, distribution-shift table, top-10
+  shifted surfaces.
+- `pools/polluted_aquitanian.yaml` + `pools/polluted_aquitanian.README.md`
+  — the polluted pool itself + construction documentation. The
+  README is the canonical "this is a test artifact, not a claim"
+  warning.
+- `pools/control_polluted_aquitanian.yaml` — matched phonotactic
+  control (306 entries, same algorithm as `control_aquitanian`,
+  distinct seed).
+- `scripts/build_polluted_pool.py` — idempotent, deterministic
+  builder. Reusable for future pollution variants (the seed
+  derivation and two-class redraw filter are the only scope-
+  specific bits).
+- `scripts/v14_polluted_provenance_analysis.py` — post-rollup
+  provenance enrichment script.
+- `harness/tests/test_polluted_pool.py` — 11 unit tests on the
+  builder + 1 sanity check on the committed pool YAML.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_seme_HT_117a_38_41
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''seme'' pinned to HT 117a tokens [38..41].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: seme
+  phonemes:
+  - s
+  - e
+  - m
+  - e
+  gloss_hint: son
+  citation: Trask 1997 ch. 3; cf. Aq. SEMBE.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 38
+  - 41
+  sign_to_phoneme:
+    AB73: s
+    AB26: e
+    AB59: m
+    AB60: e

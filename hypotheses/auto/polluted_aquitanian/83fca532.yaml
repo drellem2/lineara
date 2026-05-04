@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_zuhaitz_KN_Zf_13_5_10
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''zuhaitz'' pinned to KN Zf 13 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: zuhaitz
+  phonemes:
+  - z
+  - u
+  - h
+  - a
+  - i
+  - tz
+  gloss_hint: tree
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    A301: z
+    AB39: u
+    AB44: h
+    AB03: a
+    AB57: i
+    AB59: tz

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_entzun_HT_122b_14_18
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''entzun'' pinned to HT 122b tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: entzun
+  phonemes:
+  - e
+  - n
+  - tz
+  - u
+  - n
+  gloss_hint: hear
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB60: e
+    AB65: n
+    AB10: tz
+    AB45: u
+    AB17: n

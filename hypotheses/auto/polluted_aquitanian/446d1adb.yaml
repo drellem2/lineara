@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_hagin_HT_95a_21_25
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''hagin'' pinned to HT 95a tokens [21..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: hagin
+  phonemes:
+  - h
+  - a
+  - g
+  - i
+  - n
+  gloss_hint: tooth
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 25
+  sign_to_phoneme:
+    AB07: h
+    AB45: a
+    AB26: g
+    AB78: i
+    AB76: n

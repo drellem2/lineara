@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_haragi_KN_Zc_7_15_20
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''haragi'' pinned to KN Zc 7 tokens [15..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: haragi
+  phonemes:
+  - h
+  - a
+  - r
+  - a
+  - g
+  - i
+  gloss_hint: flesh, meat
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 20
+  sign_to_phoneme:
+    AB31: h
+    AB60: a
+    AB08: r
+    AB06: a
+    AB24: g
+    AB40: i

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_hamar_GO_Wc_1a_1_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''hamar'' pinned to GO Wc 1a tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: hamar
+  phonemes:
+  - h
+  - a
+  - m
+  - a
+  - r
+  gloss_hint: ten
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB31: h
+    AB58: a
+    AB80: m
+    AB28: a
+    AB09: r

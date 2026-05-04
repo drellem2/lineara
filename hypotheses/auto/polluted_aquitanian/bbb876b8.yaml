@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_hesi_HT_115a_37_40
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''hesi'' pinned to HT 115a tokens [37..40].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: hesi
+  phonemes:
+  - h
+  - e
+  - s
+  - i
+  gloss_hint: hedge, fence
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 37
+  - 40
+  sign_to_phoneme:
+    AB08: h
+    AB09: e
+    AB57: s
+    A718: i

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_baigor_HT_Zb_159_0_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''baigor'' pinned to HT Zb 159 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: baigor
+  phonemes:
+  - b
+  - a
+  - i
+  - g
+  - o
+  - r
+  gloss_hint: red valley
+  citation: Gorrochategui 1984, theonym BAIGORRIX; Basque ibai 'river' + gorri 'red'.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: b
+    AB06: a
+    AB55: i
+    AB41: g
+    AB57: o
+    AB09: r

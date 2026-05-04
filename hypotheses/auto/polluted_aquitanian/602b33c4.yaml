@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_ilargi_KN_Zf_13_13_18
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''ilargi'' pinned to KN Zf 13 tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: ilargi
+  phonemes:
+  - i
+  - l
+  - a
+  - r
+  - g
+  - i
+  gloss_hint: moon
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB04: i
+    AB53: l
+    AB23: a
+    AB08: r
+    AB57: g
+    AB81: i

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_zubi_HT_103_5_8
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''zubi'' pinned to HT 103 tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: zubi
+  phonemes:
+  - z
+  - u
+  - b
+  - i
+  gloss_hint: bridge
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB56: z
+    AB01: u
+    AB81: b
+    AB09: i

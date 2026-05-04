@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_zuri_ARKH_5_1_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''zuri'' pinned to ARKH 5 tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: zuri
+  phonemes:
+  - z
+  - u
+  - r
+  - i
+  gloss_hint: white
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB51: z
+    AB30: u
+    AB59: r
+    AB06: i

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_aho_ARKH_2_8_10
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''aho'' pinned to ARKH 2 tokens [8..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: aho
+  phonemes:
+  - a
+  - h
+  - o
+  gloss_hint: mouth
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 10
+  sign_to_phoneme:
+    AB08: a
+    AB41: h
+    AB01: o

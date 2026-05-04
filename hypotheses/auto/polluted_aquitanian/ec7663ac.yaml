@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_alaba_KN_Zb_5_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''alaba'' pinned to KN Zb 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: alaba
+  phonemes:
+  - a
+  - l
+  - a
+  - b
+  - a
+  gloss_hint: daughter
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zb 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: a
+    AB69: l
+    AB53: a
+    AB41: b
+    AB37: a

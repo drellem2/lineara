@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_umme_HT_115a_0_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''umme'' pinned to HT 115a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: umme
+  phonemes:
+  - u
+  - m
+  - m
+  - e
+  gloss_hint: child
+  citation: Gorrochategui 1984, Aq. UMME-; Basque ume (Trask 1997).
+equation:
+  inscription_id: HT 115a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB47: u
+    AB55: m
+    AB60: m
+    AB56: e

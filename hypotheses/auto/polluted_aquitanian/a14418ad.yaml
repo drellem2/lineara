@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_seme_ARKH_1a_21_24
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian'' entry
+  surface=''seme'' pinned to ARKH 1a tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian
+root:
+  surface: seme
+  phonemes:
+  - s
+  - e
+  - m
+  - e
+  gloss_hint: son
+  citation: Trask 1997 ch. 3; cf. Aq. SEMBE.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB73: s
+    AB67: e
+    AB31: m
+    AB24: e
