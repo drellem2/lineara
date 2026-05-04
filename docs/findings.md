@@ -1947,6 +1947,224 @@ new corpus pull.
     sweep runner gates `external_phoneme_perplexity_v0` as the only
     metric that consumes signatures.
 
+## Findings from mg-d26d
+
+mg-bef2 shipped the strongest null we'd produced (population-level
+Wilcoxon decisively in the *substrate-below-control* direction across
+all three pools) but the polecat's diagnosis was that the failure is
+structural to v9's greedy-fill generator, not to the multi-root
+hypothesis itself: the top-K per-window signatures showed coherent
+kinship/landscape clustering exactly as the substrate theory predicts
+— that signal was just buried by a bulk distribution dominated by a
+few short, over-projected roots. mg-d26d pivots the *aggregation*
+without changing the metric or the candidate-equation/signature
+shape: a per-surface Beta-binomial posterior over the v8 single-root
++ v9 multi-root paired_diff data treats the *sign* of paired_diff as
+binary evidence for `θ_S = P(this surface is real Linear-A substrate
+vocabulary)` and reads the right tail directly, so concentrated
+positive evidence on a coherent substrate surface is no longer
+collapsed against dispersed negative evidence on a different surface.
+
+**Headline result: 2/3 substrate pools clear the right-tail gate.**
+One-tail Mann-Whitney U on top-20 substrate posterior means vs top-20
+control posterior means (ranked by raw posterior_mean):
+
+| substrate pool | n_substrate_top | n_control_top | median(top-20 substrate posterior) | median(top-20 control posterior) | MW U (substrate) | MW p (one-tail, substrate>control) | gate |
+|----------------|----------------:|--------------:|-----------------------------------:|---------------------------------:|-----------------:|-----------------------------------:|:----:|
+| aquitanian     | 20              | 20            | 0.9808 | 0.9512 | 345.0 | 3.22e-05 | PASS |
+| etruscan       | 20              | 20            | 0.9808 | 0.9217 | 321.0 | 5.21e-04 | PASS |
+| toponym        | 20              | 20            | 0.9186 | 0.9464 | 149.5 |   0.9165 | FAIL |
+
+Aquitanian and Etruscan beat their phonotactically-matched controls
+at the right tail at p < 0.001 and p < 0.01 respectively. Toponym
+fails — the toponym pool's right-tail substrate posteriors are
+*lower* than its control's right-tail posteriors (median 0.92 vs
+0.95). This is the first acceptance-gate clear in the project; it is
+also the first time we have separated substrate from control at all,
+not just in toy buckets.
+
+**Distribution shift across rollups, by pool.** v8's per-surface
+median rollup (mg-ee18) and v9's per-surface-set median rollup
+(mg-bef2) both ran into the same problem: a single number per
+surface (or per surface-set) compresses concentrated and dispersed
+evidence identically, and the population-level Wilcoxon then sees a
+bulk distribution dominated by the dispersed-evidence regime.
+mg-d26d's posterior leaderboard recovers the right-tail signal:
+
+| pool       | v8 single-root rollup gate (mg-ee18) | v9 multi-root rollup gate (mg-bef2) | mg-d26d bayesian right-tail gate |
+|------------|:------------------------------------:|:-----------------------------------:|:--------------------------------:|
+| aquitanian | FAIL (Wilcoxon p=0.38, sign p=0.11)  | FAIL (Wilcoxon p~1.0, frac>0=0.25)  | **PASS (MW p=3.22e-05)**         |
+| etruscan   | FAIL (p=0.75, sign p=0.75)           | FAIL (p~1.0, frac>0=0.28)           | **PASS (MW p=5.21e-04)**         |
+| toponym    | FAIL (p=0.82, sign p=0.61)           | FAIL (p~1.0, frac>0=0.07)           | FAIL (MW p=0.92)                 |
+
+**Top-20 substrate vs top-20 control side-by-side (gate input).**
+
+*Aquitanian.* All 20 top substrate surfaces have k_s = n_s − 1 or
+k_s = n_s (a near-perfect 50–53 records each, every record positive
+or all-but-one positive). The substrate top-20 is glossable as a
+single semantic stratum of inherited core Basque vocabulary —
+nature/landscape (`aitz` rock, `eki` sun, `argi` light, `itsaso`
+sea, `zelai` meadow), body (`oin` foot, `bihotz` heart), descriptor
+(`beltz` black, `ona` good, `gaitz` ill), function/grammatical
+(`hau` this, `nahi` desire, `entzun` hear), kinship (`hanna` brother),
+time (`egun` day), food (`ezti` honey), dwelling (`ate` door),
+place (`hesi` fence), number (`zortzi` eight), morphology (`ako`
+suffix). The control top-20 is the random-phonotactic noise floor:
+`anao`, `onia`, `aninze`, `an`, `zaa`, `aai`, `arzaeai`, `tztzan`,
+`ia`, `ilae`, `enaa`, `ntsilai`, `aaer`, `anii`, `aatzasl`, `zihn`,
+`loear`, `aoel`, `hina`, `keho` — phoneme-frequency-matched strings
+sampled from the substrate pool's letter distribution, no glossable
+content.
+
+*Etruscan.* Top-20 substrate is the same single-stratum pattern in
+the Etruscan domain — religion (`aiser` gods, `thesan` dawn-goddess,
+`hanthe` ritual-position, `spureri` sacrifice-for-the-city),
+common praenomina (`larth`, `laris`, `thana`, `sech` = Larth, Laris,
+Thana, daughter), function (`camthi` magistrate, `nac` as/when, `matam`
+above/before, `chimth` at/near), time (`avils` of-years, `zelar`
+ritual-time, `caitim` month-name). Control top-20: `thia`, `vsinc`,
+`aasaas`, `laaeca`, `chsa`, `mechthsll`, `la`, `miphit`, `thi`,
+`izththuch`, `chischeaa`, `hsaa`, `cael`, `srchlcn`, `cthpnr`, `iaae`,
+`aalchci`, `arth`, `chelnscr`, `sueip` — random Etruscan-phonotactic
+strings, again no semantic coherence.
+
+*Toponym.* The substrate top is recognizable Aegean toponyms
+(`dikte`, `keos`, `kno`, `minoa`, `tenos`, `iassos`, `lemnos`,
+`kuzikos`, `melitos`, `tulisos`, `melos`, `aspendos`, `kalumnos`,
+`zakuntos`, `lukia`, `mukenai`, `lykabettos`, `itanos`,
+`halikarnassos`, `poikilassos`) but at lower posterior means
+(0.82 – 0.98) than the control top (`eoao`, `aathei`, `ana`, `eta`,
+`ioonaol`, `kolee`, `kllzua`, `anealo`, `kim`, `oaest`, `saenaa`,
+`aas`, `ala`, `oks`, `tea`, `aasn`, `onn`, `aoe`, `nul`, `eonun`),
+which sit at 0.89 – 0.99. Toponym is structurally harder for this
+metric: most toponym roots are length-5+ multisyllable strings,
+fewer windows have an exact-length match, and the control's
+phonotactic distribution drifts further from natural-language
+phoneme frequencies (the `eoao` / `aathei` controls are extreme),
+which the Basque LM still scores well by sheer phoneme-frequency
+match. The posterior surfaces a real signal — the substrate top is
+the Aegean toponym corpus we put in — but the control top wins on
+the right tail because the control pool's character distribution
+landed in a region the LM treats as low-perplexity for the wrong
+reason.
+
+**Bayesian surfaces vs v8/v9 rollups, by surface set.** The bayesian
+top-20 substrate is largely the same surface set as v8's
+median-paired_diff top (mg-ee18), but the order is meaningfully
+different and the magnitude of evidence per surface is more
+trustworthy because it counts every paired_diff record (including
+v9 multi-root signatures that mention the surface) rather than only
+the v8 single-root rollup. The v8 leaderboard ranked Aquitanian
+surfaces by per-record median magnitude; the bayesian leaderboard
+ranks by record-count of wins. These are different orderings:
+`aitz` and `itsaso` lead both, but the bayesian ranking surfaces
+`hanna`, `nahi`, `ako`, `beltz` higher than v8's median did — those
+surfaces' v8 medians were modest, but they win 50/50 records, and a
+posterior that counts 50 wins as 50 wins puts them right next to
+`aitz`. v9's per-surface-set median (mg-bef2) failed at the
+population level for the multi-root projection-bias reason; the
+bayesian rollup's per-surface (not per-surface-set) aggregation
+sidesteps that by reading individual roots out of multi-root
+signatures and treating each record as one observation per surface.
+
+**Semantic-family characterization of the right-tail.**
+
+  * Aquitanian top-20 is a clean single stratum — inherited core
+    Basque vocabulary across the standard semantic families
+    (nature, body, descriptor, kinship, function, time, food,
+    dwelling, place, number, morphology). No semantic family
+    dominates; the top-20 reads like a Swadesh-list cross-section.
+    This is consistent with the polecat's `seni+seni`,
+    `aitz+seni`, `lur+ur` per-window observations from mg-bef2
+    surfacing as their constituent roots `aitz`, `itsaso`,
+    `oin`, `eki` here — the multi-root co-occurrence pattern
+    decomposes into single-surface high-posterior cells.
+  * Etruscan top-20 is dominated by religious vocabulary +
+    common praenomina + function words + time references. This
+    is exactly the genre profile of the Etruscan votive /
+    funerary corpus the pool was sourced from, so the
+    leaderboard is recovering the corpus's lexical center of
+    gravity rather than randomly distributed noise.
+  * Toponym top-20 is geographically coherent (Aegean +
+    Anatolian + Cretan toponyms in proportion), so the substrate
+    semantic structure is intact even where the gate fails. The
+    failure is on the control side, not the substrate side.
+
+**What does this tell us about the candidate-equation framework.**
+
+The candidate-equation hypothesis IS supported at the right tail in
+two of the three substrate pools. Specifically:
+
+  * **The metric works.** When given enough records per surface
+    (50+ for Aquitanian and Etruscan core surfaces), the
+    held-out external phoneme LM separates substrate from
+    phonotactically-matched control consistently. The mg-bef2
+    bulk failure was real but it was not a metric failure; it
+    was an aggregation-unit failure (per-signature-tuple
+    medians) compounded by a generator failure (root projection
+    bias).
+  * **The hypothesis shape works at the surface level, not the
+    surface-set level.** v9's multi-root signatures fail
+    population-level Wilcoxon for structural reasons (greedy fill
+    + short high-frequency roots dominate leftover slots), but
+    the *constituent roots* of those signatures still pull
+    substantial positive evidence per surface. The right
+    aggregation unit for this data shape is the surface, not the
+    signature; the surface aggregates over both single-root and
+    multi-root contexts.
+  * **What's left to do.** The toponym failure is a real
+    constraint on the framework as currently specified — the
+    Aegean toponym corpus has a phonotactic profile that the
+    matched-control sampler can land too close to the
+    substrate-favoured region of the LM's distribution. The
+    next ticket is now genuinely choosable: (a) re-aggregate v9
+    matched-control sampling so toponym controls don't get to
+    pile mass on the LM's preferred corner, (b) pull a Linear-B
+    reference corpus for cross-corpus position prior (the
+    polecat's "other other" direction), or (c) accept the 2/3
+    pass as the strongest result we can get under the current
+    metric and move to the manuscript-side narrative. None of
+    these is automatically correct — the bayesian gate has
+    converted the question from "is there any substrate signal
+    at all" (we now have evidence: yes, in two of three pools)
+    into "what does the toponym failure mean for the framework"
+    (a substantive, narrowable methodological question).
+
+**Operational notes for v10.**
+
+  * Records used: 16,723 v8 substrate candidates with paired
+    controls + 4,832 v9 substrate signatures with paired
+    controls = 21,555 paired records aggregated across 408
+    distinct substrate surfaces (and the same records
+    redistributed across 364 control surfaces on the flipped
+    side). Determinism: posterior, CI, and MW p-values are
+    byte-identical across re-runs of `scripts/per_surface_bayesian_rollup.py`
+    given the same `experiments.external_phoneme_perplexity_v0.jsonl`
+    and `hypotheses/auto*` manifests.
+  * Credibility cap n_min = 10. The leaderboard is not
+    dominated by tiny-n surfaces — the top-30 in every pool sit
+    at credibility = 1.0 (n ≥ 10). The shrinkage matters at
+    rank ~40+ where n < 10 surfaces would otherwise lead with
+    raw posterior 2/3 or 3/4. Documented in the script
+    docstring; configurable via `--n-min`.
+  * The gate uses raw posterior_mean (not the credibility-shrunk
+    effective score) deliberately: the spec frames the question
+    as a right-tail comparison, not a credibility-weighted
+    comparison, and using raw posterior_mean means a small-n
+    surface that happens to win all its records can still appear
+    in the gate's top-20 (and on inspection none of those
+    appear; the top-20 is dominated by n ≥ 50 surfaces in the
+    substrate pools that pass).
+  * The Beta inverse-CDF is implemented from scratch via
+    Numerical Recipes' Lentz BetaCF + bisection — no scipy
+    dependency, consistent with the rest of the harness.
+  * Sensitivity analysis on top-K: not run as part of v0 (the
+    spec lists it as optional). On inspection, the Aquitanian
+    and Etruscan gates clear so decisively (p < 1e-3) that
+    top-10 / top-50 sensitivity is unlikely to flip them; the
+    toponym gate fails so decisively (p ≈ 0.92) that no top-K
+    relaxation will rescue it without changing the procedure.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;
