@@ -1281,6 +1281,188 @@ def sign_prediction_perplexity_v0(
     )
 
 
+# ---------------------------------------------------------------------------
+# external_phoneme_perplexity_v0  (mg-ee18, harness v8)
+# ---------------------------------------------------------------------------
+#
+# Reframes the question one more level. mg-ddee's
+# sign_prediction_perplexity_v0 used a corpus-derived cluster model
+# whose phoneme→cluster bridge collapsed most of the inventory to one
+# class, killing discrimination. v8 replaces the corpus-derived bridge
+# with a *learned char-bigram model* trained on real text in the
+# proposed substrate language (Basque for Aquitanian; Etruscan for
+# Etruscan; Basque-as-stand-in for toponym, since no pre-Greek text
+# corpus is available).
+#
+# Pipeline for one candidate equation (sign_to_phoneme partial mapping):
+#
+#   1. Apply the partial mapping to the entire Linear-A corpus stream.
+#      Each token in the mapping's domain is replaced by its proposed
+#      phoneme; tokens outside the domain stay as their AB-id.
+#   2. The mapped stream is now an interleaving of phoneme strings,
+#      AB-ids (treated as <unk>), and DIV / INSCRIPTION_BOUNDARY
+#      markers.
+#   3. Walk the stream extracting maximal contiguous *runs* of phoneme
+#      tokens — runs are split by any of {<unk>, DIV, INSCRIPTION_BOUNDARY}.
+#      Per the brief, runs are the unit on which the language model is
+#      scored: the LM looks at "what does the phoneme stream look like
+#      between un-mapped breaks?".
+#   4. Char-decompose each run's phonemes (so multi-char ``th``, ``ph``,
+#      ``ts`` become 2-char sequences). Wrap each run with the
+#      ``<W>`` word-boundary sentinel. Score char-bigram log-likelihood
+#      under the chosen model. Sum across runs.
+#   5. Normalize by total scored characters across all runs. Report the
+#      per-char average log-likelihood (in nats). Higher = more
+#      language-like; substrate-real mappings should produce higher
+#      values than random-control mappings of the same phonotactics.
+#
+# Pool-to-language dispatch:
+#
+#   * source_pool = "aquitanian"  → basque model
+#   * source_pool = "etruscan"    → etruscan model
+#   * source_pool = "toponym"     → basque model (substrate-style stand-in;
+#                                    documented in the mg-ee18 brief as the
+#                                    pre-Greek-text-unavailable case)
+#   * any control_* pool          → its substrate's model (so the paired
+#                                    diff is computed against the same
+#                                    language model as the substrate side)
+#   * unmatched (anchor / scramble / cross-pool) → metric is skipped
+#
+# The dispatch lives in scripts/run_sweep.py; the metric here is
+# language-model-agnostic and accepts an external model object.
+
+_EXT_OOV = "<unk>"
+
+
+@dataclass(frozen=True)
+class ExternalPhonemePerplexityResult:
+    """Result of ``external_phoneme_perplexity_v0`` on one equation."""
+
+    score: float                  # per-char average log-likelihood (nats)
+    metric_notes: str
+    n_runs: int
+    n_chars_scored: int
+    n_phonemes_scored: int
+    total_loglik: float
+    language: str                 # which LM was applied (e.g. "basque")
+
+
+def external_phoneme_perplexity_v0(
+    *,
+    stream: list[str],
+    mapping: dict[str, str],
+    language_model: "object",
+) -> ExternalPhonemePerplexityResult:
+    """Score a candidate's partial sign→phoneme mapping under an external
+    char-bigram language model.
+
+    **What it measures.** After applying the mapping to the whole
+    Linear-A corpus, what's the average char-bigram log-probability of
+    the resulting phoneme runs under a model learned from real text in
+    the proposed substrate language? "Substrate-real" mappings should
+    produce phoneme streams that look like real Basque (or Etruscan)
+    text, which the LM scores higher than mappings whose output is
+    phonotactically arbitrary.
+
+    **Run extraction.** Tokens outside the mapping become a synthetic
+    ``<unk>`` boundary; ``DIV`` and ``INSCRIPTION_BOUNDARY`` are also
+    treated as boundaries. A "run" is a maximal contiguous sequence of
+    mapped phoneme tokens. Each run is char-decomposed (so ``"th"``
+    becomes ``["t", "h"]``) and bracketed with ``<W>`` sentinels;
+    char-bigram log-prob is summed over (n_chars + 1) bigrams per run.
+
+    **Normalization.** ``score = total_loglik / n_chars_scored``. The
+    per-char convention keeps the metric on a comparable scale across
+    candidates that produce different total run lengths (a candidate
+    that pins a frequent sign generates many more scored chars than
+    one that pins a rare sign).
+
+    **Determinism.** Same (stream, mapping, language_model) ⇒
+    byte-identical score. No randomness, no permutations.
+
+    **What invalidates it.**
+      * (a) The mapping covers very few signs of the corpus ⇒ runs are
+        short and few; scoring noise dominates. Most candidate
+        equations sit here, which is fine — the discriminator is the
+        small fraction of mapping configurations that produce many
+        long runs.
+      * (b) The language model was trained on a corpus too distant
+        phonotactically from the substrate-as-realized-in-Linear-A.
+        For Etruscan the corpus is small; α=1.0 in the model build
+        widens the smoothing floor in compensation but leaves the
+        LM noisy at the rare-bigram tail.
+      * (c) Toponym candidates are scored against the Basque model as
+        a substrate-style stand-in (no pre-Greek text corpus exists);
+        a strong negative result there could mean either (i) the
+        toponym hypothesis is wrong or (ii) Basque is the wrong
+        stand-in. Future work could swap Linear-B carryover or a
+        different substrate stand-in.
+    """
+    if language_model is None:
+        raise ValueError(
+            "external_phoneme_perplexity_v0: language_model is required; "
+            "pass the substrate's pre-built ExternalPhonemeModel"
+        )
+    if not stream:
+        raise ValueError("external_phoneme_perplexity_v0: empty stream")
+
+    # Walk the stream once, accumulating runs of mapped phonemes.
+    # Anything outside the mapping (or a structural break) ends a run.
+    runs: list[list[str]] = []
+    cur: list[str] = []
+    for tok in stream:
+        if tok in mapping:
+            cur.append(mapping[tok])
+        else:
+            if cur:
+                runs.append(cur)
+                cur = []
+    if cur:
+        runs.append(cur)
+
+    # Lazy import to avoid a top-level circular dependency between
+    # metrics.py and external_phoneme_model.py (the latter imports
+    # nothing from this module today, but keeping the import local
+    # also makes the metric file's top stable for the other metrics
+    # that don't touch the LM at all).
+    from .external_phoneme_model import (
+        WORD_BOUNDARY,
+        char_decompose_phonemes,
+    )
+
+    total_loglik = 0.0
+    n_chars = 0
+    n_phonemes = 0
+    for run in runs:
+        chars = char_decompose_phonemes(run)
+        if not chars:
+            continue
+        n_phonemes += len(run)
+        n_chars += len(chars)
+        # Bracketed sequence: <W> c1 c2 ... cn <W>
+        seq = [WORD_BOUNDARY, *chars, WORD_BOUNDARY]
+        for prev, cur_tok in zip(seq[:-1], seq[1:]):
+            total_loglik += language_model.log_prob(prev, cur_tok)
+
+    score = (total_loglik / n_chars) if n_chars > 0 else 0.0
+    name = getattr(language_model, "name", "unknown")
+    notes = (
+        f"external_phoneme_perplexity_v0: language={name}, "
+        f"n_runs={len(runs)}, n_phonemes={n_phonemes}, "
+        f"n_chars_scored={n_chars}, total_loglik={total_loglik:.4f}, "
+        f"per_char={score:.6f}"
+    )
+    return ExternalPhonemePerplexityResult(
+        score=float(score),
+        metric_notes=notes,
+        n_runs=len(runs),
+        n_chars_scored=n_chars,
+        n_phonemes_scored=n_phonemes,
+        total_loglik=float(total_loglik),
+        language=str(name),
+    )
+
+
 METRICS = {
     "compression_delta_v0": compression_delta_v0,
     "local_fit_v0": local_fit_v0,
@@ -1288,4 +1470,5 @@ METRICS = {
     "geographic_genre_fit_v1": geographic_genre_fit_v1,
     "partial_mapping_compression_delta_v0": partial_mapping_compression_delta_v0,
     "sign_prediction_perplexity_v0": sign_prediction_perplexity_v0,
+    "external_phoneme_perplexity_v0": external_phoneme_perplexity_v0,
 }

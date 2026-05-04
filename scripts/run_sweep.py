@@ -50,6 +50,7 @@ from harness.corpus import (
     sign_position_fingerprints,
 )
 from harness.corpus_phoneme_model import ClusterModel
+from harness.external_phoneme_model import ExternalPhonemeModel
 from harness.hypothesis import (
     SHAPE_CANDIDATE_EQUATION_V1,
     canonical_hash,
@@ -59,6 +60,7 @@ from harness.hypothesis import (
 from harness.metrics import (
     EmpiricalBigramModel,
     _sign_corpus_counts,
+    external_phoneme_perplexity_v0,
     geographic_genre_fit_v1,
     local_fit_v0,
     local_fit_v1,
@@ -73,6 +75,7 @@ _DEFAULT_RESULTS = _REPO_ROOT / "results" / "experiments.jsonl"
 _RESULT_SCHEMA_PATH = _REPO_ROOT / "harness" / "schemas" / "result.v0.schema.json"
 _DEFAULT_POOLS_DIR = _REPO_ROOT / "pools"
 _DEFAULT_CLUSTER_MODEL = _REPO_ROOT / "harness" / "corpus_phoneme_model.json"
+_DEFAULT_EXT_MODEL_DIR = _REPO_ROOT / "harness" / "external_phoneme_models"
 
 # Metrics that emit enough rows to need a per-metric sidecar stream
 # (committed at results/experiments.<metric>.jsonl). The primary
@@ -80,7 +83,25 @@ _DEFAULT_CLUSTER_MODEL = _REPO_ROOT / "harness" / "corpus_phoneme_model.json"
 # because the cumulative file is bumping into GitHub's 100 MB push
 # limit. Sidecar metrics still resume off the same (hash, snapshot,
 # metric) seen-set, so a re-run is no-op.
-_SIDECAR_METRICS = frozenset({"sign_prediction_perplexity_v0"})
+_SIDECAR_METRICS = frozenset({
+    "sign_prediction_perplexity_v0",
+    "external_phoneme_perplexity_v0",
+})
+
+# Pool → external-language-model mapping for external_phoneme_perplexity_v0.
+# Aquitanian uses Basque (modern descendant of the substrate); Etruscan
+# uses its own model; toponym uses Basque as a substrate-style stand-in
+# (no pre-Greek text corpus is available — see mg-ee18 brief).
+# Control pools share their substrate's language model so the paired
+# diff cancels the LM choice out of the comparison.
+_EXT_POOL_LANGUAGE: dict[str, str] = {
+    "aquitanian": "basque",
+    "control_aquitanian": "basque",
+    "etruscan": "etruscan",
+    "control_etruscan": "etruscan",
+    "toponym": "basque",
+    "control_toponym": "basque",
+}
 
 
 def _sidecar_path(repo_root: Path, metric: str) -> Path:
@@ -92,6 +113,7 @@ _SUPPORTED_METRICS = (
     "geographic_genre_fit_v1",
     "partial_mapping_compression_delta_v0",
     "sign_prediction_perplexity_v0",
+    "external_phoneme_perplexity_v0",
 )
 
 
@@ -265,6 +287,7 @@ def _score_one(
     sign_counts: dict[str, int],
     pool_ctx: dict | None,
     cluster_model: ClusterModel | None,
+    external_models: dict[str, ExternalPhonemeModel],
     snapshot: str,
     n_records: int,
     note: str,
@@ -332,6 +355,39 @@ def _score_one(
         row["window_bigram_loglik"] = float(result.window_bigram_loglik)
         row["n_pairs_scored"] = int(result.n_pairs_scored)
         row["n_window_bigrams"] = int(result.n_window_bigrams)
+    elif metric_name == "external_phoneme_perplexity_v0":
+        # Pool→language dispatch (mg-ee18). The hypothesis's source_pool
+        # picks the language model; unmatched pools (anchors, scrambles,
+        # cross-pool curated fragments) skip the metric — there is no
+        # principled language-model assignment for those, and routing
+        # them through an arbitrary LM would inject the same kind of
+        # cross-pool artifact mg-7c8c diagnosed for the v1 bigram dispatch.
+        src_pool = hypothesis.get("source_pool")
+        lang_name = _EXT_POOL_LANGUAGE.get(src_pool) if src_pool else None
+        if lang_name is None:
+            raise ValueError(
+                f"external_phoneme_perplexity_v0: no language model mapped for "
+                f"source_pool={src_pool!r}; supported pools: "
+                f"{sorted(_EXT_POOL_LANGUAGE.keys())}"
+            )
+        lm = external_models.get(lang_name)
+        if lm is None:
+            raise ValueError(
+                f"external_phoneme_perplexity_v0: language model {lang_name!r} "
+                f"not loaded; pass --external-model-dir or rebuild with "
+                f"scripts/build_external_phoneme_models.py"
+            )
+        mapping = dict(hypothesis["equation"]["sign_to_phoneme"])
+        result = external_phoneme_perplexity_v0(
+            stream=stream, mapping=mapping, language_model=lm
+        )
+        row["score"] = float(result.score)
+        row["metric_notes"] = result.metric_notes
+        row["n_runs"] = int(result.n_runs)
+        row["n_chars_scored"] = int(result.n_chars_scored)
+        row["n_phonemes_scored"] = int(result.n_phonemes_scored)
+        row["total_loglik"] = float(result.total_loglik)
+        row["language"] = result.language
     elif metric_name == "geographic_genre_fit_v1":
         # Pool-specific dispatch (mg-c2af): if pool_ctx is None, fall
         # back to the hypothesis's source_pool tag for the region (the
@@ -442,6 +498,7 @@ def run(
     pools_dir: Path | None = None,
     force_rescore: bool = False,
     cluster_model_path: Path | None = None,
+    external_model_dir: Path | None = None,
 ) -> dict:
     """Drive the bulk sweep and return a summary dict.
 
@@ -502,6 +559,29 @@ def run(
             f"signs={len(cluster_model.sign_to_cluster)}",
             file=sys.stderr,
         )
+
+    external_models: dict[str, ExternalPhonemeModel] = {}
+    if "external_phoneme_perplexity_v0" in metrics:
+        ext_dir = external_model_dir or _DEFAULT_EXT_MODEL_DIR
+        # Load every language used by any pool in the dispatch table; the
+        # caller may extend the table to add new languages.
+        languages_needed = sorted(set(_EXT_POOL_LANGUAGE.values()))
+        for lang in languages_needed:
+            ext_path = ext_dir / f"{lang}.json"
+            if not ext_path.exists():
+                raise ValueError(
+                    f"external_phoneme_perplexity_v0 requires the language "
+                    f"model at {ext_path}; build with "
+                    f"`python3 scripts/build_external_phoneme_models.py`."
+                )
+            external_models[lang] = ExternalPhonemeModel.load_json(ext_path)
+            m = external_models[lang]
+            print(
+                f"loaded external LM: {ext_path}  |  α={m.alpha}  |  "
+                f"vocab={len(m.bigram_log_probs)}  |  "
+                f"meta={m.meta}",
+                file=sys.stderr,
+            )
 
     pool_registry = build_pool_registry(pools_dir)
     if pool_registry:
@@ -622,6 +702,7 @@ def run(
                     sign_counts=sign_counts,
                     pool_ctx=pool_ctx,
                     cluster_model=cluster_model,
+                    external_models=external_models,
                     snapshot=snapshot,
                     n_records=n_records,
                     note=note,
@@ -722,6 +803,14 @@ def main(argv: list[str] | None = None) -> int:
         help="Path to the corpus-derived phoneme cluster model JSON used by "
         "sign_prediction_perplexity_v0 (default: %(default)s).",
     )
+    parser.add_argument(
+        "--external-model-dir",
+        type=Path,
+        default=_DEFAULT_EXT_MODEL_DIR,
+        help="Directory containing external substrate-language phoneme "
+        "bigram model JSONs (basque.json, etruscan.json) used by "
+        "external_phoneme_perplexity_v0 (default: %(default)s).",
+    )
     args = parser.parse_args(argv)
 
     metrics = [m.strip() for m in args.metrics.split(",") if m.strip()]
@@ -737,6 +826,7 @@ def main(argv: list[str] | None = None) -> int:
         pools_dir=args.pools_dir,
         force_rescore=args.force_rescore,
         cluster_model_path=args.cluster_model,
+        external_model_dir=args.external_model_dir,
     )
     print(json.dumps(summary, indent=2))
     return 0

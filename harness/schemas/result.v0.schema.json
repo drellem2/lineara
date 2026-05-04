@@ -105,6 +105,29 @@
       "minimum": 0,
       "description": "Number of adjacent sign-pair bigrams scored within the equation's window. Present iff metric == 'sign_prediction_perplexity_v0'."
     },
+    "n_runs": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of maximal contiguous mapped-phoneme runs found in the corpus stream after applying the candidate's partial mapping. Present iff metric == 'external_phoneme_perplexity_v0'."
+    },
+    "n_chars_scored": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total chars (after multi-char phoneme decomposition) scored against the external bigram model across all runs. The metric's per-char average uses this as the denominator. Present iff metric == 'external_phoneme_perplexity_v0'."
+    },
+    "n_phonemes_scored": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total phoneme tokens (pre char-decomposition) scored across all runs. Present iff metric == 'external_phoneme_perplexity_v0'."
+    },
+    "total_loglik": {
+      "type": "number",
+      "description": "Sum of char-bigram log-probs across all scored runs (in nats). Present iff metric == 'external_phoneme_perplexity_v0'."
+    },
+    "language": {
+      "type": "string",
+      "description": "Name of the external language model applied to the candidate's mapping (e.g. 'basque', 'etruscan'). Present iff metric == 'external_phoneme_perplexity_v0'."
+    },
     "paired_diff": {
       "type": ["number", "null"],
       "description": "Substrate score minus the matched control candidate's score (mg-ddee). Present on substrate-pool rows only; control rows omit this field. Null when no matched control could be identified for this candidate."

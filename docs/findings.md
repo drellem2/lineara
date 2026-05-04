@@ -1560,6 +1560,227 @@ produce identical row contents (only `run_id` and `ran_at` differ;
 Re-runs of `paired_diff_rollup.py` over the same result stream produce
 byte-identical markdown.
 
+## Findings from mg-ee18
+
+mg-ddee diagnosed the v7 corpus-derived cluster bridge as collapsing
+most of the phoneme inventory to a single cluster, killing
+discrimination. v8 keeps the candidate-equation hypothesis shape
+(per Daniel's explicit instruction to defer the deeper structural
+reframe) and replaces the prior with the polecat's queued
+Younger-2000-style direction: a learned **char-bigram phoneme prior
+trained on real text in the proposed substrate language** — Basque
+Wikipedia for the Aquitanian (and toponym-stand-in) pool, a
+Bonfante-and-Bonfante-derived word-form list for Etruscan.
+
+### Headline answer — partial direction reversal; gate still not met
+
+For each substrate pool, per-surface paired-diff medians were tested
+against zero with one-tail Wilcoxon signed-rank (alternative: median
+> 0, i.e. substrate beats control) and a sign test for robustness:
+
+| pool       | n_surfaces | median(median paired_diff) | mean   | frac surfaces > 0 | Wilcoxon p (one-tail) | sign-test n+/n | sign-test p (one-tail) |
+|------------|-----------:|---------------------------:|-------:|------------------:|----------------------:|---------------:|-----------------------:|
+| aquitanian |        153 |                    +0.0627 | +0.008 |             0.549 |                0.3804 |          84/152 |                 0.1118 |
+| etruscan   |        143 |                    -0.0353 | -0.027 |             0.469 |                0.7495 |          67/141 |                 0.7497 |
+| toponym    |        111 |                    -0.0089 | -0.082 |             0.486 |                0.8224 |          54/110 |                 0.6125 |
+
+**No pool clears the 0.05 acceptance gate.** The aquitanian sign-test
+p of 0.11 is the first directionally-correct, non-rejected-at-α=0.10
+signal this research line has produced — but it is not statistically
+significant at the pre-registered bar. v8 ships as a partial-positive
+null: directionally improved, structurally insufficient.
+
+### Direction reversal vs. mg-ddee
+
+The previous metric (`sign_prediction_perplexity_v0`) showed
+*controls beating substrate* significantly on all three pools (sign
+test p ≈ 0.89, 0.99, 1.00). v8 reverses the direction on aquitanian
+and approximately neutralizes the etruscan / toponym signal:
+
+| pool       | v7 mean paired_diff | v7 frac > 0 | v8 mean paired_diff | v8 frac > 0 | direction        |
+|------------|--------------------:|------------:|--------------------:|------------:|------------------|
+| aquitanian |              -0.069 |       0.144 |              +0.008 |       0.549 | reversed         |
+| etruscan   |              -0.105 |       0.105 |              -0.027 |       0.469 | neutralized      |
+| toponym    |              -0.198 |       0.126 |              -0.082 |       0.486 | partially neutralized |
+
+The reversal is the substantive change. mg-ddee's negative signal was
+attributable to the phoneme-to-cluster bridge collapsing most phonemes
+to one cluster: substrate candidates piled into the same cluster as
+controls and the small remaining wedge slightly favored controls. The
+Basque-bigram model in v8 has 28 tokens and 700+ bigram cells, so
+phoneme-by-phoneme variation in the candidate's mapping output now
+produces meaningful per-bigram log-likelihood deltas. The aquitanian
+top-50 leaderboard reflects this: Basque-orthography-friendly
+substrate roots (`aitz`, `itsaso`, `oin`, `gatz`, `zelai`, `non`,
+`gaitz`, `egun`) all sit at median paired_diff > +1.0 with frac > 0
+near 1.0. The win is real per-surface; what fails is generalization
+across the full 153-surface set.
+
+### Per-pool diagnostic — Aquitanian-with-Basque is the natural-match
+case and it responds best
+
+The brief asked specifically about which substrate pools (if any)
+responded best to the external prior. The natural-match prediction
+was: aquitanian-with-Basque should clear if any pool does. The
+distribution of per-surface paired_diff medians supports the
+prediction without certifying the pool:
+
+* **aquitanian.** 84 / 152 surfaces have positive median; the top 50
+  are all > +0.36; 18 surfaces score median > +0.7. The shape is "a
+  population whose top tail is real and whose bulk is null," consistent
+  with a substrate hypothesis that holds for *some* roots but not all.
+  Several top-scoring surfaces (`itsaso` "sea", `egun` "day", `nahi`
+  "want", `etxe` "house", `ama` "mother", `ona` "good") are core
+  inherited Basque vocabulary; their high paired_diff is the natural
+  outcome if any subset of Linear-A signs encoded these words.
+* **etruscan.** 67 / 141 surfaces positive — a near-50/50 coin-toss.
+  The top 50 includes `chimth`, `larth`, `mach`, `sath`, `suthi`,
+  `camthi`, all attested Etruscan forms with the language's
+  characteristic aspirate-cluster digraphs. Their median paired_diff
+  is positive and high (>+1.3), but the bulk of the 143 surfaces
+  cluster around zero. The Etruscan model carries α=1.0 smoothing on
+  a 666-form corpus, which limits its per-bigram precision; this is
+  the documented v8 limitation, and the etruscan flat result is
+  consistent with both "substrate not present" and "model too noisy
+  to detect substrate." We cannot distinguish those two readings on
+  this evidence alone.
+* **toponym.** 54 / 110 surfaces positive — also near-50/50. The
+  toponym pool is scored against the Basque model as a substrate-style
+  stand-in (no pre-Greek text corpus exists). The neutral result is
+  consistent with either (i) the toponym hypothesis being wrong, or
+  (ii) Basque being the wrong stand-in for pre-Greek phonotactics.
+  The toponym top-50 is dominated by Greek-style surfaces (`kuzikos`,
+  `zakuntos`, `phaistos`, `amnisos`, `tegea`) with mostly small
+  positive medians (+0.1 to +0.3); the signal is weakly positive at
+  the surface level but heterogeneous in direction across the bulk.
+
+### Distribution of metric values
+
+Across all 32,172 candidates the per-pool raw score distributions
+under their own LM dispatch:
+
+| pool                  |      n | mean   | median | sd   |
+|-----------------------|-------:|-------:|-------:|-----:|
+| aquitanian            |  7,190 | -6.218 | -6.194 | 0.71 |
+| control_aquitanian    |  6,490 | -6.281 | -6.271 | 0.81 |
+| etruscan              |  5,966 | -5.279 | -5.367 | 0.78 |
+| control_etruscan      |  5,542 | -5.269 | -5.375 | 0.75 |
+| toponym               |  3,567 | -6.332 | -6.291 | 0.67 |
+| control_toponym       |  3,417 | -6.318 | -6.301 | 0.75 |
+
+The Etruscan pool's higher absolute scores (mean -5.28 vs -6.22 for
+aquitanian) reflect the smaller, smoother Etruscan LM rather than a
+substrate-vs-Aquitanian quality difference; raw scores are not
+comparable across LMs. Paired-diff is the right unit; matched control
+shares the substrate's LM dispatch by construction so the LM choice
+cancels.
+
+### What this means for the candidate-equation framing
+
+Per the brief's explicit instruction: if all three pools fail the
+acceptance gate, the next move is fundamentally structural — a
+reframe of the candidate-equation hypothesis itself. v8 fails the
+gate on all three pools, but **it fails informatively**: the
+direction reversal on aquitanian-with-Basque (the natural-match
+case) is the first directionally-correct signal in this research
+line, and the per-surface top-50 includes coherent, contextually
+plausible Basque roots. The metric is doing something right; the
+candidate-equation shape is the limiting factor.
+
+A concrete reframe sketch for the next ticket: **signed signature
+over multiple cooccurring substrate roots within a window, rather
+than one root per equation.** Real lexicons cluster by root family
+(an inscription that has one Basque-substrate root tends to have
+several adjacent ones), and the candidate-equation shape — pin
+one span to one root, score independently — discards that
+co-occurrence structure. A reframed hypothesis would: (i) pick a
+window of, say, 12-20 tokens; (ii) propose a *set* of substrate
+roots that jointly cover most of the window; (iii) score the
+joint coverage as a single log-likelihood under the same external
+LM, with non-overlapping mappings required across the chosen
+roots. This subsumes the current single-equation scoring (set of
+size 1) while admitting the multi-root-per-window case which the
+current shape cannot represent.
+
+A second, complementary reframe: per-surface bayesian update over
+many windows. The aquitanian top-50 surfaces all have many windows
+each (n=24-50) that vary in paired_diff. The current rollup takes
+the median per surface; a bayesian per-surface posterior over "is
+this surface real Linear-A vocabulary?" would integrate the
+window-by-window evidence and surface roots whose evidence is
+*concentrated* (a few high-confidence windows) rather than
+dispersed (many marginal windows). The current statistics treat
+both shapes identically.
+
+Both reframes are larger lifts than the v8 metric swap. They are
+the natural mg-pee18+1 direction; v8's job was to confirm or rule
+out the cheaper "different prior, same hypothesis shape" pivot
+first. The cheaper pivot does not pass the gate but the
+pivot also informatively narrows the next move: a metric that DOES
+get the direction right at the per-surface top, but whose median-
+across-surfaces does not survive aggregation, is a metric whose
+unit of aggregation is wrong — exactly the diagnosis a multi-root-
+per-window reframe addresses.
+
+### Artifacts shipped
+
+* `corpora/basque/` (gitignored) + `corpora/basque.fetch_manifest.txt`
+  (committed, 122 pinned eu.wikipedia.org revisions) +
+  `corpora/basque.README.md` — provenance, CC BY-SA 4.0 license,
+  rebuild procedure. ~3.5 M chars after normalization (acceptance
+  bar ≥100 k).
+* `corpora/etruscan/words.txt` (gitignored) +
+  `corpora/etruscan.README.md` + `scripts/build_etruscan_corpus.py`
+  with inline `SUPPLEMENTARY` table — 666 unique word forms
+  combining the existing `pools/etruscan.yaml` attestations with a
+  curated supplementary list from Bonfante & Bonfante 2002 + Liber
+  Linteus + TLE personal-name catalog. Acceptance bar ≥500.
+* `harness/external_phoneme_model.py` — char-bigram model class,
+  28-token vocab (a-z + space + `<W>`), add-α Laplace smoothing,
+  byte-deterministic JSON serialization with rounded log-probs.
+* `harness/external_phoneme_models/basque.json` (α=0.1) +
+  `etruscan.json` (α=1.0) — committed model artifacts.
+* `scripts/fetch_basque_corpus.py` — fixed-revision fetch from
+  eu.wikipedia.org via the MediaWiki API. Supports a one-shot
+  `--resolve-revids` mode for refreshing the manifest pins.
+* `scripts/build_external_phoneme_models.py` — deterministic model
+  builder; reads either text or word-list corpora.
+* `harness/metrics.py` — `external_phoneme_perplexity_v0` registered.
+  Per-char average char-bigram log-likelihood over runs of mapped
+  phonemes; `<unk>` / `DIV` / `INSCRIPTION_BOUNDARY` all break runs.
+* `scripts/run_sweep.py` — pool→language dispatch table for the new
+  metric (Aquitanian/toponym → Basque, Etruscan → Etruscan; control
+  pools share their substrate's LM); `--external-model-dir` flag;
+  loads every needed LM at startup.
+* `harness/tests/test_external_phoneme_perplexity.py` — 12 smoke
+  tests, including a hand-computed run-extraction check, a Basque-
+  vs-bad-stream sanity check, and an OOV-fold check.
+* `results/experiments.external_phoneme_perplexity_v0.jsonl` (sidecar)
+  — 32,172 new rows; ~26 MB; well below the 100 MB push limit.
+* `results/rollup.paired_diff.external_phoneme_perplexity_v0.md` —
+  committed paired-diff leaderboard, all three pools, top-50 per
+  pool by median paired_diff, plus the per-pool acceptance-gate
+  Wilcoxon + sign-test stats.
+* `harness/schemas/result.v0.schema.json` — extended with
+  `n_runs`, `n_chars_scored`, `n_phonemes_scored`, `total_loglik`,
+  `language` for the new metric.
+* `HARNESS_VERSION` bumped to `v8`.
+
+### Determinism
+
+Re-runs of `scripts/build_external_phoneme_models.py` produce
+byte-identical JSON (verified). Re-runs of the sweep with an empty
+resume cache produce identical row contents (only `run_id` and
+`ran_at` differ; `score`, `total_loglik`, `n_runs`,
+`n_chars_scored` are bit-identical). Re-runs of
+`paired_diff_rollup.py` over the same result stream produce
+byte-identical markdown.
+
+The Basque corpus is reproducible only modulo Wikipedia's
+content-drift if the pins are rotated (`--resolve-revids`); against
+a fixed manifest, Wikipedia's revision-immutability guarantees
+byte-identical fetches.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;

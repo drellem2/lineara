@@ -1,3 +1,10 @@
 .cache/
 __pycache__/
 *.pyc
+
+# External text corpora (mg-ee18). Derived from sources whose
+# licenses (CC BY-SA, fair-use of secondary sources) we honor by
+# committing only the build script + manifest, not the redistributed
+# text. See corpora/basque.README.md and corpora/etruscan.README.md.
+corpora/basque/text.txt
+corpora/etruscan/words.txt

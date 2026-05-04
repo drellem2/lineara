@@ -1,0 +1,122 @@
+9474253	Iberiar penintsula
+9559314	Hartz
+9812944	Maule
+9852804	Astronomia
+9853720	Politika
+9860198	Nafar-lapurtera
+9887764	Txirrindularitza
+9920065	Antzinaroa
+9936962	Hegazti
+9960241	Aire
+9988742	Gipuzkera
+10003608	Fisika
+10032665	Soziologia
+10229603	Eguzkia
+10243885	Eskola
+10280429	Mediterraneoa
+10288015	Lore
+10303627	Amerika
+10321545	Erresuma Batua
+10335451	Su
+10340777	Argi
+10348715	Italia
+10353308	Bos taurus
+10353966	Ekonomia
+10388406	Etxe
+10400778	Frantzia
+10416407	Alemania
+10432567	Historia
+10442366	Gernikako bonbardaketa
+10442867	Futbol
+10455844	Pilota joko
+10460905	Frankismo
+10461558	Euskaldun
+10463430	Aitzineuskara
+10464194	Sabin Arana
+10465666	Animalia
+10466560	Zuhaitz
+10474024	Portugal
+10476694	Japonia
+10476989	Europa
+10477608	Juan Mari Lekuona Berasategi
+10480512	Landare
+10485265	Geologia
+10485782	Musika
+10490393	Lurra
+10493388	Gasteiz
+10493515	Irun
+10494991	Euskaltzaindia
+10495725	Matematika
+10497859	Zarautz
+10506225	Mendebaleko euskara
+10509501	Bizkaiko golkoa
+10509539	Bizkaia
+10509540	Araba
+10512878	Otso
+10514134	Literatura
+10514136	Psikologia
+10514172	Biologia
+10515122	Txinako Herri Errepublika
+10516099	Geografia
+10518105	Saskibaloi
+10520327	Asia
+10521829	Kimika
+10522720	Hiri
+10524559	Koldo Mitxelena
+10525786	Bilbo
+10527184	Arkitektura
+10532697	Euskal alfabetoa
+10540810	Gipuzkoa
+10540811	Ameriketako Estatu Batuak
+10541834	Eskulturagintza
+10542316	Eibar
+10543142	Hizkuntza
+10543500	Iruñea
+10544786	Espainia
+10546671	Euskalki
+10547880	Nafarroa Garaia
+10548269	Margolaritza
+10552197	Ilargia
+10553067	Bigarren Mundu Gerra
+10558204	Errenteria
+10560937	Aro Modernoa
+10563008	Euskal Herriko kultura
+10564234	Erdi Aroa
+10566770	Jose Migel Barandiaran
+10567674	Lehen Mundu Gerra
+10567839	Bernardo Atxaga
+10567929	Unibertsitate
+10568463	Zuberera
+10568583	Euskal Herria
+10568598	Nafarroako Erresuma
+10573023	Mendi
+10576377	Ibai
+10576830	Zaldi
+10581598	Energia
+10582112	Katu
+10582116	Txakur
+10582986	Pirinioak
+10587161	Resurreccion Maria Azkue
+10593258	India
+10597559	Baiona
+10597725	Arrain
+10600285	Euskara batua
+10600780	Donostia
+10604378	Antzerki
+10604576	Erromatar Inperioa
+10605411	Karlistaldi
+10605482	Liburu
+10605677	Euskara
+10605796	Euskararen historia
+10607282	Real Sociedad
+10607934	Filosofia
+10608091	Bertsolaritza
+10608914	Ozeania
+10611639	Ur
+10612838	Athletic
+10616986	Bermeo
+10617671	Lapurdi
+10618075	Zuberoa
+10618672	Afrika
+10619138	Nafarroa Beherea
+10619151	Tolosa

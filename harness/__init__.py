@@ -9,5 +9,10 @@
 #      phoneme cluster model + cluster-bigram corpus side metric) and
 #      paired-difference scoring (substrate − matched control) as the
 #      primary view. v1 metrics are unchanged; existing rows remain valid.
-HARNESS_VERSION = "v7"
+# v8 — harness v8 (mg-ee18): adds external_phoneme_perplexity_v0 — replaces
+#      the v7 corpus-derived cluster bridge with a learned char-bigram
+#      prior trained on real text in the proposed substrate language
+#      (Basque for Aquitanian / toponym; Etruscan for Etruscan). Other
+#      metrics unchanged; existing rows remain valid.
+HARNESS_VERSION = "v8"
 INSCRIPTION_BOUNDARY = "INS_BOUNDARY"
