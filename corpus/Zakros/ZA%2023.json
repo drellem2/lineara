@@ -1,0 +1,24 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=3&amp;ce=540ecor2uudeumpibfksblm7ss9s2lsi&amp;sp=224",
+  "dimensions": "3.4 cm × 5.6 cm × 1.3 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "ZA 23",
+  "kind_raw": "Tablet",
+  "n_signs": 4,
+  "n_words": 2,
+  "period": "LM IB",
+  "raw_transliteration": "AB04-AB04 / AB73-AB27",
+  "site": "Zakros",
+  "source": "sigla:document/ZA%2023/",
+  "source_url": "https://sigla.phis.me/document/ZA%2023/",
+  "support": "tablet",
+  "tokens": [
+    "AB04",
+    "AB04",
+    "DIV",
+    "AB73",
+    "AB27"
+  ],
+  "transcription_confidence": "clean"
+}

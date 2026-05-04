@@ -1,0 +1,25 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=1&amp;ce=540ecor2uudeumpibfksblm7ss9s2lsi&amp;sp=292",
+  "dimensions": "3.9 cm × 5.2 cm × 0.9 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "KN 1b",
+  "kind_raw": "Tablet",
+  "n_signs": 5,
+  "n_words": 1,
+  "period": "LM IA",
+  "raw_transliteration": "AB57-AB51-AB60-AB37 / LOG:AB38",
+  "site": "Knossos",
+  "source": "sigla:document/KN%201b/",
+  "source_url": "https://sigla.phis.me/document/KN%201b/",
+  "support": "tablet",
+  "tokens": [
+    "AB57",
+    "AB51",
+    "AB60",
+    "AB37",
+    "DIV",
+    "LOG:AB38"
+  ],
+  "transcription_confidence": "clean"
+}

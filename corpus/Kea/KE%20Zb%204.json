@@ -1,0 +1,22 @@
+{
+  "corpus_link": null,
+  "dimensions": null,
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "unknown",
+  "id": "KE Zb 4",
+  "kind_raw": "Lamp",
+  "n_signs": 3,
+  "n_words": 1,
+  "period": null,
+  "raw_transliteration": "AB57-AB41-AB38",
+  "site": "Kea",
+  "source": "sigla:document/KE%20Zb%204/",
+  "source_url": "https://sigla.phis.me/document/KE%20Zb%204/",
+  "support": "lamp",
+  "tokens": [
+    "AB57",
+    "AB41",
+    "AB38"
+  ],
+  "transcription_confidence": "clean"
+}

@@ -1,0 +1,20 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=2&amp;ce=cooqm3a5q3s12vmvdqppfim4sk80ag09&amp;sp=140",
+  "dimensions": "2.8 cm × 2.9 cm × 1.6 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "`KE Wc 2a",
+  "kind_raw": "Roundel",
+  "n_signs": 1,
+  "n_words": 0,
+  "period": "MM III",
+  "raw_transliteration": "FRAC:A703",
+  "site": "Kea",
+  "source": "sigla:document/%60KE%20Wc%202a/",
+  "source_url": "https://sigla.phis.me/document/%60KE%20Wc%202a/",
+  "support": "roundel",
+  "tokens": [
+    "FRAC:A703"
+  ],
+  "transcription_confidence": "clean"
+}

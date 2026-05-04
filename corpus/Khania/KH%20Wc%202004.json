@@ -1,0 +1,20 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=3&amp;ce=ri69sv28ch462rl94m9pcr3glih11l21&amp;sp=139",
+  "dimensions": "3 cm × 6.7 cm × 1.6 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "KH Wc 2004",
+  "kind_raw": "Roundel",
+  "n_signs": 1,
+  "n_words": 0,
+  "period": "LM IB",
+  "raw_transliteration": "LOG:AB100",
+  "site": "Khania",
+  "source": "sigla:document/KH%20Wc%202004/",
+  "source_url": "https://sigla.phis.me/document/KH%20Wc%202004/",
+  "support": "roundel",
+  "tokens": [
+    "LOG:AB100"
+  ],
+  "transcription_confidence": "clean"
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/drellem2/lineara/schema/inscription.schema.json",
+  "title": "Linear A inscription record (v1)",
+  "description": "One Linear A inscription, normalized from SigLA. Tokenization rules: AB-numbered syllabograms emit bare ids ('AB01'); Linear-A-only signs keep the 'A' prefix ('A301'); logograms emit 'LOG:<id>'; fractions 'FRAC:<id>'; transaction signs are emitted as bare phonetic ids; word dividers as the literal token 'DIV'; unreadable signs as '[?]'; uncertain readings as '[?:<id>]'. Numerals are not represented (SigLA does not encode them as signs); when a corpus source that does is added, NUM:<value> tokens will be emitted.",
+  "type": "object",
+  "required": [
+    "id",
+    "site",
+    "support",
+    "genre_hint",
+    "transcription_confidence",
+    "tokens",
+    "raw_transliteration",
+    "source",
+    "fetched_at",
+    "n_signs",
+    "n_words"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "SigLA inscription ID, e.g. 'HT 1' or 'KN Wc <24a>'.",
+      "minLength": 1
+    },
+    "site": {
+      "type": "string",
+      "description": "Find-spot, e.g. 'Haghia Triada' or 'Knossos'."
+    },
+    "support": {
+      "type": "string",
+      "description": "Lower-cased physical support category, e.g. 'tablet', 'sealing', 'roundel'."
+    },
+    "kind_raw": {
+      "type": ["string", "null"],
+      "description": "Verbatim SigLA 'kind' value before normalization."
+    },
+    "period": {
+      "type": ["string", "null"],
+      "description": "Archaeological period as recorded by SigLA, e.g. 'LM IB'."
+    },
+    "dimensions": {
+      "type": ["string", "null"],
+      "description": "Verbatim physical dimensions string."
+    },
+    "genre_hint": {
+      "type": "string",
+      "description": "Heuristic genre label derived from kind + sign roles. Not authoritative.",
+      "enum": [
+        "accountancy",
+        "administrative",
+        "votive_or_inscription",
+        "unknown",
+        "other"
+      ]
+    },
+    "transcription_confidence": {
+      "type": "string",
+      "enum": ["clean", "partial", "fragmentary"],
+      "description": "clean: no erasures or unreadable signs. partial: some damaged signs. fragmentary: ≥30% damaged or no signs at all."
+    },
+    "n_signs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_words": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tokens": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Ordered token sequence per the v1 tokenization rules."
+    },
+    "raw_transliteration": {
+      "type": "string",
+      "description": "Hyphen-joined word patterns separated by ' / '. Empty for inscriptions with no transcription."
+    },
+    "source": {
+      "type": "string",
+      "pattern": "^sigla:",
+      "description": "Stable provenance pointer back to SigLA."
+    },
+    "source_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Resolvable URL of the inscription page on sigla.phis.me."
+    },
+    "corpus_link": {
+      "type": ["string", "null"],
+      "description": "Cross-reference link to GORILA / EtCret edition where SigLA provides one."
+    },
+    "fetched_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

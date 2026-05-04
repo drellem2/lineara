@@ -1,0 +1,20 @@
+{
+  "corpus_link": null,
+  "dimensions": null,
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "HT Wa 1148",
+  "kind_raw": "Nodule",
+  "n_signs": 1,
+  "n_words": 0,
+  "period": "LM IB",
+  "raw_transliteration": "LOG:AB08",
+  "site": "Haghia Triada",
+  "source": "sigla:document/HT%20Wa%201148/",
+  "source_url": "https://sigla.phis.me/document/HT%20Wa%201148/",
+  "support": "nodule",
+  "tokens": [
+    "LOG:AB08"
+  ],
+  "transcription_confidence": "clean"
+}

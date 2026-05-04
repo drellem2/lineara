@@ -1,0 +1,28 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=1&amp;ce=540ecor2uudeumpibfksblm7ss9s2lsi&amp;sp=118",
+  "dimensions": "4.5 cm × 3.3 cm × 0.9 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "HT 43",
+  "kind_raw": "Tablet",
+  "n_signs": 7,
+  "n_words": 2,
+  "period": "LM IB",
+  "raw_transliteration": "AB80-AB41-AB51 / AB03-A342-AB28 / LOG:A517",
+  "site": "Haghia Triada",
+  "source": "sigla:document/HT%2043/",
+  "source_url": "https://sigla.phis.me/document/HT%2043/",
+  "support": "tablet",
+  "tokens": [
+    "AB80",
+    "AB41",
+    "AB51",
+    "DIV",
+    "AB03",
+    "A342",
+    "AB28",
+    "DIV",
+    "LOG:A517"
+  ],
+  "transcription_confidence": "clean"
+}

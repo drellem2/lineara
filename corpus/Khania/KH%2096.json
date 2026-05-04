@@ -1,0 +1,24 @@
+{
+  "corpus_link": null,
+  "dimensions": "3.9 cm × 2.4 cm × 0.7 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "KH 96",
+  "kind_raw": "Tablet",
+  "n_signs": 3,
+  "n_words": 0,
+  "period": "LM IB",
+  "raw_transliteration": "FRAC:A709 / FRAC:A702 / FRAC:A702",
+  "site": "Khania",
+  "source": "sigla:document/KH%2096/",
+  "source_url": "https://sigla.phis.me/document/KH%2096/",
+  "support": "tablet",
+  "tokens": [
+    "FRAC:A709",
+    "DIV",
+    "FRAC:A702",
+    "DIV",
+    "FRAC:A702"
+  ],
+  "transcription_confidence": "clean"
+}

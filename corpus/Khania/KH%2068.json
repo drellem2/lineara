@@ -1,0 +1,23 @@
+{
+  "corpus_link": null,
+  "dimensions": "2.1 cm × 1.6 cm × 0.5 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "KH 68",
+  "kind_raw": "Tablet",
+  "n_signs": 3,
+  "n_words": 1,
+  "period": "LM IB",
+  "raw_transliteration": "LOG:A649 / [?]-[?]",
+  "site": "Khania",
+  "source": "sigla:document/KH%2068/",
+  "source_url": "https://sigla.phis.me/document/KH%2068/",
+  "support": "tablet",
+  "tokens": [
+    "LOG:A649",
+    "DIV",
+    "[?]",
+    "[?]"
+  ],
+  "transcription_confidence": "fragmentary"
+}

@@ -1,0 +1,20 @@
+{
+  "corpus_link": null,
+  "dimensions": null,
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "unknown",
+  "id": "MY Zf 2",
+  "kind_raw": "Metal engraving",
+  "n_signs": 1,
+  "n_words": 1,
+  "period": null,
+  "raw_transliteration": "AB43",
+  "site": "Mycenae",
+  "source": "sigla:document/MY%20Zf%202/",
+  "source_url": "https://sigla.phis.me/document/MY%20Zf%202/",
+  "support": "metal_engraving",
+  "tokens": [
+    "AB43"
+  ],
+  "transcription_confidence": "clean"
+}

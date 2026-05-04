@@ -1,0 +1,22 @@
+{
+  "corpus_link": null,
+  "dimensions": "4.3 cm × 3.3 cm × 1.05 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "KH 95",
+  "kind_raw": "Tablet",
+  "n_signs": 2,
+  "n_words": 2,
+  "period": "LM IB",
+  "raw_transliteration": "AB09 / [?]",
+  "site": "Khania",
+  "source": "sigla:document/KH%2095/",
+  "source_url": "https://sigla.phis.me/document/KH%2095/",
+  "support": "tablet",
+  "tokens": [
+    "AB09",
+    "DIV",
+    "[?]"
+  ],
+  "transcription_confidence": "fragmentary"
+}

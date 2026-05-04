@@ -1,0 +1,22 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=5&amp;ce=540ecor2uudeumpibfksblm7ss9s2lsi&amp;sp=102",
+  "dimensions": "8.5 cm × 2.5 cm × 2.8 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "MA 10d",
+  "kind_raw": "Tablet",
+  "n_signs": 2,
+  "n_words": 0,
+  "period": "MM IIIB",
+  "raw_transliteration": "LOG:A662 / LOG:A661",
+  "site": "Mallia",
+  "source": "sigla:document/MA%2010d/",
+  "source_url": "https://sigla.phis.me/document/MA%2010d/",
+  "support": "tablet",
+  "tokens": [
+    "LOG:A662",
+    "DIV",
+    "LOG:A661"
+  ],
+  "transcription_confidence": "clean"
+}

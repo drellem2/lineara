@@ -1,0 +1,24 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=4&amp;x=8&amp;y=11&amp;max_image_size=1299&amp;ce=8f2rnhvf1dgc4tvccieljgdnrtir6k68&amp;sp=106",
+  "dimensions": null,
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "votive_or_inscription",
+  "id": "HT Zb 158a",
+  "kind_raw": "Pithos",
+  "n_signs": 5,
+  "n_words": 1,
+  "period": "LM IB",
+  "raw_transliteration": "[?]-AB69-AB09-AB58-AB67",
+  "site": "Haghia Triada",
+  "source": "sigla:document/HT%20Zb%20158a/",
+  "source_url": "https://sigla.phis.me/document/HT%20Zb%20158a/",
+  "support": "vase",
+  "tokens": [
+    "[?]",
+    "AB69",
+    "AB09",
+    "AB58",
+    "AB67"
+  ],
+  "transcription_confidence": "partial"
+}

@@ -1,0 +1,20 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=2&amp;ce=cooqm3a5q3s12vmvdqppfim4sk80ag09&amp;sp=108",
+  "dimensions": null,
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "HT Wa 1584",
+  "kind_raw": "Nodule",
+  "n_signs": 1,
+  "n_words": 0,
+  "period": "LM IB",
+  "raw_transliteration": "LOG:AB81",
+  "site": "Haghia Triada",
+  "source": "sigla:document/HT%20Wa%201584/",
+  "source_url": "https://sigla.phis.me/document/HT%20Wa%201584/",
+  "support": "nodule",
+  "tokens": [
+    "LOG:AB81"
+  ],
+  "transcription_confidence": "clean"
+}

@@ -1,0 +1,27 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=5&amp;ce=ri69sv28ch462rl94m9pcr3glih11l21&amp;sp=109",
+  "dimensions": "2.5 cm × 4.7 cm × 0.8 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "MI 2",
+  "kind_raw": "Tablet",
+  "n_signs": 5,
+  "n_words": 3,
+  "period": "LM I",
+  "raw_transliteration": "AB50 / AB51-AB77 / LOG:A652 / AB77",
+  "site": "Melos",
+  "source": "sigla:document/MI%202/",
+  "source_url": "https://sigla.phis.me/document/MI%202/",
+  "support": "tablet",
+  "tokens": [
+    "AB50",
+    "DIV",
+    "AB51",
+    "AB77",
+    "DIV",
+    "LOG:A652",
+    "DIV",
+    "AB77"
+  ],
+  "transcription_confidence": "clean"
+}

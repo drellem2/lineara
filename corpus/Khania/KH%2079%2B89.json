@@ -1,0 +1,32 @@
+{
+  "corpus_link": null,
+  "dimensions": "8.7 cm × 8.2 cm × 0.9 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "KH 79+89",
+  "kind_raw": "Tablet",
+  "n_signs": 10,
+  "n_words": 4,
+  "period": "LM IB",
+  "raw_transliteration": "AB73-AB06 / AB03-AB59 / AB08-AB60 / [?]-AB03-AB01-AB30",
+  "site": "Khania",
+  "source": "sigla:document/KH%2079%2B89/",
+  "source_url": "https://sigla.phis.me/document/KH%2079%2B89/",
+  "support": "tablet",
+  "tokens": [
+    "AB73",
+    "AB06",
+    "DIV",
+    "AB03",
+    "AB59",
+    "DIV",
+    "AB08",
+    "AB60",
+    "DIV",
+    "[?]",
+    "AB03",
+    "AB01",
+    "AB30"
+  ],
+  "transcription_confidence": "partial"
+}

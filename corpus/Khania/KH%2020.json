@@ -1,0 +1,33 @@
+{
+  "corpus_link": null,
+  "dimensions": "10.3 cm × 10.1 cm × 1 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "KH 20",
+  "kind_raw": "Tablet",
+  "n_signs": 10,
+  "n_words": 2,
+  "period": "LM IB",
+  "raw_transliteration": "AB08-AB41-AB67-AB60 / LOG:A626 / AB51-AB27-AB17 / LOG:A626 / LOG:AB30",
+  "site": "Khania",
+  "source": "sigla:document/KH%2020/",
+  "source_url": "https://sigla.phis.me/document/KH%2020/",
+  "support": "tablet",
+  "tokens": [
+    "AB08",
+    "AB41",
+    "AB67",
+    "AB60",
+    "DIV",
+    "LOG:A626",
+    "DIV",
+    "AB51",
+    "AB27",
+    "AB17",
+    "DIV",
+    "LOG:A626",
+    "DIV",
+    "LOG:AB30"
+  ],
+  "transcription_confidence": "clean"
+}

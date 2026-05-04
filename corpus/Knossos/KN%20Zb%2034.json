@@ -1,0 +1,20 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=4&amp;ce=540ecor2uudeumpibfksblm7ss9s2lsi&amp;sp=2121",
+  "dimensions": null,
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "votive_or_inscription",
+  "id": "KN Zb 34",
+  "kind_raw": "Pithos",
+  "n_signs": 1,
+  "n_words": 0,
+  "period": "LM IA",
+  "raw_transliteration": "LOG:A588",
+  "site": "Knossos",
+  "source": "sigla:document/KN%20Zb%2034/",
+  "source_url": "https://sigla.phis.me/document/KN%20Zb%2034/",
+  "support": "vase",
+  "tokens": [
+    "LOG:A588"
+  ],
+  "transcription_confidence": "clean"
+}

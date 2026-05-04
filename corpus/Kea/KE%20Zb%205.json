@@ -1,0 +1,20 @@
+{
+  "corpus_link": null,
+  "dimensions": null,
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "KE Zb 5",
+  "kind_raw": "Sherd",
+  "n_signs": 1,
+  "n_words": 0,
+  "period": null,
+  "raw_transliteration": "LOG:A595",
+  "site": "Kea",
+  "source": "sigla:document/KE%20Zb%205/",
+  "source_url": "https://sigla.phis.me/document/KE%20Zb%205/",
+  "support": "sherd",
+  "tokens": [
+    "LOG:A595"
+  ],
+  "transcription_confidence": "clean"
+}

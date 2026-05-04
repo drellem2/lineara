@@ -1,0 +1,27 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=3&amp;ce=540ecor2uudeumpibfksblm7ss9s2lsi&amp;sp=96",
+  "dimensions": "2.5 cm × 3.8 cm × 1.1 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "KH 47",
+  "kind_raw": "Tablet",
+  "n_signs": 5,
+  "n_words": 4,
+  "period": "LM IB",
+  "raw_transliteration": "AB16-AB24 / AB41 / AB60 / A306",
+  "site": "Khania",
+  "source": "sigla:document/KH%2047/",
+  "source_url": "https://sigla.phis.me/document/KH%2047/",
+  "support": "tablet",
+  "tokens": [
+    "AB16",
+    "AB24",
+    "DIV",
+    "AB41",
+    "DIV",
+    "AB60",
+    "DIV",
+    "A306"
+  ],
+  "transcription_confidence": "clean"
+}

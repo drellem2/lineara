@@ -1,0 +1,22 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=2&amp;ce=8f2rnhvf1dgc4tvccieljgdnrtir6k68&amp;sp=142",
+  "dimensions": "2 cm × 2 cm × 2 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "administrative",
+  "id": "KN Wb 33b",
+  "kind_raw": "Sealing",
+  "n_signs": 3,
+  "n_words": 1,
+  "period": "MM IIIB",
+  "raw_transliteration": "AB55-AB09-[?]",
+  "site": "Knossos",
+  "source": "sigla:document/KN%20Wb%2033b/",
+  "source_url": "https://sigla.phis.me/document/KN%20Wb%2033b/",
+  "support": "sealing",
+  "tokens": [
+    "AB55",
+    "AB09",
+    "[?]"
+  ],
+  "transcription_confidence": "fragmentary"
+}

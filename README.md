@@ -30,9 +30,29 @@ lives downstream of the log, never inside it.
 
 ## Layout
 
-- `corpus/` — Linear A corpus + metadata sidecars (no corpus data committed)
+- `corpus/` — Linear A corpus + metadata sidecars
 - `hypotheses/` — declarative hypothesis artifacts
 - `results/` — append-only JSONL of mechanical scores
 - `harness/` — scoring harness, pluggable metrics
+- `schema/inscription.schema.json` — JSON Schema for one inscription record
+- `scripts/` — corpus fetch / parse / build / cross-check tooling
+- `corpus_status.md` — what's in the corpus, what was dropped, and how the v1 tokenization rules map to source data
 
 See `AGENTS.md` for who does what.
+
+## Corpus ingestion (v1, SigLA)
+
+Per-inscription JSON records under `corpus/<site>/<id>.json` plus a
+`corpus/all.jsonl` aggregate, ingested from SigLA (CC BY-NC-SA 4.0). The
+per-inscription files are the source of truth; `all.jsonl` is rebuilt
+deterministically from them. Tokenization, coverage, and known gaps are
+documented in `corpus_status.md`.
+
+Rebuild from scratch:
+
+```bash
+python3 scripts/fetch_sigla.py            # cache SigLA HTML under .cache/sigla/
+python3 scripts/parse_sigla.py            # write corpus/<site>/<id>.json + all.jsonl
+python3 scripts/build_corpus.py --strict  # round-trip + schema-validate
+python3 scripts/check_corpus.py           # SigLA word-pattern cross-check
+```

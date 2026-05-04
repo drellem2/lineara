@@ -1,0 +1,26 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=1&amp;ce=540ecor2uudeumpibfksblm7ss9s2lsi&amp;sp=332",
+  "dimensions": "3.2 cm × 4.7 cm × 1 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "PH 8a",
+  "kind_raw": "Tablet",
+  "n_signs": 4,
+  "n_words": 0,
+  "period": "MM IIB",
+  "raw_transliteration": "LOG:A417 / LOG:AB100 / LOG:A304 / LOG:A418",
+  "site": "Phaistos",
+  "source": "sigla:document/PH%208a/",
+  "source_url": "https://sigla.phis.me/document/PH%208a/",
+  "support": "tablet",
+  "tokens": [
+    "LOG:A417",
+    "DIV",
+    "LOG:AB100",
+    "DIV",
+    "LOG:A304",
+    "DIV",
+    "LOG:A418"
+  ],
+  "transcription_confidence": "clean"
+}

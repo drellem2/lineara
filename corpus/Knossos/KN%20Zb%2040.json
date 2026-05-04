@@ -1,0 +1,26 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=4&amp;x=8&amp;y=11&amp;max_image_size=1299&amp;ce=8f2rnhvf1dgc4tvccieljgdnrtir6k68&amp;sp=125",
+  "dimensions": null,
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "unknown",
+  "id": "KN Zb 40",
+  "kind_raw": "Pithoid jar",
+  "n_signs": 6,
+  "n_words": 2,
+  "period": "LM II",
+  "raw_transliteration": "AB08-AB03-AB67 / AB10-AB06-AB08",
+  "site": "Knossos",
+  "source": "sigla:document/KN%20Zb%2040/",
+  "source_url": "https://sigla.phis.me/document/KN%20Zb%2040/",
+  "support": "pithoid_jar",
+  "tokens": [
+    "AB08",
+    "AB03",
+    "AB67",
+    "DIV",
+    "AB10",
+    "AB06",
+    "AB08"
+  ],
+  "transcription_confidence": "clean"
+}

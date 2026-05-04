@@ -1,0 +1,22 @@
+{
+  "corpus_link": null,
+  "dimensions": "2.7 cm × 1.8 cm × 0.5 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "PYR 2",
+  "kind_raw": "Tablet",
+  "n_signs": 2,
+  "n_words": 0,
+  "period": null,
+  "raw_transliteration": "LOG:A304 / FRAC:A707",
+  "site": "Pyrgos",
+  "source": "sigla:document/PYR%202/",
+  "source_url": "https://sigla.phis.me/document/PYR%202/",
+  "support": "tablet",
+  "tokens": [
+    "LOG:A304",
+    "DIV",
+    "FRAC:A707"
+  ],
+  "transcription_confidence": "clean"
+}

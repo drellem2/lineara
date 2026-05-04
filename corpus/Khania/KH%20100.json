@@ -1,0 +1,31 @@
+{
+  "corpus_link": null,
+  "dimensions": "3.15 cm × 4.5 cm × 1.1 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "KH 100",
+  "kind_raw": "Tablet",
+  "n_signs": 7,
+  "n_words": 3,
+  "period": "LM IB",
+  "raw_transliteration": "A352-A306 / AB02 / [?] / LOG:AB131a / AB45 / FRAC:A704",
+  "site": "Khania",
+  "source": "sigla:document/KH%20100/",
+  "source_url": "https://sigla.phis.me/document/KH%20100/",
+  "support": "tablet",
+  "tokens": [
+    "A352",
+    "A306",
+    "DIV",
+    "AB02",
+    "DIV",
+    "[?]",
+    "DIV",
+    "LOG:AB131a",
+    "DIV",
+    "AB45",
+    "DIV",
+    "FRAC:A704"
+  ],
+  "transcription_confidence": "partial"
+}

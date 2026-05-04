@@ -1,0 +1,22 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=4&amp;x=8&amp;y=11&amp;max_image_size=1299&amp;ce=8f2rnhvf1dgc4tvccieljgdnrtir6k68&amp;sp=119",
+  "dimensions": null,
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "unknown",
+  "id": "KN Zb 20",
+  "kind_raw": "Sherd",
+  "n_signs": 3,
+  "n_words": 1,
+  "period": "LM IA",
+  "raw_transliteration": "AB06-AB08-AB56",
+  "site": "Knossos",
+  "source": "sigla:document/KN%20Zb%2020/",
+  "source_url": "https://sigla.phis.me/document/KN%20Zb%2020/",
+  "support": "sherd",
+  "tokens": [
+    "AB06",
+    "AB08",
+    "AB56"
+  ],
+  "transcription_confidence": "clean"
+}

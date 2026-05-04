@@ -1,0 +1,32 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=3&amp;ce=540ecor2uudeumpibfksblm7ss9s2lsi&amp;sp=178",
+  "dimensions": "7.2 cm × 13.2 cm × 1.5 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "ZA 5b",
+  "kind_raw": "Tablet",
+  "n_signs": 11,
+  "n_words": 3,
+  "period": "LM IB",
+  "raw_transliteration": "AB28b-AB55-AB80-AB27 / AB41-AB39-AB67 / AB80-AB77-AB28-AB59",
+  "site": "Zakros",
+  "source": "sigla:document/ZA%205b/",
+  "source_url": "https://sigla.phis.me/document/ZA%205b/",
+  "support": "tablet",
+  "tokens": [
+    "AB28b",
+    "AB55",
+    "AB80",
+    "AB27",
+    "DIV",
+    "AB41",
+    "AB39",
+    "AB67",
+    "DIV",
+    "AB80",
+    "AB77",
+    "AB28",
+    "AB59"
+  ],
+  "transcription_confidence": "clean"
+}

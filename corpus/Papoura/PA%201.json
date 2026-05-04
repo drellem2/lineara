@@ -1,0 +1,24 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=1&amp;ce=8f2rnhvf1dgc4tvccieljgdnrtir6k68&amp;sp=320",
+  "dimensions": "6 cm × 3.8 cm × 1.2 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "PA 1",
+  "kind_raw": "Tablet",
+  "n_signs": 5,
+  "n_words": 1,
+  "period": "LM IB",
+  "raw_transliteration": "AB08-AB81-AB65-AB03-AB118",
+  "site": "Papoura",
+  "source": "sigla:document/PA%201/",
+  "source_url": "https://sigla.phis.me/document/PA%201/",
+  "support": "tablet",
+  "tokens": [
+    "AB08",
+    "AB81",
+    "AB65",
+    "AB03",
+    "AB118"
+  ],
+  "transcription_confidence": "clean"
+}

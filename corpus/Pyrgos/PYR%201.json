@@ -1,0 +1,28 @@
+{
+  "corpus_link": null,
+  "dimensions": "4.9 cm × 3.6 cm × 1.2 cm",
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "accountancy",
+  "id": "PYR 1",
+  "kind_raw": "Tablet",
+  "n_signs": 7,
+  "n_words": 1,
+  "period": null,
+  "raw_transliteration": "AB37-AB80-AB26-AB40-AB04 / LOG:A639 / LOG:AB131a",
+  "site": "Pyrgos",
+  "source": "sigla:document/PYR%201/",
+  "source_url": "https://sigla.phis.me/document/PYR%201/",
+  "support": "tablet",
+  "tokens": [
+    "AB37",
+    "AB80",
+    "AB26",
+    "AB40",
+    "AB04",
+    "DIV",
+    "LOG:A639",
+    "DIV",
+    "LOG:AB131a"
+  ],
+  "transcription_confidence": "clean"
+}

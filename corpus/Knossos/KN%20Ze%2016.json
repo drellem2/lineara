@@ -1,0 +1,21 @@
+{
+  "corpus_link": "https://cefael.efa.gr/detail.php?site_id=1&amp;actionID=page&amp;serie_id=EtCret&amp;volume_number=21&amp;issue_number=4&amp;ce=9miptkfflgo85qdk6uhupudbnbdi21du&amp;sp=180",
+  "dimensions": null,
+  "fetched_at": "2026-05-04T00:00:00Z",
+  "genre_hint": "unknown",
+  "id": "KN Ze 16",
+  "kind_raw": "Architecture",
+  "n_signs": 2,
+  "n_words": 1,
+  "period": "LM II",
+  "raw_transliteration": "AB08-AB39",
+  "site": "Knossos",
+  "source": "sigla:document/KN%20Ze%2016/",
+  "source_url": "https://sigla.phis.me/document/KN%20Ze%2016/",
+  "support": "architecture",
+  "tokens": [
+    "AB08",
+    "AB39"
+  ],
+  "transcription_confidence": "clean"
+}
