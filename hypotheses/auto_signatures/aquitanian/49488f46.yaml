@@ -1,0 +1,55 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_PH_6_5_20_sembe_sei_su
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [5..20]
+  of PH 6; 3 root(s) covering 10/13 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: PH 6
+  span:
+  - 5
+  - 20
+roots:
+- surface: sembe
+  phonemes:
+  - s
+  - e
+  - m
+  - b
+  - e
+  sign_to_phoneme:
+    AB28: s
+    AB79: e
+    AB53: m
+    AB30: b
+    AB59: e
+  span_within_window:
+  - 2
+  - 6
+- surface: sei
+  phonemes:
+  - s
+  - e
+  - i
+  sign_to_phoneme:
+    AB28: s
+    AB01: e
+    AB56: i
+  span_within_window:
+  - 11
+  - 13
+- surface: su
+  phonemes:
+  - s
+  - u
+  sign_to_phoneme:
+    AB28: s
+    AB31: u
+  span_within_window:
+  - 14
+  - 15
+coverage:
+  n_window_syllabograms: 13
+  n_covered_syllabograms: 10
+  fraction: 0.769231

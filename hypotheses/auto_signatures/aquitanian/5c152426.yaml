@@ -1,0 +1,65 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_ZA_4a_10_25_lur_ur_lur_seni
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [10..25]
+  of ZA 4a; 4 root(s) covering 12/12 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: ZA 4a
+  span:
+  - 10
+  - 25
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: l
+    AB37: u
+    AB26: r
+  span_within_window:
+  - 0
+  - 2
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB57: u
+    AB03: r
+  span_within_window:
+  - 4
+  - 5
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB69: l
+    AB13: u
+    AB09: r
+  span_within_window:
+  - 7
+  - 9
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB78: s
+    AB41: e
+    AB79: n
+    AB38: i
+  span_within_window:
+  - 11
+  - 14
+coverage:
+  n_window_syllabograms: 12
+  n_covered_syllabograms: 12
+  fraction: 1.0

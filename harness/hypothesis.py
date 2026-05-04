@@ -1,17 +1,23 @@
 """Hypothesis loading, validation, and canonical hashing.
 
-Two shapes are supported:
+Three shapes are supported:
 
 * ``hypothesis.v0`` — *implicit* (no ``schema_version`` field). A partial
   corpus-global sign→phoneme mapping. Scored by ``compression_delta_v0``.
   This is the original shape.
 
 * ``candidate_equation.v1`` — opt-in via ``schema_version: candidate_equation.v1``.
-  A *local* hypothesis pinning a span of one inscription to a candidate
-  substrate root. Scored by ``local_fit_v0``.
+  A *local* hypothesis pinning a span of one inscription to a single
+  candidate substrate root.
+
+* ``candidate_signature.v1`` (mg-bef2, harness v9) — opt-in via
+  ``schema_version: candidate_signature.v1``. A multi-root signature over a
+  window of one inscription. The union of the roots' sign_to_phoneme entries
+  is a non-conflicting partial sign→phoneme mapping that downstream metrics
+  (notably ``external_phoneme_perplexity_v0``) consume directly.
 
 The loader dispatches on the ``schema_version`` field and routes to the
-appropriate JSON-Schema validator. Both shapes coexist; existing v0
+appropriate JSON-Schema validator. All shapes coexist; existing v0/v1
 hypothesis files do not need to be edited.
 """
 
@@ -30,9 +36,13 @@ _V0_SCHEMA_PATH = _SCHEMA_DIR / "hypothesis.v0.schema.json"
 _CANDIDATE_EQUATION_V1_SCHEMA_PATH = (
     _SCHEMA_DIR / "hypothesis.candidate_equation.v1.schema.json"
 )
+_CANDIDATE_SIGNATURE_V1_SCHEMA_PATH = (
+    _SCHEMA_DIR / "hypothesis.candidate_signature.v1.schema.json"
+)
 
 SHAPE_V0 = "v0"
 SHAPE_CANDIDATE_EQUATION_V1 = "candidate_equation.v1"
+SHAPE_CANDIDATE_SIGNATURE_V1 = "candidate_signature.v1"
 
 
 class _StringDateLoader(yaml.SafeLoader):
@@ -61,6 +71,9 @@ _V0_VALIDATOR = Draft202012Validator(_load_schema(_V0_SCHEMA_PATH))
 _CANDIDATE_EQUATION_V1_VALIDATOR = Draft202012Validator(
     _load_schema(_CANDIDATE_EQUATION_V1_SCHEMA_PATH)
 )
+_CANDIDATE_SIGNATURE_V1_VALIDATOR = Draft202012Validator(
+    _load_schema(_CANDIDATE_SIGNATURE_V1_SCHEMA_PATH)
+)
 
 
 def detect_shape(doc: dict) -> str:
@@ -70,6 +83,8 @@ def detect_shape(doc: dict) -> str:
         return SHAPE_V0
     if sv == "candidate_equation.v1":
         return SHAPE_CANDIDATE_EQUATION_V1
+    if sv == "candidate_signature.v1":
+        return SHAPE_CANDIDATE_SIGNATURE_V1
     raise ValueError(f"unknown hypothesis schema_version: {sv!r}")
 
 
@@ -97,6 +112,9 @@ def load_and_validate(path: Path) -> dict:
     elif shape == SHAPE_CANDIDATE_EQUATION_V1:
         _CANDIDATE_EQUATION_V1_VALIDATOR.validate(doc)
         _validate_candidate_equation_semantics(doc, path)
+    elif shape == SHAPE_CANDIDATE_SIGNATURE_V1:
+        _CANDIDATE_SIGNATURE_V1_VALIDATOR.validate(doc)
+        _validate_candidate_signature_semantics(doc, path)
     else:  # pragma: no cover - guarded by detect_shape
         raise ValueError(f"unhandled hypothesis shape: {shape}")
     return doc
@@ -126,6 +144,73 @@ def _validate_candidate_equation_semantics(doc: dict, path: Path) -> None:
             f"{path}: sign_to_phoneme values {sign_to_phoneme_values!r} must equal "
             f"root.phonemes {phonemes!r} in order"
         )
+
+
+def _validate_candidate_signature_semantics(doc: dict, path: Path) -> None:
+    """Enforce constraints the JSON Schema can't express on its own.
+
+    Checked here:
+      * window.span[0] <= window.span[1].
+      * Each root's span_within_window is well-formed and lies within the
+        window.
+      * Roots' spans are non-overlapping (sorted disjoint intervals).
+      * sign_to_phoneme entries are consistent across roots — a sign that
+        appears in multiple roots must map to the same phoneme everywhere.
+      * Each root's sign_to_phoneme matches the phoneme inventory of
+        root.phonemes (every distinct phoneme listed appears as a value).
+    """
+    window = doc["window"]
+    w0, w1 = window["span"]
+    if w0 > w1:
+        raise ValueError(
+            f"{path}: window.span start ({w0}) must be <= end ({w1})"
+        )
+    window_len = w1 - w0 + 1
+
+    roots = doc["roots"]
+    placed: list[tuple[int, int]] = []
+    combined: dict[str, str] = {}
+    for i, root in enumerate(roots):
+        s, e = root["span_within_window"]
+        if s > e:
+            raise ValueError(
+                f"{path}: roots[{i}] span_within_window start ({s}) must be "
+                f"<= end ({e})"
+            )
+        if e >= window_len:
+            raise ValueError(
+                f"{path}: roots[{i}] span_within_window {[s, e]!r} extends "
+                f"beyond the window length {window_len}"
+            )
+        for j, (ps, pe) in enumerate(placed):
+            if not (e < ps or s > pe):
+                raise ValueError(
+                    f"{path}: roots[{i}] span_within_window {[s, e]!r} "
+                    f"overlaps roots[{j}] span_within_window {[ps, pe]!r}"
+                )
+        placed.append((s, e))
+        for sign, phoneme in root["sign_to_phoneme"].items():
+            existing = combined.get(sign)
+            if existing is not None and existing != phoneme:
+                raise ValueError(
+                    f"{path}: sign {sign!r} mapped to two different phonemes "
+                    f"across roots: {existing!r} (earlier) vs {phoneme!r} "
+                    f"(roots[{i}].surface={root['surface']!r})"
+                )
+            combined[sign] = phoneme
+
+
+def signature_combined_mapping(doc: dict) -> dict[str, str]:
+    """Build the union sign->phoneme mapping from a candidate_signature.v1 doc.
+
+    Pre-validated by ``_validate_candidate_signature_semantics`` to be
+    non-conflicting; this function does not re-check, only collects.
+    """
+    out: dict[str, str] = {}
+    for root in doc["roots"]:
+        for sign, phoneme in root["sign_to_phoneme"].items():
+            out[sign] = phoneme
+    return out
 
 
 def canonical_hash(hypothesis: dict) -> str:

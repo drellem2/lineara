@@ -1,0 +1,58 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_KN_Zc_6_10_25_ida_assos_aios
+description: 'Auto-generated candidate signature: pool=''toponym'' window [10..25]
+  of KN Zc 6; 3 root(s) covering 12/13 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: KN Zc 6
+  span:
+  - 10
+  - 25
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB30: i
+    AB57: d
+    AB55: a
+  span_within_window:
+  - 2
+  - 4
+- surface: assos
+  phonemes:
+  - a
+  - s
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB65: a
+    AB81: s
+    AB06: s
+    AB03: o
+  span_within_window:
+  - 6
+  - 10
+- surface: aios
+  phonemes:
+  - a
+  - i
+  - o
+  - s
+  sign_to_phoneme:
+    AB55: a
+    AB10: i
+    AB28: o
+    AB79: s
+  span_within_window:
+  - 11
+  - 15
+coverage:
+  n_window_syllabograms: 13
+  n_covered_syllabograms: 12
+  fraction: 0.923077

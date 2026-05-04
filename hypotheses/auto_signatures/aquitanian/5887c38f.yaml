@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_ZA_Wc_2_0_9_lur_lohi
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..9]
+  of ZA Wc 2; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: ZA Wc 2
+  span:
+  - 0
+  - 9
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: l
+    AB37: u
+    AB77: r
+  span_within_window:
+  - 0
+  - 2
+- surface: lohi
+  phonemes:
+  - l
+  - o
+  - h
+  - i
+  sign_to_phoneme:
+    AB08: l
+    AB51: o
+    AB70: h
+    AB73: i
+  span_within_window:
+  - 4
+  - 7
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

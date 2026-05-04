@@ -1,0 +1,39 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_102_16_27_lur_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [16..27]
+  of HT 102; 2 root(s) covering 5/5 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 102
+  span:
+  - 16
+  - 27
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB07: l
+    AB53: u
+    AB06: r
+  span_within_window:
+  - 5
+  - 7
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB80: u
+    AB79: r
+  span_within_window:
+  - 9
+  - 10
+coverage:
+  n_window_syllabograms: 5
+  n_covered_syllabograms: 5
+  fraction: 1.0

@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_PS_Za_2_12_19_lur_lur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [12..19]
+  of PS Za 2; 2 root(s) covering 6/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: PS Za 2
+  span:
+  - 12
+  - 19
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB31: l
+    AB60: u
+    AB13: r
+  span_within_window:
+  - 1
+  - 3
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB27: l
+    AB28: u
+    AB44: r
+  span_within_window:
+  - 5
+  - 7
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 6
+  fraction: 0.857143

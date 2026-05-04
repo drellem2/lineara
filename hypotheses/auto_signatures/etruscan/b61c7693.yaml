@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_ARKH_5_0_11_cealch_ci
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [0..11]
+  of ARKH 5; 2 root(s) covering 7/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 11
+roots:
+- surface: cealch
+  phonemes:
+  - c
+  - e
+  - a
+  - l
+  - ch
+  sign_to_phoneme:
+    AB08: c
+    AB51: e
+    AB30: a
+    AB59: l
+    AB06: ch
+  span_within_window:
+  - 0
+  - 4
+- surface: ci
+  phonemes:
+  - c
+  - i
+  sign_to_phoneme:
+    AB08: c
+    AB01: i
+  span_within_window:
+  - 6
+  - 7
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 7
+  fraction: 0.875

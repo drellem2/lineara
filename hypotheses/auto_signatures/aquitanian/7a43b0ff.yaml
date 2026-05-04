@@ -1,0 +1,65 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_PH_6_0_15_lur_ur_larre_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..15]
+  of PH 6; 4 root(s) covering 12/12 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: PH 6
+  span:
+  - 0
+  - 15
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB28: l
+    AB06: u
+    AB54: r
+  span_within_window:
+  - 0
+  - 2
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: u
+    AB53: r
+  span_within_window:
+  - 4
+  - 5
+- surface: larre
+  phonemes:
+  - l
+  - a
+  - r
+  - r
+  - e
+  sign_to_phoneme:
+    AB28: l
+    AB79: a
+    AB53: r
+    AB30: r
+    AB59: e
+  span_within_window:
+  - 7
+  - 11
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: u
+    AB53: r
+  span_within_window:
+  - 13
+  - 14
+coverage:
+  n_window_syllabograms: 12
+  n_covered_syllabograms: 12
+  fraction: 1.0

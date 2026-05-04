@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_88_27_36_ida_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [27..36]
+  of HT 88; 2 root(s) covering 6/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 88
+  span:
+  - 27
+  - 36
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB03: i
+    AB57: d
+    AB27: a
+  span_within_window:
+  - 2
+  - 4
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB31: i
+    AB80: d
+    AB02: a
+  span_within_window:
+  - 6
+  - 8
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 6
+  fraction: 0.857143

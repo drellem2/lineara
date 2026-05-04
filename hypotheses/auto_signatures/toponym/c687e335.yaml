@@ -1,0 +1,45 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_PH_6_5_20_paros_par
+description: 'Auto-generated candidate signature: pool=''toponym'' window [5..20]
+  of PH 6; 2 root(s) covering 8/13 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: PH 6
+  span:
+  - 5
+  - 20
+roots:
+- surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  sign_to_phoneme:
+    AB28: p
+    AB79: a
+    AB53: r
+    AB30: o
+    AB59: s
+  span_within_window:
+  - 2
+  - 6
+- surface: par
+  phonemes:
+  - p
+  - a
+  - r
+  sign_to_phoneme:
+    AB28: p
+    AB01: a
+    AB56: r
+  span_within_window:
+  - 11
+  - 13
+coverage:
+  n_window_syllabograms: 13
+  n_covered_syllabograms: 8
+  fraction: 0.615385

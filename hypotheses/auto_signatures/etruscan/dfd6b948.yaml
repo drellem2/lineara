@@ -1,0 +1,60 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_KN_Zf_13_0_18_muluvanece_zatlath
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [0..18]
+  of KN Zf 13; 2 root(s) covering 16/19 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 18
+roots:
+- surface: muluvanece
+  phonemes:
+  - m
+  - u
+  - l
+  - u
+  - v
+  - a
+  - n
+  - e
+  - c
+  - e
+  sign_to_phoneme:
+    AB08: m
+    AB27: u
+    AB24: l
+    AB41: u
+    AB07: v
+    A301: a
+    AB39: n
+    AB44: e
+    AB03: c
+    AB57: e
+  span_within_window:
+  - 0
+  - 9
+- surface: zatlath
+  phonemes:
+  - z
+  - a
+  - t
+  - l
+  - a
+  - th
+  sign_to_phoneme:
+    AB59: z
+    AB53: a
+    AB09: t
+    AB04: l
+    AB23: th
+  span_within_window:
+  - 10
+  - 15
+coverage:
+  n_window_syllabograms: 19
+  n_covered_syllabograms: 16
+  fraction: 0.842105

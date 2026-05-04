@@ -1,0 +1,50 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_PH_6_12_21_ur_atta_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [12..21]
+  of PH 6; 3 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: PH 6
+  span:
+  - 12
+  - 21
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: u
+    AB53: r
+  span_within_window:
+  - 1
+  - 2
+- surface: atta
+  phonemes:
+  - a
+  - t
+  - t
+  - a
+  sign_to_phoneme:
+    AB28: a
+    AB01: t
+    AB56: t
+  span_within_window:
+  - 4
+  - 7
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB31: u
+    AB53: r
+  span_within_window:
+  - 8
+  - 9
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

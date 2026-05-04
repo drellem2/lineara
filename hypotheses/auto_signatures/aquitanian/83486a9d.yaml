@@ -1,0 +1,65 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_122a_6_25_lur_ur_lur_bels
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [6..25]
+  of HT 122a; 4 root(s) covering 12/14 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 122a
+  span:
+  - 6
+  - 25
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB01: l
+    AB41: u
+    AB118: r
+  span_within_window:
+  - 1
+  - 3
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB04: u
+    AB67: r
+  span_within_window:
+  - 9
+  - 10
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB16: l
+    A310: u
+    AB28: r
+  span_within_window:
+  - 12
+  - 14
+- surface: bels
+  phonemes:
+  - b
+  - e
+  - l
+  - s
+  sign_to_phoneme:
+    AB57: b
+    AB73: e
+    AB01: l
+    AB27: s
+  span_within_window:
+  - 16
+  - 19
+coverage:
+  n_window_syllabograms: 14
+  n_covered_syllabograms: 12
+  fraction: 0.857143

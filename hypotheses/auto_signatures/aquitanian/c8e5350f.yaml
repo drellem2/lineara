@@ -1,0 +1,51 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_140_0_9_lur_iri_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..9]
+  of HT 140; 3 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 140
+  span:
+  - 0
+  - 9
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB10: l
+    AB34: u
+    AB41: r
+  span_within_window:
+  - 0
+  - 2
+- surface: iri
+  phonemes:
+  - i
+  - r
+  - i
+  sign_to_phoneme:
+    AB86: i
+    AB41: r
+    AB30: i
+  span_within_window:
+  - 4
+  - 6
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB46: u
+    AB07: r
+  span_within_window:
+  - 8
+  - 9
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

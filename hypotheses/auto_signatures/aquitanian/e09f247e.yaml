@@ -1,0 +1,53 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_29_12_23_lur_lur_lur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [12..23]
+  of HT 29; 3 root(s) covering 9/9 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 29
+  span:
+  - 12
+  - 23
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB07: l
+    AB57: u
+    AB28: r
+  span_within_window:
+  - 0
+  - 3
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB31: l
+    A323: u
+    AB73: r
+  span_within_window:
+  - 5
+  - 7
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    A340: l
+    AB67: u
+    AB59: r
+  span_within_window:
+  - 9
+  - 11
+coverage:
+  n_window_syllabograms: 9
+  n_covered_syllabograms: 9
+  fraction: 1.0

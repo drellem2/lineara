@@ -1,0 +1,39 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_102_6_25_thu_zal
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [6..25]
+  of HT 102; 2 root(s) covering 5/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 102
+  span:
+  - 6
+  - 25
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB56: th
+    AB30: u
+  span_within_window:
+  - 2
+  - 3
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB07: z
+    AB53: a
+    AB06: l
+  span_within_window:
+  - 15
+  - 17
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 5
+  fraction: 0.833333

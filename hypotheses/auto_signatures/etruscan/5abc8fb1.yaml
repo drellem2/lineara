@@ -1,0 +1,39 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_PH_28a_4_11_zal_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [4..11]
+  of PH 28a; 2 root(s) covering 5/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: PH 28a
+  span:
+  - 4
+  - 11
+roots:
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB57: z
+    AB67: a
+    AB56: l
+  span_within_window:
+  - 0
+  - 2
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB08: th
+    AB53: u
+  span_within_window:
+  - 5
+  - 6
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 5
+  fraction: 0.833333

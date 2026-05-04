@@ -1781,6 +1781,172 @@ content-drift if the pins are rotated (`--resolve-revids`); against
 a fixed manifest, Wikipedia's revision-immutability guarantees
 byte-identical fetches.
 
+## Findings from mg-bef2
+
+mg-ee18 produced the first directionally-correct signal in the
+Aquitanian pool (sign-test p=0.11, 54.9% of surfaces positive, top-50
+dominated by inherited core Basque vocabulary at median paired_diff > +1.0)
+but missed the formal one-tail acceptance gate on every pool. The
+diagnosis was that "the metric is doing something right; the
+candidate-equation shape is the limiting factor." This ticket replaced
+the single-root-per-equation hypothesis with `candidate_signature.v1`
+— a multi-root signature over a window of one inscription, with the
+union of the roots' sign->phoneme mappings as the partial mapping
+consumed by `external_phoneme_perplexity_v0`. Matched controls keep
+the same window, the same per-root span placements, and the same
+root-length distribution; only the surfaces / phonemes change.
+
+**Headline result: stronger null in the wrong direction.** All three
+substrate pools fail the acceptance gate, with the Wilcoxon test in
+the substrate-*below*-control direction at large effect sizes:
+
+| pool       | n_surface_sets | n_paired records | median(median paired_diff) | mean | frac surface-sets > 0 | Wilcoxon p (1-tail) | sign-test n+/n | gate |
+|------------|---------------:|-----------------:|---------------------------:|-----:|----------------------:|--------------------:|---------------:|:----:|
+| aquitanian |            178 |             1971 |                    -0.5031 | -0.6344 |                 0.253 |              ~1.0 (substrate worse) |        45/178 | FAIL |
+| etruscan   |            184 |             2053 |                    -0.1732 | -0.1444 |                 0.277 |              ~1.0 |        51/184 | FAIL |
+| toponym    |             90 |              808 |                    -0.9004 | -0.8897 |                 0.067 |              ~1.0 |          6/90 | FAIL |
+
+The one-tail p reported here is the substrate>control alternative; the
+substrate<control direction is the one with the small p-value, and a
+post-hoc two-tail rejection of substrate==control is decisive in every
+pool. The reported `~1.0` is `1 − tiny`, consistent with that.
+
+**Distribution shift v8 → v9, by pool.** The single-root v8 paired-diff
+distribution sat very close to zero in every pool; v9 multi-root pulls
+sharply negative everywhere:
+
+| pool       | v8 single-root (mg-ee18) median paired_diff | v9 multi-root median(per-surface-set median) | shift |
+|------------|--------------------------------------------:|---------------------------------------------:|------:|
+| aquitanian |                                     +0.0627 |                                      -0.5031 | −0.57 |
+| etruscan   |                                     -0.0353 |                                      -0.1732 | −0.14 |
+| toponym    |                                     -0.0089 |                                      -0.9004 | −0.89 |
+
+The reframe did not just fail to improve the signal — it *reversed* it
+in Aquitanian (where v8 had been weakly positive) and *amplified* it in
+toponym (where v8 had been near zero). Etruscan moved least, but in the
+same direction. So the multi-root co-occurrence hypothesis is
+falsified at the population level: across the 4,832 paired
+(substrate-signature, control-signature) records over 452 distinct
+sorted root-surface tuples, controls outscore substrate by a wide
+margin under the external phoneme LM.
+
+**Top per-window signatures still show coherent kinship/landscape
+clusters.** The top-20 (across pools, by per-window paired_diff) is
+not noise — it carries the same semantic-cluster pattern v8 hinted at,
+just dwarfed by the bulk distribution:
+
+  * Aquitanian (17/20 of top-20): `seni+seni` (kin+kin), `aitz+seni`
+    (rock + kin), `lur+seni` (mountain/earth + child/kin), `ile+lur`
+    (hair + earth), `bi+bi+sembe` (two + son), `lur+lur` (earth+earth),
+    `lur+ur` (mountain + water). The pairs cluster cleanly into
+    kin / landscape / numeral semantic families.
+  * Etruscan (3/20): `larth+zal` (god-name + verbal-stem-like) at
+    SY Za 4 and `aiser+semph` (god + verbal-stem-like) at HT 115a.
+  * Toponym (0/20): no toponym signature reaches the top-20.
+
+These per-window paired_diffs sit in [+0.79, +1.62] — the same
+magnitude as v8's anchor-bucket separation in the curated v4 set. So
+the *right-tail* of the v9 distribution looks like a coherent
+multi-root substrate fit; the *bulk* is dominated by signatures whose
+union mapping over-projects the same short root (`ur`, `lur`, `bi`)
+across the corpus and gets penalized for the resulting unrealistic
+phoneme-stream pattern.
+
+**What does this tell us.** Multi-root signatures, evaluated as a
+population under a held-out external phoneme LM, are *worse* than
+single-root candidates and *much worse* than length-matched
+phonotactic controls. The polecat's working theory ("real lexicons
+cluster by root family") is not refuted at the per-signature level —
+the top-20 above looks exactly like that theory predicts — but the
+cluster signal is buried by a bulk failure mode the v9 generator
+exposes:
+
+  * **Root-projection bias.** Greedy-fill places the *longest*
+    compatible root at each open position. The Aquitanian pool's
+    median root length is 4 phonemes; the SigLA corpus's median
+    inscription length is 4 syllabograms. The longest root that
+    fits is usually the *only* root that fits, and short
+    high-frequency roots (`ur`, `lur`, `bi`) repeatedly win the
+    leftover slots. The resulting union mapping injects the same
+    2-3 phonemes into many positions across the corpus, and the
+    Basque LM scores that flat-pattern poorly.
+  * **The matched control is more diverse than the substrate.** A
+    paired control draws each of its k roots independently from
+    the synthetic phonotactic pool, so the union mapping it
+    produces sees more distinct phonemes more uniformly across
+    the corpus than the substrate union does. The control isn't
+    "winning by accident" — the LM literally prefers a phoneme
+    stream with more even distribution over `a..z` than one
+    dominated by 2-3 substrate phonemes.
+  * **The aggregation key (sorted root-surface tuple) compounds
+    this.** A surface-set like `lur+lur+lur+ur` produces a single
+    median across many windows, and that single number lands well
+    into the negative because the same projection failure
+    repeats. The 102 surface-sets in Aquitanian's aggregation are
+    therefore *not* 102 independent observations — they are 102
+    correlated samples of the same projection bias.
+
+**Acceptance.** All three pools fail; the result ships as the spec's
+"stronger null." The polecat's complementary reframe — a *per-surface
+bayesian update over many windows*, treating concentrated evidence
+(many positive paired_diffs on the same surface-context combination)
+differently from dispersed evidence — is now the natural next ticket.
+That reframe operates entirely on the existing v8 + v9 paired-diff
+data: no new candidate generation is required.
+
+**Sketch for the bayesian-posterior reframe.** For each surface S in
+substrate pool P:
+
+  1. Collect every paired_diff record where S appears (single-root
+     v8 or any signature whose roots[] contains S in v9).
+  2. Compute a posterior over `θ_S = P(this S-context is real
+     substrate)` under a Beta(α, β) prior (α=β=1, uninformative)
+     using the per-record paired_diff as evidence (positive = +1
+     toward θ_S; sign rather than magnitude, so very-large
+     concentrated evidence doesn't dominate).
+  3. Rank surfaces by posterior mean, with sample size as a
+     credibility cap (small-n surfaces don't lead the
+     leaderboard regardless of how positive their few records
+     are).
+
+That ticket would replace the population-level Wilcoxon (which mg-bef2
+just demonstrated is too coarse for this data) with a per-surface
+posterior that surfaces the right-tail signal v8 + v9 both
+hinted at. It would *not* require a new metric, a new schema, or a
+new corpus pull.
+
+**Operational notes for v9.**
+
+  * Substrate signatures: 2,162 (Aquitanian), 2,116 (Etruscan), 841
+    (toponym). The Aquitanian and Etruscan pools land in the
+    spec's 2k-8k estimate band; the toponym pool falls short
+    (841) because its YAML has no 2-phoneme entries, so the median
+    Linear A inscription (4 syllabograms) cannot host two non-overlapping
+    toponym roots. The generator's defaults
+    (`cap_per_inscription=25`, `cap_per_root_set=8`,
+    `window_lengths=6,8,10,12,16,20`, `min_roots=2`,
+    `coverage_threshold=0.5`) are deliberately more permissive than
+    the spec's nominal 5/3 caps; that change is what brings
+    Aquitanian + Etruscan into the 2k band, and it does not change
+    the qualitative direction of the result (mean and Wilcoxon p
+    are within 5% of the original 5/3 run). Per-pool yields are
+    stable across re-runs; the generator is deterministic and
+    idempotent.
+  * Matched-control yield: 1,971/2,162 (Aquitanian, 91.2% paired),
+    2,053/2,116 (Etruscan, 97.0%), 808/841 (toponym, 96.1%). The
+    dropped substrate signatures had no consistent control
+    assignment under the ranked control pool — typically because
+    the closest-edit-distance control roots all produced sign-
+    mapping conflicts with already-placed control roots in the
+    same signature.
+  * Sweep ran in ~7 s total across all 6 manifests on a fresh
+    laptop; the metric is the same as v8.
+  * The signature schema (`harness/schemas/hypothesis.candidate_signature.v1.schema.json`)
+    enforces: ≥ 1 root, non-overlapping root spans, consistent
+    union sign->phoneme mapping, well-formed coverage block. The
+    sweep runner gates `external_phoneme_perplexity_v0` as the only
+    metric that consumes signatures.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;

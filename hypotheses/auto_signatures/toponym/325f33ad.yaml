@@ -1,0 +1,44 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_KN_Zf_13_10_17_assos_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [10..17]
+  of KN Zf 13; 2 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: KN Zf 13
+  span:
+  - 10
+  - 17
+roots:
+- surface: assos
+  phonemes:
+  - a
+  - s
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB59: a
+    AB53: s
+    AB09: s
+    AB04: o
+  span_within_window:
+  - 0
+  - 4
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB23: i
+    AB08: d
+    AB57: a
+  span_within_window:
+  - 5
+  - 7
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

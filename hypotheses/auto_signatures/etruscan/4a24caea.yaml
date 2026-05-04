@@ -1,0 +1,61 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_86a_5_20_thu_thu_tiu_zal
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [5..20]
+  of HT 86a; 4 root(s) covering 10/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 86a
+  span:
+  - 5
+  - 20
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB30: th
+    AB58: u
+  span_within_window:
+  - 0
+  - 1
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB31: th
+    AB26: u
+  span_within_window:
+  - 5
+  - 6
+- surface: tiu
+  phonemes:
+  - t
+  - i
+  - u
+  sign_to_phoneme:
+    AB07: t
+    AB45: i
+    AB26: u
+  span_within_window:
+  - 8
+  - 10
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB16: z
+    AB76: a
+    AB54: l
+  span_within_window:
+  - 12
+  - 14
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 10
+  fraction: 1.0

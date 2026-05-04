@@ -1,0 +1,51 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_ARKH_1a_5_20_thu_thana_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [5..20]
+  of ARKH 1a; 3 root(s) covering 8/9 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: ARKH 1a
+  span:
+  - 5
+  - 20
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB08: th
+    AB60: u
+  span_within_window:
+  - 2
+  - 3
+- surface: thana
+  phonemes:
+  - th
+  - a
+  - n
+  - a
+  sign_to_phoneme:
+    AB08: th
+    AB58: a
+    AB73: n
+    AB118: a
+  span_within_window:
+  - 5
+  - 8
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB08: th
+    AB03: u
+  span_within_window:
+  - 12
+  - 13
+coverage:
+  n_window_syllabograms: 9
+  n_covered_syllabograms: 8
+  fraction: 0.888889

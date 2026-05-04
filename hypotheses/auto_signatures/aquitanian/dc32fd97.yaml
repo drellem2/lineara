@@ -1,0 +1,40 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_PS_Za_2_4_15_ur_umme
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [4..15]
+  of PS Za 2; 2 root(s) covering 6/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: PS Za 2
+  span:
+  - 4
+  - 15
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB57: u
+    AB37: r
+  span_within_window:
+  - 4
+  - 5
+- surface: umme
+  phonemes:
+  - u
+  - m
+  - m
+  - e
+  sign_to_phoneme:
+    AB57: u
+    AB31: m
+    AB60: e
+  span_within_window:
+  - 7
+  - 10
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 6
+  fraction: 0.75

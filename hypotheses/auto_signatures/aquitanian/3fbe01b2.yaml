@@ -1,0 +1,50 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_98a_15_30_anai_ur_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [15..30]
+  of HT 98a; 3 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 98a
+  span:
+  - 15
+  - 30
+roots:
+- surface: anai
+  phonemes:
+  - a
+  - n
+  - a
+  - i
+  sign_to_phoneme:
+    AB07: a
+    AB27: n
+    AB06: i
+  span_within_window:
+  - 0
+  - 3
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB04: u
+    A301: r
+  span_within_window:
+  - 7
+  - 8
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB02: u
+    AB44: r
+  span_within_window:
+  - 14
+  - 15
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

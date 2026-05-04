@@ -1,0 +1,61 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_ZA_8_12_31_seni_idiar_ardi
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [12..31]
+  of ZA 8; 3 root(s) covering 13/16 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: ZA 8
+  span:
+  - 12
+  - 31
+roots:
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB08: s
+    AB53: e
+    AB30: n
+    AB59: i
+  span_within_window:
+  - 2
+  - 5
+- surface: idiar
+  phonemes:
+  - i
+  - d
+  - i
+  - a
+  - r
+  sign_to_phoneme:
+    AB59: i
+    AB28: d
+    AB55: i
+    AB80: a
+    AB03: r
+  span_within_window:
+  - 7
+  - 11
+- surface: ardi
+  phonemes:
+  - a
+  - r
+  - d
+  - i
+  sign_to_phoneme:
+    AB80: a
+    AB77: r
+    AB28: d
+    AB09: i
+  span_within_window:
+  - 13
+  - 16
+coverage:
+  n_window_syllabograms: 16
+  n_covered_syllabograms: 13
+  fraction: 0.8125

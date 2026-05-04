@@ -1,0 +1,55 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_31_18_37_ida_ida_phai
+description: 'Auto-generated candidate signature: pool=''toponym'' window [18..37]
+  of HT 31; 3 root(s) covering 10/11 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 31
+  span:
+  - 18
+  - 37
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB77: i
+    AB02: d
+    AB56: a
+  span_within_window:
+  - 3
+  - 5
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB31: i
+    AB57: d
+    AB80: a
+  span_within_window:
+  - 7
+  - 9
+- surface: phai
+  phonemes:
+  - p
+  - h
+  - a
+  - i
+  sign_to_phoneme:
+    AB67: p
+    AB45: h
+    AB80: a
+    A323: i
+  span_within_window:
+  - 11
+  - 14
+coverage:
+  n_window_syllabograms: 11
+  n_covered_syllabograms: 10
+  fraction: 0.909091

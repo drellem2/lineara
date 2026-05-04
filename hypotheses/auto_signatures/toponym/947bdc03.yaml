@@ -1,0 +1,67 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_25a_15_30_thera_ida_ida_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [15..30]
+  of HT 25a; 4 root(s) covering 13/13 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 25a
+  span:
+  - 15
+  - 30
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB08: th
+    AB53: e
+    AB30: r
+    AB59: a
+  span_within_window:
+  - 0
+  - 3
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB69: i
+    AB78: d
+    AB55: a
+  span_within_window:
+  - 5
+  - 7
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB79: i
+    AB65: d
+    AB29: a
+  span_within_window:
+  - 9
+  - 11
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB51: i
+    AB26: d
+    AB40: a
+  span_within_window:
+  - 13
+  - 15
+coverage:
+  n_window_syllabograms: 13
+  n_covered_syllabograms: 13
+  fraction: 1.0

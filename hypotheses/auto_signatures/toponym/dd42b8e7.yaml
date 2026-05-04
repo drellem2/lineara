@@ -1,0 +1,45 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_PH_7a_4_15_thera_thera
+description: 'Auto-generated candidate signature: pool=''toponym'' window [4..15]
+  of PH 7a; 2 root(s) covering 8/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: PH 7a
+  span:
+  - 4
+  - 15
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB10: th
+    AB07: e
+    AB53: r
+    AB67: a
+  span_within_window:
+  - 0
+  - 3
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB57: th
+    AB26: e
+    AB80: r
+    AB24: a
+  span_within_window:
+  - 5
+  - 8
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 8
+  fraction: 0.8

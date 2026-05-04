@@ -1,0 +1,45 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_ARKH_2_9_18_seni_seni
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [9..18]
+  of ARKH 2; 2 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 18
+roots:
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB41: s
+    AB01: e
+    AB05: n
+    AB28: i
+  span_within_window:
+  - 0
+  - 3
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB79: s
+    A301: e
+    AB09: n
+    AB45: i
+  span_within_window:
+  - 5
+  - 8
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

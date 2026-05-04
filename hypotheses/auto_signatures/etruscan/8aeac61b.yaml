@@ -1,0 +1,38 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_98a_8_19_thu_apa
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [8..19]
+  of HT 98a; 2 root(s) covering 5/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 98a
+  span:
+  - 8
+  - 19
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB06: th
+    AB37: u
+  span_within_window:
+  - 0
+  - 1
+- surface: apa
+  phonemes:
+  - a
+  - p
+  - a
+  sign_to_phoneme:
+    AB07: a
+    AB27: p
+  span_within_window:
+  - 7
+  - 9
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 5
+  fraction: 0.833333

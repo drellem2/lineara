@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_8a_27_36_zal_ati
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [27..36]
+  of HT 8a; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 8a
+  span:
+  - 27
+  - 36
+roots:
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB41: z
+    AB67: a
+    AB60: l
+  span_within_window:
+  - 0
+  - 2
+- surface: ati
+  phonemes:
+  - a
+  - t
+  - i
+  sign_to_phoneme:
+    AB67: a
+    AB27: t
+    AB59: i
+  span_within_window:
+  - 6
+  - 9
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

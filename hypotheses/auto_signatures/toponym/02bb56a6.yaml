@@ -1,0 +1,45 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_117a_0_19_thera_thera
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..19]
+  of HT 117a; 2 root(s) covering 8/15 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 117a
+  span:
+  - 0
+  - 19
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB80: th
+    AB77: e
+    AB53: r
+    AB04: a
+  span_within_window:
+  - 0
+  - 3
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB10: th
+    AB73: e
+    AB06: r
+    AB41: a
+  span_within_window:
+  - 8
+  - 11
+coverage:
+  n_window_syllabograms: 15
+  n_covered_syllabograms: 8
+  fraction: 0.533333

@@ -1,0 +1,51 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_KH_6_6_25_ur_lur_lur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [6..25]
+  of KH 6; 3 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: KH 6
+  span:
+  - 6
+  - 25
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB55: u
+    AB27: r
+  span_within_window:
+  - 0
+  - 1
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB67: l
+    AB31: u
+    AB24: r
+  span_within_window:
+  - 3
+  - 5
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB53: l
+    AB59: u
+    AB46: r
+  span_within_window:
+  - 13
+  - 15
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

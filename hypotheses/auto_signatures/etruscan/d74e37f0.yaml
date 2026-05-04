@@ -1,0 +1,51 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_25a_12_21_thu_semph_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [12..21]
+  of HT 25a; 3 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 25a
+  span:
+  - 12
+  - 21
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB06: th
+    AB10: u
+  span_within_window:
+  - 0
+  - 1
+- surface: semph
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  sign_to_phoneme:
+    AB08: s
+    AB53: e
+    AB30: m
+    AB59: ph
+  span_within_window:
+  - 3
+  - 6
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB69: th
+    AB78: u
+  span_within_window:
+  - 8
+  - 9
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

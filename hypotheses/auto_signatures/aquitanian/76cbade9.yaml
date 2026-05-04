@@ -1,0 +1,79 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_KN_Zc_6_0_19_lur_hartu_ur_lur_iri
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..19]
+  of KN Zc 6; 5 root(s) covering 16/17 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: KN Zc 6
+  span:
+  - 0
+  - 19
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB34: l
+    AB37: u
+    AB53: r
+  span_within_window:
+  - 0
+  - 2
+- surface: hartu
+  phonemes:
+  - h
+  - a
+  - r
+  - t
+  - u
+  sign_to_phoneme:
+    AB08: h
+    AB07: a
+    AB01: r
+    AB67: t
+    AB37: u
+  span_within_window:
+  - 4
+  - 8
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB03: u
+    AB81: r
+  span_within_window:
+  - 9
+  - 10
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB30: l
+    AB57: u
+    AB55: r
+  span_within_window:
+  - 12
+  - 14
+- surface: iri
+  phonemes:
+  - i
+  - r
+  - i
+  sign_to_phoneme:
+    AB65: i
+    AB81: r
+    AB06: i
+  span_within_window:
+  - 16
+  - 18
+coverage:
+  n_window_syllabograms: 17
+  n_covered_syllabograms: 16
+  fraction: 0.941176

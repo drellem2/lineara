@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_SY_Za_4_6_13_seni_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [6..13]
+  of SY Za 4; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: SY Za 4
+  span:
+  - 6
+  - 13
+roots:
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB57: s
+    AB28: e
+    AB48: n
+    AB17: i
+  span_within_window:
+  - 1
+  - 4
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB56: u
+    AB30: r
+  span_within_window:
+  - 6
+  - 7
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

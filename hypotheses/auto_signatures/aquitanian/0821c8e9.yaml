@@ -1,0 +1,44 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_KN_Zf_13_10_17_senben_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [10..17]
+  of KN Zf 13; 2 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: KN Zf 13
+  span:
+  - 10
+  - 17
+roots:
+- surface: senben
+  phonemes:
+  - s
+  - e
+  - n
+  - b
+  - e
+  - n
+  sign_to_phoneme:
+    AB59: s
+    AB53: e
+    AB09: n
+    AB04: b
+    AB23: n
+  span_within_window:
+  - 0
+  - 5
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: u
+    AB57: r
+  span_within_window:
+  - 6
+  - 7
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

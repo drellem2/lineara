@@ -53,9 +53,11 @@ from harness.corpus_phoneme_model import ClusterModel
 from harness.external_phoneme_model import ExternalPhonemeModel
 from harness.hypothesis import (
     SHAPE_CANDIDATE_EQUATION_V1,
+    SHAPE_CANDIDATE_SIGNATURE_V1,
     canonical_hash,
     detect_shape,
     load_and_validate,
+    signature_combined_mapping,
 )
 from harness.metrics import (
     EmpiricalBigramModel,
@@ -102,6 +104,12 @@ _EXT_POOL_LANGUAGE: dict[str, str] = {
     "toponym": "basque",
     "control_toponym": "basque",
 }
+
+# Metrics that the candidate_signature.v1 shape supports. The signature
+# shape only carries a union sign->phoneme mapping (no per-equation
+# position fingerprint, no in-window bigram structure), so only the
+# corpus-side metrics that consume a partial mapping make sense.
+_SIGNATURE_METRICS = frozenset({"external_phoneme_perplexity_v0"})
 
 
 def _sidecar_path(repo_root: Path, metric: str) -> Path:
@@ -377,7 +385,13 @@ def _score_one(
                 f"not loaded; pass --external-model-dir or rebuild with "
                 f"scripts/build_external_phoneme_models.py"
             )
-        mapping = dict(hypothesis["equation"]["sign_to_phoneme"])
+        # Equation hypotheses contribute one sign->phoneme mapping;
+        # signature hypotheses contribute the union over their roots.
+        # The metric is shape-agnostic: it just needs a partial mapping.
+        if "equation" in hypothesis:
+            mapping = dict(hypothesis["equation"]["sign_to_phoneme"])
+        else:
+            mapping = dict(signature_combined_mapping(hypothesis))
         result = external_phoneme_perplexity_v0(
             stream=stream, mapping=mapping, language_model=lm
         )
@@ -653,6 +667,7 @@ def run(
             record = None
             signs = None
             phonemes = None
+            shape: str | None = None
             pool_ctx: dict | None = None
             for metric_name in metrics:
                 key = (manifest_row["hypothesis_hash"], snapshot, metric_name)
@@ -663,21 +678,37 @@ def run(
                     hypothesis = load_and_validate(hyp_path)
                     h_hash = canonical_hash(hypothesis)
                     shape = detect_shape(hypothesis)
-                    if shape != SHAPE_CANDIDATE_EQUATION_V1:
+                    if shape not in (
+                        SHAPE_CANDIDATE_EQUATION_V1,
+                        SHAPE_CANDIDATE_SIGNATURE_V1,
+                    ):
                         raise ValueError(
-                            f"sweep runner expects candidate_equation.v1 hypotheses; "
+                            f"sweep runner expects candidate_equation.v1 or "
+                            f"candidate_signature.v1 hypotheses; "
                             f"{hyp_path} has shape {shape!r}"
                         )
                     if h_hash != manifest_row["hypothesis_hash"]:
                         raise RuntimeError(
                             f"manifest hash {manifest_row['hypothesis_hash']!r} "
                             f"!= recomputed {h_hash!r} for {hyp_path}; manifest is "
-                            f"stale, regenerate with scripts/generate_candidates.py"
+                            f"stale, regenerate with the relevant generator"
                         )
-                    equation = hypothesis["equation"]
-                    record = _resolve_inscription(records, equation["inscription_id"])
-                    signs = _signs_from_equation(record, equation)
-                    phonemes = list(hypothesis["root"]["phonemes"])
+                    if shape == SHAPE_CANDIDATE_EQUATION_V1:
+                        equation = hypothesis["equation"]
+                        record = _resolve_inscription(records, equation["inscription_id"])
+                        signs = _signs_from_equation(record, equation)
+                        phonemes = list(hypothesis["root"]["phonemes"])
+                    else:
+                        # candidate_signature.v1 — only consumed by metrics
+                        # that take a union sign->phoneme mapping. The
+                        # window's inscription is resolved for downstream
+                        # diagnostics; per-equation `signs` and `phonemes`
+                        # are not meaningful at the signature level.
+                        record = _resolve_inscription(
+                            records, hypothesis["window"]["inscription_id"]
+                        )
+                        signs = []
+                        phonemes = []
                     # Pool-specific bigram dispatch (mg-c2af). Forced
                     # override wins when supplied; otherwise look up
                     # by hypothesis.source_pool. Unmatched ⇒ None,
@@ -689,6 +720,15 @@ def run(
                         pool_ctx = (
                             pool_registry.get(src_pool) if src_pool else None
                         )
+                if (
+                    shape == SHAPE_CANDIDATE_SIGNATURE_V1
+                    and metric_name not in _SIGNATURE_METRICS
+                ):
+                    raise ValueError(
+                        f"metric {metric_name!r} does not support "
+                        f"candidate_signature.v1 hypotheses; supported: "
+                        f"{sorted(_SIGNATURE_METRICS)}"
+                    )
                 row = _score_one(
                     metric_name=metric_name,
                     hypothesis_path=hyp_path,

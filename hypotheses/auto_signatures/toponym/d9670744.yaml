@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_KH_7a_24_43_ida_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [24..43]
+  of KH 7a; 2 root(s) covering 6/9 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: KH 7a
+  span:
+  - 24
+  - 43
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB16: i
+    AB37: d
+    AB67: a
+  span_within_window:
+  - 2
+  - 4
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB81: i
+    AB70: d
+    AB38: a
+  span_within_window:
+  - 13
+  - 16
+coverage:
+  n_window_syllabograms: 9
+  n_covered_syllabograms: 6
+  fraction: 0.666667

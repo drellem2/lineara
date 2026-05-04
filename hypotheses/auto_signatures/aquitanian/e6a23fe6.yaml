@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_120_20_31_seni_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [20..31]
+  of HT 120; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 120
+  span:
+  - 20
+  - 31
+roots:
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB67: s
+    AB27: e
+    AB59: n
+    AB06: i
+  span_within_window:
+  - 1
+  - 4
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB03: u
+    AB28: r
+  span_within_window:
+  - 10
+  - 11
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

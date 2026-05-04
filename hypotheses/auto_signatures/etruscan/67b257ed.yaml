@@ -1,0 +1,37 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_49a_22_29_thu_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [22..29]
+  of HT 49a; 2 root(s) covering 4/4 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 49a
+  span:
+  - 22
+  - 29
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB41: th
+    AB60: u
+  span_within_window:
+  - 2
+  - 3
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB08: th
+    AB26: u
+  span_within_window:
+  - 5
+  - 6
+coverage:
+  n_window_syllabograms: 4
+  n_covered_syllabograms: 4
+  fraction: 1.0

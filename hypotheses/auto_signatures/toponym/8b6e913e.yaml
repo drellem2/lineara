@@ -1,0 +1,45 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ARKH_2_9_18_thera_thera
+description: 'Auto-generated candidate signature: pool=''toponym'' window [9..18]
+  of ARKH 2; 2 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 18
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB41: th
+    AB01: e
+    AB05: r
+    AB28: a
+  span_within_window:
+  - 0
+  - 3
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB79: th
+    A301: e
+    AB09: r
+    AB45: a
+  span_within_window:
+  - 5
+  - 8
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

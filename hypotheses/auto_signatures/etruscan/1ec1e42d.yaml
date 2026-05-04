@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_ARKH_5_2_9_zal_zal
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [2..9]
+  of ARKH 5; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: ARKH 5
+  span:
+  - 2
+  - 9
+roots:
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB30: z
+    AB59: a
+    AB06: l
+  span_within_window:
+  - 0
+  - 2
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB08: z
+    AB01: a
+    AB02: l
+  span_within_window:
+  - 4
+  - 6
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_24a_0_19_thera_kor
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..19]
+  of HT 24a; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 24a
+  span:
+  - 0
+  - 19
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB81: th
+    AB56: e
+    AB53: r
+    AB57: a
+  span_within_window:
+  - 0
+  - 3
+- surface: kor
+  phonemes:
+  - k
+  - o
+  - r
+  sign_to_phoneme:
+    AB03: k
+    AB31: o
+    AB53: r
+  span_within_window:
+  - 17
+  - 19
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

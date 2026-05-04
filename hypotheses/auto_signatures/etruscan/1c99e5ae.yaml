@@ -1,0 +1,51 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_KN_Zc_7_3_12_thu_zal_apa
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [3..12]
+  of KN Zc 7; 3 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: KN Zc 7
+  span:
+  - 3
+  - 12
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB74: th
+    AB37: u
+  span_within_window:
+  - 0
+  - 1
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB51: z
+    AB60: a
+    AB27: l
+  span_within_window:
+  - 3
+  - 5
+- surface: apa
+  phonemes:
+  - a
+  - p
+  - a
+  sign_to_phoneme:
+    AB08: a
+    AB79: p
+    AB60: a
+  span_within_window:
+  - 7
+  - 9
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

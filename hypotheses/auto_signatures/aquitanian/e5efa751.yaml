@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_KH_7a_10_25_lur_seni
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [10..25]
+  of KH 7a; 2 root(s) covering 7/9 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: KH 7a
+  span:
+  - 10
+  - 25
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB38: l
+    AB06: u
+    AB41: r
+  span_within_window:
+  - 0
+  - 2
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB28: s
+    AB57: e
+    AB03: n
+    AB13: i
+  span_within_window:
+  - 8
+  - 11
+coverage:
+  n_window_syllabograms: 9
+  n_covered_syllabograms: 7
+  fraction: 0.777778

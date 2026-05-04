@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_MA_2c_0_7_ur_ilun
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..7]
+  of MA 2c; 2 root(s) covering 6/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: MA 2c
+  span:
+  - 0
+  - 7
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB10: u
+    AB06: r
+  span_within_window:
+  - 0
+  - 1
+- surface: ilun
+  phonemes:
+  - i
+  - l
+  - u
+  - n
+  sign_to_phoneme:
+    AB57: i
+    AB80: l
+    AB10: u
+    AB37: n
+  span_within_window:
+  - 4
+  - 7
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 6
+  fraction: 0.857143

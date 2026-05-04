@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ZA_8_26_33_ida_ndos
+description: 'Auto-generated candidate signature: pool=''toponym'' window [26..33]
+  of ZA 8; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ZA 8
+  span:
+  - 26
+  - 33
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB77: i
+    AB28: d
+    AB09: a
+  span_within_window:
+  - 0
+  - 2
+- surface: ndos
+  phonemes:
+  - n
+  - d
+  - o
+  - s
+  sign_to_phoneme:
+    AB01: n
+    AB28: d
+    AB39: o
+    AB59: s
+  span_within_window:
+  - 4
+  - 7
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

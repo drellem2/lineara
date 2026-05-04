@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_24a_16_27_semph_zal
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [16..27]
+  of HT 24a; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 24a
+  span:
+  - 16
+  - 27
+roots:
+- surface: semph
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  sign_to_phoneme:
+    AB03: s
+    AB31: e
+    AB53: m
+    AB57: ph
+  span_within_window:
+  - 1
+  - 4
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB26: z
+    AB28: a
+    AB70: l
+  span_within_window:
+  - 8
+  - 11
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

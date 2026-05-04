@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ARKH_4a_14_21_ida_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [14..21]
+  of ARKH 4a; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ARKH 4a
+  span:
+  - 14
+  - 21
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB58: i
+    AB47: d
+    AB04: a
+  span_within_window:
+  - 0
+  - 3
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB39: i
+    AB37: d
+    AB24: a
+  span_within_window:
+  - 5
+  - 7
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

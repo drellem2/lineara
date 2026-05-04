@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_96b_2_9_ur_ilun
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [2..9]
+  of HT 96b; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 96b
+  span:
+  - 2
+  - 9
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB60: u
+    AB24: r
+  span_within_window:
+  - 0
+  - 1
+- surface: ilun
+  phonemes:
+  - i
+  - l
+  - u
+  - n
+  sign_to_phoneme:
+    AB16: i
+    AB118: l
+    AB60: u
+    AB27: n
+  span_within_window:
+  - 3
+  - 6
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

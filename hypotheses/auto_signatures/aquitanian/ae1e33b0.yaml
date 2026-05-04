@@ -1,0 +1,55 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_95a_12_31_ur_ur_arreba
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [12..31]
+  of HT 95a; 3 root(s) covering 10/11 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 95a
+  span:
+  - 12
+  - 31
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB31: u
+    AB26: r
+  span_within_window:
+  - 2
+  - 3
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB81: u
+    AB30: r
+  span_within_window:
+  - 5
+  - 6
+- surface: arreba
+  phonemes:
+  - a
+  - r
+  - r
+  - e
+  - b
+  - a
+  sign_to_phoneme:
+    AB07: a
+    AB45: r
+    AB26: r
+    AB78: e
+    AB76: b
+    AB10: a
+  span_within_window:
+  - 9
+  - 14
+coverage:
+  n_window_syllabograms: 11
+  n_covered_syllabograms: 10
+  fraction: 0.909091

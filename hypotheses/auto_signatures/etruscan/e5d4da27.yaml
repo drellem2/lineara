@@ -1,0 +1,47 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_SY_Za_4_0_11_zathrum_thui
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [0..11]
+  of SY Za 4; 2 root(s) covering 9/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 11
+roots:
+- surface: zathrum
+  phonemes:
+  - z
+  - a
+  - th
+  - r
+  - u
+  - m
+  sign_to_phoneme:
+    AB08: z
+    AB59: a
+    AB28: th
+    A301: r
+    AB54: u
+    AB57: m
+  span_within_window:
+  - 0
+  - 5
+- surface: thui
+  phonemes:
+  - th
+  - u
+  - i
+  sign_to_phoneme:
+    AB28: th
+    AB48: u
+    AB17: i
+  span_within_window:
+  - 8
+  - 10
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 9
+  fraction: 0.9

@@ -1,0 +1,53 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ZA_5b_0_12_ida_ida_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..12]
+  of ZA 5b; 3 root(s) covering 9/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ZA 5b
+  span:
+  - 0
+  - 12
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB55: i
+    AB80: d
+    AB27: a
+  span_within_window:
+  - 1
+  - 3
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB41: i
+    AB39: d
+    AB67: a
+  span_within_window:
+  - 5
+  - 7
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB77: i
+    AB28: d
+    AB59: a
+  span_within_window:
+  - 10
+  - 12
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 9
+  fraction: 0.9

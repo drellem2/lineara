@@ -1,0 +1,45 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_KH_5_0_15_paros_par
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..15]
+  of KH 5; 2 root(s) covering 8/13 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: KH 5
+  span:
+  - 0
+  - 15
+roots:
+- surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  sign_to_phoneme:
+    AB08: p
+    AB01: a
+    AB67: r
+    AB41: o
+    AB77: s
+  span_within_window:
+  - 0
+  - 4
+- surface: par
+  phonemes:
+  - p
+  - a
+  - r
+  sign_to_phoneme:
+    AB08: p
+    AB60: a
+    AB10: r
+  span_within_window:
+  - 6
+  - 8
+coverage:
+  n_window_syllabograms: 13
+  n_covered_syllabograms: 8
+  fraction: 0.615385

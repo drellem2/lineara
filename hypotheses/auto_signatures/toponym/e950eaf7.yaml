@@ -1,0 +1,49 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ARKH_2_5_20_paros_paros
+description: 'Auto-generated candidate signature: pool=''toponym'' window [5..20]
+  of ARKH 2; 2 root(s) covering 10/11 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ARKH 2
+  span:
+  - 5
+  - 20
+roots:
+- surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  sign_to_phoneme:
+    AB08: p
+    AB41: a
+    AB01: r
+    AB05: o
+    AB28: s
+  span_within_window:
+  - 3
+  - 7
+- surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  sign_to_phoneme:
+    AB79: p
+    A301: a
+    AB09: r
+    AB45: o
+    AB118: s
+  span_within_window:
+  - 9
+  - 14
+coverage:
+  n_window_syllabograms: 11
+  n_covered_syllabograms: 10
+  fraction: 0.909091

@@ -1,0 +1,47 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_135a_3_12_thu_thu_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [3..12]
+  of HT 135a; 3 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 135a
+  span:
+  - 3
+  - 12
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB73: th
+    AB69: u
+  span_within_window:
+  - 1
+  - 2
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB73: th
+    AB77: u
+  span_within_window:
+  - 4
+  - 5
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB06: th
+    AB24: u
+  span_within_window:
+  - 7
+  - 9
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

@@ -1,0 +1,50 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_KN_Zf_13_4_15_nescato_atta
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [4..15]
+  of KN Zf 13; 2 root(s) covering 11/12 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 15
+roots:
+- surface: nescato
+  phonemes:
+  - n
+  - e
+  - s
+  - c
+  - a
+  - t
+  - o
+  sign_to_phoneme:
+    AB07: n
+    A301: e
+    AB39: s
+    AB44: c
+    AB03: a
+    AB57: t
+    AB59: o
+  span_within_window:
+  - 0
+  - 6
+- surface: atta
+  phonemes:
+  - a
+  - t
+  - t
+  - a
+  sign_to_phoneme:
+    AB53: a
+    AB09: t
+    AB04: t
+  span_within_window:
+  - 7
+  - 10
+coverage:
+  n_window_syllabograms: 12
+  n_covered_syllabograms: 11
+  fraction: 0.916667

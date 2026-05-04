@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_ZA_14_15_24_ur_sembe
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [15..24]
+  of ZA 14; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: ZA 14
+  span:
+  - 15
+  - 24
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB81: u
+    AB39: r
+  span_within_window:
+  - 1
+  - 2
+- surface: sembe
+  phonemes:
+  - s
+  - e
+  - m
+  - b
+  - e
+  sign_to_phoneme:
+    AB69: s
+    AB73: e
+    AB37: m
+    AB17: b
+    AB09: e
+  span_within_window:
+  - 4
+  - 8
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

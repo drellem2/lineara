@@ -1,0 +1,67 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_104_6_25_seni_iri_seni_su
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [6..25]
+  of HT 104; 4 root(s) covering 13/13 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 104
+  span:
+  - 6
+  - 25
+roots:
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB81: s
+    AB09: e
+    AB24: n
+    AB37: i
+  span_within_window:
+  - 0
+  - 3
+- surface: iri
+  phonemes:
+  - i
+  - r
+  - i
+  sign_to_phoneme:
+    AB28: i
+    AB51: r
+    AB37: i
+  span_within_window:
+  - 7
+  - 9
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB03: s
+    AB01: e
+    AB58: n
+    AB37: i
+  span_within_window:
+  - 13
+  - 16
+- surface: su
+  phonemes:
+  - s
+  - u
+  sign_to_phoneme:
+    AB81: s
+    AB02: u
+  span_within_window:
+  - 18
+  - 19
+coverage:
+  n_window_syllabograms: 13
+  n_covered_syllabograms: 13
+  fraction: 1.0

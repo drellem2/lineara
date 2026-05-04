@@ -1,0 +1,39 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_TY_3a_30_49_ur_lur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [30..49]
+  of TY 3a; 2 root(s) covering 5/5 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: TY 3a
+  span:
+  - 30
+  - 49
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: u
+    AB01: r
+  span_within_window:
+  - 10
+  - 11
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB70: l
+    AB08: u
+    AB51: r
+  span_within_window:
+  - 17
+  - 19
+coverage:
+  n_window_syllabograms: 5
+  n_covered_syllabograms: 5
+  fraction: 1.0

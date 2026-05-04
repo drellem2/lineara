@@ -1,0 +1,42 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_PS_Za_2_12_19_ssos_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [12..19]
+  of PS Za 2; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: PS Za 2
+  span:
+  - 12
+  - 19
+roots:
+- surface: ssos
+  phonemes:
+  - s
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB31: s
+    AB60: o
+    AB13: s
+  span_within_window:
+  - 0
+  - 3
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB27: i
+    AB28: d
+    AB44: a
+  span_within_window:
+  - 5
+  - 7
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

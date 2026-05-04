@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/drellem2/lineara/harness/schemas/hypothesis.candidate_signature.v1.schema.json",
+  "title": "Lineara candidate-signature hypothesis (v1)",
+  "description": "Multi-root hypothesis (mg-bef2, harness v9). A *signature* proposes that a window of an inscription jointly admits a SET of substrate roots that together cover most of the syllabograms in the window. The union of all roots' sign_to_phoneme entries forms a single non-conflicting partial sign->phoneme mapping; downstream metrics that consume a partial mapping (notably external_phoneme_perplexity_v0) score that union directly. Distinct from candidate_equation.v1 (one root per equation), this shape preserves the co-occurrence structure of real lexicons (kinship + kinship, accountancy + accountancy).",
+  "type": "object",
+  "required": ["schema_version", "name", "window", "roots"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "candidate_signature.v1",
+      "description": "Discriminator. The harness loader dispatches on this field."
+    },
+    "name": {
+      "type": "string",
+      "description": "Stable slug; should match the file basename. Mixed case permitted so inscription IDs (HT, ZA, KH, ...) read naturally.",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_]*$",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "description": {
+      "type": "string",
+      "description": "Free-form prose describing the hypothesis."
+    },
+    "author": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string",
+      "description": "ISO-8601 date the hypothesis was authored."
+    },
+    "source_pool": {
+      "type": "string",
+      "description": "Substrate pool tag the roots are drawn from. Used by the sweep runner to dispatch the external language model."
+    },
+    "window": {
+      "type": "object",
+      "required": ["inscription_id", "span"],
+      "additionalProperties": false,
+      "properties": {
+        "inscription_id": {
+          "type": "string",
+          "description": "Corpus record id (e.g. 'HT 31').",
+          "minLength": 1
+        },
+        "span": {
+          "type": "array",
+          "description": "Inclusive [start, end] over the inscription's tokens[] array.",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    },
+    "roots": {
+      "type": "array",
+      "description": "Ordered list of root placements within the window. Spans must be non-overlapping; sign_to_phoneme entries across roots must not assign a single sign to two different phonemes.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["surface", "phonemes", "sign_to_phoneme", "span_within_window"],
+        "additionalProperties": false,
+        "properties": {
+          "surface": {
+            "type": "string",
+            "description": "Surface form of the root (orthographic).",
+            "minLength": 1
+          },
+          "phonemes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "gloss_hint": {
+            "type": "string"
+          },
+          "citation": {
+            "type": "string"
+          },
+          "sign_to_phoneme": {
+            "type": "object",
+            "description": "Sign -> phoneme map for the syllabograms covered by THIS root. Keys are corpus sign tokens that fall within the root's span; one entry per distinct sign. The same sign may appear at multiple positions within the root if it maps to the same phoneme everywhere (e.g. ama: AB05 -> a, AB10 -> m, AB05 -> a collapses to {AB05: a, AB10: m}).",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "span_within_window": {
+            "type": "array",
+            "description": "Inclusive [start, end] offsets relative to window.span[0]. Must be within the window and not overlap any other root's span.",
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "description": "Coverage statistics persisted at generation time. Recomputed and validated against the active corpus when the hypothesis is loaded.",
+      "additionalProperties": false,
+      "properties": {
+        "n_window_syllabograms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "n_covered_syllabograms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fraction": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

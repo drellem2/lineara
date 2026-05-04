@@ -1,0 +1,47 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_93a_32_43_thu_thu_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [32..43]
+  of HT 93a; 3 root(s) covering 6/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 93a
+  span:
+  - 32
+  - 43
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB31: th
+    AB76: u
+  span_within_window:
+  - 1
+  - 2
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB16: th
+    AB26: u
+  span_within_window:
+  - 5
+  - 6
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB100: th
+    AB28: u
+  span_within_window:
+  - 10
+  - 11
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 6
+  fraction: 0.857143

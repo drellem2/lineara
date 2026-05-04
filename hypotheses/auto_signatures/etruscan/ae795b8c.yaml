@@ -1,0 +1,48 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_10a_25_40_thu_apa_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [25..40]
+  of HT 10a; 3 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 10a
+  span:
+  - 25
+  - 40
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    A305: th
+    AB26: u
+  span_within_window:
+  - 3
+  - 4
+- surface: apa
+  phonemes:
+  - a
+  - p
+  - a
+  sign_to_phoneme:
+    AB01: a
+    AB53: p
+  span_within_window:
+  - 8
+  - 10
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB13: th
+    AB17: u
+  span_within_window:
+  - 12
+  - 13
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

@@ -1,0 +1,47 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_KH_10_0_18_thera_paros
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..18]
+  of KH 10; 2 root(s) covering 9/11 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: KH 10
+  span:
+  - 0
+  - 18
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB28: th
+    AB03: e
+    AB31: r
+    AB57: a
+  span_within_window:
+  - 4
+  - 7
+- surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  sign_to_phoneme:
+    AB08: p
+    AB67: a
+    AB39: r
+    AB38: o
+    AB04: s
+  span_within_window:
+  - 12
+  - 16
+coverage:
+  n_window_syllabograms: 11
+  n_covered_syllabograms: 9
+  fraction: 0.818182

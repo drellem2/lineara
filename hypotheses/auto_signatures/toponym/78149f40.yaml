@@ -1,0 +1,45 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_TY_3a_45_60_thera_efe
+description: 'Auto-generated candidate signature: pool=''toponym'' window [45..60]
+  of TY 3a; 2 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: TY 3a
+  span:
+  - 45
+  - 60
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB70: th
+    AB08: e
+    AB51: r
+    AB54: a
+  span_within_window:
+  - 2
+  - 5
+- surface: efe
+  phonemes:
+  - e
+  - p
+  - h
+  - e
+  sign_to_phoneme:
+    AB08: e
+    AB81: p
+    AB69: h
+    A361: e
+  span_within_window:
+  - 11
+  - 14
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

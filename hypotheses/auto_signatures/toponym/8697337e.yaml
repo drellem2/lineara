@@ -1,0 +1,54 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_1_0_19_ida_ssos_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..19]
+  of HT 1; 3 root(s) covering 10/15 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 1
+  span:
+  - 0
+  - 19
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB78: i
+    AB76: d
+    AB10: a
+  span_within_window:
+  - 0
+  - 2
+- surface: ssos
+  phonemes:
+  - s
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB07: s
+    AB17: o
+    AB44: s
+  span_within_window:
+  - 10
+  - 13
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB81: i
+    AB56: d
+    AB55: a
+  span_within_window:
+  - 15
+  - 17
+coverage:
+  n_window_syllabograms: 15
+  n_covered_syllabograms: 10
+  fraction: 0.666667

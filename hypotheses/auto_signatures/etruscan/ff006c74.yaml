@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_ZA_9_12_23_zal_zal
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [12..23]
+  of ZA 9; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: ZA 9
+  span:
+  - 12
+  - 23
+roots:
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB02: z
+    AB41: a
+    AB60: l
+  span_within_window:
+  - 2
+  - 4
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB08: z
+    AB59: a
+    AB06: l
+  span_within_window:
+  - 8
+  - 10
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

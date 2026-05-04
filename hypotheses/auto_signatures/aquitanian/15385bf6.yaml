@@ -1,0 +1,68 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_96a_0_19_atta_seni_sei_lur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..19]
+  of HT 96a; 4 root(s) covering 14/15 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 96a
+  span:
+  - 0
+  - 19
+roots:
+- surface: atta
+  phonemes:
+  - a
+  - t
+  - t
+  - a
+  sign_to_phoneme:
+    AB28: a
+    AB37: t
+    AB81: a
+  span_within_window:
+  - 0
+  - 3
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB08: s
+    AB03: e
+    AB60: n
+    AB24: i
+  span_within_window:
+  - 6
+  - 9
+- surface: sei
+  phonemes:
+  - s
+  - e
+  - i
+  sign_to_phoneme:
+    AB08: s
+    AB123: e
+    AB04: i
+  span_within_window:
+  - 11
+  - 13
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB41: l
+    AB73: u
+    AB59: r
+  span_within_window:
+  - 15
+  - 17
+coverage:
+  n_window_syllabograms: 15
+  n_covered_syllabograms: 14
+  fraction: 0.933333

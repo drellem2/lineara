@@ -1,0 +1,37 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_8b_8_19_thu_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [8..19]
+  of HT 8b; 2 root(s) covering 4/4 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 8b
+  span:
+  - 8
+  - 19
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    A310: th
+    AB28: u
+  span_within_window:
+  - 0
+  - 1
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB77: th
+    AB03: u
+  span_within_window:
+  - 7
+  - 8
+coverage:
+  n_window_syllabograms: 4
+  n_covered_syllabograms: 4
+  fraction: 1.0

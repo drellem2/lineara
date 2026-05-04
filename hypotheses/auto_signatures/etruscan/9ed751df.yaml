@@ -1,0 +1,48 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_KN_Zf_13_9_18_penthuna_apa
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [9..18]
+  of KN Zf 13; 2 root(s) covering 10/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: KN Zf 13
+  span:
+  - 9
+  - 18
+roots:
+- surface: penthuna
+  phonemes:
+  - p
+  - e
+  - n
+  - th
+  - u
+  - n
+  - a
+  sign_to_phoneme:
+    AB57: p
+    AB59: e
+    AB53: n
+    AB09: th
+    AB04: u
+    AB23: a
+  span_within_window:
+  - 0
+  - 6
+- surface: apa
+  phonemes:
+  - a
+  - p
+  - a
+  sign_to_phoneme:
+    AB08: a
+    AB57: p
+    AB81: a
+  span_within_window:
+  - 7
+  - 9
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 10
+  fraction: 1.0

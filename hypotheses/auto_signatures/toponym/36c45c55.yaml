@@ -1,0 +1,42 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ZA_11a_0_15_ssos_sos
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..15]
+  of ZA 11a; 2 root(s) covering 7/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ZA 11a
+  span:
+  - 0
+  - 15
+roots:
+- surface: ssos
+  phonemes:
+  - s
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB07: s
+    AB70: o
+    AB60: s
+  span_within_window:
+  - 0
+  - 3
+- surface: sos
+  phonemes:
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB60: s
+    AB80: o
+    AB41: s
+  span_within_window:
+  - 11
+  - 13
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 7
+  fraction: 0.7

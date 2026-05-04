@@ -1,0 +1,39 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_PS_Za_2_10_17_thu_uni
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [10..17]
+  of PS Za 2; 2 root(s) covering 5/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: PS Za 2
+  span:
+  - 10
+  - 17
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB57: th
+    AB31: u
+  span_within_window:
+  - 1
+  - 2
+- surface: uni
+  phonemes:
+  - u
+  - n
+  - i
+  sign_to_phoneme:
+    AB31: u
+    AB60: n
+    AB13: i
+  span_within_window:
+  - 3
+  - 5
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 5
+  fraction: 0.833333

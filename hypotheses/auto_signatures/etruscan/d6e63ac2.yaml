@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_PH_6_6_15_cealch_sa
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [6..15]
+  of PH 6; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: PH 6
+  span:
+  - 6
+  - 15
+roots:
+- surface: cealch
+  phonemes:
+  - c
+  - e
+  - a
+  - l
+  - ch
+  sign_to_phoneme:
+    AB28: c
+    AB79: e
+    AB53: a
+    AB30: l
+    AB59: ch
+  span_within_window:
+  - 1
+  - 5
+- surface: sa
+  phonemes:
+  - s
+  - a
+  sign_to_phoneme:
+    AB08: s
+    AB53: a
+  span_within_window:
+  - 7
+  - 8
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

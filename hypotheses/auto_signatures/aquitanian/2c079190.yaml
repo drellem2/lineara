@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_KN_Zb_40_0_6_lur_hil
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..6]
+  of KN Zb 40; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: KN Zb 40
+  span:
+  - 0
+  - 6
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: l
+    AB03: u
+    AB67: r
+  span_within_window:
+  - 0
+  - 2
+- surface: hil
+  phonemes:
+  - h
+  - i
+  - l
+  sign_to_phoneme:
+    AB10: h
+    AB06: i
+    AB08: l
+  span_within_window:
+  - 4
+  - 6
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

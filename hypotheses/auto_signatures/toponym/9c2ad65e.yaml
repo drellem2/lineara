@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ZA_20_10_25_ida_thera
+description: 'Auto-generated candidate signature: pool=''toponym'' window [10..25]
+  of ZA 20; 2 root(s) covering 7/11 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ZA 20
+  span:
+  - 10
+  - 25
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB41: i
+    AB04: d
+    AB69: a
+  span_within_window:
+  - 1
+  - 3
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB26: th
+    AB80: e
+    AB59: r
+    AB09: a
+  span_within_window:
+  - 11
+  - 14
+coverage:
+  n_window_syllabograms: 11
+  n_covered_syllabograms: 7
+  fraction: 0.636364

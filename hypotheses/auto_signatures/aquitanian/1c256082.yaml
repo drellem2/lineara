@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_93a_5_20_lur_ile
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [5..20]
+  of HT 93a; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 93a
+  span:
+  - 5
+  - 20
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB07: l
+    AB53: u
+    AB06: r
+  span_within_window:
+  - 3
+  - 5
+- surface: ile
+  phonemes:
+  - i
+  - l
+  - e
+  sign_to_phoneme:
+    AB67: i
+    AB07: l
+    AB30: e
+  span_within_window:
+  - 11
+  - 13
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

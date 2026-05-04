@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_28b_3_12_semph_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [3..12]
+  of HT 28b; 2 root(s) covering 6/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 28b
+  span:
+  - 3
+  - 12
+roots:
+- surface: semph
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  sign_to_phoneme:
+    AB10: s
+    AB73: e
+    AB06: m
+    AB41: ph
+  span_within_window:
+  - 2
+  - 5
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB31: th
+    AB76: u
+  span_within_window:
+  - 7
+  - 8
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 6
+  fraction: 0.857143

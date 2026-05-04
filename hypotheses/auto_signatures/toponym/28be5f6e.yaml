@@ -1,0 +1,42 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_85b_0_19_ssos_sos
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..19]
+  of HT 85b; 2 root(s) covering 7/11 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 85b
+  span:
+  - 0
+  - 19
+roots:
+- surface: ssos
+  phonemes:
+  - s
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB67: s
+    AB60: o
+    AB57: s
+  span_within_window:
+  - 0
+  - 3
+- surface: sos
+  phonemes:
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB67: s
+    AB27: o
+    AB66: s
+  span_within_window:
+  - 5
+  - 7
+coverage:
+  n_window_syllabograms: 11
+  n_covered_syllabograms: 7
+  fraction: 0.636364

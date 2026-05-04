@@ -1,0 +1,47 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_SY_Za_4_0_11_itanos_aso
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..11]
+  of SY Za 4; 2 root(s) covering 9/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 11
+roots:
+- surface: itanos
+  phonemes:
+  - i
+  - t
+  - a
+  - n
+  - o
+  - s
+  sign_to_phoneme:
+    AB08: i
+    AB59: t
+    AB28: a
+    A301: n
+    AB54: o
+    AB57: s
+  span_within_window:
+  - 0
+  - 5
+- surface: aso
+  phonemes:
+  - a
+  - s
+  - o
+  sign_to_phoneme:
+    AB28: a
+    AB48: s
+    AB17: o
+  span_within_window:
+  - 8
+  - 10
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 9
+  fraction: 0.9

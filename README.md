@@ -133,3 +133,38 @@ python3 scripts/rollup.py --top 25 --by source-pool \
 ```
 
 The harness depends on `pyyaml` and `jsonschema`; install with `pip install pyyaml jsonschema`.
+
+## Multi-root signatures (v9)
+
+Harness v9 (mg-bef2) adds a third hypothesis shape, `candidate_signature.v1`,
+that pins a SET of substrate roots to non-overlapping subspans of one
+inscription window. The union of the roots' sign->phoneme mappings is
+the partial mapping consumed by `external_phoneme_perplexity_v0`.
+Schema: `harness/schemas/hypothesis.candidate_signature.v1.schema.json`.
+
+```bash
+# Generate substrate signatures for one pool (deterministic + idempotent).
+python3 scripts/generate_signatures.py --pool aquitanian
+
+# Build matched controls (one per substrate signature).
+python3 scripts/generate_signature_controls.py --pool aquitanian
+
+# Score substrate + control signatures under the existing v8 LM metric.
+python3 scripts/run_sweep.py \
+    --manifest hypotheses/auto_signatures/aquitanian.manifest.jsonl \
+    --metrics external_phoneme_perplexity_v0
+python3 scripts/run_sweep.py \
+    --manifest hypotheses/auto_signatures/control_aquitanian.manifest.jsonl \
+    --metrics external_phoneme_perplexity_v0
+
+# Roll up the per-window paired_diff and emit the per-pool acceptance gate.
+python3 scripts/paired_diff_signature_rollup.py
+```
+
+Per-pool aggregation is by sorted root-surface tuple (the multi-root
+analogue of v8's per-surface aggregation). Acceptance gate:
+`Wilcoxon signed-rank one-tail p < 0.05` on per-surface-set medians AND
+`mean per-surface-set median > 0`. mg-bef2's v9 sweep failed the gate
+in all three substrate pools — see `docs/findings.md` and
+`results/rollup.paired_diff.signature.md` for the headline numbers and
+the polecat's per-surface-bayesian-posterior reframe sketch.

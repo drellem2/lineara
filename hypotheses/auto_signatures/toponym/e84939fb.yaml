@@ -1,0 +1,47 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ZA_10a_20_31_paros_thera
+description: 'Auto-generated candidate signature: pool=''toponym'' window [20..31]
+  of ZA 10a; 2 root(s) covering 9/9 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ZA 10a
+  span:
+  - 20
+  - 31
+roots:
+- surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  sign_to_phoneme:
+    AB08: p
+    AB51: a
+    AB81: r
+    AB73: o
+    AB06: s
+  span_within_window:
+  - 1
+  - 5
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB01: th
+    AB28: e
+    AB39: r
+    AB59: a
+  span_within_window:
+  - 7
+  - 10
+coverage:
+  n_window_syllabograms: 9
+  n_covered_syllabograms: 9
+  fraction: 1.0

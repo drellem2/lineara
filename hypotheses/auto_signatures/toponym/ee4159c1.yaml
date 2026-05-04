@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_KN_Zc_7_2_9_ida_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [2..9] of
+  KN Zc 7; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: KN Zc 7
+  span:
+  - 2
+  - 9
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB55: i
+    AB74: d
+    AB37: a
+  span_within_window:
+  - 0
+  - 2
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB51: i
+    AB60: d
+    AB27: a
+  span_within_window:
+  - 4
+  - 6
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

@@ -1,0 +1,44 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_PH_6_8_19_thera_ssos
+description: 'Auto-generated candidate signature: pool=''toponym'' window [8..19]
+  of PH 6; 2 root(s) covering 8/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: PH 6
+  span:
+  - 8
+  - 19
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB79: th
+    AB53: e
+    AB30: r
+    AB59: a
+  span_within_window:
+  - 0
+  - 3
+- surface: ssos
+  phonemes:
+  - s
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB28: s
+    AB01: s
+    AB56: o
+  span_within_window:
+  - 8
+  - 11
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 8
+  fraction: 0.8

@@ -1,0 +1,37 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_PH_31a_24_31_thu_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [24..31]
+  of PH 31a; 2 root(s) covering 4/4 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: PH 31a
+  span:
+  - 24
+  - 31
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB59: th
+    AB01: u
+  span_within_window:
+  - 0
+  - 1
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB81: th
+    AB02: u
+  span_within_window:
+  - 3
+  - 4
+coverage:
+  n_window_syllabograms: 4
+  n_covered_syllabograms: 4
+  fraction: 1.0

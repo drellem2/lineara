@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_TY_3b_0_15_zal_zal
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [0..15]
+  of TY 3b; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: TY 3b
+  span:
+  - 0
+  - 15
+roots:
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB67: z
+    AB53: a
+    AB41: l
+  span_within_window:
+  - 0
+  - 2
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB39: z
+    AB81: a
+    AB79: l
+  span_within_window:
+  - 8
+  - 10
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

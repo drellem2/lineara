@@ -1,0 +1,61 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_KN_Zf_13_0_18_halikarnassos_sos
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..18]
+  of KN Zf 13; 2 root(s) covering 16/19 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 18
+roots:
+- surface: halikarnassos
+  phonemes:
+  - h
+  - a
+  - l
+  - i
+  - k
+  - a
+  - r
+  - n
+  - a
+  - s
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB08: h
+    AB27: a
+    AB24: l
+    AB41: i
+    AB07: k
+    A301: a
+    AB39: r
+    AB44: n
+    AB03: a
+    AB57: s
+    AB59: s
+    AB53: o
+    AB09: s
+  span_within_window:
+  - 0
+  - 12
+- surface: sos
+  phonemes:
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB04: s
+    AB53: o
+    AB23: s
+  span_within_window:
+  - 13
+  - 15
+coverage:
+  n_window_syllabograms: 19
+  n_covered_syllabograms: 16
+  fraction: 0.842105

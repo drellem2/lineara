@@ -1,0 +1,55 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_115a_30_45_ida_thera_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [30..45]
+  of HT 115a; 3 root(s) covering 10/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 115a
+  span:
+  - 30
+  - 45
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB03: i
+    AB60: d
+    AB24: a
+  span_within_window:
+  - 3
+  - 5
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB08: th
+    AB09: e
+    AB57: r
+    A718: a
+  span_within_window:
+  - 7
+  - 10
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB77: i
+    AB11: d
+    AB26: a
+  span_within_window:
+  - 12
+  - 14
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 10
+  fraction: 1.0

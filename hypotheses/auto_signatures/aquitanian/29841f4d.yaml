@@ -1,0 +1,39 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_ZA_15a_15_24_ur_lur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [15..24]
+  of ZA 15a; 2 root(s) covering 5/5 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: ZA 15a
+  span:
+  - 15
+  - 24
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB30: u
+    AB31: r
+  span_within_window:
+  - 0
+  - 1
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB73: l
+    AB17: u
+    AB09: r
+  span_within_window:
+  - 5
+  - 7
+coverage:
+  n_window_syllabograms: 5
+  n_covered_syllabograms: 5
+  fraction: 1.0

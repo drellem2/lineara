@@ -1,0 +1,40 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_47a_12_23_zal_apa
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [12..23]
+  of HT 47a; 2 root(s) covering 6/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 47a
+  span:
+  - 12
+  - 23
+roots:
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB67: z
+    AB01: a
+    AB02: l
+  span_within_window:
+  - 3
+  - 5
+- surface: apa
+  phonemes:
+  - a
+  - p
+  - a
+  sign_to_phoneme:
+    AB73: a
+    AB55: p
+  span_within_window:
+  - 9
+  - 11
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 6
+  fraction: 0.857143

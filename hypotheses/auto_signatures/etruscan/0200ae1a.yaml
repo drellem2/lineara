@@ -1,0 +1,74 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_87_12_31_zal_zal_zal_apa_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [12..31]
+  of HT 87; 5 root(s) covering 14/15 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 87
+  span:
+  - 12
+  - 31
+roots:
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB57: z
+    AB27: a
+    AB73: l
+  span_within_window:
+  - 2
+  - 4
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB07: z
+    AB67: a
+    AB09: l
+  span_within_window:
+  - 6
+  - 8
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB78: z
+    AB58: a
+    AB50: l
+  span_within_window:
+  - 10
+  - 12
+- surface: apa
+  phonemes:
+  - a
+  - p
+  - a
+  sign_to_phoneme:
+    AB81: a
+    AB26: p
+  span_within_window:
+  - 14
+  - 16
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB08: th
+    AB60: u
+  span_within_window:
+  - 18
+  - 19
+coverage:
+  n_window_syllabograms: 15
+  n_covered_syllabograms: 14
+  fraction: 0.933333

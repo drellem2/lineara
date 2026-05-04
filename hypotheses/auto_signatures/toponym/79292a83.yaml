@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_KN_Zb_40_0_6_ida_ami
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..6] of
+  KN Zb 40; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: KN Zb 40
+  span:
+  - 0
+  - 6
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB08: i
+    AB03: d
+    AB67: a
+  span_within_window:
+  - 0
+  - 2
+- surface: ami
+  phonemes:
+  - a
+  - m
+  - i
+  sign_to_phoneme:
+    AB10: a
+    AB06: m
+    AB08: i
+  span_within_window:
+  - 4
+  - 6
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

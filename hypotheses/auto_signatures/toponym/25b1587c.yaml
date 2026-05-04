@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_PH_28a_0_11_ida_ami
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..11]
+  of PH 28a; 2 root(s) covering 6/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: PH 28a
+  span:
+  - 0
+  - 11
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB57: i
+    AB67: d
+    AB56: a
+  span_within_window:
+  - 4
+  - 6
+- surface: ami
+  phonemes:
+  - a
+  - m
+  - i
+  sign_to_phoneme:
+    AB08: a
+    AB53: m
+    AB57: i
+  span_within_window:
+  - 9
+  - 11
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 6
+  fraction: 0.75

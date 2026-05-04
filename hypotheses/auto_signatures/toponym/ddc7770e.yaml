@@ -1,0 +1,47 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_128a_5_20_paros_efe
+description: 'Auto-generated candidate signature: pool=''toponym'' window [5..20]
+  of HT 128a; 2 root(s) covering 9/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 20
+roots:
+- surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  sign_to_phoneme:
+    AB69: p
+    AB26: a
+    AB56: r
+    AB09: o
+    AB13: s
+  span_within_window:
+  - 0
+  - 4
+- surface: efe
+  phonemes:
+  - e
+  - p
+  - h
+  - e
+  sign_to_phoneme:
+    AB54: e
+    AB69: p
+    AB80: h
+    AB27: e
+  span_within_window:
+  - 8
+  - 11
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 9
+  fraction: 0.9

@@ -1,0 +1,55 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_PH_7a_0_11_ida_aios_aso
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..11]
+  of PH 7a; 3 root(s) covering 10/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: PH 7a
+  span:
+  - 0
+  - 11
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB07: i
+    AB03: d
+    AB57: a
+  span_within_window:
+  - 0
+  - 2
+- surface: aios
+  phonemes:
+  - a
+  - i
+  - o
+  - s
+  sign_to_phoneme:
+    AB10: a
+    AB07: i
+    AB53: o
+    AB67: s
+  span_within_window:
+  - 4
+  - 7
+- surface: aso
+  phonemes:
+  - a
+  - s
+  - o
+  sign_to_phoneme:
+    AB57: a
+    AB26: s
+    AB80: o
+  span_within_window:
+  - 9
+  - 11
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 10
+  fraction: 1.0

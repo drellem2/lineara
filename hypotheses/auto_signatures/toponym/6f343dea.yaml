@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_KH_7b_0_15_thera_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..15]
+  of KH 7b; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: KH 7b
+  span:
+  - 0
+  - 15
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB10: th
+    AB59: e
+    AB28: r
+    AB09: a
+  span_within_window:
+  - 0
+  - 3
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB03: i
+    AB06: d
+    AB69: a
+  span_within_window:
+  - 7
+  - 9
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

@@ -1,0 +1,57 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ARKH_2_0_19_ida_ida_paros
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..19]
+  of ARKH 2; 3 root(s) covering 11/15 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ARKH 2
+  span:
+  - 0
+  - 19
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB41: i
+    AB01: d
+    AB04: a
+  span_within_window:
+  - 0
+  - 2
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB41: i
+    AB01: d
+    AB05: a
+  span_within_window:
+  - 9
+  - 11
+- surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  sign_to_phoneme:
+    AB79: p
+    A301: a
+    AB09: r
+    AB45: o
+    AB118: s
+  span_within_window:
+  - 14
+  - 19
+coverage:
+  n_window_syllabograms: 15
+  n_covered_syllabograms: 11
+  fraction: 0.733333

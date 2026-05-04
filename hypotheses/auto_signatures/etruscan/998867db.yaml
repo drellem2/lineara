@@ -1,0 +1,44 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_PH_6_8_19_semph_ipei
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [8..19]
+  of PH 6; 2 root(s) covering 8/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: PH 6
+  span:
+  - 8
+  - 19
+roots:
+- surface: semph
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  sign_to_phoneme:
+    AB79: s
+    AB53: e
+    AB30: m
+    AB59: ph
+  span_within_window:
+  - 0
+  - 3
+- surface: ipei
+  phonemes:
+  - i
+  - p
+  - e
+  - i
+  sign_to_phoneme:
+    AB28: i
+    AB01: p
+    AB56: e
+  span_within_window:
+  - 8
+  - 11
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 8
+  fraction: 0.8

@@ -1,0 +1,42 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_115a_15_30_atta_lur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [15..30]
+  of HT 115a; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 115a
+  span:
+  - 15
+  - 30
+roots:
+- surface: atta
+  phonemes:
+  - a
+  - t
+  - t
+  - a
+  sign_to_phoneme:
+    AB06: a
+    AB24: t
+    AB73: t
+  span_within_window:
+  - 6
+  - 10
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB09: l
+    AB81: u
+    AB69: r
+  span_within_window:
+  - 12
+  - 14
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

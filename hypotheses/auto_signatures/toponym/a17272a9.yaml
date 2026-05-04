@@ -1,0 +1,69 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ZA_8_18_37_paros_par_par_par
+description: 'Auto-generated candidate signature: pool=''toponym'' window [18..37]
+  of ZA 8; 4 root(s) covering 14/16 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ZA 8
+  span:
+  - 18
+  - 37
+roots:
+- surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  sign_to_phoneme:
+    AB59: p
+    AB28: a
+    AB55: r
+    AB80: o
+    AB03: s
+  span_within_window:
+  - 1
+  - 5
+- surface: par
+  phonemes:
+  - p
+  - a
+  - r
+  sign_to_phoneme:
+    AB77: p
+    AB28: a
+    AB09: r
+  span_within_window:
+  - 8
+  - 10
+- surface: par
+  phonemes:
+  - p
+  - a
+  - r
+  sign_to_phoneme:
+    AB01: p
+    AB28: a
+    AB39: r
+  span_within_window:
+  - 12
+  - 14
+- surface: par
+  phonemes:
+  - p
+  - a
+  - r
+  sign_to_phoneme:
+    AB77: p
+    AB28: a
+    AB02: r
+  span_within_window:
+  - 17
+  - 19
+coverage:
+  n_window_syllabograms: 16
+  n_covered_syllabograms: 14
+  fraction: 0.875

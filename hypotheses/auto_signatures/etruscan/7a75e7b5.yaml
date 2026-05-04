@@ -1,0 +1,51 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_119_6_25_thu_semph_thu
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [6..25]
+  of HT 119; 3 root(s) covering 8/13 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 119
+  span:
+  - 6
+  - 25
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB70: th
+    AB57: u
+  span_within_window:
+  - 2
+  - 3
+- surface: semph
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  sign_to_phoneme:
+    AB81: s
+    AB56: e
+    AB06: m
+    AB69: ph
+  span_within_window:
+  - 5
+  - 8
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    A327: th
+    AB65: u
+  span_within_window:
+  - 18
+  - 19
+coverage:
+  n_window_syllabograms: 13
+  n_covered_syllabograms: 8
+  fraction: 0.615385

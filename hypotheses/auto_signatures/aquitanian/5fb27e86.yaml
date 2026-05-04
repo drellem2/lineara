@@ -1,0 +1,65 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_KN_Zc_7_0_15_sembe_lur_su_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..15]
+  of KN Zc 7; 4 root(s) covering 12/13 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: KN Zc 7
+  span:
+  - 0
+  - 15
+roots:
+- surface: sembe
+  phonemes:
+  - s
+  - e
+  - m
+  - b
+  - e
+  sign_to_phoneme:
+    AB08: s
+    AB77: e
+    AB55: m
+    AB74: b
+    AB37: e
+  span_within_window:
+  - 0
+  - 4
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB51: l
+    AB60: u
+    AB27: r
+  span_within_window:
+  - 6
+  - 8
+- surface: su
+  phonemes:
+  - s
+  - u
+  sign_to_phoneme:
+    AB08: s
+    AB79: u
+  span_within_window:
+  - 10
+  - 11
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB57: u
+    AB31: r
+  span_within_window:
+  - 14
+  - 15
+coverage:
+  n_window_syllabograms: 13
+  n_covered_syllabograms: 12
+  fraction: 0.923077

@@ -1,0 +1,47 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_122b_5_20_zal_zathrum
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [5..20]
+  of HT 122b; 2 root(s) covering 9/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 122b
+  span:
+  - 5
+  - 20
+roots:
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    A306: z
+    AB67: a
+    AB66: l
+  span_within_window:
+  - 2
+  - 4
+- surface: zathrum
+  phonemes:
+  - z
+  - a
+  - th
+  - r
+  - u
+  - m
+  sign_to_phoneme:
+    AB08: z
+    AB60: a
+    AB65: th
+    AB10: r
+    AB45: u
+    AB17: m
+  span_within_window:
+  - 8
+  - 13
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 9
+  fraction: 0.9

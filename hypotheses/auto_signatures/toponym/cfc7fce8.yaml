@@ -1,0 +1,45 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_PH_31b_18_37_thera_thera
+description: 'Auto-generated candidate signature: pool=''toponym'' window [18..37]
+  of PH 31b; 2 root(s) covering 8/10 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: PH 31b
+  span:
+  - 18
+  - 37
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB53: th
+    AB26: e
+    AB80: r
+    AB37: a
+  span_within_window:
+  - 5
+  - 8
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB08: th
+    AB73: e
+    AB01: r
+    AB61: a
+  span_within_window:
+  - 16
+  - 19
+coverage:
+  n_window_syllabograms: 10
+  n_covered_syllabograms: 8
+  fraction: 0.8

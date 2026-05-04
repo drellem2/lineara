@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_ZA_15a_30_39_ida_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [30..39]
+  of ZA 15a; 2 root(s) covering 6/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: ZA 15a
+  span:
+  - 30
+  - 39
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB57: i
+    AB31: d
+    AB23: a
+  span_within_window:
+  - 3
+  - 5
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB73: i
+    AB01: d
+    AB38: a
+  span_within_window:
+  - 7
+  - 9
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 6
+  fraction: 0.857143

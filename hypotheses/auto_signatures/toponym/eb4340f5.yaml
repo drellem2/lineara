@@ -1,0 +1,47 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_90_0_19_thera_tarra
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..19]
+  of HT 90; 2 root(s) covering 9/11 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 90
+  span:
+  - 0
+  - 19
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB28: th
+    AB81: e
+    AB53: r
+    AB06: a
+  span_within_window:
+  - 0
+  - 3
+- surface: tarra
+  phonemes:
+  - t
+  - a
+  - r
+  - r
+  - a
+  sign_to_phoneme:
+    AB41: t
+    AB26: a
+    AB80: r
+    AB53: r
+    AB66: a
+  span_within_window:
+  - 14
+  - 18
+coverage:
+  n_window_syllabograms: 11
+  n_covered_syllabograms: 9
+  fraction: 0.818182

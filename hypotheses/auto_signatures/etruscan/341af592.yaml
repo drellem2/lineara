@@ -1,0 +1,39 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_PH_31b_10_25_thu_uni
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [10..25]
+  of PH 31b; 2 root(s) covering 5/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: PH 31b
+  span:
+  - 10
+  - 25
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB04: th
+    AB53: u
+  span_within_window:
+  - 8
+  - 9
+- surface: uni
+  phonemes:
+  - u
+  - n
+  - i
+  sign_to_phoneme:
+    AB53: u
+    AB26: n
+    AB80: i
+  span_within_window:
+  - 13
+  - 15
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 5
+  fraction: 0.833333

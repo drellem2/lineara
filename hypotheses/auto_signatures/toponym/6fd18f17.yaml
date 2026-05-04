@@ -1,0 +1,46 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_115a_6_25_paros_ssos
+description: 'Auto-generated candidate signature: pool=''toponym'' window [6..25]
+  of HT 115a; 2 root(s) covering 9/9 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 115a
+  span:
+  - 6
+  - 25
+roots:
+- surface: paros
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  - s
+  sign_to_phoneme:
+    AB53: p
+    AB59: a
+    AB80: r
+    AB55: o
+    AB40: s
+  span_within_window:
+  - 3
+  - 7
+- surface: ssos
+  phonemes:
+  - s
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB06: s
+    AB24: s
+    AB73: o
+  span_within_window:
+  - 15
+  - 19
+coverage:
+  n_window_syllabograms: 9
+  n_covered_syllabograms: 9
+  fraction: 1.0

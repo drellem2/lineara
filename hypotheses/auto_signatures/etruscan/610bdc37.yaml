@@ -1,0 +1,39 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_KH_6_0_7_thu_zal
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [0..7]
+  of KH 6; 2 root(s) covering 5/5 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: KH 6
+  span:
+  - 0
+  - 7
+roots:
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB07: th
+    AB41: u
+  span_within_window:
+  - 2
+  - 3
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB04: z
+    AB55: a
+    AB27: l
+  span_within_window:
+  - 5
+  - 7
+coverage:
+  n_window_syllabograms: 5
+  n_covered_syllabograms: 5
+  fraction: 1.0

@@ -1,0 +1,39 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_HT_115b_4_15_zal_ar
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [4..15]
+  of HT 115b; 2 root(s) covering 5/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: HT 115b
+  span:
+  - 4
+  - 15
+roots:
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB37: z
+    AB55: a
+    AB57: l
+  span_within_window:
+  - 4
+  - 7
+- surface: ar
+  phonemes:
+  - a
+  - r
+  sign_to_phoneme:
+    AB55: a
+    AB40: r
+  span_within_window:
+  - 9
+  - 10
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 5
+  fraction: 0.833333

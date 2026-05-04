@@ -1,0 +1,53 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_110a_0_15_sembe_bi_bi
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..15]
+  of HT 110a; 3 root(s) covering 9/9 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 15
+roots:
+- surface: sembe
+  phonemes:
+  - s
+  - e
+  - m
+  - b
+  - e
+  sign_to_phoneme:
+    AB41: s
+    AB51: e
+    AB34: m
+    AB81: b
+    AB73: e
+  span_within_window:
+  - 0
+  - 4
+- surface: bi
+  phonemes:
+  - b
+  - i
+  sign_to_phoneme:
+    AB81: b
+    AB03: i
+  span_within_window:
+  - 8
+  - 9
+- surface: bi
+  phonemes:
+  - b
+  - i
+  sign_to_phoneme:
+    AB81: b
+    AB02: i
+  span_within_window:
+  - 11
+  - 12
+coverage:
+  n_window_syllabograms: 9
+  n_covered_syllabograms: 9
+  fraction: 1.0

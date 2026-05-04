@@ -1,0 +1,59 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_49a_18_37_ur_ur_ur_lur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [18..37]
+  of HT 49a; 4 root(s) covering 9/9 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 49a
+  span:
+  - 18
+  - 37
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB51: u
+    AB30: r
+  span_within_window:
+  - 0
+  - 1
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB41: u
+    AB60: r
+  span_within_window:
+  - 6
+  - 7
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: u
+    AB26: r
+  span_within_window:
+  - 9
+  - 10
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB81: l
+    AB56: u
+    AB55: r
+  span_within_window:
+  - 16
+  - 18
+coverage:
+  n_window_syllabograms: 9
+  n_covered_syllabograms: 9
+  fraction: 1.0

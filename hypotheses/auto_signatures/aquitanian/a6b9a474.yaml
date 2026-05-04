@@ -1,0 +1,51 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_ARKH_1a_5_20_ur_umme_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [5..20]
+  of ARKH 1a; 3 root(s) covering 8/9 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: ARKH 1a
+  span:
+  - 5
+  - 20
+roots:
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: u
+    AB60: r
+  span_within_window:
+  - 2
+  - 3
+- surface: umme
+  phonemes:
+  - u
+  - m
+  - m
+  - e
+  sign_to_phoneme:
+    AB08: u
+    AB58: m
+    AB73: m
+    AB118: e
+  span_within_window:
+  - 5
+  - 8
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: u
+    AB03: r
+  span_within_window:
+  - 12
+  - 13
+coverage:
+  n_window_syllabograms: 9
+  n_covered_syllabograms: 8
+  fraction: 0.888889

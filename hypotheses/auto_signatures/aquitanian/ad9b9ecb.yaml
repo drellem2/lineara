@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_ZA_8_3_12_lur_ilur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [3..12]
+  of ZA 8; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: ZA 8
+  span:
+  - 3
+  - 12
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB08: l
+    AB59: u
+    AB27: r
+  span_within_window:
+  - 0
+  - 2
+- surface: ilur
+  phonemes:
+  - i
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB81: i
+    AB69: l
+    AB70: u
+    AB27: r
+  span_within_window:
+  - 6
+  - 9
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

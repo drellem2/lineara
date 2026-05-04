@@ -1,0 +1,45 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_TY_3a_45_60_semph_enac
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [45..60]
+  of TY 3a; 2 root(s) covering 8/8 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: TY 3a
+  span:
+  - 45
+  - 60
+roots:
+- surface: semph
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  sign_to_phoneme:
+    AB70: s
+    AB08: e
+    AB51: m
+    AB54: ph
+  span_within_window:
+  - 2
+  - 5
+- surface: enac
+  phonemes:
+  - e
+  - n
+  - a
+  - c
+  sign_to_phoneme:
+    AB08: e
+    AB81: n
+    AB69: a
+    A361: c
+  span_within_window:
+  - 11
+  - 14
+coverage:
+  n_window_syllabograms: 8
+  n_covered_syllabograms: 8
+  fraction: 1.0

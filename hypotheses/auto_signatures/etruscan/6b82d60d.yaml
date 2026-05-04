@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_PH_7a_4_11_semph_zal
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [4..11]
+  of PH 7a; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: PH 7a
+  span:
+  - 4
+  - 11
+roots:
+- surface: semph
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  sign_to_phoneme:
+    AB10: s
+    AB07: e
+    AB53: m
+    AB67: ph
+  span_within_window:
+  - 0
+  - 3
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB57: z
+    AB26: a
+    AB80: l
+  span_within_window:
+  - 5
+  - 7
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

@@ -1,0 +1,41 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_KH_99_0_9_ida_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..9] of
+  KH 99; 2 root(s) covering 6/6 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: KH 99
+  span:
+  - 0
+  - 9
+roots:
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB03: i
+    AB53: d
+    AB45: a
+  span_within_window:
+  - 0
+  - 2
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    AB08: i
+    AB41: d
+    AB118: a
+  span_within_window:
+  - 6
+  - 8
+coverage:
+  n_window_syllabograms: 6
+  n_covered_syllabograms: 6
+  fraction: 1.0

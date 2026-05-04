@@ -1,0 +1,43 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_122a_20_35_thera_ida
+description: 'Auto-generated candidate signature: pool=''toponym'' window [20..35]
+  of HT 122a; 2 root(s) covering 7/12 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 122a
+  span:
+  - 20
+  - 35
+roots:
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB57: th
+    AB73: e
+    AB01: r
+    AB27: a
+  span_within_window:
+  - 2
+  - 5
+- surface: ida
+  phonemes:
+  - i
+  - d
+  - a
+  sign_to_phoneme:
+    A324: i
+    AB07: d
+    AB60: a
+  span_within_window:
+  - 11
+  - 13
+coverage:
+  n_window_syllabograms: 12
+  n_covered_syllabograms: 7
+  fraction: 0.583333

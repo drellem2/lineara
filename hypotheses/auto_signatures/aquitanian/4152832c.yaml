@@ -1,0 +1,42 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_Zd_157_0_7_lur_atta
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..7]
+  of HT Zd 157; 2 root(s) covering 7/7 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT Zd 157
+  span:
+  - 0
+  - 7
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB40: l
+    AB57: u
+    AB58: r
+  span_within_window:
+  - 0
+  - 2
+- surface: atta
+  phonemes:
+  - a
+  - t
+  - t
+  - a
+  sign_to_phoneme:
+    AB80: a
+    AB37: t
+    A319: a
+  span_within_window:
+  - 4
+  - 7
+coverage:
+  n_window_syllabograms: 7
+  n_covered_syllabograms: 7
+  fraction: 1.0

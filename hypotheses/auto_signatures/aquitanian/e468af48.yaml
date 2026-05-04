@@ -1,0 +1,59 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_ZA_5a_0_18_lur_ahuntz_seni
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [0..18]
+  of ZA 5a; 3 root(s) covering 12/13 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: ZA 5a
+  span:
+  - 0
+  - 18
+roots:
+- surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  sign_to_phoneme:
+    AB67: l
+    AB30: u
+    AB80: r
+  span_within_window:
+  - 5
+  - 7
+- surface: ahuntz
+  phonemes:
+  - a
+  - h
+  - u
+  - n
+  - tz
+  sign_to_phoneme:
+    AB61: a
+    AB59: h
+    AB30: u
+    AB17: n
+    AB09: tz
+  span_within_window:
+  - 9
+  - 13
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB31: s
+    AB73: e
+    AB01: n
+    AB38: i
+  span_within_window:
+  - 15
+  - 18
+coverage:
+  n_window_syllabograms: 13
+  n_covered_syllabograms: 12
+  fraction: 0.923077

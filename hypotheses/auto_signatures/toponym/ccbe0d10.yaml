@@ -1,0 +1,58 @@
+schema_version: candidate_signature.v1
+name: sig_toponym_HT_96a_0_15_assos_thera_ther
+description: 'Auto-generated candidate signature: pool=''toponym'' window [0..15]
+  of HT 96a; 3 root(s) covering 12/13 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: toponym
+window:
+  inscription_id: HT 96a
+  span:
+  - 0
+  - 15
+roots:
+- surface: assos
+  phonemes:
+  - a
+  - s
+  - s
+  - o
+  - s
+  sign_to_phoneme:
+    AB28: a
+    AB37: s
+    AB81: o
+    AB30: s
+  span_within_window:
+  - 0
+  - 4
+- surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  sign_to_phoneme:
+    AB08: th
+    AB03: e
+    AB60: r
+    AB24: a
+  span_within_window:
+  - 6
+  - 9
+- surface: ther
+  phonemes:
+  - th
+  - e
+  - r
+  sign_to_phoneme:
+    AB08: th
+    AB123: e
+    AB04: r
+  span_within_window:
+  - 11
+  - 13
+coverage:
+  n_window_syllabograms: 13
+  n_covered_syllabograms: 12
+  fraction: 0.923077

@@ -1,0 +1,75 @@
+schema_version: candidate_signature.v1
+name: sig_etruscan_PH_6_0_19_zal_thu_nurph_thu_zal
+description: 'Auto-generated candidate signature: pool=''etruscan'' window [0..19]
+  of PH 6; 5 root(s) covering 14/16 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: etruscan
+window:
+  inscription_id: PH 6
+  span:
+  - 0
+  - 19
+roots:
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB28: z
+    AB06: a
+    AB54: l
+  span_within_window:
+  - 0
+  - 2
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB08: th
+    AB53: u
+  span_within_window:
+  - 4
+  - 5
+- surface: nurph
+  phonemes:
+  - n
+  - u
+  - r
+  - ph
+  sign_to_phoneme:
+    AB79: n
+    AB53: u
+    AB30: r
+    AB59: ph
+  span_within_window:
+  - 8
+  - 11
+- surface: thu
+  phonemes:
+  - th
+  - u
+  sign_to_phoneme:
+    AB08: th
+    AB53: u
+  span_within_window:
+  - 13
+  - 14
+- surface: zal
+  phonemes:
+  - z
+  - a
+  - l
+  sign_to_phoneme:
+    AB28: z
+    AB01: a
+    AB56: l
+  span_within_window:
+  - 16
+  - 18
+coverage:
+  n_window_syllabograms: 16
+  n_covered_syllabograms: 14
+  fraction: 0.875

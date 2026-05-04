@@ -1,0 +1,61 @@
+schema_version: candidate_signature.v1
+name: sig_aquitanian_HT_27a_12_31_seni_ur_ur_ur
+description: 'Auto-generated candidate signature: pool=''aquitanian'' window [12..31]
+  of HT 27a; 4 root(s) covering 10/14 syllabograms.'
+author: scripts/generate_signatures.py
+created: '2026-05-04'
+source_pool: aquitanian
+window:
+  inscription_id: HT 27a
+  span:
+  - 12
+  - 31
+roots:
+- surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  sign_to_phoneme:
+    AB28: s
+    AB73: e
+    AB31: n
+    AB60: i
+  span_within_window:
+  - 0
+  - 3
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB67: u
+    AB01: r
+  span_within_window:
+  - 7
+  - 8
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB67: u
+    A310: r
+  span_within_window:
+  - 10
+  - 11
+- surface: ur
+  phonemes:
+  - u
+  - r
+  sign_to_phoneme:
+    AB81: u
+    A305: r
+  span_within_window:
+  - 13
+  - 14
+coverage:
+  n_window_syllabograms: 14
+  n_covered_syllabograms: 10
+  fraction: 0.714286
