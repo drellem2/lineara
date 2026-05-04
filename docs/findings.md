@@ -2568,6 +2568,269 @@ Aquitanian / Etruscan surfaces is the missing certification.
     `results/rollup.bayesian_posterior.under_mycenaean_greek_lm.md`
     for the combined third-LM view.
 
+## Findings from mg-c216
+
+mg-c216 is the v13 ticket: build the consensus sign-to-phoneme map +
+cross-window coherence test that distinguishes the two readings v12
+left coupled — (1) gate-too-conservative (the v10 PASSes are real
+substrate signal that the population MW U gate just under-credits on
+mixed-cleanness pools) vs (2) curation-sensitivity (the v10 PASSes
+hold *only because* Aquitanian + Etruscan pools are uniformly clean,
+and the framework cannot tolerate heterogeneity). v13 also runs a
+small refined-gate sensitivity check on the Linear-B positive control
+at K ∈ {5, 10, 20} to address reading #1 directly.
+
+**Lead headline: the cross-window coherence test FAILS decisively for
+both substrate pools.** Median per-surface coherence is 0.1818 for
+Aquitanian and 0.1808 for Etruscan, both far below the 0.6
+acceptance bar. The full per-surface range is tight: Aquitanian
+[0.1805, 0.1864], Etruscan [0.1739, 0.1867]. This strongly supports
+**reading #2 (curation-sensitivity)** of the v12 fork: the v10
+Aquitanian and Etruscan PASSes do not reflect coherent underlying
+sign-to-phoneme readings. Per-inscription gloss generation (originally
+slated for v14) is therefore **not justified by the data**.
+
+**Secondary headline: the refined-gate sensitivity check shows the
+production K=20 gate is partially over-conservative on mixed-cleanness
+pools, but a less-conservative gate does not rescue the coherence
+verdict.** On the Linear-B positive control:
+
+| K  | n_substrate_top | n_control_top | median substrate | median control | MW U  | p (one-tail) | frac substrate > max(control) |
+|---:|:---------------:|:-------------:|:----------------:|:--------------:|:-----:|:------------:|:-----------------------------:|
+|  5 |       5         |      5        |     0.8846       |    0.5772      | 24.0  |  **0.0106**  |             0.800             |
+| 10 |      10         |     10        |     0.7692       |    0.3552      | 71.0  |   0.0603     |             0.400             |
+| 20 |      12         |     11        |     0.7500       |    0.3103      | 83.0  |   0.1547     |             0.333             |
+
+K=5 cleanly clears p<0.05; K=10 is borderline; K=20 (production) is
+the v12-reported p=0.155 fail. So a smaller gate K *would* rescue the
+positive control, which on its own is partial evidence for reading #1.
+But this is purely a surface-aggregate verdict; the **deeper
+sign-to-phoneme-mapping verdict from the coherence test is
+unambiguous failure**, so the surface-aggregate over-conservatism is
+not the load-bearing finding here.
+
+The honest combined reading: the v10 PASSes are coherent at the
+surface-aggregate level (and the K=20 gate is somewhat over-strict on
+mixed-cleanness pools), but they reflect substrate-pool / substrate-LM
+phonotactic kinship rather than stable per-sign readings. They are
+not a reading map.
+
+### Method
+
+`scripts/consensus_map.py`:
+
+1. For the v10 (mg-d26d) Aquitanian + Etruscan top-20 substrate
+   surfaces, walk the v8 single-root + v9 multi-root paired-diff
+   records (built via the same helpers as
+   `scripts/per_surface_bayesian_rollup.py`).
+2. Filter to **positive paired_diff only** — equations where the
+   substrate side beat its matched control. Negative-paired-diff
+   records are excluded so "wrong" mappings don't bias the consensus.
+3. For each such record, read the candidate's `sign_to_phoneme`
+   mapping. v8: from `equation.sign_to_phoneme` of the single root.
+   v9: from each root's `sign_to_phoneme`, restricted to roots whose
+   surface is in the v10 top-20 set.
+4. Aggregate (sign, phoneme) → count, plus (sign) → contributing v10
+   surfaces.
+5. Per-sign consensus: modal phoneme + smoothed Dirichlet-multinomial
+   posterior (symmetric prior with α=0.5 over V=23 distinct phonemes
+   observed; modal posterior = (n_modal + α) / (N + αV)) +
+   max-likelihood Shannon entropy in bits.
+6. Filter signs with n_proposals < N (default N=10).
+7. Per-surface coherence: Σ_s [freq(S, s) · P_modal(s)] / Σ_s freq(S, s)
+   weighted by sign-frequency in S's positive equations. Per-pool
+   coherence: median over surfaces.
+
+The aggregation is over **all four paired-diff streams** (v8 substrate
+and v9 substrate for both Aquitanian + Etruscan pools, paired against
+their matched controls). 7,190 of 17,180 substrate paired-diff records
+are positive; those 7,190 records contribute the consensus.
+
+### What the consensus map looks like
+
+61 distinct Linear A signs received at least one positive-paired-diff
+proposal; 60 of them have ≥10 proposals (the n_min threshold for the
+consensus map). The map is dominated by very high-entropy signs:
+**every sign in the consensus map has entropy ≥ 2.05 bits** (out of
+log2(23) ≈ 4.52 bits maximum). Modal posteriors range from 0.10 to
+0.27. The *least-scattered* sign in the entire consensus map is A718:
+modal phoneme `i` with 12 proposals and modal posterior 0.234
+(entropy 2.055 bits) — still nowhere near consensus.
+
+The high-frequency signs (which appear in many windows and therefore
+get many proposals) are uniformly diffuse: AB08 (464 proposals),
+AB09 (387), AB01 (389), AB81 (348) — modal posteriors 0.15–0.20,
+entropy 3.9 bits. There is no sign for which a single phoneme
+dominates the proposal histogram. The contributing-surfaces lists for
+the high-frequency signs include essentially the entire v10 top-20
+(38+ surfaces each), which is the structural reason the consensus is
+diffuse: the metric rewards substrate phonotactic surfaces broadly,
+not specific sign-to-phoneme assignments. Different substrate roots
+that happen to align with the same Linear A window propose different
+sign mappings, and all of them score positive paired_diffs.
+
+The full map is committed at
+`results/consensus_sign_phoneme_map.md`. The header tables (per-pool
+coherence + per-surface breakdown + refined-gate sensitivity) come
+first; the per-sign rows follow, sorted by entropy ascending.
+
+### Top-K signs by consensus
+
+Sorted by entropy ascending (lowest-entropy = most-concentrated
+consensus). All five top entries have very high entropy by absolute
+standard, illustrating that even the *most coherent* signs in the
+consensus map are not coherent in any reading-map sense:
+
+| sign | n_proposals | modal | modal_posterior | entropy_bits | contributing v10 surfaces |
+|:--|---:|:--|---:|---:|---:|
+| `A718` |  12 | `i` | 0.2340 | 2.055 | 12 |
+| `AB13` |  26 | `i` | 0.2267 | 2.998 | 26 |
+| `A306` |  14 | `i` | 0.1373 | 3.039 | 14 |
+| `AB66` |  15 | `i` | 0.1321 | 3.057 | 14 |
+| `A323` |  14 | `a` | 0.1765 | 3.093 | 14 |
+
+Compare with the brief's expectation: *"if the modal phoneme per
+Linear A sign is stable across many independent candidate equations
+(low entropy), reading #1 is right."* Observed entropies are far
+above the "low" regime; modal posteriors are far below "stable."
+Reading #2 is supported.
+
+### Per-pool coherence verdict
+
+| pool       | n_surfaces | n_with_coherence | median coherence | min     | max     | gate (≥0.60) |
+|:-----------|:----------:|:----------------:|:----------------:|:-------:|:-------:|:------------:|
+| aquitanian |     20     |        20        |     0.1818       | 0.1805  | 0.1864  |    **FAIL**  |
+| etruscan   |     20     |        20        |     0.1808       | 0.1739  | 0.1867  |    **FAIL**  |
+
+Both pools' coherence values cluster tightly in [0.17, 0.19] —
+nowhere near the 0.6 acceptance bar, nowhere near even the
+"close-but-no-cigar" 0.5–0.55 the brief flagged as ambiguous. The
+verdict is unambiguous failure on the central question of v13.
+
+### What this means for the v10 PASSes (and downstream tickets)
+
+The v10 Aquitanian + Etruscan PASSes are real *as surface-aggregate
+substrate-vs-control statements* — they reproduce, the cross-LM
+checks behave as expected (v11/v12), and the K=5 refined-gate gives
+the Linear-B positive control a clean p<0.05. But the per-sign
+sign-to-phoneme mappings underlying those PASSes are not coherent
+across windows. This means:
+
+* **Per-inscription gloss generation (originally v14) is *not*
+  justified by the data.** Reading-shape claims like "HT Wc 3010
+  contains *aiser*" rely on a stable sign→phoneme map; we don't have
+  one. v14 reframes per the brief: away from gloss generation,
+  toward held-out pool-curation tests (deliberately polluting the
+  Aquitanian pool with conjectural entries to see whether the PASS
+  survives, as the structural curation-sensitivity test).
+* **The framework still recovers a real signal.** The signal is at
+  the substrate-pool / substrate-LM phonotactic-kinship level —
+  v10's PASS gate is mechanically sound and the surface-aggregate
+  numbers do reproduce. But what's reproducing is "this substrate
+  surface's phoneme stream beats a random-phonotactic control under
+  this LM," not "this surface attaches to specific Linear A signs in
+  a stable way."
+* **The K=20 gate is somewhat over-conservative** on mixed-cleanness
+  pools (the Linear-B K=5 result is real), but adopting a smaller K
+  would not change the v13 verdict — the deeper coherence failure
+  rules out reading-map work regardless of where the surface gate
+  is set.
+* **`docs/findings_summary.md` is updated** to reflect the new
+  verdict and to flag explicitly that no per-sign mapping is
+  validated.
+
+### Why coherence is so low — the structural explanation
+
+For each Linear A sign s that appears in many windows, the v10 top-20
+substrate surfaces collectively propose *many different phonemes* for
+s, because each surface has a different phoneme structure and is
+getting its positive paired_diff from "the metric rewards substrate
+phonotactics broadly," not from "this specific surface is the right
+reading at this specific window." The phonemes proposed for s
+therefore scatter across the alphabet:
+
+* AB08 (464 proposals, modal `a` at posterior 0.167, entropy 3.925
+  bits, top-3 alternatives e/h/z): the same Linear A sign has been
+  variously proposed as /a/, /e/, /h/, /z/, and many more, by
+  different substrate surfaces' equations.
+* AB37 (227 proposals, modal `i` at posterior 0.187, entropy 3.713
+  bits, alternatives a/n/th): similarly scattered.
+
+For the per-sign histogram to concentrate, the v10 top-20 surfaces
+would need to propose the *same* phoneme for the same sign across
+many windows. They don't — and the diffusion is the proximate cause
+of the coherence failure.
+
+### Operational notes
+
+* **Inputs.** Re-uses `scripts/per_surface_bayesian_rollup.build_v8_records`
+  + `build_v9_records` to build paired-diff records from
+  `results/experiments.external_phoneme_perplexity_v0.jsonl` +
+  `hypotheses/auto/{aquitanian,etruscan}.manifest.jsonl` +
+  `hypotheses/auto_signatures/{aquitanian,etruscan}.manifest.jsonl`.
+  No new corpus data ingest, no new metric. Pure analysis layer over
+  the existing v10 paired-diff stream.
+* **YAML reads.** Each positive-paired-diff record requires reading
+  one hypothesis YAML to extract `sign_to_phoneme`. Across 7,190
+  positive records the full run takes ~45–60s on Daniel's machine.
+  No caching needed at this scale.
+* **v10 top-20 is hardcoded.** `_V10_TOP20_BY_POOL` in
+  `scripts/consensus_map.py` mirrors
+  `scripts/right_tail_inscription_concentration.py:_V10_TOP20_BY_POOL`
+  — the v10 mg-d26d top-20 list, hardcoded so downstream analyses
+  reproduce against v10's published right-tail leaderboard rather
+  than silently shifting if upstream tie-breaking changes.
+* **Posterior smoothing.** Symmetric Dirichlet with α=0.5 over V=23.
+  V is the count of distinct phonemes observed across the consensus
+  dataset (deterministic). For a sign with n=200 proposals,
+  unanimity caps the modal posterior at (200+0.5)/(200+11.5) ≈ 0.945
+  — below 1.0 by design. Calibration: a perfectly-unanimous high-n
+  sign would yield modal posterior ≈ 0.94, *not* 1.0; that's still
+  far above the observed maxima (~0.27).
+* **Refined-gate sensitivity.** `refined_gate_sensitivity()` calls
+  the same `aggregate_per_surface` + `build_posterior_rows` +
+  `mann_whitney_u_one_tail` machinery as the production rollup,
+  swept across K ∈ {5, 10, 20}. **No production-rollup change.**
+  Diagnostic only.
+* **Tests.** `harness/tests/test_consensus_map.py` covers the modal-
+  posterior smoothing formula, Shannon-entropy formula on
+  hand-built histograms, the n_min filter, freq-weighted per-surface
+  coherence math, NaN-skipping per-pool median, deterministic tie-
+  breaking on the modal phoneme, and end-to-end determinism on the
+  per-sign + per-surface aggregations. Full repo test suite (128
+  tests) is green.
+* **Determinism.** Re-running `scripts/consensus_map.py` produces
+  byte-identical `results/consensus_sign_phoneme_map.md` and
+  byte-identical summary JSON given the same result stream +
+  manifests + hypothesis YAMLs. No RNG anywhere in the pipeline.
+
+### What this implies for the next ticket
+
+Per the mg-c216 brief, the falsifiable case for reading #2 (which
+the data supports) directs the next ticket toward **held-out
+pool-curation tests** rather than per-inscription gloss generation:
+deliberately pollute the Aquitanian pool with conjectural entries
+and re-run the v10 right-tail gate, asking *whether the PASS
+survives heterogeneous curation*. If yes, then v10's PASS is robust
+to curation noise and the v13 coherence failure is more puzzling
+than damning; if no, then we have a structural confirmation of
+reading #2.
+
+Out of scope for v14 per the brief and now also per v13's verdict:
+per-inscription proposed readings (gloss generation), morphological
+pattern detection, manuscript-shape per-sign reading claims.
+
+### See also
+
+* `results/consensus_sign_phoneme_map.md` — the per-sign consensus
+  map + per-surface coherence + refined-gate sensitivity, full
+  tables (committed, deterministic).
+* `scripts/consensus_map.py` — script + CLI.
+* `harness/tests/test_consensus_map.py` — tests on hand-built
+  minimal datasets.
+* `docs/findings_summary.md` — manuscript-shape narrative, updated
+  with the v13 verdict.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;

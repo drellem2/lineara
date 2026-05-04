@@ -1,14 +1,50 @@
-# Lineara — findings summary (mg-4664, harness v12)
+# Lineara — findings summary (mg-c216, harness v13)
 
 A publication-shape consolidation of what the Lineara project has
 mechanically established about Linear-A so far. This is the v0
-"manuscript narrative" Daniel asked for in mg-4664: it is a structured
-summary, not a manuscript. A reader who has not followed the merge
-notes should be able to pick up from here.
+"manuscript narrative" Daniel asked for in mg-4664, with a major v13
+update from mg-c216 sharpening what the v10 PASSes do and do not
+support. A reader who has not followed the merge notes should be able
+to pick up from here.
 
 The companion log `docs/findings.md` carries the per-ticket history;
 this document carries the consolidated picture and the supportable /
 unsupportable claim split.
+
+## v13 update — what changed (mg-c216, 2026-05-05)
+
+The v13 ticket built the **consensus sign-to-phoneme map** + a
+**cross-window coherence test** to distinguish two coupled readings of
+the v12 result: (1) the v10 PASSes are real substrate signal and the
+gate is just over-conservative on mixed-cleanness pools, vs (2) the
+v10 PASSes hold *only because* the substrate pools happened to be
+uniformly clean and the framework cannot tolerate heterogeneous
+curation. The verdict is unambiguous: median per-surface coherence is
+**0.1818 for Aquitanian and 0.1808 for Etruscan** against a 0.6
+acceptance bar. **Both pools fail decisively. Reading #2 is
+supported.** The v10 PASSes are coherent at the surface-aggregate
+level but the underlying sign-to-phoneme mappings are not stable
+across windows — high-frequency Linear A signs receive proposals
+scattered across the entire phoneme alphabet (max-likelihood entropy
+3.6–4.0 bits out of log2(23) ≈ 4.5 bits maximum). The framework
+recovers a real signal at the substrate-phonotactic-kinship level,
+but **does not establish per-sign readings**.
+
+A bundled refined-gate sensitivity check on the Linear-B positive
+control sweeps K ∈ {5, 10, 20}: K=5 cleanly clears p<0.05 (p=0.011),
+K=10 is borderline (p=0.060), K=20 (production) fails (p=0.155). So
+the K=20 gate is somewhat over-conservative on mixed-cleanness pools,
+but adopting a smaller K does not change the v13 verdict — the
+deeper coherence failure is the load-bearing finding.
+
+**Implications for the rest of this document.** The supportable claims
+section below is unchanged at the surface-aggregate level; the
+unsupportable claims section gains "no per-sign sign-to-phoneme map
+is validated" as a now-empirically-confirmed (rather than
+conservatively-stated) finding. The downstream-work section drops
+per-inscription gloss generation (originally v14) and replaces it
+with the held-out pool-curation test that addresses reading #2
+structurally.
 
 ## Question
 
@@ -232,6 +268,51 @@ A refined gate that handles heterogeneous substrate cleanness is a
 candidate next ticket. It would not require a new metric — only a
 new aggregation rule.
 
+### v13 cross-window coherence test (mg-c216) — adjudicates the v12 fork
+
+The v13 ticket addressed the v12 fork directly with a coherence test:
+for the v10 Aquitanian + Etruscan top-20 substrate surfaces, do the
+sign-to-phoneme mappings *agree* across the many positive-paired-diff
+candidate equations, or are they incoherent across windows? The
+falsifiable cases were:
+
+* Coherence ≥ 0.6 on both pools → reading #1 (gate-too-conservative);
+  v10 PASSes reflect coherent underlying mappings; gloss-shape work
+  becomes a clean follow-up.
+* Coherence < 0.6 on both pools → reading #2 (curation-sensitivity);
+  v10 PASSes reflect noise on different sign bases; the next ticket
+  reframes toward held-out pool-curation tests.
+* Mixed verdict → cleaner pool advances; noisier pool needs more
+  validation.
+
+**Result:**
+
+| pool       | n_surfaces | n_with_coherence | median coherence | min     | max     | gate (≥0.60) |
+|:-----------|:----------:|:----------------:|:----------------:|:-------:|:-------:|:------------:|
+| aquitanian |     20     |        20        |     0.1818       | 0.1805  | 0.1864  |    **FAIL**  |
+| etruscan   |     20     |        20        |     0.1808       | 0.1739  | 0.1867  |    **FAIL**  |
+
+Both pools fail decisively. The values cluster tightly in [0.17, 0.19]
+— nowhere near the 0.6 acceptance bar, nowhere near even the
+"close-but-no-cigar" 0.5–0.55 region. **Reading #2 is supported.**
+v10 PASSes do not reflect stable per-sign readings; they reflect
+substrate-phonotactic kinship that the metric rewards broadly.
+
+The companion **refined-gate sensitivity check** on the Linear-B
+positive control:
+
+| K  | n_substrate_top | n_control_top | median substrate | median control | MW U  | p (one-tail) |
+|---:|:---------------:|:-------------:|:----------------:|:--------------:|:-----:|:------------:|
+|  5 |       5         |      5        |     0.8846       |    0.5772      | 24.0  |  **0.0106**  |
+| 10 |      10         |     10        |     0.7692       |    0.3552      | 71.0  |   0.0603     |
+| 20 |      12         |     11        |     0.7500       |    0.3103      | 83.0  |   0.1547     |
+
+K=5 cleanly clears p<0.05 (the K=20 production gate is somewhat
+over-conservative on mixed-cleanness pools), but this is a
+surface-aggregate fact and does not rescue the deeper coherence
+failure. Full breakdown in `docs/findings.md` mg-c216 entry and
+`results/consensus_sign_phoneme_map.md`.
+
 ## Top-K substrate surfaces by pool (publication-readable)
 
 The leaderboards below are the v10 (mg-d26d) bayesian posterior
@@ -335,6 +416,41 @@ those anchors don't separate. Specifically, `dare` (which the
 curator flagged as "libation-formula continuation, da-ta-re
 paradigm") loses 50/50 paired records.
 
+## Consensus sign-to-phoneme map (v13, mg-c216)
+
+For each Linear A sign s with at least 10 positive-paired-diff
+proposals from v10-top-20 substrate equations (across both Aquitanian
++ Etruscan pools), the consensus map reports the histogram of
+proposed phonemes plus the modal phoneme + smoothed Dirichlet-
+multinomial posterior + max-likelihood Shannon entropy. 60 of 61
+candidate signs cleared the n_min threshold; **every consensus
+entry has entropy ≥ 2.05 bits** out of log2(23) ≈ 4.52 maximum, and
+**no sign reaches modal posterior > 0.27**. The five lowest-entropy
+signs (the most-coherent end of the distribution):
+
+| sign  | n_proposals | modal | modal_posterior | entropy_bits | n contributing v10 surfaces |
+|:------|:-----------:|:-----:|:---------------:|:------------:|:---------------------------:|
+| `A718`|     12      |  `i`  |     0.2340      |    2.055     |             12              |
+| `AB13`|     26      |  `i`  |     0.2267      |    2.998     |             26              |
+| `A306`|     14      |  `i`  |     0.1373      |    3.039     |             14              |
+| `AB66`|     15      |  `i`  |     0.1321      |    3.057     |             14              |
+| `A323`|     14      |  `a`  |     0.1765      |    3.093     |             14              |
+
+For comparison, the *high-frequency* signs are uniformly diffuse:
+AB08 (464 proposals, modal `a` at posterior 0.167, entropy 3.925
+bits, top-3 alternatives e/h/z); AB37 (227 proposals, modal `i` at
+posterior 0.187, entropy 3.713 bits, alternatives a/n/th); AB28 (225
+proposals, modal `i` at posterior 0.159, entropy 3.788 bits,
+alternatives a/n/th). The contributing-surfaces lists for those
+high-frequency signs include essentially the entire v10 top-20 (38+
+surfaces each) — the structural reason consensus is diffuse: the
+metric rewards substrate phonotactic surfaces broadly rather than
+specific sign-to-phoneme assignments. Different substrate roots
+that align with the same Linear A window propose different sign
+mappings, and all of them score positive paired_diffs.
+
+Full table at `results/consensus_sign_phoneme_map.md`.
+
 ## Per-inscription concentration
 
 mg-0f97 mapped, for each Linear-A inscription, how many of the v10
@@ -349,19 +465,22 @@ Two clusters surfaced:
   cluster (`aiser`, `avils`, `bihotz`, `camthi`, `entzun`, `hanna`,
   `hanthe`, `itsaso`, `laris`, `matam`, `thesan`, `zelai`, `zelar`,
   `zortzi`, plus `caitim` / `thanchvil` / `spureri` on the Knossos
-  votive subset). These are the **publishable per-inscription
-  candidates** under the conservative reading: short-line
-  accountancy / votive tablets where the validated Etruscan pool
-  concentrates.
+  votive subset). v12 framed these as the publishable per-inscription
+  candidates under the conservative reading. **v13 downgrades this**:
+  the consensus map shows the underlying sign-to-phoneme mappings on
+  these inscriptions are not coherent across windows, so "this
+  inscription contains *aiser*" is not a claim the data supports —
+  only "this inscription is enriched in v10-top-20 substrate
+  *surface-aggregate* signal" is.
 * **Cluster B (Aquitanian-mixed, longer accountancy).** `GO Wc 1a`,
   `ARKH 5`, `HT 104`, `HT 103`, `ARKH 2`, etc. show 23–38 distinct
   top-20 surfaces concentrated, with the Aquitanian side
   (`aitz`, `ako`, `ate`, `eki`, `hau`, `oin`, `ona`, `argi`, `nahi`)
-  mixing in alongside the Etruscan side. These inherit the
-  Aquitanian validation caveat and should not be presented as
-  publishable per-inscription claims without resolving the
-  cross-LM caveat (or accepting reading #2 above and adding the
-  domain-expert-review precondition).
+  mixing in alongside the Etruscan side. v12 flagged these as
+  inheriting the Aquitanian validation caveat. **v13 makes them
+  unsuitable for any reading-shape claim** for the same reason as
+  cluster A — without coherent per-sign mappings, multi-surface
+  density at an inscription is not evidence of a readable text.
 
 Full per-inscription tables in `results/rollup.right_tail_inscription_concentration.md`.
 
@@ -389,11 +508,15 @@ have an independent certification of curation cleanness):
   substrate-specificity. Under Mycenaean-Greek (genuinely unrelated
   natural-language LM), Aquitanian no longer beats its control.
 * **A defined set of Linear-A inscriptions concentrate substrate
-  evidence.** Cluster A in particular (Knossos Zc/Zf, HT Wc / Zb,
-  Khania `KH 60` / `KH 10` / `KH 5`, HT Wc commodity records) is
-  enriched in the Etruscan-validated top-20 surfaces. Domain-expert
-  review of these tablets is the natural next step toward
-  publication-ready claims.
+  *surface-aggregate* evidence.** Cluster A in particular (Knossos
+  Zc/Zf, HT Wc / Zb, Khania `KH 60` / `KH 10` / `KH 5`, HT Wc
+  commodity records) is enriched in the Etruscan-validated top-20
+  surfaces' positive paired_diff records. v13's coherence verdict
+  rules out claiming these inscriptions are *readable* under the v10
+  surface set, but the concentration of substrate-aggregate signal
+  on these particular inscriptions is itself a reproducible
+  observation. Domain-expert review of these tablets is still the
+  natural follow-up; what it can establish is now narrower.
 * **The corpus is well-curated and the pipeline is deterministic.**
   Re-running any rollup on the same result stream + manifests
   produces byte-identical output. No RNG anywhere in the scoring
@@ -408,18 +531,29 @@ have an independent certification of curation cleanness):
   substrate phonemes. The mechanical signal is consistent with
   multiple causal stories.
 * **A specific sign-to-phoneme mapping for Linear-A.** No such
-  mapping has been validated. The candidate-equation hypotheses
-  pin a substrate root to a specific window in a specific
-  inscription, but the metric scores the *partial mapping
-  perplexity*, not the equation itself. The right tail tells us
-  which substrate surfaces survive the test; it does not tell us
-  the equation must be correct.
+  mapping has been validated, and v13's consensus map (mg-c216)
+  established this *empirically* rather than only conservatively:
+  the modal phoneme proposed for every consensus-eligible Linear A
+  sign by the v10 top-20 substrate equations is far from
+  unanimous (entropy ≥ 2.05 bits, modal posterior ≤ 0.27). The
+  candidate-equation hypotheses pin a substrate root to a specific
+  window in a specific inscription, but the metric scores the
+  *partial mapping perplexity*, not the equation itself. The right
+  tail tells us which substrate surfaces survive the test; it does
+  not tell us the equation must be correct, and it does not — per
+  v13 — induce stable per-sign readings. See
+  `results/consensus_sign_phoneme_map.md`.
 * **A reading of any specific Linear-A inscription.** Cluster A is
   enriched in Etruscan-validated top-20 surfaces, but the
   framework does not adjudicate whether `HT Wc 3010` actually
   contains `aiser` etc. — it adjudicates whether `aiser` is
   consistently rewarded over its matched controls when scored
-  against the Linear-A corpus as a whole.
+  against the Linear-A corpus as a whole. v13's coherence map
+  empirically confirms this: even on inscriptions where many
+  v10-top-20 surfaces show positive paired_diff records, the
+  underlying sign-to-phoneme mappings disagree, so the inscription
+  is not "readable" under the v10 substrate set in any operational
+  sense.
 * **The toponym substrate hypothesis** — the gate failed and the
   control-sampler issue means we can't even report this null
   cleanly. No conclusion either way until the sampler is fixed.
@@ -432,19 +566,37 @@ have an independent certification of curation cleanness):
 
 ## Remaining work for full publication
 
-In rough priority order:
+In rough priority order, *as updated by the v13 verdict*:
 
-1. **Domain-expert review of top-K Etruscan and Aquitanian
+1. **Held-out pool-curation test for the Aquitanian / Etruscan
+   substrate pools.** Per the mg-c216 brief, the falsifiable case
+   for reading #2 (which the v13 coherence test supports) directs
+   the next ticket toward deliberately polluting the Aquitanian
+   pool with conjectural entries and re-running the v10 right-tail
+   gate, asking whether the PASS *survives heterogeneous curation*.
+   If yes, the v10 PASS is robust to curation noise (and the v13
+   coherence failure is more puzzling than damning). If no,
+   reading #2 is structurally confirmed: the framework only
+   recovers signal on uniformly-clean substrate pools, which is a
+   strong methodological constraint on what the v10 PASSes
+   actually establish. **This replaces what was previously labeled
+   v14 (per-inscription gloss generation) — gloss-shape work is
+   ruled out by the v13 coherence verdict.**
+2. **Domain-expert review of top-K Etruscan and Aquitanian
    surfaces** — is the right-tail leaderboard a reasonable lexical
-   subset, or are we surfacing morphological artifacts? This is
-   the missing piece for treating any of these as publication-ready
-   claims under the conservative reading. Not a polecat ticket.
-2. **Refined acceptance gate that is robust to mixed-cleanness
+   subset, or are we surfacing morphological artifacts? Still the
+   missing piece for treating any of these as publication-ready
+   claims even under the now-supported reading #2. Not a polecat
+   ticket.
+3. **Refined acceptance gate that is robust to mixed-cleanness
    pools.** The Linear-B positive control's failure-by-long-tail
-   is a methodological signal: a stricter gate (e.g. require
-   top-N% of substrate to uniformly beat top-N% of control by some
-   margin) would more honestly handle pools with heterogeneous
-   curation. This is an analysis-layer ticket, no new metric.
+   is a methodological signal that v13's K-sweep partially
+   confirmed (K=5 cleanly clears, K=20 fails). A stricter rule
+   (e.g. require top-N% of substrate to uniformly beat top-N% of
+   control by some margin) would more honestly handle pools with
+   heterogeneous curation. This is an analysis-layer ticket, no
+   new metric. Lower priority now that v13 has shown the deeper
+   coherence problem is the binding constraint.
 3. **Tighter matched-control sampler for the toponym pool.** The
    v10 toponym FAIL is on the control side — the random
    phoneme-frequency sampler's drift into a low-LM-density corner
