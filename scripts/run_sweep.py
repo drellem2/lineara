@@ -49,6 +49,7 @@ from harness.corpus import (
     load_records,
     sign_position_fingerprints,
 )
+from harness.corpus_phoneme_model import ClusterModel
 from harness.hypothesis import (
     SHAPE_CANDIDATE_EQUATION_V1,
     canonical_hash,
@@ -62,6 +63,7 @@ from harness.metrics import (
     local_fit_v0,
     local_fit_v1,
     partial_mapping_compression_delta_v0,
+    sign_prediction_perplexity_v0,
 )
 
 
@@ -70,12 +72,26 @@ _DEFAULT_CORPUS = _REPO_ROOT / "corpus" / "all.jsonl"
 _DEFAULT_RESULTS = _REPO_ROOT / "results" / "experiments.jsonl"
 _RESULT_SCHEMA_PATH = _REPO_ROOT / "harness" / "schemas" / "result.v0.schema.json"
 _DEFAULT_POOLS_DIR = _REPO_ROOT / "pools"
+_DEFAULT_CLUSTER_MODEL = _REPO_ROOT / "harness" / "corpus_phoneme_model.json"
+
+# Metrics that emit enough rows to need a per-metric sidecar stream
+# (committed at results/experiments.<metric>.jsonl). The primary
+# results/experiments.jsonl is shared across metrics; sidecars exist
+# because the cumulative file is bumping into GitHub's 100 MB push
+# limit. Sidecar metrics still resume off the same (hash, snapshot,
+# metric) seen-set, so a re-run is no-op.
+_SIDECAR_METRICS = frozenset({"sign_prediction_perplexity_v0"})
+
+
+def _sidecar_path(repo_root: Path, metric: str) -> Path:
+    return repo_root / "results" / f"experiments.{metric}.jsonl"
 
 _SUPPORTED_METRICS = (
     "local_fit_v0",
     "local_fit_v1",
     "geographic_genre_fit_v1",
     "partial_mapping_compression_delta_v0",
+    "sign_prediction_perplexity_v0",
 )
 
 
@@ -126,25 +142,40 @@ def build_pool_registry(pools_dir: Path) -> dict[str, dict]:
     return registry
 
 
-def _existing_runs(results_path: Path) -> set[tuple[str, str, str]]:
+def _existing_runs(
+    results_path: Path, metrics: list[str], repo_root: Path
+) -> set[tuple[str, str, str]]:
     """Return the (hypothesis_hash, corpus_snapshot, metric) triples already
-    present in the result stream. Used to skip re-scoring during a resume."""
+    present in the result stream(s). Used to skip re-scoring during a resume.
+
+    Reads the primary ``results/experiments.jsonl`` and, for any
+    sidecar-resident metric in ``metrics``, the per-metric sidecar
+    ``results/experiments.<metric>.jsonl`` as well. The metric set comes
+    from the run config so we don't open every sidecar that might
+    eventually exist."""
     seen: set[tuple[str, str, str]] = set()
-    if not results_path.exists():
-        return seen
-    with results_path.open("r", encoding="utf-8") as fh:
-        for line in fh:
-            line = line.strip()
-            if not line:
-                continue
-            row = json.loads(line)
-            seen.add(
-                (
-                    row["hypothesis_hash"],
-                    row.get("corpus_snapshot", ""),
-                    row.get("metric", ""),
+    paths: list[Path] = [results_path]
+    for m in metrics:
+        if m in _SIDECAR_METRICS:
+            sp = _sidecar_path(repo_root, m)
+            if sp.resolve() != results_path.resolve():
+                paths.append(sp)
+    for p in paths:
+        if not p.exists():
+            continue
+        with p.open("r", encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                row = json.loads(line)
+                seen.add(
+                    (
+                        row["hypothesis_hash"],
+                        row.get("corpus_snapshot", ""),
+                        row.get("metric", ""),
+                    )
                 )
-            )
     return seen
 
 
@@ -233,6 +264,7 @@ def _score_one(
     fingerprints: dict[str, list[int]],
     sign_counts: dict[str, int],
     pool_ctx: dict | None,
+    cluster_model: ClusterModel | None,
     snapshot: str,
     n_records: int,
     note: str,
@@ -285,6 +317,21 @@ def _score_one(
         row["metric_notes"] = result.metric_notes
         row["bits_per_sign_baseline"] = float(result.bits_per_sign_baseline)
         row["bits_per_sign_mapped"] = float(result.bits_per_sign_mapped)
+    elif metric_name == "sign_prediction_perplexity_v0":
+        if cluster_model is None:
+            raise ValueError(
+                "sign_prediction_perplexity_v0 requires --cluster-model "
+                "to be loaded; pass --cluster-model harness/corpus_phoneme_model.json"
+            )
+        result = sign_prediction_perplexity_v0(
+            record=record, equation=hypothesis["equation"], cluster_model=cluster_model
+        )
+        row["score"] = float(result.score)
+        row["metric_notes"] = result.metric_notes
+        row["cluster_agreement"] = int(result.cluster_agreement)
+        row["window_bigram_loglik"] = float(result.window_bigram_loglik)
+        row["n_pairs_scored"] = int(result.n_pairs_scored)
+        row["n_window_bigrams"] = int(result.n_window_bigrams)
     elif metric_name == "geographic_genre_fit_v1":
         # Pool-specific dispatch (mg-c2af): if pool_ctx is None, fall
         # back to the hypothesis's source_pool tag for the region (the
@@ -394,6 +441,7 @@ def run(
     pool_path: Path | None = None,
     pools_dir: Path | None = None,
     force_rescore: bool = False,
+    cluster_model_path: Path | None = None,
 ) -> dict:
     """Drive the bulk sweep and return a summary dict.
 
@@ -440,6 +488,21 @@ def run(
             file=sys.stderr,
         )
 
+    cluster_model: ClusterModel | None = None
+    if "sign_prediction_perplexity_v0" in metrics:
+        path = cluster_model_path or _DEFAULT_CLUSTER_MODEL
+        if not path.exists():
+            raise ValueError(
+                f"sign_prediction_perplexity_v0 requires the cluster model at {path}; "
+                f"build with `python3 -m harness.corpus_phoneme_model`."
+            )
+        cluster_model = ClusterModel.load_json(path)
+        print(
+            f"loaded cluster model: {path}  |  k={cluster_model.meta.get('k')}  |  "
+            f"signs={len(cluster_model.sign_to_cluster)}",
+            file=sys.stderr,
+        )
+
     pool_registry = build_pool_registry(pools_dir)
     if pool_registry:
         print(
@@ -462,7 +525,11 @@ def run(
         json.loads(_RESULT_SCHEMA_PATH.read_text(encoding="utf-8"))
     )
 
-    seen = set() if force_rescore else _existing_runs(results_path)
+    seen = (
+        set()
+        if force_rescore
+        else _existing_runs(results_path, list(metrics), repo_root)
+    )
     n_already = sum(
         1
         for r in manifest
@@ -481,7 +548,24 @@ def run(
     started = time.monotonic()
     scored_total = 0
 
-    with results_path.open("a", encoding="utf-8") as result_fh:
+    # Open the primary stream + any per-metric sidecars. Sidecar metrics
+    # (e.g. sign_prediction_perplexity_v0) write to their own file; all
+    # other metrics still go to the primary stream. The sidecars exist
+    # because the primary file is approaching GitHub's push-size limit.
+    metric_streams: dict[str, "object"] = {}
+    primary_fh = results_path.open("a", encoding="utf-8")
+    sidecar_fhs: list = [primary_fh]
+    for m in metrics:
+        if m in _SIDECAR_METRICS:
+            sp = _sidecar_path(repo_root, m)
+            sp.parent.mkdir(parents=True, exist_ok=True)
+            fh = sp.open("a", encoding="utf-8")
+            metric_streams[m] = fh
+            sidecar_fhs.append(fh)
+        else:
+            metric_streams[m] = primary_fh
+
+    try:
         for i, manifest_row in enumerate(manifest, 1):
             hyp_path = repo_root / manifest_row["hypothesis_path"]
             hypothesis = None
@@ -537,14 +621,16 @@ def run(
                     fingerprints=fingerprints,
                     sign_counts=sign_counts,
                     pool_ctx=pool_ctx,
+                    cluster_model=cluster_model,
                     snapshot=snapshot,
                     n_records=n_records,
                     note=note,
                     repo_root=repo_root,
                     result_validator=result_validator,
                 )
-                result_fh.write(json.dumps(row, ensure_ascii=False) + "\n")
-                result_fh.flush()
+                target_fh = metric_streams[metric_name]
+                target_fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+                target_fh.flush()
                 rows_by_metric[metric_name].append(row)
                 seen.add(key)
                 scored_total += 1
@@ -556,6 +642,9 @@ def run(
                         f"({rate:.1f}/s, {elapsed:.0f}s elapsed)",
                         file=sys.stderr,
                     )
+    finally:
+        for fh in sidecar_fhs:
+            fh.close()
 
     elapsed = time.monotonic() - started
     print(file=sys.stderr)
@@ -626,6 +715,13 @@ def main(argv: list[str] | None = None) -> int:
         help="Always append; ignore the (hash, snapshot, metric) resume cache. "
         "Used by mg-c2af to re-score under the fixed pool-bigram dispatch.",
     )
+    parser.add_argument(
+        "--cluster-model",
+        type=Path,
+        default=_DEFAULT_CLUSTER_MODEL,
+        help="Path to the corpus-derived phoneme cluster model JSON used by "
+        "sign_prediction_perplexity_v0 (default: %(default)s).",
+    )
     args = parser.parse_args(argv)
 
     metrics = [m.strip() for m in args.metrics.split(",") if m.strip()]
@@ -640,6 +736,7 @@ def main(argv: list[str] | None = None) -> int:
         pool_path=args.pool,
         pools_dir=args.pools_dir,
         force_rescore=args.force_rescore,
+        cluster_model_path=args.cluster_model,
     )
     print(json.dumps(summary, indent=2))
     return 0

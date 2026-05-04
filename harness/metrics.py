@@ -1101,10 +1101,191 @@ def partial_mapping_compression_delta_v0(
     )
 
 
+# ---------------------------------------------------------------------------
+# sign_prediction_perplexity_v0  (mg-ddee, harness v7)
+# ---------------------------------------------------------------------------
+#
+# Re-frames the question. Existing metrics ask "given this substrate
+# hypothesis, does the corpus look right?" — the per-phoneme position
+# priors and the pool-derived bigrams encode "what corpus *should* look
+# like under the hypothesis." mg-f419 found that this lets phonotactics
+# alone account for the leaderboard, so the substrate identity adds no
+# signal.
+#
+# This metric flips the direction. The corpus' own distributional
+# structure produces a clustering of signs (corpus_phoneme_model.py),
+# without using any substrate-pool prior. The metric then asks: does
+# the candidate equation's (sign → phoneme) assignment AGREE with the
+# cluster model's implicit class assignments? If so, mapping signs to
+# their phonemes preserves predictability — substrate-real candidates
+# should produce *better* agreement than random-control candidates if
+# the corpus' structural patterns reflect a real underlying phonology.
+#
+# Formulation (two terms, summed; documented in detail in the docstring):
+#
+#   Term 1 (cluster agreement). Count over (sign, phoneme) pairs where
+#     cluster_id(sign) == phoneme_to_modal_cluster(phoneme).
+#     Range: integer in [0, n_pairs].
+#
+#   Term 2 (window bigram log-likelihood). Sum over adjacent sign pairs
+#     in the equation's inscription window of
+#     log P(cluster_id(sign_{i+1}) | cluster_id(sign_i))
+#     under the corpus-derived bigram model.
+#     Range: roughly [-7n, 0] in nats (n = window length - 1).
+#
+# Term 2 is a window-quality prior — it doesn't depend on the proposed
+# phonemes, only on which signs the equation pins. Two candidates that
+# happen to pick the same window get identical term-2 contributions,
+# but the window IS chosen by the equation, so the term still discriminates
+# between candidates that differ on which inscription/span they pin to.
+# Term 1 is the phoneme-side discriminator and is the term where
+# substrate-vs-control should differ if the metric works.
+
+
+@dataclass(frozen=True)
+class SignPredictionPerplexityResult:
+    """Result of ``sign_prediction_perplexity_v0`` on a single equation."""
+
+    score: float                       # term1 + term2
+    cluster_agreement: int             # term1 (raw count in [0, n_pairs])
+    window_bigram_loglik: float        # term2 (log P sum, nats)
+    metric_notes: str
+    n_pairs_scored: int
+    n_window_bigrams: int
+
+
+def sign_prediction_perplexity_v0(
+    *,
+    record: dict,
+    equation: dict,
+    cluster_model: "object",
+) -> SignPredictionPerplexityResult:
+    """Score a candidate equation against the corpus-derived cluster model.
+
+    **What it measures.**
+
+    Two terms, summed:
+
+    1. *Cluster agreement.* For each (sign, phoneme) pair in the
+       equation's ``sign_to_phoneme`` dict:
+         - look up ``cluster_id(sign)`` from ``cluster_model.sign_to_cluster``;
+         - look up ``modal_cluster(phoneme)`` from
+           ``cluster_model.phoneme_to_modal_cluster``;
+         - increment if the two are equal.
+       The raw integer count is term-1. A candidate whose phoneme
+       assignment puts each sign in a cluster *consistent with the
+       phoneme's expected position behavior* scores high; a candidate
+       that maps a vowel-final-friendly sign to a stop-onset phoneme
+       scores low. Because the cluster model is pure-corpus, this
+       discrimination does NOT come from substrate-pool identity — the
+       phoneme-to-cluster bridge is the only place position priors enter,
+       and they enter once at model build time, not per-candidate.
+
+    2. *Window bigram log-likelihood.* For each adjacent (sign_i,
+       sign_{i+1}) pair within the equation's inscription window
+       (skipping intervening dividers / non-syllabograms), compute
+       ``log P(cluster_id(sign_{i+1}) | cluster_id(sign_i))`` under the
+       corpus-derived bigram. Sum.
+
+    The metric value is ``score = term1 + term2``. Term 1 is in raw
+    count units (~0..6 for a typical 6-sign equation); term 2 is a
+    log-probability in nats (typically -1 to -3 per bigram). The two
+    are deliberately on different scales — term 1 is the *phoneme-side*
+    discriminator (substrate-vs-control should differ here), term 2 is a
+    *window quality* prior. They are reported separately on the result
+    row so analysis can lift either out.
+
+    **Determinism.** Same (record, equation, cluster_model) ⇒
+    byte-identical score. No randomness, no permutations.
+
+    **What invalidates it.**
+      * (a) Cluster model is degenerate (all signs in one cluster) ⇒
+        term 1 collapses to "phoneme matches the dominant cluster" for
+        every candidate, leaving term 2 as the only discriminator.
+        Mitigated at build time by feature-axis weighting that keeps
+        position-in-word as the dominant signal.
+      * (b) Corpus is fragmentary ⇒ bigram counts get noisy and
+        term 2 hits the smoothing floor.
+      * (c) phoneme_to_modal_cluster's bridge mis-assigns a phoneme ⇒
+        term 1 is consistently wrong for that phoneme; substrate
+        candidates with that phoneme suffer along with controls so the
+        paired-difference is unaffected (this is the design intent of
+        paired-diff scoring).
+    """
+    sign_to_cluster: dict[str, int] = cluster_model.sign_to_cluster
+    phoneme_to_modal: dict[str, int] = cluster_model.phoneme_to_modal_cluster
+    log_probs: list[list[float]] = cluster_model.bigram_log_probs
+
+    sign_to_phoneme = equation["sign_to_phoneme"]
+    n_pairs = len(sign_to_phoneme)
+
+    # Term 1: cluster agreement.
+    cluster_agreement = 0
+    missing_in_cluster: list[str] = []
+    missing_in_phoneme_table: list[str] = []
+    for sign, phoneme in sign_to_phoneme.items():
+        if sign not in sign_to_cluster:
+            missing_in_cluster.append(sign)
+            continue
+        # Phoneme bridging: take first character if multi-char (matches
+        # the build-time PHONEME_POSITION_PROFILES handling).
+        head = phoneme[:1] if phoneme else ""
+        target_cluster = phoneme_to_modal.get(head)
+        if target_cluster is None:
+            missing_in_phoneme_table.append(phoneme)
+            continue
+        if sign_to_cluster[sign] == target_cluster:
+            cluster_agreement += 1
+
+    # Term 2: window bigram log-likelihood.
+    tokens = record["tokens"]
+    span = equation["span"]
+    start, end = span[0], span[1]
+    window = tokens[start : end + 1]
+    # Filter to syllabograms that have cluster ids.
+    window_clusters: list[int] = []
+    for tok in window:
+        if tok in sign_to_cluster:
+            window_clusters.append(sign_to_cluster[tok])
+    bigram_loglik = 0.0
+    n_bigrams = 0
+    for a, b in zip(window_clusters[:-1], window_clusters[1:]):
+        bigram_loglik += log_probs[a][b]
+        n_bigrams += 1
+
+    score = float(cluster_agreement) + bigram_loglik
+    diag_bits: list[str] = []
+    if missing_in_cluster:
+        diag_bits.append(
+            f"signs missing from cluster model: {missing_in_cluster!r}"
+        )
+    if missing_in_phoneme_table:
+        diag_bits.append(
+            f"phonemes missing from phoneme→cluster table: "
+            f"{missing_in_phoneme_table!r}"
+        )
+    notes = (
+        f"sign_prediction_perplexity_v0: term1_cluster_agreement={cluster_agreement} "
+        f"of {n_pairs}, term2_window_bigram_loglik={bigram_loglik:.4f} "
+        f"over {n_bigrams} bigrams; n_pairs={n_pairs}"
+    )
+    if diag_bits:
+        notes += "; " + "; ".join(diag_bits)
+    return SignPredictionPerplexityResult(
+        score=score,
+        cluster_agreement=cluster_agreement,
+        window_bigram_loglik=bigram_loglik,
+        metric_notes=notes,
+        n_pairs_scored=n_pairs,
+        n_window_bigrams=n_bigrams,
+    )
+
+
 METRICS = {
     "compression_delta_v0": compression_delta_v0,
     "local_fit_v0": local_fit_v0,
     "local_fit_v1": local_fit_v1,
     "geographic_genre_fit_v1": geographic_genre_fit_v1,
     "partial_mapping_compression_delta_v0": partial_mapping_compression_delta_v0,
+    "sign_prediction_perplexity_v0": sign_prediction_perplexity_v0,
 }

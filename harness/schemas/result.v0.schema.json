@@ -86,6 +86,33 @@
       "type": "number",
       "description": "Mapped encoding bits divided by the number of tokens in the stream. Present iff metric is compression_delta_v0 or partial_mapping_compression_delta_v0."
     },
+    "cluster_agreement": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Term 1 of sign_prediction_perplexity_v0: count of (sign, phoneme) pairs in the equation where cluster_id(sign) == phoneme_to_modal_cluster(phoneme). Present iff metric == 'sign_prediction_perplexity_v0'."
+    },
+    "window_bigram_loglik": {
+      "type": "number",
+      "description": "Term 2 of sign_prediction_perplexity_v0: sum of log P(cluster_id(sign_{i+1}) | cluster_id(sign_i)) over adjacent sign pairs in the equation's inscription window, under the corpus-derived bigram model. Present iff metric == 'sign_prediction_perplexity_v0'."
+    },
+    "n_pairs_scored": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of (sign, phoneme) pairs the metric scored. Present iff metric == 'sign_prediction_perplexity_v0'."
+    },
+    "n_window_bigrams": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of adjacent sign-pair bigrams scored within the equation's window. Present iff metric == 'sign_prediction_perplexity_v0'."
+    },
+    "paired_diff": {
+      "type": ["number", "null"],
+      "description": "Substrate score minus the matched control candidate's score (mg-ddee). Present on substrate-pool rows only; control rows omit this field. Null when no matched control could be identified for this candidate."
+    },
+    "paired_diff_match": {
+      "type": ["string", "null"],
+      "description": "Identifier for the matched control candidate used to compute paired_diff (typically the control hypothesis_hash). Null when no match was identified. Present iff paired_diff is present."
+    },
     "corpus_records_used": {
       "type": "integer",
       "minimum": 0,

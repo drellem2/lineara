@@ -1370,6 +1370,196 @@ asserted by `harness/tests/test_control_pools.py::test_determinism_byte_identica
 Sweep results inherit the existing `--force-rescore` resume protocol
 from mg-c2af.
 
+## Findings from mg-ddee
+
+mg-f419 found that the per-surface leaderboard ranks any pool whose
+phoneme inventory and length distribution overlap the Linear-A
+syllabogram set — substrate identity adds no signal on top of phonotactics
+across all three pools (Aquitanian, Etruscan, toponym). mg-ddee attempts
+the structural pivot the f419 close-out flagged: a corpus-derived phoneme
+cluster model (no substrate-pool prior) plus a sign-prediction perplexity
+metric, scored as a paired difference (substrate − matched control)
+rather than as an absolute substrate value.
+
+### Headline answer — null finding (in fact, inverse finding) on all three pools
+
+For each substrate pool, per-surface paired-diff medians were tested
+against zero with one-tail Wilcoxon signed-rank (alternative: median > 0,
+i.e. substrate beats control) and a sign test for robustness:
+
+| pool       | n_surfaces | median(median paired_diff) | mean   | frac surfaces > 0 | Wilcoxon p (one-tail) | sign-test n+/n | sign-test p (one-tail) |
+|------------|-----------:|---------------------------:|-------:|------------------:|----------------------:|---------------:|-----------------------:|
+| aquitanian |        153 |                    +0.0000 | -0.069 |             0.144 |                0.9674 |          22/52 |                 0.8942 |
+| etruscan   |        143 |                    +0.0000 | -0.105 |             0.105 |                0.9884 |          15/45 |                 0.9920 |
+| toponym    |        111 |                    +0.0000 | -0.198 |             0.126 |                0.9953 |          14/51 |                 0.9997 |
+
+All three pools fail the acceptance gate, and the sign tests are
+significant in the *opposite* direction — controls systematically beat
+substrate at the per-surface paired-diff median level. The toponym pool's
+sign-test p of 0.9997 is functionally equivalent to "the wrong direction
+at the 3σ level." The mean paired_diff per pool is also negative for all
+three pools.
+
+The gate explicitly anticipates this case: "If the data shows substrate <
+control significantly, that's also a real finding ... it would mean the
+new metric anti-correlates with substrate identity." That is what
+happened here, on a metric whose signal direction was supposed to
+*depend* on the assignment rather than the phonotactics.
+
+### Why this is a stronger negative than mg-f419
+
+mg-f419's headline was "no signal." mg-ddee's headline is "negative
+signal." Specifically:
+
+* The cluster model is built without any pool prior; the only place a
+  phoneme-side prior enters is the once-at-build-time bridge from
+  cluster centroids to phoneme classes (Trask 1997 ch. 3 position
+  priors). The candidate equation's phoneme assignment is the ONLY
+  candidate-specific input to term 1 of the metric.
+* Paired-difference is computed at the candidate level (same inscription,
+  same span; control chosen by minimum edit distance on the phoneme
+  sequence) and aggregated to per-surface medians. The leaderboard's
+  primary column is the substrate − control delta by construction —
+  phonotactic baseline is subtracted out, not assumed-away.
+* Despite that, all three pools end up with paired_diff distributions
+  centered at zero with negative tails. The metric does not just fail to
+  separate substrate from control; it slightly *prefers* control.
+
+This is the second independent direction (after mg-f419) in which the
+substrate-pool identity signal does not survive a phonotactic control.
+
+### Distribution of the metric value (substrate + control candidates)
+
+Across all 32,172 candidates (16,723 substrate + 15,449 control):
+
+* mean score = -1.70, median = -1.60, sd = 2.02, min = -7.71, max = +2.69.
+* Term 1 (cluster_agreement) is an integer in [0, n_pairs]; for typical
+  6-sign equations the modal value is 0–2.
+* Term 2 (window_bigram_loglik) dominates the score scale (-7 to 0 in
+  nats over 5 bigrams typical), so scores cluster in the -3 to 0 band.
+
+The score distribution per pool is similar in shape; the discriminating
+signal (if any) lives in term 1, which is small in magnitude relative to
+term 2.
+
+### Why term 2 doesn't discriminate (window-quality prior, not phoneme
+discriminator)
+
+Term 2 is a corpus-side bigram log-likelihood over the candidate's
+inscription window — it depends only on which signs the equation pins,
+not on the proposed phonemes. Two candidates that pick the same window
+get identical term-2 contributions. Substrate and control candidates at
+the same (inscription, span) thus have identical term-2 contributions,
+and the paired-diff cancels term 2 out completely. So the paired-diff
+signal lives in term 1 alone — the cluster_agreement count.
+
+### Why term 1 doesn't discriminate (phoneme-to-cluster collapse)
+
+Term 1 counts (sign, phoneme) pairs where ``cluster_id(sign) ==
+phoneme_to_modal_cluster(phoneme)``. The bridge is pre-computed at model
+build time; for the chosen 8-cluster model, most phonemes (a, e, i, l,
+m, n, r, s, u, x, z) bridge to cluster 6 (the largest mid-balanced
+cluster), while a few stops (d, g, p, t) bridge to cluster 5 (medial-
+heavy) and a few onset-heavy phonemes (b, h, j, k, w) bridge to
+cluster 7. Vowel /o/ is the lone bridge to cluster 2 (final-heavy).
+
+The substrate phoneme distributions are heavily vowel-laden (Aquitanian
+words are CV / V-final), so substrate candidates pile most of their
+phonemes into cluster 6. The control pools were drawn IID from the same
+marginal phoneme frequencies, so they pile their phonemes into cluster
+6 at almost the same rate. The cluster_agreement counts therefore have
+nearly identical distributions for substrate and control candidates at
+the same window — and the paired_diff median is ~0 with a slight
+negative tail driven by the few candidates where the substrate phoneme
+sequence happens to land in non-cluster-6 clusters less often than the
+control.
+
+This is structural: with a coarse 8-cluster model and phoneme bridging
+that collapses most of the inventory to one cluster, the per-pair
+discrimination capacity is ~1 bit per equation, and the within-pool
+variance of term 1 is on the same scale as the between-pool difference.
+The paired-difference test therefore lacks power, and the sign of the
+small effect we do see is unfavorable.
+
+### What this means for the research direction
+
+mg-f419's diagnosis stands: phonotactics, not substrate identity, is what
+the leaderboard ranks. mg-ddee tested a structural pivot in the metric
+shape; the pivot does not change the verdict. The natural reading is that
+*at the current granularity of corpus modeling*, the substrate-vs-random
+signal in Linear-A is below the noise floor. Three orthogonal directions
+have now failed to surface it (compression delta, local position-fit,
+corpus-derived cluster perplexity), and mg-f419's matched-control
+framework reduced two of those to "no signal," with mg-ddee converting
+the third to "wrong-direction signal."
+
+Per the ticket, this is an explicit "ship the null finding and shift
+direction" outcome. The ticket sketched the next-tier directions as:
+
+* **Reframe the candidate-equation hypothesis itself.** The equation
+  shape ("this span = this root") may be the wrong unit — a signed
+  signature over multiple cooccurring substrate roots within a window
+  may be the right shape, since real lexicons cluster by root family.
+* **Pull a Linear-B reference corpus** to derive a learned phoneme
+  prior in a script known to be a syllabary. The LB position prior +
+  cluster centroids would lift the phoneme-bridge step out of the
+  hand-curated Trask priors, which is the weakest part of mg-ddee's
+  build. This is the Younger-2000-style approach, queued behind
+  ingest cost.
+
+mg-ddee does not take either step. Both are larger lifts and the present
+ticket's job was to test the cheaper structural pivot first.
+
+### Artifacts shipped
+
+* `harness/corpus_phoneme_model.py` — corpus-derived k-means clustering
+  over per-sign distributional features (position-in-word ×5,
+  position-in-inscription ×2, genre ×1, top-30 left/right neighbors
+  ×1). k=8, deterministic seed=42. Builds and emits
+  `harness/corpus_phoneme_model.json` byte-deterministically.
+* `harness/corpus_phoneme_model.json` — committed cluster-model
+  artifact. 136 signs across 8 clusters; cluster sizes 7, 9, 17, 18,
+  6, 11, 29, 39 with distinct mean position-fingerprints (vowel-final,
+  standalone, all-medial, etc.).
+* `harness/corpus_phoneme_model.README.md` — human-readable cluster
+  compositions, phoneme→cluster bridge, and the 8x8 bigram matrix.
+* `harness/metrics.py` — `sign_prediction_perplexity_v0` registered.
+  Two-term metric: cluster_agreement (term 1) + window_bigram_loglik
+  (term 2). The metric is deterministic and per-equation O(window
+  length).
+* `harness/schemas/result.v0.schema.json` — extended with
+  `cluster_agreement`, `window_bigram_loglik`, `n_pairs_scored`,
+  `n_window_bigrams` for the new metric, plus optional `paired_diff`
+  / `paired_diff_match` columns reserved for rollup-time use.
+* `harness/tests/test_sign_prediction_perplexity.py` — smoke test on a
+  hand-built 3-cluster mini-model.
+* `scripts/run_sweep.py` — accepts `--cluster-model` and dispatches the
+  new metric. 32,172 rows scored in ~37s on the committed manifests.
+* `scripts/paired_diff_rollup.py` — rollup-time pairing on
+  (inscription, span) with edit-distance tie-break on phoneme sequence.
+  Emits per-pool acceptance-gate stats (Wilcoxon signed-rank one-tail
+  + sign test).
+* `results/rollup.paired_diff.sign_prediction_perplexity_v0.md` —
+  committed paired-diff leaderboard, all three pools.
+* `results/experiments.sign_prediction_perplexity_v0.jsonl` — 32,172
+  new rows (16,723 substrate + 15,449 control candidates × 1 metric).
+  Sidecar stream — the primary `results/experiments.jsonl` was
+  approaching GitHub's 100 MB push limit, so sign_prediction_perplexity_v0
+  rows go to a per-metric sidecar. The sweep runner writes to it
+  transparently and the paired-diff rollup reads from both files via a
+  unified resume cache. AGENTS.md "results/ is append-only" still
+  holds: neither file is edited, only appended to.
+* `HARNESS_VERSION` bumped to `v7`.
+
+### Determinism
+
+Re-runs of `python3 -m harness.corpus_phoneme_model` produce a
+byte-identical JSON. Re-runs of the sweep with the resume cache empty
+produce identical row contents (only `run_id` and `ran_at` differ;
+`score`, `cluster_agreement`, `window_bigram_loglik` are bit-identical).
+Re-runs of `paired_diff_rollup.py` over the same result stream produce
+byte-identical markdown.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;
