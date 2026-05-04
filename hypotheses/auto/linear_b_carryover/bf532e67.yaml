@@ -1,0 +1,23 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_tana_ARKH_2_1_2
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''tana'' pinned to ARKH 2 tokens [1..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: tana
+  phonemes:
+  - ta
+  - na
+  gloss_hint: ta-na (libation-formula and name suffix; Younger lex)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB59=ta, AB06=na.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 1
+  - 2
+  sign_to_phoneme:
+    AB01: ta
+    AB04: na

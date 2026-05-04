@@ -2399,6 +2399,175 @@ dispersed → further investigation. Neither scenario applies cleanly:
     alternative-prior test on Aquitanian side — both directions are
     informative) but does not pre-empt the v12 brief.
 
+## Findings from mg-4664
+
+mg-4664 is the v12 ticket: Linear-B sister-syllabary positive control,
+Aquitanian / Etruscan third cross-LM check, and the mg-0f97 forks'
+"manuscript narrative" sub-piece. The ticket pulls a Linear-B reference
+corpus (LiBER, https://liber.cnr.it; 5,638 inscriptions) and routes
+the existing 20 curated Linear-B carryover anchors plus a new
+Mycenaean-Greek char-bigram LM through the same v8 / v9 / v10 / v11
+pipeline as a positive control. It also re-routes the existing
+Aquitanian + Etruscan substrate / control candidates through the
+Mycenaean-Greek LM as a third-LM cross-check (in addition to v11's
+Aquitanian↔Etruscan swap), and consolidates the project's findings
+into a publication-shape document at `docs/findings_summary.md`.
+
+**Lead headline: the Linear-B positive control FAILS the gate at
+p=0.155.** This is the most important result of the ticket. The
+substrate top-20 median posterior (0.7500) is well above the control
+top-20 median (0.3103), but the population MW U on top-K does not
+cross p<0.05 (n=12 substrate top vs n=11 control top, MW U=83 vs null
+expectation 66). The framework cleanly recovers the well-attested
+Linear-A administrative terms — `kuro` (total/sum), `kiro`
+(deficit/owed), `mate`, `tare` — at substrate posterior 0.85–0.98
+versus control posterior 0.83 max, but fails to recover the
+conjectural anchors `dare` (0.0192, loses 50/50 paired records),
+`dina` (0.1154), `ara` (0.1923), `taina` (0.1923). The right-tail
+gate as currently specified is therefore conservative against
+mixed-cleanness substrate pools.
+
+**Secondary headline: Aquitanian under Mycenaean-Greek LM also
+fails the gate (p=0.0953), consistent with v10 Aquitanian PASS
+being substrate-LM-specific.** Etruscan under Mycenaean-Greek LM
+likewise fails the gate (p=0.185), consistent with v11's clean
+Etruscan substrate-LM-specificity finding. Full third-LM table:
+
+| pool       | own-LM (v10)      | cross-LM (v11)    | third-LM (v12, Mycenaean-Greek) | interpretation                                                            |
+|------------|:-----------------:|:-----------------:|:-------------------------------:|:--------------------------------------------------------------------------|
+| aquitanian | PASS p=3.22e-05   | PASS p=0.0205     | FAIL p=0.0953                   | Mediterranean LMs reward Aquitanian; truly unrelated LM does not          |
+| etruscan   | PASS p=5.21e-04   | FAIL p=0.591      | FAIL p=0.185                    | substrate-LM-specific; both unrelated LMs collapse the separation         |
+
+The brief's two interpretive scenarios for the Aquitanian third-LM
+check were:
+  * If Aquitanian beats controls under MycGreek too → "natural-language
+    LM bias" (any natural-language LM rewards Aquitanian roots) → v11
+    cross-LM partial signal is genuine.
+  * If Aquitanian does NOT beat controls under MycGreek → v11 partial
+    cross-LM separation is a Basque-Etruscan kinship artifact → v10
+    Aquitanian PASS is substrate-specific.
+
+We landed on the second scenario at p=0.0953. The Aquitanian
+substrate top-20 median (0.9808) is *unchanged* from same-LM and
+cross-LM, but the *control* top-20 median climbs to 0.9630 under
+MycGreek (vs 0.9512 under Basque, 0.9422 under Etruscan). This
+matches the expected shape: vowel-heavy random-phonotactic controls
+(`edae`, `ioro`, `riieen`) score well under Mycenaean-Greek's
+heavy-vowel LM regardless of substrate provenance, narrowing the
+substrate-vs-control gap from the right-tail's control side rather
+than from the substrate side. The v10 Aquitanian PASS is therefore
+genuinely substrate-specific when measured against a phonotactically
+unrelated LM; the v11 partial separation under Etruscan LM is most
+likely a Basque-Etruscan Mediterranean-phonotactic kinship artifact,
+not "natural-language LM bias" in general.
+
+**What this means for the v10 PASSes.** Two readings of the
+positive-control failure are compatible with the data:
+
+  1. **Gate-too-conservative reading.** The v10 PASSes for Aquitanian
+     and Etruscan are genuine substrate signal; the positive-control
+     fails specifically because the Linear-B carryover anchor pool
+     contains both well-attested and conjectural readings (the
+     conjectural ones drag the population MW U). Under this reading,
+     a refined gate (e.g. require top-N% to *uniformly* beat top-N%
+     of control by some margin) would be more honest about
+     mixed-cleanness pools but would not change the qualitative
+     conclusion for Aquitanian/Etruscan.
+  2. **Curation-sensitivity reading.** The framework recovers signal
+     only on substrate pools where the majority of entries are
+     correct. The v10 PASSes for Aquitanian and Etruscan reflect
+     that those pools (Trask 1997 core; Bonfante & Bonfante 2002 +
+     TLE) happen to be uniformly clean by curation. Linear-B
+     carryover failed because we mixed canonical Linear-A
+     accountancy terms with conjectural readings, exactly the kind
+     of heterogeneity the gate cannot tolerate. Under this reading,
+     the v10 PASSes are valid only conditional on the substrate
+     pools being uniformly clean — a condition we have not
+     independently certified.
+
+Both readings are consistent with the data. The conservative
+interpretation is reading #2: ship v10 PASSes as
+"promising-but-pool-curation-conditional" rather than as
+publication-ready claims. Domain-expert review of the top-K
+Aquitanian / Etruscan surfaces is the missing certification.
+
+**Operational notes for v12.**
+
+  * **Linear-B corpus.** 5,638 inscriptions from LiBER (Knossos 4,228;
+    Pylos 1,086; Mycenae 100; Thebes 75; Tiryns 72; Khania 53; small
+    counts at MI/MA/DI/VOL/EL/GLA/KR/OR/MED/IK/ARM/MAM/PR/SI). Pulled
+    with `scripts/fetch_liber.py` (polite throttled scraper), parsed
+    with `scripts/parse_liber.py` into per-inscription JSON +
+    `corpora/linear_b/all.jsonl`. The Mycenaean-Greek transliteration
+    is extracted from each tablet's `<meta name="description">` tag,
+    syllabogram clusters are kept (lowercase ASCII, hyphens stripped),
+    logograms / digits / damage markers / single-character tokens are
+    dropped. Output is 21,634 word tokens, 5,113 unique forms.
+  * **Mycenaean-Greek LM.** α=0.1 (matches Basque setting; corpus is
+    well-resourced enough that minimal smoothing is appropriate).
+    n_tokens=41,558, n_chars=31,332, n_words=5,113. Built by
+    extending `scripts/build_external_phoneme_models.py` with a
+    `--only mycenaean_greek` branch and committed at
+    `harness/external_phoneme_models/mycenaean_greek.json`.
+  * **Linear-B carryover pool.** `pools/linear_b_carryover.yaml`
+    promotes the 20 curated anchor surfaces (4 from mg-fb23 + 16
+    from mg-7c8c) to a first-class pool. Built by
+    `scripts/build_linear_b_carryover_pool.py`. 20 unique surfaces;
+    8 single-class entries are skipped by `generate_candidates.py`'s
+    standard `local_fit_v0`-class filter (data, kapa, kupa, kupa3,
+    kuse, mina, paja, pitaja). The remaining 12 entries × cap-50 =
+    600 substrate candidates. `pools/control_linear_b_carryover.yaml`
+    is built by extending `scripts/build_control_pools._SUBSTRATE_POOLS`
+    to include `linear_b_carryover`; 9 single-class skips, 11 entries
+    × cap-50 = 550 control candidates.
+  * **LM dispatch.** `scripts/run_sweep._EXT_POOL_LANGUAGE` and
+    `scripts/per_surface_bayesian_rollup._DEFAULT_LANGUAGE_DISPATCH`
+    both gain `linear_b_carryover → mycenaean_greek` and
+    `control_linear_b_carryover → mycenaean_greek` rows. Existing
+    same-LM pools' dispatch is unchanged.
+  * **Third-LM rescore.** `scripts/cross_lm_rescore.py` gains a new
+    `--mode third` flag that swaps to a `_THIRD_LM_DISPATCH` table
+    routing the four existing Aquitanian + Etruscan substrate /
+    control pools through `mycenaean_greek`. 33,490 hypothesis-LM
+    pairs scored in 61 s (~550/s); identical resume-cache logic to
+    v11 (key = (hypothesis_hash, language)); idempotent.
+  * **Bayesian rollup invocation.** `--language-dispatch` JSON
+    overlay routes Aquitanian + Etruscan rows to `mycenaean_greek`
+    for the third-LM aggregation; `--out-suffix
+    .under_mycenaean_greek_lm` keeps the new outputs from
+    overwriting the same-LM and cross-LM committed files. The full
+    no-args rollup now produces 4 per-pool files (the existing
+    aquitanian / etruscan / toponym, plus linear_b_carryover) and
+    a combined `rollup.bayesian_posterior.md` with all four pool
+    sections.
+  * **Tests.** `harness/tests/test_linear_b_pipeline.py` covers the
+    LiBER HTML parser (logograms dropped, syllabograms preserved,
+    short tokens dropped, broken-bracket syllabograms still parsed),
+    the run_sweep / bayesian-rollup dispatch table edits, and the
+    pool / control pool layouts. `harness/tests/test_cross_lm_rescore.py`
+    gains a check on the new `_THIRD_LM_DISPATCH` table.
+  * **Determinism.** All new code paths are deterministic. Re-running
+    the LM build, the candidate generator, the sweep, the third-LM
+    rescore, or the bayesian rollup produces byte-identical output
+    given the same cached LiBER HTML + the same result stream +
+    manifests. The LiBER fetch caches HTML by tablet id under
+    `.cache/liber/tablet/<id>.html` (gitignored); a fresh fetch is
+    polite (8 workers × 0.05s sleep) and finishes in roughly 7
+    minutes against the live LiBER endpoint.
+  * **Out of scope (deferred).** Tighter matched-control sampler for
+    toponym; refined gate for mixed-cleanness pools; per-window
+    deduplication (mg-f419 follow-up); GORILA ingest; additional
+    substrate pools (Phoenician, Sumerian, Hattic); domain-expert
+    review of top-K. The findings_summary.md document spells these
+    out as the remaining work for full publication.
+  * **See also.** `docs/findings_summary.md` for the manuscript-shape
+    consolidation; `results/rollup.bayesian_posterior.linear_b_carryover.md`
+    for the full positive-control top-K leaderboard;
+    `results/rollup.bayesian_posterior.{aquitanian,etruscan}.under_mycenaean_greek_lm.md`
+    for the third-LM per-pool tables;
+    `results/rollup.bayesian_posterior.under_mycenaean_greek_lm.md`
+    for the combined third-LM view.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;

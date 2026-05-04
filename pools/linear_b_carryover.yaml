@@ -1,0 +1,188 @@
+pool: linear_b_carryover
+source_citation: 'Linear-B carryover values from the canonical Linear-A → Linear-B
+  syllabogram identification (Ventris & Chadwick 1956). Per-anchor citations to Younger
+  2020 (Linear A texts in phonetic transcription, online edition), Schoep 2002 (The
+  Administration of Neopalatial Crete), Salgarella 2020 (Aegean Linear Script(s)),
+  and Palmer 1995 ("ku-ro and ki-ro in Linear A"). The anchors are committed under
+  hypotheses/curated/{anchor,v4_anchor}_*.yaml; this pool is a promotion of the same
+  surfaces to a first-class substrate pool so the v8/v9/v10/v11 pipeline can score
+  them under a Mycenaean-Greek external phoneme LM as a positive control (mg-4664).
+
+  '
+license: 'Cited fair-use of secondary sources for compilation of the Linear-B carryover
+  values. Underlying inscriptions and the Ventris-Chadwick 1956 syllabogram identifications
+  are in the public domain.
+
+  '
+fetched_at: '2026-05-04T00:00:00Z'
+entries:
+- surface: ara
+  phonemes:
+  - a
+  - ra
+  gloss: /a-ra/ — initial syllables of a recurring Linear-A onomastic
+  citation: Younger 2020 (online edition), corpus index s.v. AB08 AB60 sequences;
+    Schoep 2002, ch. 4 (recurring onomastic strings); Ventris-Chadwick 1956 values
+    AB08=a, AB60=ra.
+  region: linear_b_carryover
+- surface: dare
+  phonemes:
+  - da
+  - re
+  gloss: da-re (libation-formula continuation, da-ta-re paradigm)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB01=da, AB27=re; Schoep 2002 ch. 4 on libation-table da-re
+    paradigm.
+  region: linear_b_carryover
+- surface: data
+  phonemes:
+  - da
+  - ta
+  gloss: da-ta libation-formula prefix
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB01=da, AB59=ta; Schoep 2002 ch. 4 on libation-table formulae.
+  region: linear_b_carryover
+- surface: dina
+  phonemes:
+  - di
+  - na
+  gloss: di-na recurring Linear-A lexeme
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB07=di, AB06=na.
+  region: linear_b_carryover
+- surface: kapa
+  phonemes:
+  - ka
+  - pa
+  gloss: ka-pa Linear-A recurring transaction term
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB77=ka, AB03=pa per the Ventris-Chadwick carryover.
+  region: linear_b_carryover
+- surface: karu
+  phonemes:
+  - ka
+  - ru
+  gloss: ka-ru recurring lexeme on transaction tablets
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB77=ka, AB26=ru.
+  region: linear_b_carryover
+- surface: kira
+  phonemes:
+  - ki
+  - ra
+  gloss: ki-ra recurring suffix variant
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB67=ki, AB60=ra.
+  region: linear_b_carryover
+- surface: kiro
+  phonemes:
+  - ki
+  - ro
+  gloss: owed / deficit (Linear-A accountancy term)
+  citation: Younger 2020 (online edition), s.v. ki-ro; Palmer 1995, 'ku-ro and ki-ro
+    in Linear A'; Ventris-Chadwick 1956 carryover values AB67=ki, AB02=ro.
+  region: linear_b_carryover
+- surface: kumina
+  phonemes:
+  - ku
+  - mi
+  - na
+  gloss: ku-mi-na (cumin commodity, Linear-A spice term)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04), s.v. ku-mi-na (cumin); AB81=ku, AB73=mi, AB06=na.
+  region: linear_b_carryover
+- surface: kupa
+  phonemes:
+  - ku
+  - pa
+  gloss: kupa- name family / commodity-prefix (Linear-A recurring)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04), entries indexing Linear-A ku-pa- sequence; AB81=ku, AB03=pa
+    per Ventris-Chadwick 1956 Linear-B carryover values.
+  region: linear_b_carryover
+- surface: kupa3
+  phonemes:
+  - ku
+  - pa3
+  gloss: ku-pa3 name family (variant of kupa)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB81=ku, AB56=pa3 (pa2).
+  region: linear_b_carryover
+- surface: kuro
+  phonemes:
+  - ku
+  - ro
+  gloss: total / sum (Linear-A accountancy term)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition),
+    s.v. ku-ro; Schoep 2002, _The Administration of Neopalatial Crete_, ch. 4 on totaling
+    formulae; Ventris-Chadwick 1956 carryover values AB81=ku, AB02=ro.
+  region: linear_b_carryover
+- surface: kuse
+  phonemes:
+  - ku
+  - se
+  gloss: ku-se Linear-A recurring lexeme
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB81=ku, AB09=se.
+  region: linear_b_carryover
+- surface: mate
+  phonemes:
+  - ma
+  - te
+  gloss: ma-te (cf. Linear-B ma-te 'mater'; substrate kinship term)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB80=ma, AB04=te; Linear-B carryover ma-te = mater (Ventris-Chadwick
+    1956).
+  region: linear_b_carryover
+- surface: mina
+  phonemes:
+  - mi
+  - na
+  gloss: mi-na (cumin termination; cf. ku-mi-na)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB73=mi, AB06=na; cf. ku-mi-na cumin.
+  region: linear_b_carryover
+- surface: paja
+  phonemes:
+  - pa
+  - ja
+  gloss: pa-ja name-family / votive prefix
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB03=pa, AB57=ja.
+  region: linear_b_carryover
+- surface: pitaja
+  phonemes:
+  - pi
+  - ta
+  - ja
+  gloss: pi-ta-ja (Younger's standard 3-sign Linear-A name)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB39=pi, AB59=ta, AB57=ja.
+  region: linear_b_carryover
+- surface: taina
+  phonemes:
+  - ta
+  - i
+  - na
+  gloss: /ta-i-na/ — recurring Linear-A onomastic stem (4+ attestations across HT)
+  citation: 'Younger 2020 (online edition), corpus index s.v. AB59 AB28 AB123 sequences
+    (4 attestations: HT 9a, HT 9b, HT 39, HT 123a); Salgarella 2020, _Aegean Linear
+    Script(s)_, p. 145; Ventris-Chadwick 1956 values AB59=ta, AB28=i; AB123 reading
+    conjectural.'
+  region: linear_b_carryover
+- surface: tana
+  phonemes:
+  - ta
+  - na
+  gloss: ta-na (libation-formula and name suffix; Younger lex)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB59=ta, AB06=na.
+  region: linear_b_carryover
+- surface: tare
+  phonemes:
+  - ta
+  - re
+  gloss: ta-re libation-formula continuation
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB59=ta, AB27=re.
+  region: linear_b_carryover

@@ -77,7 +77,12 @@ _DEFAULT_AUTO_SIG = _REPO_ROOT / "hypotheses" / "auto_signatures"
 _DEFAULT_POOLS = _REPO_ROOT / "pools"
 
 _METRIC = "external_phoneme_perplexity_v0"
-_SUBSTRATE_POOLS: tuple[str, ...] = ("aquitanian", "etruscan", "toponym")
+_SUBSTRATE_POOLS: tuple[str, ...] = (
+    "aquitanian",
+    "etruscan",
+    "toponym",
+    "linear_b_carryover",
+)
 _DEFAULT_NMIN = 10
 _DEFAULT_TOP_PER_POOL = 50
 _DEFAULT_TOP_K_GATE = 20
@@ -93,6 +98,8 @@ _DEFAULT_LANGUAGE_DISPATCH: dict[str, str] = {
     "control_etruscan": "etruscan",
     "toponym": "basque",
     "control_toponym": "basque",
+    "linear_b_carryover": "mycenaean_greek",
+    "control_linear_b_carryover": "mycenaean_greek",
 }
 
 

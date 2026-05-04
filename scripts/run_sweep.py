@@ -103,6 +103,14 @@ _EXT_POOL_LANGUAGE: dict[str, str] = {
     "control_etruscan": "etruscan",
     "toponym": "basque",
     "control_toponym": "basque",
+    # mg-4664: Linear-B carryover positive-control pool. The substrate
+    # entries are KNOWN-correct Linear-B → Linear-A syllabogram values
+    # (Ventris-Chadwick 1956). Routing them through a Mycenaean-Greek
+    # LM is the positive-control test of the framework — they MUST
+    # clear the right-tail bayesian gate or the gate is broken on a
+    # known case.
+    "linear_b_carryover": "mycenaean_greek",
+    "control_linear_b_carryover": "mycenaean_greek",
 }
 
 # Metrics that the candidate_signature.v1 shape supports. The signature

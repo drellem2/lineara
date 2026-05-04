@@ -1,0 +1,23 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_karu_ARKH_4b_12_13
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''karu'' pinned to ARKH 4b tokens [12..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: karu
+  phonemes:
+  - ka
+  - ru
+  gloss_hint: ka-ru recurring lexeme on transaction tablets
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB77=ka, AB26=ru.
+equation:
+  inscription_id: ARKH 4b
+  span:
+  - 12
+  - 13
+  sign_to_phoneme:
+    AB67: ka
+    AB02: ru

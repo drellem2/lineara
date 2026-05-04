@@ -44,10 +44,17 @@ from harness.external_phoneme_model import (
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _DEFAULT_BASQUE_TEXT = _REPO_ROOT / "corpora" / "basque" / "text.txt"
 _DEFAULT_ETRUSCAN_WORDS = _REPO_ROOT / "corpora" / "etruscan" / "words.txt"
+_DEFAULT_MYC_WORDS = _REPO_ROOT / "corpora" / "linear_b" / "words.txt"
 _OUT_DIR = _REPO_ROOT / "harness" / "external_phoneme_models"
 
 _BASQUE_ALPHA = 0.1
 _ETRUSCAN_ALPHA = 1.0
+# mg-4664. Mycenaean-Greek LM is built from the LiBER corpus's
+# syllabogram-derived Mycenaean-Greek transliterations. The corpus is
+# well-resourced (>5,000 inscriptions, >100 k phoneme tokens), so a low
+# smoothing constant matches the Basque side rather than the Etruscan
+# side. The brief asked for α=0.1.
+_MYCENAEAN_GREEK_ALPHA = 0.1
 
 
 def build_basque(text_path: Path) -> tuple[str, dict]:
@@ -67,6 +74,45 @@ def build_basque(text_path: Path) -> tuple[str, dict]:
             "alpha_rationale": (
                 "0.1 — well-resourced corpus, minimal smoothing keeps "
                 "rare-bigram log-probs informative."
+            ),
+        },
+    )
+    return model.to_json(), model.meta
+
+
+def build_mycenaean_greek(words_path: Path) -> tuple[str, dict]:
+    """Build the Mycenaean-Greek char-bigram model from the LiBER
+    corpus's per-inscription syllabogram-derived transliterations
+    (``corpora/linear_b/words.txt``). One word per line, lowercase
+    ASCII, hyphens already stripped (``ku-ne-u`` → ``kuneu``)."""
+    words = [
+        line.strip()
+        for line in words_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    tokens = tokenize_word_list(words)
+    model = build_model(
+        name="mycenaean_greek",
+        tokens=tokens,
+        alpha=_MYCENAEAN_GREEK_ALPHA,
+        meta_extra={
+            "source": (
+                "corpora/linear_b/words.txt (LiBER, https://liber.cnr.it; "
+                "syllabogram-derived Mycenaean-Greek transliterations from "
+                "the per-inscription HTML, hyphens stripped)."
+            ),
+            "license": (
+                "LiBER © CNR / Sapienza Università di Roma; CC BY-NC-SA 4.0 "
+                "for academic use. Underlying Linear-B inscriptions are PD "
+                "(Bronze Age). The committed model JSON is a statistical "
+                "derivative."
+            ),
+            "n_words": len(words),
+            "n_chars": sum(len(w) for w in words),
+            "alpha_rationale": (
+                "0.1 — well-resourced corpus (≥5,000 inscriptions, ≥100k "
+                "phoneme tokens); minimal smoothing keeps rare-bigram "
+                "log-probs informative (matches the Basque setting)."
             ),
         },
     )
@@ -102,15 +148,18 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument(
         "--only",
-        choices=("basque", "etruscan"),
+        choices=("basque", "etruscan", "mycenaean_greek"),
         default=None,
-        help="Build only one model (default: both).",
+        help="Build only one model (default: all).",
     )
     parser.add_argument(
         "--basque-text", type=Path, default=_DEFAULT_BASQUE_TEXT
     )
     parser.add_argument(
         "--etruscan-words", type=Path, default=_DEFAULT_ETRUSCAN_WORDS
+    )
+    parser.add_argument(
+        "--mycenaean-greek-words", type=Path, default=_DEFAULT_MYC_WORDS
     )
     parser.add_argument("--out-dir", type=Path, default=_OUT_DIR)
     args = parser.parse_args(argv)
@@ -140,6 +189,19 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         text, meta = build_etruscan(args.etruscan_words)
         out = args.out_dir / "etruscan.json"
+        out.write_text(text + "\n", encoding="utf-8")
+        print(f"wrote {out}  meta={meta}", file=sys.stderr)
+
+    if args.only in (None, "mycenaean_greek"):
+        if not args.mycenaean_greek_words.exists():
+            print(
+                f"missing Mycenaean-Greek corpus: {args.mycenaean_greek_words}\n"
+                "run scripts/fetch_liber.py + scripts/parse_liber.py first.",
+                file=sys.stderr,
+            )
+            return 2
+        text, meta = build_mycenaean_greek(args.mycenaean_greek_words)
+        out = args.out_dir / "mycenaean_greek.json"
         out.write_text(text + "\n", encoding="utf-8")
         print(f"wrote {out}  meta={meta}", file=sys.stderr)
 

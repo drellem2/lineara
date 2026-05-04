@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_kumina_ARKH_4a_13_16
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''kumina'' pinned to ARKH 4a tokens [13..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kumina
+  phonemes:
+  - ku
+  - mi
+  - na
+  gloss_hint: ku-mi-na (cumin commodity, Linear-A spice term)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04), s.v. ku-mi-na (cumin); AB81=ku, AB73=mi, AB06=na.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 16
+  sign_to_phoneme:
+    AB45: ku
+    AB58: mi
+    AB47: na

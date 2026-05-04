@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_dare_ARKH_4b_16_17
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''dare'' pinned to ARKH 4b tokens [16..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: dare
+  phonemes:
+  - da
+  - re
+  gloss_hint: da-re (libation-formula continuation, da-ta-re paradigm)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB01=da, AB27=re; Schoep 2002 ch. 4 on libation-table da-re
+    paradigm.
+equation:
+  inscription_id: ARKH 4b
+  span:
+  - 16
+  - 17
+  sign_to_phoneme:
+    AB41: da
+    AB79: re

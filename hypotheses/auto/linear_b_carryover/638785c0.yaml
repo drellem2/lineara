@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_taina_ARKH_5_0_2
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''taina'' pinned to ARKH 5 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: taina
+  phonemes:
+  - ta
+  - i
+  - na
+  gloss_hint: /ta-i-na/ — recurring Linear-A onomastic stem (4+ attestations across
+    HT)
+  citation: 'Younger 2020 (online edition), corpus index s.v. AB59 AB28 AB123 sequences
+    (4 attestations: HT 9a, HT 9b, HT 39, HT 123a); Salgarella 2020, _Aegean Linear
+    Script(s)_, p. 145; Ventris-Chadwick 1956 values AB59=ta, AB28=i; AB123 reading
+    conjectural.'
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB08: ta
+    AB51: i
+    AB30: na

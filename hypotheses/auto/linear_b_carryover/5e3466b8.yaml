@@ -1,0 +1,23 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_kiro_ARKH_4a_13_14
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''kiro'' pinned to ARKH 4a tokens [13..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kiro
+  phonemes:
+  - ki
+  - ro
+  gloss_hint: owed / deficit (Linear-A accountancy term)
+  citation: Younger 2020 (online edition), s.v. ki-ro; Palmer 1995, 'ku-ro and ki-ro
+    in Linear A'; Ventris-Chadwick 1956 carryover values AB67=ki, AB02=ro.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 14
+  sign_to_phoneme:
+    AB45: ki
+    AB58: ro

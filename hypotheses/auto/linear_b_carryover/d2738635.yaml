@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_kuro_ARKH_1a_10_11
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''kuro'' pinned to ARKH 1a tokens [10..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kuro
+  phonemes:
+  - ku
+  - ro
+  gloss_hint: total / sum (Linear-A accountancy term)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition),
+    s.v. ku-ro; Schoep 2002, _The Administration of Neopalatial Crete_, ch. 4 on totaling
+    formulae; Ventris-Chadwick 1956 carryover values AB81=ku, AB02=ro.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 10
+  - 11
+  sign_to_phoneme:
+    AB08: ku
+    AB58: ro

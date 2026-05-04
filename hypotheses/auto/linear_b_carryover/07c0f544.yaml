@@ -1,0 +1,23 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_dina_ARKH_6_0_1
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''dina'' pinned to ARKH 6 tokens [0..1].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: dina
+  phonemes:
+  - di
+  - na
+  gloss_hint: di-na recurring Linear-A lexeme
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB07=di, AB06=na.
+equation:
+  inscription_id: ARKH 6
+  span:
+  - 0
+  - 1
+  sign_to_phoneme:
+    AB01: di
+    AB06: na

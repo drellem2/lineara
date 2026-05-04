@@ -1,6 +1,7 @@
 .cache/
 __pycache__/
 *.pyc
+.claude/
 
 # External text corpora (mg-ee18). Derived from sources whose
 # licenses (CC BY-SA, fair-use of secondary sources) we honor by
@@ -8,3 +9,4 @@ __pycache__/
 # text. See corpora/basque.README.md and corpora/etruscan.README.md.
 corpora/basque/text.txt
 corpora/etruscan/words.txt
+corpora/linear_b/words.txt

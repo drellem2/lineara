@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_kumina_HT_103_7_9
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''kumina'' pinned to HT 103 tokens [7..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kumina
+  phonemes:
+  - ku
+  - mi
+  - na
+  gloss_hint: ku-mi-na (cumin commodity, Linear-A spice term)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04), s.v. ku-mi-na (cumin); AB81=ku, AB73=mi, AB06=na.
+equation:
+  inscription_id: HT 103
+  span:
+  - 7
+  - 9
+  sign_to_phoneme:
+    AB81: ku
+    AB09: mi
+    AB24: na

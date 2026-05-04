@@ -1,0 +1,23 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_tare_ARKH_3a_0_1
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''tare'' pinned to ARKH 3a tokens [0..1].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: tare
+  phonemes:
+  - ta
+  - re
+  gloss_hint: ta-re libation-formula continuation
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB59=ta, AB27=re.
+equation:
+  inscription_id: ARKH 3a
+  span:
+  - 0
+  - 1
+  sign_to_phoneme:
+    AB77: ta
+    AB24: re

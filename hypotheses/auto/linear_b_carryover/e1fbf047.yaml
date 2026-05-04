@@ -1,0 +1,23 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_kira_ARKH_5_1_2
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''kira'' pinned to ARKH 5 tokens [1..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kira
+  phonemes:
+  - ki
+  - ra
+  gloss_hint: ki-ra recurring suffix variant
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB67=ki, AB60=ra.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 1
+  - 2
+  sign_to_phoneme:
+    AB51: ki
+    AB30: ra

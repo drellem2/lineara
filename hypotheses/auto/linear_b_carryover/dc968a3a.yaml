@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_ara_ARKH_2_14_15
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''ara'' pinned to ARKH 2 tokens [14..15].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: ara
+  phonemes:
+  - a
+  - ra
+  gloss_hint: /a-ra/ — initial syllables of a recurring Linear-A onomastic
+  citation: Younger 2020 (online edition), corpus index s.v. AB08 AB60 sequences;
+    Schoep 2002, ch. 4 (recurring onomastic strings); Ventris-Chadwick 1956 values
+    AB08=a, AB60=ra.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 15
+  sign_to_phoneme:
+    AB79: a
+    A301: ra

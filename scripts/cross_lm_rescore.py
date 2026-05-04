@@ -85,6 +85,24 @@ _CROSS_LM_DISPATCH: dict[str, str] = {
     "control_etruscan": "basque",
 }
 
+# mg-4664: third cross-LM check. Re-routes the same Aquitanian +
+# Etruscan substrate / control candidates through the Mycenaean-Greek
+# LM (a third natural-language LM, neither own-LM nor cross-LM
+# Etruscan/Basque). If Aquitanian still beats its control under
+# Mycenaean-Greek, that's "natural-language LM bias" — Aquitanian
+# surfaces have a phonotactic profile that any natural-language LM
+# rewards. If Aquitanian no longer beats its control, the v11 partial
+# cross-LM separation is a Basque-Etruscan kinship artifact and the
+# v10 Aquitanian PASS is more genuinely substrate-specific than v11
+# suggested. Etruscan under Mycenaean-Greek is a sanity check — should
+# NOT beat its control under an unrelated LM.
+_THIRD_LM_DISPATCH: dict[str, str] = {
+    "aquitanian": "mycenaean_greek",
+    "control_aquitanian": "mycenaean_greek",
+    "etruscan": "mycenaean_greek",
+    "control_etruscan": "mycenaean_greek",
+}
+
 
 def _load_manifest(path: Path) -> list[dict]:
     rows: list[dict] = []
@@ -176,13 +194,16 @@ def run(
     note: str,
     progress_every: int,
     repo_root: Path,
+    dispatch: dict[str, str] | None = None,
 ) -> dict:
+    if dispatch is None:
+        dispatch = _CROSS_LM_DISPATCH
     # Validate dispatch coverage upfront.
-    unknown = [p for p in pools if p not in _CROSS_LM_DISPATCH]
+    unknown = [p for p in pools if p not in dispatch]
     if unknown:
         raise ValueError(
             f"unknown pools for cross-LM rescore: {unknown!r}; supported: "
-            f"{sorted(_CROSS_LM_DISPATCH.keys())}"
+            f"{sorted(dispatch.keys())}"
         )
 
     records = load_records(corpus_path)
@@ -195,7 +216,7 @@ def run(
     )
 
     # Load every LM we'll need.
-    languages = sorted({_CROSS_LM_DISPATCH[p] for p in pools})
+    languages = sorted({dispatch[p] for p in pools})
     external_models: dict[str, ExternalPhonemeModel] = {}
     for lang in languages:
         ext_path = ext_model_dir / f"{lang}.json"
@@ -226,7 +247,7 @@ def run(
     # appear under both directories (substrate + control_<pool>).
     work: list[tuple[dict, str]] = []  # (manifest_row, target_language)
     for pool in pools:
-        target_lang = _CROSS_LM_DISPATCH[pool]
+        target_lang = dispatch[pool]
         v8_path = auto_dir / f"{pool}.manifest.jsonl"
         v9_path = auto_sig_dir / f"{pool}.manifest.jsonl"
         v8_rows = _load_manifest(v8_path)
@@ -322,7 +343,7 @@ def run(
     summary = {
         "metric": _METRIC,
         "pools": pools,
-        "cross_lm_dispatch": {p: _CROSS_LM_DISPATCH[p] for p in pools},
+        "cross_lm_dispatch": {p: dispatch[p] for p in pools},
         "n_work": len(work),
         "scored": scored,
         "skipped_resumed": skipped,
@@ -346,6 +367,16 @@ def main(argv: list[str] | None = None) -> int:
         help="Comma-separated substrate pools to rescore under their swapped LM.",
     )
     parser.add_argument(
+        "--mode",
+        choices=("cross", "third"),
+        default="cross",
+        help=(
+            "Which dispatch to use. ``cross`` (default) is mg-0f97's "
+            "Aquitanian↔Etruscan swap. ``third`` is mg-4664's Mycenaean-"
+            "Greek third-LM rescore for both Aquitanian and Etruscan."
+        ),
+    )
+    parser.add_argument(
         "--note",
         default="mg-0f97 harness v11 cross-LM negative control",
         help="Free-form note attached to every result row.",
@@ -360,6 +391,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     pools = [p.strip() for p in args.pools.split(",") if p.strip()]
+    dispatch = _THIRD_LM_DISPATCH if args.mode == "third" else _CROSS_LM_DISPATCH
     summary = run(
         corpus_path=args.corpus,
         results_dir=args.results_dir,
@@ -370,6 +402,7 @@ def main(argv: list[str] | None = None) -> int:
         note=args.note,
         progress_every=args.progress_every,
         repo_root=args.repo_root,
+        dispatch=dispatch,
     )
     print(json.dumps(summary, indent=2))
     return 0

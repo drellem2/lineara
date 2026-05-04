@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_linear_b_carryover_mate_ARKH_4a_16_17
+description: 'Auto-generated candidate equation: pool=''linear_b_carryover'' entry
+  surface=''mate'' pinned to ARKH 4a tokens [16..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: mate
+  phonemes:
+  - ma
+  - te
+  gloss_hint: ma-te (cf. Linear-B ma-te 'mater'; substrate kinship term)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB80=ma, AB04=te; Linear-B carryover ma-te = mater (Ventris-Chadwick
+    1956).
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 16
+  - 17
+  sign_to_phoneme:
+    AB47: ma
+    AB04: te

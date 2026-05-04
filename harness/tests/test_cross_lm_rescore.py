@@ -52,6 +52,17 @@ class CrossLMDispatchTest(unittest.TestCase):
         self.assertNotIn("toponym", self.cross._CROSS_LM_DISPATCH)
         self.assertNotIn("control_toponym", self.cross._CROSS_LM_DISPATCH)
 
+    def test_third_lm_dispatch_routes_through_mycenaean_greek(self) -> None:
+        # mg-4664 third cross-LM check: Aquitanian + Etruscan substrate
+        # / control candidates rescored under Mycenaean-Greek so we can
+        # tell whether the Aquitanian PASS is "natural-language LM
+        # bias" or genuinely substrate-specific.
+        d = self.cross._THIRD_LM_DISPATCH
+        self.assertEqual(d["aquitanian"], "mycenaean_greek")
+        self.assertEqual(d["control_aquitanian"], "mycenaean_greek")
+        self.assertEqual(d["etruscan"], "mycenaean_greek")
+        self.assertEqual(d["control_etruscan"], "mycenaean_greek")
+
 
 class CrossLMSeenTest(unittest.TestCase):
     @classmethod
