@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_dare_HT_117a
+description: 'v4 Linear-B carryover anchor: AB01 AB27 = /da-re/ in HT 117a tokens
+  [49..50]. da-re (libation-formula continuation, da-ta-re paradigm).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: dare
+  phonemes:
+  - da
+  - re
+  gloss_hint: da-re (libation-formula continuation, da-ta-re paradigm)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB01=da, AB27=re; Schoep 2002 ch. 4 on libation-table da-re
+    paradigm.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 49
+  - 50
+  sign_to_phoneme:
+    AB01: da
+    AB27: re
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: da re. Signs picked from HT 117a
+  tokens [49..50].'

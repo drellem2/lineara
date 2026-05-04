@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_kira_HT_103
+description: 'v4 Linear-B carryover anchor: AB67 AB60 = /ki-ra/ in HT 103 tokens [24..25].
+  ki-ra recurring suffix variant.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kira
+  phonemes:
+  - ki
+  - ra
+  gloss_hint: ki-ra recurring suffix variant
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB67=ki, AB60=ra.
+equation:
+  inscription_id: HT 103
+  span:
+  - 24
+  - 25
+  sign_to_phoneme:
+    AB67: ki
+    AB60: ra
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: ki ra. Signs picked from HT 103
+  tokens [24..25].'

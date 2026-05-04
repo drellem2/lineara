@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: v4_pgreek_paro_ARKH_2
+description: 'v4 plausible pre-Greek toponym candidate: ''paro'' (p-a-r-o) — Paros
+  (4-phoneme prefix; Cycladic substrate). Pinned at ARKH 2 tokens [14..17].'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: paro
+  phonemes:
+  - p
+  - a
+  - r
+  - o
+  gloss_hint: Paros (4-phoneme prefix; Cycladic substrate)
+  citation: Beekes 2010 _Etymological Dictionary of Greek_ vol. 2 appendix s.v. paros
+    (cf. pools/toponym.yaml entry); this candidate proposes the 'paro' fragment of
+    the 'paros' toponym pinned at ARKH 2 tokens [14..17].
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB79: p
+    A301: a
+    AB09: r
+    AB45: o
+notes: 'v4 bucket D_toponym_plausible (mg-7c8c). Source toponym in pools/toponym.yaml:
+  ''paros'' (full phonemes=[''p'', ''a'', ''r'', ''o'', ''s'']). Site=Arkhanes (Cretan;
+  pre_greek × Crete = 1.0); genre_hint=accountancy; confidence=clean. Expected geographic_genre_fit_v1
+  ≈ 0.4*1.0 + 0.6*0.75 = 0.85.'

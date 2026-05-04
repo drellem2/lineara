@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_mate_PH_15a
+description: 'v4 Linear-B carryover anchor: AB80 AB04 = /ma-te/ in PH 15a tokens [0..1].
+  ma-te (cf. Linear-B ma-te ''mater''; substrate kinship term).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: mate
+  phonemes:
+  - ma
+  - te
+  gloss_hint: ma-te (cf. Linear-B ma-te 'mater'; substrate kinship term)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB80=ma, AB04=te; Linear-B carryover ma-te = mater (Ventris-Chadwick
+    1956).
+equation:
+  inscription_id: PH 15a
+  span:
+  - 0
+  - 1
+  sign_to_phoneme:
+    AB80: ma
+    AB04: te
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Phaistos; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: ma te. Signs picked from PH 15a
+  tokens [0..1].'

@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_wrong_sagar_HT_Zb_158b
+description: 'v4 deliberately-wrong Aquitanian candidate: surface ''sagar'' placed
+  in clean votive_or_inscription HT Zb 158b (semantic_compat ≤ 0.25). The phoneme
+  order is unchanged from the plausible bucket; only the inscription''s genre context
+  differs.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: sagar
+  phonemes:
+  - s
+  - a
+  - g
+  - a
+  - r
+  gloss_hint: apple
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB58: s
+    AB67: a
+    AB53: g
+    AB04: a
+    AB28: r
+notes: 'v4 bucket C_aquit_wrong (mg-7c8c). Source pool entry: surface=''sagar'' (semantic_field=''food'',
+  region=''basque_substrate''). Site=Haghia Triada; genre_hint=votive_or_inscription;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'

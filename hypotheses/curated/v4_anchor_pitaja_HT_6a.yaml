@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_pitaja_HT_6a
+description: 'v4 Linear-B carryover anchor: AB39 AB59 AB57 = /pi-ta-ja/ in HT 6a tokens
+  [11..13]. pi-ta-ja (Younger''s standard 3-sign Linear-A name).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: pitaja
+  phonemes:
+  - pi
+  - ta
+  - ja
+  gloss_hint: pi-ta-ja (Younger's standard 3-sign Linear-A name)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB39=pi, AB59=ta, AB57=ja.
+equation:
+  inscription_id: HT 6a
+  span:
+  - 11
+  - 13
+  sign_to_phoneme:
+    AB39: pi
+    AB59: ta
+    AB57: ja
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: pi ta ja. Signs picked from HT 6a
+  tokens [11..13].'

@@ -1,0 +1,33 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_wrong_hamar_HT_Zb_159
+description: 'v4 deliberately-wrong Aquitanian candidate: surface ''hamar'' placed
+  in clean votive_or_inscription HT Zb 159 (semantic_compat ≤ 0.25). The phoneme order
+  is unchanged from the plausible bucket; only the inscription''s genre context differs.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: hamar
+  phonemes:
+  - h
+  - a
+  - m
+  - a
+  - r
+  gloss_hint: ten
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: h
+    AB06: a
+    AB55: m
+    AB41: a
+    AB57: r
+notes: 'v4 bucket C_aquit_wrong (mg-7c8c). Source pool entry: surface=''hamar'' (semantic_field=''number'',
+  region=''basque_substrate''). Site=Haghia Triada; genre_hint=votive_or_inscription;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'

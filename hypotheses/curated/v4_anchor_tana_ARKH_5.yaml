@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_tana_ARKH_5
+description: 'v4 Linear-B carryover anchor: AB59 AB06 = /ta-na/ in ARKH 5 tokens [3..4].
+  ta-na (libation-formula and name suffix; Younger lex).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: tana
+  phonemes:
+  - ta
+  - na
+  gloss_hint: ta-na (libation-formula and name suffix; Younger lex)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB59=ta, AB06=na.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 3
+  - 4
+  sign_to_phoneme:
+    AB59: ta
+    AB06: na
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Arkhanes; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: ta na. Signs picked from ARKH 5
+  tokens [3..4].'

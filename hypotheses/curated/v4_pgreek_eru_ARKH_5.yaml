@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_pgreek_eru_ARKH_5
+description: 'v4 plausible pre-Greek toponym candidate: ''eru'' (e-r-u) — Erymanthos
+  prefix. Pinned at ARKH 5 tokens [1..3].'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: eru
+  phonemes:
+  - e
+  - r
+  - u
+  gloss_hint: Erymanthos prefix
+  citation: Beekes 2010 _Etymological Dictionary of Greek_ vol. 2 appendix s.v. erymanthos
+    (cf. pools/toponym.yaml entry); this candidate proposes the 'eru' fragment of
+    the 'erymanthos' toponym pinned at ARKH 5 tokens [1..3].
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB51: e
+    AB30: r
+    AB59: u
+notes: 'v4 bucket D_toponym_plausible (mg-7c8c). Source toponym in pools/toponym.yaml:
+  ''erymanthos'' (full phonemes=[''e'', ''r'', ''u'', ''m'', ''a'', ''n'', ''th'',
+  ''o'', ''s'']). Site=Arkhanes (Cretan; pre_greek × Crete = 1.0); genre_hint=accountancy;
+  confidence=clean. Expected geographic_genre_fit_v1 ≈ 0.4*1.0 + 0.6*0.75 = 0.85.'

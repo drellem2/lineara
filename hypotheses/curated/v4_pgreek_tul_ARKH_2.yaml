@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_pgreek_tul_ARKH_2
+description: 'v4 plausible pre-Greek toponym candidate: ''tul'' (t-u-l) — Tylissos
+  prefix; pre-Greek -ssos toponym. Pinned at ARKH 2 tokens [9..11].'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: tul
+  phonemes:
+  - t
+  - u
+  - l
+  gloss_hint: Tylissos prefix; pre-Greek -ssos toponym
+  citation: Beekes 2010 _Etymological Dictionary of Greek_ vol. 2 appendix s.v. tulissos
+    (cf. pools/toponym.yaml entry); this candidate proposes the 'tul' fragment of
+    the 'tulissos' toponym pinned at ARKH 2 tokens [9..11].
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB41: t
+    AB01: u
+    AB05: l
+notes: 'v4 bucket D_toponym_plausible (mg-7c8c). Source toponym in pools/toponym.yaml:
+  ''tulissos'' (full phonemes=[''t'', ''u'', ''l'', ''i'', ''s'', ''s'', ''o'', ''s'']).
+  Site=Arkhanes (Cretan; pre_greek × Crete = 1.0); genre_hint=accountancy; confidence=clean.
+  Expected geographic_genre_fit_v1 ≈ 0.4*1.0 + 0.6*0.75 = 0.85.'

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_kapa_HT_6a
+description: 'v4 Linear-B carryover anchor: AB77 AB03 = /ka-pa/ in HT 6a tokens [0..1].
+  ka-pa Linear-A recurring transaction term.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kapa
+  phonemes:
+  - ka
+  - pa
+  gloss_hint: ka-pa Linear-A recurring transaction term
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB77=ka, AB03=pa per the Ventris-Chadwick carryover.
+equation:
+  inscription_id: HT 6a
+  span:
+  - 0
+  - 1
+  sign_to_phoneme:
+    AB77: ka
+    AB03: pa
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: ka pa. Signs picked from HT 6a tokens
+  [0..1].'

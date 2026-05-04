@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: v4_scramble_PA_1_v4E12
+description: v4 random-scramble baseline. 3 random IPA phonemes (ʁ-ʔ-ɲ) at PA 1 tokens
+  [0..2]. Not a real lexeme.
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: random_scramble
+root:
+  surface: ʁʔɲ
+  phonemes:
+  - ʁ
+  - ʔ
+  - ɲ
+  gloss_hint: (no semantic content; randomly selected IPA characters)
+  citation: Random IPA selection from `_SCRAMBLE_IPA_INVENTORY` (scripts/build_curated_v4.py);
+    seed=4242. Not a real lexeme.
+equation:
+  inscription_id: PA 1
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB08: ʁ
+    AB81: ʔ
+    AB65: ɲ
+notes: 'v4 bucket E_scramble (mg-7c8c). Random IPA from _SCRAMBLE_IPA_INVENTORY of
+  length 3; rng seed=4242 (_RANDOM_SEED in scripts/build_curated_v4.py). Site=Papoura;
+  genre_hint=accountancy; confidence=clean. Expected: control_z near 0 (random IPA
+  has no a-priori reason to align with corpus position fingerprints).'

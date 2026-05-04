@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: v4_pgreek_prai_ARKH_2
+description: 'v4 plausible pre-Greek toponym candidate: ''prai'' (p-r-a-i) — Praisos
+  prefix; Eteocretan associations. Pinned at ARKH 2 tokens [9..12].'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: prai
+  phonemes:
+  - p
+  - r
+  - a
+  - i
+  gloss_hint: Praisos prefix; Eteocretan associations
+  citation: Beekes 2010 _Etymological Dictionary of Greek_ vol. 2 appendix s.v. praisos
+    (cf. pools/toponym.yaml entry); this candidate proposes the 'prai' fragment of
+    the 'praisos' toponym pinned at ARKH 2 tokens [9..12].
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: p
+    AB01: r
+    AB05: a
+    AB28: i
+notes: 'v4 bucket D_toponym_plausible (mg-7c8c). Source toponym in pools/toponym.yaml:
+  ''praisos'' (full phonemes=[''p'', ''r'', ''a'', ''i'', ''s'', ''o'', ''s'']). Site=Arkhanes
+  (Cretan; pre_greek × Crete = 1.0); genre_hint=accountancy; confidence=clean. Expected
+  geographic_genre_fit_v1 ≈ 0.4*1.0 + 0.6*0.75 = 0.85.'

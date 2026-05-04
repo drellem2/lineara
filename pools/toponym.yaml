@@ -1,0 +1,290 @@
+pool: toponym
+source_citation: |
+  Beekes, R. S. P. (2010). Etymological Dictionary of Greek. Leiden: Brill.
+    Vol. 2 appendix on the Pre-Greek substrate; especially §§3-7 on the
+    diagnostic suffixes -ssos, -nthos, -ttos, -ndos, and the substrate
+    consonant alternations. Beekes argues a substantial fraction of
+    Greek toponyms in the Aegean basin reflect a non-Indo-European
+    Pre-Greek substrate; the entries here are drawn from his appendix
+    list together with the broader Furnée corpus.
+  Furnée, E. J. (1972). Die wichtigsten konsonantischen Erscheinungen
+    des Vorgriechischen. The Hague: Mouton.
+    [the main 20th-century catalogue of Pre-Greek toponym variants,
+     consonant alternations, and substrate-suffix typology.]
+  Renfrew, C. (1998). "The Archaeology of Religion." In: The Ancient
+    Mind, Cambridge UP, pp. 47-54. [discussion of the Aegean place-name
+    layer pre-dating Mycenaean Greek; cited for the Crete-as-substrate
+    framing.]
+  All toponyms here are public-domain attested place names; transcribed
+  forms reflect the standard Greek-via-Latinate transliteration used in
+  the secondary sources, with the macron-vowel /y/ rendered as /u/
+  (Beekes' practice for pre-Greek substrate forms).
+license: |
+  Cited fair-use of Beekes 2010 and Furnée 1972 for compilation of the
+  toponym surface, phoneme array, gloss, and substrate-citation fields.
+  The toponyms themselves are public-domain attested place names.
+fetched_at: "2026-05-04T00:00:00Z"
+entries:
+  # --------------------------------------------------------------------
+  # Cretan toponyms (most direct geographic fit to the Linear A corpus;
+  # Beekes 2010 vol. 2 appendix; Furnée 1972 §§120-128).
+  # --------------------------------------------------------------------
+  - surface: knossos
+    phonemes: [k, n, o, s, s, o, s]
+    gloss: Knossos (Cretan palatial site)
+    semantic_field: place
+    attestations: [KNOSSOS, KNOSOS]
+    region: pre_greek
+    citation: Beekes 2010 vol. 2 s.v. Knossos; Furnée 1972 §122 (-ssos suffix).
+  - surface: tulissos
+    phonemes: [t, u, l, i, s, s, o, s]
+    gloss: Tylissos (Cretan minor palace)
+    semantic_field: place
+    attestations: [TULISSOS, TYLISSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Tulissos; Furnée 1972 §122.
+  - surface: phaistos
+    phonemes: [p, h, a, i, s, t, o, s]
+    gloss: Phaistos (Cretan palatial site)
+    semantic_field: place
+    attestations: [PHAISTOS, PAITO]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Phaistos; Linear-B/Linear-A carryover pa-i-to.
+  - surface: amnisos
+    phonemes: [a, m, n, i, s, o, s]
+    gloss: Amnisos (Cretan port)
+    semantic_field: place
+    attestations: [AMNISOS, AMINISO]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Amnisos; Furnée 1972 §122.
+  - surface: kudonia
+    phonemes: [k, u, d, o, n, i, a]
+    gloss: Kydonia (NW Cretan town, modern Khania)
+    semantic_field: place
+    attestations: [KYDONIA, KUDONIA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Kudonia.
+  - surface: itanos
+    phonemes: [i, t, a, n, o, s]
+    gloss: Itanos (Cretan eastern town)
+    semantic_field: place
+    attestations: [ITANOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Itanos.
+  - surface: lebena
+    phonemes: [l, e, b, e, n, a]
+    gloss: Lebena (Cretan southern coast site)
+    semantic_field: place
+    attestations: [LEBENA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Lebena.
+  - surface: praisos
+    phonemes: [p, r, a, i, s, o, s]
+    gloss: Praisos (Eastern Cretan town with Eteocretan inscriptions)
+    semantic_field: place
+    attestations: [PRAISOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Praisos; Furnée 1972 §122.
+  - surface: lasaia
+    phonemes: [l, a, s, a, i, a]
+    gloss: Lasaia (Cretan southern town)
+    semantic_field: place
+    attestations: [LASAIA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Lasaia.
+  - surface: gortyn
+    phonemes: [g, o, r, t, u, n]
+    gloss: Gortyn (Cretan southern Mesara plain)
+    semantic_field: place
+    attestations: [GORTYN, GORTUN]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Gortyn.
+
+  # --------------------------------------------------------------------
+  # Aegean / mainland Greek toponyms with -ssos, -nthos, -ttos, -ndos
+  # substrate suffixes (Beekes 2010; Furnée 1972 §§120-128).
+  # --------------------------------------------------------------------
+  - surface: korinthos
+    phonemes: [k, o, r, i, n, th, o, s]
+    gloss: Korinthos (Corinth)
+    semantic_field: place
+    attestations: [KORINTHOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Korinthos; Furnée 1972 §123 (-nthos suffix).
+  - surface: parnassos
+    phonemes: [p, a, r, n, a, s, s, o, s]
+    gloss: Parnassos (sacred mountain)
+    semantic_field: place
+    attestations: [PARNASSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Parnassos; Furnée 1972 §122.
+  - surface: hymettos
+    phonemes: [h, u, m, e, t, t, o, s]
+    gloss: Hymettos (Athenian mountain)
+    semantic_field: place
+    attestations: [HYMETTOS, HUMETTOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Hymettos; Furnée 1972 §124 (-ttos suffix).
+  - surface: lykabettos
+    phonemes: [l, u, k, a, b, e, t, t, o, s]
+    gloss: Lykabettos (Athenian hill)
+    semantic_field: place
+    attestations: [LUKABETTOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Lykabettos.
+  - surface: ardettos
+    phonemes: [a, r, d, e, t, t, o, s]
+    gloss: Ardettos (Athenian hill)
+    semantic_field: place
+    attestations: [ARDETTOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Ardettos; Furnée 1972 §124.
+  - surface: probalinthos
+    phonemes: [p, r, o, b, a, l, i, n, th, o, s]
+    gloss: Probalinthos (Attic deme on Marathon)
+    semantic_field: place
+    attestations: [PROBALINTHOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Probalinthos; Furnée 1972 §123.
+  - surface: hyakinthos
+    phonemes: [h, u, a, k, i, n, th, o, s]
+    gloss: Hyakinthos (pre-Greek deity / mountain name)
+    semantic_field: place
+    attestations: [HYAKINTHOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Hyakinthos; Furnée 1972 §123.
+  - surface: erymanthos
+    phonemes: [e, r, u, m, a, n, th, o, s]
+    gloss: Erymanthos (Arcadian mountain)
+    semantic_field: place
+    attestations: [ERYMANTHOS, ERUMANTHOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Erymanthos.
+  - surface: olympos
+    phonemes: [o, l, u, m, p, o, s]
+    gloss: Olympos (sacred mountain; pre-Greek)
+    semantic_field: place
+    attestations: [OLYMPOS, OLUMPOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Olympos; argued non-IE substrate.
+  - surface: tiruns
+    phonemes: [t, i, r, u, n, s]
+    gloss: Tiryns (Argolid Mycenaean site, pre-Greek name)
+    semantic_field: place
+    attestations: [TIRUNS, TIRYNS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Tiryns.
+  - surface: mukenai
+    phonemes: [m, u, k, e, n, a, i]
+    gloss: Mykenai (Mycenae)
+    semantic_field: place
+    attestations: [MUKENAI, MYKENAI]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Mukenai; argued non-IE substrate.
+  - surface: athenai
+    phonemes: [a, th, e, n, a, i]
+    gloss: Athenai (Athens; cf. pre-Greek Athena)
+    semantic_field: place
+    attestations: [ATHENAI]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Athena (substrate goddess).
+
+  # --------------------------------------------------------------------
+  # Anatolian Pre-Greek toponyms (substrate continuum into Asia Minor;
+  # Beekes 2010, Furnée 1972 §§120-128).
+  # --------------------------------------------------------------------
+  - surface: termessos
+    phonemes: [t, e, r, m, e, s, s, o, s]
+    gloss: Termessos (Pisidian fortress town)
+    semantic_field: place
+    attestations: [TERMESSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Termessos; Furnée 1972 §122.
+  - surface: halikarnassos
+    phonemes: [h, a, l, i, k, a, r, n, a, s, s, o, s]
+    gloss: Halikarnassos (Carian coast town)
+    semantic_field: place
+    attestations: [HALIKARNASSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Halikarnassos.
+  - surface: aspendos
+    phonemes: [a, s, p, e, n, d, o, s]
+    gloss: Aspendos (Pamphylian river-mouth town)
+    semantic_field: place
+    attestations: [ASPENDOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Aspendos; Furnée 1972 §128 (-ndos suffix).
+  - surface: telmessos
+    phonemes: [t, e, l, m, e, s, s, o, s]
+    gloss: Telmessos (Lycian coast town)
+    semantic_field: place
+    attestations: [TELMESSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Telmessos.
+  - surface: tarsos
+    phonemes: [t, a, r, s, o, s]
+    gloss: Tarsos (Cilician town)
+    semantic_field: place
+    attestations: [TARSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Tarsos; possibly older ʔaršuwa.
+  - surface: iassos
+    phonemes: [i, a, s, s, o, s]
+    gloss: Iassos (Carian coast town)
+    semantic_field: place
+    attestations: [IASSOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Iassos.
+  - surface: kalumnos
+    phonemes: [k, a, l, u, m, n, o, s]
+    gloss: Kalymnos (Dodecanese island)
+    semantic_field: place
+    attestations: [KALUMNOS, KALYMNOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Kalumnos.
+
+  # --------------------------------------------------------------------
+  # Aegean island substrate (Beekes 2010 vol. 2 appendix).
+  # --------------------------------------------------------------------
+  - surface: lemnos
+    phonemes: [l, e, m, n, o, s]
+    gloss: Lemnos (Aegean island; non-Greek inscriptions attested)
+    semantic_field: place
+    attestations: [LEMNOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Lemnos; Eteocretan/Tyrrhenian connection (Beekes vol. 2 §6).
+  - surface: lesbos
+    phonemes: [l, e, s, b, o, s]
+    gloss: Lesbos (Aegean island)
+    semantic_field: place
+    attestations: [LESBOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Lesbos.
+  - surface: thera
+    phonemes: [th, e, r, a]
+    gloss: Thera (Cycladic island)
+    semantic_field: place
+    attestations: [THERA, THIRA]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Thera.
+  - surface: paros
+    phonemes: [p, a, r, o, s]
+    gloss: Paros (Cycladic island)
+    semantic_field: place
+    attestations: [PAROS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Paros.
+  - surface: naxos
+    phonemes: [n, a, k, s, o, s]
+    gloss: Naxos (Cycladic island, largest)
+    semantic_field: place
+    attestations: [NAXOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Naxos; aksos / -aksos substrate suffix.
+  - surface: melos
+    phonemes: [m, e, l, o, s]
+    gloss: Melos (Cycladic island; Linear-A inscription site)
+    semantic_field: place
+    attestations: [MELOS]
+    region: pre_greek
+    citation: Beekes 2010 s.v. Melos; Linear-A finds at Phylakopi.

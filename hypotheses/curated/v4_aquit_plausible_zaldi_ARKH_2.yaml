@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_plausible_zaldi_ARKH_2
+description: 'v4 plausible Aquitanian candidate: surface ''zaldi'' placed in clean
+  accountancy inscription ARKH 2 (semantic_compat ≥ 0.5).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: zaldi
+  phonemes:
+  - z
+  - a
+  - l
+  - d
+  - i
+  gloss_hint: horse
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 19
+  sign_to_phoneme:
+    AB79: z
+    A301: a
+    AB09: l
+    AB45: d
+    AB118: i
+notes: 'v4 bucket B_aquit_plausible (mg-7c8c). Source pool entry: surface=''zaldi''
+  (semantic_field=''animal'', region=''basque_substrate''). Site=Arkhanes; genre_hint=accountancy;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'

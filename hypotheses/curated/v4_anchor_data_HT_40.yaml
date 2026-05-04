@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_data_HT_40
+description: 'v4 Linear-B carryover anchor: AB01 AB59 = /da-ta/ in HT 40 tokens [9..10].
+  da-ta libation-formula prefix.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: data
+  phonemes:
+  - da
+  - ta
+  gloss_hint: da-ta libation-formula prefix
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB01=da, AB59=ta; Schoep 2002 ch. 4 on libation-table formulae.
+equation:
+  inscription_id: HT 40
+  span:
+  - 9
+  - 10
+  sign_to_phoneme:
+    AB01: da
+    AB59: ta
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: da ta. Signs picked from HT 40 tokens
+  [9..10].'

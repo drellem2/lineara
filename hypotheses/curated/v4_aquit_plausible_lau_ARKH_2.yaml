@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_plausible_lau_ARKH_2
+description: 'v4 plausible Aquitanian candidate: surface ''lau'' placed in clean accountancy
+  inscription ARKH 2 (semantic_compat ≥ 0.5).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: lau
+  phonemes:
+  - l
+  - a
+  - u
+  gloss_hint: four
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB41: l
+    AB01: a
+    AB05: u
+notes: 'v4 bucket B_aquit_plausible (mg-7c8c). Source pool entry: surface=''lau''
+  (semantic_field=''number'', region=''basque_substrate''). Site=Arkhanes; genre_hint=accountancy;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'

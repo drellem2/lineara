@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_plausible_katu_GO_Wc_1a
+description: 'v4 plausible Aquitanian candidate: surface ''katu'' placed in clean
+  accountancy inscription GO Wc 1a (semantic_compat ≥ 0.5).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: katu
+  phonemes:
+  - k
+  - a
+  - t
+  - u
+  gloss_hint: cat
+  citation: Trask 1997 ch. 3 (Latin loan, but inherited form).
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB31: k
+    AB58: a
+    AB80: t
+    AB28: u
+notes: 'v4 bucket B_aquit_plausible (mg-7c8c). Source pool entry: surface=''katu''
+  (semantic_field=''animal'', region=''basque_substrate''). Site=Gournia; genre_hint=accountancy;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'

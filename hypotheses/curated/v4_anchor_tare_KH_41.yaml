@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_tare_KH_41
+description: 'v4 Linear-B carryover anchor: AB59 AB27 = /ta-re/ in KH 41 tokens [1..2].
+  ta-re libation-formula continuation.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: tare
+  phonemes:
+  - ta
+  - re
+  gloss_hint: ta-re libation-formula continuation
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB59=ta, AB27=re.
+equation:
+  inscription_id: KH 41
+  span:
+  - 1
+  - 2
+  sign_to_phoneme:
+    AB59: ta
+    AB27: re
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Khania; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: ta re. Signs picked from KH 41 tokens
+  [1..2].'

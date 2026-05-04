@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_wrong_behi_SY_Za_4
+description: 'v4 deliberately-wrong Aquitanian candidate: surface ''behi'' placed
+  in clean votive_or_inscription SY Za 4 (semantic_compat ≤ 0.25). The phoneme order
+  is unchanged from the plausible bucket; only the inscription''s genre context differs.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: behi
+  phonemes:
+  - b
+  - e
+  - h
+  - i
+  gloss_hint: cow
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB59: b
+    AB28: e
+    A301: h
+    AB54: i
+notes: 'v4 bucket C_aquit_wrong (mg-7c8c). Source pool entry: surface=''behi'' (semantic_field=''animal'',
+  region=''basque_substrate''). Site=Syme; genre_hint=votive_or_inscription; confidence=clean.
+  The phoneme order is the pool entry''s; the wrong-bucket variant differs from the
+  plausible-bucket variant ONLY in the inscription''s genre context.'

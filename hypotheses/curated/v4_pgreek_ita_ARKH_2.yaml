@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_pgreek_ita_ARKH_2
+description: 'v4 plausible pre-Greek toponym candidate: ''ita'' (i-t-a) — Itanos prefix.
+  Pinned at ARKH 2 tokens [14..16].'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: ita
+  phonemes:
+  - i
+  - t
+  - a
+  gloss_hint: Itanos prefix
+  citation: Beekes 2010 _Etymological Dictionary of Greek_ vol. 2 appendix s.v. itanos
+    (cf. pools/toponym.yaml entry); this candidate proposes the 'ita' fragment of
+    the 'itanos' toponym pinned at ARKH 2 tokens [14..16].
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 16
+  sign_to_phoneme:
+    AB79: i
+    A301: t
+    AB09: a
+notes: 'v4 bucket D_toponym_plausible (mg-7c8c). Source toponym in pools/toponym.yaml:
+  ''itanos'' (full phonemes=[''i'', ''t'', ''a'', ''n'', ''o'', ''s'']). Site=Arkhanes
+  (Cretan; pre_greek × Crete = 1.0); genre_hint=accountancy; confidence=clean. Expected
+  geographic_genre_fit_v1 ≈ 0.4*1.0 + 0.6*0.75 = 0.85.'

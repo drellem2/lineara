@@ -1,0 +1,33 @@
+schema_version: candidate_equation.v1
+name: v4_scramble_HT_Zb_159_v4E11
+description: v4 random-scramble baseline. 5 random IPA phonemes (ʐ-ɲ-ʈ-ʔ-ʁ) at HT
+  Zb 159 tokens [0..4]. Not a real lexeme.
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: random_scramble
+root:
+  surface: ʐɲʈʔʁ
+  phonemes:
+  - ʐ
+  - ɲ
+  - ʈ
+  - ʔ
+  - ʁ
+  gloss_hint: (no semantic content; randomly selected IPA characters)
+  citation: Random IPA selection from `_SCRAMBLE_IPA_INVENTORY` (scripts/build_curated_v4.py);
+    seed=4242. Not a real lexeme.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: ʐ
+    AB06: ɲ
+    AB55: ʈ
+    AB41: ʔ
+    AB57: ʁ
+notes: 'v4 bucket E_scramble (mg-7c8c). Random IPA from _SCRAMBLE_IPA_INVENTORY of
+  length 5; rng seed=4242 (_RANDOM_SEED in scripts/build_curated_v4.py). Site=Haghia
+  Triada; genre_hint=votive_or_inscription; confidence=clean. Expected: control_z
+  near 0 (random IPA has no a-priori reason to align with corpus position fingerprints).'

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_kumina_HT_Wc_3014a
+description: 'v4 Linear-B carryover anchor: AB81 AB73 AB06 = /ku-mi-na/ in HT Wc 3014a
+  tokens [0..2]. ku-mi-na (cumin commodity, Linear-A spice term).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kumina
+  phonemes:
+  - ku
+  - mi
+  - na
+  gloss_hint: ku-mi-na (cumin commodity, Linear-A spice term)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04), s.v. ku-mi-na (cumin); AB81=ku, AB73=mi, AB06=na.
+equation:
+  inscription_id: HT Wc 3014a
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB81: ku
+    AB73: mi
+    AB06: na
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: ku mi na. Signs picked from HT Wc
+  3014a tokens [0..2].'

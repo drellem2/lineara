@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_pgreek_muk_ARKH_5
+description: 'v4 plausible pre-Greek toponym candidate: ''muk'' (m-u-k) — Mukenai
+  prefix. Pinned at ARKH 5 tokens [2..4].'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: muk
+  phonemes:
+  - m
+  - u
+  - k
+  gloss_hint: Mukenai prefix
+  citation: Beekes 2010 _Etymological Dictionary of Greek_ vol. 2 appendix s.v. mukenai
+    (cf. pools/toponym.yaml entry); this candidate proposes the 'muk' fragment of
+    the 'mukenai' toponym pinned at ARKH 5 tokens [2..4].
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 2
+  - 4
+  sign_to_phoneme:
+    AB30: m
+    AB59: u
+    AB06: k
+notes: 'v4 bucket D_toponym_plausible (mg-7c8c). Source toponym in pools/toponym.yaml:
+  ''mukenai'' (full phonemes=[''m'', ''u'', ''k'', ''e'', ''n'', ''a'', ''i'']). Site=Arkhanes
+  (Cretan; pre_greek × Crete = 1.0); genre_hint=accountancy; confidence=clean. Expected
+  geographic_genre_fit_v1 ≈ 0.4*1.0 + 0.6*0.75 = 0.85.'

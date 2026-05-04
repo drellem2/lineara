@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_pgreek_amn_ARKH_2
+description: 'v4 plausible pre-Greek toponym candidate: ''amn'' (a-m-n) — Amnisos
+  prefix; pre-Greek -isos suffix. Pinned at ARKH 2 tokens [8..10].'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: amn
+  phonemes:
+  - a
+  - m
+  - n
+  gloss_hint: Amnisos prefix; pre-Greek -isos suffix
+  citation: Beekes 2010 _Etymological Dictionary of Greek_ vol. 2 appendix s.v. amnisos
+    (cf. pools/toponym.yaml entry); this candidate proposes the 'amn' fragment of
+    the 'amnisos' toponym pinned at ARKH 2 tokens [8..10].
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 10
+  sign_to_phoneme:
+    AB08: a
+    AB41: m
+    AB01: n
+notes: 'v4 bucket D_toponym_plausible (mg-7c8c). Source toponym in pools/toponym.yaml:
+  ''amnisos'' (full phonemes=[''a'', ''m'', ''n'', ''i'', ''s'', ''o'', ''s'']). Site=Arkhanes
+  (Cretan; pre_greek × Crete = 1.0); genre_hint=accountancy; confidence=clean. Expected
+  geographic_genre_fit_v1 ≈ 0.4*1.0 + 0.6*0.75 = 0.85.'

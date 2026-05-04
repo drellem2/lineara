@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_plausible_ezti_ARKH_5
+description: 'v4 plausible Aquitanian candidate: surface ''ezti'' placed in clean
+  accountancy inscription ARKH 5 (semantic_compat ≥ 0.5).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ezti
+  phonemes:
+  - e
+  - z
+  - t
+  - i
+  gloss_hint: honey
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: e
+    AB51: z
+    AB30: t
+    AB59: i
+notes: 'v4 bucket B_aquit_plausible (mg-7c8c). Source pool entry: surface=''ezti''
+  (semantic_field=''food'', region=''basque_substrate''). Site=Arkhanes; genre_hint=accountancy;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_pgreek_kno_ARKH_2
+description: 'v4 plausible pre-Greek toponym candidate: ''kno'' (k-n-o) — Knossos
+  prefix; pre-Greek substrate -ssos toponym. Pinned at ARKH 2 tokens [0..2].'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: toponym
+root:
+  surface: kno
+  phonemes:
+  - k
+  - n
+  - o
+  gloss_hint: Knossos prefix; pre-Greek substrate -ssos toponym
+  citation: Beekes 2010 _Etymological Dictionary of Greek_ vol. 2 appendix s.v. knossos
+    (cf. pools/toponym.yaml entry); this candidate proposes the 'kno' fragment of
+    the 'knossos' toponym pinned at ARKH 2 tokens [0..2].
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB41: k
+    AB01: n
+    AB04: o
+notes: 'v4 bucket D_toponym_plausible (mg-7c8c). Source toponym in pools/toponym.yaml:
+  ''knossos'' (full phonemes=[''k'', ''n'', ''o'', ''s'', ''s'', ''o'', ''s'']). Site=Arkhanes
+  (Cretan; pre_greek × Crete = 1.0); genre_hint=accountancy; confidence=clean. Expected
+  geographic_genre_fit_v1 ≈ 0.4*1.0 + 0.6*0.75 = 0.85.'

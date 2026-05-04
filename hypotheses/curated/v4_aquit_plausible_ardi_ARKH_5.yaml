@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_plausible_ardi_ARKH_5
+description: 'v4 plausible Aquitanian candidate: surface ''ardi'' placed in clean
+  accountancy inscription ARKH 5 (semantic_compat ≥ 0.5).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ardi
+  phonemes:
+  - a
+  - r
+  - d
+  - i
+  gloss_hint: sheep
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB51: a
+    AB30: r
+    AB59: d
+    AB06: i
+notes: 'v4 bucket B_aquit_plausible (mg-7c8c). Source pool entry: surface=''ardi''
+  (semantic_field=''animal'', region=''basque_substrate''). Site=Arkhanes; genre_hint=accountancy;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'

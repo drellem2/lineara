@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_dina_HT_16
+description: 'v4 Linear-B carryover anchor: AB07 AB06 = /di-na/ in HT 16 tokens [4..5].
+  di-na recurring Linear-A lexeme.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: dina
+  phonemes:
+  - di
+  - na
+  gloss_hint: di-na recurring Linear-A lexeme
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB07=di, AB06=na.
+equation:
+  inscription_id: HT 16
+  span:
+  - 4
+  - 5
+  sign_to_phoneme:
+    AB07: di
+    AB06: na
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: di na. Signs picked from HT 16 tokens
+  [4..5].'

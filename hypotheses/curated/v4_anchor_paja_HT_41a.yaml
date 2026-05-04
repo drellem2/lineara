@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_paja_HT_41a
+description: 'v4 Linear-B carryover anchor: AB03 AB57 = /pa-ja/ in HT 41a tokens [15..16].
+  pa-ja name-family / votive prefix.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: paja
+  phonemes:
+  - pa
+  - ja
+  gloss_hint: pa-ja name-family / votive prefix
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB03=pa, AB57=ja.
+equation:
+  inscription_id: HT 41a
+  span:
+  - 15
+  - 16
+  sign_to_phoneme:
+    AB03: pa
+    AB57: ja
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: pa ja. Signs picked from HT 41a
+  tokens [15..16].'

@@ -653,18 +653,273 @@ in this ticket per scope-of-work norm).
   against (top-1% mean − median ~ 352 bits on pmcd). Defer to a
   separate ticket.
 
+### Findings from mg-7c8c (curated v4: n=20 buckets + n=4-or-bad-metric resolution, 2026-05-04)
+
+This ticket grew each of the five curated buckets from n=4 to n=20
+(80 new hand-systematic hypotheses + a 35-entry pre-Greek toponym
+pool) and re-ran all three v3 metrics, with a Mann-Whitney U test +
+power-calculation sanity check. **The headline finding is the
+methodology answer to the question that motivated v4: the n=4 buckets
+were not the bottleneck — the metrics genuinely do not discriminate
+within-surface plausibility-of-context, and at the observed effect
+sizes even n=50–100 would not rescue them.**
+
+The full statistics report is in `results/statistics_v4.md`. The key
+rows:
+
+**Plausible-vs-wrong-Aquitanian (B vs C; n=20 each).** Mann-Whitney U,
+two-sided, with mid-rank ties:
+
+| metric | Δ_medians | Cliff's δ | U_a | z | p | detectable Δ at n=20 | underpowered? |
+|---|---:|---:|---:|---:|---:|---:|:---:|
+| `local_fit_v1`                          | -0.0242 | +0.040 | 208 | +0.20 | **0.84** | 0.262 | yes |
+| `partial_mapping_compression_delta_v0`  | +48 bits | +0.120 | 224 | +0.64 | **0.52** | 75.4 bits | yes |
+| `geographic_genre_fit_v1`               | +0.30 | +0.960 | 392 | +5.45 | **<0.0001** | 0.075 | no |
+
+`local_fit_v1` and `partial_mapping_compression_delta_v0` again **fail
+the gate** (p > 0.05, Cliff's δ ≈ 0). The observed effect sizes are
+*tiny in absolute units* (-0.024 v1-units; +48 bits) — at the observed
+within-bucket SDs (0.295 and 85 respectively) the comparison is
+underpowered for the observed effect even at n=20. To detect those
+specific effect sizes at α=0.05, β=0.20 would need:
+- `local_fit_v1`: **n* ≈ 2,400 per bucket** (effect is dominated by
+  noise; nothing realistic will rescue it).
+- `partial_mapping_compression_delta_v0`: **n* ≈ 50 per bucket**
+  (n=50 might surface it, n=20 is on the wrong side of the threshold).
+
+`geographic_genre_fit_v1` separates the buckets with massive effect —
+**but tautologically.** Bucket C was *defined* by genre-incompat
+(semantic_compat ≤ 0.25 by construction). The metric is reading the
+construction rule, not an emergent signal. This is a methodological
+caveat and is documented in `hypotheses/curated/CONSTRUCTION.md`.
+
+**Bottom-line answer to the n=4-or-bad-metric question.** Per the
+ticket brief's three options: **option (b)** — *"all three have p>0.05
+even at n=20, and the metric collectively does not capture
+within-surface plausibility-of-context"* — is the closest match, with
+the qualifier that the comparisons are also underpowered at n=20 for
+the observed effect sizes. The two non-tautological metrics
+(`local_fit_v1` and `partial_mapping_compression_delta_v0`) carry **no
+detectable plausible-vs-wrong-Aquitanian signal at n=20.** The
+geographic axis separates the buckets but does so by reading the
+construction rule.
+
+So **n=4 was *not* the bottleneck**: even at n=20, neither metric's
+effect size is large enough that further bucket expansion (n=50,
+n=100) would produce a clean discrimination — the
+`local_fit_v1` effect is well below the noise floor at any realistic
+n, and `partial_mapping_compression_delta_v0`'s effect is on the
+wrong side of the n=50 threshold. The next move is fundamentally
+different from "another bucket expansion": the metrics need a
+structural change. Candidate directions are listed below.
+
+**Anchor-vs-scramble sanity check (A vs E; n=20 each).** Verifies
+mg-fb23's n=4 gate (anchor median > scramble median) survives at
+larger n.
+
+| metric | Δ_medians | Cliff's δ | p | detectable Δ |
+|---|---:|---:|---:|---:|
+| `local_fit_v1`                          | -0.317 | -0.425 | **0.022** | 0.214 |
+| `partial_mapping_compression_delta_v0`  | +48 bits | +0.330 | 0.076    | 73.0 bits |
+| `geographic_genre_fit_v1`               | 0.000  | 0.000  | 1.000    | 0.000 |
+
+`local_fit_v1` actually shows anchors **lower than scrambles**
+(direction-flipped from the mg-fb23 z-score-based result). Why: the
+empirical bigram model in `local_fit_v1` is built from the active
+pool's surfaces — for these curated entries the runner falls back to
+`pools/aquitanian.yaml` (per the runner's source-pool inference
+rule). Linear-B carryover surfaces (`kupa`, `mate`, `kira`) and random
+IPA scrambles (`q`, `ʁ`, ...) are *both* off-distribution under the
+Aquitanian bigram, but anchors hit additional rare-sign correction
+penalties on their sign sets (some anchors pin to AB04, AB05, etc.
+which appear < 5 times in the bigram model's vocabulary; the v1 metric
+penalizes that). Random scramble surfaces are off-distribution but
+shorter and don't trigger the rare-sign correction as often. The
+direction flip is a **metric artifact** of the off-pool scoring path,
+not a substrate finding.
+
+`partial_mapping_compression_delta_v0` is the relevant axis here, and
+it shows a marginal positive effect (Cliff δ=+0.33, p=0.076) —
+suggestive but not significant. The more meaningful question (does
+the corpus-side metric distinguish anchors from random IPA?) is mostly
+clarified by the +48 bit median difference, but the within-bucket SD
+on this metric is high enough (~57-101 bits depending on bucket) that
+the test is underpowered even at n=20.
+
+`geographic_genre_fit_v1` is uniformly 0.5 for both buckets because
+neither anchor surfaces (`kupa`/`mate`/etc.) nor scramble surfaces
+(random IPA) appear in any pool's `by_surface` lookup, so the metric
+falls back to the neutral 0.5/0.5 default for both inputs. This is
+the documented "Missing or empty fields → neutral 0.5" behavior of
+the metric (`harness.metrics._lookup_compat`).
+
+**Toponym-vs-scramble (D vs E; n=20 each).** Tests whether the
+new third pool carries any independent discriminative signal.
+
+| metric | Δ_medians | Cliff's δ | p | detectable Δ |
+|---|---:|---:|---:|---:|
+| `local_fit_v1`                          | +1.014 | +0.780 | **<0.0001** | 0.404 |
+| `partial_mapping_compression_delta_v0`  | +96 bits | +0.552 | **0.003** | 75.4 bits |
+| `geographic_genre_fit_v1`               | 0.000 | 0.000 | 1.000 | 0.000 |
+
+Toponym candidates **strongly separate from scrambles** on both
+non-tautological metrics — both effects are large (Cliff δ > 0.5,
+"large effect" in Cliff 1993) and detectable at n=20. So the
+metrics ARE capable of separating real-substrate-style readings
+from random IPA at this sample size; the failure mode is
+specifically "plausible-vs-wrong on the SAME pool's surfaces."
+
+The geographic axis is again 0.5/0.5 for both buckets because the
+toponym candidates' surfaces are *fragments* of full toponyms (e.g.
+`kno` from `knossos`), not pool entries, so the surface lookup
+misses. To exercise `geographic_genre_fit_v1` properly on the
+toponym bucket, future work should either (a) add the fragments as
+their own pool entries with `region: pre_greek`, or (b) extend the
+runner's pool-context lookup to read region/semantic_field from the
+candidate's `source_pool` rather than the surface.
+
+**Plausible-Aquitanian-vs-anchor (B vs A; n=20 each).** A control
+sanity check — both buckets are "plausible" in their own pool's
+sense; metrics should not separate them strongly.
+
+| metric | Δ_medians | Cliff's δ | p |
+|---|---:|---:|---:|
+| `local_fit_v1`                          | +1.746 | **+1.000** | <0.0001 |
+| `partial_mapping_compression_delta_v0`  | +24 bits | +0.085 | 0.66 |
+| `geographic_genre_fit_v1`               | +0.05 | +0.750 | <0.0001 |
+
+`local_fit_v1` separates them with **perfect Cliff δ = +1.0** —
+every Aquitanian-plausible candidate scores above every anchor.
+This is the off-pool-bigram artifact noted above: anchor surfaces
+under the Aquitanian bigram model are uniformly worse than
+Aquitanian-pool surfaces. **This is a confound for any
+cross-pool analysis under `local_fit_v1`.** Cross-pool
+comparisons need either pool-specific bigram models or a
+pool-agnostic phoneme prior (the held-out bigram or cross-corpus
+prior already queued under "Proposed v2 directions" in the mg-7dd1
+section).
+
+**Distribution shapes (n=20 each, by bucket).**
+
+| metric | A_anchor | B_aquit_plausible | C_aquit_wrong | D_toponym | E_scramble |
+|---|---|---|---|---|---|
+| `local_fit_v1` median (sd)              | -4.49 (0.13) | -2.74 (0.29) | -2.72 (0.30) | -3.16 (0.56) | -4.17 (0.32) |
+| `pmcd` median (sd)                      | -80 (57) | -56 (92) | -104 (77) | -32 (65) | -128 (102) |
+| `geographic_genre_fit_v1` median (sd)   | 0.50 (0.00) | 0.55 (0.08) | 0.25 (0.09) | 0.50 (0.00) | 0.50 (0.00) |
+
+The `pmcd` distribution is consistent with mg-23cc's bulk
+characterization (sd ≈ 90-110 bits within-pool); the curated buckets
+show similar within-bucket spread. The geographic-axis bucket SDs are
+0 except for B and C (the only buckets whose surfaces hit the pool
+lookup) — D, A, E all fall back to 0.5.
+
+**What worked.**
+- Bucket construction is reproducible: the build script
+  (`scripts/build_curated_v4.py`) runs in <1s and emits 80 YAMLs
+  byte-identically across re-runs. RNG seed=4242 frozen for the
+  scramble bucket. CONSTRUCTION.md documents the rules.
+- Pool ingest: `pools/toponym.yaml` (35 entries, Beekes 2010 /
+  Furnée 1972) clears the ≥30 acceptance bar.
+- Sweep is resumable end-to-end. 240 new rows appended to
+  `results/experiments.jsonl` (80 new × 3 metrics); existing 60
+  rows for the 20 original curated entries are preserved (per the
+  append-only rule).
+- Statistics implementation is self-contained — no scipy
+  dependency. `scripts/curated_v4_stats.py` produces a markdown
+  report with U statistics, p-values, Cliff's δ, and per-comparison
+  power calculations.
+- The toponym-vs-scramble test confirms the metrics CAN separate
+  real-substrate-style readings from random IPA at n=20 — the
+  problem really is specifically the within-surface
+  plausibility-of-context signal, not "the metrics work at all."
+
+**What did not work / null findings.**
+- **Plausible-vs-wrong-Aquitanian remains the open methodological
+  question.** Three metrics × two sample sizes (n=4 and n=20) all
+  miss the gate on the non-tautological metrics. The
+  `local_fit_v1` effect is below the noise floor at any realistic
+  n (≈2,400/bucket needed); `pmcd` would need ≈ n=50/bucket. The
+  geographic axis "separates" them with massive effect, but
+  tautologically (the bucket-construction rule is embedded in the
+  metric's lookup table).
+- The `geographic_genre_fit_v1` axis on D and A buckets is uniformly
+  0.5 because the curated surfaces don't hit any pool's
+  `by_surface` lookup. The metric fall-back is documented but
+  surfaces a real limitation: candidate-fragment surfaces, anchor
+  surfaces, and scramble surfaces all bypass the geographic table.
+  A v2 of the metric (or runner) should look up region/semantic_field
+  from the candidate's `source_pool` rather than the surface.
+- The local_fit_v1 anchor < scramble direction flip is real and
+  driven by the off-pool bigram artifact. Cross-pool
+  `local_fit_v1` comparisons need pool-specific bigram models.
+
+**Bottom-line operator takeaways.**
+- The next ticket should NOT be "n=50 expansion." The power
+  calculation says that wouldn't fix it.
+- The next ticket should be a *structural* metric change. Candidates,
+  in priority order:
+  1. **Held-out empirical bigram** (mg-7dd1's queued v2 direction):
+     leave-one-out over pool entries when scoring. The current
+     bigram model is built from the same pool's surfaces, so the
+     bigram term is identical for all candidates of the same
+     surface.
+  2. **Cross-corpus position prior** (mg-7dd1's queued v2
+     direction): build the per-phoneme position fingerprint from
+     a Linear-B / GORILA reference corpus rather than the same
+     Linear-A corpus the metric scores against. Breaks the
+     position-fit term's circularity.
+  3. **Pool-specific bigram models in the runner**: the
+     anchor-vs-scramble direction flip indicates that
+     cross-pool `local_fit_v1` numbers are not comparable.
+     `scripts/run_sweep.py` and `harness.run.score_hypothesis`
+     should pick the right pool's bigram model based on the
+     hypothesis's `source_pool`, not fall back to aquitanian.
+  4. **Corpus-derived phoneme model** (the polecat's "harder
+     direction" from mg-7dd1 / mg-23cc): drop the substrate-pool
+     prior altogether and learn the phoneme prior from the
+     Linear-A corpus's structural patterns (e.g. via
+     position-conditional MLE under a candidate sign-to-phoneme
+     mapping). This is structurally different from the candidate-
+     equation framing and is a separate research direction.
+
+**Operational artifacts.**
+- 80 new curated YAMLs under `hypotheses/curated/v4_*.yaml`.
+- `hypotheses/curated/CONSTRUCTION.manifest.jsonl` with 100 rows
+  (existing 20 + new 80), bucket-tagged.
+- `hypotheses/curated/CONSTRUCTION.md` documenting the rules.
+- `pools/toponym.yaml` (35 entries) + `pools/toponym.README.md`
+  (citation + bias caveats).
+- `scripts/build_curated_v4.py` (deterministic builder; idempotent).
+- `scripts/score_curated_v4.py` (per-hypothesis pool dispatch
+  sweep wrapper; resumable).
+- `scripts/curated_v4_stats.py` (self-contained Mann-Whitney U /
+  Cliff's δ / power-calc report generator).
+- `results/statistics_v4.md` (committed report).
+- `harness/tests/test_curated_v4_smoke.py` (loads the manifest,
+  validates a sampled subset of YAMLs against the schema, exercises
+  one sweep call end-to-end).
+- 240 new result rows appended to `results/experiments.jsonl`
+  (80 new × 3 metrics). Total stream after merge:
+  46,742 + 240 = **46,982 rows**.
+- No metrics or harness internals modified — this is a
+  methodology ticket per the brief.
+
 ## Known metric limitations
 
-- **Three metrics in a row missed the n=4 plausible-vs-wrong gate.**
-  `local_fit_v0` (mg-fb23): identical medians. `local_fit_v1` (mg-7dd1):
-  +0.14 v1-units. `partial_mapping_compression_delta_v0` (mg-23cc):
-  -20 bits (wrong actually scored *higher*). All three metrics
-  exercise structurally different signals (local position+phonotactic
-  prior vs corpus-side compression delta), so the open question is
-  whether n=4 is too small to detect a true signal or whether the
-  signals just don't carry the within-surface placement information
-  the curated bucket targets. Resolving requires expanding the
-  curated bucket to n=20+; deferred to a future ticket.
+- **Three metrics in a row missed the n=4 plausible-vs-wrong gate;
+  mg-7c8c expanded to n=20 and they still miss it.** Plausible-vs-
+  wrong-Aquitanian Mann-Whitney U at n=20 each: `local_fit_v1`
+  p=0.84, Cliff δ=+0.04; `partial_mapping_compression_delta_v0`
+  p=0.52, δ=+0.12; `geographic_genre_fit_v1` p<0.0001, δ=+0.96
+  (tautological — bucket C is defined by genre-incompat). The
+  power calculation rules out "n=4 was too small" — at the observed
+  effect sizes even n=50 only barely surfaces `pmcd`, and
+  `local_fit_v1` is below the noise floor at any realistic n. The
+  next move is a *structural* metric change, not a third bucket
+  expansion. See the mg-7c8c findings entry for the priority-ordered
+  candidate directions (held-out empirical bigram, cross-corpus
+  position prior, pool-specific bigram models in the runner,
+  corpus-derived phoneme model).
 - **`local_fit_v1` did not solve the plausible-vs-wrong discrimination
   problem and produced a narrower bulk distribution than the
   acceptance bars require.** See mg-7dd1 for the v0 → v1 diagnostic and
@@ -719,18 +974,15 @@ geographic-vs-genre filter and metric refinement are scoped follow-ups.*
 
 ## What we have NOT yet tried
 
-- **Expanded plausible-vs-wrong curated bucket (n=20+).** Three
-  metrics missed the n=4 gate; before attempting v4 metric variants
-  the bucket must grow. Queued.
 - **`local_fit_v2`.** A v2 of the local-fit metric is needed; v1
   (mg-7dd1) shipped as a null finding on three of four discrimination
-  bars. Proposed directions in mg-7dd1's findings entry: held-out
-  empirical bigram, per-pair length normalization, cross-corpus
-  position prior. The "multi-pool composite" direction is now closed
-  by mg-23cc. Remaining v2 directions still queued.
-- **Pre-Greek toponym pool ingest.** Substrate-style data with natural fit
-  to the geographic-vs-genre filter (region_compat = 1.0 for
-  pre_greek × Crete). Queued.
+  bars and mg-7c8c confirmed at n=20 that the within-surface
+  plausibility signal it misses is below noise floor at any
+  realistic n. Priority-ordered v2 directions (mg-7c8c):
+  held-out empirical bigram, cross-corpus position prior,
+  pool-specific bigram models in the sweep runner. The corpus-
+  derived phoneme model (drop the substrate-pool prior altogether)
+  is the "harder direction" alternative.
 - **Younger / GORILA cross-validation pull.** Second corpus for
   cross-checking high-z candidates.
 - **Additional metrics:** mutual information of (sign, position-in-word)

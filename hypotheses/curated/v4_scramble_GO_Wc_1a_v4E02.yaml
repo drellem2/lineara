@@ -1,0 +1,33 @@
+schema_version: candidate_equation.v1
+name: v4_scramble_GO_Wc_1a_v4E02
+description: v4 random-scramble baseline. 5 random IPA phonemes (ʕ-ʔ-ʁ-ɖ-ʐ) at GO
+  Wc 1a tokens [0..4]. Not a real lexeme.
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: random_scramble
+root:
+  surface: ʕʔʁɖʐ
+  phonemes:
+  - ʕ
+  - ʔ
+  - ʁ
+  - ɖ
+  - ʐ
+  gloss_hint: (no semantic content; randomly selected IPA characters)
+  citation: Random IPA selection from `_SCRAMBLE_IPA_INVENTORY` (scripts/build_curated_v4.py);
+    seed=4242. Not a real lexeme.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: ʕ
+    AB31: ʔ
+    AB58: ʁ
+    AB80: ɖ
+    AB28: ʐ
+notes: 'v4 bucket E_scramble (mg-7c8c). Random IPA from _SCRAMBLE_IPA_INVENTORY of
+  length 5; rng seed=4242 (_RANDOM_SEED in scripts/build_curated_v4.py). Site=Gournia;
+  genre_hint=accountancy; confidence=clean. Expected: control_z near 0 (random IPA
+  has no a-priori reason to align with corpus position fingerprints).'

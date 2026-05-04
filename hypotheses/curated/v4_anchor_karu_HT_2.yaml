@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_karu_HT_2
+description: 'v4 Linear-B carryover anchor: AB77 AB26 = /ka-ru/ in HT 2 tokens [1..2].
+  ka-ru recurring lexeme on transaction tablets.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: karu
+  phonemes:
+  - ka
+  - ru
+  gloss_hint: ka-ru recurring lexeme on transaction tablets
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB77=ka, AB26=ru.
+equation:
+  inscription_id: HT 2
+  span:
+  - 1
+  - 2
+  sign_to_phoneme:
+    AB77: ka
+    AB26: ru
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: ka ru. Signs picked from HT 2 tokens
+  [1..2].'

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_kuse_HT_103
+description: 'v4 Linear-B carryover anchor: AB81 AB09 = /ku-se/ in HT 103 tokens [7..8].
+  ku-se Linear-A recurring lexeme.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kuse
+  phonemes:
+  - ku
+  - se
+  gloss_hint: ku-se Linear-A recurring lexeme
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB81=ku, AB09=se.
+equation:
+  inscription_id: HT 103
+  span:
+  - 7
+  - 8
+  sign_to_phoneme:
+    AB81: ku
+    AB09: se
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: ku se. Signs picked from HT 103
+  tokens [7..8].'

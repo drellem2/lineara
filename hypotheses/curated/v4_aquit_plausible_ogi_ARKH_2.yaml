@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_plausible_ogi_ARKH_2
+description: 'v4 plausible Aquitanian candidate: surface ''ogi'' placed in clean accountancy
+  inscription ARKH 2 (semantic_compat ≥ 0.5).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ogi
+  phonemes:
+  - o
+  - g
+  - i
+  gloss_hint: bread
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB41: o
+    AB01: g
+    AB04: i
+notes: 'v4 bucket B_aquit_plausible (mg-7c8c). Source pool entry: surface=''ogi''
+  (semantic_field=''food'', region=''basque_substrate''). Site=Arkhanes; genre_hint=accountancy;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'

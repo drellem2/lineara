@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_plausible_hiru_GO_Wc_1a
+description: 'v4 plausible Aquitanian candidate: surface ''hiru'' placed in clean
+  accountancy inscription GO Wc 1a (semantic_compat ≥ 0.5).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: hiru
+  phonemes:
+  - h
+  - i
+  - r
+  - u
+  gloss_hint: three
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    AB58: h
+    AB80: i
+    AB28: r
+    AB09: u
+notes: 'v4 bucket B_aquit_plausible (mg-7c8c). Source pool entry: surface=''hiru''
+  (semantic_field=''number'', region=''basque_substrate''). Site=Gournia; genre_hint=accountancy;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'

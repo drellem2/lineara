@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_kupa3_HT_1
+description: 'v4 Linear-B carryover anchor: AB81 AB56 = /ku-pa3/ in HT 1 tokens [15..16].
+  ku-pa3 name family (variant of kupa).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kupa3
+  phonemes:
+  - ku
+  - pa3
+  gloss_hint: ku-pa3 name family (variant of kupa)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04); AB81=ku, AB56=pa3 (pa2).
+equation:
+  inscription_id: HT 1
+  span:
+  - 15
+  - 16
+  sign_to_phoneme:
+    AB81: ku
+    AB56: pa3
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: ku pa3. Signs picked from HT 1 tokens
+  [15..16].'

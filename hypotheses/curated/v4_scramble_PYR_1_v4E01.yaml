@@ -1,0 +1,33 @@
+schema_version: candidate_equation.v1
+name: v4_scramble_PYR_1_v4E01
+description: v4 random-scramble baseline. 5 random IPA phonemes (ɣ-q-ʐ-ɲ-ʈ) at PYR
+  1 tokens [0..4]. Not a real lexeme.
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: random_scramble
+root:
+  surface: ɣqʐɲʈ
+  phonemes:
+  - ɣ
+  - q
+  - ʐ
+  - ɲ
+  - ʈ
+  gloss_hint: (no semantic content; randomly selected IPA characters)
+  citation: Random IPA selection from `_SCRAMBLE_IPA_INVENTORY` (scripts/build_curated_v4.py);
+    seed=4242. Not a real lexeme.
+equation:
+  inscription_id: PYR 1
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB37: ɣ
+    AB80: q
+    AB26: ʐ
+    AB40: ɲ
+    AB04: ʈ
+notes: 'v4 bucket E_scramble (mg-7c8c). Random IPA from _SCRAMBLE_IPA_INVENTORY of
+  length 5; rng seed=4242 (_RANDOM_SEED in scripts/build_curated_v4.py). Site=Pyrgos;
+  genre_hint=accountancy; confidence=clean. Expected: control_z near 0 (random IPA
+  has no a-priori reason to align with corpus position fingerprints).'

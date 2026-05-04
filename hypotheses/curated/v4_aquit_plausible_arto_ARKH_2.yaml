@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_plausible_arto_ARKH_2
+description: 'v4 plausible Aquitanian candidate: surface ''arto'' placed in clean
+  accountancy inscription ARKH 2 (semantic_compat ≥ 0.5).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: arto
+  phonemes:
+  - a
+  - r
+  - t
+  - o
+  gloss_hint: corn, millet
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: a
+    AB01: r
+    AB05: t
+    AB28: o
+notes: 'v4 bucket B_aquit_plausible (mg-7c8c). Source pool entry: surface=''arto''
+  (semantic_field=''food'', region=''basque_substrate''). Site=Arkhanes; genre_hint=accountancy;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'

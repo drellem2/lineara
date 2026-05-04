@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: v4_anchor_kupa_HT_16
+description: 'v4 Linear-B carryover anchor: AB81 AB03 = /ku-pa/ in HT 16 tokens [1..2].
+  kupa- name family / commodity-prefix (Linear-A recurring).'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: linear_b_carryover
+root:
+  surface: kupa
+  phonemes:
+  - ku
+  - pa
+  gloss_hint: kupa- name family / commodity-prefix (Linear-A recurring)
+  citation: Younger, J. G., 'Linear A texts in phonetic transcription' (online edition,
+    retrieved 2026-05-04), entries indexing Linear-A ku-pa- sequence; AB81=ku, AB03=pa
+    per Ventris-Chadwick 1956 Linear-B carryover values.
+equation:
+  inscription_id: HT 16
+  span:
+  - 1
+  - 2
+  sign_to_phoneme:
+    AB81: ku
+    AB03: pa
+notes: 'v4 bucket A (linear_b_carryover_anchor; mg-7c8c). Site=Haghia Triada; genre_hint=accountancy;
+  confidence=clean. Pre-placement Linear-B value: ku pa. Signs picked from HT 16 tokens
+  [1..2].'

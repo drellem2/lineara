@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: v4_scramble_HT_21_v4E13
+description: v4 random-scramble baseline. 4 random IPA phonemes (ʐ-q-ʔ-ʂ) at HT 21
+  tokens [0..3]. Not a real lexeme.
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: random_scramble
+root:
+  surface: ʐqʔʂ
+  phonemes:
+  - ʐ
+  - q
+  - ʔ
+  - ʂ
+  gloss_hint: (no semantic content; randomly selected IPA characters)
+  citation: Random IPA selection from `_SCRAMBLE_IPA_INVENTORY` (scripts/build_curated_v4.py);
+    seed=4242. Not a real lexeme.
+equation:
+  inscription_id: HT 21
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB39: ʐ
+    AB59: q
+    AB77: ʔ
+    AB09: ʂ
+notes: 'v4 bucket E_scramble (mg-7c8c). Random IPA from _SCRAMBLE_IPA_INVENTORY of
+  length 4; rng seed=4242 (_RANDOM_SEED in scripts/build_curated_v4.py). Site=Haghia
+  Triada; genre_hint=accountancy; confidence=clean. Expected: control_z near 0 (random
+  IPA has no a-priori reason to align with corpus position fingerprints).'

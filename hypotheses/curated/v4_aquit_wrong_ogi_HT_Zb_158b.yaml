@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: v4_aquit_wrong_ogi_HT_Zb_158b
+description: 'v4 deliberately-wrong Aquitanian candidate: surface ''ogi'' placed in
+  clean votive_or_inscription HT Zb 158b (semantic_compat ≤ 0.25). The phoneme order
+  is unchanged from the plausible bucket; only the inscription''s genre context differs.'
+author: scripts/build_curated_v4.py
+created: '2026-05-04'
+source_pool: aquitanian
+root:
+  surface: ogi
+  phonemes:
+  - o
+  - g
+  - i
+  gloss_hint: bread
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB58: o
+    AB67: g
+    AB53: i
+notes: 'v4 bucket C_aquit_wrong (mg-7c8c). Source pool entry: surface=''ogi'' (semantic_field=''food'',
+  region=''basque_substrate''). Site=Haghia Triada; genre_hint=votive_or_inscription;
+  confidence=clean. The phoneme order is the pool entry''s; the wrong-bucket variant
+  differs from the plausible-bucket variant ONLY in the inscription''s genre context.'
