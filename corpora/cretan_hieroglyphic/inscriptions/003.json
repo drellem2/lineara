@@ -1,0 +1,27 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #003",
+  "period": null,
+  "raw_transliteration": "X 016-054 / X 009-077-013-020 / X 057-016 050-016-042 X",
+  "site": "Knossos",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/KNtexts.html",
+  "support": "nodulus",
+  "tokens": [
+    "#016",
+    "#054",
+    "DIV",
+    "#009",
+    "#077",
+    "#013",
+    "#020",
+    "DIV",
+    "#057",
+    "#016",
+    "DIV",
+    "#050",
+    "#016",
+    "#042"
+  ],
+  "transcription_confidence": "clean"
+}

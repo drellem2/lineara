@@ -5399,3 +5399,80 @@ correction noted above.
   surfaces, etc.
 - **GORILA / Younger ingest** (numerals + line breaks).
   Different scope.
+
+## Findings from mg-99df
+
+**chic-v0 corpus ingest** — first ticket of the new chic-v sub-program.
+Ingest-only; no analysis. Observations worth carrying forward to
+chic-v1+:
+
+### Coverage
+
+- **302 of 331 CHIC catalog entries ingested** from John Younger's
+  web edition of CHIC (Olivier & Godart 1996), via Wayback Machine
+  snapshot 2022-07-03 (live URL retired). Acceptance criterion ≥250
+  cleared with comfortable margin.
+- 29 missing CHIC numbers are entries Younger discusses only in
+  commentary cross-reference (no transnumeration table) plus
+  catalog-numbering gaps. Manual transcription from print Olivier &
+  Godart 1996 for the gaps is deferred to a later ticket; the
+  decision was that ~91% machine-recoverable coverage is sufficient
+  to start chic-v1 substrate-anchor work.
+- **131 distinct CHIC sign IDs** observed across the corpus (out of
+  CHIC's ~300 numbered signs, including syllabograms, logograms,
+  ideograms, and fractions). Top-30 sign-frequency distribution
+  documented in `corpus_status.chic.md`.
+
+### Distribution shape
+
+- Site distribution is highly Knossos- and Mallia-skewed (95 + 92 =
+  62% of corpus). Sealstones (`SealsImps.html` page) contribute
+  ~178 entries with provenances spanning 25+ distinct find-spots
+  across Crete (and Samothrace), but most short.
+- Support-type distribution is dominated by sealstones (126), then
+  crescents (49), medallions (34), bars (26), sealings (16), lames
+  (15), nodulus (11), Chamaizi vases (8). Long administrative
+  documents (bars + tablets + lames = 44 entries) are the most
+  text-heavy class and will likely drive any future bigram-LM work.
+- Transcription confidence: 167 clean / 35 partial / 100
+  fragmentary. The fragmentary count is dominated by short
+  sealstones with damage markers; long administrative documents
+  are mostly clean or partial.
+
+### Methodological choices
+
+- **Tokenization is rules-as-data**: the chic-v0 mapping table from
+  Younger transnumeration → token form is documented in
+  `corpus_status.chic.md` so chic-v1 can re-tokenize directly off
+  the cached HTML in `.cache/younger_chic/` without re-scraping.
+- **Logogram vs syllabogram filtering deferred to chic-v1**.
+  v0 emits all CHIC numeric IDs as `#NNN` regardless of class
+  (#001-#100 syllabographic, #101+ logo/ideo, #301-#308 fractions).
+  Filtering at v0 would have committed us to a sign-class
+  taxonomy before doing the chic-v1 paleographic-anchor work that
+  should inform that taxonomy.
+- **Sign IDs vs numeric counts disambiguated by hyphen-context**:
+  hyphen-joined digit-groups → sign IDs; standalone bare digits →
+  `NUM:N` counts. Younger always hyphen-joins sign sequences; bare
+  digits in transnumeration are administrative quantities.
+
+### Limitations to flag for chic-v1+
+
+- **`period` field is null for 96% of entries.** Younger's web
+  edition does not propagate Olivier & Godart 1996's per-entry
+  archaeological dating into the heading lines reliably. Reading
+  the print catalogue's period column for each #NNN is a separate
+  manual pass; tracked for chic-v1 or a follow-up.
+- **`X` orientation marker is dropped.** Younger uses literal `X`
+  in transnumeration to mark orientation / writing-axis breaks
+  (not a CHIC sign). chic-v0 skips it; if downstream LM or
+  signature work needs orientation cues, a separate `ORIENT_X`
+  token can be added in a re-tokenization pass.
+- **Ideogram names (BOS, VAS, LANA) are not emitted.** They are
+  redundant with the numeric `*NNN` form on the same row; chic-v1's
+  logogram-classification pass will produce `IDEO:<name>` tokens.
+- **Sealstone sites are heterogeneous.** The 178 SealsImps entries
+  span 25+ provenances; many are isolated single attestations.
+  Per-site sub-corpora won't be statistically meaningful for any
+  one minor site.
+

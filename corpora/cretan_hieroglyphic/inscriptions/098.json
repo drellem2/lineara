@@ -1,0 +1,17 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #098",
+  "period": null,
+  "raw_transliteration": "X •-_072_-038-007-016",
+  "site": "Mallia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/MAtexts.html",
+  "support": "medallion",
+  "tokens": [
+    "[?:#072]",
+    "#038",
+    "#007",
+    "#016"
+  ],
+  "transcription_confidence": "partial"
+}

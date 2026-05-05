@@ -1,0 +1,28 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #306",
+  "period": null,
+  "raw_transliteration": "052-050-054 >< / 036-038-_076_ >< / 039-056-_014_ >< / 057-018-050 ><",
+  "site": "Mallia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "seal",
+  "tokens": [
+    "#052",
+    "#050",
+    "#054",
+    "DIV",
+    "#036",
+    "#038",
+    "[?:#076]",
+    "DIV",
+    "#039",
+    "#056",
+    "[?:#014]",
+    "DIV",
+    "#057",
+    "#018",
+    "#050"
+  ],
+  "transcription_confidence": "partial"
+}

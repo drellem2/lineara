@@ -1,0 +1,18 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #133",
+  "period": null,
+  "raw_transliteration": "070-028-041 {curved object} 0",
+  "site": "Pyrgos (Myrtos)",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "vase",
+  "tokens": [
+    "#070",
+    "#028",
+    "#041",
+    "DIV",
+    "NUM:0"
+  ],
+  "transcription_confidence": "clean"
+}

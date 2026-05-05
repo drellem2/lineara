@@ -1,0 +1,15 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #331",
+  "period": null,
+  "raw_transliteration": "X 042-091",
+  "site": "Prodromos",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/misctexts.html",
+  "support": "chamaizi_vase",
+  "tokens": [
+    "#042",
+    "#091"
+  ],
+  "transcription_confidence": "clean"
+}

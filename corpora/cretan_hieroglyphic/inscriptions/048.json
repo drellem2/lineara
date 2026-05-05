@@ -1,0 +1,32 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #048",
+  "period": null,
+  "raw_transliteration": "*164 2 *165 2 / *165 2 [ / *164 2 •[",
+  "site": "Knossos",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/KNtexts.html",
+  "support": "bar",
+  "tokens": [
+    "#164",
+    "DIV",
+    "NUM:2",
+    "DIV",
+    "#165",
+    "DIV",
+    "NUM:2",
+    "DIV",
+    "#165",
+    "DIV",
+    "NUM:2",
+    "DIV",
+    "[?]",
+    "DIV",
+    "#164",
+    "DIV",
+    "NUM:2",
+    "DIV",
+    "[?]"
+  ],
+  "transcription_confidence": "fragmentary"
+}

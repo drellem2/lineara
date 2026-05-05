@@ -1,0 +1,26 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #293",
+  "period": null,
+  "raw_transliteration": "_077_-038 >< / 038-010-031 / 042-054-061 / 044-049",
+  "site": "Adromili",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "seal",
+  "tokens": [
+    "[?:#077]",
+    "#038",
+    "DIV",
+    "#038",
+    "#010",
+    "#031",
+    "DIV",
+    "#042",
+    "#054",
+    "#061",
+    "DIV",
+    "#044",
+    "#049"
+  ],
+  "transcription_confidence": "partial"
+}

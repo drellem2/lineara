@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #330",
+  "period": null,
+  "raw_transliteration": "]029-064-•[ ><",
+  "site": "Mallia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/misctexts.html",
+  "support": "potsherd",
+  "tokens": [
+    "[?:#029]",
+    "#064",
+    "[?]"
+  ],
+  "transcription_confidence": "fragmentary"
+}

@@ -1,0 +1,29 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #264",
+  "period": null,
+  "raw_transliteration": "X 013-050 {*004 MUL } / {*152} 044-049 {049} / {*152} 044-005",
+  "site": "Heraklion",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "seal",
+  "tokens": [
+    "#013",
+    "#050",
+    "DIV",
+    "#004",
+    "DIV",
+    "#152",
+    "DIV",
+    "#044",
+    "#049",
+    "DIV",
+    "NUM:49",
+    "DIV",
+    "#152",
+    "DIV",
+    "#044",
+    "#005"
+  ],
+  "transcription_confidence": "clean"
+}

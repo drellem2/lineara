@@ -1,0 +1,18 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #285",
+  "period": null,
+  "raw_transliteration": "029-• / ]044-_049_[",
+  "site": "Crete (unprovenanced)",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "seal",
+  "tokens": [
+    "#029",
+    "DIV",
+    "[?:#044]",
+    "[?:#049]",
+    "[?]"
+  ],
+  "transcription_confidence": "fragmentary"
+}

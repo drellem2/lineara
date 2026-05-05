@@ -1,0 +1,20 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #317",
+  "period": null,
+  "raw_transliteration": "042-057-_010_-034-028-_093_-_065_",
+  "site": "Mallia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/misctexts.html",
+  "support": "pithos",
+  "tokens": [
+    "#042",
+    "#057",
+    "[?:#010]",
+    "#034",
+    "#028",
+    "[?:#093]",
+    "[?:#065]"
+  ],
+  "transcription_confidence": "fragmentary"
+}

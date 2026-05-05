@@ -1,0 +1,27 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #310",
+  "period": null,
+  "raw_transliteration": "057-034-056 / 017-050 {001} >< / 046-044 / 042-038 ><",
+  "site": "Sitia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "seal",
+  "tokens": [
+    "#057",
+    "#034",
+    "#056",
+    "DIV",
+    "#017",
+    "#050",
+    "DIV",
+    "NUM:1",
+    "DIV",
+    "#046",
+    "#044",
+    "DIV",
+    "#042",
+    "#038"
+  ],
+  "transcription_confidence": "clean"
+}

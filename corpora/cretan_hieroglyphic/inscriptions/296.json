@@ -1,0 +1,27 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #296",
+  "period": null,
+  "raw_transliteration": "028-007-018 >< / 053-038-039 >< / 044-049 / 057-034-056",
+  "site": "Crete (unprovenanced)",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "seal",
+  "tokens": [
+    "#028",
+    "#007",
+    "#018",
+    "DIV",
+    "#053",
+    "#038",
+    "#039",
+    "DIV",
+    "#044",
+    "#049",
+    "DIV",
+    "#057",
+    "#034",
+    "#056"
+  ],
+  "transcription_confidence": "clean"
+}

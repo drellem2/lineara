@@ -1,0 +1,22 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #120",
+  "period": null,
+  "raw_transliteration": "KU -RO3 BOS | TI [ -KI-KU / JA-RE TE 100 / A3 -SA BOS | TI -KI-KU / CAP [ ] 300",
+  "site": "Mallia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/MAtexts.html",
+  "support": "tablet",
+  "tokens": [
+    "[?]",
+    "DIV",
+    "NUM:100",
+    "DIV",
+    "[?]",
+    "DIV",
+    "[?]",
+    "DIV",
+    "NUM:300"
+  ],
+  "transcription_confidence": "fragmentary"
+}

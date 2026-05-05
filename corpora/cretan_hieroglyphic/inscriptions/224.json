@@ -1,0 +1,15 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #224",
+  "period": null,
+  "raw_transliteration": "]042-038 ><",
+  "site": "Crete (unprovenanced)",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "seal",
+  "tokens": [
+    "[?:#042]",
+    "#038"
+  ],
+  "transcription_confidence": "fragmentary"
+}

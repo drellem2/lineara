@@ -1,0 +1,22 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #105",
+  "period": null,
+  "raw_transliteration": "]•-016-038 / ]•-013-035 210",
+  "site": "Mallia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/MAtexts.html",
+  "support": "lame",
+  "tokens": [
+    "[?]",
+    "#016",
+    "#038",
+    "DIV",
+    "[?]",
+    "#013",
+    "#035",
+    "DIV",
+    "NUM:210"
+  ],
+  "transcription_confidence": "fragmentary"
+}

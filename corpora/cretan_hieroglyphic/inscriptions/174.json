@@ -1,0 +1,19 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #174",
+  "period": null,
+  "raw_transliteration": "044-005 or 044-{065}-005",
+  "site": "Palaikastro",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "sealing",
+  "tokens": [
+    "#044",
+    "#005",
+    "DIV",
+    "#044",
+    "#065",
+    "#005"
+  ],
+  "transcription_confidence": "clean"
+}

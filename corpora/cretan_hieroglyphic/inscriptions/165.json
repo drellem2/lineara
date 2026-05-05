@@ -1,0 +1,15 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #165",
+  "period": null,
+  "raw_transliteration": "]044-005",
+  "site": "Knossos",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "crescent",
+  "tokens": [
+    "[?:#044]",
+    "#005"
+  ],
+  "transcription_confidence": "fragmentary"
+}

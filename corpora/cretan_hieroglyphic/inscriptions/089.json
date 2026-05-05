@@ -1,0 +1,25 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #089",
+  "period": null,
+  "raw_transliteration": "044-049-023 | / 034-041-084 | 051-051-051-041",
+  "site": "Mallia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/MAtexts.html",
+  "support": "lame",
+  "tokens": [
+    "#044",
+    "#049",
+    "#023",
+    "DIV",
+    "#034",
+    "#041",
+    "#084",
+    "DIV",
+    "#051",
+    "#051",
+    "#051",
+    "#041"
+  ],
+  "transcription_confidence": "clean"
+}

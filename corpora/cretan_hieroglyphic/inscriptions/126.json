@@ -1,0 +1,18 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #126",
+  "period": null,
+  "raw_transliteration": "X 036-047-009-056-062 ><",
+  "site": "Mallia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "nodulus",
+  "tokens": [
+    "#036",
+    "#047",
+    "#009",
+    "#056",
+    "#062"
+  ],
+  "transcription_confidence": "clean"
+}

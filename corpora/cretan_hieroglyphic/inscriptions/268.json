@@ -1,0 +1,25 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #268",
+  "period": null,
+  "raw_transliteration": "{070} 044-005 / 038-010 {070} / 006-{object}-070 ><",
+  "site": "Lakonia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/SealsImps.html",
+  "support": "seal",
+  "tokens": [
+    "NUM:70",
+    "DIV",
+    "#044",
+    "#005",
+    "DIV",
+    "#038",
+    "#010",
+    "DIV",
+    "NUM:70",
+    "DIV",
+    "#006",
+    "#070"
+  ],
+  "transcription_confidence": "clean"
+}

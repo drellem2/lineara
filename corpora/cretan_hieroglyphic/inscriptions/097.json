@@ -1,0 +1,18 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #097",
+  "period": null,
+  "raw_transliteration": "2 impressions (not H: lion attacks bull) / 040-070-038",
+  "site": "Mallia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/MAtexts.html",
+  "support": "crescent",
+  "tokens": [
+    "NUM:2",
+    "DIV",
+    "#040",
+    "#070",
+    "#038"
+  ],
+  "transcription_confidence": "clean"
+}

@@ -1,0 +1,17 @@
+{
+  "fetched_at": "2026-05-05T11:00:00Z",
+  "id": "CHIC #319",
+  "period": null,
+  "raw_transliteration": "]_088_-087-070-027 ><",
+  "site": "Mallia",
+  "source": "younger_online",
+  "source_citation": "http://web.archive.org/web/20220703170656/http://www.people.ku.edu/~jyounger/Hiero/misctexts.html",
+  "support": "pithos",
+  "tokens": [
+    "[?:#088]",
+    "#087",
+    "#070",
+    "#027"
+  ],
+  "transcription_confidence": "partial"
+}
