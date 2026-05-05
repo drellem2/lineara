@@ -2588,8 +2588,118 @@ together close the methodology paper's previous CHIC/Linear A
 asymmetry on mechanical verification at the leaderboard top-K
 granularity.
 
-#### Pre-registered chic-v7+ (chic-v6 done in mg-a557)
+#### chic-v8 — Malia altar stone (and other CHIC + Linear A dual-script artifacts) bilingual analysis (mg-dfcc)
 
+Daniel's reminder (2026-05-05): the Malia altar stone is referenced in
+scholarship as bearing both Linear A and CHIC inscriptions; can the
+LA-side reading constrain CHIC-side phoneme values at parallel
+positions, providing a fifth line of evidence (L5, LA-constraint)
+beyond the four chic-v5 lines, and potentially promoting some chic-v5
+tier-3 (29 signs) or tier-4 (17 signs) candidates to tier-2?
+
+The chic-v8 polecat (mg-dfcc) verified the artifact identification,
+surveyed both v0 corpora for genuinely-dual-script artifacts, and ran
+the per-sign promotion analysis. The build script is
+`scripts/build_chic_v8.py`; outputs are
+`results/chic_dual_script_bilingual_leaderboard.md` and
+`results/chic_v8_promoted_candidates.md`.
+
+**Headline: 0 new tier-2 candidates derived via the bilingual
+extension on the v0 corpora.** The Malia altar stone is **CHIC #328**
+(Mallia, offering_table, 16 signs; partial transcription confidence)
+per the Olivier-Godart 1996 catalog; per Younger's web edition and
+Olivier-Godart this artifact is **unilingual CHIC**, not dual-script.
+The Linear A v0 corpus has no Mallia stone-vessel inscription (its 20
+Mallia entries are 17 administrative tablets + 3 roundels), and a
+systematic survey of the sites carrying inscriptions in both corpora
+(Arkhanes, Haghia Triada, Knossos, Mallia, Phaistos, Zakros) finds no
+genuinely-dual-script artifact (i.e. no artifact bearing parallel
+inscriptions in both CHIC and Linear A on the same physical object).
+
+**The fifth line of evidence (L5) is therefore silent for all 76
+unknown CHIC syllabographic signs by corpus state**, mirroring chic-
+v5's L4 (cross-script paleographic) which is silent by chic-v1
+construction. With two of the five lines silent, the 4-of-5 promotion
+rule reduces to chic-v5's 3-of-3 (L1+L2+L3 unanimity) — byte-identical
+to the chic-v5 tier-2 criterion. **No new tier-2 candidates are
+produced. The chic-v5 tier-2 candidate count remains 3** (`#001 → wa`,
+`#012 → wa`, `#032 → ki/stop`), unchanged.
+
+This is a legitimate publishable null result (chic-v8 brief, Goal
+section: `N = 0 new tier-2 candidates: bilingual constraint either
+doesn't apply (no truly parallel positions) or produces conflicting
+constraints. Either is informative.`). The methodology paper's
+framing should:
+
+1. **Disclose the corpus state**: the v0 ingest does not include
+   any genuinely-dual-script artifact, even where scholarship
+   discusses candidates (e.g. debated dual-script seals from
+   Phaistos / Knossos discussed in Salgarella 2020 §5.3 and
+   Decorte 2017 are not in the v0 corpora because sealstone CMS
+   catalog ingest is itself a separate sub-program).
+2. **Position L5 as a falsifiable additional line of evidence**,
+   contingent on the underlying corpus including genuinely-dual-
+   script artifacts. The line is structured so that a future
+   corpus-expansion ingest pass (full GORILA Za-series; manual
+   O&G 1996 cross-check on near-#312 / near-#328 entries; CMS
+   sealstone-catalog dual-script entries) could reactivate it
+   without modifying the discipline.
+3. **Refuse to invoke genre-parallels** (CHIC #328 vs LA libation
+   tables PS Za 2 / SY Za 4) as load-bearing evidence. The
+   Duhoux-style hypothesis that the stereotyped Linear A libation
+   formula (`a-ta-i-*301-wa-ja ja-sa-sa-ra-me ja-ti i-da-ma-te
+   ...`) may have a CHIC counterpart on stone-vessel inscriptions
+   is a scholarly conjecture, not consensus; and position
+   alignment between CHIC #328's 16 signs and the LA libation
+   tables' 16 / 13 signs is conjectural in the absence of
+   confirmed parallel content. The genre-parallel section is
+   reported in the leaderboard for completeness but contributes
+   zero L5 votes — relying on it would re-introduce the motivated-
+   reasoning failure mode the methodology paper has insisted on
+   protecting against since v13's per-sign coherence verdict and
+   v22/v24's external-validation null.
+4. **Flag the corpus-expansion path**: a future ingest pass adding
+   the full GORILA Za-series and any genuinely-dual-script CMS
+   sealstone-catalog entries would reactivate the bilingual
+   extension and could in principle produce non-zero L5 votes.
+   Filed under `corpus-expansion` for chic-v9+ / pm-lineara
+   triage.
+
+The chic-v8 result extends the chic sub-program's anti-motivated-
+reasoning discipline cleanly: the framework is structured to *fail
+loudly when the lines diverge or the evidence axis is silent*. With
+L4 silent for all 76 unknowns by chic-v5 construction and L5 silent
+for all 76 unknowns by chic-v8 corpus state, the chic-v5 tier-2
+candidate count (3) and chic-v6 mechanical-verification result
+(small but non-zero +3-inscription / +20-hit tier-1 → tier-2 lift,
+with the larger tier-3/4 lifts caveated for class-level-matching
+permissiveness) remain the load-bearing chic sub-program findings;
+chic-v8 adds a methodologically-coherent zero contribution
+documented as a corpus-state observation.
+
+**Determinism.** No RNG, no network, no system-clock dependency;
+same inputs produce byte-identical outputs across re-runs (verified
+at chic-v8 build time, 2026-05-05; md5 hash stability across two
+consecutive runs). `docs/findings.md` (mg-dfcc entry) is committed
+in the same merge as the harness artifacts, per AGENTS.md NON-
+NEGOTIABLE acceptance-blocker rule and the chic-v1 (mg-c7e3) missed-
+update precedent that mg-0ea1 had to backfill retroactively.
+
+#### Pre-registered chic-v9+ (chic-v8 done in mg-dfcc)
+
+- **chic-v8 done.** Bilingual analysis on the Malia altar stone
+  (CHIC #328, verified unilingual CHIC) and a systematic survey
+  of the v0 corpora for any other genuinely-dual-script artifact
+  yielded a null result: 0 promoted candidates. The L5 (LA-
+  constraint) line of evidence is silent for all 76 unknown
+  CHIC syllabographic signs by corpus state. Outputs:
+  `results/chic_dual_script_bilingual_leaderboard.md`,
+  `results/chic_v8_promoted_candidates.md`. The bilingual
+  extension is preserved in the methodology paper as a
+  falsifiable fifth line of evidence contingent on future
+  corpus expansion; the genre-parallel CHIC #328 vs LA libation-
+  table comparison is reported informationally only and is NOT
+  load-bearing.
 - **chic-v6 done.** The original "domain-expert review" framing
   for chic-v6 was reframed by Daniel (2026-05-05) to a
   mechanical-verification pass before specialist review (the
