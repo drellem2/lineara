@@ -6590,3 +6590,240 @@ Per the chic-v5 ticket, this commit does not:
 - Update AGENTS.md scope-of-work norms for the chic sub-program.
 - Build a logogram value-extraction framework (chic-v5 targets
   syllabographic only).
+
+## Findings from mg-9508 (chic-v7 — methodology paper extension integrating chic-v0..v5 cross-script results, final consolidation before journal-submission handoff for the cross-script paper, 2026-05-05)
+
+### Headline
+
+Editorial / verification ticket. No new harness commits; no new
+result rows. Audited `docs/findings_summary.md` end-to-end
+against the committed result files in `results/` (chic-v0..v5
+sub-program plus the v25 Linear A-only baseline manuscript), and
+restructured the document from a single-script Linear A
+methodology paper (v25 shape) into a **cross-script methodology
+paper integrating Linear A v0..v25 + CHIC chic-v0..v5** for
+journal-submission handoff. Three-sentence reading-test pass
+recorded in §7 of `docs/findings_summary.md`. One quantitative
+inconsistency was found between the manuscript text and the
+committed source-of-truth files and corrected.
+
+### What this ticket built
+
+Same approach as v16 (mg-d5ed) and v25 (mg-36bd): editorial /
+verification work, no new experiments. Specifically:
+
+1. **End-to-end audit of `docs/findings_summary.md`.** Every
+   chic-v* quantitative claim cross-checked against the committed
+   result files. Numbers verified to match exactly:
+   - chic-v0 corpus: 302 of 331 catalog entries; 131 distinct
+     CHIC sign IDs; 1,489 sign-token occurrences; site
+     distribution Knossos+Mallia 62%; support-type sealstone-
+     dominated. Verified against
+     `corpora/cretan_hieroglyphic/all.jsonl` (line count = 302)
+     and `results/chic_sign_inventory.md` summary table.
+   - chic-v1 sign classification: 96 syllabographic + 35 ideogram
+     + 0 ambiguous = 131 distinct sign IDs. Verified against
+     `results/chic_sign_inventory.md` and
+     `pools/cretan_hieroglyphic_signs.README.md`.
+   - chic-v1 paleographic-anchor candidates: 20 enumerated; **3
+     consensus / 10 proposed / 7 debated**. Verified against
+     `pools/cretan_hieroglyphic_signs.README.md`. **Inconsistency
+     found and fixed:** the v25 manuscript text in §4.7 (chic-v1
+     subsection) had the candidate confidence-tier counts as
+     "9 proposed, 8 debated", which is incorrect; the
+     committed source-of-truth is 10 proposed / 7 debated. Both
+     `pools/cretan_hieroglyphic_signs.README.md` and the
+     `docs/findings.md` mg-c7e3-backfill-by-mg-0ea1 entry agree
+     on 10/7. The chic-v7 audit pass corrected the manuscript
+     text accordingly. (This is the only inconsistency surfaced
+     by the audit.)
+   - chic-v2 anchor inheritance: 864/1420 = 60.85% corpus-wide
+     anchor coverage; 263/302 inscriptions with ≥1 anchored
+     position. Verified against `results/chic_partial_readings.md`
+     and `results/chic_anchor_density_leaderboard.md`.
+   - chic-v3 substrate framework on CHIC: 276 inscriptions, 1,258
+     syllabographic tokens, 551 maximal syllabographic blocks;
+     per-pool gate verdicts eteocretan PASS p=7.33e-04, toponym
+     FAIL p=0.435, etruscan FAIL p=0.720, aquitanian FAIL
+     p=0.937. Verified against
+     `corpora/cretan_hieroglyphic/syllabographic_stats.md` and
+     `results/rollup.bayesian_posterior.{aquitanian,etruscan,toponym,eteocretan}.chic.md`.
+   - chic-v4 cross-script correlation: Spearman ρ=+1.000 across
+     the 4 substrate pools' per-pool right-tail gap; mean top-20
+     substrate-surface overlap 0.47 (38/80); per-pool Pearson
+     continuity eteocretan +0.4489 / toponym +0.1404 / etruscan
+     +0.0303 / aquitanian -0.2838. Verified against
+     `results/rollup.linear_a_vs_chic_substrate_comparison.md`.
+   - chic-v5 per-sign value extraction: tier counts 20 tier-1 +
+     3 tier-2 + 29 tier-3 + 17 tier-4 + 27 untiered = 96
+     syllabographic; 76 unknowns; 49 above the n=3 frequency
+     floor; 3 tier-2 candidates (#001 → glide / `wa`; #012 →
+     glide / `wa`; #032 → stop / `ki`); L3 class distribution
+     26 nasal / 20 glide / 2 liquid / 1 stop / 0 vowel / 0
+     fricative across 49 above-floor unknowns. Verified against
+     `results/chic_value_extraction_leaderboard.md`.
+
+2. **Restructured manuscript front matter for cross-script
+   framing.** Title extended from "Mechanical Falsifiable
+   Testing of Substrate-Language Hypotheses for Linear A" to
+   "...for Linear A and Cretan Hieroglyphic". Version block
+   updated to record chic-v7 (mg-9508). Abstract gained a
+   cross-script paragraph featuring chic-v0..v5 corpus +
+   classification + anchor stats, the chic-v3 per-pool gate
+   ordering identical to Linear A, the chic-v4 ρ=+1.0 rank
+   correlation, the per-substrate-surface continuity profile,
+   and the chic-v5 tier-2 candidate-proposals-pending-domain-
+   expert-review framing. Introduction gained a paragraph
+   positioning the chic sub-program as a cross-script
+   methodology test (not a CHIC decipherment claim), and the
+   ToC roadmap paragraph at the end of §1 was rewritten to
+   point at §4.7 as the cross-script Part B of the manuscript
+   alongside §3 as the Linear A Part A.
+
+3. **Restructured Methods.** Added a §2.11 "Cross-script
+   extension pipeline (chic-v0–chic-v5)" subsection that
+   summarises the chic ingest/classification/anchor/syllabographic-
+   stream/cross-script-correlation/value-extraction pipeline at
+   methods-section granularity, parallel in role to the
+   Linear A §2.1–§2.10 methodological description. The detailed
+   per-stage chic content stays in §4.7 (results-and-synthesis).
+
+4. **Restructured Discussion.** §4.7 (existing single-script
+   v25 content positioning chic-v0..v2 as a brief extension)
+   was expanded into the methodology paper's cross-script Part
+   B: a leading paragraph repositions the chic sub-program as
+   a cross-script methodology test; the existing chic-v0..v5
+   subsections (####-level) get a polished introductory frame
+   tying them to the §3.14 / §4.6 Linear A counterparts; a
+   closing #### "Cross-script methodological synthesis"
+   subsection integrates the population-level kinship-detection,
+   per-sign-decipherment-unsupported-on-either-script, the
+   discipline-as-deliverable-on-both-scripts, the
+   internal-consensus-vs-external-correctness, and the
+   cross-script-transferability claims into a single
+   manuscript-shape narrative.
+
+5. **Extended Limitations.** Added §5.4 "Cross-script (CHIC)
+   limitations" with seven parallel-to-§5.1–§5.3 chic-specific
+   limitations: corpus incompleteness (302/331); CHIC
+   syllabographic stream one-quarter the Linear A size; chic-v5
+   line 4 silent for all unknowns by construction; chic-v5 line
+   3 systematic class bias (26 nasal / 20 glide / 2 liquid / 1
+   stop / 0 vowel / 0 fricative across 49 above-floor unknowns,
+   a property of the framework not random noise); chic-v5
+   tier-2 candidates pending domain-expert review (not
+   decipherments); CHIC's lack of a per-sign external-validation
+   comparand parallel to the Younger Linear A scholar set;
+   no within-CHIC per-inscription cascade-candidate analysis;
+   AGENTS.md scope-of-work norms not yet updated for the chic
+   sub-program.
+
+6. **Extended Conclusion.** Added a closing cross-script
+   paragraph integrating chic-v3/chic-v4/chic-v5 into the
+   manuscript's load-bearing claim shape: the Linear A
+   substrate-LM-phonotactic-kinship signal is not
+   Linear-A-corpus-specific; cross-script Spearman ρ=+1.000
+   between Linear A and CHIC; per-sign decipherment remains
+   unsupported on either script.
+
+7. **Three-sentence reading test (§7).** Three quotable
+   sentences capturing (a) the substrate-detection methodology
+   and what it detects (substrate-LM-phonotactic kinship at
+   the population level, monotonic-with-relatedness ordering
+   preserved across two undeciphered Cretan scripts at ρ=+1.0),
+   (b) what the framework does NOT support (per-sign
+   decipherment unsupported on either script per v13/v19/v22 +
+   chic-v5; chic-v5 tier-2 candidates as candidate proposals
+   pending domain-expert review, not decipherments), and
+   (c) the cross-script methodological contribution as a
+   transferable protocol (substrate-LM-phonotactic-kinship test
+   + matched-control protocol + cascade-candidate framing +
+   external-comparand bookkeeping + four-line-of-evidence
+   per-sign value-extraction discipline). The three sentences
+   land in the v16 "narrower-but-defensible" register and are
+   suitable for an external-reviewer audience.
+
+### Audit-of-the-audit on chic-v0..v5 incremental edits to `docs/findings_summary.md`
+
+Per the v25 pattern: spot-checked each chic-v* polecat's claimed
+findings_summary.md edits against committed result files. The
+chic-v0..v5 polecats added §4.7 entries for their respective
+stages incrementally; no findings_summary.md drift was found
+on top of the chic-v1 / mg-0ea1 backfill issue (which itself
+was a `docs/findings.md` issue, not a `docs/findings_summary.md`
+issue, and was already corrected by mg-0ea1 before chic-v7).
+The single chic-v7 audit-of-the-audit finding is the chic-v1
+candidate-confidence-tier numerical typo flagged in item 1
+above (9/8 → 10/7), corrected in this commit.
+
+### Audit-of-the-audit on chic-v0..v5 `docs/findings.md` entries
+
+Per AGENTS.md: every merge that produces a substantive
+observation appends a `## Findings from mg-XXXX` subsection to
+`docs/findings.md`. chic-v0..v5 status:
+
+- mg-99df (chic-v0): findings.md entry present.
+- mg-c7e3 (chic-v1): findings.md entry MISSED at merge time;
+  backfilled by mg-0ea1 (commit ab59f4f84). Per the chic-v3
+  brief: this is the canonical example the chic sub-program
+  cites for why findings.md updates are NON-NEGOTIABLE
+  acceptance blockers; chic-v3 / chic-v4 / chic-v5 / chic-v7
+  all explicitly cite mg-c7e3 / mg-0ea1 as the failure mode
+  to avoid.
+- mg-362d (chic-v2): findings.md entry present.
+- mg-9700 (chic-v3): findings.md entry present.
+- mg-c769 (chic-v4): findings.md entry present.
+- mg-7c6d (chic-v5): findings.md entry present.
+- mg-9508 (chic-v7): this entry. Per the chic-v3+ brief
+  reiteration: NON-NEGOTIABLE.
+
+### What this ticket did NOT do (out of scope per the chic-v7 brief)
+
+- **Journal submission** (LaTeX, target-venue formatting, peer
+  review). Out of polecat scope; depends on Daniel's editorial
+  choices.
+- **Domain-expert review of chic-v5 tier-2 candidates** (chic-v6
+  if filed; can't be a polecat task — Aegean-syllabary
+  specialist required).
+- **AGENTS.md scope-of-work update for the chic sub-program** —
+  small follow-up; not load-bearing for the manuscript.
+- **Per-window deduplication / Linear-B small-K refined gate
+  adoption** — still cosmetic polish; deferred from v16/v25.
+- **Indus Valley / Rongorongo / Proto-Elamite extensions** —
+  natural further sequels but beyond chic-v7 scope.
+- **New harness commits.** chic-v7 is editorial-only.
+
+### Determinism
+
+- No code changes; no result-file changes. The only files
+  touched in this commit are `docs/findings_summary.md`
+  (audit-driven edits) and `docs/findings.md` (this entry).
+- Every quantitative claim in the chic-v0..v5 §4.7 subsections
+  of `docs/findings_summary.md` is reproducible from the
+  committed result files cited in Appendix A; the chic-v7 audit
+  pass verified each claim by reading the result file directly,
+  not via re-running any harness code.
+
+### Out of scope (separate tickets)
+
+Tracked separately:
+
+- **chic-v6** — domain-expert review of chic-v5's 3 tier-2
+  candidates, plus hand-curated extension of line 4 (cross-
+  script paleographic) from O&G 1996 / Salgarella 2020 /
+  Decorte 2017 / Civitillo 2016. Aegean-syllabary specialist
+  task.
+- **CHIC corpus expansion** — manual transcription of the 29
+  missing CHIC catalog entries (~9% of the catalog) from print
+  Olivier & Godart 1996, to raise CHIC's borderline-FAIL pool
+  signals (toponym at p=0.435 in particular) above α=0.05
+  under chic-v3-equivalent gate runs.
+- **Within-CHIC per-inscription cascade-candidate analysis** —
+  the v19 / v24 per-inscription robust-fraction analysis
+  applied to CHIC's syllabographic stream (parallel in role
+  to Linear A §3.12). Tracked as a chic follow-up.
+- **Logogram value-extraction framework** — chic-v5 targets
+  syllabographic signs only; the 35 ideogram signs are out of
+  scope for the per-sign value-extraction discipline (an
+  ideogram is a class-meaning marker, not a phoneme carrier).
+

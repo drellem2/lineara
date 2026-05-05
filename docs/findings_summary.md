@@ -1,4 +1,4 @@
-# Mechanical Falsifiable Testing of Substrate-Language Hypotheses for Linear A
+# Mechanical Falsifiable Testing of Substrate-Language Hypotheses for Linear A and Cretan Hieroglyphic
 
 **Methodology paper draft (v16, mg-d5ed initial polish; lineage
 citations corrected in v17, mg-2bfd; v19 cascade-candidate /
@@ -7,23 +7,40 @@ integration in v21, mg-6ccd; population-level scholar-proposed-reading
 external-validation integration in v22, mg-46d5; full Eteocretan
 cross-LM matrix integration in v23, mg-b599; per-inscription
 cascade-candidate analysis under Eteocretan LM in v24, mg-c103;
-final consolidation pass before journal-submission handoff in v25,
-mg-36bd)** — a publication-readable consolidation of what the
-Lineara project has mechanically established about Linear A across
-25 work items, anchored on the SigLA corpus ingest (`mg-1c8c`) and
-spanning the harness pipeline `mg-d5ef` (v0) through `mg-c103`
-(v24); v25 is editorial-only (no harness commits). The repo scaffold
-(`mg-9e00`) predates the corpus ingest. The companion log
-`docs/findings.md` carries the per-ticket history; this document
-carries the consolidated methodology, results, and supportable /
-unsupportable claim split, audited end-to-end against the committed
-result files in `results/` and the merge notes in `docs/findings.md`.
+final single-script consolidation pass in v25, mg-36bd; cross-script
+extension to Cretan Hieroglyphic via the chic-v0..chic-v5 sub-program
+(corpus ingest mg-99df, sign classification mg-c7e3 + mg-0ea1
+backfill, paleographic anchor inheritance mg-362d, substrate
+framework on CHIC mg-9700, cross-script correlation mg-c769, per-sign
+syllable-value extraction framework mg-7c6d) integrated into the
+extended methodology paper for journal-submission handoff in chic-v7,
+mg-9508)** — a publication-readable consolidation of what the
+Lineara project has mechanically established **across two
+undeciphered Cretan scripts (Linear A and Cretan Hieroglyphic)**
+across 25 Linear A work items + 6 chic sub-program work items,
+anchored on the SigLA corpus ingest (`mg-1c8c`, Linear A) and the
+Younger CHIC web edition ingest (`mg-99df`, CHIC), spanning the
+Linear A harness pipeline `mg-d5ef` (v0) through `mg-c103` (v24)
+and the chic sub-program `mg-99df` (chic-v0) through `mg-7c6d`
+(chic-v5); v25 and chic-v7 are editorial-only (no harness commits).
+The repo scaffold (`mg-9e00`) predates the corpus ingest. The
+companion log `docs/findings.md` carries the per-ticket history;
+this document carries the consolidated methodology, results, and
+supportable / unsupportable claim split, audited end-to-end against
+the committed result files in `results/` and the merge notes in
+`docs/findings.md`.
 
 The intended reader is a research scientist or Aegean-syllabary
 specialist who has not followed the merge notes. Section ordering
 follows the standard methodology-paper shape (Abstract, Introduction,
 Methods, Results, Discussion, Limitations, Conclusion) so the document
-can be read cold.
+can be read cold. Linear A is the primary demonstration corpus
+(§3.1–§3.14); the cross-script extension to Cretan Hieroglyphic
+(§4.7) is the methodological-novel deliverable of the chic
+sub-program — the Linear A substrate framework, ported verbatim to
+CHIC, reproduces the Linear A monotonic-with-relatedness ordering
+across the 4 substrate pools at cross-script Spearman ρ=+1.000 on
+the per-pool right-tail gate gap.
 
 ---
 
@@ -133,6 +150,43 @@ inscriptions that signal concentrates, but does not validate specific
 sign readings — and where external validation against an independent
 scholarly proposal is available, the mechanical reading diverges.
 
+**Cross-script extension to Cretan Hieroglyphic (chic-v0..v5).** A
+parallel chic sub-program ports the same substrate-LM-phonotactic-
+kinship framework to **CHIC**, the older sister-script to Linear A
+(302 of 331 catalog inscriptions ingested from the Younger web
+edition; 96 syllabographic + 35 ideogram signs identified; 20
+paleographic anchor candidates inherited from Linear A — 3 consensus,
+10 proposed, 7 debated; 60.85% (864/1420) corpus-wide syllabographic-
+position anchor coverage). Applied to the CHIC syllabographic-only
+stream (276 inscriptions, 1,258 tokens, 551 maximal syllabographic
+blocks — roughly one-quarter the size of Linear A's corpus), the
+4 Linear A substrate pools produce a **CHIC right-tail bayesian
+gate ordering identical to Linear A's**: Eteocretan PASSes at
+p=7.33e-04 (the only pool to clear α=0.05 on CHIC's smaller corpus);
+toponym FAILs at p=0.435; Etruscan FAILs at p=0.720; Aquitanian
+FAILs at p=0.937. Cross-script Spearman rank correlation on the
+per-pool right-tail gap is **ρ=+1.000** across the 4 pools, with
+mean top-20 substrate-surface overlap 0.47 (38/80 substrate-side
+slots shared) and per-substrate-surface continuity strongest for
+Eteocretan (Pearson +0.45). The extended methodology paper's
+headline cross-script claim is therefore: **the substrate-LM-
+phonotactic-kinship signal the framework detects is cross-script;
+the per-pool PASS/FAIL distinction tracks candidate-substrate
+genealogical relatedness to the target script's underlying
+language, and that tracking survives transfer between Linear A and
+CHIC under the same scoring infrastructure.** A per-sign syllable-
+value extraction framework on the chic-v3-validated Eteocretan
+substrate (chic-v5, four-line-of-evidence discipline) classifies
+**3 of 76 unknown CHIC syllabographic signs as tier-2 candidates**
+(≥ 3 of 4 lines agree on a coarse phoneme class — `vowel`, `stop`,
+`nasal`, `liquid`, `fricative`, `glide`); these are **candidate
+proposals pending domain-expert review**, not decipherments, and
+the framework's per-sign resolution is class-level, not phoneme-
+specific. The discipline (mechanical agreement predicate +
+explicit silent-line bookkeeping + the L3-systematic-class-bias
+disclosure) is the chic-v5 contribution; the count is a small-
+corpus-noise-floor artifact rather than the deliverable.
+
 ---
 
 ## 1. Introduction
@@ -184,11 +238,31 @@ of specific tablets, semantic gloss generation, syntactic claims, and
 expansion to less-attested substrate families (Phoenician, Sumerian,
 Hattic, etc.).
 
+A parallel chic sub-program (chic-v0 through chic-v5) extends the
+same mechanical-falsifiability discipline to a second undeciphered
+Cretan script — **Cretan Hieroglyphic (CHIC)**, the older
+sister-script to Linear A (~1900–1600 BCE; sealstone-dominated,
+shorter inscriptions, 302 of 331 catalog entries machine-recoverable
+from Younger's web edition of CHIC's Olivier & Godart 1996 catalog).
+The chic sub-program is **a cross-script methodology test, not a
+CHIC decipherment claim**: the same Linear A substrate framework,
+the same external phoneme LMs, the same matched-control protocol,
+the same right-tail bayesian gate, applied to a different undeciphered
+Cretan script. The cross-script extension's purpose is to test
+whether the substrate-LM-phonotactic-kinship signal the Linear A
+framework detects (§3.14, §4.1) is **specific to Linear A** or
+**transferable across scripts under the same a-priori
+genealogical-relatedness ordering of substrate candidates**.
+
 The remainder of this document specifies the pipeline (§2), reports
 the thirteen pre-registered falsifiable acceptance-gate / external-
-validation outcomes plus the v23 cross-LM matrix follow-up (§3),
-discusses what the framework does and does not detect (§4), and
-explicitly enumerates unsupported claims (§5).
+validation outcomes plus the v23 cross-LM matrix follow-up on Linear
+A (§3), the chic-v0..v5 cross-script extension to CHIC (§4.7;
+positioned within the Discussion as the methodology paper's
+cross-script Part-B because §4.7 simultaneously delivers chic
+results and the cross-script methodological synthesis), discusses
+what the framework does and does not detect across both scripts
+(§4), and explicitly enumerates unsupported claims (§5).
 
 ---
 
@@ -419,6 +493,73 @@ sequence within the same scoring discipline:
   consonantal first segment of the scholarly CV. v24 (mg-c103)
   re-runs the per-inscription cascade analysis under the
   Eteocretan-only and four-pool aggregations.
+
+### 2.11 Cross-script extension pipeline (chic-v0–chic-v5)
+
+The chic sub-program reuses the same scoring infrastructure
+verbatim — same external phoneme LMs, same matched-control pools
+(`control_aquitanian`, `control_etruscan`, `control_toponym_bigram`,
+`control_eteocretan_bigram`), same `external_phoneme_perplexity_v0`
+metric, same per-surface Beta-binomial posterior, same right-tail
+Mann-Whitney U gate at K=20. The only chic-specific code paths are
+the corpus ingest + sign-classification + paleographic-anchor +
+syllabographic-stream filter pipeline (chic-v0..v3) and the per-sign
+value-extraction framework (chic-v5). Full per-stage detail in §4.7.
+
+- **chic-v0 corpus** (mg-99df). 302 of 331 CHIC catalog entries
+  ingested from Younger's web edition (Wayback Machine snapshot,
+  2022-07-03; live URL retired); 29 missing entries deferred to a
+  manual-transcription pass. 131 distinct CHIC sign IDs observed;
+  1,489 sign-token occurrences. Site distribution Knossos- and
+  Mallia-skewed (62% combined); support distribution sealstone-
+  dominated (126 sealstones + 49 crescents + 34 medallions +
+  44 long admin documents).
+- **chic-v1 sign classification** (mg-c7e3 + mg-0ea1 backfill). 131
+  CHIC sign IDs partitioned under the Olivier & Godart 1996
+  numeric-range rule into **96 syllabographic + 35 ideogram + 0
+  ambiguous**. 20 paleographic anchor candidates enumerated as
+  CHIC ↔ Linear A correspondences (3 consensus, 10 proposed, 7
+  debated; sources Younger online + Salgarella 2020 + Decorte
+  2017/2018 + Civitillo 2016).
+- **chic-v2 paleographic anchor inheritance** (mg-362d). 20 anchors
+  promoted into a tier-1 (3 consensus) / tier-2 (17
+  proposed-or-debated) anchor pool. **864 of 1,420** syllabographic
+  CHIC sign positions across the corpus are anchored — **60.85%**
+  corpus-wide coverage; **263 of 302** inscriptions carry ≥1
+  anchored position.
+- **chic-v3 substrate framework on CHIC** (mg-9700). The 4 Linear A
+  substrate pools (Aquitanian, Etruscan, toponym, Eteocretan) are
+  scored against the CHIC syllabographic-only stream (276
+  inscriptions, 1,258 syllabographic tokens, 551 maximal
+  syllabographic blocks — roughly one-quarter the size of Linear
+  A's corpus) under the Linear A v10 / v18 / v21 right-tail
+  bayesian gate. Matched controls are reused verbatim from the
+  Linear A pools (controls are about substrate phonotactic shape,
+  not target-corpus shape; reuse keeps the chic-v3 result directly
+  comparable to Linear A's v10 / v18 / v21 numbers).
+- **chic-v4 cross-script correlation** (mg-c769). Compute Spearman
+  rank correlation across the 4 substrate pools' Linear A vs CHIC
+  per-pool gate gaps; compute mean top-20 substrate-surface
+  overlap; compute per-substrate-surface Pearson continuity
+  on overlapping surfaces. Pure descriptive markdown-table-parser
+  + closed-form arithmetic; no rescore.
+- **chic-v5 per-sign syllable-value extraction**
+  (mg-7c6d). Four lines of evidence per unknown CHIC syllabographic
+  sign: (1) distributional plurality via top-3 nearest chic-v2
+  anchors by Bhattacharyya similarity across four fingerprint
+  dimensions (`left_neighbor`, `right_neighbor`, `position`,
+  `support`); (2) anchor-distance strict top-1; (3) substrate-
+  consistency under v21 Eteocretan LM scored against a class-
+  disjoint deterministic-permutation control mapping; (4) cross-
+  script paleographic — silent for all 76 unknowns by construction
+  (the chic-v1 paleographic-candidate list is precisely the seed
+  for the chic-v2 anchor pool, so by construction no unknown
+  carries a paleographic note; documented as a limitation).
+  Tier classification mechanical: ≥3 of 4 lines agreeing →
+  tier-2 candidate proposal pending domain-expert review; 2 of 4 →
+  tier-3 (suggestive); 1 of 4 → tier-4; 0 → untiered. Coarse
+  phoneme classes (`vowel`, `stop`, `nasal`, `liquid`, `fricative`,
+  `glide`).
 
 ---
 
@@ -1774,23 +1915,43 @@ for any specific Linear A sign, and the v19 + v20 external
 validation makes that specific in a way that internal-only
 metrics cannot.
 
-### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 / v1 / v2)
+### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 through chic-v5)
 
 A parallel sub-program (the **chic-v\*** ticket series) extends
 the same mechanical-falsifiability discipline to **Cretan
-Hieroglyphic** (CHIC), the older sister-script to Linear A. The
-goal is *not* a CHIC decipherment but a re-application of the
+Hieroglyphic** (CHIC), the older sister-script to Linear A
+(~1900–1600 BCE; sealstone-dominated, shorter inscriptions, more
+fragmentary by support type). The goal is *not* a CHIC decipherment
+but a **cross-script methodology test**: re-application of the
 infrastructure built for Linear A under a different and more
-constrained input distribution: 302 mostly-short CHIC inscriptions
+constrained input distribution (302 mostly-short CHIC inscriptions
 on sealstones and clay administrative documents, against a sign
 inventory of 131 distinct IDs whose syllabographic / ideogram
-partition is itself a research question.
+partition is itself a research question), to test whether the
+substrate-LM-phonotactic-kinship signal the Linear A framework
+detects (§3.14, §4.1) is *Linear-A-specific* or *transferable
+across scripts under the same a-priori genealogical-relatedness
+ordering of substrate candidates*.
 
-The chic sub-program is positioned in this document as a
-**methodology test**, not a result claim. Each ticket is treated
-the same way as the Linear A pipeline: outputs are committed,
-artefacts are byte-identical on rebuild, and findings are
-filed in `docs/findings.md`.
+This subsection is positioned within the Discussion as the
+methodology paper's **cross-script Part B**: it simultaneously
+delivers the chic-v0..v5 results and the cross-script
+methodological synthesis, parallel in narrative role to the
+single-script Discussion §4.1–§4.6. The chic-v5 per-sign
+syllable-value extraction framework (chic-v5 below) is the chic
+sub-program's per-sign discipline-protecting deliverable —
+parallel in role to v13's per-sign coherence verdict on Linear A
+(§3.7) — and is reported with the same anti-motivated-reasoning
+framing.
+
+The chic sub-program is positioned as a **methodology test**, not
+a CHIC decipherment claim. Each ticket is treated the same way as
+the Linear A pipeline: outputs are committed, artefacts are
+byte-identical on rebuild, and findings are filed in
+`docs/findings.md`. The chic-v7 polish pass (mg-9508, this
+document's chic-integration-and-final-consolidation pass before
+journal-submission handoff for the cross-script paper) is
+editorial-only and adds no new harness commits.
 
 #### chic-v0 — corpus ingest (mg-99df)
 
@@ -1809,10 +1970,15 @@ The 131 distinct CHIC sign IDs partition (under the numeric-range
 rule of Olivier & Godart 1996, retained in Younger's web edition)
 into **96 syllabographic + 35 ideogram + 0 ambiguous**. The
 syllabographic frequency distribution is comparable in shape to
-Linear A's (heavy-tailed but tractable). chic-v1 also enumerates
+Linear A's (heavy-tailed but tractable; CHIC top-10 covers 49% of
+sign tokens vs Linear A top-10 at 36%). chic-v1 also enumerates
 **20 paleographic anchor candidates** — CHIC syllabographic signs
 visually similar to Linear A signs with established Linear B
-carryover values. 3 are consensus matches, 9 proposed, 8 debated.
+carryover values. **3 are consensus matches, 10 proposed, 7
+debated** (counts cross-checked against
+`pools/cretan_hieroglyphic_signs.README.md` and the
+`results/chic_sign_inventory.md` paleographic-candidate table by
+the chic-v7 audit pass, mg-9508).
 
 #### chic-v2 — anchor inheritance + partial-reading map (mg-362d)
 
@@ -2156,7 +2322,112 @@ an optional accompaniment to the experiment ticket.
 - **chic-v7** — methodology-paper extension integrating chic-v0..v5
   cleanly into the v25 manuscript shape; the final consolidation
   pass before journal-submission handoff for the cross-script
-  paper.
+  paper. **Done in mg-9508** (this document); editorial-only, no
+  new harness commits. The chic-v7 audit pass cross-checked every
+  quantitative claim in §4.7 against the committed result files
+  (`results/chic_sign_inventory.md`,
+  `results/chic_anchor_density_leaderboard.md`,
+  `results/chic_partial_readings.md`,
+  `results/rollup.bayesian_posterior.{aquitanian,etruscan,toponym,eteocretan}.chic.md`,
+  `results/rollup.bayesian_posterior.chic.md`,
+  `results/rollup.linear_a_vs_chic_substrate_comparison.md`,
+  `results/chic_value_extraction_leaderboard.md`); one
+  inconsistency was found and fixed (chic-v1 paleographic-anchor
+  candidate confidence-tier counts had been written as "9 proposed,
+  8 debated" in an earlier draft; the committed source-of-truth in
+  `pools/cretan_hieroglyphic_signs.README.md` and
+  `results/chic_sign_inventory.md` is **3 consensus / 10 proposed
+  / 7 debated**, and the audit pass corrected the manuscript text
+  accordingly).
+
+#### Cross-script methodological synthesis (chic-v0..v5 + Linear A v0..v25)
+
+The two parallel result blocks of this manuscript — Linear A
+§3.1–§3.14 and CHIC §4.7 above — converge on a single
+methodology-paper claim: **the framework's right-tail bayesian
+gate detects substrate-LM-phonotactic kinship at the population
+level, with the magnitude scaling monotonically with a-priori
+genealogical relatedness, and that signal is cross-script.** The
+load-bearing observations across the 31-ticket sequence:
+
+- *Population-level kinship detection across two scripts.* All
+  four substrate pools' own-LM right-tail gate behaviours on
+  Linear A and CHIC produce **identical rank orderings of the
+  per-pool gap** (Eteocretan > toponym > Etruscan > Aquitanian),
+  cross-script Spearman ρ = +1.000 on the per-pool gate gap.
+  Eteocretan, the closest-genealogical-relative candidate
+  substrate, PASSes the gate on **both** scripts (LA p=4.10e-06,
+  gap +0.20; CHIC p=7.33e-04, gap +0.11). On Linear A all four
+  pools clear α=0.05; on CHIC's smaller (~1,258-token vs Linear
+  A's ~5,000-token) syllabographic stream only Eteocretan
+  formally clears α=0.05, but the ordering of the FAILing pools
+  is preserved.
+- *Per-sign decipherment remains unsupported on either script.*
+  On Linear A: v13's cross-window coherence median 0.18 (vs 0.6
+  bar) decisively fails; v19/v22 internal consensus across
+  surviving substrate candidates yields 3.95% aggregate match
+  rate (3/76) against the 35-entry Younger scholar-reading set,
+  squarely in the pre-registered strong-null band. On CHIC:
+  chic-v5's four-line-of-evidence framework, applied to 76
+  unknown CHIC syllabographic signs under Eteocretan-LM
+  substrate-consistency scoring, surfaces 3 tier-2 candidate
+  proposals (≥3 of 4 lines agreeing on a coarse phoneme class,
+  with line 4 silent for all unknowns by construction) — these
+  are **candidate proposals pending domain-expert review by an
+  Aegean-syllabary specialist, not decipherments**. The
+  framework's per-sign resolution is class-level on either
+  script.
+- *The discipline is the deliverable on both scripts.* On Linear
+  A, the methodology paper's central methodological warning
+  (§4.5) — that qualitative-impression evidence is structurally
+  equivalent to the framework's surface-aggregate PASS, and the
+  surface-aggregate PASS by mg-6b73 cannot distinguish real
+  substrate roots from phonotactically-matched conjecturals —
+  carries forward to CHIC unchanged. The chic-v5 framework's
+  anti-motivated-reasoning structural choices (mechanical
+  agreement predicate, explicit silent-line bookkeeping,
+  L3-systematic-class-bias disclosure, frequency-floor
+  thresholding) are the cross-script port of the v13 / v19 /
+  v22 discipline.
+- *Internal consensus does not imply external correctness, and
+  this generalises across scripts and across substrate pools.*
+  On Linear A, v22 / v24's 3.95% aggregate match rate against
+  the Younger scholar set holds across substrate-pool unions
+  (eteocretan-only 0.00%; three-pool 3.95%; four-pool 3.95%
+  byte-identical to three-pool). On CHIC, the chic-v5 tier-2
+  candidates carry the same caveat — they are not corroborated
+  by independent scholarly comparand on the per-sign level
+  (line 4 silent for all 76 unknowns). The cross-script lesson:
+  mechanical scoring against phonotactically-matched controls,
+  paired with explicit external-comparand bookkeeping, catches
+  failure modes that internal-consensus-only methodology
+  produces uniformly across scripts.
+- *Cross-script transferability of the methodology is the
+  novel methodology-paper deliverable of the chic sub-program.*
+  The Linear A v0..v25 result is "the framework detects
+  substrate-LM-phonotactic kinship between candidate substrate
+  and target script's underlying language at the population
+  level". The chic-v3..v4 result extends that to "and that
+  detection is *script-transferable* under the same scoring
+  infrastructure: the per-pool PASS/FAIL ordering survives
+  cross-script transfer at ρ=+1.0 between two independent
+  undeciphered Cretan scripts". This is the cross-script
+  methodology-paper claim that single-script v25 could not
+  make.
+
+What the cross-script extension does **not** establish: it
+does not adjudicate the question of whether Linear A and CHIC
+share a common underlying language (the cross-script signal is
+consistent with shared underlying language *or* with shared
+substrate phonotactic stratum — both produce ρ=+1.0 rank
+correlation under genealogical-relatedness-modulated
+substrate-LM kinship). It does not validate per-sign Linear
+A or CHIC syllabic value assignments. It does not propose a
+decipherment of either script. It does extend the methodology
+paper's central discipline-protecting claim — that mechanical
+scoring + matched controls + external-comparand bookkeeping
+catches failure modes internal-only methodology cannot — from
+one undeciphered Cretan script to two.
 
 ---
 
@@ -2306,6 +2577,85 @@ follow-up surface:
   external-validation surface beyond the three sequences v19 + v20
   cover. Out of scope for this manuscript; tracked as follow-up.
 
+### 5.4 Cross-script (CHIC) limitations
+
+Limitations specific to the chic-v0..v5 sub-program (§4.7),
+parallel in role to §5.1–§5.3 above for the Linear A pipeline:
+
+- **CHIC corpus is incomplete.** 302 of 331 catalog entries
+  (~91%) ingested from Younger's web edition (chic-v0, mg-99df);
+  29 missing entries are deferred to a manual-transcription pass
+  from print Olivier & Godart 1996. The chic-v3 / chic-v4 / chic-v5
+  results are computed against the 302-inscription subset; CHIC
+  corpus expansion is the natural intervention for raising
+  borderline-FAIL pool signals (toponym at p=0.435 on CHIC) above
+  α=0.05.
+- **CHIC syllabographic stream is one-quarter the size of Linear
+  A's.** 1,258 syllabographic tokens / 551 maximal blocks across
+  276 inscriptions (chic-v3 build), vs Linear A's ~5,000 tokens
+  across ~760 inscriptions. Statistical power for the CHIC
+  right-tail bayesian gate is correspondingly lower; only
+  Eteocretan formally clears α=0.05 on CHIC, vs all four pools on
+  Linear A. The cross-script Spearman ρ=+1.0 result (chic-v4)
+  remains robust because rank ordering is preserved even where
+  threshold signal fails on the borderline pools.
+- **chic-v5 line 4 is silent for all 76 unknowns by construction.**
+  The chic-v1 paleographic-candidate list (the cross-script
+  paleographic line 4 input) is precisely the seed for the chic-v2
+  anchor pool; every candidate became an anchor, so no unknown
+  carries a paleographic note. tier-2 in chic-v5 therefore
+  requires unanimous agreement of the three remaining non-silent
+  lines (1, 2, 3). Hand-curated extension of line 4 from O&G 1996,
+  Salgarella 2020, Decorte 2017, and adjacent paleography
+  scholarship is the natural chic-v6 target — an Aegean-syllabary
+  specialist task, not a polecat task.
+- **chic-v5 line 3 carries a systematic class bias.** Above the
+  n=3 frequency floor (49 of 76 unknowns), the line-3 class
+  distribution is 26/49 votes for `nasal`, 20/49 for `glide`,
+  2/49 for `liquid`, 1/49 for `stop`, 0/49 for `vowel` or
+  `fricative` — a property of the framework (Eteocretan-LM
+  bigram preference for common Eteocretan-vocabulary onset
+  patterns + chic-v2 anchor pool's class-imbalanced candidate-
+  value pool: 5 vowel / 8 stop / 4 nasal / 2 liquid / 1 glide;
+  no fricatives because no fricative-onset Linear-B carryover
+  values are paleographically anchored on CHIC). The tier-2 /
+  tier-3 discipline is what filters out the L3 bias by requiring
+  independent confirmation from at least one distributional line;
+  the discipline is the deliverable, not the count of tier-2
+  candidates.
+- **chic-v5 tier-2 candidates are candidate proposals, not
+  decipherments.** The 3 tier-2 candidates (#001 → glide;
+  #012 → glide; #032 → stop) are pending domain-expert review
+  by an Aegean-syllabary specialist. The framework's per-sign
+  resolution is class-level (`vowel`, `stop`, `nasal`, `liquid`,
+  `fricative`, `glide`) rather than phoneme-specific. The line 1 /
+  line 2 distributional machinery is built on the chic-v2 anchor
+  pool's fingerprints rather than a fully-independent paleographic
+  ground truth; tier-2 promotion to "decipherment claim" requires
+  external domain-expert validation that polecats cannot supply.
+- **CHIC has no per-sign external-validation comparand in
+  scholarly literature.** Unlike Linear A (Younger 35-entry
+  scholar-set, v22), CHIC has no comparable contextual-reading
+  set; chic-v5's tier-2 candidates have no analogue to the v22
+  population-level external-validation comparison. This is a fact
+  about CHIC's scholarly state of the art, not a methodology
+  limitation.
+- **No within-CHIC per-inscription cascade-candidate analysis.**
+  The v19 / v24 per-inscription robust-fraction analysis was
+  not run on CHIC; chic-v3 / chic-v4 / chic-v5 stayed at the
+  population-level. CHIC's smaller corpus would likely produce
+  even sparser per-inscription consensus than Eteocretan-only
+  on Linear A (where the v24 result was zero cascade candidates;
+  see §3.14 / Per-inscription cascade-candidate analysis under
+  Eteocretan LM (v24)). Tracked as a chic follow-up.
+- **AGENTS.md scope-of-work norms not yet updated for the chic
+  sub-program.** The current AGENTS.md describes the Linear A
+  workflow; the chic sub-program inherits it with minor
+  variations (chic-v0 corpus ingest pattern, chic-vN ticket
+  numbering, the documented chic-v1 → mg-0ea1 findings.md
+  backfill incident). Codifying the chic-specific norms is a
+  small follow-up; not load-bearing for the manuscript shape.
+
 ---
 
 ## 6. Conclusion
@@ -2405,6 +2755,105 @@ the protocol of finding inscriptions with high local internal
 consensus, then validating against external scholarly ground truth,
 as a discipline-protecting check against motivated-reasoning failure
 modes that internal-only analyses cannot catch.
+
+**Cross-script extension (chic-v0..v5).** The chic sub-program
+ports the framework verbatim to a second undeciphered Cretan
+script — Cretan Hieroglyphic — and demonstrates that the Linear A
+substrate-LM-phonotactic-kinship signal **transfers across
+scripts under the same scoring infrastructure**. The Linear A
+monotonic-with-relatedness ordering across the 4 substrate pools
+(Eteocretan > toponym > Etruscan > Aquitanian) reproduces exactly
+on CHIC: Eteocretan PASSes the right-tail bayesian gate on **both**
+scripts (LA p=4.10e-06, gap +0.20; CHIC p=7.33e-04, gap +0.11);
+the three more-distant pools' rank ordering is preserved on CHIC
+even where their absolute signal-to-noise drops below α=0.05
+under CHIC's smaller (~1,258-token vs Linear A's ~5,000-token)
+syllabographic stream. Cross-script Spearman rank correlation on
+the per-pool right-tail gap is **ρ=+1.000** across the 4 pools;
+mean top-20 substrate-surface overlap is 0.47 (38/80 substrate-side
+slots shared across the two scripts); per-substrate-surface
+continuity is strongest for Eteocretan (Pearson +0.45) and degrades
+monotonically with pool genealogical distance. The chic-v5
+four-line-of-evidence per-sign value-extraction framework, applied
+to 76 unknown CHIC syllabographic signs under the Eteocretan-LM
+substrate-consistency line, classifies 3 as tier-2 candidate
+proposals (≥3 of 4 lines agreeing on a coarse phoneme class —
+`vowel`, `stop`, `nasal`, `liquid`, `fricative`, `glide`); these
+are **candidate proposals pending domain-expert review by an
+Aegean-syllabary specialist**, not decipherments, and the
+discipline (mechanical agreement predicate, explicit silent-line
+bookkeeping for the construction-silent line 4, the
+L3-systematic-class-bias disclosure) is the chic-v5 contribution
+rather than the count. The cross-script claim the chic
+sub-program adds to the methodology paper, beyond what the
+single-script v25 manuscript could support, is therefore: **the
+substrate-LM-phonotactic-kinship signal the framework detects is
+not Linear-A-corpus-specific; it is a cross-script substrate-
+detection signature whose per-pool ordering tracks candidate-
+substrate genealogical relatedness to the target script's
+underlying language identically across two independent
+undeciphered Cretan scripts.** Per-sign decipherment remains
+unsupported on either script.
+
+---
+
+## 7. Three-sentence reading test
+
+The methodology paper canonical reading test, established at v16
+(mg-d5ed) for Linear A and extended to cross-script by chic-v7
+(mg-9508), asks: what would a hypothetical Linear-A scholar (or
+broader Aegean-syllabary specialist) reading this document cold
+learn from it? Three sentences, in the narrower-but-defensible
+register the v16 reading test established:
+
+1. **What the framework detects.** A mechanical, falsifiable
+   substrate-LM-phonotactic-kinship test — paired-difference
+   scoring under external phoneme language models with
+   phonotactically-matched controls, aggregated as per-surface
+   Beta-binomial posteriors and gated by a right-tail Mann-
+   Whitney U test on top-K=20 substrate vs top-K=20 matched-
+   control surfaces — detects population-level kinship between
+   four candidate substrate pools (Aquitanian/Vasconic, Etruscan,
+   pre-Greek Aegean toponyms, Eteocretan) and two undeciphered
+   Cretan scripts (Linear A SigLA, Cretan Hieroglyphic Younger
+   web edition), with the per-pool gate-magnitude ordering
+   tracking a-priori genealogical relatedness identically across
+   both scripts (Eteocretan > toponym > Etruscan > Aquitanian;
+   cross-script Spearman ρ=+1.000 on per-pool right-tail gap;
+   mean top-20 substrate-surface overlap 0.47 across the two
+   scripts).
+
+2. **What the framework does not support.** Per-sign decipherment
+   is not established by any data the framework has produced on
+   either script: Linear A's v13 cross-window coherence median is
+   0.18 against a 0.6 bar; Linear A's v22/v24 internal-consensus
+   mechanical readings match scholarly proposals at an aggregate
+   3.95% rate (3/76) on the Younger 35-entry scholar-set,
+   squarely in the pre-registered strong-null band; CHIC's
+   chic-v5 four-line-of-evidence framework surfaces 3 tier-2
+   candidate proposals out of 76 unknown syllabographic signs as
+   class-level (not phoneme-level) candidates pending domain-
+   expert review, with the chic-v5 anti-motivated-reasoning
+   discipline (mechanical agreement predicate, silent-line
+   bookkeeping, L3-systematic-class-bias disclosure) the
+   load-bearing contribution rather than the count.
+
+3. **The cross-script methodological contribution.** The
+   substrate-LM-phonotactic-kinship test, plus the matched-
+   control protocol, plus the cascade-candidate framing for
+   per-inscription internal-consensus surface, plus the
+   external-comparand bookkeeping discipline, plus the
+   four-line-of-evidence per-sign value-extraction discipline,
+   constitute a **transferable cross-script methodology** that
+   any research group testing a substrate-language hypothesis on
+   an undeciphered script can adopt: the framework's null
+   findings on Linear A (v13 / v14 / v19 / v20 / v22 / v24)
+   together with its cross-script transfer on CHIC
+   (chic-v3 / chic-v4 / chic-v5) are themselves the
+   methodological deliverable — a discipline-protecting
+   protocol that catches motivated-reasoning failure modes which
+   internal-only analyses produce uniformly across scripts and
+   substrate pools.
 
 ---
 
