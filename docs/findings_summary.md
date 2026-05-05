@@ -1,796 +1,849 @@
-# Lineara — findings summary (mg-7ecb, harness v15)
+# Mechanical Falsifiable Testing of Substrate-Language Hypotheses for Linear A
 
-A publication-shape consolidation of what the Lineara project has
-mechanically established about Linear-A so far. This is the v0
-"manuscript narrative" Daniel asked for in mg-4664, with a major v13
-update from mg-c216 sharpening what the v10 PASSes do and do not
-support, a v14 update from mg-6b73 establishing curation-tolerance
-under same-distribution pollution, and a **v15 update from mg-7ecb
-sharpening the manuscript-shape claim against cross-language pollution.**
-A reader who has not followed the merge notes should be able to pick
-up from here.
+**Methodology paper draft (v16, mg-d5ed)** — a publication-readable
+consolidation of what the Lineara project has mechanically established
+about Linear A across 19 work items (v0 through v15;
+`mg-d5ef` through `mg-7ecb`). The companion log `docs/findings.md`
+carries the per-ticket history; this document carries the consolidated
+methodology, results, and supportable / unsupportable claim split,
+audited end-to-end against the committed result files in `results/` and
+the merge notes in `docs/findings.md`.
 
-The companion log `docs/findings.md` carries the per-ticket history;
-this document carries the consolidated picture and the supportable /
-unsupportable claim split.
+The intended reader is a research scientist or Aegean-syllabary
+specialist who has not followed the merge notes. Section ordering
+follows the standard methodology-paper shape (Abstract, Introduction,
+Methods, Results, Discussion, Limitations, Conclusion) so the document
+can be read cold.
 
-## v15 update — what changed (mg-7ecb, 2026-05-05)
+---
 
-The v15 ticket built the **cross-language pollution test** that v14's
-result motivated: a Greek-shape polluted Aquitanian pool (153 real
-Aquitanian roots + 153 synthetic conjecturals drawn from the Mycenaean-
-Greek char-bigram distribution at
-`harness/external_phoneme_models/mycenaean_greek.json`, with lengths
-matched to the real pool) plus matched phonotactic controls, all run
-through the v10 right-tail bayesian gate under the Basque LM (the
-substrate's own LM, same as v10/v14). The pre-registered binary
-question was: **does the framework PASS for ANY phonotactic match,
-or only when the polluting distribution matches the substrate's own?**
+## Abstract
 
-**Verdict: partial-discrimination — gate PASSes at p = 2.01e-03, but
-within the right tail real Aquitanian dominates Greek-shape
-conjecturals at p = 8.29e-05.** This is the "neutral-ish" outcome the
-v15 brief flagged as the most interesting case for the manuscript.
+Past attempts to decipher Linear A — the undeciphered Bronze Age
+Aegean syllabary (~761 transcribed inscriptions in the SigLA corpus,
+4,935 sign occurrences) — have repeatedly suffered from
+motivated-reasoning failure modes: a candidate substrate language is
+asserted, plausible-looking matches are advanced as evidence, and
+unfavourable cases are explained away. We ask whether **mechanical,
+falsifiable testing** of substrate-language hypotheses is tractable,
+and what it can and cannot establish.
 
-The headline gate clears for any pool with non-trivial char-bigram
-overlap with the LM, but the cross-language gate is ~70× weaker than
-v14's same-distribution gate (p = 2.74e-05) and ~16× weaker than v10's
-clean gate (p = 3.22e-05). The framework therefore has measurable
-shape selectivity, but not enough to flip the headline gate to FAIL.
-The provenance breakdown of the polluted-pool top-20 is **13 of 20 real
-(65%) / 7 of 20 conjectural-greek (35%)**, vs v14's near-50/50 split,
-and the within-tail real-vs-conjectural-greek MW U is **p = 8.29e-05**
-(vs v14's p = 0.98). Real Aquitanian surfaces' posteriors actually
-**shifted UP** by +5.8% median when Greek-shape conjecturals were
-mixed in, because Greek-shape conjecturals don't compete as well as
-same-Aquitanian-shape conjecturals do for the same Linear-A windows.
+The framework scores candidate equations (substrate-root → Linear A
+sign window) under an external character-bigram phoneme **language
+model (LM)** trained on real substrate text, paired against
+phonotactically-matched scramble controls drawn from each substrate
+pool's own marginal phoneme distribution. Per-surface paired-difference
+evidence is aggregated as a Beta-binomial posterior over θ_S = P(this
+surface beats its matched control on a given Linear A window). The
+**right-tail Bayesian gate** is a one-tail Mann-Whitney U test on the
+top-K substrate posteriors versus the top-K matched-control posteriors,
+with K=20 the production setting.
 
-**What this means for v14's manuscript-shape claim.** v14's claim was:
+We evaluate three substrate hypotheses (Aquitanian, Etruscan, pre-Greek
+Aegean toponyms) plus a Linear-B-carryover positive control under
+seven falsifiable acceptance gates: own-LM right-tail (mg-d26d),
+cross-LM and third-LM negative controls (mg-0f97 / mg-4664), per-sign
+cross-window coherence (mg-c216), and same-distribution and
+cross-language pollution tests (mg-6b73 / mg-7ecb). The framework
+**detects substrate-LM-phonotactic kinship at the population level**
+(Aquitanian PASS p = 3.22e-05, Etruscan PASS p = 5.21e-04 under their
+own LMs) and **partially discriminates substrate-shape from
+non-substrate-shape within the right tail** (real-vs-Greek-shape
+within-tail Mann-Whitney p = 8.29e-05). It does **not** support
+per-sign decipherment: the consensus sign-to-phoneme map fails the
+0.6 cross-window-coherence bar decisively (median 0.18 on both
+Aquitanian and Etruscan v10 top-20 sets), and a same-distribution
+pollution test cannot distinguish real Aquitanian roots from
+phonotactically-matched conjecturals (real-vs-conjectural within-tail
+p = 0.98). The supportable claim is therefore strictly narrower than
+"Linear A is X": the framework identifies which substrate phonotactic
+profiles produce population-level signal in the SigLA corpus, and on
+which inscriptions that signal concentrates, but does not validate
+specific sign readings.
 
-> The framework detects substrate-LM-phonotactic kinship at the
-> population level for any pool whose phoneme + length distribution
-> is drawn from the substrate's own marginal distribution. It does
-> NOT detect "real substrate vocabulary," and does NOT support
-> per-sign reading claims.
+---
 
-v15 **refines** this claim. Both halves survive, but the boundary is
-sharper than v14 alone could reveal:
+## 1. Introduction
 
-* The headline-PASS condition is *broader* than v14's clause says —
-  the gate clears for pools whose phoneme distribution does not match
-  the substrate's own, as long as char-bigram overlap with the LM is
-  non-trivial. Greek-shape conjecturals carry enough Mediterranean-
-  style CV phonotactics to out-score scramble controls under the
-  Basque LM.
-* But within-tail discrimination is real and large: real Aquitanian
-  dominates Greek-shape conjecturals at p < 0.001 within the right
-  tail, even when both are mixed in the same pool. The framework is
-  *partially* selective to substrate-distribution shape — enough to
-  push Greek-shape conjecturals down the substrate-side leaderboard,
-  but not enough to break the population gate.
+Linear A, the Bronze Age Aegean syllabary in use ~1800–1450 BCE, has
+resisted decipherment despite a century of scholarly attention. Its
+sister script Linear B was deciphered (as Mycenaean Greek) by Ventris
+and Chadwick in 1956, but Linear A's underlying language remains
+unidentified, and proposed substrate identifications — pre-Greek
+Aegean, Anatolian Indo-European, Etruscan-related Tyrrhenian, Semitic,
+isolate-Vasconic, etc. — have not converged.
 
-The v14 within-tail real-vs-conjectural MW p of 0.98 (no
-discrimination) → v15 within-tail real-vs-conjectural-greek MW p of
-8.3e-05 (strong discrimination) is the cleanest diagnostic. The
-distinguishing axis is whether the polluting distribution matches
-the substrate's own: when it does (v14), conjecturals are
-indistinguishable from real; when it doesn't (v15), they are
+Past decipherment attempts have shared two failure modes:
+
+1. **Confirmatory presentation.** A candidate substrate is named, a
+   small set of inscriptions is offered as glossable under that
+   substrate, and contrary evidence is rationalized rather than
+   weighed mechanically. Without an explicit null model, "this looks
+   plausible" is the typical evidentiary standard.
+2. **Per-sign over-specification.** A specific syllabogram-to-phoneme
+   correspondence is proposed and defended on a small number of cases,
+   without testing whether the same correspondence remains stable
+   across the rest of the corpus.
+
+This project asks a narrower, more tractable question: **given a
+substrate-language hypothesis with attested vocabulary and a phoneme
+language model trained on real substrate text, can we mechanically
+test whether the hypothesis exhibits population-level phonotactic
+signal in the Linear A corpus, with appropriate phonotactically-
+matched negative controls?** The bet was that many cheap mechanical
+experiments, each with a pre-registered acceptance gate, would
+accumulate signal that loose qualitative methods would not.
+
+The scope is deliberately narrow:
+
+- Three substrate-language pools (Aquitanian/Vasconic, Etruscan,
+  pre-Greek Aegean toponyms) plus a Linear-B-carryover positive
+  control.
+- The SigLA corpus (Salgarella & Castellan; CC BY-NC-SA 4.0;
+  761 transcribed inscriptions, 4,935 sign occurrences, 356 distinct
+  sign IDs; `corpus_status.md`).
+- Char-bigram external phoneme language models trained on real
+  substrate text (Basque text for Aquitanian, the TLE Etruscan corpus
+  for Etruscan, the LiBER Mycenaean-Greek transliteration for
+  Linear-B-carryover).
+
+Out of scope by construction: morphological structure, decipherment
+of specific tablets, semantic gloss generation, syntactic claims, and
+expansion to less-attested substrate families (Phoenician, Sumerian,
+Hattic, etc.).
+
+The remainder of this document specifies the pipeline (§2), reports
+the seven falsifiable acceptance-gate outcomes (§3), discusses what
+the framework does and does not detect (§4), and explicitly enumerates
+unsupported claims (§5).
+
+---
+
+## 2. Methods
+
+The pipeline is built up across `mg-d5ef` (v0) through `mg-7ecb` (v15)
+and is deterministic end-to-end: re-running any rollup against the
+same `experiments.external_phoneme_perplexity_v0.jsonl` and the same
+pool / hypothesis manifests produces byte-identical output. No RNG
+sits in the scoring or aggregation path.
+
+### 2.1 Corpus
+
+The Linear A corpus is `corpus/`: 761 inscriptions with at least one
+transcribed sign, 4,935 sign occurrences across 356 distinct sign IDs,
+ingested from SigLA (`https://sigla.phis.me`) under
+CC BY-NC-SA 4.0. The underlying print authority is GORILA
+(Godart & Olivier 1976–85). Each inscription is normalized to a
+per-record JSON schema (`schema/inscription.schema.json`) with sign
+tokens, position, site, support type, and provenance metadata.
+Site distribution: Haghia Triada 372, Khania 213, Phaistos 63, Zakros
+44, Knossos 31, Mallia 20, Arkhanes 10, plus minor sites. See
+`corpus_status.md` for the full ingestion record.
+
+### 2.2 Substrate pools
+
+Each substrate hypothesis is encoded as a YAML pool of candidate root
+surfaces with phoneme decompositions, attestations, and citations:
+
+| pool | n_entries | source | LM dispatch |
+|:--|---:|:--|:--|
+| `aquitanian` | 153 | Trask 1997 + Gorrochategui 1984 (Vasconic / pre-IE roots) | basque |
+| `etruscan` | 143 | Bonfante & Bonfante 2002 + TLE | etruscan |
+| `toponym` | 112 | Beekes 2010 (pre-Greek Aegean toponyms) | basque (substrate-style stand-in) |
+| `linear_b_carryover` | 20 | Ventris & Chadwick 1956 carryover values + Younger 2000 conjecturals (positive control) | mycenaean_greek |
+
+The three pollution variants used for the curation-tolerance and
+cross-language-pollution tests are:
+
+| pool | n_entries | construction |
+|:--|---:|:--|
+| `polluted_aquitanian` | 306 | 153 real Aquitanian roots + 153 same-distribution conjecturals (mg-6b73) |
+| `greek_polluted_aquitanian` | 306 | 153 real Aquitanian roots + 153 Mycenaean-Greek-shape conjecturals (mg-7ecb) |
+
+### 2.3 Matched phonotactic controls
+
+For each substrate pool, a corresponding `control_<name>` pool is
+generated by sampling random surfaces of matching length from the
+substrate's marginal phoneme histogram. Determinism is preserved by
+seeding from `sha256(pool_name)`. The LM dispatch routes each control
+pool through its substrate's LM so the paired-difference cancels the
+LM choice out of the comparison
+(`scripts/build_control_pools.py`, `mg-f419` + `mg-c2af`).
+
+### 2.4 Hypothesis schemas
+
+Two committed hypothesis shapes participate in the v8/v9/v10 paired-
+difference data:
+
+- **`candidate_equation.v1` (mg-d5ef, mg-fb23).** A single substrate
+  root pinned to one Linear A inscription window; carries
+  `sign_to_phoneme` mapping, window indices, root surface, and root
+  phoneme decomposition.
+- **`candidate_signature.v1` (mg-bef2).** Multiple substrate roots
+  pinned to non-overlapping sub-windows of one Linear A window; each
+  constituent root carries its own `sign_to_phoneme`.
+
+Hypothesis manifests live under `hypotheses/auto/*.manifest.jsonl`
+(equations) and `hypotheses/auto_signatures/*.manifest.jsonl`
+(signatures). Generation is by exhaustive walk over each pool entry
+× every Linear A inscription window of matching length, capped per
+substrate entry to 50 candidate windows
+(`scripts/generate_candidates.py`).
+
+### 2.5 Metrics
+
+The headline metric is **`external_phoneme_perplexity_v0`** (mg-ee18),
+which feeds the candidate's phoneme stream through a held-out
+char-bigram language model trained on real substrate text and reads
+off the per-record log-likelihood. The bigram LMs are at
+`harness/external_phoneme_models/{basque,etruscan,mycenaean_greek}.json`,
+each fit with α=0.1 add-α smoothing on real text:
+
+- **basque.json** — Basque text (Aquitanian's modern descendant) used
+  as the LM for the Aquitanian substrate pool.
+- **etruscan.json** — TLE Etruscan corpus.
+- **mycenaean_greek.json** — LiBER (`https://liber.cnr.it`) corpus,
+  5,638 Linear-B inscriptions yielding 21,634 word tokens and
+  5,113 unique forms (mg-4664).
+
+Earlier metric variants (`compression_delta_v0`,
+`partial_mapping_compression_delta_v0`, `local_fit_v0`/`v1`,
+`sign_prediction_perplexity_v0`, `geographic_genre_fit_v1`) are
+retained in `results/experiments.jsonl` for reproducibility but did
+not survive the matched-control discrimination test (mg-f419);
+the current pipeline scores against `external_phoneme_perplexity_v0`
+exclusively at the gating layer.
+
+### 2.6 Paired-difference scoring
+
+For each candidate equation/signature on the substrate side, the
+matched control pool is queried for a length-equivalent random-
+phonotactic surface; the same metric is computed for both sides; the
+paired difference `paired_diff = substrate_score − control_score` is
+recorded as one binary observation
+(`paired_diff > 0` ⇒ substrate side won that record).
+
+### 2.7 Per-surface Bayesian aggregation
+
+For each substrate surface S, all paired-difference records targeting
+S (across both single-root v8 candidates and multi-root v9
+signatures, deduplicated per record) are collected. The posterior
+over θ_S = P(this surface beats its matched control under the held-out
+LM) is `Beta(1+k, 1+n−k)` under a `Beta(1, 1)` prior, where k is the
+number of records the surface won. Credibility shrinks toward the
+prior mean by `min(1, n / 10)`; the gate uses raw posterior_mean
+(not the credibility-shrunk effective score) to inspect the right
+tail directly. Implementation: `scripts/per_surface_bayesian_rollup.py`
+(mg-d26d). Beta inverse-CDF is implemented from scratch via Numerical
+Recipes Lentz βCF + bisection — no scipy dependency.
+
+For mg-d26d, 16,723 v8 substrate paired records + 4,832 v9 substrate
+signature records = 21,555 paired records were aggregated across 408
+distinct substrate surfaces.
+
+### 2.8 The right-tail Bayesian gate
+
+The acceptance gate is a one-tail Mann-Whitney U test on the top-K
+substrate posterior means versus the top-K matched-control posterior
+means, ranked by raw posterior_mean. K=20 is the production value
+(K=5/10/20 sweep run as a sensitivity diagnostic in mg-c216). The
+PASS condition is **p < 0.05 with median(substrate top-K) >
+median(control top-K)**. Pre-registered: a one-tail one-sided test
+with substrate predicted to dominate. The gate is permissive in the
+sense that it asks only that the *best* substrate surfaces beat the
+*best* control surfaces, not that the bulk distributions separate;
+this is by design, since the v9 generator's projection bias produces
+a bulk distribution dominated by short over-projected roots
+(mg-bef2).
+
+### 2.9 Cross-LM, cross-window-coherence, and pollution checks
+
+Five auxiliary checks were pre-registered against the v10 outcome:
+
+- **Cross-substrate negative control** (mg-0f97). Re-route each pool's
+  paired-difference records through the *other* substrate's LM
+  (Aquitanian under Etruscan LM, Etruscan under Basque LM) and re-run
+  the gate. If the v10 PASS reflects substrate-LM-specific signal, the
+  cross-LM gate should collapse.
+- **Third-LM check** (mg-4664). Re-route Aquitanian and Etruscan
+  records through the Mycenaean-Greek LM (genuinely unrelated to both
+  substrates) and re-run the gate. Cross-checks whether a partial
+  cross-LM result reflects a Mediterranean-phonotactic kinship
+  artefact versus a generic natural-language-LM bias.
+- **Linear-B sister-syllabary positive control** (mg-4664). Promote
+  20 Ventris-Chadwick carryover anchors plus Younger 2000
+  conjecturals into a first-class substrate pool, score under the
+  Mycenaean-Greek LM. If the framework can recover known-correct
+  readings, the positive control passes; if not, it fails.
+- **Cross-window coherence test** (mg-c216). For each v10 top-20
+  substrate surface, build a per-sign histogram of the phoneme
+  proposed by every positive-paired-difference candidate equation
+  involving that surface; compute the modal-phoneme posterior and
+  Shannon entropy per sign; compute per-surface coherence as
+  `Σ_s [freq(S, s) · P_modal(s)] / Σ_s freq(S, s)`. Acceptance bar:
+  median per-surface coherence ≥ 0.6 on at least one pool.
+- **Pollution tests** (mg-6b73, mg-7ecb). Build a 50%-polluted
+  Aquitanian pool (153 real + 153 same-distribution conjecturals,
+  mg-6b73) and a cross-language polluted pool (153 real + 153
+  Mycenaean-Greek-shape conjecturals, mg-7ecb); rerun the v10 gate
+  on each. Tests whether the gate signal depends on uniformly-clean
+  substrate pools or on a substrate-specific phonotactic shape.
+
+---
+
+## 3. Results
+
+### 3.1 Acceptance-gate outcomes — summary table
+
+The seven pre-registered gates and their outcomes are:
+
+| # | test | ticket | result | outcome |
+|---:|:--|:--|:--|:--|
+| 1 | own-LM right-tail bayesian gate, three substrate pools | mg-d26d (v10) | Aquitanian p = 3.22e-05; Etruscan p = 5.21e-04; Toponym p = 0.92 | **2/3 PASS** |
+| 2 | cross-substrate negative control | mg-0f97 (v11) | Etruscan under Basque LM p = 0.591 (FAIL → validates); Aquitanian under Etruscan LM p = 0.0205 (partial PASS) | Etruscan validated; Aquitanian partial |
+| 3 | third-LM (Mycenaean Greek) check | mg-4664 (v12) | Aquitanian p = 0.0953 (FAIL); Etruscan p = 0.185 (FAIL) | substrate-LM-specificity confirmed |
+| 4 | Linear-B sister-syllabary positive control | mg-4664 (v12) | own-LM p = 0.155 at K=20 (FAIL); K=5 sensitivity p = 0.0106 (PASS) | positive control fails the production gate; passes a less-conservative gate |
+| 5 | per-sign cross-window coherence | mg-c216 (v13) | median 0.1818 (Aquitanian), 0.1808 (Etruscan), bar 0.6 | **decisive FAIL** |
+| 6 | same-distribution pollution test | mg-6b73 (v14) | polluted-pool gate p = 2.74e-05 (PASS); within-tail real-vs-conjectural Mann-Whitney p = 0.98 | gate PASS; framework cannot distinguish real from same-distribution conjectural |
+| 7 | cross-language pollution test | mg-7ecb (v15) | polluted-pool gate p = 2.01e-03 (PASS); within-tail real-vs-conjectural-greek p = 8.29e-05 | partial within-tail discrimination |
+
+All seven outcomes are reproducible from
+`results/rollup.bayesian_posterior.*.md`, the supporting provenance
+breakdowns in `results/rollup.bayesian_posterior.*.provenance.md`,
+and `results/consensus_sign_phoneme_map.md`. The detailed per-pool
+breakdowns follow.
+
+### 3.2 Validation status by pool
+
+The validation matrix as of v15:
+
+| pool | own-LM (v10/mg-d26d) | cross-LM (v11/mg-0f97) | third-LM (v12/mg-4664, MycGreek) | curation gate (v14/v15) | status |
+|:--|:--:|:--:|:--:|:--:|:--|
+| `aquitanian` | PASS p = 3.22e-05 (basque) | partial p = 0.0205 (etruscan, 5× weaker) | FAIL p = 0.0953 | (see polluted variants) | substrate-LM-specific against unrelated LMs; partial Mediterranean-phonotactic kinship under etruscan LM |
+| `polluted_aquitanian` | n/a (v14 build) | n/a | n/a | **PASS p = 2.74e-05** (basque, 50% same-distribution pollution) | gate is curation-tolerant; top-20 split 9 real / 11 conjectural; within-tail real-vs-conjectural Mann-Whitney p = 0.98 |
+| `greek_polluted_aquitanian` | n/a (v15 build) | n/a | n/a | **PASS p = 2.01e-03** (basque, 50% Mycenaean-Greek-shape pollution) | partial within-tail discrimination; top-20 split 13 real / 7 conjectural-greek; real-vs-conjectural-greek MW p = 8.29e-05 |
+| `etruscan` | PASS p = 5.21e-04 (etruscan) | FAIL p = 0.591 (basque) | FAIL p = 0.185 (mycenaean_greek) | n/a | substrate-LM-specific; both unrelated LMs collapse the separation |
+| `toponym` | FAIL p = 0.92 | (skipped, v10 already FAIL) | (skipped) | n/a | not validated; control-sampler issue, see §3.5 |
+| `linear_b_carryover` | n/a | n/a | **FAIL p = 0.155** at K=20 (mycenaean_greek own-LM positive control) | n/a | positive control fails production gate; K=5 sensitivity passes at p = 0.0106 |
+
+### 3.3 Aquitanian and Etruscan: validated against unrelated LMs
+
+The clean Aquitanian PASS (mg-d26d) is reproduced at
+`results/rollup.bayesian_posterior.aquitanian.md`: top-20 substrate
+posterior median 0.9808 versus top-20 matched-control median 0.9512,
+Mann-Whitney U = 345.0, p = 3.22e-05. The Etruscan PASS is at
+`results/rollup.bayesian_posterior.etruscan.md`: substrate median
+0.9808 versus control median 0.9217, U = 321.0, p = 5.21e-04.
+
+The cross-LM negative controls (mg-0f97) behave as expected for
+substrate-specific signal:
+
+| pool | own-LM | cross-LM | third-LM (MycGreek) |
+|:--|:--:|:--:|:--:|
+| `aquitanian` (medians) | sub 0.9808 / ctrl 0.9512, p = 3.22e-05 (basque) | sub 0.9808 / ctrl 0.9422, p = 0.0205 (etruscan) | sub 0.9808 / ctrl 0.9630, p = 0.0953 (mycgreek) |
+| `etruscan` (medians) | sub 0.9808 / ctrl 0.9217, p = 5.21e-04 (etruscan) | sub 0.9615 / ctrl 0.9535, p = 0.591 (basque) | sub 0.9615 / ctrl 0.9498, p = 0.185 (mycgreek) |
+
+Etruscan validates cleanly: the separation collapses under both
+unrelated LMs (Basque p = 0.591, Mycenaean-Greek p = 0.185). The
+Etruscan top-20 substrate surfaces are a coherent semantic stratum
+of religious vocabulary, common praenomina, function words, and
+time references — exactly the genre profile of the votive / funerary
+corpus the pool was sourced from.
+
+Aquitanian is more nuanced: the separation persists under the
+Etruscan LM at p = 0.0205 but collapses under the Mycenaean-Greek LM
+at p = 0.0953. The cross-LM pattern is most parsimoniously explained
+as a Basque-Etruscan **Mediterranean phonotactic-kinship artefact**:
+both languages share CV-syllable-dominant phonotactics with simple
+consonant inventories, so Aquitanian roots match either LM's
+character-bigram statistics partially. Mycenaean Greek has more
+complex syllable structures (CVC, labiovelars, geminate clusters)
+and Aquitanian roots no longer dominate the right tail under it.
+The v10 Aquitanian PASS is therefore substrate-specific against
+genuinely unrelated LMs but partially overlaps with closely-related
+LMs.
+
+### 3.4 Top-K substrate surfaces by pool
+
+The v10 (mg-d26d) Bayesian-posterior leaderboards are committed at
+`results/rollup.bayesian_posterior.{aquitanian,etruscan,toponym,
+linear_b_carryover}.md`. The top-20 substrate surfaces by raw
+posterior_mean reproduce a coherent semantic stratum on each
+substrate pool:
+
+**Aquitanian top-20 under the Basque LM** — a cross-section of
+inherited core Basque vocabulary across the standard semantic
+families (no family dominates):
+
+| rank | surface | n | k | posterior_mean | semantic field |
+|---:|:--|---:|---:|:--:|:--|
+| 1 | `aitz` | 53 | 53 | 0.9818 | nature: rock |
+| 2 | `hanna` | 51 | 51 | 0.9811 | kinship: brother |
+| 3 | `nahi` | 51 | 51 | 0.9811 | function: desire |
+| 4 | `ako` | 50 | 50 | 0.9808 | morphology: suffix |
+| 5 | `beltz` | 50 | 50 | 0.9808 | descriptor: black |
+| 6 | `bihotz` | 50 | 50 | 0.9808 | body: heart |
+| 7 | `egun` | 50 | 50 | 0.9808 | time: day |
+| 8 | `eki` | 50 | 50 | 0.9808 | nature: sun |
+| 9 | `ezti` | 50 | 50 | 0.9808 | food: honey |
+| 10 | `gaitz` | 50 | 50 | 0.9808 | descriptor: ill |
+| 11 | `hau` | 50 | 50 | 0.9808 | function: this |
+| 12 | `hesi` | 50 | 50 | 0.9808 | place: fence |
+| 13 | `itsaso` | 50 | 50 | 0.9808 | nature: sea |
+| 14 | `oin` | 50 | 50 | 0.9808 | body: foot |
+| 15 | `ona` | 50 | 50 | 0.9808 | descriptor: good |
+| 16 | `zelai` | 50 | 50 | 0.9808 | nature: meadow |
+| 17 | `zortzi` | 50 | 50 | 0.9808 | number: eight |
+| 18 | `argi` | 52 | 51 | 0.9630 | nature: light |
+| 19 | `ate` | 51 | 50 | 0.9623 | dwelling: door |
+| 20 | `entzun` | 50 | 49 | 0.9615 | function: hear |
+
+**Etruscan top-20 under the Etruscan LM** — religious vocabulary,
+praenomina, function words, time references:
+
+| rank | surface | n | k | posterior_mean | gloss |
+|---:|:--|---:|---:|:--:|:--|
+| 1 | `larth` | 54 | 54 | 0.9821 | praenomen "Larth" |
+| 2 | `aiser` | 52 | 52 | 0.9815 | "gods" |
+| 3 | `matam` | 52 | 52 | 0.9815 | "above / before" |
+| 4 | `avils` | 50 | 50 | 0.9808 | "of years" |
+| 5 | `camthi` | 50 | 50 | 0.9808 | magistracy |
+| 6 | `chimth` | 50 | 50 | 0.9808 | "at / near" |
+| 7 | `hanthe` | 50 | 50 | 0.9808 | ritual position |
+| 8 | `laris` | 50 | 50 | 0.9808 | praenomen "Laris" |
+| 9 | `nac` | 50 | 50 | 0.9808 | "as / when" |
+| 10 | `sech` | 50 | 50 | 0.9808 | "daughter" |
+| 11 | `thana` | 50 | 50 | 0.9808 | praenomen "Thana" |
+| 12 | `zelar` | 50 | 50 | 0.9808 | ritual time-reference |
+| 13–20 | `caitim`, `thesan`, `spureri`, `thanchvil`, `suthi`, `mach`, `arnth`, `sath` | … | … | 0.9714–0.9808 | month-name, dawn-goddess, "sacrifice for the city", praenomen, "tomb / burial", numeral "five", praenomen, recurring stem |
+
+The control top-20 on both pools is the random-phonotactic noise
+floor (no semantic coherence). Full leaderboards in
+`results/rollup.bayesian_posterior.aquitanian.md` and
+`results/rollup.bayesian_posterior.etruscan.md`.
+
+### 3.5 Toponym: not validated
+
+The toponym pool fails the right-tail gate at p = 0.92 under the
+Basque LM
+(`results/rollup.bayesian_posterior.toponym.md`: substrate top-20
+median 0.9186, control top-20 median 0.9464, U = 149.5). The
+substrate top recovers recognizable Aegean toponyms (`dikte`, `keos`,
+`kno`, `minoa`, `tenos`, `iassos`, `lemnos`, `kuzikos`, `melitos`,
+`tulisos`, `melos`, `aspendos`, `kalumnos`, `zakuntos`, `lukia`,
+`mukenai`, `lykabettos`, `itanos`, `halikarnassos`, `poikilassos`),
+but the matched-control surfaces (`eoao`, `aathei`, `ana`, `eta`,
+`ioonaol`, etc.) sit at higher posteriors. The control sampler's
+character distribution drifted into a low-perplexity region that
+the LM rewards for the wrong reason; the failure is on the control
+side, not the substrate side. Tightening the matched-control
+sampler for the toponym pool is a known issue, deferred (see §6).
+
+### 3.6 Linear-B carryover: positive control failed at the production gate
+
+`results/rollup.bayesian_posterior.linear_b_carryover.md` reports
+the K=20 own-LM gate at p = 0.155 (n_substrate_top = 12,
+n_control_top = 11, MW U = 83). The substrate top-20 median is
+0.7500 and the control median is 0.3103, so the directionality and
+the magnitude of separation are correct, but the population MW U
+does not cross p < 0.05. The leaderboard explains why: the
+**well-attested anchors** (`mate`, `tare`, `kiro`, `kuro`) decisively
+clear their controls (substrate posterior 0.85–0.98), but the
+**conjectural anchors** (`dare`, `dina`, `ara`, `taina`, `kumina`)
+do not separate from random Mycenaean-Greek-phonotactic strings.
+`dare` (curator-flagged "libation-formula continuation") loses
+50/50 paired records (k = 0).
+
+The K-sweep diagnostic (mg-c216) shows the gate is partially over-
+conservative on this mixed-cleanness pool:
+
+| K | n_substrate_top | n_control_top | median sub | median ctrl | MW U | p (one-tail) | gate |
+|---:|---:|---:|:--:|:--:|---:|:--:|:--:|
+| 5 | 5 | 5 | 0.8846 | 0.5772 | 24.0 | **0.0106** | PASS |
+| 10 | 10 | 10 | 0.7692 | 0.3552 | 71.0 | 0.0603 | borderline |
+| 20 | 12 | 11 | 0.7500 | 0.3103 | 83.0 | 0.1547 | FAIL |
+
+K=5 cleanly clears p<0.05. The production gate fails because the
+K=20 substrate top is forced to include the conjectural drag.
+
+### 3.7 Cross-window coherence: per-sign mappings are not stable
+
+For each v10 top-20 substrate surface (Aquitanian + Etruscan, 40
+surfaces total), the consensus map (mg-c216,
+`results/consensus_sign_phoneme_map.md`) aggregates positive-
+paired-difference candidate equations and reports the histogram of
+phonemes proposed for each Linear A sign. Of 61 distinct Linear A
+signs receiving at least one positive proposal, 60 cleared the
+n_proposals ≥ 10 threshold. The headline coherence verdict:
+
+| pool | n_surfaces | n_with_coherence | median | min | max | gate (≥0.6) |
+|:--|---:|---:|:--:|:--:|:--:|:--:|
+| `aquitanian` | 20 | 20 | 0.1818 | 0.1805 | 0.1864 | **FAIL** |
+| `etruscan` | 20 | 20 | 0.1808 | 0.1739 | 0.1867 | **FAIL** |
+
+Both pools fail decisively. The coherence values cluster tightly in
+[0.17, 0.19] — far below the 0.6 acceptance bar, far below even the
+"close-but-no-cigar" 0.5–0.55 region. Every consensus-map sign has
+entropy ≥ 2.05 bits (out of log₂(23) ≈ 4.52 bits maximum), and
+**no sign reaches modal posterior > 0.27**. The five most-coherent
+signs (the lowest-entropy end of the distribution) are still very
+diffuse:
+
+| sign | n_proposals | modal | modal_posterior | entropy_bits |
+|:--|---:|:--:|:--:|:--:|
+| `A718` | 12 | `i` | 0.234 | 2.055 |
+| `AB13` | 26 | `i` | 0.227 | 2.998 |
+| `A306` | 14 | `i` | 0.137 | 3.039 |
+| `AB66` | 15 | `i` | 0.132 | 3.057 |
+| `A323` | 14 | `a` | 0.176 | 3.093 |
+
+High-frequency signs (which receive proposals from essentially the
+entire v10 top-20) are uniformly diffuse: AB08 (464 proposals,
+modal `a` posterior 0.167, entropy 3.925 bits), AB37 (227 proposals,
+modal `i` posterior 0.187, entropy 3.713 bits), AB28 (225 proposals,
+modal `i` posterior 0.159, entropy 3.788 bits). The structural
+reason: the metric rewards substrate-phonotactic match broadly
+rather than specific sign-to-phoneme assignments, so different
+substrate roots aligning with the same Linear A window propose
+different sign mappings, and all of them score positive
+paired-differences.
+
+### 3.8 Pollution tests: gate is curation-tolerant; within-tail discrimination is partial
+
+The v10 right-tail gate's response to deliberate pool pollution:
+
+| pool | gate p | top sub median | top ctrl median | within-tail real-vs-conjectural Mann-Whitney p |
+|:--|:--:|:--:|:--:|:--:|
+| `aquitanian` (clean, v10) | 3.22e-05 | 0.9808 | 0.9512 | n/a (no conjecturals) |
+| `polluted_aquitanian` (v14, 50% same-distribution conjectural) | 2.74e-05 | 0.9808 | 0.9572 | 0.98 (no within-tail discrimination) |
+| `greek_polluted_aquitanian` (v15, 50% Mycenaean-Greek-shape conjectural) | 2.01e-03 | 0.9808 | 0.9735 | 8.29e-05 (strong within-tail discrimination) |
+
+The same-distribution polluted gate (mg-6b73,
+`results/rollup.bayesian_posterior.polluted_aquitanian.md`) is
+within ~1.2× of the clean Aquitanian gate. The provenance breakdown
+of the polluted-pool top-20 is **9 real / 11 conjectural** (~50/50,
+matching the underlying pool); the within-tail Mann-Whitney
+real-vs-conjectural test is essentially flat at p = 0.98 — the
+framework **cannot distinguish real Aquitanian roots from
+phonotactically-matched same-distribution conjecturals** within a
+mixed pool.
+
+The cross-language polluted gate (mg-7ecb,
+`results/rollup.bayesian_posterior.greek_polluted_aquitanian.md`)
+also PASSes, but ~70× weaker than the same-distribution gate and
+~16× weaker than the clean gate. The provenance breakdown is
+**13 real / 7 conjectural-greek** (a real-side bias of 65/35), and
+the within-tail real-vs-conjectural-greek MW gives p = 8.29e-05 —
+**strong within-tail discrimination**. The conjectural-greek
+surfaces that did make the top-20 (`aki`, `ame`, `awa`, `fren`,
+`ini`, `joten`, `kare`) share a Mediterranean-CV shape that the
+Basque LM rewards heavily; the Greek-shape conjecturals that
+fell out of the top-20 are heavier in distinctive features
+(`j-` / `w-` glides, geminate clusters) that flag them as
+out-of-distribution.
+
+The control-side median rises monotonically from clean (0.9512)
+through same-distribution polluted (0.9572) to cross-language
+polluted (0.9735) — the matched-control sampler is sensitive to
+the polluted pool's combined phoneme distribution. The substrate-
+side median is the same 0.9808 in all three pools (cap-per-entry=50
+ceiling). The shrinking substrate-vs-control gap is what produces
+the weaker but still-PASSing gate under cross-language pollution.
+
+### 3.9 Per-inscription concentration
+
+Of 185 Linear A inscriptions in the working set, 43 have ≥ 1 v10
+top-20 substrate surface with positive paired-difference evidence
+on it, and 40 have ≥ 2 (mg-0f97,
+`results/rollup.right_tail_inscription_concentration.md`). Top-by-
+density inscriptions:
+
+| rank | inscription | site | genre | n_top20 | n_records | density |
+|---:|:--|:--|:--|---:|---:|---:|
+| 1 | `HT Wc 3010` | Haghia Triada | accountancy | 14 | 76 | 0.184 |
+| 2 | `HT Wc 3017a` | Haghia Triada | accountancy | 14 | 76 | 0.184 |
+| 3 | `KH 60` | Khania | accountancy | 14 | 76 | 0.184 |
+| 4 | `KN Zb 5` | Knossos | unknown | 14 | 76 | 0.184 |
+| 5 | `HT 90` | Haghia Triada | accountancy | 14 | 94 | 0.149 |
+| 6 | `KH 10` | Khania | accountancy | 14 | 100 | 0.140 |
+| 7 | `KH 5` | Khania | accountancy | 14 | 110 | 0.127 |
+| 8 | `HT 127a` | Haghia Triada | accountancy | 12 | 100 | 0.120 |
+| 9 | `HT 12` | Haghia Triada | accountancy | 12 | 102 | 0.118 |
+| 10 | `ARKH 6` | Arkhanes | accountancy | 10 | 85 | 0.118 |
+
+The 14 v10-top-20 surfaces hitting these tablets are drawn from
+**both** substrate pools' top-20 sets. The Etruscan-side
+contribution is dominated by religious / praenomen / time-reference
+vocabulary (`aiser`, `avils`, `camthi`, `hanthe`, `laris`, `matam`,
+`thesan`, `zelar`, plus `caitim` / `thanchvil` / `spureri` on the
+Knossos votive subset). The Aquitanian-side contribution is core
+Basque vocabulary (`bihotz`, `entzun`, `hanna`, `itsaso`, `zelai`,
+`zortzi`).
+
+A second inscription cluster (`GO Wc 1a`, `ARKH 5`, `HT 104`,
+`HT 103`, `ARKH 2`, etc.) shows 23–38 distinct top-20 surfaces, with
+broader Aquitanian-side participation (`aitz`, `ako`, `ate`, `eki`,
+`hau`, `oin`, `ona`, `argi`, `nahi`).
+
+These per-inscription concentration patterns are reproducible and
+indicate which Linear A tablets respond most strongly to the
+substrate-aggregate signal. They do **not** indicate readability
+under any specific substrate (see §3.7 and §4).
+
+---
+
+## 4. Discussion
+
+### 4.1 What the framework detects
+
+After v15, the supportable claim is sharper than at any earlier
+point. The framework reliably detects three things:
+
+- **Substrate-LM-phonotactic kinship at the population level.** The
+  v10 right-tail gate clears for both Aquitanian (under the Basque
+  LM) and Etruscan (under the Etruscan LM) at p < 0.001, and the
+  separation collapses cleanly under genuinely unrelated LMs
+  (Etruscan p = 0.591 under Basque, p = 0.185 under Mycenaean Greek;
+  Aquitanian p = 0.0953 under Mycenaean Greek). The pattern is what
+  one expects of substrate-specific signal: a real substrate's
+  phonotactic profile is rewarded by the LM trained on that
+  substrate's text and not by LMs trained on unrelated languages.
+- **Curation tolerance within the same phoneme + length
+  distribution.** The same-distribution polluted Aquitanian gate
+  (50% conjectural, mg-6b73) PASSes at essentially the same magnitude
+  as the clean gate (p = 2.74e-05 vs 3.22e-05). The signal does not
+  depend on uniformly-clean substrate pools.
+- **Partial within-tail shape selectivity.** Under cross-language
+  pollution (50% Mycenaean-Greek-shape conjecturals, mg-7ecb), the
+  population gate still PASSes (p = 2.01e-03) but ~70× weaker; and
+  within the right tail, real Aquitanian dominates Greek-shape
+  conjecturals at p = 8.29e-05. The framework therefore exhibits
+  measurable shape selectivity below the population gate's
+  resolution but above the leaderboard's.
+
+The cleanest diagnostic for the boundary of the framework's
+selectivity is the within-tail Mann-Whitney p-value across the two
+pollution variants: 0.98 (no discrimination) under same-distribution
+pollution → 8.29e-05 (strong discrimination) under cross-language
+pollution. The distinguishing axis is whether the polluting
+distribution matches the substrate's own marginal phoneme
+distribution. When it does, conjecturals are statistically
+indistinguishable from real surfaces; when it doesn't, they are
 distinguishable.
 
-**Implications for the rest of this document.** The supportable-
-claims section gains: "the framework's substrate-side leaderboard
-within-tail-discriminates substrate-shape from non-substrate-shape
-when both are mixed in the same pool; this discrimination is below
-the population gate's resolution, but above the leaderboard's." The
-unsupportable-claims section is unchanged in spirit but tightens its
-language: the right-tail leaderboard does not distinguish real from
-*same-distribution* conjectural surfaces (v14), but does distinguish
-real from *cross-language* conjectural surfaces (v15) — so the
-"Aquitanian-shaped surfaces the LM rewards consistently" framing
-remains right, but it's specifically Aquitanian-shaped, not just
-phonotactically-plausible-under-Basque. The remaining-work section
-gains v16 (methodology paper draft) as the natural next ticket and
-removes "cross-language pollution" (now done).
-
-## v14 update — what changed (mg-6b73, 2026-05-05)
-
-The v14 ticket built the **held-out pool-curation test** that the
-v13 coherence verdict pre-registered: a polluted Aquitanian pool
-(153 real Aquitanian roots + 153 phonotactically-matched but
-synthetic conjecturals, with provenance tags) plus matched
-phonotactic controls, all run through the v10 right-tail bayesian
-gate. The pre-registered binary question was: **does the framework
-PASS on a 50%-polluted pool?**
-
-**Verdict: PASS at p = 2.74e-05.** That is essentially identical
-to the clean Aquitanian PASS at p = 3.22e-05 (within ~1.2× of
-each other). The framework's gate is **tolerant** of heavy
-conjectural pollution — it does not depend on every pool entry
-being a real substrate root.
-
-The provenance breakdown of the polluted-pool top-20 surfaces is
-**9 of 20 real (45%) / 11 of 20 conjectural (55%)** — almost
-exactly the 50/50 split of the underlying pool. A real-vs-
-conjectural one-tail Mann-Whitney U gave p = 0.98: the framework
-**cannot distinguish real from conjectural surfaces** in the
-right tail of a mixed pool. Its discriminator is *phonotactic
-shape*, not substrate-vocabulary identity.
-
-**What this means for the v12+v13 readings.** Reading #1
-(substrate-LM-phonotactic kinship at the surface aggregate) is
-*supported*. Reading #2 (curation-sensitivity — the framework
-PASSes only when the substrate pool is uniformly clean) is
-*undermined as a wholesale account*. The v10 PASSes do not depend
-on every entry being valid; they reflect the framework's response
-to phonotactic-shape match between the substrate and the LM.
-
-The Linear-B positive-control failure (mg-4664) therefore needs
-a different explanation than curation-sensitivity. The remaining
-candidates: small N (12 anchors), short anchor surfaces, or a
-Linear-B-specific structural issue. Not pursued in v14.
-
-**Implications for the rest of this document.** The supportable-
-claims section gains: "the framework's PASS is curation-tolerant
-within the same phoneme + length distribution; the gate signal is
-not contingent on uniformly-clean substrate pools." The
-unsupportable-claims section gains: "the right-tail leaderboard
-does not distinguish real from conjectural surfaces — even within
-a mixed pool — so the surfaces in the v10 top-K are not validated
-as substrate vocabulary by the gate, only as phonotactically-
-plausible Aquitanian-shaped surfaces." The remaining-work section
-removes "held-out pool-curation test" (now done) and notes that
-v15 follow-ups (varied pollution levels, cross-language
-pollution) are optional rather than load-bearing.
-
-## v13 update — what changed (mg-c216, 2026-05-05)
-
-The v13 ticket built the **consensus sign-to-phoneme map** + a
-**cross-window coherence test** to distinguish two coupled readings of
-the v12 result: (1) the v10 PASSes are real substrate signal and the
-gate is just over-conservative on mixed-cleanness pools, vs (2) the
-v10 PASSes hold *only because* the substrate pools happened to be
-uniformly clean and the framework cannot tolerate heterogeneous
-curation. The verdict is unambiguous: median per-surface coherence is
-**0.1818 for Aquitanian and 0.1808 for Etruscan** against a 0.6
-acceptance bar. **Both pools fail decisively. Reading #2 is
-supported.** The v10 PASSes are coherent at the surface-aggregate
-level but the underlying sign-to-phoneme mappings are not stable
-across windows — high-frequency Linear A signs receive proposals
-scattered across the entire phoneme alphabet (max-likelihood entropy
-3.6–4.0 bits out of log2(23) ≈ 4.5 bits maximum). The framework
-recovers a real signal at the substrate-phonotactic-kinship level,
-but **does not establish per-sign readings**.
-
-A bundled refined-gate sensitivity check on the Linear-B positive
-control sweeps K ∈ {5, 10, 20}: K=5 cleanly clears p<0.05 (p=0.011),
-K=10 is borderline (p=0.060), K=20 (production) fails (p=0.155). So
-the K=20 gate is somewhat over-conservative on mixed-cleanness pools,
-but adopting a smaller K does not change the v13 verdict — the
-deeper coherence failure is the load-bearing finding.
-
-**Implications for the rest of this document.** The supportable claims
-section below is unchanged at the surface-aggregate level; the
-unsupportable claims section gains "no per-sign sign-to-phoneme map
-is validated" as a now-empirically-confirmed (rather than
-conservatively-stated) finding. The downstream-work section drops
-per-inscription gloss generation (originally v14) and replaces it
-with the held-out pool-curation test that addresses reading #2
-structurally.
-
-## Question
-
-Linear-A is undeciphered, and no single hypothesis is realistic on
-its own. What's tractable is mechanical, falsifiable testing of
-substrate-language hypotheses against the Linear-A corpus, scored
-under a fixed metric and gated against phonotactically-matched
-controls. The project asks: which substrate hypotheses survive
-mechanical right-tail testing, and which inscriptions concentrate
-that signal?
-
-## Method
-
-The pipeline (built up across mg-1c8c through mg-4664) is:
-
-1. **Corpus.** `corpus/` holds 761 Linear-A inscription records
-   ingested from SigLA (CC BY-NC-SA 4.0), normalized to a
-   per-inscription JSON schema with sign tokens, position, and
-   metadata. `corpus_status.md` documents what's in and what's out.
-2. **Substrate pools.** `pools/<name>.yaml` lists candidate root
-   surfaces with phoneme decompositions, attestations, and citations.
-   Three substrate pools: `aquitanian` (Vasconic / pre-IE roots from
-   Trask 1997, Gorrochategui 1984), `etruscan` (Bonfante &
-   Bonfante 2002 + TLE), `toponym` (pre-Greek Aegean toponyms from
-   Beekes 2010). A fourth pool, `linear_b_carryover` (mg-4664), holds
-   20 Ventris-Chadwick 1956 carryover values as a positive control.
-3. **Matched controls.** For each substrate pool, a `control_<name>`
-   pool is generated by sampling random surfaces of matching length
-   distribution from the substrate's marginal phoneme histogram.
-   Deterministic seed; mg-f419 + mg-c2af.
-4. **Hypothesis generation.** `scripts/generate_candidates.py` walks
-   each pool entry against every Linear-A inscription window of
-   matching length, emitting one `candidate_equation.v1` hypothesis
-   per (pool entry × inscription × window) triple. mg-bef2 added a
-   `candidate_signature.v1` shape that pins multiple roots to
-   non-overlapping sub-windows of one inscription window.
-5. **Scoring.** `scripts/run_sweep.py` scores each hypothesis under
-   the `external_phoneme_perplexity_v0` metric (mg-ee18), which
-   feeds the candidate's phoneme stream through a held-out
-   char-bigram language model trained on actual substrate text and
-   reads off the per-record log-likelihood. Substrate pools dispatch
-   to their own LM (`aquitanian → basque`, `etruscan → etruscan`,
-   `linear_b_carryover → mycenaean_greek`); each control pool
-   shares its substrate's LM so the paired-diff cancels the LM
-   choice out of the comparison.
-6. **Aggregation.** `scripts/per_surface_bayesian_rollup.py`
-   (mg-d26d) computes a per-surface Beta-binomial posterior over the
-   sign of `paired_diff = substrate_score − control_score`. Each
-   paired_diff record contributes one binary observation; the
-   posterior is Beta(1+k, 1+n−k) under a Beta(1, 1) prior.
-7. **Acceptance gate.** Right-tail comparison: one-tail Mann-Whitney
-   U on the top-20 substrate posterior means vs the top-20 control
-   posterior means. p < 0.05 with substrate > control passes.
-   Cross-LM negative controls (mg-0f97) and a third-LM check
-   (mg-4664) test substrate-LM specificity by re-routing the same
-   data through other natural-language LMs.
-
-The pipeline is deterministic end-to-end. Re-running the gate against
-the same `experiments.external_phoneme_perplexity_v0.jsonl` and the
-same pool / manifest files produces byte-identical posterior
-leaderboards.
-
-## Validation status by pool
-
-The framework was designed to be falsifiable. Three substrate pools
-plus one positive-control pool have been evaluated under same-LM,
-cross-LM, and third-LM gates. Outcomes:
-
-| pool                       | own-LM gate (v10/mg-d26d) | cross-LM gate (v11/mg-0f97)        | third-LM gate (v12/mg-4664, Mycenaean-Greek) | pool-curation gate (v14/mg-6b73 + v15/mg-7ecb)                              | status                                                                                  |
-|----------------------------|:--------------------------:|:----------------------------------:|:--------------------------------------------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------|
-| aquitanian                 | PASS p=3.22e-05 (basque)   | PASS p=0.0205 (etruscan, 5× weaker) | FAIL p=0.0953                                | (clean — see polluted_aquitanian / greek_polluted_aquitanian)                | substrate-LM-specific: Mediterranean LMs reward Aquitanian, Mycenaean-Greek does not    |
-| polluted_aquitanian        | (n/a — built for v14)      | (n/a)                              | (n/a)                                        | **PASS p=2.74e-05 (basque, 50/50 same-dist polluted)**                       | gate is curation-tolerant; top-20 is 9 real / 11 conjectural (~50/50, within-tail MW p=0.98) |
-| greek_polluted_aquitanian  | (n/a — built for v15)      | (n/a)                              | (n/a)                                        | **PASS p=2.01e-03 (basque, 50/50 cross-language polluted)**                  | partial-discrimination; top-20 is 13 real / 7 conj-greek, within-tail real>conj p=8.3e-05 |
-| etruscan                   | PASS p=5.21e-04 (etruscan) | FAIL p=0.591 (basque)              | FAIL p=0.185                                 | (not run; out of scope for v14/v15)                                          | cleanly substrate-LM-specific; both unrelated LMs collapse the separation              |
-| toponym                    | FAIL p=0.92                | (skipped; v10 already FAIL)        | (skipped)                                    | (n/a)                                                                        | not validated — see "Toponym failure" below                                            |
-| linear_b_carryover         | (positive-control pool)    | (positive-control pool)            | **FAIL p=0.155** (Mycenaean-Greek own-LM)    | (n/a)                                                                        | **POSITIVE CONTROL FAILED** at the population gate — see "What this means" below       |
-
-### Etruscan: cleanly validated
-
-The Etruscan substrate top-20 separates from its matched control
-top-20 at p=5.21e-04 under the Etruscan LM, and the separation
-collapses (p=0.591) under the Basque LM and weakens substantially
-(p=0.185) under the Mycenaean-Greek LM. This is the clean signature
-of substrate-LM specificity: the metric only rewards Etruscan
-substrate when paired with a phonotactic prior trained on real
-Etruscan text. The top-20 surfaces are a coherent semantic stratum:
-religious vocabulary (`aiser` "gods", `thesan` dawn-goddess, `hanthe`
-ritual position, `spureri` sacrifice-for-the-city), praenomina
-(`larth`, `laris`, `thana`, `sech`), function words (`camthi`
-magistrate, `nac` as/when, `matam` above/before, `chimth` at/near),
-time references (`avils` of-years, `zelar` ritual-time, `caitim`
-month-name).
-
-### Aquitanian: validated, but with caveats
-
-Under the Basque LM, Aquitanian substrate top-20 (median posterior
-0.9808) decisively beats its matched control top-20 (median 0.9512;
-p=3.22e-05). Under the Etruscan LM, the separation persists at
-p=0.0205 — 5× weaker than same-LM, but still present. Under the
-Mycenaean-Greek LM, the separation drops below the gate (p=0.0953;
-substrate median 0.9808 vs control median 0.9630; MW U 248.5 vs the
-null expectation of 200).
-
-The pattern across three LMs is informative:
-
-* The Aquitanian PASS is **not** "natural-language LM bias" in the
-  general sense — if it were, all three natural-language LMs
-  would reward Aquitanian roots equally and the separation would
-  persist under the Mycenaean-Greek LM. It does not.
-* The v11 partial cross-LM separation under the Etruscan LM is
-  most likely a **Basque-Etruscan kinship artifact**: both
-  languages share Mediterranean phonotactic features (CV
-  syllables, similar consonant inventories, no consonant clusters
-  in core vocabulary) that the Aquitanian roots match. Mycenaean
-  Greek is also a natural language but has very different
-  phonotactic statistics — heavy CV CVC syllables, different vowel
-  distribution, labiovelars (`q`-class) — and Aquitanian roots
-  no longer dominate the right tail.
-* The v10 Aquitanian PASS is therefore more genuinely
-  substrate-specific than v11's mixed result suggested. The PASS
-  is contingent on the LM having Mediterranean phonotactic
-  statistics close enough to Aquitanian's that the right tail
-  separates from the matched control's random-phonotactic surfaces.
-
-### Toponym: not validated
-
-The toponym pool failed the right-tail gate at p=0.92 under its own
-LM (Basque, used as a substrate-style stand-in since no pre-Greek
-text corpus is available). The substrate side recovers recognizable
-Aegean toponyms (`dikte`, `keos`, `kno`, `minoa`, `tenos`, `iassos`,
-etc., posterior 0.82–0.98), but the matched control surfaces
-(`eoao`, `aathei`, `eta`, `ioonaol`) sit at *higher* posteriors
-(0.89–0.99) — the control sampler's character distribution drifted
-into a region the LM treats as low-perplexity for the wrong reason.
-This is a real failure of the matched-control sampler for the
-toponym pool, not a substrate-side issue. Tightening the sampler is
-out-of-scope for v12 and a candidate next ticket.
-
-### Linear-B carryover: positive control FAILED at the population gate
-
-mg-4664 promoted the 20 curated Linear-B carryover anchors
-(`hypotheses/curated/{anchor,v4_anchor}_*.yaml`) into a first-class
-substrate pool and scored them against `pools/control_linear_b_carryover.yaml`
-under a Mycenaean-Greek LM trained on 5,113 unique Mycenaean-Greek
-word forms from the LiBER corpus (5,638 inscriptions). Linear-B
-carryover values are KNOWN-correct readings under the
-Ventris-Chadwick 1956 syllabogram identification, so the framework
-must recover signal here or it is broken on a known case.
-
-Headline: **the gate fails at p=0.155** (n=12 substrate top vs n=11
-control top). The substrate top-20 median posterior is 0.7500 and
-the control top-20 median is 0.3103, so the directionality is
-correct and the magnitude separation is large. But the population
-MW U does not cross p<0.05.
-
-The right-tail leaderboard explains why:
-
-| rank | side | surface  |   n |   k | posterior | reading                                        |
-|----:|:------|---------|----:|----:|:---------:|:-----------------------------------------------|
-|   1 | sub  | `mate`   |  50 |  50 | 0.9808    | "ma-te" Linear-B carryover                     |
-|   2 | sub  | `tare`   |  50 |  50 | 0.9808    | "ta-re" Linear-B carryover                     |
-|   3 | sub  | `kiro`   |  50 |  45 | 0.8846    | "ki-ro" deficit/owed (Linear-A accountancy)    |
-|   4 | sub  | `kuro`   |  50 |  43 | 0.8462    | "ku-ro" total/sum (Linear-A accountancy)       |
-|   5 | ctrl | `reka`   |  21 |  18 | 0.8261    | random Linear-B-phonotactic control            |
-|   6 | sub  | `kira`   |  50 |  39 | 0.7692    |                                                |
-|   7 | sub  | `tana`   |  50 |  39 | 0.7692    |                                                |
-|   8 | ctrl | `narase` | 100 |  77 | 0.7647    |                                                |
-|  ... | ...  |  ...     | ... | ... |   ...     |                                                |
-|  18 | sub  | `ara`    |  50 |   9 | 0.1923    | "a-ra" conjectural onomastic                  |
-|  19 | sub  | `taina`  |  50 |   9 | 0.1923    | "ta-i-na" conjectural onomastic               |
-|  20 | sub  | `dina`   |  50 |   5 | 0.1154    | "di-na" recurring lexeme                      |
-|  23 | sub  | `dare`   |  50 |   0 | 0.0192    | "da-re" libation-formula continuation         |
-
-The gate failure has a specific shape: the **canonical Linear-A
-administrative terms** (`kuro`, `kiro`, `mate`, `tare`) decisively
-clear their controls (substrate posterior 0.85–0.98), but the
-**conjectural anchors** (`dare`, `dina`, `ara`, `taina`,
-`kumina`) drag the substrate distribution down because they don't
-separate from random Mycenaean-Greek phonotactic strings. The
-population MW U on top-K substrate vs top-K control therefore
-straddles p<0.05 because top-K of each side includes both the
-clean wins (`mate`, `kuro`, `kiro`) and the bad anchors (`dare` at
-0.02 — substrate loses 50/50 paired records).
-
-### What this means for v10 / v11
-
-The Linear-B positive control fails the population gate but
-*succeeds* on the well-attested subset. Two interpretations are
-compatible with the data:
-
-1. **The gate is too conservative for mixed-cleanness pools.** The
-   v10 / v11 PASSes for Aquitanian and Etruscan are genuine
-   substrate signal that survives the gate by virtue of having
-   uniformly clean substrate surfaces. The positive-control failure
-   is then specifically a function of the carryover anchor pool
-   containing both well-attested and conjectural readings, not a
-   defect of the framework. If true, this would mean the v10
-   Aquitanian / Etruscan PASSes can be trusted, but a stricter
-   gate (e.g. require top-K substrate to *uniformly* beat top-K
-   control by some margin, rather than only beat them in
-   median-of-rank-pairs) would be more honest about heterogeneous
-   substrate cleanness.
-2. **The framework recovers signal only on substrate sets where the
-   majority of entries are correct.** Under this reading, the v10
-   PASSes for Aquitanian and Etruscan reflect that those pool
-   designs (Trask 1997 core vocabulary; Bonfante & Bonfante's well-
-   attested forms) happen to be uniformly clean. The framework
-   would not recover signal on a pool where, say, half the entries
-   are wrong — and we can't independently certify that the
-   Aquitanian / Etruscan pools meet that bar without a domain
-   expert. The Linear-B positive control's failure is then a
-   warning that the gate is sensitive to substrate-pool curation,
-   not a free certification.
-
-We cannot disambiguate these two readings from this ticket's data.
-Both are consistent with what we observe. **The conservative
-interpretation is reading #2**: ship the v10 Aquitanian and Etruscan
-PASSes as "promising-but-validated-only-conditionally-on-pool-curation"
-rather than as cleanly-publishable claims. Domain expert review of
-the top-K substrate surfaces is the missing ingredient.
-
-A refined gate that handles heterogeneous substrate cleanness is a
-candidate next ticket. It would not require a new metric — only a
-new aggregation rule.
-
-### v13 cross-window coherence test (mg-c216) — adjudicates the v12 fork
-
-The v13 ticket addressed the v12 fork directly with a coherence test:
-for the v10 Aquitanian + Etruscan top-20 substrate surfaces, do the
-sign-to-phoneme mappings *agree* across the many positive-paired-diff
-candidate equations, or are they incoherent across windows? The
-falsifiable cases were:
-
-* Coherence ≥ 0.6 on both pools → reading #1 (gate-too-conservative);
-  v10 PASSes reflect coherent underlying mappings; gloss-shape work
-  becomes a clean follow-up.
-* Coherence < 0.6 on both pools → reading #2 (curation-sensitivity);
-  v10 PASSes reflect noise on different sign bases; the next ticket
-  reframes toward held-out pool-curation tests.
-* Mixed verdict → cleaner pool advances; noisier pool needs more
-  validation.
-
-**Result:**
-
-| pool       | n_surfaces | n_with_coherence | median coherence | min     | max     | gate (≥0.60) |
-|:-----------|:----------:|:----------------:|:----------------:|:-------:|:-------:|:------------:|
-| aquitanian |     20     |        20        |     0.1818       | 0.1805  | 0.1864  |    **FAIL**  |
-| etruscan   |     20     |        20        |     0.1808       | 0.1739  | 0.1867  |    **FAIL**  |
-
-Both pools fail decisively. The values cluster tightly in [0.17, 0.19]
-— nowhere near the 0.6 acceptance bar, nowhere near even the
-"close-but-no-cigar" 0.5–0.55 region. **Reading #2 is supported.**
-v10 PASSes do not reflect stable per-sign readings; they reflect
-substrate-phonotactic kinship that the metric rewards broadly.
-
-The companion **refined-gate sensitivity check** on the Linear-B
-positive control:
-
-| K  | n_substrate_top | n_control_top | median substrate | median control | MW U  | p (one-tail) |
-|---:|:---------------:|:-------------:|:----------------:|:--------------:|:-----:|:------------:|
-|  5 |       5         |      5        |     0.8846       |    0.5772      | 24.0  |  **0.0106**  |
-| 10 |      10         |     10        |     0.7692       |    0.3552      | 71.0  |   0.0603     |
-| 20 |      12         |     11        |     0.7500       |    0.3103      | 83.0  |   0.1547     |
-
-K=5 cleanly clears p<0.05 (the K=20 production gate is somewhat
-over-conservative on mixed-cleanness pools), but this is a
-surface-aggregate fact and does not rescue the deeper coherence
-failure. Full breakdown in `docs/findings.md` mg-c216 entry and
-`results/consensus_sign_phoneme_map.md`.
-
-## Top-K substrate surfaces by pool (publication-readable)
-
-The leaderboards below are the v10 (mg-d26d) bayesian posterior
-top-K, ranked by raw posterior_mean. They reflect the substrate
-beating its phonotactically-matched control in the right tail, as
-of v10. Under v11 / v12 cross-LM tests, these orderings are
-substantially preserved (the substrate top-20 mostly stays in the
-top-20 across LMs even when the gate stops clearing) — so reading
-this as "the surfaces most consistently rewarded by the metric on
-the substrate side" remains valid.
-
-### Aquitanian top-20 (under Basque LM; see `results/rollup.bayesian_posterior.aquitanian.md`)
-
-| rank | surface  | n | k | posterior_mean | semantic field           |
-|----:|:----------|--:|--:|:--------------:|:-------------------------|
-|   1 | `aitz`    | 50 | 50 | 0.9808 | nature: rock              |
-|   2 | `eki`     | 50 | 50 | 0.9808 | nature: sun               |
-|   3 | `argi`    | 50 | 50 | 0.9808 | nature: light             |
-|   4 | `itsaso`  | 50 | 50 | 0.9808 | nature: sea               |
-|   5 | `zelai`   | 50 | 50 | 0.9808 | nature: meadow            |
-|   6 | `oin`     | 50 | 50 | 0.9808 | body: foot                |
-|   7 | `bihotz`  | 50 | 50 | 0.9808 | body: heart               |
-|   8 | `beltz`   | 50 | 50 | 0.9808 | descriptor: black         |
-|   9 | `ona`     | 50 | 50 | 0.9808 | descriptor: good          |
-|  10 | `gaitz`   | 50 | 50 | 0.9808 | descriptor: ill           |
-|  11 | `hau`     | 50 | 50 | 0.9808 | function: this            |
-|  12 | `nahi`    | 50 | 50 | 0.9808 | function: desire          |
-|  13 | `entzun`  | 50 | 50 | 0.9808 | function: hear            |
-|  14 | `hanna`   | 50 | 50 | 0.9808 | kinship: brother          |
-|  15 | `egun`    | 50 | 50 | 0.9808 | time: day                 |
-|  16 | `ezti`    | 50 | 50 | 0.9808 | food: honey               |
-|  17 | `ate`     | 50 | 50 | 0.9808 | dwelling: door            |
-|  18 | `hesi`    | 50 | 50 | 0.9808 | place: fence              |
-|  19 | `zortzi`  | 50 | 50 | 0.9808 | number: eight             |
-|  20 | `ako`     | 50 | 50 | 0.9808 | morphology: suffix        |
-
-This reads like a Swadesh-list cross-section of inherited core
-Basque vocabulary across the standard semantic families. No semantic
-family dominates.
-
-### Etruscan top-20 (under Etruscan LM; see `results/rollup.bayesian_posterior.etruscan.md`)
-
-| rank | surface       | n | k | posterior_mean | gloss                                |
-|----:|:---------------|--:|--:|:--------------:|:-------------------------------------|
-|   1 | `larth`        | 50 | 50 | 0.9808 | praenomen "Larth"                       |
-|   2 | `aiser`        | 50 | 50 | 0.9808 | "gods"                                  |
-|   3 | `matam`        | 50 | 50 | 0.9808 | "above / before"                        |
-|   4 | `avils`        | 50 | 50 | 0.9808 | "of years"                              |
-|   5 | `camthi`       | 50 | 50 | 0.9808 | magistracy                              |
-|   6 | `chimth`       | 50 | 50 | 0.9808 | "at / near"                             |
-|   7 | `hanthe`       | 50 | 50 | 0.9808 | ritual position                         |
-|   8 | `laris`        | 50 | 50 | 0.9808 | praenomen "Laris"                       |
-|   9 | `nac`          | 50 | 50 | 0.9808 | "as / when"                             |
-|  10 | `sech`         | 50 | 50 | 0.9808 | "daughter"                              |
-|  11 | `thana`        | 50 | 50 | 0.9808 | praenomen "Thana"                       |
-|  12 | `zelar`        | 50 | 50 | 0.9808 | ritual time-reference                   |
-|  13 | `caitim`       | 50 | 50 | 0.9808 | month-name                              |
-|  14 | `thesan`       | 50 | 50 | 0.9808 | dawn-goddess                            |
-|  15 | `spureri`      | 50 | 50 | 0.9808 | "sacrifice for the city"                |
-|  16 | `thanchvil`    | 50 | 50 | 0.9808 | praenomen "Thanchvil"                   |
-|  17 | `suthi`        | 50 | 50 | 0.9808 | "tomb / burial"                         |
-|  18 | `mach`         | 50 | 50 | 0.9808 | numeral "five"                          |
-|  19 | `arnth`        | 50 | 50 | 0.9808 | praenomen "Arnth"                       |
-|  20 | `sath`         | 50 | 50 | 0.9808 | (unattested gloss; recurring stem)      |
-
-Religious vocabulary + common praenomina + function words + time
-references — exactly the genre profile of the Etruscan votive /
-funerary corpus the pool was sourced from.
-
-### Toponym top-20 (under Basque LM; see `results/rollup.bayesian_posterior.toponym.md`)
-
-The substrate top-20 is geographically coherent (Aegean + Anatolian
-+ Cretan toponyms in proportion: `dikte`, `keos`, `kno`, `minoa`,
-`tenos`, `iassos`, `lemnos`, `kuzikos`, `melitos`, `tulisos`,
-`melos`, `aspendos`, `kalumnos`, `zakuntos`, `lukia`, `mukenai`,
-`lykabettos`, `itanos`, `halikarnassos`, `poikilassos`), but does
-not clear the gate against its matched control because of the
-control-sampler issue documented above.
-
-### Linear-B carryover top-12 (under Mycenaean-Greek LM; see `results/rollup.bayesian_posterior.linear_b_carryover.md`)
-
-| rank | surface    | n | k | posterior_mean | reading                                  |
-|----:|:------------|--:|--:|:--------------:|:-----------------------------------------|
-|   1 | `mate`      | 50 | 50 | 0.9808 | "ma-te"                                     |
-|   2 | `tare`      | 50 | 50 | 0.9808 | "ta-re"                                     |
-|   3 | `kiro`      | 50 | 45 | 0.8846 | "ki-ro" deficit/owed (Linear-A accountancy) |
-|   4 | `kuro`      | 50 | 43 | 0.8462 | "ku-ro" total/sum (Linear-A accountancy)    |
-|   5 | `kira`      | 50 | 39 | 0.7692 | "ki-ra"                                     |
-|   6 | `tana`      | 50 | 39 | 0.7692 | "ta-na"                                     |
-|   7 | `karu`      | 50 | 37 | 0.7308 | "ka-ru"                                     |
-|   8 | `kumina`    | 50 | 14 | 0.2885 | "ku-mi-na"                                  |
-|   9 | `ara`       | 50 |  9 | 0.1923 | "a-ra" conjectural onomastic               |
-|  10 | `taina`     | 50 |  9 | 0.1923 | "ta-i-na" conjectural onomastic            |
-|  11 | `dina`      | 50 |  5 | 0.1154 | "di-na" recurring lexeme                   |
-|  12 | `dare`      | 50 |  0 | 0.0192 | "da-re" libation-formula continuation      |
-
-The top-7 is a clean win for the framework: well-attested Linear-B
-carryover values cleanly beat random Mycenaean-Greek-phonotactic
-controls. The bottom-5 pulls the population gate below p<0.05 —
-those anchors don't separate. Specifically, `dare` (which the
-curator flagged as "libation-formula continuation, da-ta-re
-paradigm") loses 50/50 paired records.
-
-## Consensus sign-to-phoneme map (v13, mg-c216)
-
-For each Linear A sign s with at least 10 positive-paired-diff
-proposals from v10-top-20 substrate equations (across both Aquitanian
-+ Etruscan pools), the consensus map reports the histogram of
-proposed phonemes plus the modal phoneme + smoothed Dirichlet-
-multinomial posterior + max-likelihood Shannon entropy. 60 of 61
-candidate signs cleared the n_min threshold; **every consensus
-entry has entropy ≥ 2.05 bits** out of log2(23) ≈ 4.52 maximum, and
-**no sign reaches modal posterior > 0.27**. The five lowest-entropy
-signs (the most-coherent end of the distribution):
-
-| sign  | n_proposals | modal | modal_posterior | entropy_bits | n contributing v10 surfaces |
-|:------|:-----------:|:-----:|:---------------:|:------------:|:---------------------------:|
-| `A718`|     12      |  `i`  |     0.2340      |    2.055     |             12              |
-| `AB13`|     26      |  `i`  |     0.2267      |    2.998     |             26              |
-| `A306`|     14      |  `i`  |     0.1373      |    3.039     |             14              |
-| `AB66`|     15      |  `i`  |     0.1321      |    3.057     |             14              |
-| `A323`|     14      |  `a`  |     0.1765      |    3.093     |             14              |
-
-For comparison, the *high-frequency* signs are uniformly diffuse:
-AB08 (464 proposals, modal `a` at posterior 0.167, entropy 3.925
-bits, top-3 alternatives e/h/z); AB37 (227 proposals, modal `i` at
-posterior 0.187, entropy 3.713 bits, alternatives a/n/th); AB28 (225
-proposals, modal `i` at posterior 0.159, entropy 3.788 bits,
-alternatives a/n/th). The contributing-surfaces lists for those
-high-frequency signs include essentially the entire v10 top-20 (38+
-surfaces each) — the structural reason consensus is diffuse: the
-metric rewards substrate phonotactic surfaces broadly rather than
-specific sign-to-phoneme assignments. Different substrate roots
-that align with the same Linear A window propose different sign
-mappings, and all of them score positive paired_diffs.
-
-Full table at `results/consensus_sign_phoneme_map.md`.
-
-## Per-inscription concentration
-
-mg-0f97 mapped, for each Linear-A inscription, how many of the v10
-top-20 substrate surfaces have positive paired-diff records on it.
-Two clusters surfaced:
-
-* **Cluster A (Etruscan-validated, accountancy + votive).** Top-density
-  inscriptions: `HT Wc 3010`, `HT Wc 3017a`, `KH 60`, `KN Zb 5`,
-  `HT 90`, `KH 10`, `KH 5`, `HT 127a`, `HT 12`, `ARKH 6`. Each
-  has ~14 v10 top-20 surfaces with positive evidence on it,
-  dominated by the Etruscan religious / praenomen / time-reference
-  cluster (`aiser`, `avils`, `bihotz`, `camthi`, `entzun`, `hanna`,
-  `hanthe`, `itsaso`, `laris`, `matam`, `thesan`, `zelai`, `zelar`,
-  `zortzi`, plus `caitim` / `thanchvil` / `spureri` on the Knossos
-  votive subset). v12 framed these as the publishable per-inscription
-  candidates under the conservative reading. **v13 downgrades this**:
-  the consensus map shows the underlying sign-to-phoneme mappings on
-  these inscriptions are not coherent across windows, so "this
-  inscription contains *aiser*" is not a claim the data supports —
-  only "this inscription is enriched in v10-top-20 substrate
-  *surface-aggregate* signal" is.
-* **Cluster B (Aquitanian-mixed, longer accountancy).** `GO Wc 1a`,
-  `ARKH 5`, `HT 104`, `HT 103`, `ARKH 2`, etc. show 23–38 distinct
-  top-20 surfaces concentrated, with the Aquitanian side
-  (`aitz`, `ako`, `ate`, `eki`, `hau`, `oin`, `ona`, `argi`, `nahi`)
-  mixing in alongside the Etruscan side. v12 flagged these as
-  inheriting the Aquitanian validation caveat. **v13 makes them
-  unsuitable for any reading-shape claim** for the same reason as
-  cluster A — without coherent per-sign mappings, multi-surface
-  density at an inscription is not evidence of a readable text.
-
-Full per-inscription tables in `results/rollup.right_tail_inscription_concentration.md`.
-
-## Supportable claims
-
-After v14 + v15, "subject to the conservative reading of curation-
-sensitivity" is no longer the binding caveat: v14's same-distribution
-polluted-pool PASS shows the framework's PASS signal does not depend
-on uniformly-clean substrate pools, and v15's cross-language polluted-
-pool result narrows the boundary further. The supportable-claims list
-below is therefore *less* hedged on curation than it was after
-v13, but *more* hedged on the per-surface meaning of the right-
-tail leaderboard.
-
-* **The framework's headline gate is curation-tolerant within the
-  same phoneme + length distribution AND is partially shape-
-  selective across distributions.** v14: the same-distribution
-  polluted Aquitanian pool (50% conjectural) PASSes at p = 2.74e-05,
-  essentially matching the clean pool's p = 3.22e-05. (mg-6b73) v15:
-  the *cross-language* polluted Aquitanian pool (50% Greek-shape
-  conjecturals) also PASSes — but ~70× weaker, at p = 2.01e-03 — and
-  within the right tail real Aquitanian dominates Greek-shape
-  conjecturals at p = 8.29e-05. (mg-7ecb) The headline gate clears
-  for any pool with non-trivial char-bigram overlap with the LM,
-  but within the right tail the framework partially respects
-  substrate-distribution shape.
-* **The right-tail leaderboard within-tail-discriminates substrate-
-  shape from non-substrate-shape when both are mixed in the same
-  pool.** v14 showed no within-tail discrimination on same-Aquitanian-
-  shape conjecturals (real-vs-conjectural MW p = 0.98). v15 showed
-  strong within-tail discrimination on Greek-shape conjecturals
-  (real-vs-conjectural-greek MW p = 8.29e-05). The distinguishing
-  axis is whether the polluting distribution matches the substrate's
-  own; when it doesn't, the leaderboard partially recovers signal
-  even though the population gate doesn't break. (mg-7ecb)
-* **The metric (`external_phoneme_perplexity_v0`) discriminates
-  substrate from random-phonotactic controls when the substrate
-  surfaces are well-attested.** The top of every substrate pool's
-  bayesian posterior is dominated by surfaces drawn from canonical
-  vocabulary lists; the bottom is dominated by less-attested
-  conjectural readings. This is mechanically demonstrable.
-* **Substrate-LM specificity holds for Etruscan.** The Etruscan
-  top-20 separation collapses cleanly when re-routed through
-  unrelated LMs (Basque p=0.591, Mycenaean-Greek p=0.185). This
-  is what we expect of a real substrate signal: the LM that knows
-  the substrate's phonotactics is the one that distinguishes it.
-* **Substrate-LM specificity holds for Aquitanian when judged
-  against truly unrelated LMs.** The v11 partial separation under
-  Etruscan LM (p=0.0205) is best understood as a Mediterranean
-  phonotactic-kinship artifact, not as evidence against
-  substrate-specificity. Under Mycenaean-Greek (genuinely unrelated
-  natural-language LM), Aquitanian no longer beats its control.
-* **A defined set of Linear-A inscriptions concentrate substrate
-  *surface-aggregate* evidence.** Cluster A in particular (Knossos
-  Zc/Zf, HT Wc / Zb, Khania `KH 60` / `KH 10` / `KH 5`, HT Wc
-  commodity records) is enriched in the Etruscan-validated top-20
-  surfaces' positive paired_diff records. v13's coherence verdict
-  rules out claiming these inscriptions are *readable* under the v10
-  surface set, but the concentration of substrate-aggregate signal
-  on these particular inscriptions is itself a reproducible
-  observation. Domain-expert review of these tablets is still the
-  natural follow-up; what it can establish is now narrower.
-* **The corpus is well-curated and the pipeline is deterministic.**
-  Re-running any rollup on the same result stream + manifests
-  produces byte-identical output. No RNG anywhere in the scoring
-  path.
-
-## Unsupportable claims
-
-* **"The right-tail substrate surfaces are validated as substrate
-  vocabulary."** The v14 polluted-pool test rules this out: the
-  framework cannot distinguish real Aquitanian roots from
-  *same-distribution* (Aquitanian-shape) phonotactically-matched
-  conjectural surfaces in the same pool's right tail (top-20 split
-  9 real / 11 conjectural; real-vs-conjectural one-tail MW p = 0.98,
-  mg-6b73). The right tail is a *phonotactic-shape* response, not a
-  substrate-vocabulary validation. Surfaces in the v10 top-K should
-  be read as "Aquitanian-shaped surfaces the LM rewards consistently
-  in the Linear-A corpus" — not as "real Aquitanian roots the
-  framework has identified in Linear-A." v15 partially refines this:
-  the framework *does* discriminate real from *cross-language*
-  conjectural surfaces (real-vs-conjectural-greek p = 8.29e-05,
-  mg-7ecb), so the response is specifically Aquitanian-shaped, not
-  just any-shape-the-Basque-LM-likes. But the per-surface
-  vocabulary-validation claim remains unsupported.
-* **"Linear-A is Etruscan / Aquitanian / pre-Greek"** is *not*
-  supported. The framework tests whether substrate roots beat
-  matched controls in the right tail under a phoneme LM; it does
-  not establish lexical identity between Linear-A signs and
+### 4.2 What the framework does not detect
+
+The framework fails at the per-sign decipherment level, and the
+failure is empirical, not merely conservative:
+
+- **No stable sign-to-phoneme map** (mg-c216). The cross-window
+  coherence gate fails decisively on both v10-validated pools
+  (median 0.18 versus a 0.6 bar). High-frequency Linear A signs
+  receive proposals scattered across the entire phoneme alphabet
+  (entropy 3.7–3.9 bits out of 4.5 bits maximum, no sign reaching
+  modal posterior > 0.27). The proximate structural reason: the
+  metric rewards substrate-phonotactic match broadly, so different
+  substrate roots aligning with the same Linear A window propose
+  different sign mappings and all of them score positive
+  paired-differences.
+- **No surface-level vocabulary identification within mixed pools**
+  (mg-6b73). The same-distribution polluted gate cannot distinguish
+  real Aquitanian roots from synthetic phonotactically-matched
+  conjecturals (within-tail Mann-Whitney p = 0.98). Surfaces in the
+  v10 top-K should be read as "Aquitanian-shaped surfaces the LM
+  rewards consistently in the Linear A corpus" — not as "real
+  Aquitanian roots the framework has identified in Linear A."
+
+These two failures are coupled: without a stable per-sign
+sign-to-phoneme map, "the framework identified surface X" cannot be
+evidence about Linear A's specific lexical content; it can only be
+evidence that surface X's phonotactic shape matches the Linear A
+corpus's bigram statistics under the substrate's LM.
+
+### 4.3 Why the gate PASSes under any same-distribution pollution
+
+The clean Aquitanian gate's PASS is a population-level statement
+about the right tail: top-K substrate surfaces beat top-K matched-
+control surfaces. With the cap-per-entry = 50 generator setting,
+many substrate surfaces saturate at posterior = 0.9808 (k = 50,
+n = 50). When 153 conjecturals are added to the pool at the same
+phoneme + length distribution, the conjecturals also generate
+candidates that saturate at 0.9808; the new mass goes into the
+substrate side of the gate without changing the substrate-side
+median. The control side rises slightly because the matched-control
+sampler's marginal distribution shifts modestly. Net: the
+substrate-versus-control gap shrinks but stays positive, the gate
+PASSes.
+
+Under cross-language pollution (mg-7ecb), Greek-shape conjecturals
+also saturate at 0.9808 *if* their bigrams happen to be Basque-LM-
+favourable (the seven that landed in the top-20). The other Greek-
+shape conjecturals carry distinctive features (`j-`, `w-`, geminate
+clusters) that the Basque LM penalizes, so they don't saturate, and
+the gate weakens — but not to FAIL.
+
+### 4.4 Why per-sign coherence fails despite surface-aggregate PASS
+
+The v10 PASS is a surface-aggregate statement about which substrate
+roots the LM rewards consistently. That is mechanically distinct
+from a *consistent* sign-to-phoneme assignment: the metric scores
+the partial mapping perplexity of the substrate root's phoneme
+stream against the sign window, and rewards configurations whose
+character bigrams match the LM's bigram distribution. Many
+substrate roots achieve that without agreeing on what any specific
+Linear A sign should be. The high-frequency Linear A sign AB08, for
+instance, is variously proposed as `a`, `e`, `h`, `z`, etc., by
+different substrate surfaces' equations — and each of those
+proposals contributes positive paired-difference evidence to its
+own substrate surface. Surface-aggregate PASS and per-sign
+incoherence are therefore both honest reports of what the metric
+does at its respective resolution scales.
+
+### 4.5 Implications for past Linear A decipherment claims
+
+The methodology paper's central methodological warning is that
+qualitative-impression ("this looks like Aquitanian") evidence
+is **structurally equivalent** to the framework's surface-aggregate
+PASS — and the surface-aggregate PASS, by mg-6b73, cannot
+distinguish real substrate roots from phonotactically-matched
+conjecturals. A past decipherment claim of the form "Linear A
+inscription X reads Y in substrate language L" is no stronger than
+the framework's surface-aggregate signal *unless* it presents
+additional cross-window-coherence evidence at the per-sign level —
+evidence that, on this corpus, this framework cannot recover.
+Discipline of mechanical scoring against phonotactically-matched
+controls is the protection against the motivated-reasoning failure
+modes that have plagued Linear A studies historically.
+
+---
+
+## 5. Limitations
+
+### 5.1 Out-of-scope by construction
+
+- **Per-sign decipherment is not supported by the data.** The
+  cross-window coherence gate fails decisively (§3.7); no specific
+  sign-to-phoneme correspondence has been validated.
+- **No specific Linear A inscription has a validated reading.** The
+  per-inscription concentration patterns (§3.9) show which tablets
+  respond strongly to the substrate-aggregate signal but do not
+  adjudicate readability of any specific tablet under any specific
+  substrate.
+- **No claim of "Linear A is X" is supported.** The framework tests
+  whether substrate roots beat matched controls in the right tail;
+  it does not establish lexical identity between Linear A signs and
   substrate phonemes. The mechanical signal is consistent with
   multiple causal stories.
-* **A specific sign-to-phoneme mapping for Linear-A.** No such
-  mapping has been validated, and v13's consensus map (mg-c216)
-  established this *empirically* rather than only conservatively:
-  the modal phoneme proposed for every consensus-eligible Linear A
-  sign by the v10 top-20 substrate equations is far from
-  unanimous (entropy ≥ 2.05 bits, modal posterior ≤ 0.27). The
-  candidate-equation hypotheses pin a substrate root to a specific
-  window in a specific inscription, but the metric scores the
-  *partial mapping perplexity*, not the equation itself. The right
-  tail tells us which substrate surfaces survive the test; it does
-  not tell us the equation must be correct, and it does not — per
-  v13 — induce stable per-sign readings. See
-  `results/consensus_sign_phoneme_map.md`.
-* **A reading of any specific Linear-A inscription.** Cluster A is
-  enriched in Etruscan-validated top-20 surfaces, but the
-  framework does not adjudicate whether `HT Wc 3010` actually
-  contains `aiser` etc. — it adjudicates whether `aiser` is
-  consistently rewarded over its matched controls when scored
-  against the Linear-A corpus as a whole. v13's coherence map
-  empirically confirms this: even on inscriptions where many
-  v10-top-20 surfaces show positive paired_diff records, the
-  underlying sign-to-phoneme mappings disagree, so the inscription
-  is not "readable" under the v10 substrate set in any operational
-  sense.
-* **The toponym substrate hypothesis** — the gate failed and the
-  control-sampler issue means we can't even report this null
-  cleanly. No conclusion either way until the sampler is fixed.
-* **Conjectural Linear-B carryover values** (`dare`, `dina`,
-  `ara`, `taina`). The positive-control test rejects these — they
-  do not separate from random Mycenaean-Greek-phonotactic
-  controls. Whether this means the conjectural readings are wrong
-  or that the framework only recognizes well-attested values is an
-  open question.
+- **Per-inscription gloss generation was queued (originally v14) and
+  abandoned.** The mg-c216 cross-window coherence verdict ruled out
+  per-inscription reading-shape claims. Future generations of this
+  framework that produce gloss output will need to clear the
+  coherence bar first.
 
-## Remaining work for full publication
+### 5.2 Known unresolved issues
 
-In rough priority order, *as updated by the v14 + v15 verdicts*:
+- **Toponym pool: control-sampler issue.** The toponym substrate
+  pool's matched-control sampler drifted into a low-LM-perplexity
+  corner (`eoao`, `aathei`, etc.) that the Basque LM accidentally
+  rewards. The substrate side recovers recognizable Aegean toponyms
+  but the gate fails on the control side, not the substrate side.
+  Tightening the sampler is a candidate cleanup ticket; deferred.
+- **Linear-B positive control: K=20 production gate is over-
+  conservative on mixed-cleanness pools.** The same pool clears at
+  K=5 (p = 0.0106) but fails at K=20 (p = 0.155). Adopting a less-
+  conservative gate would not change the v13 coherence verdict, so
+  this is a methodology-paper observation rather than a load-bearing
+  cleanup.
+- **Per-window deduplication.** The 50-window cap-per-entry generator
+  setting introduces minor per-(sign-set, inscription) duplication
+  at rank 9–17 of some leaderboards (mg-f419 follow-up). Small
+  effect; non-blocking.
+- **No second-corpus cross-validation.** All scoring is against the
+  761-record SigLA snapshot. A GORILA / Younger 2000 ingest would
+  add numerals and line-break information not in SigLA, expanding
+  the corpus by ~10–15%; it has not been run.
 
-1. **v16: methodology paper draft.** v14 + v15 together have
-   solidified the manuscript-shape claim into the partial-
-   discrimination refinement above; v16 polishes that narrative
-   for external readers. Out of scope for v15 itself; the natural
-   next ticket.
-2. **Domain-expert review of top-K Etruscan and Aquitanian
-   surfaces** — is the right-tail leaderboard a reasonable lexical
-   subset, or are we surfacing morphological artifacts? After v14 +
-   v15 this is the load-bearing missing piece: the framework
-   *partially* distinguishes real surfaces from cross-language
-   conjecturals but does not distinguish real from same-distribution
-   conjecturals. The only way to convert "the right tail is
-   phonotactically Aquitanian-shape-likely" into "the right tail is
-   real Aquitanian vocabulary present in Linear-A" is independent
-   expert review. Not a polecat ticket.
-3. **Refined acceptance gate that is robust to mixed-cleanness
-   pools.** The Linear-B positive control's failure-by-long-tail
-   is a methodological signal that v13's K-sweep partially
-   confirmed (K=5 cleanly clears, K=20 fails). A stricter rule
-   (e.g. require top-N% of substrate to uniformly beat top-N% of
-   control by some margin) would more honestly handle pools with
-   heterogeneous curation. This is an analysis-layer ticket, no
-   new metric. Lower priority now that v13 has shown the deeper
-   coherence problem is the binding constraint.
-3. **Tighter matched-control sampler for the toponym pool.** The
-   v10 toponym FAIL is on the control side — the random
-   phoneme-frequency sampler's drift into a low-LM-density corner
-   that the LM accidentally rewards. The substrate side is
-   internally coherent (recognizable Aegean toponyms). Fixing the
-   sampler may turn this into a cleaner null or a fourth PASS.
-4. **Per-window deduplication** (mg-f419 follow-up) — duplicate
-   scoring of the same window under multiple roots inflates n
-   without inflating evidence. Small effect; not blocking anything.
-5. **GORILA ingest** — adds numerals and line-break information not
-   in SigLA, would expand the corpus by ~10–15%.
-6. **Phoenician / Sumerian / Hattic / other substrate pools** —
-   the framework can in principle test any substrate hypothesis
-   with attested vocabulary and a phoneme LM. None of these is on
-   the critical path for the existing pools' validation.
-7. **(Optional) Pollution-level sweep.** v15 ran the cross-language
-   pollution test that v14 deferred; finer-grained same-distribution
-   pollution sweeps (10% / 25% / 75%) would tell us whether the
-   gate has a sharp threshold or smooth gradient under same-
-   distribution noise. Not load-bearing for the manuscript shape
-   after v15.
-8. **(Optional) Cross-language gates with other LMs.** v15 used
-   Mycenaean-Greek as the polluting LM. The same test under Etruscan
-   or Linear-B-as-substrate could illuminate which Mediterranean
-   phonotactic features the gate is responding to. Defer pending
-   v16 manuscript priorities.
-9. **Manuscript draft.** Subsumed by v16 above.
+### 5.3 Out-of-scope for this methodology characterization
+
+Out of scope for the methodology paper but on the project's
+follow-up surface:
+
+- **Pollution-level sweep** (10% / 25% / 75%) — would tell us whether
+  the gate has a sharp threshold or smooth gradient under same-
+  distribution noise. Not load-bearing for the manuscript shape
+  after v15's binary cross-language test.
+- **Cross-language gates with other LMs** (Etruscan-shape pollution,
+  Linear-B-shape pollution) — would localize which Mediterranean
+  phonotactic features the gate is responding to.
+- **Additional substrate pools** (Phoenician, Sumerian, Hattic) —
+  the framework can in principle test any substrate hypothesis with
+  attested vocabulary and a phoneme LM, but v15 made clear the
+  framework does not produce decipherment-grade per-sign mappings on
+  any substrate-language test it has run; expanding to more pools
+  does not address the methodological limit.
+- **Domain-expert review of top-K Aquitanian and Etruscan surfaces.**
+  The only way to convert "the right tail is Aquitanian-shape-likely"
+  into "the right tail is real Aquitanian vocabulary present in
+  Linear A" is independent expert review by an Aegean-syllabary
+  specialist.
+
+---
+
+## 6. Conclusion
+
+A mechanical, falsifiable framework for testing substrate-language
+hypotheses against Linear A — paired-difference scoring under
+external phoneme language models with phonotactically-matched
+controls, aggregated as per-surface Beta-binomial posteriors and
+gated against a right-tail Mann-Whitney U test — detects substrate-
+LM-phonotactic kinship at the population level for two of three
+substrate hypotheses (Aquitanian under the Basque LM at p = 3.22e-05;
+Etruscan under the Etruscan LM at p = 5.21e-04), under negative
+controls that confirm substrate-LM specificity. The framework also
+exhibits partial within-tail shape selectivity: under cross-language
+pollution it discriminates real Aquitanian surfaces from Greek-shape
+conjecturals at p = 8.29e-05.
+
+The framework does **not** support per-sign decipherment claims.
+A consensus sign-to-phoneme map built from the v10 top-20 substrate
+surfaces fails a 0.6 cross-window-coherence bar decisively (median
+0.18 on both validated pools). Same-distribution pollution tests
+show the framework cannot distinguish real Aquitanian roots from
+phonotactically-matched conjecturals within a mixed pool.
+
+The supportable claim is therefore strictly narrower than past
+decipherment-shape claims for Linear A: the framework identifies
+which substrate phonotactic profiles produce population-level signal
+in the SigLA corpus, and on which specific inscriptions that signal
+concentrates, but does not validate per-sign readings or per-tablet
+glosses. The discipline of mechanical scoring against phonotactically-
+matched controls is what distinguishes the framework's claim from
+the qualitative-impression claims that have plagued past Linear A
+work; the framework's null findings (no per-sign coherence, no
+real-vs-conjectural surface discrimination) are themselves
+contributions to the methodological literature on undeciphered-
+script analysis.
+
+---
+
+## Appendix A: result-file index
+
+Every quantitative claim in this document maps to one or more
+committed artefacts under `results/`:
+
+| claim source | committed file |
+|:--|:--|
+| v10 own-LM gate (Aquitanian, Etruscan, Toponym) | `rollup.bayesian_posterior.{aquitanian,etruscan,toponym}.md` |
+| v11 cross-LM gate | `rollup.bayesian_posterior.{aquitanian_under_etruscan_lm,etruscan_under_basque_lm}.md` |
+| v12 third-LM (Mycenaean Greek) gate | `rollup.bayesian_posterior.{aquitanian,etruscan}.under_mycenaean_greek_lm.md` |
+| v12 Linear-B positive control | `rollup.bayesian_posterior.linear_b_carryover.md` |
+| v13 consensus sign-to-phoneme map + per-pool coherence + K-sweep | `consensus_sign_phoneme_map.md` |
+| v14 same-distribution pollution gate + provenance | `rollup.bayesian_posterior.polluted_aquitanian.md` + `…provenance.md` |
+| v15 cross-language pollution gate + provenance | `rollup.bayesian_posterior.greek_polluted_aquitanian.md` + `…provenance.md` |
+| per-inscription concentration | `rollup.right_tail_inscription_concentration.md` |
+| corpus ingestion record | `../corpus_status.md` |
+
+Per-ticket merge notes are in `docs/findings.md` under
+`## Findings from mg-XXXX` headers, in chronological order from
+`mg-d5ef` (v0, 2026-05-04 first commit) through `mg-7ecb` (v15,
+2026-05-05).

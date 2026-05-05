@@ -3274,6 +3274,177 @@ refinement** above. Follow-up tickets the result *could* motivate
   source LM the conjecturals were drawn from. v12 artifact;
   unchanged in v15.
 
+## Findings from mg-d5ed
+
+mg-d5ed is the v16 ticket: an audit-and-polish pass on
+`docs/findings_summary.md` to bring it to publication-readable
+methodology-paper-draft standards. No new experiments, no new
+corpora, no new metrics — strictly an editorial / verification
+ticket.
+
+### Audit summary
+
+The pre-v16 draft was an incrementally-grown narrative, with v15 /
+v14 / v13 update sections stacked at the top and the methodology
+near the bottom. The audit replaced that structure with a standard
+methodology-paper section ordering: **Abstract, Introduction,
+Methods, Results, Discussion, Limitations, Conclusion**, plus a
+result-file index appendix. The seven required sections are present
+and well-developed (verified by section-grep).
+
+Section-by-section audit:
+
+- **Abstract (≤ 250 words).** Newly-written. Pre-registers question,
+  method, and supportable claim in three paragraphs.
+- **Introduction.** Newly-written. Frames why mechanical falsifiable
+  testing matters for Linear A specifically (motivated-reasoning
+  failure modes), what the project's bet was, and the explicit
+  scoping choices.
+- **Methods.** Reconsolidated. Covers corpus (SigLA, 761 transcribed
+  inscriptions, 4,935 sign occurrences, 356 distinct sign IDs),
+  the four substrate pools and three pollution variants with
+  per-pool entry counts, hypothesis schemas
+  (`candidate_equation.v1`, `candidate_signature.v1`), the metric
+  (`external_phoneme_perplexity_v0`), paired-difference scoring,
+  per-surface Beta-binomial aggregation, the right-tail Bayesian
+  gate, and the five auxiliary checks (cross-LM, third-LM,
+  positive control, coherence, pollution).
+- **Results.** Each of the eight pre-registered acceptance gates
+  is now reported with the same level of detail as the prior
+  draft's per-pool sections, but in a results-section ordering
+  rather than a chronological-update ordering. The summary table
+  in §3.1 is the single-glance entry point.
+- **Discussion.** Restructured around what the framework detects
+  versus what it does not detect, with explicit micro-explanations
+  for why same-distribution pollution PASSes the gate without
+  within-tail discrimination, and why per-sign coherence fails
+  despite surface-aggregate PASS.
+- **Limitations.** Now an explicit section. Three sub-headings:
+  out-of-scope by construction, known unresolved issues, out-of-
+  scope for the methodology characterization itself.
+- **Conclusion.** Newly-written single-paragraph wrap.
+
+### Three-sentence reading test
+
+The acceptance check from the ticket brief: three sentences a
+hypothetical Linear A scholar reading `findings_summary.md` would
+learn from it, that should sound publishable when read together.
+After the audit pass:
+
+1. Mechanical paired-difference scoring of substrate-language
+   hypotheses against the SigLA Linear A corpus, with phonotactically-
+   matched controls and an external character-bigram phoneme language
+   model, detects substrate-LM-phonotactic kinship for Aquitanian
+   under a Basque LM (right-tail bayesian gate p = 3.22e-05) and
+   Etruscan under an Etruscan LM (p = 5.21e-04), with cross-LM
+   negative controls confirming substrate-LM specificity for both.
+2. The same framework cannot recover stable per-sign sign-to-phoneme
+   mappings — a cross-window coherence test on the v10 top-20
+   substrate surfaces fails decisively (median per-surface coherence
+   0.18 versus a 0.6 acceptance bar) — and a same-distribution
+   pollution test cannot distinguish real Aquitanian roots from
+   phonotactically-matched conjectural surfaces (within-tail
+   real-vs-conjectural Mann-Whitney p = 0.98), so the framework's
+   right-tail leaderboard reports phonotactic-shape-likely surfaces,
+   not validated substrate vocabulary.
+3. The framework therefore identifies which substrate phonotactic
+   profiles produce population-level signal in the Linear A corpus
+   and which specific inscriptions concentrate that signal, but does
+   not validate per-sign readings or per-tablet glosses; the
+   discipline of mechanical scoring against phonotactically-matched
+   controls is what distinguishes this method's claim from the
+   qualitative-impression claims that have plagued past Linear A
+   work.
+
+These three sentences land in the "narrower-but-defensible" register
+the brief asked for: the first acknowledges what the framework
+detects, the second states the empirical limit on per-sign claims,
+and the third frames the methodological contribution honestly. They
+are not over-stated and they are not over-hedged.
+
+### Inconsistencies discovered and resolved
+
+The audit found three drift items in the pre-v16 draft:
+
+1. **Pipeline lineage citation drift.** The pre-v16 Methods section
+   said "the pipeline (built up across mg-1c8c through mg-4664) is".
+   `mg-1c8c` does not exist in this repo — the actual project
+   lineage starts with mg-d5ef (v0) and the v15 work shipped under
+   mg-7ecb. **Fix applied:** the new draft cites `mg-d5ef` through
+   `mg-7ecb` as the lineage, and the per-step Methods subsections
+   cite individual tickets (mg-d26d for v10 aggregation, mg-bef2
+   for v9 signatures, mg-ee18 for the metric, etc.).
+2. **Cluster-A inscription concentration mislabeling.** The pre-v16
+   per-inscription section attributed the v10-top-20 surfaces
+   hitting `HT Wc 3010`, `KH 60`, etc., to "the Etruscan religious /
+   praenomen / time-reference cluster," then listed surfaces that
+   include several Aquitanian roots (`bihotz`, `entzun`, `hanna`,
+   `itsaso`, `zelai`, `zortzi`). Those Aquitanian-side surfaces are
+   from the Aquitanian top-20, not the Etruscan top-20. The
+   description had been carried forward from mg-0f97's findings.md
+   entry without being re-checked against the substrate-pool
+   provenance. **Fix applied:** §3.9 now states explicitly that the
+   14 v10-top-20 surfaces hitting these tablets are drawn from
+   *both* substrate pools' top-20 sets, with separate enumeration
+   of the Etruscan-side and Aquitanian-side contributions.
+3. **High-frequency-sign entropy range stated too loosely.** The
+   pre-v16 v13 narrative said "max-likelihood entropy 3.6–4.0 bits."
+   Spot-check against `consensus_sign_phoneme_map.md` shows the
+   high-frequency signs are in the 3.71–3.92 bits range. **Fix
+   applied:** the new draft states "3.7–3.9 bits."
+
+The committed result files were **not** modified — these are
+narrative drift fixes, not historical-number rewrites. All
+quantitative claims in the new draft were spot-checked against the
+committed `results/*.md` files and `corpus_status.md`; the new
+draft's numbers match the committed artefacts.
+
+### What is and isn't ready for external review
+
+**Ready for external review:** the methodology paper draft is now
+internally consistent, every quantitative claim cites a specific
+mg ticket and/or committed result file, and the supportable /
+unsupportable claim split is honest. A research scientist or
+Aegean-syllabary specialist who reads `docs/findings_summary.md`
+cold should be able to follow the pipeline (§2), see which
+substrate hypotheses produce signal at which gates (§3), and
+understand why the framework does not support per-sign decipherment
+(§4 + §5). The three-sentence reading test above is the canonical
+"would this be publishable?" check, and the document clears it in
+the narrower-but-defensible register.
+
+**Not ready for external review (and explicitly out-of-scope):**
+
+- Journal submission. Latex / journal-specific style / reference
+  formatting / peer review — depends on Daniel's editorial choice
+  of target venue.
+- Domain-expert review of top-K substrate surfaces. Independent
+  Aegean-syllabary specialist review is the only way to convert
+  "the right tail is Aquitanian-shape-likely" into "the right tail
+  is real Aquitanian vocabulary present in Linear A," and that is
+  not a polecat task.
+- Cleanup tickets the methodology paper flags but does not address:
+  toponym pool control-sampler fix; Linear-B small-K refined gate
+  adoption; pollution-level sweep (10% / 25% / 75%); GORILA /
+  Younger ingest for numerals + line breaks; additional substrate
+  pools (Phoenician, Sumerian, Hattic). The methodology paper's
+  §5.3 enumerates these explicitly.
+
+The natural next step is **Daniel's editorial choice of target
+venue** — once that is made, the LaTeX / formatting / reference
+work and any venue-specific narrative tightening can be done off
+this draft.
+
+### See also
+
+- `docs/findings_summary.md` — the rewritten methodology paper
+  draft. Six numbered sections plus an Abstract and a result-file
+  index appendix.
+- `docs/roadmap.md` — pm-lineara updates this directly to reflect
+  "project at v16; methodology characterized; remaining open work
+  is paper-submission-side and out-of-pogo-scope" (out-of-scope
+  for this polecat ticket).
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;
