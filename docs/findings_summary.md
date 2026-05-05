@@ -1774,6 +1774,98 @@ for any specific Linear A sign, and the v19 + v20 external
 validation makes that specific in a way that internal-only
 metrics cannot.
 
+### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 / v1 / v2)
+
+A parallel sub-program (the **chic-v\*** ticket series) extends
+the same mechanical-falsifiability discipline to **Cretan
+Hieroglyphic** (CHIC), the older sister-script to Linear A. The
+goal is *not* a CHIC decipherment but a re-application of the
+infrastructure built for Linear A under a different and more
+constrained input distribution: 302 mostly-short CHIC inscriptions
+on sealstones and clay administrative documents, against a sign
+inventory of 131 distinct IDs whose syllabographic / ideogram
+partition is itself a research question.
+
+The chic sub-program is positioned in this document as a
+**methodology test**, not a result claim. Each ticket is treated
+the same way as the Linear A pipeline: outputs are committed,
+artefacts are byte-identical on rebuild, and findings are
+filed in `docs/findings.md`.
+
+#### chic-v0 — corpus ingest (mg-99df)
+
+302 of 331 CHIC catalog entries ingested from John Younger's web
+edition of CHIC (Olivier & Godart 1996), via the Wayback Machine
+snapshot (the live URL has retired). Site distribution skews to
+Knossos and Mallia (62% combined). Support-type distribution is
+sealstone-dominated. Tokenization: hyphen-joined digit groups →
+sign IDs (`#NNN`); standalone digits → `NUM:N`; uncertain
+readings → `[?:#NNN]`; illegible → `[?]`. The 29 missing
+catalog entries are deferred to a manual-transcription pass.
+
+#### chic-v1 — sign classification (mg-c7e3)
+
+The 131 distinct CHIC sign IDs partition (under the numeric-range
+rule of Olivier & Godart 1996, retained in Younger's web edition)
+into **96 syllabographic + 35 ideogram + 0 ambiguous**. The
+syllabographic frequency distribution is comparable in shape to
+Linear A's (heavy-tailed but tractable). chic-v1 also enumerates
+**20 paleographic anchor candidates** — CHIC syllabographic signs
+visually similar to Linear A signs with established Linear B
+carryover values. 3 are consensus matches, 9 proposed, 8 debated.
+
+#### chic-v2 — anchor inheritance + partial-reading map (mg-362d)
+
+Mechanically applies the chic-v1 candidates as a tier-1 (consensus,
+3 anchors) / tier-2 (proposed-or-debated, 17 anchors) anchor pool.
+Outputs `pools/cretan_hieroglyphic_anchors.yaml`,
+`results/chic_partial_readings.md`, and
+`results/chic_anchor_density_leaderboard.md`.
+
+Headline numbers:
+
+- **864 of 1420** syllabographic CHIC sign positions across the
+  corpus are anchored — **60.85%** corpus-wide coverage.
+- **263 of 302** inscriptions carry ≥1 anchored position; the
+  top-30 most-anchored inscriptions are all at coverage = 1.0
+  (saturated; tiebreakers go to anchored count, then
+  syllabographic count).
+- Recurrent anchored short forms: `i-ja-ro` (5 distinct fully-
+  anchored sealstones plus many embeddings); `ki-de` (23
+  sealstones); `wa-ke` (6 sealstones, including a Samothrace
+  cluster). These are known-formulaic seal sequences in CHIC
+  scholarship; chic-v2 contributes a **mechanical, reproducible**
+  rendering rather than a new claim about them.
+
+A Mycenaean-Greek char-bigram-LM perplexity sanity check
+(`results/chic_mg_perplexity_sanity_check.md`) confirms the
+anchor-portion phoneme strings are not phonotactically arbitrary
+(per-char log-likelihood −2.58 nats; uniform-smoothed baseline is
+−3.33), but the absolute value is well above MG-typical (−1.4 to
+−1.8 for real Mycenaean Greek under the same LM), consistent with
+the substrate-language hypothesis for CHIC. The cross-check is
+**informational, not evidential** — the substrate language for
+CHIC remains pre-Greek (toponym / Eteocretan / similar), and
+chic-v3 will swap in the substrate LMs the lineara harness
+already supports.
+
+#### Pre-registered chic-v3+
+
+- **chic-v3** — substrate framework application to the
+  high-anchor-coverage subset (analogous to the v19 cascade-
+  candidate framing for Linear A).
+- **chic-v4** — cross-script correlation (do the substrate
+  signals detected on Linear A also surface on CHIC?).
+- **chic-v5+** — per-sign value extraction for the still-
+  unknown CHIC syllabographic signs, leveraging the
+  anchor-portion constraint.
+
+The chic sub-program does not change any Linear A finding in this
+document. It exercises the same harness on a different corpus
+under a different sign inventory; whether the framework's
+right-tail-Bayesian gate detects substrate kinship on CHIC at the
+population level is the chic-v3 question.
+
 ---
 
 ## 5. Limitations
@@ -2046,6 +2138,9 @@ committed artefacts under `results/`:
 | v20 KU-RO / KI-RO scholarly-anchor search on `KH 10` / `KH 5` | `corpus/Khania/KH%2010.json`, `corpus/Khania/KH%205.json` (token streams) + `pools/linear_b_carryover.yaml` (canonical AB-sequence anchors) |
 | v22 population-level external validation against Younger scholar-set (mg-46d5) | `rollup.scholar_proposed_readings_comparison.md` + `../corpora/scholar_proposed_readings/all.jsonl` (35-entry curated set) |
 | v24 per-inscription cascade-candidate analysis under Eteocretan LM (mg-c103) | `rollup.per_inscription_coherence.eteocretan_only.md`, `rollup.per_inscription_coherence.four_pools.md`, `rollup.right_tail_inscription_concentration.eteocretan_only.md`, `rollup.right_tail_inscription_concentration.four_pools.md`, `rollup.scholar_proposed_readings_comparison.eteocretan_only.md`, `rollup.scholar_proposed_readings_comparison.four_pools.md`, `rollup.scholar_proposed_readings_comparison.four_pools_cascades.md` |
+| chic-v0 CHIC corpus ingest (mg-99df) | `../corpora/cretan_hieroglyphic/all.jsonl` + `../corpus_status.chic.md` |
+| chic-v1 CHIC sign classification + paleographic candidates (mg-c7e3) | `../pools/cretan_hieroglyphic_signs.yaml`, `chic_sign_inventory.md`, `chic_vs_linear_a_sign_inventory_comparison.md` |
+| chic-v2 CHIC paleographic anchor inheritance + partial-reading map (mg-362d) | `../pools/cretan_hieroglyphic_anchors.yaml`, `chic_partial_readings.md`, `chic_anchor_density_leaderboard.md`, `chic_mg_perplexity_sanity_check.md` |
 | corpus ingestion record | `../corpus_status.md` |
 
 Per-ticket merge notes are in `docs/findings.md` under

@@ -5476,3 +5476,205 @@ chic-v1+:
   Per-site sub-corpora won't be statistically meaningful for any
   one minor site.
 
+
+## Findings from mg-c7e3 (chic-v1 — sign classification + paleographic candidates)
+
+**Note.** chic-v1 (mg-c7e3) merged before mg-362d but did not append a
+findings entry. This subsection back-fills the v1 findings as context
+for v2. The numbers below are read from the v1-emitted artifacts.
+
+### Sign-inventory partition
+
+- **131 distinct CHIC sign IDs** observed in the chic-v0 corpus.
+  Numeric-range classification rule (Olivier & Godart 1996; retained
+  in Younger's web edition):
+  - **96 syllabographic** (#001-#100).
+  - **35 ideogram** (#101-#299 logograms; #300-#399 numerals + fractions).
+  - **0 ambiguous** at v1; the `AMBIGUOUS_OVERRIDES` table is empty
+    by design — chic-v3 will revisit individual reclassifications.
+- The classification rule is purely numeric-range and conservative on
+  purpose. The chic-v1 brief explicitly warns that errors here
+  propagate into all chic-v2+ work.
+
+### Sign-frequency distribution
+
+- The CHIC syllabographic distribution is heavy-tailed: the top
+  syllabographic sign (#044) occurs 128 times, and the top-15 covers
+  >50% of total syllabographic occurrences. This is a comparable
+  shape to Linear A (whose top-K covers a similar fraction in the
+  761-inscription SigLA corpus). The CHIC syllabographic subset is in
+  the same tractable-corpus regime — not a long flat tail of
+  hapax-legomena.
+- See `results/chic_sign_inventory.md` and
+  `results/chic_vs_linear_a_sign_inventory_comparison.md`.
+
+### Paleographic anchor candidates
+
+- **20 candidates** enumerated (target band ~10-20 per ticket spec):
+  3 consensus, 9 proposed, 8 debated. Sign-by-sign citations from
+  Younger online + Salgarella 2020 + Decorte 2017 + Civitillo 2016.
+- The 3 consensus matches (#016 = AB08 = `a`, #031 = AB02 = `ro`,
+  #070 = AB60 = `ra`) are documented as the most-secure paleographic
+  ↔ Linear A bridges in the literature; chic-v2 promotes these to
+  tier-1 anchors and the rest to tier-2.
+
+## Findings from mg-362d (chic-v2 — paleographic anchor inheritance + partial-reading map)
+
+### What this ticket built
+
+Mechanically applied chic-v1's 20 paleographic-anchor candidates to
+the 302 CHIC inscriptions (chic-v0 corpus). Outputs:
+
+- `pools/cretan_hieroglyphic_anchors.yaml` (NEW) — 20 anchor entries
+  with tier classification, frequency, and dual citations
+  (paleographic + Linear B). Schema:
+  `pools/schemas/chic_anchors.v1.schema.json`. README:
+  `pools/cretan_hieroglyphic_anchors.README.md`.
+- `results/chic_partial_readings.md` — per-inscription partial
+  reading: anchored positions show their phonetic value;
+  unanchored positions retain `#NNN`. 302 rows.
+- `results/chic_anchor_density_leaderboard.md` — top-30 inscriptions
+  by `anchor_coverage_rate`.
+- `results/chic_mg_perplexity_sanity_check.md` — Mycenaean-Greek
+  char-bigram-LM perplexity on the anchored portions of the top-30
+  inscriptions. Sanity check; not a decipherment claim.
+- Tests: `harness/tests/test_chic_anchors.py` (9 tests, including a
+  byte-identical-rebuild determinism test).
+
+### Tier mapping
+
+- **tier-1**: paleographic similarity well-established (chic-v1
+  confidence=consensus) AND Linear B carryover stable. **3 anchors**:
+  - `#016 → AB08 → a` (frequency 20)
+  - `#031 → AB02 → ro` (frequency 65)
+  - `#070 → AB60 → ra` (frequency 56)
+- **tier-2**: paleographic similarity debated or proposed in a single
+  source. **17 anchors** spanning the rest of the chic-v1 candidate
+  list (proposed: 9; debated: 8). The Linear B grid value is stable
+  (Ventris-Chadwick 1956) for every AB-id in this pool, so the tier
+  collapses to a paleographic-confidence label rather than a
+  carryover-stability label.
+
+### Anchor coverage on the corpus
+
+- **864 of 1420** syllabographic positions anchored corpus-wide
+  (**60.85%**). 263 of 302 inscriptions carry ≥1 anchored position;
+  288 of 302 carry ≥1 syllabographic position at all.
+- The top-30 leaderboard is saturated at coverage=1.0 (all 30
+  inscriptions are fully anchored). The cutoff is forced by
+  many-way ties at coverage=1.0; tiebreakers go to `n_anchored`
+  (descending) and then `n_syllabographic` (descending).
+- Several recurrent anchored short forms emerge across the seal
+  corpus:
+  - `i-ja-ro` appears as the full reading of CHIC #162, #169, #195,
+    #218, #279 (5 distinct sealstones, all from Knossos and
+    Crete-unprovenanced contexts) — and embedded inside many
+    longer seal inscriptions (#270, #248, #242, #250, #257, ...).
+  - `ki-de` appears as the full reading of CHIC #150, #157, #161,
+    #170, #208, #210, #211, #213, #215, #216, #217, #219, #220,
+    #221, #223, #226, #227, #231, #233, #235, #237, #240, #278
+    (23 distinct seals, almost all from Crete-unprovenanced
+    contexts).
+  - `wa-ke` appears as the full reading of CHIC #134, #135 (2x
+    Samothrace), #136, #137, #175, #201 (6 distinct seals across
+    Knossos, Samothrace, Pyrgos, and Crete-unprovenanced). The
+    Samothrace cluster is geographically striking — it suggests
+    `wa-ke` is a recurrent administrative/heraldic formula
+    rather than a one-off seal-owner name.
+- These recurrent forms are not new observations; they're known to
+  CHIC scholarship as common sealstone formulas. What chic-v2 adds
+  is a **mechanical, reproducible** mapping from CHIC token
+  sequences to phoneme sequences, suitable as a starting population
+  for chic-v3+ substrate-framework application.
+
+### Mycenaean-Greek perplexity sanity check
+
+- All 30 leaderboard inscriptions have ≥1 scorable run under the
+  v12 MG char-bigram LM (`harness/external_phoneme_models/mycenaean_greek.json`).
+- Mean per-char log-likelihood: **-2.5775 nats** (per-char
+  perplexity ≈ **13.16**). Range across the 30 inscriptions: roughly
+  -3.18 (CHIC #152, `mu-ki`) to -2.18 (the recurrent `i-ja-ro`
+  inscriptions).
+- **This is not a decipherment claim.** The MG LM has 28 vocab
+  tokens; uniform smoothed log-prob would be `log(1/28) ≈ -3.33`.
+  The observed -2.58 mean is somewhat better than uniform (the
+  anchor-portion phoneme strings are not phonotactically arbitrary),
+  but the absolute value is well above the MG-typical baseline a
+  Mycenaean Greek text would produce under the LM (real LiBER
+  Mycenaean Greek text produces values around -1.4 to -1.8 per
+  char in the LM's training distribution).
+- The interpretation is consistent with the substrate-language
+  hypothesis for CHIC: anchored CHIC strings look phonotactically
+  *something* — not random — but not Mycenaean Greek. chic-v3 will
+  swap in pre-Greek substrate LMs (toponym, Eteocretan,
+  Aquitanian) and report comparative perplexities; chic-v2 only
+  establishes the cross-check infrastructure.
+
+### Methodological observations
+
+- **Anchor coverage is not concentration.** A high
+  `anchor_coverage_rate` on a 2-syllable seal does not equal a
+  high information-density partial reading. The leaderboard
+  flagging 30 inscriptions at coverage=1.0 includes many
+  formula-like 2-syllable seals (`ki-de`, `wa-ke`); the
+  productive starting population for chic-v3 substrate-framework
+  application is more likely the longer inscriptions further
+  down the leaderboard (`coverage > 0.7` and `n_anchored > 7`)
+  where the anchored sequence has enough tokens to constrain
+  candidate-equation scoring. Concretely: CHIC #270 (8/8 anchored,
+  3 word-segments) and #293 (10/10 anchored, 4 segments) plus
+  #294 (18/27 anchored, 5 word-segments, the longest run), #258
+  (6/7 anchored), #262 (7/9 anchored), #269 (6/7 anchored), and
+  the substantial Knossos bars #056 (16/17) and #062 (12/14) are
+  the natural top targets.
+- **Anchor application is not transitive.** The 17 tier-2 anchors
+  carry confidence labels of "proposed" or "debated" — chic-v3
+  must be careful not to treat tier-2 anchored positions as ground
+  truth when computing per-sign coherence over candidate
+  framework readings. A robustness pass should re-compute the
+  partial-reading map and the leaderboard tier-1-only and report
+  how the population shifts.
+- **The MG LM is the wrong target language**, by construction.
+  The cross-check is informational (anchor strings look
+  language-shaped), not evidential. chic-v3 will run the same
+  perplexity metric under the four pre-Greek substrate LMs that
+  the lineara harness already supports.
+
+### Pre-registered for chic-v3+
+
+- **chic-v3** — apply the lineara substrate framework
+  (signature scoring, paired-diff vs phonotactic controls,
+  per-surface bayesian rollup) to the partial-reading map. The
+  load-bearing change is that chic-v3 operates on the
+  high-anchor-coverage subset (top-K from the leaderboard) rather
+  than the full CHIC corpus, mirroring the v19 cascade-candidate
+  framing for Linear A.
+- **chic-v4** — cross-script correlation analysis (do the substrate
+  signals detected on Linear A also surface on CHIC?).
+- **chic-v5+** — per-sign value extraction for the still-unknown
+  CHIC syllabographic signs, leveraging the anchor-portion
+  constraint.
+
+### Out of scope
+
+Per the chic-v2 ticket, this commit does not:
+
+- Apply the substrate framework (deferred to chic-v3).
+- Run cross-script correlation (deferred to chic-v4).
+- Extract values for unanchored CHIC syllabographic signs (deferred
+  to chic-v5+).
+- Update the AGENTS.md scope-of-work norms for the chic
+  sub-program (small follow-up).
+- Promote any tier-2 anchor to tier-1 based on the v2-emitted
+  perplexity output. The MG LM is the wrong target language;
+  promotion criteria need substrate-LM evidence.
+
+### Determinism
+
+- `pools/cretan_hieroglyphic_anchors.yaml`,
+  `results/chic_partial_readings.md`,
+  `results/chic_anchor_density_leaderboard.md`,
+  `results/chic_mg_perplexity_sanity_check.md` are byte-identical
+  on rebuild. The `test_chic_anchors.TestDeterminism` test runs
+  `python3 -m scripts.build_chic_anchors` and asserts
+  byte-identity vs the committed artifacts.

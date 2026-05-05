@@ -1,0 +1,97 @@
+{
+  "$id": "https://github.com/drellem2/lineara/pools/schemas/chic_anchors.v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "Tier-1 / tier-2 paleographic anchors mapping CHIC syllabographic signs to Linear B carryover phonetic values via Linear A intermediaries. Built by chic-v2 (mg-362d) from chic-v1's PALEOGRAPHIC_CANDIDATES list.",
+  "properties": {
+    "anchor_pool_rule": {
+      "type": "string"
+    },
+    "anchors": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "chic_sign": {
+            "pattern": "^#\\d{3}$",
+            "type": "string"
+          },
+          "chic_v1_confidence": {
+            "enum": [
+              "consensus",
+              "proposed",
+              "debated"
+            ]
+          },
+          "confidence_tier": {
+            "enum": [
+              "tier-1",
+              "tier-2"
+            ]
+          },
+          "frequency": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "linear_a_sign": {
+            "pattern": "^AB\\d+$",
+            "type": "string"
+          },
+          "linear_b_carryover_phonetic": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "linear_b_citation": {
+            "type": "string"
+          },
+          "paleographic_citation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "chic_sign",
+          "linear_a_sign",
+          "linear_b_carryover_phonetic",
+          "confidence_tier",
+          "paleographic_citation",
+          "linear_b_citation"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "catalog": {
+      "const": "cretan_hieroglyphic_anchors"
+    },
+    "fetched_at": {
+      "type": "string"
+    },
+    "n_anchors_total": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "n_tier_1": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "n_tier_2": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "source_citation": {
+      "type": "string"
+    },
+    "version": {
+      "const": 1
+    }
+  },
+  "required": [
+    "catalog",
+    "version",
+    "anchor_pool_rule",
+    "source_citation",
+    "anchors"
+  ],
+  "title": "Cretan Hieroglyphic paleographic anchor pool (v1)",
+  "type": "object"
+}
