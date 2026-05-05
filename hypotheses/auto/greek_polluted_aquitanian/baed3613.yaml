@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ezti_ARKH_2_9_12
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ezti'' pinned to ARKH 2 tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ezti
+  phonemes:
+  - e
+  - z
+  - t
+  - i
+  gloss_hint: honey
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: e
+    AB01: z
+    AB05: t
+    AB28: i

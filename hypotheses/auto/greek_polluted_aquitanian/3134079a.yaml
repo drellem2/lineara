@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_zuhaitz_HT_122b_13_18
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''zuhaitz'' pinned to HT 122b tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: zuhaitz
+  phonemes:
+  - z
+  - u
+  - h
+  - a
+  - i
+  - tz
+  gloss_hint: tree
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB08: z
+    AB60: u
+    AB65: h
+    AB10: a
+    AB45: i
+    AB17: tz

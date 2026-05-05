@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ikusi_HT_110a_0_4
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ikusi'' pinned to HT 110a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ikusi
+  phonemes:
+  - i
+  - k
+  - u
+  - s
+  - i
+  gloss_hint: see
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB41: i
+    AB51: k
+    AB34: u
+    AB81: s
+    AB73: i

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_gizon_KN_Zf_13_6_10
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''gizon'' pinned to KN Zf 13 tokens [6..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: gizon
+  phonemes:
+  - g
+  - i
+  - z
+  - o
+  - n
+  gloss_hint: man
+  citation: Trask 1997 ch. 3; cf. Aq. CISON.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 10
+  sign_to_phoneme:
+    AB39: g
+    AB44: i
+    AB03: z
+    AB57: o
+    AB59: n

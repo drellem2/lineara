@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_hauten_KN_Zf_13_3_8
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''hauten'' pinned to KN Zf 13 tokens [3..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: hauten
+  phonemes:
+  - h
+  - a
+  - u
+  - t
+  - e
+  - n
+  gloss_hint: great (proposed)
+  citation: Gorrochategui 1984, Aq. HAUTEN-/HAVTAN-.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 8
+  sign_to_phoneme:
+    AB41: h
+    AB07: a
+    A301: u
+    AB39: t
+    AB44: e
+    AB03: n

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_zelai_HT_117a_38_42
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''zelai'' pinned to HT 117a tokens [38..42].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: zelai
+  phonemes:
+  - z
+  - e
+  - l
+  - a
+  - i
+  gloss_hint: meadow, plain
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 38
+  - 42
+  sign_to_phoneme:
+    AB73: z
+    AB26: e
+    AB59: l
+    AB60: a
+    AB27: i

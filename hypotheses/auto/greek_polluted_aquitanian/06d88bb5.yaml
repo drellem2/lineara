@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_senben_GO_Wc_1a_0_5
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''senben'' pinned to GO Wc 1a tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: senben
+  phonemes:
+  - s
+  - e
+  - n
+  - b
+  - e
+  - n
+  gloss_hint: son (variant)
+  citation: Gorrochategui 1984; variant of SEMBE.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: s
+    AB31: e
+    AB58: n
+    AB80: b
+    AB28: e
+    AB09: n

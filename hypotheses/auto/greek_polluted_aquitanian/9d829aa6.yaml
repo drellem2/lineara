@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ilun_HT_117a_63_66
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ilun'' pinned to HT 117a tokens [63..66].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ilun
+  phonemes:
+  - i
+  - l
+  - u
+  - n
+  gloss_hint: dark
+  citation: Gorrochategui 1984, Aq. ILUN-; Basque ilun (Trask 1997 ch. 3).
+equation:
+  inscription_id: HT 117a
+  span:
+  - 63
+  - 66
+  sign_to_phoneme:
+    AB70: i
+    AB31: l
+    AB28: u
+    AB37: n

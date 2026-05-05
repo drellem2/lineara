@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_lohi_HT_119_11_14
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''lohi'' pinned to HT 119 tokens [11..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: lohi
+  phonemes:
+  - l
+  - o
+  - h
+  - i
+  gloss_hint: mud, mire
+  citation: Gorrochategui 1984, Aq. LOHI-; Basque lohi (Trask 1997).
+equation:
+  inscription_id: HT 119
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    AB81: l
+    AB56: o
+    AB06: h
+    AB69: i

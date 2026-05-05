@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_arto_HT_122b_32_35
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''arto'' pinned to HT 122b tokens [32..35].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: arto
+  phonemes:
+  - a
+  - r
+  - t
+  - o
+  gloss_hint: corn, millet
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 32
+  - 35
+  sign_to_phoneme:
+    AB11: a
+    AB05: r
+    AB81: t
+    AB02: o

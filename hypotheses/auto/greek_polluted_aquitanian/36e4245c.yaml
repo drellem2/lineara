@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_leiho_KN_Zc_6_4_8
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''leiho'' pinned to KN Zc 6 tokens [4..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: leiho
+  phonemes:
+  - l
+  - e
+  - i
+  - h
+  - o
+  gloss_hint: window
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    AB08: l
+    AB07: e
+    AB01: i
+    AB67: h
+    AB37: o

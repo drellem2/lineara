@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_zelai_KN_Zf_13_13_17
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''zelai'' pinned to KN Zf 13 tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: zelai
+  phonemes:
+  - z
+  - e
+  - l
+  - a
+  - i
+  gloss_hint: meadow, plain
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB04: z
+    AB53: e
+    AB23: l
+    AB08: a
+    AB57: i

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_gatz_HT_108_9_11
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''gatz'' pinned to HT 108 tokens [9..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: gatz
+  phonemes:
+  - g
+  - a
+  - tz
+  gloss_hint: salt
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 108
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB07: g
+    AB06: a
+    AB02: tz

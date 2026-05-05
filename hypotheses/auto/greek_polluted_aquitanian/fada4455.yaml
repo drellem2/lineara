@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_berri_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''berri'' pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: berri
+  phonemes:
+  - b
+  - e
+  - r
+  - r
+  - i
+  gloss_hint: new
+  citation: Trask 1997 ch. 3; cf. Aq. ILIBERRI 'new town'.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: b
+    AB26: e
+    AB78: r
+    AB76: r
+    AB10: i

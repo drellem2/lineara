@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_su_ARKH_1a_12_13
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''su'' pinned to ARKH 1a tokens [12..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: su
+  phonemes:
+  - s
+  - u
+  gloss_hint: fire
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 12
+  - 13
+  sign_to_phoneme:
+    AB73: s
+    AB118: u

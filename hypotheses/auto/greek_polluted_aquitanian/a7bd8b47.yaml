@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ahuntz_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ahuntz'' pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ahuntz
+  phonemes:
+  - a
+  - h
+  - u
+  - n
+  - tz
+  gloss_hint: goat
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: a
+    AB45: h
+    AB80: u
+    A323: n
+    AB06: tz

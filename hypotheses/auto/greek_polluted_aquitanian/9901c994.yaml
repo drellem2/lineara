@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_lore_HT_117a_38_41
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''lore'' pinned to HT 117a tokens [38..41].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: lore
+  phonemes:
+  - l
+  - o
+  - r
+  - e
+  gloss_hint: flower
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 38
+  - 41
+  sign_to_phoneme:
+    AB73: l
+    AB26: o
+    AB59: r
+    AB60: e

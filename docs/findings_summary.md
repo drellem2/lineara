@@ -1,15 +1,96 @@
-# Lineara — findings summary (mg-6b73, harness v14)
+# Lineara — findings summary (mg-7ecb, harness v15)
 
 A publication-shape consolidation of what the Lineara project has
 mechanically established about Linear-A so far. This is the v0
 "manuscript narrative" Daniel asked for in mg-4664, with a major v13
 update from mg-c216 sharpening what the v10 PASSes do and do not
-support. A reader who has not followed the merge notes should be able
-to pick up from here.
+support, a v14 update from mg-6b73 establishing curation-tolerance
+under same-distribution pollution, and a **v15 update from mg-7ecb
+sharpening the manuscript-shape claim against cross-language pollution.**
+A reader who has not followed the merge notes should be able to pick
+up from here.
 
 The companion log `docs/findings.md` carries the per-ticket history;
 this document carries the consolidated picture and the supportable /
 unsupportable claim split.
+
+## v15 update — what changed (mg-7ecb, 2026-05-05)
+
+The v15 ticket built the **cross-language pollution test** that v14's
+result motivated: a Greek-shape polluted Aquitanian pool (153 real
+Aquitanian roots + 153 synthetic conjecturals drawn from the Mycenaean-
+Greek char-bigram distribution at
+`harness/external_phoneme_models/mycenaean_greek.json`, with lengths
+matched to the real pool) plus matched phonotactic controls, all run
+through the v10 right-tail bayesian gate under the Basque LM (the
+substrate's own LM, same as v10/v14). The pre-registered binary
+question was: **does the framework PASS for ANY phonotactic match,
+or only when the polluting distribution matches the substrate's own?**
+
+**Verdict: partial-discrimination — gate PASSes at p = 2.01e-03, but
+within the right tail real Aquitanian dominates Greek-shape
+conjecturals at p = 8.29e-05.** This is the "neutral-ish" outcome the
+v15 brief flagged as the most interesting case for the manuscript.
+
+The headline gate clears for any pool with non-trivial char-bigram
+overlap with the LM, but the cross-language gate is ~70× weaker than
+v14's same-distribution gate (p = 2.74e-05) and ~16× weaker than v10's
+clean gate (p = 3.22e-05). The framework therefore has measurable
+shape selectivity, but not enough to flip the headline gate to FAIL.
+The provenance breakdown of the polluted-pool top-20 is **13 of 20 real
+(65%) / 7 of 20 conjectural-greek (35%)**, vs v14's near-50/50 split,
+and the within-tail real-vs-conjectural-greek MW U is **p = 8.29e-05**
+(vs v14's p = 0.98). Real Aquitanian surfaces' posteriors actually
+**shifted UP** by +5.8% median when Greek-shape conjecturals were
+mixed in, because Greek-shape conjecturals don't compete as well as
+same-Aquitanian-shape conjecturals do for the same Linear-A windows.
+
+**What this means for v14's manuscript-shape claim.** v14's claim was:
+
+> The framework detects substrate-LM-phonotactic kinship at the
+> population level for any pool whose phoneme + length distribution
+> is drawn from the substrate's own marginal distribution. It does
+> NOT detect "real substrate vocabulary," and does NOT support
+> per-sign reading claims.
+
+v15 **refines** this claim. Both halves survive, but the boundary is
+sharper than v14 alone could reveal:
+
+* The headline-PASS condition is *broader* than v14's clause says —
+  the gate clears for pools whose phoneme distribution does not match
+  the substrate's own, as long as char-bigram overlap with the LM is
+  non-trivial. Greek-shape conjecturals carry enough Mediterranean-
+  style CV phonotactics to out-score scramble controls under the
+  Basque LM.
+* But within-tail discrimination is real and large: real Aquitanian
+  dominates Greek-shape conjecturals at p < 0.001 within the right
+  tail, even when both are mixed in the same pool. The framework is
+  *partially* selective to substrate-distribution shape — enough to
+  push Greek-shape conjecturals down the substrate-side leaderboard,
+  but not enough to break the population gate.
+
+The v14 within-tail real-vs-conjectural MW p of 0.98 (no
+discrimination) → v15 within-tail real-vs-conjectural-greek MW p of
+8.3e-05 (strong discrimination) is the cleanest diagnostic. The
+distinguishing axis is whether the polluting distribution matches
+the substrate's own: when it does (v14), conjecturals are
+indistinguishable from real; when it doesn't (v15), they are
+distinguishable.
+
+**Implications for the rest of this document.** The supportable-
+claims section gains: "the framework's substrate-side leaderboard
+within-tail-discriminates substrate-shape from non-substrate-shape
+when both are mixed in the same pool; this discrimination is below
+the population gate's resolution, but above the leaderboard's." The
+unsupportable-claims section is unchanged in spirit but tightens its
+language: the right-tail leaderboard does not distinguish real from
+*same-distribution* conjectural surfaces (v14), but does distinguish
+real from *cross-language* conjectural surfaces (v15) — so the
+"Aquitanian-shaped surfaces the LM rewards consistently" framing
+remains right, but it's specifically Aquitanian-shaped, not just
+phonotactically-plausible-under-Basque. The remaining-work section
+gains v16 (methodology paper draft) as the natural next ticket and
+removes "cross-language pollution" (now done).
 
 ## v14 update — what changed (mg-6b73, 2026-05-05)
 
@@ -163,13 +244,14 @@ The framework was designed to be falsifiable. Three substrate pools
 plus one positive-control pool have been evaluated under same-LM,
 cross-LM, and third-LM gates. Outcomes:
 
-| pool                  | own-LM gate (v10/mg-d26d) | cross-LM gate (v11/mg-0f97)        | third-LM gate (v12/mg-4664, Mycenaean-Greek) | pool-curation gate (v14/mg-6b73)            | status                                                                                  |
-|-----------------------|:--------------------------:|:----------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------------------------------------------------------------------------------------|
-| aquitanian            | PASS p=3.22e-05 (basque)   | PASS p=0.0205 (etruscan, 5× weaker) | FAIL p=0.0953                                | (clean — see polluted_aquitanian)            | substrate-LM-specific: Mediterranean LMs reward Aquitanian, Mycenaean-Greek does not    |
-| polluted_aquitanian   | (n/a — built for v14)      | (n/a)                              | (n/a)                                        | **PASS p=2.74e-05 (basque, 50/50 polluted)** | **gate is curation-tolerant**; top-20 is 9 real / 11 conjectural (~50/50, MW p=0.98)    |
-| etruscan              | PASS p=5.21e-04 (etruscan) | FAIL p=0.591 (basque)              | FAIL p=0.185                                 | (not run; out of scope for v14)              | cleanly substrate-LM-specific; both unrelated LMs collapse the separation              |
-| toponym               | FAIL p=0.92                | (skipped; v10 already FAIL)        | (skipped)                                    | (n/a)                                        | not validated — see "Toponym failure" below                                            |
-| linear_b_carryover    | (positive-control pool)    | (positive-control pool)            | **FAIL p=0.155** (Mycenaean-Greek own-LM)    | (n/a)                                        | **POSITIVE CONTROL FAILED** at the population gate — see "What this means" below       |
+| pool                       | own-LM gate (v10/mg-d26d) | cross-LM gate (v11/mg-0f97)        | third-LM gate (v12/mg-4664, Mycenaean-Greek) | pool-curation gate (v14/mg-6b73 + v15/mg-7ecb)                              | status                                                                                  |
+|----------------------------|:--------------------------:|:----------------------------------:|:--------------------------------------------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------|
+| aquitanian                 | PASS p=3.22e-05 (basque)   | PASS p=0.0205 (etruscan, 5× weaker) | FAIL p=0.0953                                | (clean — see polluted_aquitanian / greek_polluted_aquitanian)                | substrate-LM-specific: Mediterranean LMs reward Aquitanian, Mycenaean-Greek does not    |
+| polluted_aquitanian        | (n/a — built for v14)      | (n/a)                              | (n/a)                                        | **PASS p=2.74e-05 (basque, 50/50 same-dist polluted)**                       | gate is curation-tolerant; top-20 is 9 real / 11 conjectural (~50/50, within-tail MW p=0.98) |
+| greek_polluted_aquitanian  | (n/a — built for v15)      | (n/a)                              | (n/a)                                        | **PASS p=2.01e-03 (basque, 50/50 cross-language polluted)**                  | partial-discrimination; top-20 is 13 real / 7 conj-greek, within-tail real>conj p=8.3e-05 |
+| etruscan                   | PASS p=5.21e-04 (etruscan) | FAIL p=0.591 (basque)              | FAIL p=0.185                                 | (not run; out of scope for v14/v15)                                          | cleanly substrate-LM-specific; both unrelated LMs collapse the separation              |
+| toponym                    | FAIL p=0.92                | (skipped; v10 already FAIL)        | (skipped)                                    | (n/a)                                                                        | not validated — see "Toponym failure" below                                            |
+| linear_b_carryover         | (positive-control pool)    | (positive-control pool)            | **FAIL p=0.155** (Mycenaean-Greek own-LM)    | (n/a)                                                                        | **POSITIVE CONTROL FAILED** at the population gate — see "What this means" below       |
 
 ### Etruscan: cleanly validated
 
@@ -537,21 +619,36 @@ Full per-inscription tables in `results/rollup.right_tail_inscription_concentrat
 
 ## Supportable claims
 
-After v14, "subject to the conservative reading of curation-
-sensitivity" is no longer the binding caveat: the v14 polluted-
-pool PASS shows the framework's PASS signal does not depend on
-uniformly-clean substrate pools. The supportable-claims list
+After v14 + v15, "subject to the conservative reading of curation-
+sensitivity" is no longer the binding caveat: v14's same-distribution
+polluted-pool PASS shows the framework's PASS signal does not depend
+on uniformly-clean substrate pools, and v15's cross-language polluted-
+pool result narrows the boundary further. The supportable-claims list
 below is therefore *less* hedged on curation than it was after
 v13, but *more* hedged on the per-surface meaning of the right-
 tail leaderboard.
 
-* **The framework's PASS signal is curation-tolerant within the
-  same phoneme + length distribution.** The polluted Aquitanian
-  pool (50% conjectural) PASSes at p = 2.74e-05, essentially
-  matching the clean pool's p = 3.22e-05. The PASS reflects
-  phonotactic-shape match between the substrate's marginal
-  distribution and the LM, not real-vs-conjectural identity of
-  individual entries. (mg-6b73)
+* **The framework's headline gate is curation-tolerant within the
+  same phoneme + length distribution AND is partially shape-
+  selective across distributions.** v14: the same-distribution
+  polluted Aquitanian pool (50% conjectural) PASSes at p = 2.74e-05,
+  essentially matching the clean pool's p = 3.22e-05. (mg-6b73) v15:
+  the *cross-language* polluted Aquitanian pool (50% Greek-shape
+  conjecturals) also PASSes — but ~70× weaker, at p = 2.01e-03 — and
+  within the right tail real Aquitanian dominates Greek-shape
+  conjecturals at p = 8.29e-05. (mg-7ecb) The headline gate clears
+  for any pool with non-trivial char-bigram overlap with the LM,
+  but within the right tail the framework partially respects
+  substrate-distribution shape.
+* **The right-tail leaderboard within-tail-discriminates substrate-
+  shape from non-substrate-shape when both are mixed in the same
+  pool.** v14 showed no within-tail discrimination on same-Aquitanian-
+  shape conjecturals (real-vs-conjectural MW p = 0.98). v15 showed
+  strong within-tail discrimination on Greek-shape conjecturals
+  (real-vs-conjectural-greek MW p = 8.29e-05). The distinguishing
+  axis is whether the polluting distribution matches the substrate's
+  own; when it doesn't, the leaderboard partially recovers signal
+  even though the population gate doesn't break. (mg-7ecb)
 * **The metric (`external_phoneme_perplexity_v0`) discriminates
   substrate from random-phonotactic controls when the substrate
   surfaces are well-attested.** The top of every substrate pool's
@@ -589,14 +686,19 @@ tail leaderboard.
 * **"The right-tail substrate surfaces are validated as substrate
   vocabulary."** The v14 polluted-pool test rules this out: the
   framework cannot distinguish real Aquitanian roots from
-  phonotactically-matched conjectural surfaces in the same pool's
-  right tail (top-20 split 9 real / 11 conjectural; real-vs-
-  conjectural one-tail MW p = 0.98). The right tail is a
-  *phonotactic-shape* response, not a substrate-vocabulary
-  validation. Surfaces in the v10 top-K should be read as
-  "Aquitanian-shaped surfaces the LM rewards consistently in the
-  Linear-A corpus" — not as "real Aquitanian roots the framework
-  has identified in Linear-A." (mg-6b73)
+  *same-distribution* (Aquitanian-shape) phonotactically-matched
+  conjectural surfaces in the same pool's right tail (top-20 split
+  9 real / 11 conjectural; real-vs-conjectural one-tail MW p = 0.98,
+  mg-6b73). The right tail is a *phonotactic-shape* response, not a
+  substrate-vocabulary validation. Surfaces in the v10 top-K should
+  be read as "Aquitanian-shaped surfaces the LM rewards consistently
+  in the Linear-A corpus" — not as "real Aquitanian roots the
+  framework has identified in Linear-A." v15 partially refines this:
+  the framework *does* discriminate real from *cross-language*
+  conjectural surfaces (real-vs-conjectural-greek p = 8.29e-05,
+  mg-7ecb), so the response is specifically Aquitanian-shaped, not
+  just any-shape-the-Basque-LM-likes. But the per-surface
+  vocabulary-validation claim remains unsupported.
 * **"Linear-A is Etruscan / Aquitanian / pre-Greek"** is *not*
   supported. The framework tests whether substrate roots beat
   matched controls in the right tail under a phoneme LM; it does
@@ -639,17 +741,23 @@ tail leaderboard.
 
 ## Remaining work for full publication
 
-In rough priority order, *as updated by the v14 verdict*:
+In rough priority order, *as updated by the v14 + v15 verdicts*:
 
-1. **Domain-expert review of top-K Etruscan and Aquitanian
+1. **v16: methodology paper draft.** v14 + v15 together have
+   solidified the manuscript-shape claim into the partial-
+   discrimination refinement above; v16 polishes that narrative
+   for external readers. Out of scope for v15 itself; the natural
+   next ticket.
+2. **Domain-expert review of top-K Etruscan and Aquitanian
    surfaces** — is the right-tail leaderboard a reasonable lexical
-   subset, or are we surfacing morphological artifacts? After v14
-   this is the load-bearing missing piece: the framework cannot
-   itself distinguish real surfaces from phonotactically-matched
-   conjecturals (mg-6b73), so the only way to convert "the right
-   tail is phonotactically Aquitanian-shape-likely" into "the
-   right tail is real Aquitanian vocabulary present in Linear-A"
-   is independent expert review. Not a polecat ticket.
+   subset, or are we surfacing morphological artifacts? After v14 +
+   v15 this is the load-bearing missing piece: the framework
+   *partially* distinguishes real surfaces from cross-language
+   conjecturals but does not distinguish real from same-distribution
+   conjecturals. The only way to convert "the right tail is
+   phonotactically Aquitanian-shape-likely" into "the right tail is
+   real Aquitanian vocabulary present in Linear-A" is independent
+   expert review. Not a polecat ticket.
 3. **Refined acceptance gate that is robust to mixed-cleanness
    pools.** The Linear-B positive control's failure-by-long-tail
    is a methodological signal that v13's K-sweep partially
@@ -674,11 +782,15 @@ In rough priority order, *as updated by the v14 verdict*:
    the framework can in principle test any substrate hypothesis
    with attested vocabulary and a phoneme LM. None of these is on
    the critical path for the existing pools' validation.
-7. **v15 (optional): pollution-level sweep / cross-language
-   pollution.** v14's binary 50%-pollution result PASSed; finer-
-   grained characterization (10% / 25% / 75%, plus pollution from
-   *different* languages' phonotactic shapes) would tell us
-   whether the gate has a sharp threshold or any phonotactic-
-   shape selectivity. Not load-bearing for the manuscript shape.
-8. **Manuscript draft.** Out of scope for polecat-side work; the
-   present document is the v0 narrative outline.
+7. **(Optional) Pollution-level sweep.** v15 ran the cross-language
+   pollution test that v14 deferred; finer-grained same-distribution
+   pollution sweeps (10% / 25% / 75%) would tell us whether the
+   gate has a sharp threshold or smooth gradient under same-
+   distribution noise. Not load-bearing for the manuscript shape
+   after v15.
+8. **(Optional) Cross-language gates with other LMs.** v15 used
+   Mycenaean-Greek as the polluting LM. The same test under Etruscan
+   or Linear-B-as-substrate could illuminate which Mediterranean
+   phonotactic features the gate is responding to. Defer pending
+   v16 manuscript priorities.
+9. **Manuscript draft.** Subsumed by v16 above.

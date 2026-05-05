@@ -101,6 +101,12 @@ _SIDECAR_METRICS = frozenset({
 _PER_POOL_SIDECAR_TAG: dict[str, str] = {
     "polluted_aquitanian": "polluted",
     "control_polluted_aquitanian": "polluted",
+    # mg-7ecb (harness v15): cross-language polluted pool — own
+    # sidecar so the v15 work product is independently versionable
+    # and the per-pool .jsonl stays well under GitHub's 100 MB push
+    # limit.
+    "greek_polluted_aquitanian": "polluted_greek",
+    "control_greek_polluted_aquitanian": "polluted_greek",
 }
 
 # Pool → external-language-model mapping for external_phoneme_perplexity_v0.
@@ -130,6 +136,14 @@ _EXT_POOL_LANGUAGE: dict[str, str] = {
     # control mirrors that LM choice so paired_diff cancels the LM out.
     "polluted_aquitanian": "basque",
     "control_polluted_aquitanian": "basque",
+    # mg-7ecb: cross-language polluted Aquitanian pool — 50/50 real
+    # Aquitanian + Greek-shape conjecturals — cross-language pollution
+    # test for harness v15. Routes through the Basque LM (same as
+    # clean Aquitanian) to test whether the gate's PASS depends on
+    # substrate-distribution shape: the conjecturals violate Aquitanian
+    # shape, so a PASS here would mean the gate has no shape selectivity.
+    "greek_polluted_aquitanian": "basque",
+    "control_greek_polluted_aquitanian": "basque",
 }
 
 # Metrics that the candidate_signature.v1 shape supports. The signature

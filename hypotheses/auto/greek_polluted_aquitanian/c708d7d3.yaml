@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ohe_HT_108_13_15
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ohe'' pinned to HT 108 tokens [13..15].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ohe
+  phonemes:
+  - o
+  - h
+  - e
+  gloss_hint: bed
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 108
+  span:
+  - 13
+  - 15
+  sign_to_phoneme:
+    AB51: o
+    AB58: h
+    AB30: e

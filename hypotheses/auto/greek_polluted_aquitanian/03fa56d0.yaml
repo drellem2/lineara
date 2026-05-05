@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_aho_HT_104_5_7
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''aho'' pinned to HT 104 tokens [5..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: aho
+  phonemes:
+  - a
+  - h
+  - o
+  gloss_hint: mouth
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 104
+  span:
+  - 5
+  - 7
+  sign_to_phoneme:
+    AB01: a
+    AB81: h
+    AB09: o

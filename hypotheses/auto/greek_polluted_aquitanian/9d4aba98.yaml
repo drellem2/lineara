@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_handi_KN_Zc_7_14_18
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''handi'' pinned to KN Zc 7 tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: handi
+  phonemes:
+  - h
+  - a
+  - n
+  - d
+  - i
+  gloss_hint: big
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB57: h
+    AB31: a
+    AB60: n
+    AB08: d
+    AB06: i

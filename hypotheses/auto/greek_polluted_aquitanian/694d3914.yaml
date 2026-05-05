@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_txakur_KN_Zc_6_5_9
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''txakur'' pinned to KN Zc 6 tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: txakur
+  phonemes:
+  - tx
+  - a
+  - k
+  - u
+  - r
+  gloss_hint: dog
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB07: tx
+    AB01: a
+    AB67: k
+    AB37: u
+    AB03: r

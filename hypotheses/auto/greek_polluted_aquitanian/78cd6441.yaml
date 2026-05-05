@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_sembe_KN_Zc_6_20_25
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''sembe'' pinned to KN Zc 6 tokens [20..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: sembe
+  phonemes:
+  - s
+  - e
+  - m
+  - b
+  - e
+  gloss_hint: son
+  citation: Gorrochategui 1984, Aq. SEMBE/SENBE; Basque cognate seme (Trask 1997 ch.
+    3).
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 20
+  - 25
+  sign_to_phoneme:
+    AB81: s
+    AB55: e
+    AB10: m
+    AB28: b
+    AB79: e

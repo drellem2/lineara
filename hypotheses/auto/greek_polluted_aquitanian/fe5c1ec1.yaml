@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_hamar_HT_122b_13_17
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''hamar'' pinned to HT 122b tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: hamar
+  phonemes:
+  - h
+  - a
+  - m
+  - a
+  - r
+  gloss_hint: ten
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB08: h
+    AB60: a
+    AB65: m
+    AB10: a
+    AB45: r

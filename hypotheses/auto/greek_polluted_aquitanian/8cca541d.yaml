@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ume_GO_Wc_1a_1_3
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ume'' pinned to GO Wc 1a tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ume
+  phonemes:
+  - u
+  - m
+  - e
+  gloss_hint: child, young
+  citation: Trask 1997 ch. 3; cf. Aq. UMME.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB31: u
+    AB58: m
+    AB80: e

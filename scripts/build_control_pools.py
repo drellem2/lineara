@@ -52,6 +52,12 @@ _SUBSTRATE_POOLS = (
     "toponym",
     "linear_b_carryover",
     "polluted_aquitanian",
+    # mg-7ecb (harness v15): cross-language polluted Aquitanian pool —
+    # 153 real Aquitanian + 153 Greek-shape conjecturals. Matched
+    # control samples from the *combined* phoneme distribution (half
+    # Aquitanian shape, half Greek shape) so the control mirrors what
+    # the polluted pool actually contains.
+    "greek_polluted_aquitanian",
 )
 _REDRAW_LIMIT = 50
 

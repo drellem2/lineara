@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_buru_HT_123b_42_45
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''buru'' pinned to HT 123b tokens [42..45].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: buru
+  phonemes:
+  - b
+  - u
+  - r
+  - u
+  gloss_hint: head
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 42
+  - 45
+  sign_to_phoneme:
+    AB51: b
+    AB80: u
+    AB28: r
+    AB06: u

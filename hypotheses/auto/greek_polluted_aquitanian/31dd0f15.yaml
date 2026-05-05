@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_gau_HT_103_15_17
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''gau'' pinned to HT 103 tokens [15..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: gau
+  phonemes:
+  - g
+  - a
+  - u
+  gloss_hint: night
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 15
+  - 17
+  sign_to_phoneme:
+    AB01: g
+    AB81: a
+    AB06: u

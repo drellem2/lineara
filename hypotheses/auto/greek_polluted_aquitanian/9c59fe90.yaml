@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_leiho_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''leiho'' pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: leiho
+  phonemes:
+  - l
+  - e
+  - i
+  - h
+  - o
+  gloss_hint: window
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: l
+    AB31: e
+    AB58: i
+    AB80: h
+    AB28: o

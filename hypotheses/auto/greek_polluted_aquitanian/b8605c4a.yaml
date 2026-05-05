@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ile_HT_1_15_17
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ile'' pinned to HT 1 tokens [15..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ile
+  phonemes:
+  - i
+  - l
+  - e
+  gloss_hint: hair
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 1
+  span:
+  - 15
+  - 17
+  sign_to_phoneme:
+    AB81: i
+    AB56: l
+    AB55: e

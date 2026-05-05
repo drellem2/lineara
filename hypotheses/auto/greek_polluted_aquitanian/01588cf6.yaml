@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_hezur_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''hezur'' pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: hezur
+  phonemes:
+  - h
+  - e
+  - z
+  - u
+  - r
+  gloss_hint: bone
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: h
+    AB26: e
+    AB78: z
+    AB76: u
+    AB10: r

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_zaldi_HT_Zb_158b_1_5
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''zaldi'' pinned to HT Zb 158b tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: zaldi
+  phonemes:
+  - z
+  - a
+  - l
+  - d
+  - i
+  gloss_hint: horse
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB67: z
+    AB53: a
+    AB04: l
+    AB28: d
+    AB57: i

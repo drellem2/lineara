@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_hezur_KN_Zc_6_4_8
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''hezur'' pinned to KN Zc 6 tokens [4..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: hezur
+  phonemes:
+  - h
+  - e
+  - z
+  - u
+  - r
+  gloss_hint: bone
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    AB08: h
+    AB07: e
+    AB01: z
+    AB67: u
+    AB37: r

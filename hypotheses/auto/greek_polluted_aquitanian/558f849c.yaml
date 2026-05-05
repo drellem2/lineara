@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_haran_KN_Zc_6_19_24
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''haran'' pinned to KN Zc 6 tokens [19..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: haran
+  phonemes:
+  - h
+  - a
+  - r
+  - a
+  - n
+  gloss_hint: valley
+  citation: Trask 1997 ch. 3 (Basque haran).
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 24
+  sign_to_phoneme:
+    AB03: h
+    AB81: a
+    AB55: r
+    AB10: a
+    AB28: n

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_aita_ARKH_2_21_24
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''aita'' pinned to ARKH 2 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: aita
+  phonemes:
+  - a
+  - i
+  - t
+  - a
+  gloss_hint: father
+  citation: Trask 1997 ch. 3; cf. Aq. ATTA.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB08: a
+    AB58: i
+    AB50: t
+    AB54: a

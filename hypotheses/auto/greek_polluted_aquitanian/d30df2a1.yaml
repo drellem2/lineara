@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_arto_HT_117a_63_66
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''arto'' pinned to HT 117a tokens [63..66].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: arto
+  phonemes:
+  - a
+  - r
+  - t
+  - o
+  gloss_hint: corn, millet
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 63
+  - 66
+  sign_to_phoneme:
+    AB70: a
+    AB31: r
+    AB28: t
+    AB37: o

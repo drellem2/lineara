@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_arreba_KN_Zc_7_16_21
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''arreba'' pinned to KN Zc 7 tokens [16..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: arreba
+  phonemes:
+  - a
+  - r
+  - r
+  - e
+  - b
+  - a
+  gloss_hint: sister (of a man)
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 16
+  - 21
+  sign_to_phoneme:
+    AB60: a
+    AB08: r
+    AB06: r
+    AB24: e
+    AB40: b
+    AB39: a

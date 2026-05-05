@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_izar_HT_108_0_3
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''izar'' pinned to HT 108 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: izar
+  phonemes:
+  - i
+  - z
+  - a
+  - r
+  gloss_hint: star
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 108
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB67: i
+    AB27: z
+    AB59: a
+    AB06: r

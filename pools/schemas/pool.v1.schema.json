@@ -76,8 +76,11 @@
           },
           "provenance": {
             "type": "string",
-            "description": "Source provenance of this entry. 'real' = drawn from an attested language source. 'conjectural' = synthetic test-artifact entry (e.g. for the held-out pool-curation pollution test, mg-6b73). Optional; defaults to 'real' when omitted.",
-            "enum": ["real", "conjectural"]
+            "description": "Source provenance of this entry. 'real' = drawn from an attested language source. 'conjectural' = synthetic test-artifact entry drawn from the substrate's own marginal phoneme distribution (mg-6b73, harness v14). 'conjectural_<language>' = synthetic test-artifact entry drawn from a *different* language's char-bigram distribution; e.g. 'conjectural_greek' for the cross-language pollution test (mg-7ecb, harness v15). Optional; defaults to 'real' when omitted.",
+            "anyOf": [
+              {"enum": ["real", "conjectural"]},
+              {"pattern": "^conjectural_[a-z][a-z0-9_]*$"}
+            ]
           }
         }
       }

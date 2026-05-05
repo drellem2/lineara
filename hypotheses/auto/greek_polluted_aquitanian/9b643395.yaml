@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_nor_HT_104_13_15
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''nor'' pinned to HT 104 tokens [13..15].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: nor
+  phonemes:
+  - n
+  - o
+  - r
+  gloss_hint: who
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 104
+  span:
+  - 13
+  - 15
+  sign_to_phoneme:
+    AB28: n
+    AB51: o
+    AB37: r

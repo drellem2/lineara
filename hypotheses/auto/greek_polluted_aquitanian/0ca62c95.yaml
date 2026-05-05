@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_hara_HT_115a_37_40
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''hara'' pinned to HT 115a tokens [37..40].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: hara
+  phonemes:
+  - h
+  - a
+  - r
+  - a
+  gloss_hint: stone, rock
+  citation: Gorrochategui 1984; Basque harri (Trask 1997 ch. 3).
+equation:
+  inscription_id: HT 115a
+  span:
+  - 37
+  - 40
+  sign_to_phoneme:
+    AB08: h
+    AB09: a
+    AB57: r
+    A718: a

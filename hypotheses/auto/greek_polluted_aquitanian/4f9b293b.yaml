@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_mihi_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''mihi'' pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: mihi
+  phonemes:
+  - m
+  - i
+  - h
+  - i
+  gloss_hint: tongue
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: m
+    AB58: i
+    AB47: h
+    AB04: i

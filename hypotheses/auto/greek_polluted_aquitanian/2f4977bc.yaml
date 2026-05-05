@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_txerri_GO_Wc_1a_1_5
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''txerri'' pinned to GO Wc 1a tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: txerri
+  phonemes:
+  - tx
+  - e
+  - r
+  - r
+  - i
+  gloss_hint: pig
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB31: tx
+    AB58: e
+    AB80: r
+    AB28: r
+    AB09: i

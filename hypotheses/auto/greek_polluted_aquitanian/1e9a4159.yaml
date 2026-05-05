@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_bels_HT_123b_42_45
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''bels'' pinned to HT 123b tokens [42..45].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: bels
+  phonemes:
+  - b
+  - e
+  - l
+  - s
+  gloss_hint: black, raven
+  citation: Gorrochategui 1984, Aq. BELS-/BELES-; Basque beltz (Trask 1997 ch. 3).
+equation:
+  inscription_id: HT 123b
+  span:
+  - 42
+  - 45
+  sign_to_phoneme:
+    AB51: b
+    AB80: e
+    AB28: l
+    AB06: s

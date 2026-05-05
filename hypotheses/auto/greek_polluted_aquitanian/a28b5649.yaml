@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_mendi_HT_Zb_158b_0_4
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''mendi'' pinned to HT Zb 158b tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: mendi
+  phonemes:
+  - m
+  - e
+  - n
+  - d
+  - i
+  gloss_hint: mountain
+  citation: Trask 1997 ch. 3 (Basque mendi).
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB58: m
+    AB67: e
+    AB53: n
+    AB04: d
+    AB28: i

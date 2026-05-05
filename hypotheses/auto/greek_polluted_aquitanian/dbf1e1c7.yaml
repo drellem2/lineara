@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_bi_ARKH_3b_6_7
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''bi'' pinned to ARKH 3b tokens [6..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: bi
+  phonemes:
+  - b
+  - i
+  gloss_hint: two
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: ARKH 3b
+  span:
+  - 6
+  - 7
+  sign_to_phoneme:
+    AB39: b
+    A314: i

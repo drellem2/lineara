@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_leher_HT_110a_0_4
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''leher'' pinned to HT 110a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: leher
+  phonemes:
+  - l
+  - e
+  - h
+  - e
+  - r
+  gloss_hint: pine
+  citation: Gorrochategui 1984, Aq. theonym LEHERENNO; Basque leher.
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB41: l
+    AB51: e
+    AB34: h
+    AB81: e
+    AB73: r

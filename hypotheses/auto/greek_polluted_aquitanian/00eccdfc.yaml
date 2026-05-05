@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ekarri_GO_Wc_1a_0_5
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ekarri'' pinned to GO Wc 1a tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ekarri
+  phonemes:
+  - e
+  - k
+  - a
+  - r
+  - r
+  - i
+  gloss_hint: bring
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: e
+    AB31: k
+    AB58: a
+    AB80: r
+    AB28: r
+    AB09: i

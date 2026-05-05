@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_esku_HT_122b_14_17
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''esku'' pinned to HT 122b tokens [14..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: esku
+  phonemes:
+  - e
+  - s
+  - k
+  - u
+  gloss_hint: hand
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB60: e
+    AB65: s
+    AB10: k
+    AB45: u

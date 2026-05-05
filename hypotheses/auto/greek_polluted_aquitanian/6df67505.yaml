@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_begi_ARKH_5_0_3
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''begi'' pinned to ARKH 5 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: begi
+  phonemes:
+  - b
+  - e
+  - g
+  - i
+  gloss_hint: eye
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: b
+    AB51: e
+    AB30: g
+    AB59: i

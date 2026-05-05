@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_zur_ARKH_5_1_3
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''zur'' pinned to ARKH 5 tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: zur
+  phonemes:
+  - z
+  - u
+  - r
+  gloss_hint: wood
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB51: z
+    AB30: u
+    AB59: r

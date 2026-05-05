@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_larre_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''larre'' pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: larre
+  phonemes:
+  - l
+  - a
+  - r
+  - r
+  - e
+  gloss_hint: pasture, moor
+  citation: Gorrochategui 1984, Aq. theonym LARRAHI; Basque larre.
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: l
+    AB45: a
+    AB80: r
+    A323: r
+    AB06: e

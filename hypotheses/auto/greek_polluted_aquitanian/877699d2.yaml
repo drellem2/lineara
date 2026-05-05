@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_hegazti_KN_Zf_13_5_11
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''hegazti'' pinned to KN Zf 13 tokens [5..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: hegazti
+  phonemes:
+  - h
+  - e
+  - g
+  - a
+  - z
+  - t
+  - i
+  gloss_hint: bird
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 11
+  sign_to_phoneme:
+    A301: h
+    AB39: e
+    AB44: g
+    AB03: a
+    AB57: z
+    AB59: t
+    AB53: i

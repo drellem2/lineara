@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_gison_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''gison'' pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: gison
+  phonemes:
+  - g
+  - i
+  - s
+  - o
+  - n
+  gloss_hint: man (modern reflex of CISON)
+  citation: Gorrochategui 1984; Basque gizon (modern Basque).
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: g
+    AB45: i
+    AB80: s
+    A323: o
+    AB06: n

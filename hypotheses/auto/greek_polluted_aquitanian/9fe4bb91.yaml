@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_atta_ARKH_2_8_11
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''atta'' pinned to ARKH 2 tokens [8..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: atta
+  phonemes:
+  - a
+  - t
+  - t
+  - a
+  gloss_hint: father
+  citation: Gorrochategui 1984, Aq. ATTA; Basque aita (Trask 1997 ch. 3).
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    AB08: a
+    AB41: t
+    AB01: t
+    AB05: a

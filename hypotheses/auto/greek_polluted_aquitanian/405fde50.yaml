@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_nahi_GO_Wc_1a_2_5
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''nahi'' pinned to GO Wc 1a tokens [2..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: nahi
+  phonemes:
+  - n
+  - a
+  - h
+  - i
+  gloss_hint: want, desire
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    AB58: n
+    AB80: a
+    AB28: h
+    AB09: i

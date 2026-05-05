@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_hanna_HT_110a_0_4
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''hanna'' pinned to HT 110a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: hanna
+  phonemes:
+  - h
+  - a
+  - n
+  - n
+  - a
+  gloss_hint: brother (proposed)
+  citation: Gorrochategui 1984, Aq. HANN- element; cf. Basque anaia.
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB41: h
+    AB51: a
+    AB34: n
+    AB81: n
+    AB73: a

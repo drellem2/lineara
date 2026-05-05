@@ -3026,6 +3026,254 @@ result *could* motivate (none filed yet):
 - `harness/tests/test_polluted_pool.py` — 11 unit tests on the
   builder + 1 sanity check on the committed pool YAML.
 
+## Findings from mg-7ecb
+
+### Headline
+
+**The cross-language polluted Aquitanian pool clears the v10 right-
+tail bayesian gate at p = 2.006e-03 (top-20 split: 13 real / 7
+conjectural-greek), AND within the right tail real Aquitanian
+surfaces dominate Greek-shape conjecturals at p = 8.292e-05.** This
+is the *partial-discrimination* outcome the v15 brief flagged as
+"the most interesting case for the manuscript". The framework's
+gate has measurable shape selectivity (the cross-language gate is
+~70× weaker than v14's same-distribution gate at p = 2.74e-05 and
+~16× weaker than v10's clean-pool gate at p = 3.22e-05), AND within
+the substrate-side right tail real Aquitanian dominates Greek-shape
+conjecturals at p < 0.001 — but the population gate still PASSes
+because the LM rewards Greek-shape phonotactic strings well enough
+relative to scramble controls.
+
+The v14 manuscript-shape claim was:
+
+> The framework detects substrate-LM-phonotactic kinship at the
+> population level for any pool whose phoneme + length distribution
+> is drawn from the substrate's own marginal distribution. It does
+> NOT detect "real substrate vocabulary," and does NOT support
+> per-sign reading claims.
+
+v15 **refines** that claim. Both halves of the v14 claim survive,
+but the boundary is sharper than v14 alone could reveal:
+
+* The headline-PASS condition is broader than v14's clause says —
+  the gate clears for any pool with non-trivial char-bigram overlap
+  with the LM, even when the pool's phoneme distribution does NOT
+  match the substrate's. Greek-shape conjecturals carry enough
+  Mediterranean-style CV phonotactics that they out-score scramble
+  controls under the Basque LM.
+* But within-tail discrimination is real and large: real Aquitanian
+  surfaces dominate Greek-shape conjecturals at p < 0.001 (top-20
+  median posteriors 0.9808 real vs 0.9519 conjectural-greek), even
+  when both are mixed in the same pool. v14's same-distribution
+  pollution showed NO within-tail discrimination (real-vs-conjectural
+  MW p = 0.98); v15's cross-language pollution shows STRONG within-
+  tail discrimination.
+
+The framework is therefore *partially* selective to substrate-
+distribution shape: enough to push Greek-shape conjecturals down
+the leaderboard relative to real Aquitanian, but not enough to
+break the population gate.
+
+### Provenance breakdown of the polluted-pool top-20
+
+Of the top-20 substrate posteriors in the cross-language polluted
+pool:
+
+- **13 of 20 (65%)** carry `provenance: real`.
+- **7 of 20 (35%)** carry `provenance: conjectural_greek`.
+
+The conjecturals that *did* land in the top-20 (`aki`, `ame`,
+`awa`, `fren`, `ini`, `joten`, `kare`) all share a particular
+Mediterranean-CV shape that the Basque LM rewards heavily —
+short open-syllable strings (CV.CV / V.CV / CV.CV.CV) without
+the Greek-distinctive `j-` / `w-` glides or geminate clusters
+that would have flagged them as out-of-distribution. The
+Greek-shape conjecturals that fell out of the top-20 are heavier
+in those distinctive features.
+
+### Comparison to v14 and v10
+
+| pool                                 | gate p   | top substrate median | top control median | within-tail real-vs-conj p |
+|--------------------------------------|---------:|---------------------:|-------------------:|---------------------------:|
+| greek_polluted_aquitanian (v15)      | 2.01e-03 | 0.9808               | 0.9735             | 8.29e-05                   |
+| polluted_aquitanian (v14)            | 2.74e-05 | 0.9808               | 0.9572             | 0.98                       |
+| aquitanian (v10)                     | 3.22e-05 | 0.9808               | 0.9512             | (n/a, no conjecturals)     |
+
+The control-side median rises monotonically from clean (0.9512)
+to same-distribution polluted (0.9572) to cross-language polluted
+(0.9735) — the matched controls in v15 are partly drawn from
+Greek-shape phonemes, which are themselves Basque-LM-favorable
+under the matched-control sampler. The substrate-side median is
+the same 0.9808 in all three pools (cap-per-entry=50 ceiling).
+The shrinking substrate-vs-control gap is what produces the
+weaker but still-PASSing gate.
+
+The within-tail real-vs-conjectural MW p value is the cleanest
+diagnostic: 0.98 in v14 (no discrimination) → 8.3e-05 in v15
+(strong discrimination). v14's same-Aquitanian-shape conjecturals
+are *indistinguishable* from real Aquitanian to the framework;
+v15's Greek-shape conjecturals are *distinguishable*. So the
+distinguishing axis is the polluting distribution's similarity
+to the substrate's own — when the polluting distribution differs,
+the framework partially recovers signal.
+
+### Distribution shift on real surfaces
+
+Of the 153 real Aquitanian surfaces present in both rollups
+(clean Aquitanian and cross-language polluted):
+
+| pool                | mean posterior | median posterior | min   | max   |
+|---------------------|---------------:|-----------------:|------:|------:|
+| clean Aquitanian    | 0.5033         | 0.5192           | 0.013 | 0.982 |
+| cross-language      | 0.5484         | 0.5192           | 0.019 | 0.981 |
+
+- Mean Δ (cross-language − clean): **+0.0451**
+- Median Δ:                        **+0.0577**
+- Pos / neg counts:                **+85 / −65 / =0: 3**
+
+The real Aquitanian surfaces' posteriors **shifted UP** when
+Greek-shape conjecturals were mixed in, by a meaningful +5.8%
+median. Mechanism: Greek-shape conjecturals don't compete as
+well as same-Aquitanian-shape conjecturals do for the same
+windows, so real Aquitanian wins more paired_diffs in the cross-
+language polluted pool than it does in the v14 same-distribution
+polluted pool (where v14's median Δ was just +0.019). This is
+consistent with the within-tail discrimination signal: the
+framework is rewarding substrate-shape over non-substrate-shape
+when both are competing for the same Linear-A windows.
+
+### Acceptance gate (re-stated for the audit trail)
+
+Pre-registered (mg-7ecb ticket): one-tail Mann-Whitney U on the
+cross-language polluted pool top-20 substrate posteriors vs the
+top-20 matched-control posteriors; p < 0.05 with substrate >
+control passes. Result: **U = 300.0, p = 2.006e-03, PASS** with
+median(substrate top-20) = 0.9808 vs median(control top-20) =
+0.9735.
+
+Within-tail real-vs-conjectural-greek MW U on the top-20 real
+posteriors vs the top-20 Greek-shape posteriors: **U = 310.0,
+p = 8.29e-05** — strong within-tail discrimination.
+
+### Construction artifact disclosure
+
+`pools/greek_polluted_aquitanian.yaml` is a deliberately-polluted
+test pool. Half of its 306 entries are real Aquitanian roots; the
+other half are synthetic conjectural surfaces sampled from the
+Mycenaean-Greek char-bigram distribution at
+`harness/external_phoneme_models/mycenaean_greek.json` under
+deterministic seed `0xfa0fd94c61e71b23` (`sha256("greek_polluted_
+aquitanian:conjectural")[:16]`). The pool's README warns
+prominently that it is a test artifact, not a substrate claim.
+Future ticket-holders stumbling on this YAML must not derive
+secondary artifacts from it (gloss tables, dictionaries,
+downstream training).
+
+### Sampling procedure for the Greek-shape conjecturals
+
+The brief asked for an explicit document of the sampling procedure;
+it lives in `pools/greek_polluted_aquitanian.README.md` and in the
+docstring of `_sample_word_from_external_lm()` in
+`scripts/build_polluted_pool.py`. Summary:
+
+* Each conjectural entry's length matches the corresponding real
+  entry's length (so the polluted pool's length distribution is
+  exactly 2× the real pool's).
+* The first character is sampled from the LM's unigram-marginal
+  restricted to the alphabet `a..z`; the `<W>` boundary token and
+  the space character are filtered out so the word starts with a
+  content character. Weights = `unigram_count + alpha`.
+* Each subsequent character is sampled conditional on the previous
+  character via `count(prev, c) + alpha`, again restricted to
+  `a..z` so the word never produces an early word-end. The relative
+  frequencies of alphabet bigrams are preserved; word-end / space
+  tokens are excluded at every step (the "regenerate to match
+  length" interpretation of the brief).
+* Each sampled character becomes a single-character phoneme,
+  matching how `external_phoneme_perplexity_v0` decomposes phonemes
+  to chars at scoring time.
+* Two-class V/S/C filter applied to every conjectural draw so the
+  candidate generator does not skip any conjectural entry.
+
+The realized Greek-shape conjectural inventory is dominated by `a`,
+`o`, `e`, `i`, `r`, `t`, `j`, `w`, `n`, `k` (top-10), differing
+visibly from the real Aquitanian top-10 of `a`, `i`, `e`, `r`, `n`,
+`o`, `u`, `h`, `l`, `b`. Greek-distinctive `j` and `w` (the LiBER
+syllabogram-derived transliteration of glides) appear with high
+frequency in the conjecturals but never in real Aquitanian roots.
+
+### Determinism and reproducibility
+
+Pool builder (with and without `--source-lm`), candidate generator,
+sweep runner, bayesian rollup, and v15 provenance analysis are all
+deterministic. Re-running the v15 pipeline from the
+`greek_polluted_aquitanian.yaml` and the existing corpus produces
+byte-identical artifacts. No RNG anywhere in the analysis path.
+
+The v14 default-mode pool builder still produces a byte-identical
+`pools/polluted_aquitanian.yaml` after the v15 refactor (verified
+manually on disk). The `--source-lm` flag is fully backward-
+compatible; omitting it preserves v14 behavior.
+
+### Out of scope and follow-ups
+
+The v15 binary result is now in. v16 (methodology paper) can be
+drafted with confidence about exactly which version of the v14
+manuscript-shape claim is supported — the **partial-discrimination
+refinement** above. Follow-up tickets the result *could* motivate
+(none filed yet):
+
+- **v16: methodology paper.** The manuscript-narrative refresh
+  flagged in the v15 brief. Out-of-scope for v15 itself; defer to
+  the dedicated ticket.
+- **Pollution-level sweep.** v14-suggested (10%, 25%, 75% same-
+  distribution pollution). v15 explicitly defers this as less
+  informative than the cross-language test that v15 ran instead.
+  Could now be run for completeness if a v17 ticket needs the
+  smooth gradient curve.
+- **Cross-language gates with other LMs.** v15 used Mycenaean-Greek
+  as the polluting LM. The same test under Etruscan or
+  Linear-B-as-substrate could illuminate which Mediterranean
+  phonotactic features the gate is actually responding to. Defer
+  pending v16 manuscript priorities.
+- **Stricter control sampler.** The matched-control top-20 median
+  rises monotonically (clean 0.9512 → polluted 0.9572 → greek-
+  polluted 0.9735); the control sampler is sensitive to the
+  polluted pool's combined phoneme distribution. A bigram-
+  preserving control would tighten the gate further.
+
+### See also
+
+- `results/rollup.bayesian_posterior.greek_polluted_aquitanian.md`
+  — full per-surface bayesian posterior leaderboard, top-20 side-
+  by-side, gate computation. Generated by the existing
+  `scripts/per_surface_bayesian_rollup.py`.
+- `results/rollup.bayesian_posterior.greek_polluted_aquitanian.provenance.md`
+  — v15-specific provenance breakdown of the top-20, real-vs-
+  conjectural-greek within-tail MW U, distribution-shift table,
+  top-10 shifted surfaces.
+- `pools/greek_polluted_aquitanian.yaml` +
+  `pools/greek_polluted_aquitanian.README.md` — the cross-
+  language polluted pool itself + construction documentation.
+  The README is the canonical "this is a test artifact, not a
+  claim" warning and contains the full sampling procedure.
+- `pools/control_greek_polluted_aquitanian.yaml` — matched
+  phonotactic control (306 entries, sampled from the polluted
+  pool's *combined* phoneme distribution, distinct seed).
+- `scripts/build_polluted_pool.py` — extended with `--source-lm`
+  / `--prefix` flags. Backward-compatible; default produces the
+  v14 byte-identical same-distribution pool.
+- `scripts/v15_cross_language_pollution_analysis.py` — post-
+  rollup provenance enrichment for the cross-language pool;
+  computes the v15 verdict text and writes the provenance md.
+- `harness/tests/test_polluted_pool.py` — extended with a
+  `CrossLanguagePollutedPoolBuilderTest` class (11 new tests on
+  the v15 builder) and a `CommittedGreekPollutedPoolTest` sanity
+  check on the committed pool YAML.
+- `harness/external_phoneme_models/mycenaean_greek.json` — the
+  source LM the conjecturals were drawn from. v12 artifact;
+  unchanged in v15.
+
 ## Known metric limitations
 
 - **Three metrics in a row missed the n=4 plausible-vs-wrong gate;

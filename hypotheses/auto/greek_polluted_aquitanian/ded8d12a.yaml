@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_arrain_KN_Zc_6_4_9
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''arrain'' pinned to KN Zc 6 tokens [4..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: arrain
+  phonemes:
+  - a
+  - r
+  - r
+  - a
+  - i
+  - n
+  gloss_hint: fish
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 4
+  - 9
+  sign_to_phoneme:
+    AB08: a
+    AB07: r
+    AB01: r
+    AB67: a
+    AB37: i
+    AB03: n

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_txerri_KN_Zc_6_20_25
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''txerri'' pinned to KN Zc 6 tokens [20..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: txerri
+  phonemes:
+  - tx
+  - e
+  - r
+  - r
+  - i
+  gloss_hint: pig
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 20
+  - 25
+  sign_to_phoneme:
+    AB81: tx
+    AB55: e
+    AB10: r
+    AB28: r
+    AB79: i

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_txiki_HT_123b_42_45
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''txiki'' pinned to HT 123b tokens [42..45].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: txiki
+  phonemes:
+  - tx
+  - i
+  - k
+  - i
+  gloss_hint: small
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 42
+  - 45
+  sign_to_phoneme:
+    AB51: tx
+    AB80: i
+    AB28: k
+    AB06: i

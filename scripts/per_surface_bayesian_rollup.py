@@ -83,6 +83,7 @@ _SUBSTRATE_POOLS: tuple[str, ...] = (
     "toponym",
     "linear_b_carryover",
     "polluted_aquitanian",
+    "greek_polluted_aquitanian",
 )
 _DEFAULT_NMIN = 10
 _DEFAULT_TOP_PER_POOL = 50
@@ -103,6 +104,8 @@ _DEFAULT_LANGUAGE_DISPATCH: dict[str, str] = {
     "control_linear_b_carryover": "mycenaean_greek",
     "polluted_aquitanian": "basque",
     "control_polluted_aquitanian": "basque",
+    "greek_polluted_aquitanian": "basque",
+    "control_greek_polluted_aquitanian": "basque",
 }
 
 

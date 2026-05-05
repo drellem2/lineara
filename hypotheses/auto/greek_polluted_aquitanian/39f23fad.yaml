@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ez_ARKH_1b_2_3
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ez'' pinned to ARKH 1b tokens [2..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ez
+  phonemes:
+  - e
+  - z
+  gloss_hint: no, not
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 1b
+  span:
+  - 2
+  - 3
+  sign_to_phoneme:
+    AB57: e
+    AB27: z

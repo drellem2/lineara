@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ibai_ARKH_1a_21_24
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ibai'' pinned to ARKH 1a tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ibai
+  phonemes:
+  - i
+  - b
+  - a
+  - i
+  gloss_hint: river
+  citation: Trask 1997 ch. 3; cf. Aq. BAIGOR / BAI- prefix.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB73: i
+    AB67: b
+    AB31: a
+    AB24: i

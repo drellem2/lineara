@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_umme_ARKH_2_9_12
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''umme'' pinned to ARKH 2 tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: umme
+  phonemes:
+  - u
+  - m
+  - m
+  - e
+  gloss_hint: child
+  citation: Gorrochategui 1984, Aq. UMME-; Basque ume (Trask 1997).
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: u
+    AB01: m
+    AB05: m
+    AB28: e

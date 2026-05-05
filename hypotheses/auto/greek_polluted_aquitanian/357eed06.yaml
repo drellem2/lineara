@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_sori_HT_120_21_24
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''sori'' pinned to HT 120 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: sori
+  phonemes:
+  - s
+  - o
+  - r
+  - i
+  gloss_hint: hawk (proposed)
+  citation: Gorrochategui 1984, Aq. SORI- onomastic element.
+equation:
+  inscription_id: HT 120
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB67: s
+    AB27: o
+    AB59: r
+    AB06: i

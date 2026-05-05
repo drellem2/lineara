@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_edan_HT_115a_9_12
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''edan'' pinned to HT 115a tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: edan
+  phonemes:
+  - e
+  - d
+  - a
+  - n
+  gloss_hint: drink
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB53: e
+    AB59: d
+    AB80: a
+    AB55: n

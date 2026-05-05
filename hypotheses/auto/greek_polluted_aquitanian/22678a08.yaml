@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_bihotz_KN_Zf_13_12_16
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''bihotz'' pinned to KN Zf 13 tokens [12..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: bihotz
+  phonemes:
+  - b
+  - i
+  - h
+  - o
+  - tz
+  gloss_hint: heart
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 16
+  sign_to_phoneme:
+    AB09: b
+    AB04: i
+    AB53: h
+    AB23: o
+    AB08: tz

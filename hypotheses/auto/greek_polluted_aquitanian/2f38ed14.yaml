@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_gatz_ARKH_2_22_24
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''gatz'' pinned to ARKH 2 tokens [22..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: gatz
+  phonemes:
+  - g
+  - a
+  - tz
+  gloss_hint: salt
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 22
+  - 24
+  sign_to_phoneme:
+    AB58: g
+    AB50: a
+    AB54: tz

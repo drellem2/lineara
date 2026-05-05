@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ibai_HT_104_5_8
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ibai'' pinned to HT 104 tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ibai
+  phonemes:
+  - i
+  - b
+  - a
+  - i
+  gloss_hint: river
+  citation: Trask 1997 ch. 3; cf. Aq. BAIGOR / BAI- prefix.
+equation:
+  inscription_id: HT 104
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB01: i
+    AB81: b
+    AB09: a
+    AB24: i

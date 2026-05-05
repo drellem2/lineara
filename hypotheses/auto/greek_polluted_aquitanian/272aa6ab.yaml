@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_andere_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''andere'' pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: andere
+  phonemes:
+  - a
+  - n
+  - d
+  - e
+  - r
+  - e
+  gloss_hint: lady, woman of standing
+  citation: Gorrochategui 1984, Aquitanian theonym/anthroponym ANDERE; Trask 1997
+    ch. 3 (Basque cognate andere).
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: a
+    AB45: n
+    AB26: d
+    AB78: e
+    AB76: r
+    AB10: e

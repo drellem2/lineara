@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_odol_HT_115a_9_12
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''odol'' pinned to HT 115a tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: odol
+  phonemes:
+  - o
+  - d
+  - o
+  - l
+  gloss_hint: blood
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB53: o
+    AB59: d
+    AB80: o
+    AB55: l

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_baso_HT_110a_1_4
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''baso'' pinned to HT 110a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: baso
+  phonemes:
+  - b
+  - a
+  - s
+  - o
+  gloss_hint: forest
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 110a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB51: b
+    AB34: a
+    AB81: s
+    AB73: o

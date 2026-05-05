@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_gison_KN_Zf_13_7_11
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''gison'' pinned to KN Zf 13 tokens [7..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: gison
+  phonemes:
+  - g
+  - i
+  - s
+  - o
+  - n
+  gloss_hint: man (modern reflex of CISON)
+  citation: Gorrochategui 1984; Basque gizon (modern Basque).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 7
+  - 11
+  sign_to_phoneme:
+    AB44: g
+    AB03: i
+    AB57: s
+    AB59: o
+    AB53: n

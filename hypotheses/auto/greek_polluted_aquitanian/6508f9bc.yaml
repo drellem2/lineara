@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ezti_HT_119_11_14
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ezti'' pinned to HT 119 tokens [11..14].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ezti
+  phonemes:
+  - e
+  - z
+  - t
+  - i
+  gloss_hint: honey
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 119
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    AB81: e
+    AB56: z
+    AB06: t
+    AB69: i

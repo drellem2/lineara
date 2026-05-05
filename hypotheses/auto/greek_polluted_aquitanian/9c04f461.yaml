@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_esne_HT_117a_8_11
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''esne'' pinned to HT 117a tokens [8..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: esne
+  phonemes:
+  - e
+  - s
+  - n
+  - e
+  gloss_hint: milk
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    AB10: e
+    AB73: s
+    AB06: n
+    AB41: e

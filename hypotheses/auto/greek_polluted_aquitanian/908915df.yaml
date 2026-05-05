@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_zortzi_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''zortzi'' pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: zortzi
+  phonemes:
+  - z
+  - o
+  - r
+  - tz
+  - i
+  gloss_hint: eight
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: z
+    AB41: o
+    AB01: r
+    AB05: tz
+    AB28: i

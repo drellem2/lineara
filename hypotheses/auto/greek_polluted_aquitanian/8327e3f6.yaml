@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_olio_HT_117a_0_3
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''olio'' pinned to HT 117a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: olio
+  phonemes:
+  - o
+  - l
+  - i
+  - o
+  gloss_hint: oil
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB80: o
+    AB77: l
+    AB53: i
+    AB04: o

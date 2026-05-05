@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_aita_HT_117a_0_3
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''aita'' pinned to HT 117a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: aita
+  phonemes:
+  - a
+  - i
+  - t
+  - a
+  gloss_hint: father
+  citation: Trask 1997 ch. 3; cf. Aq. ATTA.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB80: a
+    AB77: i
+    AB53: t
+    AB04: a

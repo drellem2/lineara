@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_behar_KN_Zc_6_20_25
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''behar'' pinned to KN Zc 6 tokens [20..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: behar
+  phonemes:
+  - b
+  - e
+  - h
+  - a
+  - r
+  gloss_hint: need
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 20
+  - 25
+  sign_to_phoneme:
+    AB81: b
+    AB55: e
+    AB10: h
+    AB28: a
+    AB79: r

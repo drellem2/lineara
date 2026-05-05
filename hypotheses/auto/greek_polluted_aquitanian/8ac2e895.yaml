@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_lau_GO_Wc_1a_1_3
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''lau'' pinned to GO Wc 1a tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: lau
+  phonemes:
+  - l
+  - a
+  - u
+  gloss_hint: four
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB31: l
+    AB58: a
+    AB80: u

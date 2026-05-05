@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_euri_HT_128a_6_9
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''euri'' pinned to HT 128a tokens [6..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: euri
+  phonemes:
+  - e
+  - u
+  - r
+  - i
+  gloss_hint: rain
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 128a
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    AB26: e
+    AB56: u
+    AB09: r
+    AB13: i

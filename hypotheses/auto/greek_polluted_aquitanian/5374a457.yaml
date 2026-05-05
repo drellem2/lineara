@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_ilargi_KN_Zc_7_15_20
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''ilargi'' pinned to KN Zc 7 tokens [15..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: ilargi
+  phonemes:
+  - i
+  - l
+  - a
+  - r
+  - g
+  - i
+  gloss_hint: moon
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 20
+  sign_to_phoneme:
+    AB31: i
+    AB60: l
+    AB08: a
+    AB06: r
+    AB24: g
+    AB40: i

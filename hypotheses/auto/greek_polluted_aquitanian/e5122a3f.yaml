@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_gure_HT_103_19_22
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''gure'' pinned to HT 103 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: gure
+  phonemes:
+  - g
+  - u
+  - r
+  - e
+  gloss_hint: our
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB01: g
+    AB81: u
+    AB09: r
+    AB24: e

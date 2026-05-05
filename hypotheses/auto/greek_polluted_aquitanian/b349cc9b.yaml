@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_beltz_HT_117a_38_41
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''beltz'' pinned to HT 117a tokens [38..41].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: beltz
+  phonemes:
+  - b
+  - e
+  - l
+  - tz
+  gloss_hint: black
+  citation: Trask 1997 ch. 3; cf. Aq. BELS-.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 38
+  - 41
+  sign_to_phoneme:
+    AB73: b
+    AB26: e
+    AB59: l
+    AB60: tz

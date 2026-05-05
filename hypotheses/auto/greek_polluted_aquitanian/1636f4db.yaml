@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_begi_HT_1_19_22
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''begi'' pinned to HT 1 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: begi
+  phonemes:
+  - b
+  - e
+  - g
+  - i
+  gloss_hint: eye
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 1
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB08: b
+    AB60: e
+    AB06: g
+    AB27: i

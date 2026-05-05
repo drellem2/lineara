@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_greek_polluted_aquitanian_haize_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''greek_polluted_aquitanian''
+  entry surface=''haize'' pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: greek_polluted_aquitanian
+root:
+  surface: haize
+  phonemes:
+  - h
+  - a
+  - i
+  - z
+  - e
+  gloss_hint: wind
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: h
+    AB03: a
+    AB81: i
+    AB55: z
+    AB10: e
