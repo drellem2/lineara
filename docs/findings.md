@@ -5477,46 +5477,196 @@ chic-v1+:
   one minor site.
 
 
-## Findings from mg-c7e3 (chic-v1 — sign classification + paleographic candidates)
+## Findings from mg-c7e3 (chic-v1 — sign classification + paleographic candidates, 2026-05-05 — backfilled retroactively by mg-0ea1)
 
-**Note.** chic-v1 (mg-c7e3) merged before mg-362d but did not append a
-findings entry. This subsection back-fills the v1 findings as context
-for v2. The numbers below are read from the v1-emitted artifacts.
+**Provenance note.** chic-v1 (commit 021e1f113, mg-c7e3) merged ahead
+of chic-v2 (mg-362d) but did not append a findings entry at merge
+time, in violation of the AGENTS.md rule "every merge that produces a
+substantive observation appends a `## Findings from mg-XXXX`
+subsection to docs/findings.md". A slim back-fill stub was added
+inside the chic-v2 commit; this section, written by mg-0ea1,
+supersedes that stub with a complete v0/v18/v19-shape entry. All
+numbers below are read directly from chic-v1's committed artifacts:
+`pools/cretan_hieroglyphic_signs.yaml`,
+`pools/cretan_hieroglyphic_signs.README.md`,
+`pools/schemas/chic_signs.v1.schema.json`,
+`results/chic_sign_inventory.md`,
+`results/chic_vs_linear_a_sign_inventory_comparison.md`,
+`scripts/build_chic_signs.py`. No re-running was performed.
 
-### Sign-inventory partition
+### Headline
 
-- **131 distinct CHIC sign IDs** observed in the chic-v0 corpus.
-  Numeric-range classification rule (Olivier & Godart 1996; retained
-  in Younger's web edition):
-  - **96 syllabographic** (#001-#100).
-  - **35 ideogram** (#101-#299 logograms; #300-#399 numerals + fractions).
-  - **0 ambiguous** at v1; the `AMBIGUOUS_OVERRIDES` table is empty
-    by design — chic-v3 will revisit individual reclassifications.
-- The classification rule is purely numeric-range and conservative on
-  purpose. The chic-v1 brief explicitly warns that errors here
-  propagate into all chic-v2+ work.
+- **131 distinct CHIC sign IDs** observed in the chic-v0 corpus
+  (`corpora/cretan_hieroglyphic/all.jsonl`, 302 inscriptions).
+- Partition under the numeric-range classification rule:
+  - **96 syllabographic** (range #001-#100).
+  - **35 ideogram** (range #101-#299 logograms + #300-#399 numerals
+    and fractions).
+  - **0 ambiguous** at v1; the `AMBIGUOUS_OVERRIDES` table in
+    `scripts/build_chic_signs.py` is intentionally empty so chic-v3
+    can populate it from a fuller scholarly review without silently
+    reclassifying signs at v1.
+- **20 CHIC ↔ Linear A paleographic-anchor candidates** enumerated
+  (target band 10-20 per the ticket): **3 consensus / 10 proposed /
+  7 debated** (counts per `pools/cretan_hieroglyphic_signs.README.md`
+  and the candidate table in `results/chic_sign_inventory.md`). These
+  are the inputs that chic-v2 mechanically applies as anchors.
+- Total sign-token occurrences (clean + uncertain): **1489**, of
+  which **1420** fall in the syllabographic subset
+  (`results/chic_sign_inventory.md` summary table).
 
-### Sign-frequency distribution
+### Sign-inventory observations
 
-- The CHIC syllabographic distribution is heavy-tailed: the top
-  syllabographic sign (#044) occurs 128 times, and the top-15 covers
-  >50% of total syllabographic occurrences. This is a comparable
-  shape to Linear A (whose top-K covers a similar fraction in the
-  761-inscription SigLA corpus). The CHIC syllabographic subset is in
-  the same tractable-corpus regime — not a long flat tail of
-  hapax-legomena.
-- See `results/chic_sign_inventory.md` and
-  `results/chic_vs_linear_a_sign_inventory_comparison.md`.
+- **Top-frequency syllabograms** (`results/chic_sign_inventory.md`,
+  top-30 table). Five signs account for the bulk of syllabographic
+  occurrences: `#044` (128), `#049` (119), `#038` (75), `#031` (65),
+  `#042` (57). All five are paleographic-candidate signs (#044, #049,
+  #038, #042 = debated; #031 = consensus). The top syllabogram #044
+  alone covers 9% of syllabographic tokens.
+- **Position fingerprints** (start/mid/end thirds of the sign-only
+  sequence) reveal positional preferences. Strongly start-biased
+  signs include `#042` (start 0.72), `#062` (0.73), `#008` (0.71),
+  `#038` (0.55), `#044` (0.55), `#036` (0.50). Strongly end-biased
+  signs include `#014`, `#033`, `#076`, `#058` (each end ≥ 0.6).
+  Several signs are mid-cluster: `#019` (mid 0.54), `#021` (1.0),
+  `#039` (0.71), `#092` (0.54). These fingerprints are deliberately
+  not interpreted as positional grammar at v1 — they are descriptors
+  for downstream substrate-framework work in chic-v3+.
+- **Genre fingerprint dominance: seal**. For most syllabographic
+  signs, the dominant support type is `seal`, reflecting CHIC's
+  178-entry sealstone subset (chic-v0 corpus_status). Bars dominate
+  for some signs (`#070` bar 17 vs seal 13; `#061` bar 16 vs seal 11;
+  `#054`, `#028`, `#001` etc.). Medallions and crescents are
+  secondary supports across the inventory.
+- **Ideogram inventory**: 35 ideogram-class signs, mostly singletons
+  (`results/chic_sign_inventory.md` ideograms-observed table). Most
+  frequent are `#153` SUS (pig, 7), `#156` GRA (grain, 7), `#152`
+  CAP (goat, 5), `#155` CYP (Cyprus-jar, 4), `#161` OLE (oil, 4).
+  Klasmatograms `#171`, `#172`, `#180` (place / category markers)
+  total 6 occurrences. Numeral / fraction signs (#300-#399) are
+  almost absent — only `#300` (1) is observed.
 
-### Paleographic anchor candidates
+### Paleographic anchor candidates (chic-v2 inputs)
 
-- **20 candidates** enumerated (target band ~10-20 per ticket spec):
-  3 consensus, 9 proposed, 8 debated. Sign-by-sign citations from
-  Younger online + Salgarella 2020 + Decorte 2017 + Civitillo 2016.
-- The 3 consensus matches (#016 = AB08 = `a`, #031 = AB02 = `ro`,
-  #070 = AB60 = `ra`) are documented as the most-secure paleographic
-  ↔ Linear A bridges in the literature; chic-v2 promotes these to
-  tier-1 anchors and the rest to tier-2.
+The 20 enumerated candidates, with CHIC sign id, proposed Linear A
+counterpart (AB-id), Linear B carryover value, confidence tier, and
+in-corpus frequency. Source of truth:
+`pools/cretan_hieroglyphic_signs.yaml` per-sign
+`paleographic_candidates` blocks; aggregated in
+`results/chic_sign_inventory.md` paleographic-candidate table.
+
+| CHIC | ≈ Linear A | LB value | Confidence | Freq |
+|---|---|---|---|---|
+| `#016` | AB08 | `a`  | consensus | 20  |
+| `#031` | AB02 | `ro` | consensus | 65  |
+| `#070` | AB60 | `ra` | consensus | 56  |
+| `#010` | AB57 | `ja` | proposed  | 50  |
+| `#025` | AB59 | `ta` | proposed  | 11  |
+| `#028` | AB37 | `ti` | proposed  | 22  |
+| `#041` | AB30 | `ni` | proposed  | 20  |
+| `#053` | AB13 | `me` | proposed  | 14  |
+| `#054` | AB23 | `mu` | proposed  | 22  |
+| `#057` | AB46 | `je` | proposed  | 35  |
+| `#061` | AB04 | `te` | proposed  | 39  |
+| `#073` | AB05 | `to` | proposed  | 5   |
+| `#077` | AB80 | `ma` | proposed  | 13  |
+| `#013` | AB03 | `pa` | debated   | 26  |
+| `#019` | AB44 | `ke` | debated   | 50  |
+| `#038` | AB28 | `i`  | debated   | 75  |
+| `#042` | AB54 | `wa` | debated   | 57  |
+| `#044` | AB67 | `ki` | debated   | 128 |
+| `#049` | AB45 | `de` | debated   | 119 |
+| `#092` | AB44 | `ke` | debated   | 37  |
+
+Citation sources (curated per-sign in
+`pools/cretan_hieroglyphic_signs.yaml`): Younger online CHIC
+sign-list (Wayback 20220703170656), Salgarella 2020 *Aegean Linear
+Script(s)* table 5.3, Decorte 2017/2018 paleography papers,
+Civitillo 2016 *La scrittura geroglifica minoica sui sigilli*. The
+3 consensus matches (#016, #031, #070) are concurred-on across
+multiple sources; the 7 debated matches are asserted in some
+sources but rejected in others (chic-v1 keeps them as debated and
+defers a single-source override to chic-v3+). chic-v2 (mg-362d)
+promoted the 3 consensus to tier-1 anchors and the remaining 17 to
+tier-2, then mechanically applied the lot to the 302 CHIC
+inscriptions.
+
+### Comparison to Linear A
+(`results/chic_vs_linear_a_sign_inventory_comparison.md`)
+
+| Metric | CHIC syllabographic | Linear A AB-syllabograms |
+|---|---|---|
+| Distinct signs | 96 | 69 |
+| Total sign tokens | 1420 | 2894 |
+| top-1 coverage | 9.0% | 4.8% |
+| top-5 coverage | 31.3% | 19.8% |
+| top-10 coverage | 49.3% | 35.5% |
+| top-20 coverage | 70.2% | 63.1% |
+| k for 50% coverage | 11 | 15 |
+| k for 80% coverage | 29 | 30 |
+
+- CHIC's syllabographic distribution is **heavier-tailed (more
+  concentrated)** than Linear A's: the top-10 CHIC syllabograms
+  cover 49% of tokens vs Linear A's top-10 at 36%; CHIC reaches
+  50% coverage by k=11, Linear A by k=15.
+- Both corpora are Zipfian; the CHIC corpus is **~2.0× smaller**
+  than Linear A by sign-token count (1420 vs 2894). Per-sign
+  frequencies are in the same order-of-magnitude regime — the
+  practical implication is that downstream chic-v3+ harnesses can
+  reuse the heavy-tail-sensitive metrics that the Linear A
+  pipeline already supports.
+- 80%-coverage rank is comparable (CHIC k=29, Linear A k=30) — the
+  productive sign repertoires for substrate-framework application
+  are nearly identical in size, which makes the cross-script
+  comparison budget tractable.
+
+### Limitations flagged for chic-v2+
+
+- **Numeric-range classification is conservative by construction.**
+  Several syllabographic-range signs have well-known iconographic
+  content (#008 double-axe, #038 double-axe variant, #044
+  trowel/gate per Civitillo 2016). v1 keeps them as syllabographic
+  per Olivier & Godart 1996 but flags them as `debated` where they
+  are also paleographic candidates. chic-v3 should populate
+  `AMBIGUOUS_OVERRIDES` if the substrate-framework signal demands
+  it.
+- **`paleographic_candidates` are enumerated, not validated.** v1
+  curates them from secondary sources but does not test the
+  proposed equivalences against any phonotactic or distributional
+  metric. chic-v2's mechanical anchor inheritance treats the
+  consensus subset as ground truth and tier-2 as conditional;
+  chic-v3 should re-evaluate tier-2 anchors against substrate-LM
+  perplexity before promoting any.
+- **Tail estimates are noisy.** With CHIC's 1420 sign tokens, the
+  top-20+ frequency rankings have ≥3 ties and several singletons
+  (`#015`, `#022`, `#024`, `#026`, ..., one-attestation signs).
+  Per-sign chic-v5 value extraction must explicitly account for
+  small-N uncertainty in the syllabographic tail.
+- **`#044` ↔ AB67 = `ki` is debated, not consensus**, despite #044
+  being the single most frequent CHIC sign (128 occurrences). If
+  the paleographic match is wrong, every chic-v2+ partial reading
+  involving #044 has a load-bearing error. chic-v3+ should give
+  this assignment a dedicated robustness check (re-run anchor
+  inheritance with #044 unanchored and compare cascade-candidate
+  distributions).
+- **Sign-class consistency between CHIC and Linear A is
+  approximate.** The Linear A AB-token comparison excludes
+  LOG-prefixed tokens, but a CHIC syllabographic-range sign may
+  correspond to a Linear A sign that the SigLA corpus tags
+  differently. The cross-corpus distribution comparison is a
+  sanity check, not a precise statistical claim — see the caveats
+  block in `results/chic_vs_linear_a_sign_inventory_comparison.md`.
+
+### Out of scope for chic-v1 (deferred per ticket)
+
+- Mechanical anchor inheritance (chic-v2 — done in mg-362d).
+- Substrate-framework application to the syllabographic subset
+  (chic-v3).
+- Per-sign value extraction for unknown CHIC syllabograms
+  (chic-v5+).
+- Cross-script correlation analysis (chic-v4).
+- Visual-paleography work beyond enumeration of scholarly-curated
+  candidates.
 
 ## Findings from mg-362d (chic-v2 — paleographic anchor inheritance + partial-reading map)
 
