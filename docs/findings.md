@@ -7511,3 +7511,308 @@ consecutive runs).
 - **Corpus-expansion ingest pass to add the full GORILA Za-
   series and any genuinely-dual-script CMS sealstone-catalog
   entries.** Filed for chic-v9+ / pm-lineara triage.
+
+## Findings from mg-b731 (v27 — methodology paper polish pass integrating v26 + chic-v8 (closes the LA-side / CHIC-side mechanical-verification + bilingual-constraint asymmetry), 2026-05-05)
+
+### Summary
+
+Editorial / verification ticket. No harness commits. v27 audits
+`docs/findings_summary.md` end-to-end after the v26 (mg-c202)
+Linear-A-side leaderboard-top-K mechanical-verification pass and
+the chic-v8 (mg-dfcc) dual-script bilingual-constraint analysis
+land. Both incremental edits had already been integrated into
+findings_summary.md by their originating polecats (v26's §4.6
+paragraph; chic-v8's §4.7 paragraph). v27 audits each, then
+extends the document's higher-level integration sections (Title,
+Abstract, §1 Introduction, §2 Methods, §6 Conclusion, §7
+Three-sentence reading test, §5.4 Limitations, Appendix A) to
+reflect the now-fully-cross-script + symmetric-mechanical-
+verification document shape suitable for journal-submission
+handoff.
+
+### Restructure / edits made
+
+1. **Title block** — extended lineage to enumerate chic-v6
+   (mg-a557), v26 (mg-c202), chic-v8 (mg-dfcc), and v27 (mg-b731);
+   updated harness-pipeline span from `mg-c103 (v24)` to
+   `mg-c202 (v26)`; updated chic sub-program span from
+   `mg-7c6d (chic-v5)` to `mg-dfcc (chic-v8)`; updated work-item
+   counts from "25 LA + 6 chic" to "27 LA + 9 chic"; flagged v25,
+   chic-v7, and v27 as the editorial-only polish passes.
+2. **Abstract** — added a full v26 paragraph (LB-carryover-only
+   baseline 177/772 = 22.93%; per-pool inscription-count lifts
+   +5/+6/+7/+5 across aquitanian/etruscan/toponym/eteocretan all
+   clearing chic-v6's +3-inscription tier-1 → tier-2 lift
+   threshold; sign-level inverse-verification companion at 29 / 22
+   / 19 / 30 contradictions per pool); added a chic-v6 + chic-v8
+   paragraph (chic-v6's +3-inscription / +20-hit tier-1 → tier-2
+   lift; chic-v8 verified Malia altar = CHIC #328 unilingual-CHIC
+   per Olivier-Godart 1996; 0 new tier-2 candidates; chic-v5
+   tier-2 count remains 3 unchanged; bilingual extension preserved
+   as a falsifiable fifth axis contingent on future corpus
+   expansion; explicit refusal to invoke conjectural genre-
+   parallels as load-bearing evidence).
+3. **§1 Introduction** — added the v26 / chic-v6 / chic-v8
+   sub-program references to the cross-section reading-guide
+   sentence at the end of the section.
+4. **§2 Methods** — promoted the §2.10 header from "Post-v15
+   additional gates (v18–v24)" to "Post-v15 additional gates
+   (v18–v26)" and added a fifth bullet for v26's leaderboard-top-K
+   mechanical-verification pass (chic-v6 methodology applied
+   verbatim to the Linear A side); promoted the §2.11 header from
+   "Cross-script extension pipeline (chic-v0–chic-v5)" to
+   "(chic-v0–chic-v8)" and added bullets for chic-v6 (mechanical
+   verification against three external-scholarship sources) and
+   chic-v8 (dual-script bilingual analysis with 4-of-5 promotion
+   rule; refusal to invoke genre-parallels as load-bearing).
+5. **§4.6 v26 subsection** — already integrated by v26's polecat;
+   v27 audit-of-the-audit found no drift (all numbers verify
+   against `results/rollup.linear_a_top_k_verification.aggregate.md`).
+6. **§4.7 chic-v8 subsection** — already integrated by chic-v8's
+   polecat; v27 audit-of-the-audit found no drift (all numbers
+   verify against `results/chic_dual_script_bilingual_leaderboard.md`
+   and `results/chic_v8_promoted_candidates.md`).
+7. **§5.4 Cross-script (CHIC) limitations** — added three new
+   limitations entries: (a) chic-v6 tier-3 / tier-4 verification
+   lifts dominated by class-level-matching permissiveness; (b)
+   chic-v8 L5 silent for all 76 unknowns by v0 corpus state with
+   the corpus-expansion path filed; (c) v26 per-surface
+   verification status structurally permissive (every top-20
+   surface verified) with the sign-level inverse-verification
+   table the load-bearing negative-evidence companion.
+8. **§6 Conclusion** — extended the null-findings paragraph with
+   v26's leaderboard-top-K verification at the inscription-count-
+   lift granularity and the inverse-verification-companion
+   negative-evidence pattern; reframed the cascade-candidate
+   methodological-contribution sentence to include v26 / chic-v6's
+   leaderboard-top-K verification framing as a second transferable
+   protocol; added chic-v6 + chic-v8 paragraphs to the cross-
+   script paragraph (chic-v6's +3-inscription / +20-hit lift; the
+   tier-3 / tier-4 class-level-matching caveat; chic-v8's null
+   result on dual-script bilingual constraint; the corpus-
+   expansion path).
+9. **§7 Three-sentence reading test** — restructured to v27's
+   perspective. Sentence 1 unchanged in shape (population-level
+   kinship across both scripts; ρ=+1.000). Sentence 2 expanded
+   from "what the framework does not support" to "verification
+   methodology runs symmetrically on both sides AND per-sign
+   decipherment unsupported on either" — capturing v26's +5/+6/
+   +7/+5 inscription-count lifts, chic-v6's +3-inscription /
+   +20-hit lift, the 19–30 sign-level inverse-verification
+   contradictions per pool, the 3.95% v22/v24 aggregate match
+   rate, and chic-v8's 0 new tier-2 candidates with the unilingual-
+   CHIC verification of Malia altar = CHIC #328. Sentence 3
+   expanded to enumerate the leaderboard-top-K mechanical-
+   verification protocol and the bilingual fifth-axis falsifiable
+   extension as additional transferable cross-script methodology
+   components.
+10. **Appendix A: result-file index** — added entries for chic-v6
+    (mg-a557; `chic_extended_partial_readings.md`,
+    `chic_verification_match_rates.md`,
+    `experiments.chic_verification_v0.jsonl`), v26 (mg-c202;
+    `rollup.linear_a_top_k_verification.aggregate.md` plus the
+    four per-pool rollups,
+    `experiments.linear_a_top_k_verification_v0.jsonl`), and
+    chic-v8 (mg-dfcc; `chic_dual_script_bilingual_leaderboard.md`,
+    `chic_v8_promoted_candidates.md`); updated the per-ticket
+    merge-notes lineage span from `mg-7c6d (chic-v5)` to
+    `mg-dfcc (chic-v8)`; updated the harness-pipeline span from
+    `mg-c103 (v24)` to `mg-c202 (v26)`; flagged mg-b731 (v27)
+    alongside mg-36bd (v25) and mg-9508 (chic-v7) as editorial-
+    only.
+
+### Cross-check: quantitative claims vs. committed result files
+
+Every quantitative claim added or audited in the polished draft was
+verified against the committed `results/` files. **No discrepancies
+found**. Specifically:
+
+- **v26 (mg-c202) §4.6 paragraph**, against
+  `rollup.linear_a_top_k_verification.aggregate.md`:
+  - LB-carryover-only baseline: 177/772 = 22.93% ✓
+  - chic-v6 tier-1 baseline: 67/302 = 22.19% ✓
+  - aquitanian: 20/40/38/0.9500/+5/+9216/29 ✓
+  - etruscan: 20/42/40/0.9524/+6/+9925/22 ✓
+  - toponym: 20/39/39/1.0000/+7/+14106/19 ✓
+  - eteocretan: 20/42/37/0.8810/+5/+7172/30 ✓
+- **chic-v8 (mg-dfcc) §4.7 paragraph**, against
+  `chic_dual_script_bilingual_leaderboard.md` and
+  `chic_v8_promoted_candidates.md`:
+  - Malia altar = CHIC #328, Mallia, offering_table, 16 sign
+    positions, partial transcription confidence ✓ (verified
+    against `corpora/cretan_hieroglyphic/inscriptions/328.json`)
+  - LA v0 corpus has 20 Mallia entries (17 administrative
+    tablets + 3 roundels) ✓ (verified against `corpus/Mallia/`
+    directory listing of 20 entries: MA 1a/b/c, MA 2a/b/c,
+    MA 4a/b, MA 6a/b/c/d, MA 9, MA 10a/b/c/d, MA Wc 7,
+    MA Wc 5a/5b)
+  - L5 silent for all 76 unknown CHIC syllabographic signs by
+    corpus state ✓
+  - 0 new tier-2 candidates derivable on v0 corpora ✓
+  - chic-v5 tier-2 candidate count remains 3 unchanged
+    (`#001 → wa`, `#012 → wa`, `#032 → ki`) ✓
+- **chic-v6 (mg-a557) §4.7 paragraph**, against
+  `chic_verification_match_rates.md`:
+  - tier-1 → tier-2 lift: +3 inscriptions / +20 hits ✓
+  - tier-2 → tier-3 lift: +91 inscriptions / +2339 hits ✓
+  - tier-3 → tier-4 lift: +46 inscriptions / +2367 hits ✓
+  - tier-2 specific-phoneme overrides: `#001 → wa`, `#012 → wa`,
+    `#032 → ki` ✓
+
+### Three-sentence reading test
+
+The polished v27 document supports three quotable sentences a
+hypothetical Linear-A scholar (or Aegean-syllabary specialist)
+reading cold would learn from it. The full test passes; the
+sentences are committed in §7 of the polished `findings_summary.md`
+and reproduced here for the merge note's record:
+
+1. "A mechanical, falsifiable substrate-LM-phonotactic-kinship
+   test — paired-difference scoring under external phoneme
+   language models with phonotactically-matched controls,
+   aggregated as per-surface Beta-binomial posteriors and gated
+   by a right-tail Mann-Whitney U test on top-K=20 substrate vs
+   top-K=20 matched-control surfaces — detects population-level
+   kinship between four candidate substrate pools (Aquitanian/
+   Vasconic, Etruscan, pre-Greek Aegean toponyms, Eteocretan)
+   and two undeciphered Cretan scripts (Linear A SigLA, Cretan
+   Hieroglyphic Younger web edition), with the per-pool gate-
+   magnitude ordering tracking a-priori genealogical relatedness
+   identically across both scripts (Eteocretan > toponym >
+   Etruscan > Aquitanian; cross-script Spearman ρ=+1.000 on
+   per-pool right-tail gap; mean top-20 substrate-surface
+   overlap 0.47 across the two scripts)."
+
+2. "Mechanical verification of the leaderboard top-K substrate
+   surfaces against three pre-registered external-scholarship
+   sources (scholar-proposed Linear-A readings, Cretan/Aegean
+   toponym substrings, item-location consistency) produces
+   small-but-positive lift over the carryover-only baseline on
+   *both* sides — chic-v6's +3-inscription / +20-hit CHIC
+   tier-1 → tier-2 lift parallels v26's +5/+6/+7/+5 inscription-
+   count lifts across the four Linear A pools' top-20 extensions
+   over the LB-carryover-only baseline (177/772 = 22.93%) — and
+   neither script's mechanical proposals match scholarly
+   proposals at an actionable rate: Linear A's v13 cross-window
+   coherence median is 0.18 against a 0.6 bar; v22/v24 internal-
+   consensus mechanical readings match scholarly proposals at an
+   aggregate 3.95% rate (3/76) on the Younger 35-entry set
+   (squarely in the strong-null band); v26's per-pool sign-level
+   inverse-verification companion table reports 19–30 sign-level
+   contradictions of scholarly proposals per pool; CHIC's
+   chic-v5 four-line-of-evidence framework surfaces 3 class-
+   level (not phoneme-level) tier-2 candidates out of 76 unknown
+   syllabographic signs pending domain-expert review, and the
+   chic-v8 dual-script bilingual fifth-axis extension on the v0
+   corpora produces 0 new tier-2 candidates because no
+   genuinely-dual-script artifact (the candidate Malia altar
+   stone CHIC #328 is unilingual-CHIC per Olivier-Godart 1996)
+   is ingested in either v0 corpus."
+
+3. "The substrate-LM-phonotactic-kinship test, plus the matched-
+   control protocol, plus the cascade-candidate framing for
+   per-inscription internal-consensus surface, plus the
+   external-comparand bookkeeping discipline, plus the four-
+   line-of-evidence per-sign value-extraction discipline, plus
+   the leaderboard-top-K mechanical-verification pass against
+   pre-registered external-scholarship sources with the sign-
+   level inverse-verification companion, plus the falsifiable
+   bilingual fifth-axis extension (silent on v0 corpus state,
+   reactivable under future corpus expansion), constitute a
+   transferable cross-script methodology that any research
+   group testing a substrate-language hypothesis on an
+   undeciphered script can adopt: the framework's null findings
+   on Linear A (v13 / v14 / v19 / v20 / v22 / v24 / v26)
+   together with its cross-script transfer on CHIC (chic-v3 /
+   chic-v4 / chic-v5 / chic-v6 / chic-v8) are themselves the
+   methodological deliverable — a discipline-protecting
+   protocol that catches motivated-reasoning failure modes
+   which internal-only analyses produce uniformly across
+   scripts, substrate pools, and external-validation
+   channels."
+
+The reading test passes. The document captures (a) what the
+framework detects across two scripts at the population level,
+(b) the symmetric verification methodology on both sides AND the
+per-sign decipherment unsupportability on either, and (c) the
+methodological contribution at the leaderboard-top-K mechanical-
+verification + cascade-candidate-framing + bilingual-fifth-axis
+levels — across the full 27-LA-ticket + 9-chic-ticket sequence.
+
+### Audit-of-the-audit on v26 + chic-v8 incremental edits
+
+Per the v27 brief: v27 should do its own audit-of-the-audit on
+v26's §4.6 incremental edit and chic-v8's §4.7 incremental edit.
+**No drift found** in either polecat's findings_summary.md edits
+relative to the committed result files. Specifically:
+
+- **v26 (mg-c202)** — §4.6 paragraph "v26 — Linear A side
+  leaderboard top-K mechanical verification". All quantitative
+  claims (LB-carryover baseline 177/772 = 22.93%; chic-v6 tier-1
+  baseline 67/302 = 22.19%; per-pool numbers 20/40/38/0.9500/+5/
+  +9216/29 etc. across the four pools) verified against
+  `results/rollup.linear_a_top_k_verification.aggregate.md` and
+  the per-pool rollups. The "AB59 inverse-verification
+  concentration on aquitanian" claim is consistent with the
+  per-pool inverse-verification table in
+  `rollup.linear_a_top_k_verification.aquitanian.md`.
+- **chic-v8 (mg-dfcc)** — §4.7 chic-v8 paragraph. The Malia altar
+  stone identification (CHIC #328, Mallia, offering_table, 16
+  signs, partial transcription confidence) verified against the
+  ingested artifact JSON `corpora/cretan_hieroglyphic/inscriptions/
+  328.json`. The LA v0 Mallia inventory (20 entries, 17 admin
+  tablets + 3 roundels) verified against the `corpus/Mallia/`
+  directory. The 0-new-tier-2-candidates headline and the L5
+  silent-for-all-76-unknowns claim verified against
+  `results/chic_v8_promoted_candidates.md` and
+  `results/chic_dual_script_bilingual_leaderboard.md`. The
+  preservation of chic-v5's 3-tier-2-candidate count (`#001 → wa`,
+  `#012 → wa`, `#032 → ki`) is consistent with both files.
+
+### Inconsistencies discovered between findings_summary.md and committed result files
+
+**None.** Both v26's and chic-v8's polecats integrated their
+incremental edits cleanly with the result files; v27's polish
+pass extends the higher-level sections (title, abstract,
+introduction, methods, conclusion, three-sentence reading test,
+limitations, appendix) without reopening the per-paragraph
+quantitative claims, so no new mismatch could be introduced.
+
+### What this ticket does NOT do
+
+- **No new experiments.** v27 is editorial / verification only.
+  Any new experimental data would invalidate the v26 / chic-v6 /
+  chic-v8 numbers cited as load-bearing.
+- **No journal-submission preparation.** LaTeX, target-venue
+  formatting, peer-review concerns are out of polecat scope.
+  v27 brings the document to the **handoff point** after the
+  v25 / chic-v7 single-script-and-cross-script consolidations
+  and the post-consolidation v26 / chic-v8 incremental landings;
+  subsequent editorial work happens with Daniel directly outside
+  the polecat-spawn flow.
+- **No domain-expert review.** The cascade candidates, the v26
+  verified surfaces, the chic-v6 matched enumerations, and the
+  chic-v5 tier-2 candidate proposals all still need an Aegean-
+  syllabary specialist's read; out of polecat scope.
+- **No additional substrate pools.** Phoenician / Sumerian /
+  Hattic remain deferred per v15.
+- **No corpus-expansion ingest.** The full GORILA Za-series
+  ingest, the manual O&G 1996 audit on near-#312 / near-#328
+  entries, and any genuinely-dual-script CMS sealstone-catalog
+  entries that would reactivate chic-v8's L5 line are filed
+  under `corpus-expansion` for chic-v9+ / pm-lineara triage —
+  out of scope for this editorial pass.
+
+### Out of scope (deferred to subsequent editorial work)
+
+- **Journal-submission editorial pass** (LaTeX, target-venue
+  narrative, peer review). Out of polecat scope.
+- **Domain-expert review** of v26 verified surfaces, chic-v6
+  matched enumerations, chic-v5 tier-2 candidates, and the
+  per-pool inverse-verification tables.
+- **Indus Valley / Rongorongo / Proto-Elamite extensions.**
+  Substantial new sub-programs; need Daniel's go-ahead.
+- **AGENTS.md scope-of-work update for the chic sub-program.**
+  Cosmetic; deferred.
+- **Cleanup tickets** (Linear-B small-K, dedup, threshold
+  localization). Cosmetic; deferred.
