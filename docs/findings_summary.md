@@ -20,16 +20,21 @@ pass at the leaderboard top-K granularity in v26, mg-c202; dual-
 script bilingual analysis (Malia altar stone CHIC #328 verified
 unilingual; 0 new tier-2 candidates derivable on v0 corpora) in
 chic-v8, mg-dfcc; final cross-script polish pass integrating v26 +
-chic-v8 for journal-submission handoff in v27, mg-b731)** — a
-publication-readable consolidation of what the Lineara project has
-mechanically established **across two undeciphered Cretan scripts
-(Linear A and Cretan Hieroglyphic)** across 27 Linear A work items
-+ 9 chic sub-program work items, anchored on the SigLA corpus
-ingest (`mg-1c8c`, Linear A) and the Younger CHIC web edition ingest
-(`mg-99df`, CHIC), spanning the Linear A harness pipeline `mg-d5ef`
-(v0) through `mg-c202` (v26) and the chic sub-program `mg-99df`
-(chic-v0) through `mg-dfcc` (chic-v8); v25, chic-v7, and v27 are
-editorial-only (no harness commits).
+chic-v8 for journal-submission handoff in v27, mg-b731;
+**leave-one-out held-out validation of the chic-v5 framework on the
+chic-v2 anchor pool yielding 20.0% aggregate recovery accuracy and
+0/3 tier-2 unanimity correctly classified, downgrading the
+credibility of chic-v5's three tier-2 candidate proposals** in
+chic-v9, mg-18cb)** — a publication-readable consolidation of what
+the Lineara project has mechanically established **across two
+undeciphered Cretan scripts (Linear A and Cretan Hieroglyphic)**
+across 27 Linear A work items + 10 chic sub-program work items,
+anchored on the SigLA corpus ingest (`mg-1c8c`, Linear A) and the
+Younger CHIC web edition ingest (`mg-99df`, CHIC), spanning the
+Linear A harness pipeline `mg-d5ef` (v0) through `mg-c202` (v26)
+and the chic sub-program `mg-99df` (chic-v0) through `mg-18cb`
+(chic-v9); v25, chic-v7, and v27 are editorial-only (no harness
+commits).
 The repo scaffold (`mg-9e00`) predates the corpus ingest. The
 companion log `docs/findings.md` carries the per-ticket history;
 this document carries the consolidated methodology, results, and
@@ -239,6 +244,25 @@ a falsifiable fifth axis contingent on future corpus expansion
 entries), while explicitly refusing to invoke conjectural
 genre-parallels (CHIC #328 vs LA libation tables PS Za 2 / SY Za 4)
 as load-bearing evidence.
+
+A held-out validation of the chic-v5 framework (**chic-v9, mg-18cb**)
+applies the L1+L2+L3 machinery to the chic-v2 anchor pool of 20
+known scholarly values under leave-one-out: each anchor S is
+removed, treated as unknown, and re-classified against the reduced
+19-anchor pool. L4 is excluded for circularity (it is the source of
+the anchor pool). **The framework recovers known phoneme classes at
+20.0% (4/20) aggregate accuracy — at the 16.7% chance baseline for
+a 6-class taxonomy** — with per-line accuracy L1=20%, L2=20%, L3=5%
+and **0 of 3 LOO tier-2 (3-of-3 unanimous) calls correctly
+classified**. This is the held-out validation that should have
+been part of chic-v5; the negative result is the cleanest fork-in-
+the-road signal in the chic sub-program. **The chic-v5 / chic-v6 /
+chic-v8 framing of the three tier-2 candidates downgrades from
+"mechanical proposals deserving specialist review" to "candidate
+proposals contingent on the framework's currently-low validation
+accuracy"**; the §4.7 narrative now leads with chic-v9's LOO
+accuracy rather than the candidate count, and the methodology
+paper's three-sentence reading test (§7) restructures accordingly.
 
 ---
 
@@ -2660,7 +2684,16 @@ tier-3 / tier-4 strata's apparent verification lift is dominated
 by class-level-matching permissiveness and does not constitute
 verification-grade evidence in the absence of a permutation control.
 A specialist review remains the load-bearing next step for advancing
-any of these from "matched" to "decipherment".
+any of these from "matched" to "decipherment". **The chic-v9 LOO
+test (mg-18cb, below) further constrains this framing**: the same
+framework that proposed the three tier-2 candidates recovers known
+chic-v2 anchor classes at only 20% aggregate accuracy under
+leave-one-out (and 0/3 on the tier-2 unanimity criterion), so the
+chic-v6 +3-inscription / +20-hit verification lift cannot be
+read as independent corroboration of the candidates' specific
+phoneme values — it remains a small mechanical signal whose
+load-bearing weight is bounded above by the chic-v9 framework
+validation accuracy.
 
 **Inputs / outputs.** Inputs:
 `corpora/cretan_hieroglyphic/all.jsonl` (chic-v0; 302 inscriptions),
@@ -2784,8 +2817,156 @@ in the same merge as the harness artifacts, per AGENTS.md NON-
 NEGOTIABLE acceptance-blocker rule and the chic-v1 (mg-c7e3) missed-
 update precedent that mg-0ea1 had to backfill retroactively.
 
-#### Pre-registered chic-v9+ (chic-v8 done in mg-dfcc)
+#### chic-v9 — leave-one-out held-out validation of the chic-v5 framework on chic-v2 anchors (mg-18cb)
 
+Daniel's observation (2026-05-05): the strong result of the chic
+sub-program would be proposing 3 new values for Cretan Hieroglyphs
+(chic-v5 tier-2: `#001 → wa`/glide, `#012 → wa`/glide,
+`#032 → ki`/stop) **especially if we independently hypothesised known
+values**. The italicised clause is the methodological move
+chic-v0..v8 never made: held-out validation of the chic-v5 framework
+against the chic-v2 anchor pool (20 signs with scholarly-known
+phoneme values), where ground truth lets us measure recovery
+accuracy when the framework is run blind.
+
+**Method (`scripts/build_chic_v9.py`, full per-anchor table in
+`results/chic_v9_loo_validation.md`).** For each chic-v2 anchor S
+with known scholarly value V: remove S from the chic-v2 anchor pool
+(reduced 19-anchor pool); treat S as unknown; rebuild the
+candidate-value pool from the reduced 19-anchor pool plus bare
+vowels (filtered by the Eteocretan phoneme inventory, chic-v5
+convention); compute L1 (distributional plurality on top-3 nearest
+anchors), L2 (strict-top-1 anchor distance), L3 (substrate-
+consistency under the v21 Eteocretan LM) for S against the reduced
+pool; classify into a 3-line tier (3-of-3 unanimous = LOO tier-2;
+2-of-3 = tier-3; 1-of-3 = tier-4; 0 = untiered); compare the
+framework's proposed class to V's known class. **L4 (cross-script
+paleographic) is deliberately excluded**: chic-v1's
+PALEOGRAPHIC_CANDIDATES list is the source of the chic-v2 anchor
+pool, so for any anchor S the L4 line trivially recovers V by
+construction. Including L4 would inflate accuracy by circularity;
+the L1+L2+L3-only LOO is the honest test the chic-v9 brief
+specifies.
+
+**Headline LOO accuracy: 4 of 20 anchors recover correctly = 20.0%
+aggregate accuracy.** The chance baseline for a 6-class taxonomy is
+~16.7%, so the framework's L1+L2+L3 mechanical recovery on known
+cases is essentially **at chance**. Per the chic-v9 brief's
+pre-registered thresholds (>70% high; 40-70% moderate; <40% low),
+this places the chic-v5 framework's recovery accuracy in the
+**low-agreement / not-validated band**.
+
+| metric | value |
+|:--|---:|
+| n anchors run blind | 20 |
+| n with framework_class == known_class | 4 |
+| **aggregate LOO accuracy** | **20.0%** |
+| chance baseline (6-class taxonomy) | ~16.7% |
+| n LOO tier-2 (3-of-3 unanimity) | 3 |
+| **n LOO tier-2 correctly classified** | **0/3 = 0.0%** |
+| n LOO tier-3 (2-of-3) | 14 |
+| n LOO tier-4 (1-of-3) | 3 |
+| n LOO untiered | 0 |
+
+**Per-line accuracy decomposition:**
+
+| line | n_correct/n_total | accuracy |
+|:--|:--:|---:|
+| L1 (distributional plurality, top-3) | 4/20 | 20.0% |
+| L2 (strict-top-1 anchor distance) | 4/20 | 20.0% |
+| L3 (substrate-consistency under Eteocretan LM) | 1/20 | 5.0% |
+| **L1+L2+L3 consensus (framework class)** | **4/20** | **20.0%** |
+
+L1 and L2 are tied at 20% (both reading the same Bhattacharyya
+fingerprint distance machinery, differing only in aggregation); L3
+at 5% is **below chance**, consistent with chic-v5's own diagnosis
+of a systematic class bias in the Eteocretan LM (the LM's onset
+distribution rewards `na`/`ni`/`no`/`ma`/`me` over the actual
+held-out values' classes, regardless of whether the held-out value
+is in fact a nasal). The voted L1+L2+L3 consensus inherits the
+distributional lines' 20% — L3's near-zero recovery cannot pull
+the consensus below the L1+L2 floor because L3 disagrees noisily,
+not systematically wrongly in the same direction.
+
+**Tier-2 classification accuracy is 0/3 = 0.0%.** Three anchors
+unanimously classified at LOO tier-2 (3-of-3 agreement on a top
+class): `#031 = ro` (liquid; framework called stop), `#042 = wa`
+(glide; framework called stop, with L3 structurally unable to
+recover glide because removing #042 strips the only glide value
+from the candidate pool), `#053 = me` (nasal; framework called
+glide). **Every LOO tier-2 call disagrees with the known class.**
+The tier-2-or-3 looser test (≥2 of 3 lines voting for the *known*
+class) recovers 4/20 = 20.0%, byte-identical to the consensus
+accuracy.
+
+**Implication for the chic-v5 tier-2 candidates (`#001 → wa`/glide,
+`#012 → wa`/glide, `#032 → ki`/stop).** The same framework that
+proposed these three new values recovers known anchor classes at
+**20% aggregate** and **0% on the tier-2 unanimity criterion** when
+run blind. The chic-v5 / chic-v6 / chic-v8 framing must downgrade
+the three candidates accordingly. The methodology-paper framing for
+§4.7 should now read: **"The chic-v5 framework's three tier-2
+candidate proposals are mechanically derived from a four-line-of-
+evidence machine that, when run blind on the chic-v2 anchor pool of
+20 known cases, recovers known phoneme classes at 20% aggregate
+(near the 16.7% chance baseline for a 6-class taxonomy) and
+correctly classifies zero of the three anchors that emerge as
+tier-2 unanimous under the held-out reduced pool. The three new
+candidates are therefore **candidate proposals contingent on the
+framework's currently-low validation accuracy**, not mechanical
+proposals deserving elevated specialist-review priority."** This is
+substantially weaker framing than the chic-v5 / chic-v6 commits
+implied; the chic-v9 LOO test is what would have caught a
+mis-specified framework before journal submission. Honest reporting
+on the negative result is the discipline-protecting outcome the
+chic sub-program has emphasised since chic-v1's missed-update
+incident (mg-c7e3, backfilled by mg-0ea1).
+
+**Additional caveats.** Small N (20-anchor LOO) limits statistical
+resolution; ±5% differences fall within the binomial noise floor
+for this sample size. The headline 20% should be read as a point
+estimate with substantial uncertainty, not a precise calibration
+figure — but the qualitative reading (recovery near the chance
+baseline; 0/3 tier-2 correct) is robust to that uncertainty. The
+anchor-pool composition is itself a curated set (the chic-v1
+paleographic-candidate list); the LOO test measures recovery on
+**anchor-shaped** signs, which is the relevant target population
+for the methodology, but the 76 unknown signs the framework
+proposes against may differ systematically (e.g. lower frequency,
+different distributional shape) — the 20% chic-v9 number bounds
+above what the framework should be expected to achieve on the
+unknown pool. L4 exclusion is non-negotiable: including L4 would
+make the test circular; the L1+L2+L3-only setup is the honest one.
+
+**Determinism.** No RNG. Same inputs → byte-identical
+`results/chic_v9_loo_validation.md` across re-runs (md5 stability
+verified at chic-v9 build time, 2026-05-05). The L3 control-phoneme
+selection inherits chic-v5's sha256-keyed permutation construction.
+
+**`docs/findings.md` (mg-18cb entry)** records the 20-anchor LOO
+table, the per-line decomposition, and the tier-2 classification
+accuracy, plus the explicit downgrade of chic-v5 tier-2-candidate
+credibility. Per AGENTS.md (cited explicitly per the chic-v9 brief,
+recalling chic-v1's mg-c7e3 missed-update incident that mg-0ea1 had
+to backfill retroactively): the findings update is a
+non-negotiable acceptance blocker.
+
+#### Pre-registered chic-v10+ (chic-v9 done in mg-18cb)
+
+- **chic-v9 done.** Leave-one-out held-out validation of the
+  chic-v5 framework on the chic-v2 anchor pool. **Aggregate
+  accuracy 20.0% (4/20)**, near the 16.7% chance baseline for a
+  6-class taxonomy; per-line L1=20%, L2=20%, L3=5% (L3 at chance
+  / below chance, consistent with the known systematic Eteocretan-
+  LM class bias); **tier-2 classification accuracy 0/3 = 0.0%**.
+  This is the held-out validation that should have been run as
+  part of chic-v5; the negative result downgrades the credibility
+  of chic-v5's three tier-2 candidates from "mechanical proposals
+  deserving specialist review" to "candidate proposals contingent
+  on the framework's currently-low validation accuracy". Output:
+  `results/chic_v9_loo_validation.md`. **The methodology paper's
+  three-sentence reading test (§7) must be restructured to lead
+  with the LOO accuracy number, not the candidate count.**
 - **chic-v8 done.** Bilingual analysis on the Malia altar stone
   (CHIC #328, verified unilingual CHIC) and a systematic survey
   of the v0 corpora for any other genuinely-dual-script artifact

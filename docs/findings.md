@@ -7816,3 +7816,284 @@ quantitative claims, so no new mismatch could be introduced.
   Cosmetic; deferred.
 - **Cleanup tickets** (Linear-B small-K, dedup, threshold
   localization). Cosmetic; deferred.
+
+## Findings from mg-18cb (chic-v9 — leave-one-out held-out validation of the chic-v5 framework on the chic-v2 anchor pool, 2026-05-05)
+
+### Summary
+
+Daniel's observation (2026-05-05): the strong result of the chic
+sub-program would be proposing 3 new values for Cretan Hieroglyphs
+(chic-v5 tier-2: `#001 → wa`/glide, `#012 → wa`/glide,
+`#032 → ki`/stop) **especially if we independently hypothesised
+known values**. The italicised clause is the methodological move
+chic-v0..v8 never made: held-out validation of the chic-v5
+framework against the chic-v2 anchor pool of 20 known scholarly
+values, where ground truth lets us measure recovery accuracy when
+the framework is run blind.
+
+This ticket runs the LOO test cleanly:
+
+1. For each chic-v2 anchor S (20 anchors total): remove S from the
+   chic-v2 anchor pool, treat S as unknown, recompute L1
+   (distributional plurality on top-3 nearest anchors), L2
+   (strict-top-1 anchor distance), L3 (substrate-consistency under
+   the v21 Eteocretan LM) for S against the reduced 19-anchor pool.
+   Rebuild the L3 candidate-value pool from the reduced 19-anchor
+   pool plus bare vowels (Eteocretan-phoneme-inventory filtered;
+   chic-v5 convention).
+2. **L4 (cross-script paleographic) is deliberately excluded.**
+   chic-v1's PALEOGRAPHIC_CANDIDATES list is the source of the
+   chic-v2 anchor pool; for any anchor S, L4 trivially recovers V
+   by construction. Including L4 would make the LOO test circular
+   and inflate accuracy.
+3. Apply chic-v5's tier classification with L4 silent: 3-of-3
+   unanimity = LOO tier-2; 2-of-3 = tier-3; 1-of-3 = tier-4; 0 =
+   untiered.
+4. Compare framework's proposed class to S's known scholarly class.
+
+### Headline result: low-agreement / not validated
+
+**Aggregate LOO accuracy: 4 of 20 anchors recover correctly = 20.0%.**
+The chance baseline for a 6-class taxonomy (vowel / stop / nasal /
+liquid / fricative / glide) is ~16.7%, so the framework's L1+L2+L3
+mechanical recovery on known cases is **essentially at chance**.
+Per the chic-v9 brief's pre-registered thresholds (>70% high;
+40-70% moderate; <40% low), this places the chic-v5 framework's
+recovery in the **low-agreement / not-validated band**.
+
+| metric | value |
+|:--|---:|
+| n anchors run blind | 20 |
+| n with framework_class == known_class | 4 |
+| **aggregate LOO accuracy** | **20.0%** |
+| chance baseline (6-class taxonomy) | ~16.7% |
+| n LOO tier-2 (3-of-3 unanimity) | 3 |
+| **n LOO tier-2 correctly classified** | **0/3 = 0.0%** |
+| n LOO tier-3 (2-of-3) | 14 |
+| n LOO tier-4 (1-of-3) | 3 |
+| n LOO untiered | 0 |
+
+### Per-line accuracy decomposition
+
+| line | n_correct/n_total | accuracy |
+|:--|:--:|---:|
+| L1 (distributional plurality, top-3) | 4/20 | 20.0% |
+| L2 (strict-top-1 anchor distance) | 4/20 | 20.0% |
+| L3 (substrate-consistency under Eteocretan LM) | 1/20 | 5.0% |
+| **L1+L2+L3 consensus (framework class)** | **4/20** | **20.0%** |
+
+L1 and L2 are tied at 20% (both reading the same Bhattacharyya
+fingerprint distance machinery, differing only in aggregation —
+plurality of top-3 vs strict top-1). L3 at 5% is **below chance**,
+consistent with chic-v5's own diagnosis of the Eteocretan LM's
+systematic class bias (the LM's onset distribution rewards
+`na`/`ni`/`no`/`ma`/`me` over the actual held-out values' classes,
+regardless of whether the held-out value is a nasal). The voted
+L1+L2+L3 consensus inherits the distributional lines' 20% — L3's
+near-zero recovery cannot pull the consensus below the L1+L2 floor
+because L3 disagrees noisily, not systematically wrongly in the
+same direction.
+
+### Tier-2 classification accuracy: 0/3 = 0.0%
+
+Three anchors emerged at LOO tier-2 (3-of-3 unanimity on a top
+class): **all three disagree with the known class**.
+
+| LOO tier-2 anchor | known phoneme | known class | framework class | L1 | L2 | L3 |
+|:--|:--|:--|:--|:--:|:--:|:--:|
+| `#031 = ro` | ro | liquid | stop | stop | stop | stop |
+| `#042 = wa` | wa | glide | stop | stop | stop | stop ⚠ |
+| `#053 = me` | me | nasal | glide | glide | glide | glide |
+
+⚠ `#042`'s L3 is structurally unable to recover glide because
+removing `#042` from the anchor pool strips the only glide value
+(`wa`) from the rebuilt 19-anchor candidate-value pool; chic-v5's
+candidate pool's filter (Eteocretan-phoneme-inventory first-char
+test) excluded the other glide values `ja`/`je` because Eteocretan
+has no `j`. So `#042`'s L3 vote for stop is forced; even with the
+glide class structurally absent, the framework still produces a
+3-of-3 unanimous classification, which is itself a methodological
+warning sign — unanimity does not require the unanimously-voted
+class to be the correct one.
+
+### What recovers correctly (4 of 20 anchors)
+
+| anchor | known phoneme | known class | framework class | tier |
+|:--|:--|:--|:--|:--|
+| `#013` | pa | stop | stop | tier-3 |
+| `#044` | ki | stop | stop | tier-3 |
+| `#049` | de | stop | stop | tier-3 |
+| `#057` | je | glide | glide | tier-4 |
+
+All 3 tier-3 recoveries are **stop** (the largest class in the
+candidate value pool, with 8 stop values: `pa`, `ta`, `ti`, `ke`,
+`de`, `ki`, `te`, `to`). Class-pool size matters: a class with more
+representatives is mechanically easier to vote for under L1/L2's
+plurality / top-1 aggregation. `#057 = je` recovers as glide
+because L3 alone votes glide (the Eteocretan-LM substrate-
+consistency line happens to favour the glide class on `#057`'s
+distributional position); L1 votes nasal, L2 votes stop — only L3
+recovers, and the tier-4 verdict reflects that single-line
+agreement.
+
+The 16 incorrect cases include high-frequency anchors with strong
+distributional fingerprints (`#031 = ro` freq=65, `#070 = ra`
+freq=56, `#038 = i` freq=75), so the recovery failures are not
+explained by low corpus frequency alone — the framework's
+mechanical machinery genuinely doesn't recover the right class on
+the bulk of the anchor pool.
+
+### Implication for chic-v5 tier-2 candidates
+
+The same framework that proposed `#001 → wa`/glide, `#012 → wa`/
+glide, and `#032 → ki`/stop recovers known anchor classes at 20%
+aggregate and **0% on the tier-2 unanimity criterion** when run
+blind. Honest interpretation:
+
+- **The 3 chic-v5 tier-2 candidates lose substantial credibility.**
+  The methodology paper's framing must downgrade the candidates
+  from "mechanical proposals deserving elevated specialist-review
+  priority" to **"candidate proposals contingent on the framework's
+  currently-low validation accuracy"**.
+- **The chic-v6 mechanical-verification +3-inscription / +20-hit
+  tier-1 → tier-2 lift is bounded above by chic-v9's framework
+  validation accuracy.** chic-v6 verified that applying the three
+  candidates to the corpus produces small mechanical hits against
+  external scholarship; chic-v9 shows the framework that produced
+  the candidates is at-chance on known values. The chic-v6 lift
+  cannot be read as independent corroboration of the candidates'
+  specific phoneme values when the underlying machine is at chance.
+- **The chic-v3 / chic-v4 population-level cross-script results
+  remain unchanged.** chic-v3's right-tail bayesian gate PASS for
+  Eteocretan against CHIC (p=7.33e-04) and chic-v4's cross-script
+  Spearman ρ=+1.000 on per-pool gate gap are population-level
+  signals that do not depend on the chic-v5 per-sign machinery.
+  chic-v9 specifically targets the per-sign extraction framework;
+  the population-level cross-script claim is unaffected.
+- **The methodology paper's three-sentence reading test (§7) must
+  be restructured** to lead with the LOO accuracy number rather
+  than the tier-2 candidate count. The rest of the cross-script
+  framing (population-level kinship detection at ρ=+1.0; per-sign
+  decipherment unsupported on either script) survives intact;
+  chic-v9 reinforces the per-sign-decipherment-unsupported half by
+  putting a quantitative number on the per-sign machinery's
+  reliability.
+
+This is exactly the negative-result pattern the chic sub-program
+has emphasised since chic-v1's missed-update incident (mg-c7e3
+backfilled by mg-0ea1) and the broader Linear A v13 / v19 / v22
+per-sign-coherence-failure lineage. **The framework is structured
+to fail loudly when the lines diverge or the validation evidence
+is silent**; chic-v9 is the held-out evidence that the per-sign
+machinery has not, in fact, been recovering signal on the cases
+where ground truth was available.
+
+### Per-anchor breakdown (full table)
+
+(See `results/chic_v9_loo_validation.md` for the formatted table
+with per-line votes, similarity scores, and L3 best-paired-diff
+values. Below is a compact summary by recovery status.)
+
+**Correctly recovered (4):** `#013 = pa` / `#044 = ki` / `#049 = de`
+/ `#057 = je`. Three are stop (the largest candidate-pool class);
+one is glide via L3-alone agreement.
+
+**Incorrectly recovered (16):** `#010 = ja` (glide → liquid);
+`#016 = a` (vowel → glide); `#019 = ke` (stop → liquid);
+`#025 = ta` (stop → nasal); `#028 = ti` (stop → glide); `#031 = ro`
+(liquid → stop, **LOO tier-2**); `#038 = i` (vowel → stop);
+`#041 = ni` (nasal → stop); `#042 = wa` (glide → stop, **LOO
+tier-2**, L3 ⚠); `#053 = me` (nasal → glide, **LOO tier-2**);
+`#054 = mu` (nasal → glide); `#061 = te` (stop → liquid);
+`#070 = ra` (liquid → stop); `#073 = to` (stop → liquid);
+`#077 = ma` (nasal → glide); `#092 = ke` (stop → glide).
+
+A pattern in the L1/L2 errors: the distributional fingerprint
+machinery often confuses **liquid** and **stop** classes, and
+**nasal** and **glide** classes. This is consistent with the
+fingerprint dimensions (`left_neighbor`, `right_neighbor`,
+`position`, `support`) measuring **syntactic-position** kinship
+rather than phonetic kinship — two signs occurring in similar
+syntactic contexts can carry different phonetic classes, and the
+framework cannot distinguish syntactic kinship from phonetic
+kinship in its current form. This is a structural property of
+chic-v5's per-sign machinery, not a tunable parameter.
+
+### Caveats
+
+- **Small N (20 anchors).** ±5% differences fall within the
+  binomial noise floor for this sample size. The headline 20%
+  should be read as a point estimate with substantial uncertainty,
+  but the qualitative reading (recovery near chance; 0/3 tier-2
+  correct) is robust.
+- **Anchor-pool composition.** The 20 chic-v2 anchors are a
+  curated set (the chic-v1 paleographic-candidate list); the LOO
+  test measures recovery on **anchor-shaped** signs. The 76 unknown
+  signs the framework targets may differ systematically in
+  frequency / distributional shape; the 20% number bounds **above**
+  what should be expected on the unknown pool, not below.
+- **L4 exclusion is non-negotiable.** Including L4 would make the
+  test circular by construction; the L1+L2+L3-only setup is the
+  honest test the chic-v9 brief specified.
+- **Class-level evaluation.** Agreement is exact phoneme-class
+  identity (vowel / stop / nasal / liquid / fricative / glide).
+  The framework's per-sign resolution is class-level, so this is
+  the correct evaluation granularity. The LOO test does not
+  adjudicate whether the framework could correctly recover the
+  **specific phoneme value** within the class.
+- **L3 candidate-pool reduction.** For 18 of 20 LOO runs the
+  held-out value is removed from the rebuilt candidate pool; L3
+  can still recover the class if another candidate shares it, but
+  for `#042 = wa` the held-out class itself disappears (the only
+  glide value in the chic-v5 pool is `wa` because the
+  Eteocretan-phoneme-inventory filter excludes `ja` / `je`). For
+  `#042` L3 is structurally unable to recover glide; this is
+  flagged in the result table.
+
+### Artifacts shipped
+
+- `scripts/build_chic_v9.py` — the LOO validation driver. Imports
+  L1/L2/L3 machinery from `scripts/build_chic_v5.py` (no
+  duplication of fingerprint / Bhattacharyya / substrate-
+  consistency code). Idempotent; deterministic; same inputs →
+  byte-identical output.
+- `results/chic_v9_loo_validation.md` — per-anchor LOO result
+  table, aggregate accuracy, per-line decomposition, tier-
+  classification accuracy, implications for chic-v5 candidates,
+  full caveats. md5-stable across re-runs.
+
+### Determinism
+
+No RNG. The L3 control-phoneme selection inherits chic-v5's
+sha256-keyed permutation construction (deterministic, no
+`random.Random(seed)` draw). md5 stability of
+`results/chic_v9_loo_validation.md` verified across two
+consecutive runs at chic-v9 build time, 2026-05-05. Same
+(CHIC corpus, anchor pool, signs yaml, Eteocretan LM) → byte-
+identical output.
+
+### Out of scope (deferred to subsequent tickets)
+
+- **Domain-expert review** of any chic-v5 candidates regardless of
+  chic-v9 outcome. Out of polecat scope; specialist judgment is
+  the load-bearing next step for advancing any matched
+  candidate from "matched" to "decipherment".
+- **Bigger v22-style scholar-set expansion** (35 → 100+). Scoped
+  separately.
+- **Linear A side analogous LOO validation.** Could be a follow-up;
+  the methodology generalises (hold out one anchor at a time, run
+  the framework against the reduced anchor pool). Filed for
+  pm-lineara triage; the chic-v9 negative result strengthens the
+  case for running it but is not a prerequisite.
+- **Cleanup tickets** (AGENTS.md, Linear-B small-K, dedup).
+  Cosmetic; deferred.
+- **Substantial new sub-programs** (Indus Valley, etc.). Pivot;
+  needs Daniel's go-ahead.
+
+### Citations
+
+- Olivier, J.-P. & Godart, L. (1996). *Corpus Hieroglyphicarum
+  Inscriptionum Cretae* (Études Crétoises 31). Paris.
+- Salgarella, E. (2020). *Aegean Linear Script(s).* Cambridge.
+- Ventris, M. & Chadwick, J. (1956). *Documents in Mycenaean
+  Greek.* Cambridge.
