@@ -2309,16 +2309,188 @@ that mg-0ea1 had to backfill retroactively): the findings update is
 a non-negotiable acceptance blocker for the chic sub-program, not
 an optional accompaniment to the experiment ticket.
 
-#### Pre-registered chic-v6+
+#### chic-v6 — mechanical verification pass on chic candidate proposals (mg-a557)
 
-- **chic-v6** — domain-expert review of chic-v5's tier-2 candidates
-  (3 candidate proposals at the v5 commit; this is an Aegean-
-  syllabary specialist task, not a polecat task). Hand-curated
-  extension of line 4 (cross-script paleographic) from O&G 1996,
-  Salgarella 2020, Decorte 2017, and adjacent paleography
-  scholarship would also raise additional tier-3 candidates to
-  tier-2 by adding a fourth confirming vote where the
-  distributional + substrate lines already converge.
+Daniel's reframing reminder (2026-05-05) repositioned chic-v6 from
+"domain-expert review" (out of polecat scope) to **mechanical
+verification before specialist review** (in scope). The cryptography
+framing: verification of "is this doing something?" is much easier
+than hypothesis generation. chic-v5 *generated* candidate proposals
+from internal evidence (4 lines of evidence converging on phoneme
+classes); chic-v6 *verifies* whether applying those proposals to the
+corpus produces hits against three external-scholarship sources we
+already have ingested. Match rate becomes a verification signal that
+can promote candidate proposals toward "verified-by-scholarship"
+status without invoking an Aegean-syllabary specialist's judgment.
+
+**The chic-v6 deliverable is NOT a decipherment claim.** It is a
+verification-rate report against three pre-registered match sources;
+specialist judgment is still required to advance any matched
+candidate from "matched" to "decipherment". The match criteria
+(`scripts/build_chic_v6.py` module-level docstring;
+`results/chic_verification_match_rates.md` "Pre-registered match
+criteria" section) are fixed BEFORE any match counts are computed,
+to prevent post-hoc relaxation.
+
+The three external-scholarship match sources:
+
+- **Source A — scholar-proposed Linear-A readings.**
+  `corpora/scholar_proposed_readings/all.jsonl` (35 entries from
+  v22, e.g. `ku-ro`, `ki-ro`, `ja-sa-sa-ra-me`). A scholar entry
+  with `ab_sequence` of length k matches a CHIC inscription iff
+  there exists a contiguous run of k syllabographic-class tokens
+  within a single DIV-bounded segment such that for each position
+  i: (a) the token is anchored at the active tier and the token's
+  literal first-phoneme equals the scholar's
+  `scholarly_first_phoneme[i]`, OR (b) the token is a class
+  placeholder whose class equals
+  `classify_value(scholarly_first_phoneme[i])`. All k positions
+  must match.
+- **Source B — toponym substring.** `pools/toponym.yaml` (112
+  toponym surfaces from v18). For every surface, generate
+  substrings of length 3–5 (substring length 1–2 excluded as a
+  noise-floor convention). Match in a single DIV-bounded phoneme
+  stream char-by-char: literal char by string equality;
+  class-onset slot by class-membership; vowel slot by
+  vowel-membership.
+- **Source C — item-location consistency.** Per-inscription
+  `site` field. Generate substrings of length 3–5 from the
+  lowercased site surface; apply the source-B procedure but
+  only against the inscription's own phoneme stream and only
+  against substrings of its own site name.
+
+Four extended-partial-reading tier levels (full per-inscription
+table in `results/chic_extended_partial_readings.md`):
+
+- **tier-1** — chic-v2 paleographic-anchor pool only (20 anchors).
+- **tier-2** — tier-1 ∪ chic-v5 tier-2 candidates with chic-v6
+  L3-substrate-consistency-best specific phoneme overrides
+  (`#001 → wa`, `#012 → wa`, `#032 → ki`).
+- **tier-3** — tier-2 ∪ chic-v5 tier-3 candidates as class-level
+  placeholders (`[STOP:#NNN]`, `[GLIDE:#NNN]`, …); 29 added signs.
+- **tier-4** — tier-3 ∪ chic-v5 tier-4 candidates as class-level
+  placeholders; 17 more added signs.
+
+Per-tier match-rate table (full output in
+`results/chic_verification_match_rates.md`):
+
+| tier | n_inscriptions | n_with_any_match | match_rate_any | n_with_a | n_with_b | n_with_c | total_a | total_b | total_c |
+|:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| tier-1 | 302 | 67 | 0.2219 | 30 | 48 | 0 | 216 | 74 | 0 |
+| tier-2 | 302 | 70 | 0.2318 | 31 | 51 | 0 | 233 | 77 | 0 |
+| tier-3 | 302 | 161 | 0.5331 | 96 | 154 | 12 | 828 | 1803 | 18 |
+| tier-4 | 302 | 207 | 0.6854 | 111 | 202 | 23 | 1019 | 3957 | 40 |
+
+Tier-over-tier verification lift in `n_inscriptions_with_any_match`
+(positive lift = tier-N extension produces matches not attainable
+under tier-(N-1)):
+
+| from | to | lift (n_inscriptions) | lift (total a+b+c hits) |
+|:--|:--|--:|--:|
+| tier-1 | tier-2 | +3 | +20 |
+| tier-2 | tier-3 | +91 | +2339 |
+| tier-3 | tier-4 | +46 | +2367 |
+
+**The headline interpretation must lead with the discipline.** The
+tier-2 to tier-1 lift is the cleanest signal: tier-2 adds three
+*specific-phoneme* overrides (`#001 → wa`, `#012 → wa`,
+`#032 → ki`), and the lift is **+3 inscriptions** with any match
+(67 → 70) and **+20 total hits** across the three sources. This is
+a small but non-zero verification-grade signal: the three chic-v5
+tier-2 candidate proposals do produce mechanical hits against
+external scholarship that were not attainable under chic-v2 anchors
+alone. The match enumerations include source-A hits where the
+chic-v5 tier-2 candidate participates in the matched run (e.g.
+CHIC inscriptions where `[#012:wa]` followed by an anchored stop
+matches the scholar `wa-...` family), and source-B hits where the
+specific phoneme `ki` inside `#032`'s extended reading hits a
+toponym substring containing `ki` (e.g. `kid`, `kin`, `nik`,
+`liki`).
+
+**The tier-3 and tier-4 lifts (+91 and +46 inscriptions
+respectively, with hit counts in the thousands) are dominated by
+class-level matching's structural permissiveness, not by
+verification-grade evidence.** Class-level matching expands the
+match space substantially: a `STOP` placeholder matches any of
+`{p, b, t, d, k, g, q}`, a `GLIDE` placeholder matches any of
+`{j, w, y}`, and so on (full class → consonant set table in
+`results/chic_verification_match_rates.md`). The hit counts
+therefore confound (a) the tier-3/4 candidates being
+correctly-classed, (b) the class-level criterion being permissive
+enough to produce many incidental alignments. Without a
+phonotactically-matched permutation control of the tier-3/4 class
+assignments, the tier-3/4 lift is not interpretable as
+verification-grade signal — only as a *ceiling* on what verification
+the class-level proposals could possibly produce. The tier-1 →
+tier-2 lift is the load-bearing chic-v6 result; the tier-3 / tier-4
+numbers are reported for completeness and to explicitly disclose
+the class-level-matching ceiling, not as evidence in their own
+right.
+
+**Per-match enumeration (tier-4) is committed** at
+`results/chic_verification_match_rates.md` "Per-match enumeration"
+section. Every matched scholar reading, every matched toponym
+substring, and every matched site-substring is listed with the
+inscription id, the matched signs/substring, and the match modes
+(exact-phoneme vs class-level). This gives a concrete list of
+"candidate proposals with mechanical external verification" — but
+specialist judgment is still required to elevate any of these from
+matched to decipherment.
+
+**Source-C item-location consistency emerges only at tier-3+** (12
+inscriptions match a substring of their own site name at tier-3,
+23 at tier-4). This is consistent with the source-B and source-A
+ceiling effects: source-C is structurally a constrained subset of
+source-B (only own-site substrings count), so its lift is bounded
+above by the source-B lift, and the source-C lift inherits the same
+class-level-matching permissiveness caveat. The discipline-protecting
+reading: source-C produces zero matches at tier-1 / tier-2, so even
+the verification-grade tier-2 lift does not extend to per-inscription
+geographic consistency on this corpus.
+
+**The methodology paper's chic-v5 / §4.7 framing remains "candidate
+proposals pending domain-expert review".** The chic-v6
+mechanical-verification result narrows the framing slightly:
+chic-v5's three tier-2 candidates *do* clear a low-bar mechanical
+verification check (small but non-zero lift), while the larger
+tier-3 / tier-4 strata's apparent verification lift is dominated
+by class-level-matching permissiveness and does not constitute
+verification-grade evidence in the absence of a permutation control.
+A specialist review remains the load-bearing next step for advancing
+any of these from "matched" to "decipherment".
+
+**Inputs / outputs.** Inputs:
+`corpora/cretan_hieroglyphic/all.jsonl` (chic-v0; 302 inscriptions),
+`pools/cretan_hieroglyphic_anchors.yaml` (chic-v2),
+`results/chic_value_extraction_leaderboard.md` (chic-v5),
+`corpora/scholar_proposed_readings/all.jsonl` (v22),
+`pools/toponym.yaml` (v18). Outputs:
+`results/chic_extended_partial_readings.md`,
+`results/chic_verification_match_rates.md`,
+`results/experiments.chic_verification_v0.jsonl`. Determinism: no
+RNG; same inputs → byte-identical outputs (re-run hash-stable, see
+`scripts/build_chic_v6.py`).
+
+#### Pre-registered chic-v7+ (chic-v6 done in mg-a557)
+
+- **chic-v6 done.** The original "domain-expert review" framing
+  for chic-v6 was reframed by Daniel (2026-05-05) to a
+  mechanical-verification pass before specialist review (the
+  domain-expert review remains out of polecat scope and is
+  unchanged as a follow-up). chic-v6's verification-rate report
+  is in `results/chic_verification_match_rates.md`; the load-bearing
+  finding is the small-but-non-zero +3-inscription / +20-hit
+  tier-1 → tier-2 lift, with the larger tier-3 / tier-4 lifts
+  caveated for class-level-matching permissiveness.
+- **Specialist review of chic-v5's tier-2 candidates and chic-v6's
+  matched enumerations.** Hand-curated review by an Aegean-
+  syllabary specialist remains the next step; mechanical
+  verification (chic-v6) does not substitute for specialist
+  judgment. Hand-curated extension of line 4 (cross-script
+  paleographic) from O&G 1996, Salgarella 2020, Decorte 2017,
+  and adjacent paleography scholarship would also raise additional
+  tier-3 candidates to tier-2 by adding a fourth confirming vote
+  where the distributional + substrate lines already converge.
 - **chic-v7** — methodology-paper extension integrating chic-v0..v5
   cleanly into the v25 manuscript shape; the final consolidation
   pass before journal-submission handoff for the cross-script

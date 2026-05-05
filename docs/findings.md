@@ -6827,3 +6827,295 @@ Tracked separately:
   scope for the per-sign value-extraction discipline (an
   ideogram is a class-meaning marker, not a phoneme carrier).
 
+## Findings from mg-a557 (chic-v6 — mechanical verification pass on chic candidate proposals: scholar-proposed Linear-A readings, Cretan/Aegean toponym substrings, item-location consistency, 2026-05-05)
+
+### Reframe (Daniel reminder, 2026-05-05 ~16:24 BST)
+
+The original "domain-expert review" framing for chic-v6 is out
+of polecat scope (Aegean-syllabary specialist task). Daniel
+reframed chic-v6 to **mechanical verification before specialist
+review**, which is in scope. The cryptography framing:
+verification of "is this doing something?" is much easier than
+hypothesis generation. chic-v5 *generated* candidate proposals
+from internal evidence; chic-v6 *verifies* whether applying
+those proposals to the corpus produces hits against three
+external-scholarship sources we already have ingested.
+
+The output is **NOT a decipherment claim**. It is a
+verification-rate report. Specialist judgment is still required
+to advance any matched candidate from "matched" to
+"decipherment".
+
+### What this ticket built
+
+A new harness script and three result artifacts:
+
+- `scripts/build_chic_v6.py` — chic-v6 driver. Builds
+  extended partial readings at four tier levels and runs three
+  pre-registered match sources at each tier.
+- `results/chic_extended_partial_readings.md` — per-inscription
+  extended reading at each tier level (1208 rows: 302
+  inscriptions × 4 tier levels).
+- `results/chic_verification_match_rates.md` — per-tier match
+  rate table, tier-over-tier verification lift, per-match
+  enumeration at tier-4.
+- `results/experiments.chic_verification_v0.jsonl` —
+  per-inscription per-tier event records (1208 rows, sorted-
+  json-lines for downstream rollups).
+
+### Pre-registered match criteria
+
+Match criteria are pre-registered before any match counts are
+computed (per the chic-v6 brief; "0 verified matches is a
+legitimate publishable null result; don't relax match criteria
+mid-analysis to manufacture matches"). They are preserved
+verbatim in the `scripts/build_chic_v6.py` module-level
+docstring; the abbreviated form below mirrors the script.
+
+- **Source A — scholar-proposed Linear-A reading match.** A
+  scholar entry's `ab_sequence` (length k) matches a CHIC
+  inscription iff there exists a contiguous run of k
+  syllabographic-class tokens within a single DIV-bounded
+  segment such that for each position i:
+  (a) the token is a tier-1/2 anchored sign whose literal
+  first-phoneme equals the scholar's
+  `scholarly_first_phoneme[i]`  (exact-phoneme match), OR
+  (b) the token is a tier-3/4 class placeholder whose class
+  equals `classify_value(scholarly_first_phoneme[i])`
+  (class-level match).
+  All k positions must successfully match.
+- **Source B — toponym substring.** For every toponym surface
+  in `pools/toponym.yaml`, generate substrings of length L ∈
+  [3, 5]. Match in a single DIV-bounded phoneme stream,
+  char-by-char: literal char by string equality; class-onset
+  slot if the target char is in that class's consonant set;
+  vowel slot if the target char is a vowel. Min substring
+  length 3 (length 1–2 excluded as a noise-floor convention);
+  max 5 has no operational effect on this corpus.
+- **Source C — item-location consistency.** Per-inscription
+  `site` field, lowercased (alphabetical chars only).
+  Generate substrings of length 3–5 from the site surface;
+  apply the source-B match procedure but only against the
+  inscription's own phoneme stream and only against substrings
+  of its own site name.
+
+Class → consonant set:
+
+```
+vowel     a e i o u
+stop      p b t d k g q
+nasal     m n
+liquid    l r
+fricative s f h x z
+glide     j w y
+```
+
+### Tier levels (per chic-v6 brief)
+
+- **tier-1** — chic-v2 paleographic-anchor pool only (20
+  anchors).
+- **tier-2** — tier-1 ∪ chic-v5 tier-2 candidates with chic-v6
+  L3-substrate-consistency-best specific-phoneme overrides
+  (`#001 → wa`, `#012 → wa`, `#032 → ki`).
+- **tier-3** — tier-2 ∪ chic-v5 tier-3 candidates as
+  class-level placeholders (`[STOP:#NNN]`, `[GLIDE:#NNN]`, …);
+  29 added signs.
+- **tier-4** — tier-3 ∪ chic-v5 tier-4 candidates as
+  class-level placeholders; 17 more added signs.
+
+### Headline numbers
+
+| tier | n_inscriptions | n_with_any_match | match_rate_any | n_with_a | n_with_b | n_with_c | total_a | total_b | total_c |
+|:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| tier-1 | 302 | 67 | 0.2219 | 30 | 48 | 0 | 216 | 74 | 0 |
+| tier-2 | 302 | 70 | 0.2318 | 31 | 51 | 0 | 233 | 77 | 0 |
+| tier-3 | 302 | 161 | 0.5331 | 96 | 154 | 12 | 828 | 1803 | 18 |
+| tier-4 | 302 | 207 | 0.6854 | 111 | 202 | 23 | 1019 | 3957 | 40 |
+
+Tier-over-tier verification lift in
+`n_inscriptions_with_any_match`:
+
+| from | to | lift (n_inscriptions) | lift (total a+b+c hits) |
+|:--|:--|--:|--:|
+| tier-1 | tier-2 | +3 | +20 |
+| tier-2 | tier-3 | +91 | +2339 |
+| tier-3 | tier-4 | +46 | +2367 |
+
+### Headline interpretation (lead with the discipline)
+
+**The tier-1 → tier-2 lift is the load-bearing chic-v6
+result.** Tier-2 adds three specific-phoneme overrides
+(`#001 → wa`, `#012 → wa`, `#032 → ki`) drawn from the
+chic-v5 L3-substrate-consistency per-sign top-K table. The
+lift is **+3 inscriptions** with any match (67 → 70) and
+**+20 total hits** across the three sources. This is a
+small-but-non-zero verification-grade signal: the three
+chic-v5 tier-2 candidate proposals do produce mechanical
+hits against external scholarship that were not attainable
+under chic-v2 anchors alone.
+
+**The tier-3 and tier-4 lifts (+91 and +46 inscriptions
+respectively, with hit counts in the thousands) are
+dominated by class-level matching's structural permissive-
+ness, not by verification-grade evidence.** Class-level
+matching expands the match space substantially: a `STOP`
+placeholder matches any of `{p, b, t, d, k, g, q}` (7 of
+the 21 ASCII consonants), a `GLIDE` placeholder matches
+any of `{j, w, y}` (3 of 21), and so on. The hit counts
+therefore confound (a) the tier-3/4 candidates being
+correctly-classed, (b) the class-level criterion being
+permissive enough to produce many incidental alignments.
+Without a phonotactically-matched permutation control of
+the tier-3/4 class assignments, the tier-3/4 lift is not
+interpretable as verification-grade signal — only as a
+*ceiling* on what verification the class-level proposals
+could possibly produce. The tier-3 / tier-4 numbers are
+reported for completeness and to explicitly disclose the
+class-level-matching ceiling, not as evidence in their own
+right.
+
+**Source-C item-location consistency emerges only at
+tier-3+.** 12 inscriptions match a substring of their own
+site name at tier-3, 23 at tier-4. Source-C is structurally
+a constrained subset of source-B (only own-site substrings
+count), so its lift is bounded above by the source-B lift
+and inherits the same class-level-matching permissiveness
+caveat. The discipline-protecting reading: source-C
+produces **zero matches at tier-1 / tier-2**, so even the
+verification-grade tier-2 lift does not extend to per-
+inscription geographic consistency on this corpus. (The
+24 site values in the corpus include `Knossos`,
+`Phaistos`, `Mallia`, `Palaikastro`, `Zakros`, …; under
+tier-1 / tier-2 anchored signs alone, no inscription's
+extended phoneme stream contains a length-≥3 substring of
+its own site name. This is a substantive null result
+about the chic-v2 anchor pool's overlap with Cretan place-
+name vocabulary.)
+
+### Per-match enumeration (committed)
+
+`results/chic_verification_match_rates.md` "Per-match
+enumeration" section lists every matched scholar reading,
+toponym substring, and site-substring at tier-4 with the
+inscription id, the matched signs/substring, and match modes
+(exact-phoneme vs class-level). This concrete list is the
+chic-v6 deliverable for downstream specialist review.
+
+The tier-2 specific-phoneme additions surface in match
+enumerations where `[#001:wa]`, `[#012:wa]`, or
+`[#032:ki]` participate. Examples drawn from the committed
+enumeration table:
+
+- Tier-2 source-A hits with `wa` (`#001` / `#012`): scholar
+  entries with `scholarly_first_phoneme = ['w', ...]` are not
+  in the 35-entry Younger set (Linear-A scholar lexicon's
+  distinct first-phoneme tuples are `(a,r)`, `(d,n)`, `(d,r)`,
+  `(j,s,s,r,m)`, `(k,m,n)`, `(k,p)`, `(k,r)`, `(m,n)`,
+  `(m,t)`, `(p,j)`, `(p,t,j)`, `(t,i)`, `(t,n)`; no `(w,…)`
+  tuple). The two `#001 → wa` / `#012 → wa` overrides
+  therefore cannot lift source A directly. The +17 tier-1 →
+  tier-2 source-A hits across +1 inscription (CHIC #057) and
+  the analogous lift on CHIC #058 come from `#032 → ki`
+  participating in `(k, p)`-class runs paired with the
+  anchored `#013 → pa` (anchor); the matched scholar entries
+  include `ku-pa3`, `ku-pa`, `ka-pa` (e.g. `kupa3_HT1`,
+  `kapa_HT102`, `kupa_HT110a`, `kupa_HT16`).
+- Tier-2 source-B hits with `wa` / `ki`: 3 new
+  (toponym, substring) cells over the 4-fold tier-2 vs
+  tier-1 baseline: `(aptara, ara)`, `(paros, aro)`,
+  `(poikilassos, iki)`. All three are `i…` / `…ra` / `…ro`
+  combinations where one of the three tier-2 specific-phoneme
+  overrides participates with an adjacent anchored sign.
+
+### Notable null observations
+
+- **No source-A matches at tier-1 use mode-(b) class.** By
+  construction: tier-1 has zero class-placeholder signs.
+  The 216 tier-1 source-A hits are all exact-phoneme matches
+  among the 20 chic-v2 anchors against the scholar phoneme
+  inventory. This serves as the baseline.
+- **No `wa-…` scholar entry in the 35-entry pool.** The
+  tier-2 `#001 → wa` and `#012 → wa` overrides therefore
+  cannot lift source A by themselves; the source-A lift
+  comes from `#032 → ki` and from the three signs jointly
+  participating in runs whose first sign is not ki/wa-onset
+  but uses one of the three at position ≥ 2.
+- **No Cretan-toponym source-B match at tier-1 / tier-2 for
+  the most-cited site `Knossos`.** No CHIC inscription's
+  tier-1/tier-2 extended reading contains `kno`, `nos`,
+  `oss`, or any other length-≥3 substring of `knossos`.
+  Class-level matching at tier-3/tier-4 does produce
+  apparent matches, but those are at the
+  ceiling-permissiveness side of the analysis.
+
+### Relation to chic-v5 (mg-7c6d) and the methodology paper
+
+chic-v5 surfaced 3 tier-2 candidate proposals (`#001`,
+`#012`, `#032`) via internal-evidence agreement (≥3 of 4
+lines on a phoneme class). chic-v6 verifies these
+mechanically against three external-scholarship sources
+without invoking specialist judgment. The two contributions
+are methodologically distinct:
+
+- chic-v5 = candidate generation, internal evidence, ≥3-of-4
+  line agreement.
+- chic-v6 = candidate verification, external evidence, match
+  against scholar-proposed readings + toponyms + site
+  metadata.
+
+The methodology paper's chic-v5 / §4.7 framing remains
+"candidate proposals pending domain-expert review". chic-v6
+narrows the framing slightly: chic-v5's three tier-2
+candidates *do* clear a low-bar mechanical verification
+check (small but non-zero +3-inscription / +20-hit lift),
+while the larger tier-3 / tier-4 strata's apparent
+verification lift is dominated by class-level-matching
+permissiveness and does not constitute verification-grade
+evidence in the absence of a permutation control. A
+specialist review remains the load-bearing next step for
+advancing any of these from "matched" to "decipherment".
+
+### Determinism
+
+- No RNG. Same (CHIC corpus, anchor pool, leaderboard
+  markdown, scholar entries, toponym pool) → byte-identical
+  artifacts. Re-running `python3 scripts/build_chic_v6.py`
+  twice in succession produces identical md5 hashes for
+  all three output files (verified during chic-v6 dev).
+- All sortings are deterministic (sign ids by integer rank,
+  inscription ids alphabetically, scholar entries by
+  `entry_id`, toponym surfaces by `surface`).
+
+### AGENTS.md compliance
+
+- `docs/findings.md` updated with this entry. Per AGENTS.md
+  (cited in chic-v3+ tickets): the findings update is a
+  non-negotiable acceptance blocker. chic-v1's mg-c7e3
+  missed-update incident, backfilled by mg-0ea1, is the
+  cited precedent — chic-v3+ tickets must not repeat it.
+- `docs/findings_summary.md` §4.7 extended with the chic-v6
+  subsection.
+
+### Out of scope for this ticket (chic-v6 polecat work)
+
+- **Domain-expert review of any verified matches.** Out of
+  polecat scope; needs an Aegean-syllabary specialist.
+  chic-v6 ships verification-rate evidence; specialist
+  judgment is the next step.
+- **Modifying chic-v5's tier classifications based on
+  chic-v6 verification.** chic-v6 is a separate evidence
+  axis; tiers established by the 4-line-of-evidence
+  framework remain as written. chic-v6 produces a
+  *complementary* verification-rate signal, not a
+  re-tiering.
+- **Generating new candidate proposals.** chic-v6 verifies
+  existing proposals; it does not extend the search space.
+- **Permutation control of tier-3/4 class assignments.**
+  Would resolve the class-level-matching permissiveness
+  caveat above; deferred. The tier-1 → tier-2 lift is
+  load-bearing without it.
+- **AGENTS.md scope-of-work update for the chic
+  sub-program.** Cosmetic; deferred (tracked as a chic
+  follow-up).
+- **LaTeX / journal submission.** Out of polecat scope.
+
