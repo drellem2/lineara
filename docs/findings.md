@@ -4511,3 +4511,233 @@ resume cache so re-runs are no-ops.
   scope.
 - **Domain-expert review.** Still not a polecat task; needs an
   Aegean-syllabary specialist.
+
+## Findings from mg-46d5 (v22 — Minoan inferred-context external-validation comparison: 35-entry scholar-proposed reading set vs framework mechanical readings, 2026-05-05)
+
+### Headline
+
+The 35-entry scholar-proposed-reading external-validation set
+**fails decisively against the framework's mechanical per-inscription
+consensus**: aggregate **3.95% match rate** (3 / 76 AB-sign comparison
+points) on the consonantal first segment of the scholarly CV
+syllable, with a **strong-null-band** classification (< 5%, the
+pre-registered threshold for "reinforces v13 / v19 verdicts").
+
+| metric | value |
+|:--|:--:|
+| n entries | 35 |
+| n AB-sign comparison points | 76 |
+| n with at least one substrate proposal | 45 |
+| **aggregate match rate (consonant of scholarly CV)** | **3.95%** (3/76) |
+| aggregate match rate (robust: + modal posterior > 0.5 + n_proposals ≥ 2) | 1.32% (1/76) |
+| aggregate match rate (full CV — strict) | 2.63% (2/76) |
+| per-entry mean match rate | 4.29% |
+| per-entry median match rate | 0.00% |
+| per-entry max | 50.00% (3 entries) |
+
+Entries hitting at the per-entry max (50% match):
+
+- `ara_ARKH1a` (a-ra → mechanical a-z) — 1/2 match on the vowel-initial AB08
+- `ara_HT1` (a-ra → mechanical a-a) — 1/2 match on AB08
+- `karu_HT2` (ka-ru → mechanical u-r) — 1/2 match on AB26 (`r`)
+
+The single robust match (modal_posterior > 0.5 AND n_proposals ≥ 2) is
+`karu_HT2` AB26 → `r` (matches scholarly `ru` first-consonant). The
+two `ara_*` matches on AB08 → `a` are of the lone-proposal /
+chance-coincidence shape (vowel-initial AB has high modal probability
+of `a` under multiple substrate pools, which is why the consensus's
+modal phoneme on AB08 is `a`).
+
+### Distribution of per-entry match scores
+
+| bucket | n entries |
+|:--|---:|
+| 0%             | 32 |
+| (0%, 20%)      |  0 |
+| [20%, 40%)     |  0 |
+| [40%, 60%)     |  3 |
+| [60%, 80%)     |  0 |
+| [80%, 100%]    |  0 |
+
+32 of 35 entries score zero; 3 score 50%; nothing in between or above.
+The bimodal-with-floor distribution is what an **all-noise** matcher
+plus rare random coincidences would produce. There is no discernible
+"this category recovers partially" cluster — every category averages
+≤ 25%, and only the 2-entry `lexeme` and `onomastic` categories are
+non-zero.
+
+### Per-category breakdown
+
+| category | n entries | n signs | matches | match rate |
+|:--|---:|---:|---:|---:|
+| `accountancy_total` (ku-ro) | 5 | 10 | 0 | 0.00% |
+| `accountancy_deficit` (ki-ro) | 3 | 6 | 0 | 0.00% |
+| `libation_formula` (ja-sa-sa-ra-me on PS Za 2) | 1 | 5 | 0 | 0.00% |
+| `libation_or_onomastic` (ta-na, da-re, ...) | 3 | 6 | 0 | 0.00% |
+| `commodity` (ku-mi-na cumin) | 2 | 6 | 0 | 0.00% |
+| `commodity_or_name` (mi-na) | 2 | 4 | 0 | 0.00% |
+| `name_family` (ku-pa, ku-pa3, ku-ra) | 5 | 10 | 0 | 0.00% |
+| `name_or_kinship` (ma-te) | 2 | 4 | 0 | 0.00% |
+| `name_or_suffix` (ki-ra) | 2 | 4 | 0 | 0.00% |
+| `name_or_votive` (pa-ja) | 2 | 4 | 0 | 0.00% |
+| `personal_name` (pi-ta-ja on HT 6a) | 1 | 3 | 0 | 0.00% |
+| `onomastic_prefix` (ta-i) | 2 | 4 | 0 | 0.00% |
+| `transaction_term` (ka-pa) | 1 | 2 | 0 | 0.00% |
+| `lexeme` (ka-ru, di-na) | 2 | 4 | 1 | 25.00% |
+| `onomastic` (a-ra) | 2 | 4 | 2 | 50.00% |
+
+Important honesty constraint: the two non-zero categories owe their
+non-zero rate to entries on **vowel-initial syllables** (a-ra: AB08
+matches `a`) and to the lone-proposal / random-coincidence shape
+(ka-ru: AB26 matches `r`). These do not constitute partial recovery
+of the substantive scholarly meaning (a-ra is not "decoded" by the
+framework producing `a-z` for it).
+
+### What this changes about the methodology paper's claims
+
+Before v22, §3.13 / §4.6 were anchored on **one** mechanical-vs-
+scholarly comparison (PS Za 2 ja-sa-sa-ra-me, 0/5; v19) and **one**
+null follow-up (KU-RO / KI-RO not present in KH 5 / KH 10; v20). The
+load-bearing claim — *internal consensus does not imply external
+correctness* — rested on a single inscription. v22 broadens the
+comparison footprint to a 35-entry, 76-comparison-point set drawn
+from Younger's contextual scholarly readings across 6 sites
+(Haghia Triada, Khania, Phaistos, Zakros, Arkhanes, Psykhro) and
+12+ scholar-attested CV combinations (ku-ro, ki-ro, ja-sa-sa-ra-me,
+ta-na, ku-mi-na, mi-na, pi-ta-ja, ma-te, ku-pa, ku-pa3, ki-ra,
+ka-pa, ka-ru, da-re, da-ta, di-na, ta-i, pa-ja, a-ra, ku-ra, ku-se).
+The headline 3.95% aggregate match rate **strengthens** the v19 / v20
+verdict from "one inscription, decisively divergent" to "population-
+level decisively divergent" — the framework does NOT recover scholar-
+meaningful readings on the population-scale scholarly-comparison set,
+not just on one libation formula.
+
+The pre-registered three-band acceptance bar resolved as:
+
+- < 5% — strong reinforcement of v13 / v19's "internal consensus does not imply external correctness" → **observed: 3.95% (the band)**.
+- > 20% — would have warranted deeper investigation (partial recovery).
+- 5–20% — would have been an ambiguous middle case requiring hedged language.
+
+### Why this is not a "decipherment-grade falsification" move
+
+The 35-entry result is **descriptive, not pass/fail**. A literal
+classical-NLP read would say "the framework's mechanical consensus
+phoneme matches the scholarly first-consonant on 4% of comparison
+points; therefore the framework does not perform scholarly
+decipherment". That is correct as a statement about the framework's
+behaviour but is not new information about Linear A — the
+framework was never claimed to perform per-sign decipherment
+(§5.1). What v22 contributes is an *empirical population-level
+falsification of the optimistic case* the framework's internal-
+consensus cascade-candidate readings might have suggested. The
+discipline-protecting framing of §4.6 is now **load-bearing on a
+population-level external-validation set, not just one inscription**.
+
+The scholar-proposed reading set is itself *not* a ground-truth
+decipherment: Younger's readings are scholarly proposals
+themselves, contested in places (notably some accountancy
+context-readings), and a comparison failure could in principle
+mean either (a) the framework is wrong, or (b) the scholarly
+readings are wrong. The honest read remains v19's: (a) is the
+overwhelmingly more likely interpretation given that several of
+the readings (ku-ro / ki-ro / ja-sa-sa-ra-me) are corroborated
+by Linear-B carryover values for the constituent signs and have
+been stable for decades. The framework's 3.95% aggregate is
+consistent with random-baseline noise and inconsistent with even
+partial recovery of the scholarly meaning at population scale.
+
+### Artifacts shipped
+
+- `corpora/scholar_proposed_readings/all.jsonl` — 35-entry curated
+  scholar-attested contextual reading set, deterministic format,
+  citation-traceable to Younger online + Schoep 2002 + Salgarella
+  2020 + Palmer 1995 + Davis 2014 + Ventris-Chadwick 1956.
+  Spans verified against `corpus/all.jsonl` syllabographic-only
+  token sequences. Categories: accountancy_total (5),
+  accountancy_deficit (3), libation_formula (1),
+  libation_or_onomastic (3), commodity (2), commodity_or_name (2),
+  name_family (5), name_or_kinship (2), name_or_suffix (2),
+  name_or_votive (2), personal_name (1), onomastic_prefix (2),
+  transaction_term (1), lexeme (2), onomastic (2).
+- `scripts/compare_scholar_proposed.py` — comparison script. Re-uses
+  `collect_per_inscription_proposals` and `per_sign_consensus_local`
+  from `scripts/per_inscription_coherence.py` so v22 inherits v19's
+  per-inscription consensus computation exactly. Outputs the rollup
+  + a JSON summary sidecar (optional, unused in production).
+- `results/rollup.scholar_proposed_readings_comparison.md` — main
+  result rollup. Headline + per-category + per-entry full table +
+  per-AB-sign breakdown for matching entries.
+- `docs/findings.md` — this entry.
+- `docs/findings_summary.md` — §3.13 extended with §3.13.4 for the
+  v22 35-entry set; §4.6 load-bearing block extended with
+  population-level reinforcement; §5.1 out-of-scope paragraph
+  extended with the v22 aggregate; §3.1 row 11 extended; Abstract
+  extended; Appendix A row added.
+
+### Reproducibility
+
+```
+python3 scripts/compare_scholar_proposed.py
+```
+
+The comparison aggregates over the existing
+`results/experiments.external_phoneme_perplexity_v0.jsonl` and the
+existing `hypotheses/auto/{aquitanian,etruscan,toponym}.manifest.jsonl`
++ `hypotheses/auto_signatures/{aquitanian,etruscan,toponym}.manifest.jsonl`
+manifests, so no resweep is required. The output is byte-identical
+across re-runs given the same result stream + manifests + hypothesis
+YAMLs + `corpora/scholar_proposed_readings/all.jsonl` (verified).
+The match-counts above were produced from the committed `results/`
+data and the committed scholar-proposed-readings entries. Tie-
+breaking on modal phoneme is alphabetical (inherited from
+`per_sign_consensus_local`).
+
+### Limitations specific to v22
+
+- The scholar-proposed reading set is **not exhaustive of Younger's
+  catalog**. Linear A is mostly undeciphered; Younger gives dozens
+  of contextual readings, not hundreds. v22 ships 35 entries
+  spanning the most-attested categories (accountancy totals /
+  deficits, libation formula, onomastic prefixes / suffixes,
+  commodity terms, personal names). Entries were drawn primarily
+  from CV combinations corroborated by Linear-B carryover values
+  and present in the SigLA corpus at concrete spans. Sign-value-
+  only transliterations (`AB67 = ki`) were excluded by construction
+  — those are not contextual reading proposals.
+- The "first-consonant" comparison strategy follows v19's PS Za 2
+  convention so v22 is continuous with the prior single-entry
+  result. A more permissive strategy (e.g. mechanical phoneme
+  appears anywhere in the scholarly CV syllable's allophone set)
+  would raise the headline rate but would also conflate genuine
+  recovery with chance overlap on common phonemes (a/e/i appear
+  in many CV syllables).
+- The set leans accountancy-heavy (Haghia Triada accountancy is
+  the SigLA corpus's dominant genre — 372 of 772 inscriptions).
+  Libation-formula entries are limited because the libation
+  inscriptions are only 2 in SigLA (PS Za 2 / SY Za 4). The
+  3 cascade-candidate inscriptions (KH 10, KH 5, PS Za 2 from
+  v19) are represented here only via PS Za 2 (KH 10 / KH 5
+  carry no comparable scholar-attested span per v20).
+- Every entry treats signs with no positive-paired-diff candidate
+  proposal as a miss in the per-entry denominator. This matches
+  v19's per-inscription denominator convention. Entries on
+  inscriptions where v22's substrate-candidate coverage is thin
+  (`mate_PH15a`, `transaction_term`, ...) have many ·-no-proposal
+  cells, which contributes to the floor-of-zero shape but is the
+  honest accounting.
+
+### Out of scope (deferred to subsequent tickets)
+
+- **Full cross-LM matrix for Eteocretan** (v23 — queued in v21).
+- **Per-inscription cascade-candidate analysis under Eteocretan LM**
+  (v24 — analogous to v19 but with Eteocretan-shaped substrate
+  signal).
+- **Eteocretan bilingual decoding** (Praisos / Dreros bilinguals
+  give partial Greek translations; methodologically distinct,
+  deferred).
+- **Per-window deduplication / Linear-B small-K gate adoption** —
+  cosmetic polish; deferred indefinitely.
+- **Methodology paper LaTeX / journal submission.** Out of polecat
+  scope.
+- **Domain-expert review.** Still not a polecat task; needs an
+  Aegean-syllabary specialist.
