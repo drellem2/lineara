@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_nurph_CHIC__126_0_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''nurph''
+  pinned to CHIC #126 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: nurph
+  phonemes:
+  - n
+  - u
+  - r
+  - ph
+  gloss_hint: nine
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: 'CHIC #126'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#036': n
+    '#047': u
+    '#009': r
+    '#056': ph

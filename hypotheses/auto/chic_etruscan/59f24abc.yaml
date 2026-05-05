@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_thui_CHIC__056_7_9
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''thui''
+  pinned to CHIC #056 tokens [7..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: thui
+  phonemes:
+  - th
+  - u
+  - i
+  gloss_hint: here
+  citation: Bonfante & Bonfante 2002, glossary thui.
+equation:
+  inscription_id: 'CHIC #056'
+  span:
+  - 7
+  - 9
+  sign_to_phoneme:
+    '#042': th
+    '#057': u
+    '#070': i

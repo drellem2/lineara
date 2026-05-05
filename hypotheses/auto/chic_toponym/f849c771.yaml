@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_ina_CHIC__056_7_9
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''ina'' pinned
+  to CHIC #056 tokens [7..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: ina
+  phonemes:
+  - i
+  - n
+  - a
+  gloss_hint: -ina / ina- (substrate cluster fragment; broad CV-CV)
+  citation: Furnée 1972.
+equation:
+  inscription_id: 'CHIC #056'
+  span:
+  - 7
+  - 9
+  sign_to_phoneme:
+    '#042': i
+    '#057': n
+    '#070': a

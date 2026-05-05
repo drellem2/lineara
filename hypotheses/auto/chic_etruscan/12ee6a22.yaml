@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_nene_CHIC__065_0_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''nene''
+  pinned to CHIC #065 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: nene
+  phonemes:
+  - n
+  - e
+  - n
+  - e
+  gloss_hint: nurse, grandmother
+  citation: Bonfante & Bonfante 2002, glossary nene.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#072': n
+    '#049': e
+    '#071': n
+    '#050': e

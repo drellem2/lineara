@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_velcitanus_CHIC__328_5_14
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''velcitanus''
+  pinned to CHIC #328 tokens [5..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: velcitanus
+  phonemes:
+  - v
+  - e
+  - l
+  - c
+  - i
+  - t
+  - a
+  - n
+  - u
+  - s
+  gloss_hint: month of Velcitanus
+  citation: Bonfante & Bonfante 2002, glossary velcitanus.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 14
+  sign_to_phoneme:
+    '#019': v
+    '#051': e
+    '#070': l
+    '#094': c
+    '#034': i
+    '#056': t
+    '#077': a
+    '#049': n
+    '#038': u
+    '#029': s

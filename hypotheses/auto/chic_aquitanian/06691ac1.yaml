@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_lo_CHIC__018_4_5
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''lo''
+  pinned to CHIC #018 tokens [4..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: lo
+  phonemes:
+  - l
+  - o
+  gloss_hint: sleep
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #018'
+  span:
+  - 4
+  - 5
+  sign_to_phoneme:
+    '#020': l
+    '#047': o

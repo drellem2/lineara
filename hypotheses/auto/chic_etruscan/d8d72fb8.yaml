@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_turuce_CHIC__328_4_9
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''turuce''
+  pinned to CHIC #328 tokens [4..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: turuce
+  phonemes:
+  - t
+  - u
+  - r
+  - u
+  - c
+  - e
+  gloss_hint: gave, dedicated (perfective)
+  citation: Bonfante & Bonfante 2002, glossary turuce; votive verb.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 9
+  sign_to_phoneme:
+    '#025': t
+    '#019': u
+    '#051': r
+    '#070': u
+    '#094': c
+    '#034': e

@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_menerva_CHIC__328_8_14
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''menerva''
+  pinned to CHIC #328 tokens [8..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: menerva
+  phonemes:
+  - m
+  - e
+  - n
+  - e
+  - r
+  - v
+  - a
+  gloss_hint: Menerva (~Minerva)
+  citation: Bonfante & Bonfante 2002, glossary menerva.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 14
+  sign_to_phoneme:
+    '#094': m
+    '#034': e
+    '#056': n
+    '#077': e
+    '#049': r
+    '#038': v
+    '#029': a

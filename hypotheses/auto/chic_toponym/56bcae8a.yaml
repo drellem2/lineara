@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_ther_CHIC__073_0_2
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''ther''
+  pinned to CHIC #073 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: ther
+  phonemes:
+  - th
+  - e
+  - r
+  gloss_hint: ther- (initial fragment; Thera)
+  citation: Beekes 2010 s.v. Thera.
+equation:
+  inscription_id: 'CHIC #073'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#027': th
+    '#034': e
+    '#070': r

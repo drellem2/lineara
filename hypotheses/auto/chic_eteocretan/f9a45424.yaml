@@ -1,0 +1,37 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_arkaginoi_CHIC__328_4_12
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''arkaginoi''
+  pinned to CHIC #328 tokens [4..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: arkaginoi
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  - g
+  - i
+  - n
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 12
+  sign_to_phoneme:
+    '#025': a
+    '#019': r
+    '#051': k
+    '#070': a
+    '#094': g
+    '#034': i
+    '#056': n
+    '#077': o
+    '#049': i

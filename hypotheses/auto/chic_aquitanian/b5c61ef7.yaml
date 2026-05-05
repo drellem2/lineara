@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_lore_CHIC__294_15_18
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''lore''
+  pinned to CHIC #294 tokens [15..18].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: lore
+  phonemes:
+  - l
+  - o
+  - r
+  - e
+  gloss_hint: flower
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 15
+  - 18
+  sign_to_phoneme:
+    '#050': l
+    '#019': o
+    '#028': r
+    '#056': e

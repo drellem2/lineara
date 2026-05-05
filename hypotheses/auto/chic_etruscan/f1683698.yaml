@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_tinia_CHIC__294_11_15
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''tinia''
+  pinned to CHIC #294 tokens [11..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: tinia
+  phonemes:
+  - t
+  - i
+  - n
+  - i
+  - a
+  gloss_hint: Tinia (chief god)
+  citation: Bonfante & Bonfante 2002, glossary tinia.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 11
+  - 15
+  sign_to_phoneme:
+    '#070': t
+    '#092': i
+    '#019': n
+    '#044': i
+    '#050': a

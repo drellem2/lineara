@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_per_CHIC__021_1_3
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''per'' pinned
+  to CHIC #021 tokens [1..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: per
+  phonemes:
+  - p
+  - e
+  - r
+  gloss_hint: per- (initial fragment; Pergamos / Persa)
+  citation: Beekes 2010 s.v. Pergamos.
+equation:
+  inscription_id: 'CHIC #021'
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    '#017': p
+    '#049': e
+    '#034': r

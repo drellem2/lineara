@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_capi_CHIC__328_11_14
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''capi''
+  pinned to CHIC #328 tokens [11..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: capi
+  phonemes:
+  - c
+  - a
+  - p
+  - i
+  gloss_hint: jar, vessel (also "hand"?)
+  citation: Bonfante & Bonfante 2002, glossary capi.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    '#077': c
+    '#049': a
+    '#038': p
+    '#029': i

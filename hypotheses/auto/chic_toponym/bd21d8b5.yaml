@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_knossos_CHIC__328_0_6
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''knossos''
+  pinned to CHIC #328 tokens [0..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: knossos
+  phonemes:
+  - k
+  - n
+  - o
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Knossos (Cretan palatial site)
+  citation: Beekes 2010 vol. 2 s.v. Knossos; Furnée 1972 §122 (-ssos suffix).
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 0
+  - 6
+  sign_to_phoneme:
+    '#034': k
+    '#002': n
+    '#056': o
+    '#070': s
+    '#025': s
+    '#019': o
+    '#051': s

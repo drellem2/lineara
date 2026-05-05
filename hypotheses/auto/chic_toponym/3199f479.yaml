@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_hua_CHIC__037_0_2
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''hua'' pinned
+  to CHIC #037 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: hua
+  phonemes:
+  - h
+  - u
+  - a
+  gloss_hint: hua- (initial fragment; Hyakinthos / Huakinthos)
+  citation: Beekes 2010 s.v. Hyakinthos.
+equation:
+  inscription_id: 'CHIC #037'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#042': h
+    '#054': u
+    '#061': a

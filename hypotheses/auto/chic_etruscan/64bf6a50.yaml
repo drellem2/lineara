@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_sath_CHIC__003_3_5
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''sath''
+  pinned to CHIC #003 tokens [3..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: sath
+  phonemes:
+  - s
+  - a
+  - th
+  gloss_hint: bond, ritual obligation
+  citation: Bonfante & Bonfante 2002, glossary sath.
+equation:
+  inscription_id: 'CHIC #003'
+  span:
+  - 3
+  - 5
+  sign_to_phoneme:
+    '#009': s
+    '#077': a
+    '#013': th

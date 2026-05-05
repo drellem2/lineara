@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_nax_CHIC__113_26_29
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''nax'' pinned
+  to CHIC #113 tokens [26..29].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: nax
+  phonemes:
+  - n
+  - a
+  - k
+  - s
+  gloss_hint: nak- / nax- (initial fragment; Naxos)
+  citation: Beekes 2010 s.v. Naxos.
+equation:
+  inscription_id: 'CHIC #113'
+  span:
+  - 26
+  - 29
+  sign_to_phoneme:
+    '#057': n
+    '#023': a
+    '#042': k
+    '#063': s

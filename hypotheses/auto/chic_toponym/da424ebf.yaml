@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_olu_CHIC__003_3_5
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''olu'' pinned
+  to CHIC #003 tokens [3..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: olu
+  phonemes:
+  - o
+  - l
+  - u
+  gloss_hint: olu- (initial fragment; Olympos / Olunthos / Olous)
+  citation: Beekes 2010 s.v. Olympos.
+equation:
+  inscription_id: 'CHIC #003'
+  span:
+  - 3
+  - 5
+  sign_to_phoneme:
+    '#009': o
+    '#077': l
+    '#013': u

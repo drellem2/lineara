@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_hum_CHIC__003_4_6
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''hum'' pinned
+  to CHIC #003 tokens [4..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: hum
+  phonemes:
+  - h
+  - u
+  - m
+  gloss_hint: hum- (initial fragment; Hymettos)
+  citation: Beekes 2010 s.v. Hymettos.
+equation:
+  inscription_id: 'CHIC #003'
+  span:
+  - 4
+  - 6
+  sign_to_phoneme:
+    '#077': h
+    '#013': u
+    '#020': m

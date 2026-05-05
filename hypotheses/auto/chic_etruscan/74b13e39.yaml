@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_lupum_CHIC__328_7_11
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''lupum''
+  pinned to CHIC #328 tokens [7..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: lupum
+  phonemes:
+  - l
+  - u
+  - p
+  - u
+  - m
+  gloss_hint: dead at (epitaph)
+  citation: Bonfante & Bonfante 2002, glossary lupum.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 11
+  sign_to_phoneme:
+    '#070': l
+    '#094': u
+    '#034': p
+    '#056': u
+    '#077': m

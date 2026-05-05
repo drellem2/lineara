@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_hegazti_CHIC__328_8_14
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''hegazti''
+  pinned to CHIC #328 tokens [8..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: hegazti
+  phonemes:
+  - h
+  - e
+  - g
+  - a
+  - z
+  - t
+  - i
+  gloss_hint: bird
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 14
+  sign_to_phoneme:
+    '#094': h
+    '#034': e
+    '#056': g
+    '#077': a
+    '#049': z
+    '#038': t
+    '#029': i

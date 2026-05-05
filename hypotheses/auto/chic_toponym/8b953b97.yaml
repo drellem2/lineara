@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_andos_CHIC__294_11_15
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''andos''
+  pinned to CHIC #294 tokens [11..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: andos
+  phonemes:
+  - a
+  - n
+  - d
+  - o
+  - s
+  gloss_hint: -andos (substrate ending; broader -nd- family)
+  citation: Furnée 1972 §128.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 11
+  - 15
+  sign_to_phoneme:
+    '#070': a
+    '#092': n
+    '#019': d
+    '#044': o
+    '#050': s

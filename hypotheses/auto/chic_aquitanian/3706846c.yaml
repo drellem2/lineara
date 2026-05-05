@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_erori_CHIC__328_1_5
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''erori''
+  pinned to CHIC #328 tokens [1..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: erori
+  phonemes:
+  - e
+  - r
+  - o
+  - r
+  - i
+  gloss_hint: fall
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    '#002': e
+    '#056': r
+    '#070': o
+    '#025': r
+    '#019': i

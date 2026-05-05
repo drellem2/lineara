@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_ar_CHIC__003_11_12
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''ar'' pinned
+  to CHIC #003 tokens [11..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: ar
+  phonemes:
+  - a
+  - r
+  gloss_hint: do, make (verb root)
+  citation: Bonfante & Bonfante 2002, glossary ar.
+equation:
+  inscription_id: 'CHIC #003'
+  span:
+  - 11
+  - 12
+  sign_to_phoneme:
+    '#050': a
+    '#016': r

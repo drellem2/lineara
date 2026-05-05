@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_txakur_CHIC__294_8_12
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''txakur''
+  pinned to CHIC #294 tokens [8..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: txakur
+  phonemes:
+  - tx
+  - a
+  - k
+  - u
+  - r
+  gloss_hint: dog
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    '#041': tx
+    '#019': a
+    '#047': k
+    '#070': u
+    '#092': r

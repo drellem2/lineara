@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_tamera_CHIC__328_8_13
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''tamera''
+  pinned to CHIC #328 tokens [8..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: tamera
+  phonemes:
+  - t
+  - a
+  - m
+  - e
+  - r
+  - a
+  gloss_hint: chamber, office (~tamiae)
+  citation: Bonfante & Bonfante 2002, glossary tamera.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 13
+  sign_to_phoneme:
+    '#094': t
+    '#034': a
+    '#056': m
+    '#077': e
+    '#049': r
+    '#038': a

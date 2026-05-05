@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_thana_CHIC__294_9_12
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''thana''
+  pinned to CHIC #294 tokens [9..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: thana
+  phonemes:
+  - th
+  - a
+  - n
+  - a
+  gloss_hint: Thana (common female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    '#019': th
+    '#047': a
+    '#070': n
+    '#092': a

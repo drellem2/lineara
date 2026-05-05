@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_arto_CHIC__065_0_3
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''arto''
+  pinned to CHIC #065 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: arto
+  phonemes:
+  - a
+  - r
+  - t
+  - o
+  gloss_hint: corn, millet
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#072': a
+    '#049': r
+    '#071': t
+    '#050': o

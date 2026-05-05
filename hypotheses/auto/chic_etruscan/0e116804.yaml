@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_vacl_CHIC__126_1_4
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''vacl''
+  pinned to CHIC #126 tokens [1..4].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: vacl
+  phonemes:
+  - v
+  - a
+  - c
+  - l
+  gloss_hint: libation
+  citation: Bonfante & Bonfante 2002, glossary vacl.
+equation:
+  inscription_id: 'CHIC #126'
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    '#047': v
+    '#009': a
+    '#056': c
+    '#062': l

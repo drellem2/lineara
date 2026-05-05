@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_ipei_CHIC__065_1_4
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''ipei''
+  pinned to CHIC #065 tokens [1..4].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: ipei
+  phonemes:
+  - i
+  - p
+  - e
+  - i
+  gloss_hint: there, where
+  citation: Bonfante & Bonfante 2002, glossary ipei.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    '#049': i
+    '#071': p
+    '#050': e
+    '#005': i

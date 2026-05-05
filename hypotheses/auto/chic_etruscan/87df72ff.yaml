@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_ame_CHIC__042_0_2
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''ame''
+  pinned to CHIC #042 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: ame
+  phonemes:
+  - a
+  - m
+  - e
+  gloss_hint: is
+  citation: Bonfante & Bonfante 2002, glossary ame.
+equation:
+  inscription_id: 'CHIC #042'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#037': a
+    '#011': m
+    '#029': e

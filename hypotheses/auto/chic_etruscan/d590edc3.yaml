@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_ana_CHIC__057_13_15
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''ana''
+  pinned to CHIC #057 tokens [13..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: ana
+  phonemes:
+  - a
+  - n
+  - a
+  gloss_hint: votive name suffix ("of/for")
+  citation: Bonfante & Bonfante 2002, glossary ana.
+equation:
+  inscription_id: 'CHIC #057'
+  span:
+  - 13
+  - 15
+  sign_to_phoneme:
+    '#011': a
+    '#029': n
+    '#037': a

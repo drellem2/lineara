@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_melitos_CHIC__328_7_13
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''melitos''
+  pinned to CHIC #328 tokens [7..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: melitos
+  phonemes:
+  - m
+  - i
+  - l
+  - e
+  - t
+  - o
+  - s
+  gloss_hint: Miletos (Ionian coast major city; Hittite Millawanda)
+  citation: Beekes 2010 s.v. Miletos; Hittite-Anatolian carryover.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 13
+  sign_to_phoneme:
+    '#070': m
+    '#094': i
+    '#034': l
+    '#056': e
+    '#077': t
+    '#049': o
+    '#038': s

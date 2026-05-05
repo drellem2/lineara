@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_zur_CHIC__021_1_3
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''zur''
+  pinned to CHIC #021 tokens [1..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: zur
+  phonemes:
+  - z
+  - u
+  - r
+  gloss_hint: wood
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #021'
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    '#017': z
+    '#049': u
+    '#034': r

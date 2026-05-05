@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_ako_CHIC__058_17_19
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''ako''
+  pinned to CHIC #058 tokens [17..19].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: ako
+  phonemes:
+  - a
+  - c
+  - o
+  gloss_hint: derivational suffix
+  citation: Gorrochategui 1984, Aq. -AKO/-AKKO suffix.
+equation:
+  inscription_id: 'CHIC #058'
+  span:
+  - 17
+  - 19
+  sign_to_phoneme:
+    '#028': a
+    '#038': c
+    '#002': o

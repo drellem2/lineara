@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_telmessos_CHIC__328_6_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''telmessos''
+  pinned to CHIC #328 tokens [6..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: telmessos
+  phonemes:
+  - t
+  - e
+  - l
+  - m
+  - e
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Telmessos (Lycian coast town)
+  citation: Beekes 2010 s.v. Telmessos.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 14
+  sign_to_phoneme:
+    '#051': t
+    '#070': e
+    '#094': l
+    '#034': m
+    '#056': e
+    '#077': s
+    '#049': s
+    '#038': o
+    '#029': s

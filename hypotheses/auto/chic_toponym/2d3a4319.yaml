@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_lemnos_CHIC__328_4_9
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''lemnos''
+  pinned to CHIC #328 tokens [4..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: lemnos
+  phonemes:
+  - l
+  - e
+  - m
+  - n
+  - o
+  - s
+  gloss_hint: Lemnos (Aegean island; non-Greek inscriptions attested)
+  citation: Beekes 2010 s.v. Lemnos; Eteocretan/Tyrrhenian connection (Beekes vol.
+    2 §6).
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 9
+  sign_to_phoneme:
+    '#025': l
+    '#019': e
+    '#051': m
+    '#070': n
+    '#094': o
+    '#034': s

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_ndos_CHIC__294_15_18
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''ndos''
+  pinned to CHIC #294 tokens [15..18].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: ndos
+  phonemes:
+  - n
+  - d
+  - o
+  - s
+  gloss_hint: -ndos (Anatolian / Pamphylian substrate suffix; Aspendos)
+  citation: Beekes 2010 s.v. Aspendos; Furnée 1972 §128.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 15
+  - 18
+  sign_to_phoneme:
+    '#050': n
+    '#019': d
+    '#028': o
+    '#056': s

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_sparta_CHIC__328_6_11
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''sparta''
+  pinned to CHIC #328 tokens [6..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: sparta
+  phonemes:
+  - s
+  - p
+  - a
+  - r
+  - t
+  - a
+  gloss_hint: Sparta (Lakonia)
+  citation: Beekes 2010 s.v. Sparta; Furnée 1972.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 11
+  sign_to_phoneme:
+    '#051': s
+    '#070': p
+    '#094': a
+    '#034': r
+    '#056': t
+    '#077': a

@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_termessos_CHIC__328_5_13
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''termessos''
+  pinned to CHIC #328 tokens [5..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: termessos
+  phonemes:
+  - t
+  - e
+  - r
+  - m
+  - e
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Termessos (Pisidian fortress town)
+  citation: Beekes 2010 s.v. Termessos; Furnée 1972 §122.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 13
+  sign_to_phoneme:
+    '#019': t
+    '#051': e
+    '#070': r
+    '#094': m
+    '#034': e
+    '#056': s
+    '#077': s
+    '#049': o
+    '#038': s

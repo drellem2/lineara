@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_ati_CHIC__057_0_2
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''ati''
+  pinned to CHIC #057 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: ati
+  phonemes:
+  - a
+  - t
+  - i
+  gloss_hint: mother
+  citation: Bonfante & Bonfante 2002, glossary ati.
+equation:
+  inscription_id: 'CHIC #057'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#042': a
+    '#029': t
+    '#032': i

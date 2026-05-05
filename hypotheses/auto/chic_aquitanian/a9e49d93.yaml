@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_ahuntz_CHIC__065_0_4
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''ahuntz''
+  pinned to CHIC #065 tokens [0..4].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: ahuntz
+  phonemes:
+  - a
+  - h
+  - u
+  - n
+  - tz
+  gloss_hint: goat
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    '#072': a
+    '#049': h
+    '#071': u
+    '#050': n
+    '#005': tz

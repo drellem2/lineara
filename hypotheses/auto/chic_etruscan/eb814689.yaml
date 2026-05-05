@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_cn_CHIC__038_8_9
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''cn'' pinned
+  to CHIC #038 tokens [8..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: cn
+  phonemes:
+  - c
+  - n
+  gloss_hint: this (accusative)
+  citation: Bonfante & Bonfante 2002, ch. 5 demonstratives.
+equation:
+  inscription_id: 'CHIC #038'
+  span:
+  - 8
+  - 9
+  sign_to_phoneme:
+    '#057': c
+    '#069': n

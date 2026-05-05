@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_muke_CHIC__324_0_3
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''muke''
+  pinned to CHIC #324 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: muke
+  phonemes:
+  - m
+  - u
+  - k
+  - e
+  gloss_hint: muke- (initial fragment; Mukenai / Mycenae)
+  citation: Beekes 2010 s.v. Mukenai.
+equation:
+  inscription_id: 'CHIC #324'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#057': m
+    '#023': u
+    '#070': k
+    '#018': e

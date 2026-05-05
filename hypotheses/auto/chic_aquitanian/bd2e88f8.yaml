@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_itsaso_CHIC__328_0_4
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''itsaso''
+  pinned to CHIC #328 tokens [0..4].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: itsaso
+  phonemes:
+  - i
+  - ts
+  - a
+  - s
+  - o
+  gloss_hint: sea
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    '#034': i
+    '#002': ts
+    '#056': a
+    '#070': s
+    '#025': o

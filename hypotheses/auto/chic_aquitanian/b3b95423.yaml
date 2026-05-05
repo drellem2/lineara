@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_zuhaitz_CHIC__294_10_15
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''zuhaitz''
+  pinned to CHIC #294 tokens [10..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: zuhaitz
+  phonemes:
+  - z
+  - u
+  - h
+  - a
+  - i
+  - tz
+  gloss_hint: tree
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 15
+  sign_to_phoneme:
+    '#047': z
+    '#070': u
+    '#092': h
+    '#019': a
+    '#044': i
+    '#050': tz

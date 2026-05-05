@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_par_CHIC__058_8_10
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''par'' pinned
+  to CHIC #058 tokens [8..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: par
+  phonemes:
+  - p
+  - a
+  - r
+  gloss_hint: par- (initial fragment; Parnassos / Paros)
+  citation: Beekes 2010 s.v. Parnassos.
+equation:
+  inscription_id: 'CHIC #058'
+  span:
+  - 8
+  - 10
+  sign_to_phoneme:
+    '#078': p
+    '#032': a
+    '#034': r

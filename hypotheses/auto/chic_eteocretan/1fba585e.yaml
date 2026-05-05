@@ -1,0 +1,35 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_sametion_CHIC__328_4_11
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''sametion''
+  pinned to CHIC #328 tokens [4..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: sametion
+  phonemes:
+  - s
+  - a
+  - m
+  - e
+  - t
+  - i
+  - o
+  - n
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 11
+  sign_to_phoneme:
+    '#025': s
+    '#019': a
+    '#051': m
+    '#070': e
+    '#094': t
+    '#034': i
+    '#056': o
+    '#077': n

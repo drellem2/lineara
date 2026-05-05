@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_thera_CHIC__309_3_6
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''thera''
+  pinned to CHIC #309 tokens [3..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: thera
+  phonemes:
+  - th
+  - e
+  - r
+  - a
+  gloss_hint: Thera (Cycladic island)
+  citation: Beekes 2010 s.v. Thera.
+equation:
+  inscription_id: 'CHIC #309'
+  span:
+  - 3
+  - 6
+  sign_to_phoneme:
+    '#042': th
+    '#040': e
+    '#053': r
+    '#041': a

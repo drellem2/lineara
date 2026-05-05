@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_velia_CHIC__328_6_10
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''velia''
+  pinned to CHIC #328 tokens [6..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: velia
+  phonemes:
+  - v
+  - e
+  - l
+  - i
+  - a
+  gloss_hint: Velia (common female praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 10
+  sign_to_phoneme:
+    '#051': v
+    '#070': e
+    '#094': l
+    '#034': i
+    '#056': a

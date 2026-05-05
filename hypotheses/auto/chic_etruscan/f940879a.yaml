@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan__uthina_CHIC__065_0_5
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''śuthina''
+  pinned to CHIC #065 tokens [0..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: śuthina
+  phonemes:
+  - s
+  - u
+  - th
+  - i
+  - n
+  - a
+  gloss_hint: for the tomb (funerary marker on grave goods)
+  citation: Bonfante & Bonfante 2002, glossary śuthina; common on bronze grave goods.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    '#072': s
+    '#049': u
+    '#071': th
+    '#050': i
+    '#005': n
+    '#063': a

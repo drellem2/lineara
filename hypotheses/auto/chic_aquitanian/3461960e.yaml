@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_bi_CHIC__027_4_5
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''bi''
+  pinned to CHIC #027 tokens [4..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: bi
+  phonemes:
+  - b
+  - i
+  gloss_hint: two
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: 'CHIC #027'
+  span:
+  - 4
+  - 5
+  sign_to_phoneme:
+    '#092': b
+    '#067': i

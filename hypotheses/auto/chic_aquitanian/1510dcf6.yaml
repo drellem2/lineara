@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_sukalde_CHIC__328_8_14
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''sukalde''
+  pinned to CHIC #328 tokens [8..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: sukalde
+  phonemes:
+  - s
+  - u
+  - k
+  - a
+  - l
+  - d
+  - e
+  gloss_hint: kitchen, hearth
+  citation: Trask 1997 ch. 3 (sukalde as compound of su 'fire' + kalde).
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 14
+  sign_to_phoneme:
+    '#094': s
+    '#034': u
+    '#056': k
+    '#077': a
+    '#049': l
+    '#038': d
+    '#029': e

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_nepos_CHIC__065_1_5
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''nepos''
+  pinned to CHIC #065 tokens [1..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: nepos
+  phonemes:
+  - n
+  - e
+  - p
+  - o
+  - s
+  gloss_hint: descendant (loan from Latin?)
+  citation: Bonfante & Bonfante 2002, glossary nepos (Latin loan; included for cross-checking).
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    '#049': n
+    '#071': e
+    '#050': p
+    '#005': o
+    '#063': s

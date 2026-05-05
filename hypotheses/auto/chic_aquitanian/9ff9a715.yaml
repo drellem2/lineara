@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_edan_CHIC__294_15_18
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''edan''
+  pinned to CHIC #294 tokens [15..18].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: edan
+  phonemes:
+  - e
+  - d
+  - a
+  - n
+  gloss_hint: drink
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 15
+  - 18
+  sign_to_phoneme:
+    '#050': e
+    '#019': d
+    '#028': a
+    '#056': n

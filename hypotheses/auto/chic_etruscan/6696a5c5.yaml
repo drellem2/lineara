@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_clan_CHIC__071_0_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''clan''
+  pinned to CHIC #071 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: clan
+  phonemes:
+  - c
+  - l
+  - a
+  - n
+  gloss_hint: son
+  citation: Bonfante & Bonfante 2002, glossary clan; ubiquitous funerary epitaph.
+equation:
+  inscription_id: 'CHIC #071'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#022': c
+    '#056': l
+    '#070': a
+    '#061': n

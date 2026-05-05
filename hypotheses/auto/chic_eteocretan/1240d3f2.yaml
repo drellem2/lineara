@@ -1,0 +1,37 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_phraisona_CHIC__328_4_12
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''phraisona''
+  pinned to CHIC #328 tokens [4..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: phraisona
+  phonemes:
+  - p
+  - h
+  - r
+  - a
+  - i
+  - s
+  - o
+  - n
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 12
+  sign_to_phoneme:
+    '#025': p
+    '#019': h
+    '#051': r
+    '#070': a
+    '#094': i
+    '#034': s
+    '#056': o
+    '#077': n
+    '#049': a

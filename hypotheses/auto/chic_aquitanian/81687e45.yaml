@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_hagin_CHIC__255_5_9
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''hagin''
+  pinned to CHIC #255 tokens [5..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: hagin
+  phonemes:
+  - h
+  - a
+  - g
+  - i
+  - n
+  gloss_hint: tooth
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    '#049': h
+    '#042': a
+    '#031': g
+    '#056': i
+    '#036': n

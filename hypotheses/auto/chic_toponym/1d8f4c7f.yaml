@@ -1,0 +1,40 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_aleksandros_CHIC__328_4_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''aleksandros''
+  pinned to CHIC #328 tokens [4..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: aleksandros
+  phonemes:
+  - a
+  - l
+  - e
+  - k
+  - s
+  - a
+  - n
+  - d
+  - r
+  - o
+  - s
+  gloss_hint: Aleksandros (substrate-derived theonym; per Kretschmer)
+  citation: Kretschmer 1896; Hittite Alaksandu treaty (Beekes vol. 2).
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 14
+  sign_to_phoneme:
+    '#025': a
+    '#019': l
+    '#051': e
+    '#070': k
+    '#094': s
+    '#034': a
+    '#056': n
+    '#077': d
+    '#049': r
+    '#038': o
+    '#029': s

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_berri_CHIC__328_1_5
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''berri''
+  pinned to CHIC #328 tokens [1..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: berri
+  phonemes:
+  - b
+  - e
+  - r
+  - r
+  - i
+  gloss_hint: new
+  citation: Trask 1997 ch. 3; cf. Aq. ILIBERRI 'new town'.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    '#002': b
+    '#056': e
+    '#070': r
+    '#025': r
+    '#019': i

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_aksos_CHIC__328_10_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''aksos''
+  pinned to CHIC #328 tokens [10..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: aksos
+  phonemes:
+  - a
+  - k
+  - s
+  - o
+  - s
+  gloss_hint: Axos (central-Cretan town with -ksos suffix)
+  citation: Kretschmer 1896 §57 on -ksos; Beekes 2010 s.v. Axos.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 10
+  - 14
+  sign_to_phoneme:
+    '#056': a
+    '#077': k
+    '#049': s
+    '#038': o
+    '#029': s

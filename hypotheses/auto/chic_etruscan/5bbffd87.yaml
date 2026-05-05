@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_chia_CHIC__065_0_2
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''chia''
+  pinned to CHIC #065 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: chia
+  phonemes:
+  - ch
+  - i
+  - a
+  gloss_hint: with, together
+  citation: Bonfante & Bonfante 2002, glossary chia.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#072': ch
+    '#049': i
+    '#071': a

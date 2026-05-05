@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_baigor_CHIC__328_7_12
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''baigor''
+  pinned to CHIC #328 tokens [7..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: baigor
+  phonemes:
+  - b
+  - a
+  - i
+  - g
+  - o
+  - r
+  gloss_hint: red valley
+  citation: Gorrochategui 1984, theonym BAIGORRIX; Basque ibai 'river' + gorri 'red'.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 12
+  sign_to_phoneme:
+    '#070': b
+    '#094': a
+    '#034': i
+    '#056': g
+    '#077': o
+    '#049': r

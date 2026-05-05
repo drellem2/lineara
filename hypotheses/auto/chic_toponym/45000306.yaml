@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_ssos_CHIC__328_9_12
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''ssos''
+  pinned to CHIC #328 tokens [9..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: ssos
+  phonemes:
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: -ssos (Pre-Greek substrate suffix, Knossos / Tylissos / Parnassos /
+    Halikarnassos)
+  citation: Beekes 2010 vol. 2 §§3-5 on -ssos; Furnée 1972 §122.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    '#034': s
+    '#056': s
+    '#077': o
+    '#049': s

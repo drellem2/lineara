@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_hyakinthos_CHIC__328_5_13
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''hyakinthos''
+  pinned to CHIC #328 tokens [5..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: hyakinthos
+  phonemes:
+  - h
+  - u
+  - a
+  - k
+  - i
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: Hyakinthos (pre-Greek deity / mountain name)
+  citation: Beekes 2010 s.v. Hyakinthos; Furnée 1972 §123.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 13
+  sign_to_phoneme:
+    '#019': h
+    '#051': u
+    '#070': a
+    '#094': k
+    '#034': i
+    '#056': n
+    '#077': th
+    '#049': o
+    '#038': s

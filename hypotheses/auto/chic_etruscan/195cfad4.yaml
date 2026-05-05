@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_zinece_CHIC__065_0_5
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''zinece''
+  pinned to CHIC #065 tokens [0..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: zinece
+  phonemes:
+  - z
+  - i
+  - n
+  - e
+  - c
+  - e
+  gloss_hint: made
+  citation: Bonfante & Bonfante 2002, glossary zinece.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    '#072': z
+    '#049': i
+    '#071': n
+    '#050': e
+    '#005': c
+    '#063': e

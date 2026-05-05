@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_tece_CHIC__255_5_8
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''tece''
+  pinned to CHIC #255 tokens [5..8].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: tece
+  phonemes:
+  - t
+  - e
+  - c
+  - e
+  gloss_hint: placed, set up
+  citation: Bonfante & Bonfante 2002, glossary tece.
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    '#049': t
+    '#042': e
+    '#031': c
+    '#056': e

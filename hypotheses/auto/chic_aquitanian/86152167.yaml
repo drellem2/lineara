@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_nor_CHIC__076_0_2
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''nor''
+  pinned to CHIC #076 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: nor
+  phonemes:
+  - n
+  - o
+  - r
+  gloss_hint: who
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #076'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#008': n
+    '#056': o
+    '#013': r

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_bizi_CHIC__328_2_5
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''bizi''
+  pinned to CHIC #328 tokens [2..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: bizi
+  phonemes:
+  - b
+  - i
+  - z
+  - i
+  gloss_hint: alive, life
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    '#056': b
+    '#070': i
+    '#025': z
+    '#019': i

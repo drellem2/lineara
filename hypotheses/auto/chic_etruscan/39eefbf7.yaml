@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_enac_CHIC__328_0_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''enac''
+  pinned to CHIC #328 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: enac
+  phonemes:
+  - e
+  - n
+  - a
+  - c
+  gloss_hint: then, afterward
+  citation: Bonfante & Bonfante 2002, glossary enac.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#034': e
+    '#002': n
+    '#056': a
+    '#070': c

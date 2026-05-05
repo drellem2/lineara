@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_argos_CHIC__255_4_8
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''argos''
+  pinned to CHIC #255 tokens [4..8].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: argos
+  phonemes:
+  - a
+  - r
+  - g
+  - o
+  - s
+  gloss_hint: Argos (Argolid; older Argeia substrate stem)
+  citation: Beekes 2010 s.v. Argos; Furnée 1972.
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    '#028': a
+    '#049': r
+    '#042': g
+    '#031': o
+    '#056': s

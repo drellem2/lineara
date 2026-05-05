@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_ril_CHIC__057_13_15
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''ril''
+  pinned to CHIC #057 tokens [13..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: ril
+  phonemes:
+  - r
+  - i
+  - l
+  gloss_hint: at the age of (epitaph formula)
+  citation: Bonfante & Bonfante 2002, glossary ril.
+equation:
+  inscription_id: 'CHIC #057'
+  span:
+  - 13
+  - 15
+  sign_to_phoneme:
+    '#011': r
+    '#029': i
+    '#037': l

@@ -1,0 +1,33 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_epimere_CHIC__328_7_13
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''epimere''
+  pinned to CHIC #328 tokens [7..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: epimere
+  phonemes:
+  - e
+  - p
+  - i
+  - m
+  - e
+  - r
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Younger E5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 13
+  sign_to_phoneme:
+    '#070': e
+    '#094': p
+    '#034': i
+    '#056': m
+    '#077': e
+    '#049': r
+    '#038': e

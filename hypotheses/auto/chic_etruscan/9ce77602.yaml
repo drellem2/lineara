@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_spura_CHIC__328_4_8
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''spura''
+  pinned to CHIC #328 tokens [4..8].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: spura
+  phonemes:
+  - s
+  - p
+  - u
+  - r
+  - a
+  gloss_hint: city
+  citation: Bonfante & Bonfante 2002, glossary spura.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    '#025': s
+    '#019': p
+    '#051': u
+    '#070': r
+    '#094': a

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_esne_CHIC__021_0_3
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''esne''
+  pinned to CHIC #021 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: esne
+  phonemes:
+  - e
+  - s
+  - n
+  - e
+  gloss_hint: milk
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #021'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#038': e
+    '#017': s
+    '#049': n
+    '#034': e

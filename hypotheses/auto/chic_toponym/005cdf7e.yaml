@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_lebena_CHIC__328_8_13
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''lebena''
+  pinned to CHIC #328 tokens [8..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: lebena
+  phonemes:
+  - l
+  - e
+  - b
+  - e
+  - n
+  - a
+  gloss_hint: Lebena (Cretan southern coast site)
+  citation: Beekes 2010 s.v. Lebena.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 13
+  sign_to_phoneme:
+    '#094': l
+    '#034': e
+    '#056': b
+    '#077': e
+    '#049': n
+    '#038': a

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_samos_CHIC__328_4_8
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''samos''
+  pinned to CHIC #328 tokens [4..8].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: samos
+  phonemes:
+  - s
+  - a
+  - m
+  - o
+  - s
+  gloss_hint: Samos (East-Aegean island)
+  citation: Beekes 2010 s.v. Samos.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    '#025': s
+    '#019': a
+    '#051': m
+    '#070': o
+    '#094': s

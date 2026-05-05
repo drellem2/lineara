@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_arkadioi_CHIC__328_7_14
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''arkadioi''
+  pinned to CHIC #328 tokens [7..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: arkadioi
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  - d
+  - i
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 14
+  sign_to_phoneme:
+    '#070': a
+    '#094': r
+    '#034': k
+    '#056': a
+    '#077': d
+    '#049': i
+    '#038': o
+    '#029': i

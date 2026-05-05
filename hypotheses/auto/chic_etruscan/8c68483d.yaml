@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_cver_CHIC__057_0_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''cver''
+  pinned to CHIC #057 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: cver
+  phonemes:
+  - c
+  - v
+  - e
+  - r
+  gloss_hint: gift, dedication
+  citation: Bonfante & Bonfante 2002, glossary cver.
+equation:
+  inscription_id: 'CHIC #057'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#042': c
+    '#029': v
+    '#032': e
+    '#011': r

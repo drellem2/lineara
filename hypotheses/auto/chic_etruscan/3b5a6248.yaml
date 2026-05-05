@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_lautn_CHIC__255_5_9
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''lautn''
+  pinned to CHIC #255 tokens [5..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: lautn
+  phonemes:
+  - l
+  - a
+  - u
+  - t
+  - n
+  gloss_hint: family, gens
+  citation: Bonfante & Bonfante 2002, glossary lautn.
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    '#049': l
+    '#042': a
+    '#031': u
+    '#056': t
+    '#036': n

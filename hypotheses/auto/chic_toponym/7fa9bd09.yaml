@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_kor_CHIC__057_13_15
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''kor'' pinned
+  to CHIC #057 tokens [13..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: kor
+  phonemes:
+  - k
+  - o
+  - r
+  gloss_hint: kor- (initial fragment; Korinthos / Korakos)
+  citation: Beekes 2010 s.v. Korinthos.
+equation:
+  inscription_id: 'CHIC #057'
+  span:
+  - 13
+  - 15
+  sign_to_phoneme:
+    '#011': k
+    '#029': o
+    '#037': r

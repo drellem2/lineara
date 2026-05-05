@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_ilargi_CHIC__328_8_13
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''ilargi''
+  pinned to CHIC #328 tokens [8..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: ilargi
+  phonemes:
+  - i
+  - l
+  - a
+  - r
+  - g
+  - i
+  gloss_hint: moon
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 13
+  sign_to_phoneme:
+    '#094': i
+    '#034': l
+    '#056': a
+    '#077': r
+    '#049': g
+    '#038': i

@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_enete_CHIC__255_4_8
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''enete''
+  pinned to CHIC #255 tokens [4..8].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: enete
+  phonemes:
+  - e
+  - n
+  - e
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Psychro stone). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    '#028': e
+    '#049': n
+    '#042': e
+    '#031': t
+    '#056': e

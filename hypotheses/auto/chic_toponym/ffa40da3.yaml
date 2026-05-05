@@ -1,0 +1,40 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_probalinthos_CHIC__328_4_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''probalinthos''
+  pinned to CHIC #328 tokens [4..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: probalinthos
+  phonemes:
+  - p
+  - r
+  - o
+  - b
+  - a
+  - l
+  - i
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: Probalinthos (Attic deme on Marathon)
+  citation: Beekes 2010 s.v. Probalinthos; Furnée 1972 §123.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 14
+  sign_to_phoneme:
+    '#025': p
+    '#019': r
+    '#051': o
+    '#070': b
+    '#094': a
+    '#034': l
+    '#056': i
+    '#077': n
+    '#049': th
+    '#038': o
+    '#029': s

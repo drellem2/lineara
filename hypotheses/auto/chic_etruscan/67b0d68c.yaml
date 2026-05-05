@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_cape_CHIC__270_6_9
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''cape''
+  pinned to CHIC #270 tokens [6..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: cape
+  phonemes:
+  - c
+  - a
+  - p
+  - e
+  gloss_hint: container, vessel (also "hand"?)
+  citation: Bonfante & Bonfante 2002, glossary cape.
+equation:
+  inscription_id: 'CHIC #270'
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    '#038': c
+    '#031': a
+    '#010': p
+    '#061': e

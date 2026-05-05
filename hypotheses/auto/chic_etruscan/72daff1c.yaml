@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_zilac_CHIC__113_26_30
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''zilac''
+  pinned to CHIC #113 tokens [26..30].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: zilac
+  phonemes:
+  - z
+  - i
+  - l
+  - a
+  - c
+  gloss_hint: magistrate (variant)
+  citation: Bonfante & Bonfante 2002, glossary zilac.
+equation:
+  inscription_id: 'CHIC #113'
+  span:
+  - 26
+  - 30
+  sign_to_phoneme:
+    '#057': z
+    '#023': i
+    '#042': l
+    '#063': a
+    '#060': c

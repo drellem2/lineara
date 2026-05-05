@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_thanchvil_CHIC__328_4_10
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''thanchvil''
+  pinned to CHIC #328 tokens [4..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: thanchvil
+  phonemes:
+  - th
+  - a
+  - n
+  - ch
+  - v
+  - i
+  - l
+  gloss_hint: Thanchvil (common female praenomen, ~Tanaquil)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    '#025': th
+    '#019': a
+    '#051': n
+    '#070': ch
+    '#094': v
+    '#034': i
+    '#056': l

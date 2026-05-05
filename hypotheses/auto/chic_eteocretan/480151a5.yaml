@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_kilenti_CHIC__328_4_10
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''kilenti''
+  pinned to CHIC #328 tokens [4..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: kilenti
+  phonemes:
+  - k
+  - i
+  - l
+  - e
+  - n
+  - t
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Dreros 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    '#025': k
+    '#019': i
+    '#051': l
+    '#070': e
+    '#094': n
+    '#034': t
+    '#056': i

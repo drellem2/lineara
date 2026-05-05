@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_belarri_CHIC__328_7_13
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''belarri''
+  pinned to CHIC #328 tokens [7..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: belarri
+  phonemes:
+  - b
+  - e
+  - l
+  - a
+  - r
+  - r
+  - i
+  gloss_hint: ear
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 13
+  sign_to_phoneme:
+    '#070': b
+    '#094': e
+    '#034': l
+    '#056': a
+    '#077': r
+    '#049': r
+    '#038': i

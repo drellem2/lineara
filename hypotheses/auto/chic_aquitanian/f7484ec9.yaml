@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_bide_CHIC__090_0_3
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''bide''
+  pinned to CHIC #090 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: bide
+  phonemes:
+  - b
+  - i
+  - d
+  - e
+  gloss_hint: way, road
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #090'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#016': b
+    '#038': i
+    '#007': d
+    '#051': e

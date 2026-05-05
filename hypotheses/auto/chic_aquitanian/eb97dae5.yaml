@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_hanna_CHIC__294_10_14
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''hanna''
+  pinned to CHIC #294 tokens [10..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: hanna
+  phonemes:
+  - h
+  - a
+  - n
+  - n
+  - a
+  gloss_hint: brother (proposed)
+  citation: Gorrochategui 1984, Aq. HANN- element; cf. Basque anaia.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 14
+  sign_to_phoneme:
+    '#047': h
+    '#070': a
+    '#092': n
+    '#019': n
+    '#044': a

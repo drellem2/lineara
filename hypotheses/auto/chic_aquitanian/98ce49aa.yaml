@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_hiru_CHIC__294_10_13
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''hiru''
+  pinned to CHIC #294 tokens [10..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: hiru
+  phonemes:
+  - h
+  - i
+  - r
+  - u
+  gloss_hint: three
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    '#047': h
+    '#070': i
+    '#092': r
+    '#019': u

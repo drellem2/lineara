@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_ieme_CHIC__065_0_3
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''ieme''
+  pinned to CHIC #065 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: ieme
+  phonemes:
+  - i
+  - e
+  - m
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 4). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#072': i
+    '#049': e
+    '#071': m
+    '#050': e

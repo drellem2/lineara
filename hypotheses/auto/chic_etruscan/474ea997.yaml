@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_suthi_CHIC__186_0_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''suthi''
+  pinned to CHIC #186 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: suthi
+  phonemes:
+  - s
+  - u
+  - th
+  - i
+  gloss_hint: tomb
+  citation: Bonfante & Bonfante 2002, glossary suthi; ubiquitous in funerary inscriptions.
+equation:
+  inscription_id: 'CHIC #186'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#028': s
+    '#061': u
+    '#049': th
+    '#047': i

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_hartz_CHIC__294_11_14
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''hartz''
+  pinned to CHIC #294 tokens [11..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: hartz
+  phonemes:
+  - h
+  - a
+  - r
+  - tz
+  gloss_hint: bear
+  citation: Trask 1997 ch. 3; cf. Aq. HARS-.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    '#070': h
+    '#092': a
+    '#019': r
+    '#044': tz

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_ibai_CHIC__255_6_9
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''ibai''
+  pinned to CHIC #255 tokens [6..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: ibai
+  phonemes:
+  - i
+  - b
+  - a
+  - i
+  gloss_hint: river
+  citation: Trask 1997 ch. 3; cf. Aq. BAIGOR / BAI- prefix.
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    '#042': i
+    '#031': b
+    '#056': a
+    '#036': i

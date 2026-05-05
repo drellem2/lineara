@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_cerichunce_CHIC__328_5_13
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''cerichunce''
+  pinned to CHIC #328 tokens [5..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: cerichunce
+  phonemes:
+  - c
+  - e
+  - r
+  - i
+  - ch
+  - u
+  - n
+  - c
+  - e
+  gloss_hint: built, erected
+  citation: Bonfante & Bonfante 2002, glossary cerichunce.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 13
+  sign_to_phoneme:
+    '#019': c
+    '#051': e
+    '#070': r
+    '#094': i
+    '#034': ch
+    '#056': u
+    '#077': n
+    '#049': c
+    '#038': e

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_aso_CHIC__032_7_9
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''aso'' pinned
+  to CHIC #032 tokens [7..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: aso
+  phonemes:
+  - a
+  - s
+  - o
+  gloss_hint: -aso- (substrate cluster preceding -s; Knossos = kno + as + sos)
+  citation: Furnée 1972 §122.
+equation:
+  inscription_id: 'CHIC #032'
+  span:
+  - 7
+  - 9
+  sign_to_phoneme:
+    '#057': a
+    '#047': s
+    '#061': o

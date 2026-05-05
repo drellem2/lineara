@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_ilun_CHIC__328_2_5
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''ilun''
+  pinned to CHIC #328 tokens [2..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: ilun
+  phonemes:
+  - i
+  - l
+  - u
+  - n
+  gloss_hint: dark
+  citation: Gorrochategui 1984, Aq. ILUN-; Basque ilun (Trask 1997 ch. 3).
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    '#056': i
+    '#070': l
+    '#025': u
+    '#019': n

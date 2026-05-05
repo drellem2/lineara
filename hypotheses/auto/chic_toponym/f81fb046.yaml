@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_tegea_CHIC__065_0_4
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''tegea''
+  pinned to CHIC #065 tokens [0..4].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: tegea
+  phonemes:
+  - t
+  - e
+  - g
+  - e
+  - a
+  gloss_hint: Tegea (Arcadian town; pre-Greek)
+  citation: Beekes 2010 s.v. Tegea; Furnée 1972.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    '#072': t
+    '#049': e
+    '#071': g
+    '#050': e
+    '#005': a

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_leher_CHIC__255_4_8
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''leher''
+  pinned to CHIC #255 tokens [4..8].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: leher
+  phonemes:
+  - l
+  - e
+  - h
+  - e
+  - r
+  gloss_hint: pine
+  citation: Gorrochategui 1984, Aq. theonym LEHERENNO; Basque leher.
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    '#028': l
+    '#049': e
+    '#042': h
+    '#031': e
+    '#056': r

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_ardi_CHIC__065_2_5
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''ardi''
+  pinned to CHIC #065 tokens [2..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: ardi
+  phonemes:
+  - a
+  - r
+  - d
+  - i
+  gloss_hint: sheep
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    '#071': a
+    '#050': r
+    '#005': d
+    '#063': i

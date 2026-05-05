@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_matam_CHIC__328_0_4
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''matam''
+  pinned to CHIC #328 tokens [0..4].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: matam
+  phonemes:
+  - m
+  - a
+  - t
+  - a
+  - m
+  gloss_hint: above, before
+  citation: Bonfante & Bonfante 2002, glossary matam.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    '#034': m
+    '#002': a
+    '#056': t
+    '#070': a
+    '#025': m

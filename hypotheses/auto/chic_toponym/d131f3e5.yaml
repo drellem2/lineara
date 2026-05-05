@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_erymanthos_CHIC__328_6_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''erymanthos''
+  pinned to CHIC #328 tokens [6..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: erymanthos
+  phonemes:
+  - e
+  - r
+  - u
+  - m
+  - a
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: Erymanthos (Arcadian mountain)
+  citation: Beekes 2010 s.v. Erymanthos.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 14
+  sign_to_phoneme:
+    '#051': e
+    '#070': r
+    '#094': u
+    '#034': m
+    '#056': a
+    '#077': n
+    '#049': th
+    '#038': o
+    '#029': s

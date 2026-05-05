@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_korinthos_CHIC__328_5_12
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''korinthos''
+  pinned to CHIC #328 tokens [5..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: korinthos
+  phonemes:
+  - k
+  - o
+  - r
+  - i
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: Korinthos (Corinth)
+  citation: Beekes 2010 s.v. Korinthos; Furnée 1972 §123 (-nthos suffix).
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 12
+  sign_to_phoneme:
+    '#019': k
+    '#051': o
+    '#070': r
+    '#094': i
+    '#034': n
+    '#056': th
+    '#077': o
+    '#049': s

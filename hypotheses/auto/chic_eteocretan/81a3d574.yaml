@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_phos_CHIC__294_10_13
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''phos''
+  pinned to CHIC #294 tokens [10..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: phos
+  phonemes:
+  - p
+  - h
+  - o
+  - s
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    '#047': p
+    '#070': h
+    '#092': o
+    '#019': s

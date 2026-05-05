@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_fanu_CHIC__294_11_14
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''fanu''
+  pinned to CHIC #294 tokens [11..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: fanu
+  phonemes:
+  - f
+  - a
+  - n
+  - u
+  gloss_hint: sanctuary, sacred place
+  citation: Bonfante & Bonfante 2002, glossary fanu.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    '#070': f
+    '#092': a
+    '#019': n
+    '#044': u

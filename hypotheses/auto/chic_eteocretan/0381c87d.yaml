@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_magini_CHIC__255_4_9
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''magini''
+  pinned to CHIC #255 tokens [4..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: magini
+  phonemes:
+  - m
+  - a
+  - g
+  - i
+  - n
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 4
+  - 9
+  sign_to_phoneme:
+    '#028': m
+    '#049': a
+    '#042': g
+    '#031': i
+    '#056': n
+    '#036': i

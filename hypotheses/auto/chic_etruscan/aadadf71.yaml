@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_avil_CHIC__126_0_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''avil''
+  pinned to CHIC #126 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: avil
+  phonemes:
+  - a
+  - v
+  - i
+  - l
+  gloss_hint: year
+  citation: Bonfante & Bonfante 2002, glossary avil; pervasive in epitaphs.
+equation:
+  inscription_id: 'CHIC #126'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#036': a
+    '#047': v
+    '#009': i
+    '#056': l

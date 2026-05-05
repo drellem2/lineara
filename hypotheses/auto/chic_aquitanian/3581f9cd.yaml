@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_hire_CHIC__065_0_3
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''hire''
+  pinned to CHIC #065 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: hire
+  phonemes:
+  - h
+  - i
+  - r
+  - e
+  gloss_hint: thy
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#072': h
+    '#049': i
+    '#071': r
+    '#050': e

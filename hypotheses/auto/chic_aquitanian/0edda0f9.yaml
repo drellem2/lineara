@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_bost_CHIC__328_6_9
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''bost''
+  pinned to CHIC #328 tokens [6..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: bost
+  phonemes:
+  - b
+  - o
+  - s
+  - t
+  gloss_hint: five
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    '#051': b
+    '#070': o
+    '#094': s
+    '#034': t

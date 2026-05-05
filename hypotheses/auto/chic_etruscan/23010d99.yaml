@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_semphalch_CHIC__328_5_11
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''semphalch''
+  pinned to CHIC #328 tokens [5..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: semphalch
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  - a
+  - l
+  - ch
+  gloss_hint: seventy
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals (decadal forms).
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 11
+  sign_to_phoneme:
+    '#019': s
+    '#051': e
+    '#070': m
+    '#094': ph
+    '#034': a
+    '#056': l
+    '#077': ch

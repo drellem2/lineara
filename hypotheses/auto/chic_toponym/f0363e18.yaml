@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_lykabettos_CHIC__328_4_13
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''lykabettos''
+  pinned to CHIC #328 tokens [4..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: lykabettos
+  phonemes:
+  - l
+  - u
+  - k
+  - a
+  - b
+  - e
+  - t
+  - t
+  - o
+  - s
+  gloss_hint: Lykabettos (Athenian hill)
+  citation: Beekes 2010 s.v. Lykabettos.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 13
+  sign_to_phoneme:
+    '#025': l
+    '#019': u
+    '#051': k
+    '#070': a
+    '#094': b
+    '#034': e
+    '#056': t
+    '#077': t
+    '#049': o
+    '#038': s

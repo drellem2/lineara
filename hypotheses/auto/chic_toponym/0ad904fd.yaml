@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_tulisos_CHIC__328_8_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''tulisos''
+  pinned to CHIC #328 tokens [8..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: tulisos
+  phonemes:
+  - t
+  - u
+  - l
+  - i
+  - s
+  - o
+  - s
+  gloss_hint: Tulisos (alternate spelling of Tylissos with single -s-)
+  citation: Kretschmer 1896 §57; Beekes 2010 s.v. Tulissos.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 14
+  sign_to_phoneme:
+    '#094': t
+    '#034': u
+    '#056': l
+    '#077': i
+    '#049': s
+    '#038': o
+    '#029': s
