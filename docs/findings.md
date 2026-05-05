@@ -6094,3 +6094,204 @@ Per the chic-v3 ticket, this commit does not:
   not assert specific gate verdicts (toy-corpus posteriors aren't
   stable enough for that), only that the pipeline shape is
   correct.
+
+## Findings from mg-c769 (chic-v4 — cross-script correlation analysis: Linear A vs CHIC right-tail bayesian gate signals across the 4 substrate pools, 2026-05-05)
+
+### Headline
+
+The Linear A substrate framework's monotonic-with-relatedness
+ordering across the 4 substrate pools (Eteocretan > toponym >
+Etruscan > Aquitanian) **reproduces exactly** on the chic-v3
+application of the same framework to the CHIC syllabographic
+corpus. Cross-script Spearman rank correlation on the per-pool
+right-tail bayesian gate gap is **ρ=+1.000** (perfect rank
+preservation across the 4 pools). About half of each pool's top-20
+substrate surfaces appear in both scripts' right-tail leaderboards
+(mean overlap fraction 0.47; 38 of 80 substrate-side top-20 slots
+are shared). Of the three pre-registered hypotheses, **H1
+substrate-continuity is the verdict the data most strongly supports
+**; H2 (script-specific contact, would predict a different per-pool
+ordering) and H0 (corpus-characteristic null, would predict similar
+PASS magnitudes regardless of substrate) are inconsistent with the
+joint evidence. Eteocretan — the closest-genealogical-relative
+candidate substrate — PASSes the gate on **both** scripts, the only
+pool to do so on CHIC; the other three pools' rank ordering is
+preserved on CHIC even though their absolute signal-to-noise drops
+below the α=0.05 threshold under CHIC's smaller (~1,258-token vs
+Linear A's ~5,000-token) syllabographic stream. The supportable
+methodology-paper claim is: **the substrate-LM-phonotactic-kinship
+signal the framework detects is cross-script.**
+
+### Per-pool gate-magnitude comparison
+
+| pool | LA gap | LA p | LA gate | CHIC gap | CHIC p | CHIC gate |
+|:--|---:|---:|:--:|---:|---:|:--:|
+| eteocretan | +0.2015 | 4.10e-06 | PASS | +0.1111 | 7.33e-04 | **PASS** |
+| toponym    | +0.1090 | 9.99e-05 | PASS | +0.0067 | 4.35e-01 | FAIL |
+| etruscan   | +0.0591 | 5.00e-04 | PASS | -0.0224 | 7.20e-01 | FAIL |
+| aquitanian | +0.0296 | <1e-04   | PASS | -0.0367 | 9.37e-01 | FAIL |
+
+`gap` is `median(top-20 substrate posterior) - median(top-20
+control posterior)`; `p` is the one-tail Mann-Whitney U p-value
+on the same top-20 vs top-20 comparison. The Linear A column is
+read from `results/rollup.bayesian_posterior.{aquitanian,etruscan}.md`
+(v10), `results/rollup.bayesian_posterior.toponym_bigram_control.md`
+(v18), and `results/rollup.bayesian_posterior.eteocretan.md` (v21);
+the CHIC column is read from
+`results/rollup.bayesian_posterior.{aquitanian,etruscan,toponym,eteocretan}.chic.md`
+(chic-v3 / mg-9700).
+
+Cross-script Spearman rank correlation on the per-pool gap = **ρ
+= +1.0000** (the orderings are identical across the two scripts).
+Cross-script Spearman rank correlation on per-pool median(top-20
+substrate posterior) = +0.9487 (one tie at 0.9808 between
+Aquitanian and Etruscan on Linear A — a column-level tie in the LA
+side, not a CHIC side issue).
+
+### Per-pool top-20 substrate-surface overlap
+
+| pool | shared top-20 surfaces | overlap | examples |
+|:--|---:|---:|:--|
+| eteocretan | 10 / 20 | 0.50 | `mi`, `os`, `si`, `ine`, `noi`, `wai`, `ier`, `des`, `iarei`, `iareion` |
+| toponym    |  9 / 20 | 0.45 | `aksos`, `lebena`, `aios`, `minoa`, `ala`, `andos`, `keos`, `kuzikos`, `lykabettos` |
+| etruscan   | 10 / 20 | 0.50 | `larth`, `camthi`, `chimth`, `hanthe`, `sech`, `thana`, `thesan`, `suthi`, `mach`, `sath` |
+| aquitanian |  9 / 20 | 0.45 | `aitz`, `eki`, `entzun`, `oin`, `ona`, `zelai`, `zortzi`, `ate`, `itsaso` |
+
+Mean overlap across the 4 pools: 0.47 (38 / 80 surface slots
+shared). The same substrate surfaces appear in the right tail of
+both scripts at a uniform ~50% rate across all 4 pools — i.e. the
+overlap is not concentrated in the closest-genealogical-relative
+pool but is roughly even across the pools. The Eteocretan
+overlapping surfaces are **disproportionately high-frequency
+short syllabographic patterns** (`mi`, `os`, `si`) that are
+plausible substrate phonotactic primitives in either Cretan
+script. The toponym overlapping surfaces are **named places**
+that recur in both Linear A and CHIC corpora as known toponymic
+material (`aksos`, `lebena`, `keos`, `minoa`, etc.) — a cross-
+script overlap that is mechanically informative because both
+scripts independently incorporate Cretan / Aegean place-names.
+
+### Per-substrate-surface continuity score (Pearson on overlapping surfaces)
+
+| pool | n paired | Pearson | Spearman | mean(P_LA) | mean(P_CHIC) |
+|:--|---:|---:|---:|---:|---:|
+| eteocretan | 10 | +0.4489 | +0.4756 | 0.9684 | 0.8898 |
+| toponym    |  9 | +0.1404 | +0.2564 | 0.9340 | 0.8162 |
+| etruscan   | 10 | +0.0303 | -0.3567 | 0.9590 | 0.8696 |
+| aquitanian |  9 | -0.2838 | -0.0447 | 0.9767 | 0.8702 |
+
+Per-pool continuity is strongest for Eteocretan (Pearson +0.45,
+Spearman +0.48) and weakest / negative for Aquitanian (Pearson
+-0.28). Caveat: the Linear A top-20 posteriors are heavily
+clustered at the right-tail ceiling (many tied at 0.9808 for
+n=k=50 hits), so Pearson on the ceiling-bounded LA axis is
+variance-suppressed; the section-2 overlap fraction and section-1
+rank correlation carry more interpretive weight than the
+per-pool continuity coefficient on small-n paired sets like
+these. The continuity ordering nonetheless agrees with the
+gate-magnitude ordering: Eteocretan has the strongest paired-
+surface signal, and the more-distant-relative pools have weaker
+or null paired-surface continuity.
+
+### Verdict on pre-registered hypotheses
+
+- **H1 substrate-continuity: SUPPORTED.** The cross-script ρ=+1.0
+  rank correlation, identical pool orderings (Eteocretan >
+  toponym > Etruscan > Aquitanian), Eteocretan PASSing on both
+  scripts, and 47% mean top-K substrate-surface overlap are all
+  consistent with the same substrate-stratum-detection signal
+  operating on both Cretan scripts.
+- **H2 script-specific contact: NOT SUPPORTED.** H2 predicts a
+  different per-pool ordering on CHIC than on Linear A. The
+  orderings are identical.
+- **H0 corpus-characteristic null: NOT SUPPORTED.** H0 predicts
+  similar PASS magnitudes regardless of substrate, with patterning
+  driven by corpus characteristics. The data show ~2 orders of
+  magnitude in p across the 4 pools on each script, with rank
+  ordering identical between scripts. Corpus-characteristic-only
+  null cannot generate this pattern.
+
+### What this does NOT show
+
+- **Not a CHIC decipherment.** The cross-script signal-correlation
+  finding strengthens the case that the framework's PASS signal
+  on Linear A is not a Linear-A-corpus-specific artifact, but it
+  does **not** validate per-sign syllabic value assignments for
+  any CHIC sign. Per-sign value extraction is chic-v5+.
+- **Not a stronger claim about Linear A's underlying language.**
+  The chic-v4 verdict supports H1 — cross-script substrate-LM-
+  phonotactic-kinship continuity — not "Linear A is X".
+  Eteocretan being the strongest pool on **both** scripts is
+  consistent with the consensus reading that Eteocretan is a
+  late-attested descendant of the same Cretan substrate stratum
+  that underlies both Linear A and CHIC; the framework detects
+  that stratum's phonotactic shape, not the language behind it.
+- **Not a falsification of the toponym / Etruscan / Aquitanian
+  pools' Linear A PASSes.** The CHIC FAILs are corpus-evidence
+  data points; their cause cannot be uniquely identified at the
+  current corpus size. Three reads remain consistent with the
+  joint LA-PASS / CHIC-FAIL data: (a) the LA PASS is real, the
+  signal is too weak to clear α=0.05 on CHIC's smaller corpus
+  (rank ordering preserved supports this); (b) the LA PASS was
+  partly Linear-A-specific corpus structure that doesn't
+  transfer; (c) some mix of (a) and (b). chic-v4 does not
+  distinguish them; CHIC corpus expansion (the 29 missing CHIC
+  catalog entries from chic-v0) is the natural next step.
+
+### Methodological observations
+
+- **Cross-script rank-preservation is the robust H1-vs-H0
+  discriminator.** Even where threshold signals fail (3 of 4
+  pools' chic-v3 FAILs), the rank ordering of pool gap
+  magnitudes is preserved exactly between scripts. This is the
+  cleanest claim the chic-v4 analysis supports for the extended
+  methodology paper: framework outputs *rank* the candidate
+  substrates the same way on both Cretan scripts, even at
+  reduced statistical power on the smaller script's corpus.
+- **The continuity score on overlapping substrate surfaces is
+  strongest for the closest-relative pool (Eteocretan, +0.45)
+  and degrades monotonically with pool distance.** This is
+  consistent with the rank-correlation result: it's not just
+  the gate gaps that align cross-script, but also the
+  per-substrate-surface posteriors within the pool that aligns
+  most strongly when the substrate is closest to the
+  underlying language. The signal is weak per surface (small n,
+  ceiling clustering on LA), but the ordering across pools
+  matches.
+- **No new infrastructure or rescore.** chic-v4 reuses the v10 /
+  v18 / v21 / chic-v3 already-committed rollup outputs verbatim;
+  the only new code is `scripts/chic_v4_cross_script_correlation.py`
+  (markdown-table parser + closed-form arithmetic) producing
+  `results/rollup.linear_a_vs_chic_substrate_comparison.md`.
+  No new score rows, no LM changes, no pool changes. This is a
+  pure descriptive cross-script comparison; the inputs all
+  predate this ticket.
+- **`docs/findings_summary.md`** gets a new chic-v4 cross-script
+  subsection under §4.7, the per-pool comparison table, the
+  Spearman ρ=+1.0 result, and an explicit headline-verdict
+  paragraph that the extended methodology paper can lift
+  verbatim. The Appendix-A result-file index is extended with
+  the chic-v4 rollup file.
+
+### Out of scope
+
+Per the chic-v4 ticket, this commit does not:
+
+- Build a per-sign syllable-value extraction framework for
+  unknown CHIC signs (chic-v5+).
+- Propose mechanical values for unknown CHIC signs (chic-v6).
+- Extend the methodology paper to a full chic-integrated draft
+  (chic-v7).
+- Update AGENTS.md scope-of-work norms for the chic sub-program.
+
+### Determinism
+
+- `scripts/chic_v4_cross_script_correlation.py` parses the 8
+  already-committed input rollup markdowns, computes Spearman
+  + Pearson correlations + per-pool overlap, and writes
+  `results/rollup.linear_a_vs_chic_substrate_comparison.md`. No
+  RNG. Re-running on byte-identical inputs produces a
+  byte-identical output rollup; verified locally with two back-
+  to-back runs (md5 stable).
+- All numeric outputs are derived from the markdown tables in
+  the input rollups; no new score-row computation, no rescore.
