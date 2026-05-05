@@ -1,16 +1,17 @@
 # Mechanical Falsifiable Testing of Substrate-Language Hypotheses for Linear A
 
 **Methodology paper draft (v16, mg-d5ed; lineage citations corrected
-in v17, mg-2bfd)** — a publication-readable consolidation of what the
-Lineara project has mechanically established about Linear A across 19
-work items, anchored on the SigLA corpus ingest (`mg-1c8c`) and
-spanning the harness pipeline `mg-d5ef` (v0) through `mg-7ecb` (v15).
-The repo scaffold (`mg-9e00`) predates the corpus ingest. The
-companion log `docs/findings.md`
-carries the per-ticket history; this document carries the consolidated
-methodology, results, and supportable / unsupportable claim split,
-audited end-to-end against the committed result files in `results/` and
-the merge notes in `docs/findings.md`.
+in v17, mg-2bfd; v19 cascade-candidate / external-validation
+integration in v20, mg-711c)** — a publication-readable consolidation
+of what the Lineara project has mechanically established about
+Linear A across 20 work items, anchored on the SigLA corpus ingest
+(`mg-1c8c`) and spanning the harness pipeline `mg-d5ef` (v0) through
+`mg-3438` (v19). The repo scaffold (`mg-9e00`) predates the corpus
+ingest. The companion log `docs/findings.md` carries the per-ticket
+history; this document carries the consolidated methodology, results,
+and supportable / unsupportable claim split, audited end-to-end
+against the committed result files in `results/` and the merge notes
+in `docs/findings.md`.
 
 The intended reader is a research scientist or Aegean-syllabary
 specialist who has not followed the merge notes. Section ordering
@@ -58,11 +59,34 @@ per-sign decipherment: the consensus sign-to-phoneme map fails the
 Aquitanian and Etruscan v10 top-20 sets), and a same-distribution
 pollution test cannot distinguish real Aquitanian roots from
 phonotactically-matched conjecturals (real-vs-conjectural within-tail
-p = 0.98). The supportable claim is therefore strictly narrower than
-"Linear A is X": the framework identifies which substrate phonotactic
-profiles produce population-level signal in the SigLA corpus, and on
-which inscriptions that signal concentrates, but does not validate
-specific sign readings.
+p = 0.98).
+
+A per-inscription cascade-candidate test (mg-3438) further refines
+the picture: three inscriptions (`KH 10`, `KH 5`, `PS Za 2`) reach
+internal consensus across multiple substrate candidates on ≥ 50% of
+their signs under a robust statistic (modal posterior > 0.5 with
+n_proposals ≥ 2). The first **external validation** of the framework
+— against the long-attested scholarly transliteration `ja-sa-sa-ra-me`
+of the Linear A libation formula AB57-AB31-AB31-AB60-AB13 on
+`PS Za 2` — finds the framework's mechanical consensus reads
+`th-u-u-n-i`, divergent from the scholarly proposal on every
+formula-span sign (0/5 consonantal-segment match). A targeted
+follow-up search (mg-711c) for additional comparable sequences in
+the cascade-candidate inscriptions — the well-attested accountancy
+totals `ku-ro` (AB81-AB02) and `ki-ro` (AB67-AB02) — finds neither
+sequence in `KH 10` or `KH 5`, leaving the libation formula on
+`PS Za 2` as the project's sole external comparand to date.
+**Internal consensus across surviving candidates does not imply
+external correctness:** mechanical scoring + phonotactically-matched
+controls catches a failure mode that internal-consensus-only
+methodology would miss.
+
+The supportable claim is therefore strictly narrower than "Linear A
+is X": the framework identifies which substrate phonotactic profiles
+produce population-level signal in the SigLA corpus, and on which
+inscriptions that signal concentrates, but does not validate specific
+sign readings — and where external validation against an independent
+scholarly proposal is available, the mechanical reading diverges.
 
 ---
 
@@ -116,9 +140,10 @@ expansion to less-attested substrate families (Phoenician, Sumerian,
 Hattic, etc.).
 
 The remainder of this document specifies the pipeline (§2), reports
-the seven falsifiable acceptance-gate outcomes (§3), discusses what
-the framework does and does not detect (§4), and explicitly enumerates
-unsupported claims (§5).
+the eleven pre-registered falsifiable acceptance-gate / external-
+validation outcomes (§3), discusses what the framework does and
+does not detect (§4), and explicitly enumerates unsupported claims
+(§5).
 
 ---
 
@@ -300,7 +325,10 @@ Five auxiliary checks were pre-registered against the v10 outcome:
 
 ### 3.1 Acceptance-gate outcomes — summary table
 
-The seven pre-registered gates and their outcomes are:
+The eleven pre-registered gates / pre-specified tests and their
+outcomes are (gates 1–7 form the original v15-shape pre-registration;
+gates 8–11 were added by v18–v20 follow-on tickets within the same
+pre-registered scoring discipline):
 
 | # | test | ticket | result | outcome |
 |---:|:--|:--|:--|:--|
@@ -313,16 +341,21 @@ The seven pre-registered gates and their outcomes are:
 | 7 | cross-language pollution test | mg-7ecb (v15) | polluted-pool gate p = 2.01e-03 (PASS); within-tail real-vs-conjectural-greek p = 8.29e-05 | partial within-tail discrimination |
 | 8 | toponym pool, bigram-preserving control | mg-9f18 (v18) | gate p = 9.99e-05 (PASS) under bigram control vs p = 0.92 (FAIL) under v6 unigram control | toponym validated; v10 failure was a control-sampler artifact (see §3.10) |
 | 9 | pollution-level sweep (10/25/50/75% same-distribution) | mg-9f18 (v18) | all four PASS; p = 1.5e-04 / 2.7e-04 / 2.7e-05 / 4.3e-02 | gate insensitive to pollution share within substrate distribution; threshold (if any) sits beyond 75% (see §3.11) |
+| 10 | per-inscription cascade-candidate test on right-tail / short / known-content populations | mg-3438 (v19) | 3 cascade candidates emerged: `KH 10` (robust frac 0.55), `KH 5` (0.50), `PS Za 2` (0.71) | local-vs-global aggregate gap genuine; per-inscription internal consensus does not imply external correctness (see §3.12) |
+| 11 | external validation against scholarly proposals (libation formula on `PS Za 2`; KU-RO / KI-RO on `KH 10` / `KH 5`) | mg-3438 (v19), mg-711c (v20) | `PS Za 2` AB57-AB31-AB31-AB60-AB13 mechanical `th-u-u-n-i` vs scholarly `ja-sa-sa-ra-me`: **0/5 consonantal-segment match**; `KH 10` and `KH 5` contain no AB81-AB02 (KU-RO) or AB67-AB02 (KI-RO) sequences (no comparable substring available) | **decisive negative external validation** where comparand exists; targeted search for additional comparands returns null (see §3.13) |
 
-All nine outcomes are reproducible from
+All eleven outcomes are reproducible from
 `results/rollup.bayesian_posterior.*.md`, the supporting provenance
 breakdowns in `results/rollup.bayesian_posterior.*.provenance.md`,
-and `results/consensus_sign_phoneme_map.md`. The detailed per-pool
+`results/consensus_sign_phoneme_map.md`, and
+`results/rollup.per_inscription_coherence.md`. The detailed per-pool
 breakdowns follow.
 
 ### 3.2 Validation status by pool
 
-The validation matrix as of v18:
+The validation matrix as of v20 (no pool-level changes since v18;
+v19 / v20 operate at the per-inscription level documented in
+§3.12 / §3.13 rather than altering pool-level gate outcomes):
 
 | pool | own-LM (v10/mg-d26d) | cross-LM (v11/mg-0f97) | third-LM (v12/mg-4664, MycGreek) | curation gate (v14/v15) | bigram control (v18/mg-9f18) | status |
 |:--|:--:|:--:|:--:|:--:|:--:|:--|
@@ -735,7 +768,7 @@ distribution pollution at higher conjectural shares may eventually
 break the gate but the precise threshold is not located by this
 sweep.*
 
-### 3.12 Per-inscription coherence: cascade candidates emerge but diverge from scholarly readings
+### 3.12 Per-inscription coherence: cascade candidates
 
 v19 (mg-3438,
 `results/rollup.per_inscription_coherence.md`) asks the
@@ -771,15 +804,6 @@ the partial cascades arises because most signs that pass the
 literal threshold are lone-proposal signs (n=1, modal_posterior =
 1.0 trivially) — the robust filter catches that.
 
-**Population C scholarly comparison.** The libation formula has a
-long-standing scholarly transliteration `ja-sa-sa-ra-me` (Younger
-2000–; Davis 2014; cf. broader Aegean-syllabary literature) with
-consonantal segments j-s-s-r-m on AB57-AB31-AB31-AB60-AB13. On
-`PS Za 2`, the framework's per-inscription mechanical modal
-phonemes for that span are `th-u-u-n-i` — divergent from the
-scholarly proposal on every formula-span sign (0/5 match on the
-consonantal segment).
-
 Population breakdown by classification (robust statistic):
 
 | population | n inscriptions | cascade | partial | noise |
@@ -788,33 +812,146 @@ Population breakdown by classification (robust statistic):
 | B: short ≤5 signs    |  4 | 0 | 0 |  4 |
 | C: libation formula  |  1 | 1 | 0 |  0 |
 
-**Interpretation.** v13's per-surface coherence median was 0.18
-(against a 0.6 bar) — across all the windows where each top-20
-substrate surface was used, the proposed sign-to-phoneme mappings
-disagreed heavily. v19 is local rather than global: instead of
-asking "do the candidate equations using surface S agree on what
-sign s should be?" it asks "do the multiple substrate surfaces
-hitting inscription I agree on what each sign in I should be?"
-The local-vs-global aggregate gap is genuine — three of 35
-evaluated inscriptions yield internal-consensus cascade candidates
-— but on the only inscription with a known-content scholarly
-proposal (PS Za 2), the mechanical consensus DIVERGES from the
-scholarly transliteration on every formula-span sign.
+**Local-vs-global aggregate gap.** v13's per-surface coherence
+median was 0.18 (against a 0.6 bar) — across all the windows where
+each top-20 substrate surface was used, the proposed sign-to-
+phoneme mappings disagreed heavily. v19 is local rather than
+global: instead of asking "do the candidate equations using
+surface S agree on what sign s should be?" it asks "do the
+multiple substrate surfaces hitting inscription I agree on what
+each sign in I should be?" The local-vs-global gap is genuine —
+three of 35 evaluated inscriptions yield internal-consensus
+cascade candidates — but, as §3.13 documents, internal consensus
+does not by itself constitute decipherment evidence and on the
+one cascade candidate that admits external comparison the
+mechanical reading diverges from the scholarly proposal.
 
-The honest read: per-inscription internal consensus does not imply
-external correctness. The cascade candidates are hypotheses for
-domain-expert review (an Aegean-syllabary specialist), not
-decipherment claims. The framework's surviving candidates agree on
-PS Za 2 because the signs in that inscription have phonotactic
-shapes consistent with the substrate-LM expectations — not because
-the agreed-upon phoneme mappings correspond to the historically-
-attested Linear A values.
+The cascade candidates are hypotheses for domain-expert review
+(an Aegean-syllabary specialist), not decipherment claims. The
+framework's surviving candidates agree on each cascade-candidate
+inscription because the signs in those inscriptions have
+phonotactic shapes consistent with the substrate-LM expectations
+— not because the agreed-upon phoneme mappings correspond to the
+historically-attested Linear A values.
+
+### 3.13 External validation against scholarly proposals
+
+v19's per-inscription cascade-candidate test (§3.12) is the first
+result in the project that admits *external* validation: against
+a scholarly proposal independent of the framework's own pipeline,
+not against another mechanical artefact of that pipeline. v20
+(mg-711c) consolidates the available external comparands —
+`PS Za 2` from v19's population C, plus a targeted follow-up
+search for additional comparable AB-sequences in `KH 10` and
+`KH 5` — and reports the joint result.
+
+#### 3.13.1 PS Za 2 vs the libation formula `ja-sa-sa-ra-me`
+
+The Linear A libation formula, attested across multiple votive
+contexts, has a long-standing scholarly transliteration
+`ja-sa-sa-ra-me` (Younger 2000–; Davis 2014; cf. broader
+Aegean-syllabary literature) on the syllabogram run
+AB57-AB31-AB31-AB60-AB13. On `PS Za 2` (Psykhro, votive),
+v19's per-inscription mechanical modal phonemes for that span
+are `th-u-u-n-i`. Sign-by-sign:
+
+| AB-sign | scholarly | mechanical (v19) | match (consonantal segment) |
+|:--|:--:|:--:|:--:|
+| AB57 | `ja` (j) | `th` | ✗ |
+| AB31 | `sa` (s) | `u`  | ✗ |
+| AB31 | `sa` (s) | `u`  | ✗ |
+| AB60 | `ra` (r) | `n`  | ✗ |
+| AB13 | `me` (m) | `i`  | ✗ |
+
+The mechanical reading **diverges from the scholarly proposal on
+every formula-span sign** (0/5 consonantal-segment match). All
+five mechanical phonemes meet the robust threshold (modal posterior
+> 0.5 with n_proposals ≥ 2) on this inscription, so the divergence
+cannot be attributed to thin local data — the cascade candidate
+*confidently* reads against the scholarly proposal.
+
+#### 3.13.2 KH 10 / KH 5 vs accountancy totals `ku-ro` and `ki-ro` (v20 follow-up)
+
+The other two cascade candidates — `KH 10` and `KH 5`, both
+Khania accountancy tablets — admit a different external
+comparand. Linear A accountancy is the most-attested genre with
+scholarly translit-anchors: the totaling word `ku-ro` (Younger
+2020; Schoep 2002 ch. 4; Palmer 1995) and the deficit word
+`ki-ro` (Younger 2020; Palmer 1995) appear in dozens of tablets
+at line-ends or section-ends. Under the Ventris-Chadwick 1956
+carryover values incorporated as scholarly anchors in the
+project's `linear_b_carryover` pool: `ku` = AB81, `ki` = AB67,
+`ro` = AB02. So the canonical AB-sign sequences are:
+
+- KU-RO = **AB81-AB02**
+- KI-RO = **AB67-AB02**
+
+v20 (mg-711c) inspects `KH 10` and `KH 5` for these subsequences
+in their syllabogram-only token streams (logograms `LOG:*` and
+divider tokens `DIV` excluded, matching v19's per-inscription
+scoring path):
+
+| inscription | syllabogram run |
+|:--|:--|
+| `KH 10` | AB28-AB03-AB31-AB57-AB16-AB118-AB08-AB67-AB39-AB38-AB04 |
+| `KH 5`  | AB08-AB01-AB67-AB41-AB77-AB08-AB60-AB10-AB01-AB40-AB31-AB31-AB24-AB40-AB06-AB51-AB06-AB81-AB03-AB79 |
+
+| sequence searched | KH 10 | KH 5 | result |
+|:--|:--:|:--:|:--|
+| AB81-AB02 (canonical KU-RO) | absent (AB81 not present) | absent (AB81 → AB03, not AB02) | **no match either tablet** |
+| AB67-AB02 (canonical KI-RO) | absent (AB67 → AB39) | absent (AB67 → AB41) | **no match either tablet** |
+
+AB02 itself is absent from both inscriptions. AB81 occurs once in
+`KH 5` (followed by AB03); AB67 occurs once in each tablet
+(followed by AB39 in `KH 10`, AB41 in `KH 5`). No KU-RO or
+KI-RO instance is therefore available to compare to v19's
+mechanical readings on these two cascade candidates.
+
+*Tension flagged.* The mg-711c ticket text gave KU-RO and KI-RO
+as AB81-AB60 and AB67-AB60 respectively — these are typos in the
+ticket. AB60 is the canonical scholarly value for `ra` (visible
+on the libation-formula span AB57-AB31-AB31-AB60-AB13 above),
+not `ro`. The canonical value for `ro` is AB02, as cited by the
+project's own `linear_b_carryover` pool entries for `ku-ro` and
+`ki-ro` (Younger 2020; Ventris-Chadwick 1956 carryover values).
+For completeness v20 also searched the literal ticket-text
+sequences AB81-AB60 and AB67-AB60: neither occurs in either
+inscription either (AB81 in `KH 5` is followed by AB03, not
+AB60; AB67 in both tablets is followed by AB39 / AB41
+respectively). So under either interpretation the §3.13.2
+comparison set is **empty**.
+
+#### 3.13.3 External-validation summary
+
+The combined v19 + v20 external-validation evidence:
+
+| comparand | inscription | scholarly span | mechanical span (v19) | match |
+|:--|:--|:--|:--|:--:|
+| libation formula `ja-sa-sa-ra-me` | `PS Za 2` | AB57-AB31-AB31-AB60-AB13 → j-s-s-r-m | `th-u-u-n-i` | **0/5** consonantal-segment |
+| total `ku-ro` (AB81-AB02) | `KH 10`, `KH 5` | not present | not present | **n/a** (no comparand) |
+| deficit `ki-ro` (AB67-AB02) | `KH 10`, `KH 5` | not present | not present | **n/a** (no comparand) |
+
+The external-validation evidence to date is therefore one
+mechanically-confident divergence (PS Za 2) and two attempted
+follow-up comparisons that could not be performed for lack of a
+comparable substring. Internal consensus across substrate
+candidates does not imply external correctness on the one
+inscription where the comparison is performable, and the
+evidence base for that claim has not been broadened by the v20
+follow-up — but neither has it been weakened. The supportable
+local-level claim remains the v19 phrasing: *the framework's
+mechanical consensus on the cascade candidates is a hypothesis,
+not a reading; on the cascade candidate where independent
+scholarly ground truth is available, the hypothesis is
+mechanically confidently wrong.*
 
 This refines rather than reverses the per-surface coherence
-verdict (§3.7 / §5): per-sign decipherment remains unsupported at
-the aggregate level, and the one available comparison to a
-known-content scholarly proposal at the local level (libation-
-formula PS Za 2) shows divergence rather than corroboration.
+verdict (§3.7 / §5): per-sign decipherment remains unsupported
+at the aggregate level (v13), and the only available local-level
+comparison to a known-content scholarly proposal (v19 + v20)
+shows divergence rather than corroboration. Both lines of
+evidence — global aggregate (v13) AND local cascade-candidate
+external check (v19 + v20) — point the same direction.
 
 ---
 
@@ -941,6 +1078,62 @@ Discipline of mechanical scoring against phonotactically-matched
 controls is the protection against the motivated-reasoning failure
 modes that have plagued Linear A studies historically.
 
+### 4.6 Internal consensus does not imply external correctness
+
+The methodology paper's headline external-validation result is the
+v19 + v20 cascade-candidate finding (§3.12 / §3.13). It is the
+project's first mechanical comparison of a framework reading to
+a scholarly proposal *independent* of the framework's own
+pipeline, and on the one inscription where the comparison is
+performable (`PS Za 2`, libation-formula span AB57-AB31-AB31-
+AB60-AB13) the framework's confidently-cascading mechanical
+reading `th-u-u-n-i` diverges from the scholarly transliteration
+`ja-sa-sa-ra-me` on every formula-span sign (0/5 consonantal-
+segment match). v20's follow-up search for additional comparable
+sequences (canonical KU-RO = AB81-AB02 and KI-RO = AB67-AB02)
+in the other two cascade candidates `KH 10` and `KH 5` finds
+neither sequence present, so the external-validation evidence
+base remains a single comparable inscription. That is enough
+to ground the load-bearing methodological claim:
+
+> **Internal consensus among surviving substrate candidates does
+> not imply external correctness.** A cascade candidate emerges
+> when multiple independent substrate roots, having survived the
+> right-tail and curation gates, agree on the same modal phoneme
+> at most positions of an inscription. That agreement is
+> evidence about the inscription's phonotactic shape under the
+> substrate LMs; it is **not** evidence that the agreed-upon
+> phonemes correspond to historically-attested Linear A values.
+> Mechanical scoring against phonotactically-matched controls,
+> followed by external comparison to scholarly ground truth, is
+> what catches this distinction. Internal-consensus-only
+> methodology — characteristic of past confirmatory-presentation
+> Linear A work (§4.5, §1) — would not.
+
+This is a discipline-protecting result. Without v19's external
+comparison, the three cascade candidates `KH 10`, `KH 5`, and
+`PS Za 2` would be the strongest "candidate readings" the
+project has produced — exactly the motivated-reasoning failure
+mode the paper's framing warned against. The mechanical
+divergence on `PS Za 2`'s libation-formula span is therefore
+not a setback but a verification that the methodology *catches
+its own optimistic case*: the framework's surviving candidates
+on a known-content inscription, when checked against scholarly
+ground truth, are decisively wrong, and the framework is honest
+enough about its own structure to surface that.
+
+The result also tightens what the v10 / v18 PASSes mean.
+Surface-aggregate PASS at the population level (Aquitanian,
+Etruscan, toponym) detects substrate-LM-phonotactic kinship —
+which the framework reports faithfully. Per-inscription
+internal-consensus cascade candidates surface where that
+phonotactic kinship concentrates within a single tablet —
+which the framework also reports faithfully. *Neither* means
+the framework has identified the correct phoneme assignment
+for any specific Linear A sign, and the v19 + v20 external
+validation makes that specific in a way that internal-only
+metrics cannot.
+
 ---
 
 ## 5. Limitations
@@ -961,22 +1154,33 @@ modes that have plagued Linear A studies historically.
   substrate phonemes. The mechanical signal is consistent with
   multiple causal stories.
 - **Per-inscription gloss generation was queued (originally v14) and
-  abandoned at the AGGREGATE level.** The mg-c216 cross-window
-  coherence verdict (per-surface median 0.18 vs the 0.6 bar) ruled
-  out per-surface reading-shape claims. v19 (mg-3438) re-opens the
-  question at the LOCAL per-inscription level and finds three
-  cascade candidates (KH 10, KH 5, PS Za 2) where ≥50% of the
-  signs in the inscription have ≥2 substrate candidates agreeing
-  on the same modal phoneme. *This does not constitute a
-  decipherment.* On the one cascade candidate with a known-content
-  scholarly proposal — PS Za 2's libation-formula span
-  AB57-AB31-AB31-AB60-AB13 (`ja-sa-sa-ra-me`) — the framework's
-  mechanical consensus reads `th-u-u-n-i`, divergent from the
-  scholarly transliteration on every formula-span sign (0/5
-  consonantal-segment match). Internal consensus among surviving
-  candidates does not imply external correctness; the cascade
-  candidates are hypotheses for domain-expert review, not
-  decipherment claims.
+  failed at BOTH the aggregate AND the local cascade-candidate
+  external-comparison level.** The mg-c216 cross-window coherence
+  verdict (per-surface median 0.18 vs the 0.6 bar) ruled out
+  per-surface reading-shape claims at the global aggregate level.
+  v19 (mg-3438) re-opened the question at the LOCAL per-inscription
+  level and found three cascade candidates (`KH 10`, `KH 5`,
+  `PS Za 2`) where ≥ 50% of the signs in the inscription have ≥ 2
+  substrate candidates agreeing on the same modal phoneme. v19's
+  external comparison on `PS Za 2`'s libation-formula span
+  AB57-AB31-AB31-AB60-AB13 (`ja-sa-sa-ra-me`) found the framework's
+  mechanical consensus reads `th-u-u-n-i`, divergent on every
+  formula-span sign (0/5 consonantal-segment match). v20 (mg-711c)
+  searched the other two cascade candidates for additional
+  comparable scholarly sequences — the well-attested accountancy
+  totals `ku-ro` (AB81-AB02) and `ki-ro` (AB67-AB02) — and found
+  no instance of either sequence in `KH 10` or `KH 5`. The
+  external-validation evidence base is therefore a single
+  comparable inscription with a confidently-divergent reading,
+  with no successful corroborating comparand located by targeted
+  follow-up. Both lines of evidence (global aggregate v13, local
+  cascade-candidate external-comparison v19 + v20) support the
+  same supportable-claim shape: per-sign decipherment is not
+  established by this framework. *This does not constitute a
+  decipherment.* The cascade candidates are hypotheses for
+  domain-expert review, not decipherment claims; internal
+  consensus among surviving candidates does not imply external
+  correctness (§4.6).
 
 ### 5.2 Known unresolved issues
 
@@ -1024,11 +1228,25 @@ follow-up surface:
   The three cascade candidates `KH 10`, `KH 5`, and `PS Za 2`
   (§3.12) emerge with internal-consensus mechanical readings; on
   the one with a scholarly comparand (PS Za 2's libation formula),
-  the mechanical reading diverges from the scholarly proposal.
-  Whether either reading is correct on the cascade-candidate
-  inscriptions is a question only an Aegean-syllabary specialist
-  can adjudicate. v19 surfaces the candidates honestly without
+  the mechanical reading diverges from the scholarly proposal
+  (§3.13.1). v20 (mg-711c) searched `KH 10` and `KH 5` for the
+  other two well-attested Linear A scholarly anchors (`ku-ro` =
+  AB81-AB02, `ki-ro` = AB67-AB02) and found neither sequence
+  present in either tablet (§3.13.2), so no further mechanical-
+  vs-scholarly comparison was performable in v20's scope.
+  Whether the framework's mechanical readings are correct on
+  the cascade-candidate inscriptions where no scholarly comparand
+  exists is a question only an Aegean-syllabary specialist can
+  adjudicate. v19 + v20 surface the candidates honestly without
   drawing decipherment-shaped conclusions.
+- **Deeper scholarly-source ingest.** v20 limited its scope to the
+  two most-attested accountancy readings (KU-RO, KI-RO) plus the
+  libation formula already in v19. A comprehensive scholarly-
+  proposal database — Bonfante & Bonfante / Pallottino / Younger /
+  Salgarella synthesised into a structured pool of well-attested
+  Linear A AB-sequence-to-phoneme readings — would broaden the
+  external-validation surface beyond the three sequences v19 + v20
+  cover. Out of scope for this manuscript; tracked as follow-up.
 
 ---
 
@@ -1052,20 +1270,40 @@ A consensus sign-to-phoneme map built from the v10 top-20 substrate
 surfaces fails a 0.6 cross-window-coherence bar decisively (median
 0.18 on both validated pools). Same-distribution pollution tests
 show the framework cannot distinguish real Aquitanian roots from
-phonotactically-matched conjecturals within a mixed pool.
+phonotactically-matched conjecturals within a mixed pool. And on
+the project's first **external-validation** comparison — v19's
+per-inscription cascade-candidate test, scoring the surviving
+internal-consensus mechanical reading on `PS Za 2`'s libation-
+formula span AB57-AB31-AB31-AB60-AB13 against the long-attested
+scholarly transliteration `ja-sa-sa-ra-me` — the mechanical
+consensus reads `th-u-u-n-i` (0/5 consonantal-segment match),
+divergent from the scholarly proposal on every formula-span sign.
+v20's targeted follow-up search for additional scholarly comparands
+in the other two cascade candidates (`KH 10`, `KH 5`) — the
+well-attested accountancy totals `ku-ro` (AB81-AB02) and `ki-ro`
+(AB67-AB02) — finds neither sequence in either tablet, leaving the
+libation formula as the project's sole external comparand to date.
 
 The supportable claim is therefore strictly narrower than past
 decipherment-shape claims for Linear A: the framework identifies
 which substrate phonotactic profiles produce population-level signal
 in the SigLA corpus, and on which specific inscriptions that signal
 concentrates, but does not validate per-sign readings or per-tablet
-glosses. The discipline of mechanical scoring against phonotactically-
-matched controls is what distinguishes the framework's claim from
-the qualitative-impression claims that have plagued past Linear A
-work; the framework's null findings (no per-sign coherence, no
-real-vs-conjectural surface discrimination) are themselves
+glosses — and where the cascade candidates *do* admit external
+comparison to scholarly ground truth, the mechanical reading
+diverges. **Internal consensus among surviving substrate candidates
+does not imply external correctness;** mechanical scoring against
+phonotactically-matched controls, paired with external comparison
+to independent scholarly proposals, is what distinguishes the
+framework's claim from the qualitative-impression claims that have
+plagued past Linear A work. The framework's null findings — no
+per-sign coherence at the global aggregate level (v13), no
+real-vs-conjectural surface discrimination at the same-distribution
+pollution level (v14), and decisive divergence on the one
+performable external comparison (v19 / v20) — are themselves
 contributions to the methodological literature on undeciphered-
-script analysis.
+script analysis: each is a falsification result that internal-only
+methodology, by construction, cannot produce.
 
 ---
 
@@ -1085,12 +1323,15 @@ committed artefacts under `results/`:
 | v15 cross-language pollution gate + provenance | `rollup.bayesian_posterior.greek_polluted_aquitanian.md` + `…provenance.md` |
 | per-inscription concentration | `rollup.right_tail_inscription_concentration.md` |
 | v19 per-inscription coherence + cascade candidates | `rollup.per_inscription_coherence.md` |
+| v20 KU-RO / KI-RO scholarly-anchor search on `KH 10` / `KH 5` | `corpus/Khania/KH%2010.json`, `corpus/Khania/KH%205.json` (token streams) + `pools/linear_b_carryover.yaml` (canonical AB-sequence anchors) |
 | corpus ingestion record | `../corpus_status.md` |
 
 Per-ticket merge notes are in `docs/findings.md` under
 `## Findings from mg-XXXX` headers, in chronological order from
-`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-7ecb`
-(v15, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
-(v0, 2026-05-04 first harness commit) through `mg-7ecb`. The
-repo scaffold (`mg-9e00`) predates `findings.md`'s introduction
-in `mg-13a2` and so does not have a per-ticket entry there.
+`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-711c`
+(v20, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
+(v0, 2026-05-04 first harness commit) through `mg-3438` (v19,
+2026-05-05), with mg-711c (v20) a documentation-and-investigation
+ticket that adds no harness code path. The repo scaffold
+(`mg-9e00`) predates `findings.md`'s introduction in `mg-13a2`
+and so does not have a per-ticket entry there.

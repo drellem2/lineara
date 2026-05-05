@@ -4081,3 +4081,256 @@ No RNG.
   warrants paper-shape integration) is its own ticket.
 - **Per-window deduplication / Linear-B small-K gate adoption.**
   Out of v19 scope per the brief.
+
+## Findings from mg-711c (v20 — methodology paper integration of v19 cascade-candidate findings + light scholarly-proposal comparison on KH 10 / KH 5, 2026-05-05)
+
+### Headline
+
+Two-part documentation-and-investigation ticket. Part 1 (small):
+search the v19 cascade-candidate accountancy tablets `KH 10` and
+`KH 5` for the two most-attested Linear A scholarly anchors —
+`ku-ro` ("total/sum") and `ki-ro` ("deficit/owed") — and report
+mechanical-vs-scholarly comparison on any matches found. Part 2
+(bulk): elevate the v19 PS Za 2 external-validation result in
+`docs/findings_summary.md` from minimal-paragraph status to
+load-bearing-finding status across Abstract / §3.1 / §3.12 / §3.13
+/ §4.6 / §5.1 / §5.3 / §6.
+
+### Part 1 — KU-RO / KI-RO scholarly-anchor search (NULL result)
+
+**Canonical scholarly AB-sequences** (from `pools/linear_b_carryover.yaml`,
+which incorporates Younger 2020 + Schoep 2002 + Palmer 1995 +
+Ventris-Chadwick 1956 carryover values):
+
+- `ku-ro` = **AB81-AB02** (`ku` = AB81, `ro` = AB02)
+- `ki-ro` = **AB67-AB02** (`ki` = AB67, `ro` = AB02)
+
+**Tokens inspected** (syllabogram-only; logograms `LOG:*` and
+divider tokens `DIV` excluded, matching v19's per-inscription
+scoring path; `corpus/Khania/KH%2010.json` + `KH%205.json`):
+
+| inscription | n syll | run |
+|:--|--:|:--|
+| `KH 10` | 11 | AB28-AB03-AB31-AB57-AB16-AB118-AB08-AB67-AB39-AB38-AB04 |
+| `KH 5`  | 20 | AB08-AB01-AB67-AB41-AB77-AB08-AB60-AB10-AB01-AB40-AB31-AB31-AB24-AB40-AB06-AB51-AB06-AB81-AB03-AB79 |
+
+**Match search** for each canonical sequence in each tablet:
+
+| sequence | KH 10 | KH 5 | result |
+|:--|:--:|:--:|:--|
+| AB81-AB02 (KU-RO) | absent — AB81 not in syllabogram run | absent — AB81 → AB03, not AB02 | **no match** |
+| AB67-AB02 (KI-RO) | absent — AB67 → AB39, not AB02 | absent — AB67 → AB41, not AB02 | **no match** |
+
+AB02 (the canonical `ro`) is **absent from both inscriptions**.
+AB81 occurs once in `KH 5` only (followed by AB03). AB67 occurs
+once in each tablet (followed by AB39 in `KH 10`, AB41 in `KH 5`).
+No KU-RO or KI-RO instance is therefore available to compare to
+v19's mechanical readings on these two cascade candidates.
+
+**Tension flagged.** The mg-711c ticket text gave KU-RO and KI-RO
+as AB81-AB60 and AB67-AB60 respectively. AB60 is the canonical
+scholarly value for `ra`, not `ro`, as visible on the libation-
+formula span AB57-AB31-AB31-AB60-AB13 used by v19. The canonical
+value for `ro` is AB02, per the project's own
+`linear_b_carryover.yaml` entries for `kuro` and `kiro` (citing
+Younger 2020; Ventris-Chadwick 1956 carryover values). v20 read
+the ticket's `AB81-AB60` / `AB67-AB60` as a typo for the
+well-attested `AB81-AB02` / `AB67-AB02` (canonical) — but for
+completeness also searched the literal ticket-text sequences
+AB81-AB60 and AB67-AB60. Both come up empty too: AB81 in `KH 5`
+is followed by AB03 (not AB60), AB67 in both tablets is followed
+by AB39 / AB41 (not AB60). So under either interpretation —
+canonical or ticket-literal — the §3.13.2 comparison set is
+**empty**.
+
+### Part 2 — Methodology paper rewrite (`docs/findings_summary.md`)
+
+The structural change is moving v19 from a "minimal §3.12 paragraph"
+to a load-bearing methodological finding integrated across the
+Abstract / Results / Discussion / Limitations / Conclusion. Edits:
+
+- **Header.** Authoring-version tag updated to "v16, mg-d5ed;
+  lineage citations corrected in v17, mg-2bfd; v19 cascade-candidate
+  / external-validation integration in v20, mg-711c". Project span
+  extended from "19 work items" / "v0 through v15 (mg-d5ef through
+  mg-7ecb)" to "20 work items" / "v0 through v19 (mg-d5ef through
+  mg-3438)".
+- **Abstract.** New full paragraph integrating v19 cascade
+  candidates and v20's external-validation summary as the project's
+  *first external-validation* result, ending on the load-bearing
+  framing "internal consensus across surviving candidates does not
+  imply external correctness". The "supportable claim" closing
+  paragraph extended to call out the divergence on the one
+  performable external comparison.
+- **§1 Introduction closer.** "seven falsifiable acceptance-gate
+  outcomes" → "eleven pre-registered falsifiable acceptance-gate /
+  external-validation outcomes" (faithful to the §3.1 table after
+  v18 + v19 + v20 additions).
+- **§3.1 acceptance-gate summary table.** Two new rows:
+  - Row 10: per-inscription cascade-candidate test (mg-3438, v19) —
+    3 cascade candidates emerged.
+  - Row 11: external validation against scholarly proposals —
+    PS Za 2 vs `ja-sa-sa-ra-me` 0/5 consonantal-segment match
+    (mg-3438, v19); KH 10 / KH 5 vs `ku-ro` / `ki-ro` no comparable
+    substring (mg-711c, v20).
+- **§3.2 validation matrix.** Header updated from "as of v18" to
+  "as of v20" with note that v19 / v20 operate at the
+  per-inscription level, not at the pool-level gate.
+- **§3.12 Per-inscription coherence.** Renamed (drop the "but
+  diverge from scholarly readings" tail), trimmed the inline
+  scholarly-comparison subsection, redirected its detail to §3.13.
+  Local-vs-global aggregate-gap framing kept; cascade-candidate
+  table and population-breakdown table kept as-is. The
+  "honest read" / "refines rather than reverses" closing
+  paragraphs absorbed into the new §3.13 closing.
+- **§3.13 External validation against scholarly proposals (NEW).**
+  Three subsubsections:
+  - §3.13.1 PS Za 2 vs the libation formula `ja-sa-sa-ra-me` —
+    sign-by-sign comparison table (AB57/AB31/AB31/AB60/AB13);
+    explicit note that all 5 mechanical phonemes meet the robust
+    threshold (cascade candidate is *confidently* divergent, not
+    a thin-data artefact).
+  - §3.13.2 KH 10 / KH 5 vs `ku-ro` / `ki-ro` — investigation
+    summary, search-result table (no matches), explicit tension
+    note re: ticket's AB81-AB60 / AB67-AB60 typo.
+  - §3.13.3 External-validation summary — combined result table
+    across all three comparands and a closing methodological
+    statement: "the framework's mechanical consensus on the
+    cascade candidates is a hypothesis, not a reading; on the
+    cascade candidate where independent scholarly ground truth
+    is available, the hypothesis is mechanically confidently
+    wrong".
+- **§4.6 Internal consensus does not imply external correctness
+  (NEW).** Promoted from §3.12-passing-mention to a load-bearing
+  Discussion subsection with a quotable framing block. Closes on
+  the "discipline-protecting result" framing and how surface-
+  aggregate PASS, internal-consensus cascade candidates, and the
+  per-sign decipherment failure are all simultaneously true and
+  consistent under the framework's structural reading.
+- **§5.1 Out-of-scope by construction.** The existing v19
+  paragraph rewritten to combine v13 (per-surface aggregate) AND
+  v19 + v20 (per-inscription cascade-candidate external-comparison)
+  as joint failures pointing the same direction. Explicitly
+  cross-references §4.6 for the load-bearing framing.
+- **§5.3 Out-of-scope follow-ups.** Domain-expert-review item
+  extended to mention v20's KU-RO/KI-RO null result. New item:
+  deeper scholarly-source ingest (Bonfante & Bonfante / Pallottino
+  / Younger / Salgarella → comprehensive scholarly-proposal
+  database) noted as out of scope per the v20 ticket's own scope
+  limits.
+- **§6 Conclusion.** New paragraph integrating v19 PS Za 2
+  divergence + v20 KU-RO/KI-RO null follow-up; new closing line
+  stating that the framework's *null findings* (v13 + v14 + v19 +
+  v20) are themselves contributions to the methodological
+  literature on undeciphered-script analysis — falsification
+  results that internal-only methodology cannot produce.
+- **Appendix A.** New row for v20's KU-RO/KI-RO investigation
+  pointing to the inspected token-stream files and the canonical
+  AB-sequence anchor source. Per-ticket-merge-notes footer
+  extended through `mg-711c` (v20, 2026-05-05).
+
+No earlier numbers were silently changed. Where v20's elevated
+framing tightens an earlier claim (e.g., §5.1's "per-sign
+decipherment is not supported by the data" → "per-sign decipherment
+failed at BOTH the aggregate AND the local cascade-candidate
+external-comparison level"), the change is additive — it joins
+v19 + v20 evidence to v13 evidence on the same claim shape, not
+overwriting it.
+
+### Three-sentence reading test
+
+The v16 (mg-d5ed) brief required that a Linear A scholar reading
+the updated `findings_summary.md` cold should be able to extract
+three sentences that capture the methodology paper's contribution.
+After the v20 elevation, those three sentences are:
+
+1. *(Methodology.)* The framework scores candidate substrate-root
+   → Linear A sign-window equations under external phoneme LMs
+   trained on real substrate text, against phonotactically-matched
+   scramble controls drawn from each substrate pool's marginal
+   phoneme distribution, with the right-tail Bayesian gate (top-K
+   substrate posterior medians vs top-K matched-control posterior
+   medians, one-tail Mann-Whitney U) as the population-level
+   acceptance criterion.
+
+2. *(Detect / not-detect split.)* The framework detects substrate-
+   LM-phonotactic kinship at the population level (Aquitanian PASS
+   p = 3.22e-05 under Basque LM, Etruscan p = 5.21e-04 under
+   Etruscan LM, with both separations collapsing under unrelated
+   LMs) but does NOT support per-sign decipherment: the consensus
+   sign-to-phoneme map fails the cross-window-coherence bar
+   decisively (median 0.18 vs the 0.6 acceptance bar), and the
+   same-distribution pollution test cannot distinguish real
+   Aquitanian roots from phonotactically-matched conjecturals
+   (within-tail real-vs-conjectural Mann-Whitney p = 0.98).
+
+3. *(External-validation falsification.)* The first external
+   comparison of the framework's per-inscription cascade-candidate
+   readings to a long-attested scholarly proposal — `PS Za 2`'s
+   libation-formula span AB57-AB31-AB31-AB60-AB13 vs
+   `ja-sa-sa-ra-me` — finds the framework's confidently-cascading
+   mechanical reading `th-u-u-n-i` divergent on every formula-span
+   sign (0/5 consonantal-segment match), and a follow-up search
+   for additional scholarly comparands (`ku-ro` = AB81-AB02,
+   `ki-ro` = AB67-AB02) on the other two cascade candidates
+   `KH 10` and `KH 5` finds neither sequence present, leaving
+   the libation formula as the project's sole external comparand
+   to date and grounding the load-bearing methodological claim
+   that internal consensus across surviving substrate candidates
+   does not imply external correctness.
+
+These three sentences appear distributed across the Abstract, §3
+Results, and §4.6 Discussion in the updated paper. A scholar
+reading cold should be able to extract them within ~10 minutes of
+reading the Abstract + §3.13 + §4.6 alone.
+
+### Artifacts shipped
+
+- `docs/findings_summary.md` — Abstract, §1 closer, §3.1 table
+  (rows 10–11 added), §3.2 header, §3.12 trim + rename, §3.13
+  (NEW with three subsubsections), §4.6 (NEW), §5.1 (refined),
+  §5.3 (extended), §6 (refined), Appendix A (extended).
+- `docs/findings.md` — this entry.
+
+No new corpora, no new metrics, no new pools, no new scripts. The
+v20 KU-RO/KI-RO investigation is mechanical pattern-matching
+against the existing committed `corpus/Khania/KH%2010.json` and
+`KH%205.json`, comparing to the canonical AB-sequence anchors
+already cited in `pools/linear_b_carryover.yaml`. Determinism
+non-negotiable — the result is byte-identical re-runs of the
+same lookup.
+
+### Reproducibility
+
+The KU-RO/KI-RO null result reproduces from the committed
+corpus + pool data:
+
+```
+# Tokens of KH 10, KH 5 (syllabograms only):
+python3 -c '
+import json, re
+for f in ["corpus/Khania/KH%2010.json", "corpus/Khania/KH%205.json"]:
+    d = json.load(open(f))
+    syl = [t for t in d["tokens"] if t != "DIV" and not t.startswith("LOG:") and re.match(r"^AB\d+$", t)]
+    print(d["id"], "->", "-".join(syl))
+'
+
+# Search for canonical KU-RO (AB81-AB02) and KI-RO (AB67-AB02):
+# both come up null in both tablets.
+```
+
+### Out of scope (deferred, unchanged from ticket)
+
+- **Domain-expert review.** Still not a polecat task; needs an
+  Aegean syllabary specialist.
+- **Deeper scholarly-source ingest.** Bonfante & Bonfante /
+  Pallottino / Younger / Salgarella → comprehensive scholarly
+  proposal database is its own ticket. v20 limited scope to the
+  two most-attested accountancy readings (KU-RO, KI-RO) plus the
+  libation formula already in v19.
+- **Per-window deduplication / Linear-B small-K gate adoption.**
+  Cosmetic polish; deferred.
+- **Methodology-paper LaTeX / journal submission.** Out of polecat
+  scope.
+- **More cascade-candidate populations** (longer formulaic
+  inscriptions, syllabogram-frequency-extreme inscriptions, etc.).
