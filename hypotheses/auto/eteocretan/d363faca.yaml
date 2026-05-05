@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_omali_KN_Zc_6_20_25
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''omali''
+  pinned to KN Zc 6 tokens [20..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: omali
+  phonemes:
+  - o
+  - m
+  - a
+  - l
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 6). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 20
+  - 25
+  sign_to_phoneme:
+    AB81: o
+    AB55: m
+    AB10: a
+    AB28: l
+    AB79: i

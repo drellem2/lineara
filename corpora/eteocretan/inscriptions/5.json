@@ -1,0 +1,21 @@
+{
+  "completeness": "fragmentary",
+  "ic_ref": "IC III.vi.5",
+  "id": 5,
+  "is_bilingual": false,
+  "name": "Praisos 5",
+  "provenance": "Bosanquet 1908; second small fragment from the same context as Praisos 4. Two lines, both broken.",
+  "site": "praisos",
+  "source_citation": "Bosanquet 1908-1909 BSA 15. IC III.vi.5. Duhoux 1982 §I.5.",
+  "text": "ισαλα βρε σαντε ιαρει ομος ομα φος",
+  "transliteration": "isala bre sante iarei omos oma phos",
+  "words": [
+    "isala",
+    "bre",
+    "sante",
+    "iarei",
+    "omos",
+    "oma",
+    "phos"
+  ]
+}

@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_isal_ARKH_5_0_3
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''isal''
+  pinned to ARKH 5 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: isal
+  phonemes:
+  - i
+  - s
+  - a
+  - l
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 6). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB08: i
+    AB51: s
+    AB30: a
+    AB59: l

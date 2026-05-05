@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_omos_HT_117a_63_66
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''omos''
+  pinned to HT 117a tokens [63..66].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: omos
+  phonemes:
+  - o
+  - m
+  - o
+  - s
+  gloss_hint: unknown
+  citation: 'Attested in 10 inscription(s) (first: Dreros 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 117a
+  span:
+  - 63
+  - 66
+  sign_to_phoneme:
+    AB70: o
+    AB31: m
+    AB28: o
+    AB37: s

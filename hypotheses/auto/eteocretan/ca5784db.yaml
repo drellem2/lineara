@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_komnai_KN_Zf_13_5_10
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''komnai''
+  pinned to KN Zf 13 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: komnai
+  phonemes:
+  - k
+  - o
+  - m
+  - n
+  - a
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    A301: k
+    AB39: o
+    AB44: m
+    AB03: n
+    AB57: a
+    AB59: i

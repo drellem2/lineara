@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_wantai_KN_Zc_7_15_20
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''wantai''
+  pinned to KN Zc 7 tokens [15..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: wantai
+  phonemes:
+  - w
+  - a
+  - n
+  - t
+  - a
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 5 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 20
+  sign_to_phoneme:
+    AB31: w
+    AB60: a
+    AB08: n
+    AB06: t
+    AB24: a
+    AB40: i

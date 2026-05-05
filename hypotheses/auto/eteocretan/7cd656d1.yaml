@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_sante_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''sante''
+  pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: sante
+  phonemes:
+  - s
+  - a
+  - n
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 9 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: s
+    AB67: a
+    AB59: n
+    AB06: t
+    AB41: e

@@ -1,0 +1,17 @@
+{
+  "completeness": "short",
+  "ic_ref": "Whittaker S19 (cf. Whittaker)",
+  "id": 99,
+  "is_bilingual": false,
+  "name": "Whittaker S19",
+  "provenance": "Stone block, three words.",
+  "site": "dreros",
+  "source_citation": "Whittaker, H. (2017). 'Of linguistic alterity in Crete: the Eteocretan inscriptions.' SCI 36: 7-31.",
+  "text": "πορτα φορτου ομαι",
+  "transliteration": "porta phortou omai",
+  "words": [
+    "porta",
+    "phortou",
+    "omai"
+  ]
+}

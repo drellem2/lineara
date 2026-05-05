@@ -1,0 +1,42 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_adokarmenos_KN_Zf_13_0_10
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''adokarmenos''
+  pinned to KN Zf 13 tokens [0..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: adokarmenos
+  phonemes:
+  - a
+  - d
+  - o
+  - k
+  - a
+  - r
+  - m
+  - e
+  - n
+  - o
+  - s
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 10
+  sign_to_phoneme:
+    AB08: a
+    AB27: d
+    AB24: o
+    AB41: k
+    AB07: a
+    A301: r
+    AB39: m
+    AB44: e
+    AB03: n
+    AB57: o
+    AB59: s

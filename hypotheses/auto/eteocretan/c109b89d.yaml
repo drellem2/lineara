@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_ona_ARKH_5_2_4
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''ona''
+  pinned to ARKH 5 tokens [2..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: ona
+  phonemes:
+  - o
+  - n
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 5 inscription(s) (first: Dreros 2). Source: Duhoux 1982 /
+    Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 2
+  - 4
+  sign_to_phoneme:
+    AB30: o
+    AB59: n
+    AB06: a

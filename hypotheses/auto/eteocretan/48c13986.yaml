@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_mete_ARKH_2_15_19
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''mete''
+  pinned to ARKH 2 tokens [15..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: mete
+  phonemes:
+  - m
+  - e
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 15
+  - 19
+  sign_to_phoneme:
+    A301: m
+    AB09: e
+    AB45: t
+    AB118: e

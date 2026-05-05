@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_iemete_KN_Zc_6_18_24
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''iemete''
+  pinned to KN Zc 6 tokens [18..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: iemete
+  phonemes:
+  - i
+  - e
+  - m
+  - e
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 24
+  sign_to_phoneme:
+    AB06: i
+    AB03: e
+    AB81: m
+    AB55: e
+    AB10: t
+    AB28: e

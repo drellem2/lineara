@@ -1,0 +1,18 @@
+{
+  "completeness": "fragmentary",
+  "ic_ref": "Psychro (Mackenzie 1903)",
+  "id": 10,
+  "is_bilingual": false,
+  "name": "Psychro stone",
+  "provenance": "Mackenzie 1903; small inscribed stone from the Psychro cave (the Diktaion Antron). Authenticity has been questioned (Pope 1956); included here for completeness with that caveat. A short single-line text.",
+  "site": "psychro",
+  "source_citation": "Mackenzie, D. (1903). 'The successive settlements at Phylakopi.' BSA 9: 274-307 (Psychro inscription appendix). Duhoux 1982 §III.1; cf. Pope 1956.",
+  "text": "επιοι ζηθαντη ενετη παρσιφαι",
+  "transliteration": "epioi zethante enete parsiphai",
+  "words": [
+    "epioi",
+    "zethante",
+    "enete",
+    "parsiphai"
+  ]
+}

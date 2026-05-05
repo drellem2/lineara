@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_ona_HT_1_11_13
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''ona''
+  pinned to HT 1 tokens [11..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: ona
+  phonemes:
+  - o
+  - n
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 5 inscription(s) (first: Dreros 2). Source: Duhoux 1982 /
+    Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 1
+  span:
+  - 11
+  - 13
+  sign_to_phoneme:
+    AB07: o
+    AB17: n
+    AB44: a

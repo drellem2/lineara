@@ -1,0 +1,37 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_arkaginoi_KN_Zf_13_5_13
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''arkaginoi''
+  pinned to KN Zf 13 tokens [5..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: arkaginoi
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  - g
+  - i
+  - n
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 13
+  sign_to_phoneme:
+    A301: a
+    AB39: r
+    AB44: k
+    AB03: a
+    AB57: g
+    AB59: i
+    AB53: n
+    AB09: o
+    AB04: i

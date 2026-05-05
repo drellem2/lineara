@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_ieme_HT_117a_8_11
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''ieme''
+  pinned to HT 117a tokens [8..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: ieme
+  phonemes:
+  - i
+  - e
+  - m
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 4). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 117a
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    AB10: i
+    AB73: e
+    AB06: m
+    AB41: e

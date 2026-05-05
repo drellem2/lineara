@@ -1,0 +1,21 @@
+{
+  "completeness": "fragmentary",
+  "ic_ref": "IC III.vi.4",
+  "id": 4,
+  "is_bilingual": false,
+  "name": "Praisos 4",
+  "provenance": "Bosanquet 1908; small stone fragment, single line, broken at both ends.",
+  "site": "praisos",
+  "source_citation": "Bosanquet 1908-1909 BSA 15. IC III.vi.4. Duhoux 1982 §I.4.",
+  "text": "ομαλιοι σαντε αρκα διοι ιναι αρκα γινοι",
+  "transliteration": "omalioi sante arka dioi inai arka ginoi",
+  "words": [
+    "omalioi",
+    "sante",
+    "arka",
+    "dioi",
+    "inai",
+    "arka",
+    "ginoi"
+  ]
+}

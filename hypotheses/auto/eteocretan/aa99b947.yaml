@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_niate_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''niate''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: niate
+  phonemes:
+  - n
+  - i
+  - a
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Younger E10). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: n
+    AB26: i
+    AB78: a
+    AB76: t
+    AB10: e

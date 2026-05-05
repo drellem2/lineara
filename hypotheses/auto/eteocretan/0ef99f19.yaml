@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_ieroi_KH_10_12_16
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''ieroi''
+  pinned to KH 10 tokens [12..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: ieroi
+  phonemes:
+  - i
+  - e
+  - r
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KH 10
+  span:
+  - 12
+  - 16
+  sign_to_phoneme:
+    AB08: i
+    AB67: e
+    AB39: r
+    AB38: o
+    AB04: i

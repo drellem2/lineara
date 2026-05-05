@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_nato_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''nato''
+  pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: nato
+  phonemes:
+  - n
+  - a
+  - t
+  - o
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Younger E10). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: n
+    AB58: a
+    AB47: t
+    AB04: o

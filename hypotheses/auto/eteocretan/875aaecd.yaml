@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_bre_HT_104_20_22
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''bre''
+  pinned to HT 104 tokens [20..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: bre
+  phonemes:
+  - b
+  - r
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 104
+  span:
+  - 20
+  - 22
+  sign_to_phoneme:
+    AB01: b
+    AB58: r
+    AB37: e

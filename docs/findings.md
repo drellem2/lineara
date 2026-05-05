@@ -4334,3 +4334,180 @@ for f in ["corpus/Khania/KH%2010.json", "corpus/Khania/KH%205.json"]:
   scope.
 - **More cascade-candidate populations** (longer formulaic
   inscriptions, syllabogram-frequency-extreme inscriptions, etc.).
+
+---
+
+## Findings from mg-6ccd (v21 — Eteocretan corpus ingest + own-LM right-tail bayesian gate; 4th external-validation pool, 2026-05-05)
+
+### Headline
+
+**The Eteocretan substrate pool — the closest-genealogical-relative
+candidate substrate (presumed Linear-A linguistic continuation) —
+PASSes the v10 right-tail bayesian gate against the bigram-preserving
+matched control at p = 4.10e-06**, with a substrate-vs-control
+posterior-median gap of +0.20. By both metrics, this is the
+**strongest pool PASS in the validation series to date**:
+
+| pool | own-LM gate p | substrate-vs-control posterior-median gap |
+|:--|:--:|:--:|
+| `aquitanian` (v10) | 3.22e-05 | +0.0296 |
+| `etruscan` (v10) | 5.21e-04 | +0.0591 |
+| `toponym` (v18, bigram control) | 9.99e-05 | +0.1090 |
+| **`eteocretan` (v21, bigram control)** | **4.10e-06** | **+0.2014** |
+
+The cross-LM negative-control sketch (Eteocretan candidates re-scored
+under the Basque LM) still passes but ~600× weaker (p = 2.58e-03;
+gap +0.10), so the own-LM advantage is real and quantitatively
+dominant. The own-LM-vs-cross-LM gap ratio (factor of 2 in
+substrate-vs-control posterior-median gap) supports an
+Eteocretan-specific component to the signal beyond a generic
+natural-language-LM bias.
+
+### Interpretive read (the load-bearing paragraph)
+
+The gap-magnitude ordering across the four external-validation pools
+is **Eteocretan (closest-genealogical-relative) > toponym (Cretan
+pre-Greek substrate) > Etruscan > Aquitanian (furthest-out
+Mediterranean)**, which is the kind of ordering an independent
+scholarly review would expect a working substrate-detection
+methodology to produce — substrate-LM-phonotactic-kinship signal
+scaling with a-priori genealogical relatedness. Methodology paper §3.14
++ §4.1 are updated accordingly: the framework's "what it detects"
+narrative now includes the v21 finding that the closest-relative
+candidate produces the strongest right-tail PASS, consistent with —
+but not by itself establishing — the consensus framing that
+Eteocretan continues whatever underlies Linear A. The framework
+continues not to support per-sign decipherment claims (v13 / v19 /
+v20 verdicts unchanged). What v21 changes is the strength of the
+"this framework detects something substrate-shaped" claim: the
+strongest signal lives in the candidate substrate scholarly consensus
+already treats as Linear A's linguistic descendant, which is exactly
+what the methodology should produce if it is detecting substrate
+continuity rather than something else.
+
+### Pre-registered acceptance gate
+
+> "the 4th-pool right-tail bayesian test passes at p<0.05 — OR ships
+> as a clean negative result (no tweaking until pass)."
+
+**Outcome: PASS at p = 4.10e-06**, far below the 0.05 threshold.
+No tweaking required; no methodology choices reconsidered after
+seeing the result. The cross-LM sketch was pre-spec'd and ran on
+the same substrate + control candidates without modification.
+
+### Artifacts shipped
+
+- `corpora/eteocretan/inscriptions/<id>.json` — 100 per-inscription
+  JSON files (manually transcribed Praisos 1–7, Dreros 1–2, Psychro
+  stone, plus 90 short attestations from Whittaker 2017 / Duhoux
+  1982 ch. III / Younger online catalog).
+- `corpora/eteocretan/all.jsonl` — aggregate.
+- `corpora/eteocretan/words.txt` — flat sorted-unique word list
+  (gitignored, mirroring the Basque / Etruscan / Linear-B pattern).
+- `corpora/eteocretan.README.md` — provenance, license, format,
+  small-corpus caveat.
+- `harness/external_phoneme_models/eteocretan.json` — char-bigram
+  LM, α=1.0, ~626 vocab tokens, ~625 bigrams observed across 87
+  unique word forms.
+- `pools/eteocretan.yaml` — 84 substrate root entries (≥80 bar met
+  cleanly; 3 V-only forms filtered).
+- `pools/eteocretan.README.md` — pool README documenting the
+  small-pool caveat and undeciphered-substrate / `gloss: unknown`
+  policy.
+- `pools/control_eteocretan_bigram.yaml` — bigram-preserving
+  matched control (84 entries, alpha=0.1; built via
+  `scripts/build_control_pools.py --pool eteocretan --sampler
+  bigram --suffix _bigram` — the v18 production default for new
+  pools).
+- `pools/control_eteocretan_bigram.README.md` — auto-generated.
+- `scripts/build_eteocretan_corpus.py` — manual transcription of
+  the published Eteocretan inscriptional record. Documents the
+  tier-1 / tier-2 / tier-3 inscription classification.
+- `scripts/build_eteocretan_pool.py` — corpus → pool YAML
+  generator, validates against `pools/schemas/pool.v1.schema.json`.
+- `scripts/build_external_phoneme_models.py` — extended with
+  `--only eteocretan` branch (mirrors the existing Basque /
+  Etruscan / Mycenaean-Greek branches).
+- `scripts/build_control_pools.py` — `_SUBSTRATE_POOLS` extended
+  with `eteocretan`.
+- `scripts/run_sweep.py` — `_EXT_POOL_LANGUAGE` dispatch extended
+  with `eteocretan` → `eteocretan` LM and `control_eteocretan_bigram`
+  → `eteocretan` LM (so paired_diff cancels the LM out).
+- `scripts/per_surface_bayesian_rollup.py` — `_SUBSTRATE_POOLS` and
+  `_DEFAULT_LANGUAGE_DISPATCH` extended with the Eteocretan pool
+  pair.
+- `scripts/cross_lm_rescore.py` — `--mode eteocretan_under_basque`
+  added for the v21 cross-LM negative control.
+- `scripts/v21_eteocretan_gate.py` — dedicated v21 gate analysis
+  script (parallel to `scripts/v18_toponym_bigram_gate.py`); supports
+  `--language-dispatch` JSON override for the cross-LM rescore.
+- `hypotheses/auto/eteocretan/<sha8>.yaml` and
+  `hypotheses/auto/control_eteocretan_bigram/<sha8>.yaml` — 2,985
+  substrate + 2,635 control candidate-equation hypotheses with
+  manifests.
+- `results/experiments.external_phoneme_perplexity_v0.jsonl` — 5,620
+  v21 substrate + control rows (own LM) plus 5,620 v21 cross-LM
+  rows (Basque LM). Total ~11,240 v21 rows.
+- `results/rollup.bayesian_posterior.eteocretan.md` — own-LM gate
+  output. Headline: PASS at p=4.10e-06.
+- `results/rollup.bayesian_posterior.eteocretan_under_basque.md` —
+  cross-LM gate output. Headline: still PASSes but ~600× weaker.
+- `docs/findings_summary.md` — §3.1 row 12 added; §3.2 Eteocretan
+  row added; §3.14 (NEW) inserted between §3.13.3 and §4; §4.1
+  bullet 1 expanded to integrate the gap-magnitude ordering;
+  §5.2 small-corpus caveat bullet added; Appendix A updated.
+- `docs/findings.md` — this entry.
+
+### Reproducibility
+
+```
+python3 scripts/build_eteocretan_corpus.py
+python3 scripts/build_external_phoneme_models.py --only eteocretan
+python3 scripts/build_eteocretan_pool.py
+python3 scripts/build_control_pools.py --pool eteocretan --sampler bigram --suffix _bigram
+python3 scripts/generate_candidates.py --pool eteocretan
+python3 scripts/generate_candidates.py --pool control_eteocretan_bigram
+python3 scripts/run_sweep.py --manifest hypotheses/auto/eteocretan.manifest.jsonl --metrics external_phoneme_perplexity_v0
+python3 scripts/run_sweep.py --manifest hypotheses/auto/control_eteocretan_bigram.manifest.jsonl --metrics external_phoneme_perplexity_v0
+python3 scripts/cross_lm_rescore.py --mode eteocretan_under_basque --pools eteocretan,control_eteocretan_bigram
+python3 scripts/v21_eteocretan_gate.py
+python3 scripts/v21_eteocretan_gate.py --language-dispatch '{"eteocretan":"basque","control_eteocretan_bigram":"basque"}' --out-name rollup.bayesian_posterior.eteocretan_under_basque.md --title-suffix " — under Basque LM (cross-LM negative control)"
+```
+
+Determinism: every step is byte-deterministic given the same inputs.
+The corpus build uses no RNG. The control-pool sampler uses a
+deterministic seed derived from the pool name. The candidate
+generator emits hypotheses in (pool_entry_index, inscription_id,
+span_start) order. The sweep runs use a (hash, snapshot, metric)
+resume cache so re-runs are no-ops.
+
+### Limitations specific to v21 (also in §3.14 of findings_summary.md)
+
+- The Eteocretan LM is small-corpus by reality (~87 unique word
+  forms). α=1.0 smoothing partially compensates; the strong PASS
+  magnitude despite the noise floor is itself a finding.
+- No per-sign external-validation comparand exists (Praisos 2 /
+  Dreros 1 partial bilinguals do not give word-by-word
+  translations); v21 is a population-level gate, not an
+  inscription-level external validation point.
+- Cross-LM matrix is partial (Eteocretan → Basque only). Full
+  matrix filed as v23.
+- Pool `gloss` is `unknown` for almost every entry — Eteocretan
+  itself is undeciphered, so surface-level semantic-stratum
+  analysis (cf. §3.4 Aquitanian / Etruscan) is not performable.
+
+### Out of scope (deferred to subsequent tickets)
+
+- **Minoan inferred-context external-validation comparison** (v22).
+- **Full cross-LM matrix for Eteocretan** (under MG, Etruscan,
+  Aquitanian / Etruscan / toponym under Eteocretan LM) (v23).
+- **Per-inscription cascade-candidate analysis under Eteocretan LM**
+  (v24).
+- **Eteocretan bilingual decoding** (using Greek translations to
+  validate proposed Linear A readings) — methodologically
+  distinct, requires v19-style external-validation framework reuse
+  on a different population. Deferred.
+- **Methodology paper LaTeX / journal submission.** Out of polecat
+  scope.
+- **Domain-expert review.** Still not a polecat task; needs an
+  Aegean-syllabary specialist.

@@ -92,6 +92,12 @@ _SUBSTRATE_POOLS: tuple[str, ...] = (
     "polluted_aquitanian_10pct",
     "polluted_aquitanian_25pct",
     "polluted_aquitanian_75pct",
+    # mg-6ccd (harness v21): Eteocretan substrate pool — the 4th
+    # external-validation pool. Paired against
+    # ``control_eteocretan_bigram`` (bigram-preserving sampler;
+    # production default for new pools per v18). The dedicated
+    # gate analysis lives in scripts/v21_eteocretan_gate.py.
+    "eteocretan",
 )
 _DEFAULT_NMIN = 10
 _DEFAULT_TOP_PER_POOL = 50
@@ -124,6 +130,9 @@ _DEFAULT_LANGUAGE_DISPATCH: dict[str, str] = {
     "polluted_aquitanian_75pct": "basque",
     "control_polluted_aquitanian_75pct": "basque",
     "control_toponym_bigram": "basque",
+    # mg-6ccd (harness v21): Eteocretan + bigram-preserving control.
+    "eteocretan": "eteocretan",
+    "control_eteocretan_bigram": "eteocretan",
 }
 
 

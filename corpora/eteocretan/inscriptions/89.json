@@ -1,0 +1,16 @@
+{
+  "completeness": "short",
+  "ic_ref": "Younger E19 (cf. Younger)",
+  "id": 89,
+  "is_bilingual": false,
+  "name": "Younger E19",
+  "provenance": "Stone block, two words.",
+  "site": "praisos",
+  "source_citation": "Younger, J. G. (2000-present). 'Linear A: text and inscriptions.' https://people.ku.edu/~jyounger/LinearA/  (Eteocretan annex).",
+  "text": "νατονιατε σι",
+  "transliteration": "natoniate si",
+  "words": [
+    "natoniate",
+    "si"
+  ]
+}

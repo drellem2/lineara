@@ -93,6 +93,11 @@ _SUBSTRATE_POOLS = (
     "polluted_aquitanian_10pct",
     "polluted_aquitanian_25pct",
     "polluted_aquitanian_75pct",
+    # mg-6ccd (harness v21): Eteocretan substrate pool — bigram-
+    # preserving control is the production default for new pools per
+    # v18. This pool typically gets built with --sampler bigram
+    # --suffix _bigram.
+    "eteocretan",
 )
 _REDRAW_LIMIT = 50
 

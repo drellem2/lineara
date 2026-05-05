@@ -1,0 +1,20 @@
+{
+  "completeness": "fragmentary",
+  "ic_ref": "IC III.vi.6",
+  "id": 6,
+  "is_bilingual": false,
+  "name": "Praisos 6",
+  "provenance": "Bosanquet 1908; pottery sherd inscription from the Praisos acropolis fill.",
+  "site": "praisos",
+  "source_citation": "Bosanquet 1908-1909 BSA 15. IC III.vi.6. Duhoux 1982 §I.6.",
+  "text": "οι ιαρει ονοι ομαλι σαντε ισαλ",
+  "transliteration": "oi iarei onoi omali sante isal",
+  "words": [
+    "oi",
+    "iarei",
+    "onoi",
+    "omali",
+    "sante",
+    "isal"
+  ]
+}

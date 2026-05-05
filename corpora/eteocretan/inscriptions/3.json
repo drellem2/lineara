@@ -1,0 +1,23 @@
+{
+  "completeness": "multi-line",
+  "ic_ref": "IC III.vi.3",
+  "id": 3,
+  "is_bilingual": false,
+  "name": "Praisos 3",
+  "provenance": "Bosanquet 1908; bronze plaque from the Praisos sanctuary of Diktaian Zeus. Eight lines, partly damaged.",
+  "site": "praisos",
+  "source_citation": "Bosanquet, R. C. (1908-1909). 'The Palaikastro hymn of the Kouretes.' BSA 15: 339-356 (sec. on Praisos III). IC III.vi.3. Duhoux 1982 §I.3.",
+  "text": "ονα δες οναι αρκαγινοι ιεμετε φραισονα ισαλαβρε κομναι κανετ",
+  "transliteration": "ona des onai arkaginoi iemete phraisona isalabre komnai kanet",
+  "words": [
+    "ona",
+    "des",
+    "onai",
+    "arkaginoi",
+    "iemete",
+    "phraisona",
+    "isalabre",
+    "komnai",
+    "kanet"
+  ]
+}

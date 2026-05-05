@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_porta_KN_Zc_7_17_21
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''porta''
+  pinned to KN Zc 7 tokens [17..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: porta
+  phonemes:
+  - p
+  - o
+  - r
+  - t
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 17
+  - 21
+  sign_to_phoneme:
+    AB08: p
+    AB06: o
+    AB24: r
+    AB40: t
+    AB39: a

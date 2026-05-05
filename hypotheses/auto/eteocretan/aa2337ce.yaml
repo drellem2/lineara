@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_kanet_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''kanet''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: kanet
+  phonemes:
+  - k
+  - a
+  - n
+  - e
+  - t
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: k
+    AB31: a
+    AB58: n
+    AB80: e
+    AB28: t

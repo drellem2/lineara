@@ -120,6 +120,12 @@ _PER_POOL_SIDECAR_TAG: dict[str, str] = {
     # sidecar so the v18 toponym re-evaluation is versionable
     # alongside the v6 unigram control's existing rows.
     "control_toponym_bigram": "toponym_bigram",
+    # mg-6ccd (harness v21): Eteocretan substrate + bigram-preserving
+    # control — own sidecar so the v21 rows (own-LM + cross-LM) stay
+    # off the primary external_phoneme_perplexity_v0 sidecar (which
+    # was already approaching GitHub's 100 MB push limit at v20).
+    "eteocretan": "eteocretan",
+    "control_eteocretan_bigram": "eteocretan",
 }
 
 # Pool → external-language-model mapping for external_phoneme_perplexity_v0.
@@ -170,6 +176,14 @@ _EXT_POOL_LANGUAGE: dict[str, str] = {
     # same Basque LM as the toponym substrate, paired against the
     # toponym pool by the v18 gate analysis.
     "control_toponym_bigram": "basque",
+    # mg-6ccd (harness v21): Eteocretan substrate pool. Routes to its
+    # own char-bigram LM trained on the Praisos / Dreros / minor-
+    # attestation corpus. The bigram-preserving control mirrors that
+    # routing so paired_diff cancels the LM out. The 4th external-
+    # validation pool: Eteocretan is the closest-genealogical-relative
+    # candidate substrate (presumed Linear-A continuation).
+    "eteocretan": "eteocretan",
+    "control_eteocretan_bigram": "eteocretan",
 }
 
 # Metrics that the candidate_signature.v1 shape supports. The signature

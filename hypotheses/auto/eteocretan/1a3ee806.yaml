@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_inaipe_KN_Zf_13_0_5
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''inaipe''
+  pinned to KN Zf 13 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: inaipe
+  phonemes:
+  - i
+  - n
+  - a
+  - i
+  - p
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 10). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: i
+    AB27: n
+    AB24: a
+    AB41: i
+    AB07: p
+    A301: e

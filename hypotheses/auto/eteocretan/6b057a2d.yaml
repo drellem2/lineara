@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_ier_HT_108_0_2
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''ier''
+  pinned to HT 108 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: ier
+  phonemes:
+  - i
+  - e
+  - r
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 19). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 108
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB67: i
+    AB27: e
+    AB59: r

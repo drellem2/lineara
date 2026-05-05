@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_arka_HT_115a_0_3
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''arka''
+  pinned to HT 115a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: arka
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Praisos 4). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 115a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB47: a
+    AB55: r
+    AB60: k
+    AB56: a

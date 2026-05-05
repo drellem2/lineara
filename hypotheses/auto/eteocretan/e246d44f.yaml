@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_isal_GO_Wc_1a_1_4
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''isal''
+  pinned to GO Wc 1a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: isal
+  phonemes:
+  - i
+  - s
+  - a
+  - l
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 6). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB31: i
+    AB58: s
+    AB80: a
+    AB28: l

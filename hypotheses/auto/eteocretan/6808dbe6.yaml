@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_mete_HT_128a_5_8
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''mete''
+  pinned to HT 128a tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: mete
+  phonemes:
+  - m
+  - e
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB69: m
+    AB26: e
+    AB56: t
+    AB09: e

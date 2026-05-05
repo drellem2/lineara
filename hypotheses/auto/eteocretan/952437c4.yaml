@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_phortou_KN_Zf_13_6_12
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''phortou''
+  pinned to KN Zf 13 tokens [6..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: phortou
+  phonemes:
+  - p
+  - h
+  - o
+  - r
+  - t
+  - o
+  - u
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 12
+  sign_to_phoneme:
+    AB39: p
+    AB44: h
+    AB03: o
+    AB57: r
+    AB59: t
+    AB53: o
+    AB09: u

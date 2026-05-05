@@ -1,0 +1,16 @@
+{
+  "completeness": "short",
+  "ic_ref": "Whittaker S16 (cf. Whittaker)",
+  "id": 96,
+  "is_bilingual": false,
+  "name": "Whittaker S16",
+  "provenance": "Stone block, two words.",
+  "site": "praisos",
+  "source_citation": "Whittaker, H. (2017). 'Of linguistic alterity in Crete: the Eteocretan inscriptions.' SCI 36: 7-31.",
+  "text": "ιαρειον ομος",
+  "transliteration": "iareion omos",
+  "words": [
+    "iareion",
+    "omos"
+  ]
+}

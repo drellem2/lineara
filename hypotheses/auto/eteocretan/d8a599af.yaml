@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_iareion_KN_Zc_7_14_20
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''iareion''
+  pinned to KN Zc 7 tokens [14..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: iareion
+  phonemes:
+  - i
+  - a
+  - r
+  - e
+  - i
+  - o
+  - n
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 20
+  sign_to_phoneme:
+    AB57: i
+    AB31: a
+    AB60: r
+    AB08: e
+    AB06: i
+    AB24: o
+    AB40: n

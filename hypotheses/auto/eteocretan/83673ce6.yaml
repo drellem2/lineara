@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_dowa_HT_110a_0_3
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''dowa''
+  pinned to HT 110a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: dowa
+  phonemes:
+  - d
+  - o
+  - w
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 7). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB41: d
+    AB51: o
+    AB34: w
+    AB81: a

@@ -1,0 +1,26 @@
+{
+  "completeness": "multi-line",
+  "ic_ref": "Dreros 1 (van Effenterre 1946)",
+  "id": 8,
+  "is_bilingual": true,
+  "name": "Dreros 1",
+  "provenance": "van Effenterre 1946; stone block from the Dreros Apollo-Delphinios temple. Eteocretan-Greek bilingual: a Greek juridical text on the same stone provides vocabulary anchors for the Eteocretan side. The most interpretively important Eteocretan text after Praisos 2.",
+  "site": "dreros",
+  "source_citation": "van Effenterre, H. (1946). 'Inscriptions archaïques crétoises.' BCH 70: 588-605. Re-edited in Duhoux 1982 §II.1; Whittaker 2017.",
+  "text": "ομοσαι ομοιον τανθον δοϝαι μι ϝανται · ομαλος μο σιατας πορτα φορτου ομαι",
+  "transliteration": "omosai omoion tanthon dowai mi wantai omalos mo siatas porta phortou omai",
+  "words": [
+    "omosai",
+    "omoion",
+    "tanthon",
+    "dowai",
+    "mi",
+    "wantai",
+    "omalos",
+    "mo",
+    "siatas",
+    "porta",
+    "phortou",
+    "omai"
+  ]
+}

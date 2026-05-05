@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_onoi_HT_122b_13_16
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''onoi''
+  pinned to HT 122b tokens [13..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: onoi
+  phonemes:
+  - o
+  - n
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 6). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 16
+  sign_to_phoneme:
+    AB08: o
+    AB60: n
+    AB65: o
+    AB10: i

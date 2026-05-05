@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_ine_ARKH_2_21_23
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''ine''
+  pinned to ARKH 2 tokens [21..23].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: ine
+  phonemes:
+  - i
+  - n
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 21
+  - 23
+  sign_to_phoneme:
+    AB08: i
+    AB58: n
+    AB50: e

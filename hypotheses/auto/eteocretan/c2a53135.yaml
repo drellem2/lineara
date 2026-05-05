@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_isal_HT_110a_1_4
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''isal''
+  pinned to HT 110a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: isal
+  phonemes:
+  - i
+  - s
+  - a
+  - l
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 6). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 110a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB51: i
+    AB34: s
+    AB81: a
+    AB73: l

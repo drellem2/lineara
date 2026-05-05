@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_ieroi_HT_110a_0_4
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''ieroi''
+  pinned to HT 110a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: ieroi
+  phonemes:
+  - i
+  - e
+  - r
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB41: i
+    AB51: e
+    AB34: r
+    AB81: o
+    AB73: i

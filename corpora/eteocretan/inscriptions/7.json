@@ -1,0 +1,19 @@
+{
+  "completeness": "fragmentary",
+  "ic_ref": "IC III.vi.7",
+  "id": 7,
+  "is_bilingual": false,
+  "name": "Praisos 7",
+  "provenance": "Bosanquet 1908; final small Praisos fragment. Stone splinter, single legible line.",
+  "site": "praisos",
+  "source_citation": "Bosanquet 1908-1909 BSA 15. IC III.vi.7. Duhoux 1982 §I.7.",
+  "text": "ομος ιαρει ομαλιοι σαμετι αρκαδι",
+  "transliteration": "omos iarei omalioi sameti arkadi",
+  "words": [
+    "omos",
+    "iarei",
+    "omalioi",
+    "sameti",
+    "arkadi"
+  ]
+}

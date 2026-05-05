@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_des_HT_102_21_23
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''des''
+  pinned to HT 102 tokens [21..23].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: des
+  phonemes:
+  - d
+  - e
+  - s
+  gloss_hint: unknown
+  citation: 'Attested in 6 inscription(s) (first: Dreros 2). Source: Duhoux 1982 /
+    Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 102
+  span:
+  - 21
+  - 23
+  sign_to_phoneme:
+    AB07: d
+    AB53: e
+    AB06: s

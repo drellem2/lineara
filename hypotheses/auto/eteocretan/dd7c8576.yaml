@@ -1,0 +1,35 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_zethante_KN_Zf_13_3_10
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''zethante''
+  pinned to KN Zf 13 tokens [3..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: zethante
+  phonemes:
+  - z
+  - e
+  - t
+  - h
+  - a
+  - n
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Psychro stone). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 10
+  sign_to_phoneme:
+    AB41: z
+    AB07: e
+    A301: t
+    AB39: h
+    AB44: a
+    AB03: n
+    AB57: t
+    AB59: e

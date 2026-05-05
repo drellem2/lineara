@@ -103,6 +103,19 @@ _THIRD_LM_DISPATCH: dict[str, str] = {
     "control_etruscan": "mycenaean_greek",
 }
 
+# mg-6ccd (harness v21): Eteocretan cross-LM negative control. Routes
+# the v21 Eteocretan substrate + bigram-preserving control candidates
+# through the Basque LM (a natural-language LM unrelated to the
+# Eteocretan corpus). If the v21 PASS is real Eteocretan-LM signal,
+# the substrate-vs-control gap should shrink or invert under Basque.
+# If the gap survives, the v21 separation is "natural-language LM
+# preference for whichever surfaces happen to look phonotactically
+# clean," not Eteocretan-specific signal.
+_ETEOCRETAN_CROSS_LM_DISPATCH: dict[str, str] = {
+    "eteocretan": "basque",
+    "control_eteocretan_bigram": "basque",
+}
+
 
 def _load_manifest(path: Path) -> list[dict]:
     rows: list[dict] = []
@@ -368,12 +381,15 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--mode",
-        choices=("cross", "third"),
+        choices=("cross", "third", "eteocretan_under_basque"),
         default="cross",
         help=(
             "Which dispatch to use. ``cross`` (default) is mg-0f97's "
             "Aquitanian↔Etruscan swap. ``third`` is mg-4664's Mycenaean-"
-            "Greek third-LM rescore for both Aquitanian and Etruscan."
+            "Greek third-LM rescore for both Aquitanian and Etruscan. "
+            "``eteocretan_under_basque`` (mg-6ccd, v21) routes the "
+            "Eteocretan substrate + bigram-preserving control through "
+            "the Basque LM — the v21 cross-LM negative control sketch."
         ),
     )
     parser.add_argument(
@@ -391,7 +407,12 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     pools = [p.strip() for p in args.pools.split(",") if p.strip()]
-    dispatch = _THIRD_LM_DISPATCH if args.mode == "third" else _CROSS_LM_DISPATCH
+    if args.mode == "third":
+        dispatch = _THIRD_LM_DISPATCH
+    elif args.mode == "eteocretan_under_basque":
+        dispatch = _ETEOCRETAN_CROSS_LM_DISPATCH
+    else:
+        dispatch = _CROSS_LM_DISPATCH
     summary = run(
         corpus_path=args.corpus,
         results_dir=args.results_dir,

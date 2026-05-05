@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_sante_HT_115a_9_13
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''sante''
+  pinned to HT 115a tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: sante
+  phonemes:
+  - s
+  - a
+  - n
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 9 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB53: s
+    AB59: a
+    AB80: n
+    AB55: t
+    AB40: e

@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_barkse_GO_Wc_1a_0_5
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''barkse''
+  pinned to GO Wc 1a tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: barkse
+  phonemes:
+  - b
+  - a
+  - r
+  - k
+  - s
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Praisos 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: b
+    AB31: a
+    AB58: r
+    AB80: k
+    AB28: s
+    AB09: e

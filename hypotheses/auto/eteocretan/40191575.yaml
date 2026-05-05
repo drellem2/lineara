@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_porta_GO_Wc_1a_1_5
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''porta''
+  pinned to GO Wc 1a tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: porta
+  phonemes:
+  - p
+  - o
+  - r
+  - t
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB31: p
+    AB58: o
+    AB80: r
+    AB28: t
+    AB09: a

@@ -1,0 +1,16 @@
+{
+  "completeness": "short",
+  "ic_ref": "Praisos pottery 1 (cf. Duhoux)",
+  "id": 56,
+  "is_bilingual": false,
+  "name": "Praisos pottery 1",
+  "provenance": "Pottery, two-word graffito.",
+  "site": "praisos",
+  "source_citation": "Duhoux, Y. (1982). L'Étéocrétois: les textes — la langue. Amsterdam: J. C. Gieben.",
+  "text": "βαρ ξε",
+  "transliteration": "bar kse",
+  "words": [
+    "bar",
+    "kse"
+  ]
+}

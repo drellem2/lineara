@@ -1,0 +1,35 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_sametion_KN_Zf_13_3_10
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''sametion''
+  pinned to KN Zf 13 tokens [3..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: sametion
+  phonemes:
+  - s
+  - a
+  - m
+  - e
+  - t
+  - i
+  - o
+  - n
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 10
+  sign_to_phoneme:
+    AB41: s
+    AB07: a
+    A301: m
+    AB39: e
+    AB44: t
+    AB03: i
+    AB57: o
+    AB59: n

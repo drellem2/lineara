@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_waw_HT_1_11_13
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''waw''
+  pinned to HT 1 tokens [11..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: waw
+  phonemes:
+  - w
+  - a
+  - w
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Dreros 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 1
+  span:
+  - 11
+  - 13
+  sign_to_phoneme:
+    AB07: w
+    AB17: a
+    AB44: w

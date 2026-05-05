@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_oma_HT_108_18_20
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''oma''
+  pinned to HT 108 tokens [18..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: oma
+  phonemes:
+  - o
+  - m
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 108
+  span:
+  - 18
+  - 20
+  sign_to_phoneme:
+    AB76: o
+    AB37: m
+    AB65: a

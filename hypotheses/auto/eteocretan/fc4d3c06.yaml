@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_noi_HT_108_9_11
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''noi''
+  pinned to HT 108 tokens [9..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: noi
+  phonemes:
+  - n
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 108
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB07: n
+    AB06: o
+    AB02: i

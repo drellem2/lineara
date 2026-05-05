@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_siatas_KN_Zc_6_18_24
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''siatas''
+  pinned to KN Zc 6 tokens [18..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: siatas
+  phonemes:
+  - s
+  - i
+  - a
+  - t
+  - a
+  - s
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 24
+  sign_to_phoneme:
+    AB06: s
+    AB03: i
+    AB81: a
+    AB55: t
+    AB10: a
+    AB28: s

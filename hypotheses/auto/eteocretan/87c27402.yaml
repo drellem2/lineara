@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_omal_HT_122b_32_35
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''omal''
+  pinned to HT 122b tokens [32..35].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: omal
+  phonemes:
+  - o
+  - m
+  - a
+  - l
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 17). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 122b
+  span:
+  - 32
+  - 35
+  sign_to_phoneme:
+    AB11: o
+    AB05: m
+    AB81: a
+    AB02: l

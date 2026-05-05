@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_arkadioi_KN_Zf_13_2_9
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''arkadioi''
+  pinned to KN Zf 13 tokens [2..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: arkadioi
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  - d
+  - i
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 9
+  sign_to_phoneme:
+    AB24: a
+    AB41: r
+    AB07: k
+    A301: a
+    AB39: d
+    AB44: i
+    AB03: o
+    AB57: i

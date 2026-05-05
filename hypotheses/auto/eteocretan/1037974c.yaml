@@ -1,0 +1,37 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_naiperima_KN_Zf_13_5_13
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''naiperima''
+  pinned to KN Zf 13 tokens [5..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: naiperima
+  phonemes:
+  - n
+  - a
+  - i
+  - p
+  - e
+  - r
+  - i
+  - m
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos minor 15). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 13
+  sign_to_phoneme:
+    A301: n
+    AB39: a
+    AB44: i
+    AB03: p
+    AB57: e
+    AB59: r
+    AB53: i
+    AB09: m
+    AB04: a

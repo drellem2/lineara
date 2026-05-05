@@ -45,6 +45,7 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent
 _DEFAULT_BASQUE_TEXT = _REPO_ROOT / "corpora" / "basque" / "text.txt"
 _DEFAULT_ETRUSCAN_WORDS = _REPO_ROOT / "corpora" / "etruscan" / "words.txt"
 _DEFAULT_MYC_WORDS = _REPO_ROOT / "corpora" / "linear_b" / "words.txt"
+_DEFAULT_ETEOCRETAN_WORDS = _REPO_ROOT / "corpora" / "eteocretan" / "words.txt"
 _OUT_DIR = _REPO_ROOT / "harness" / "external_phoneme_models"
 
 _BASQUE_ALPHA = 0.1
@@ -55,6 +56,12 @@ _ETRUSCAN_ALPHA = 1.0
 # smoothing constant matches the Basque side rather than the Etruscan
 # side. The brief asked for α=0.1.
 _MYCENAEAN_GREEK_ALPHA = 0.1
+# mg-6ccd. Eteocretan LM is built from the manually-transcribed
+# Praisos / Dreros / minor-attestation corpus (~100 inscriptions, ~87
+# unique word forms). Smaller than Etruscan (~700 forms); α=1.0 keeps
+# unobserved bigrams bounded away from -inf. The brief explicitly asked
+# for α=1.0 (matches the Etruscan setting).
+_ETEOCRETAN_ALPHA = 1.0
 
 
 def build_basque(text_path: Path) -> tuple[str, dict]:
@@ -144,11 +151,53 @@ def build_etruscan(words_path: Path) -> tuple[str, dict]:
     return model.to_json(), model.meta
 
 
+def build_eteocretan(words_path: Path) -> tuple[str, dict]:
+    """Build the Eteocretan char-bigram model from the manually-
+    transcribed Praisos / Dreros / minor-attestation corpus
+    (``corpora/eteocretan/words.txt``). One word per line, lowercase
+    ASCII, derived from the Greek-alphabet → Latin transliteration
+    pipeline in ``scripts/build_eteocretan_corpus.py``."""
+    words = [
+        line.strip()
+        for line in words_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    tokens = tokenize_word_list(words)
+    model = build_model(
+        name="eteocretan",
+        tokens=tokens,
+        alpha=_ETEOCRETAN_ALPHA,
+        meta_extra={
+            "source": (
+                "corpora/eteocretan/words.txt (Duhoux 1982, Whittaker "
+                "2017, Younger online catalog; manual transcription "
+                "via scripts/build_eteocretan_corpus.py)."
+            ),
+            "license": (
+                "Cited fair-use of secondary sources for transcription; "
+                "underlying inscriptions PD (~7th-3rd c. BCE)."
+            ),
+            "n_words": len(words),
+            "n_chars": sum(len(w) for w in words),
+            "alpha_rationale": (
+                "1.0 — small corpus (~87 unique word forms; substantive "
+                "textual material concentrated in ~9 multi-line texts). "
+                "Stronger smoothing than Basque (0.1) or Mycenaean Greek "
+                "(0.1); matches the Etruscan setting (1.0). The "
+                "downstream LM is noisier than the larger external "
+                "models — this is a documented limitation of the "
+                "Eteocretan epigraphic record, not a methodology choice."
+            ),
+        },
+    )
+    return model.to_json(), model.meta
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument(
         "--only",
-        choices=("basque", "etruscan", "mycenaean_greek"),
+        choices=("basque", "etruscan", "mycenaean_greek", "eteocretan"),
         default=None,
         help="Build only one model (default: all).",
     )
@@ -160,6 +209,9 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--mycenaean-greek-words", type=Path, default=_DEFAULT_MYC_WORDS
+    )
+    parser.add_argument(
+        "--eteocretan-words", type=Path, default=_DEFAULT_ETEOCRETAN_WORDS
     )
     parser.add_argument("--out-dir", type=Path, default=_OUT_DIR)
     args = parser.parse_args(argv)
@@ -202,6 +254,19 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         text, meta = build_mycenaean_greek(args.mycenaean_greek_words)
         out = args.out_dir / "mycenaean_greek.json"
+        out.write_text(text + "\n", encoding="utf-8")
+        print(f"wrote {out}  meta={meta}", file=sys.stderr)
+
+    if args.only in (None, "eteocretan"):
+        if not args.eteocretan_words.exists():
+            print(
+                f"missing Eteocretan corpus: {args.eteocretan_words}\n"
+                "run scripts/build_eteocretan_corpus.py first.",
+                file=sys.stderr,
+            )
+            return 2
+        text, meta = build_eteocretan(args.eteocretan_words)
+        out = args.out_dir / "eteocretan.json"
         out.write_text(text + "\n", encoding="utf-8")
         print(f"wrote {out}  meta={meta}", file=sys.stderr)
 

@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_kse_ARKH_2_8_10
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''kse''
+  pinned to ARKH 2 tokens [8..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: kse
+  phonemes:
+  - k
+  - s
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 1). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 10
+  sign_to_phoneme:
+    AB08: k
+    AB41: s
+    AB01: e

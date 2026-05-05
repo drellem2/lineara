@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_arkadi_SY_Za_4_0_5
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''arkadi''
+  pinned to SY Za 4 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: arkadi
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  - d
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos 7). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: a
+    AB59: r
+    AB28: k
+    A301: a
+    AB54: d
+    AB57: i

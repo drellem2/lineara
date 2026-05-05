@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_barkse_KN_Zf_13_13_18
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''barkse''
+  pinned to KN Zf 13 tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: barkse
+  phonemes:
+  - b
+  - a
+  - r
+  - k
+  - s
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Praisos 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB04: b
+    AB53: a
+    AB23: r
+    AB08: k
+    AB57: s
+    AB81: e

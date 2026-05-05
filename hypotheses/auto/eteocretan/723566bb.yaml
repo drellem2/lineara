@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_eko_HT_103_5_7
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''eko''
+  pinned to HT 103 tokens [5..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: eko
+  phonemes:
+  - e
+  - k
+  - o
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 103
+  span:
+  - 5
+  - 7
+  sign_to_phoneme:
+    AB56: e
+    AB01: k
+    AB81: o

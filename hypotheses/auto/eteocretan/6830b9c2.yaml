@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_tepi_HT_115a_9_12
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''tepi''
+  pinned to HT 115a tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: tepi
+  phonemes:
+  - t
+  - e
+  - p
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 5). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB53: t
+    AB59: e
+    AB80: p
+    AB55: i

@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_ier_ARKH_5_2_4
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''ier''
+  pinned to ARKH 5 tokens [2..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: ier
+  phonemes:
+  - i
+  - e
+  - r
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 19). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 2
+  - 4
+  sign_to_phoneme:
+    AB30: i
+    AB59: e
+    AB06: r

@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_bre_ARKH_1a_22_24
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''bre''
+  pinned to ARKH 1a tokens [22..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: bre
+  phonemes:
+  - b
+  - r
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 22
+  - 24
+  sign_to_phoneme:
+    AB67: b
+    AB31: r
+    AB24: e

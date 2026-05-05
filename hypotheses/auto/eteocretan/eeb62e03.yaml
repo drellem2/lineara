@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_arkadi_KN_Zf_13_7_12
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''arkadi''
+  pinned to KN Zf 13 tokens [7..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: arkadi
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  - d
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos 7). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 7
+  - 12
+  sign_to_phoneme:
+    AB44: a
+    AB03: r
+    AB57: k
+    AB59: a
+    AB53: d
+    AB09: i

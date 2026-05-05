@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_natoniate_KN_Zf_13_2_10
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''natoniate''
+  pinned to KN Zf 13 tokens [2..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: natoniate
+  phonemes:
+  - n
+  - a
+  - t
+  - o
+  - n
+  - i
+  - a
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 10
+  sign_to_phoneme:
+    AB24: n
+    AB41: a
+    AB07: t
+    A301: o
+    AB39: n
+    AB44: i
+    AB03: a
+    AB57: t
+    AB59: e

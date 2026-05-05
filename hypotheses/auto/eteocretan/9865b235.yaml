@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_omai_HT_117a_72_75
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''omai''
+  pinned to HT 117a tokens [72..75].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: omai
+  phonemes:
+  - o
+  - m
+  - a
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 5 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 117a
+  span:
+  - 72
+  - 75
+  sign_to_phoneme:
+    AB01: o
+    AB24: m
+    AB81: a
+    AB37: i

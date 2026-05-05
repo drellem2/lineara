@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_epioi_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''epioi''
+  pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: epioi
+  phonemes:
+  - e
+  - p
+  - i
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Psychro stone). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: e
+    AB03: p
+    AB81: i
+    AB55: o
+    AB10: i

@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_ieroi_KN_Zc_7_17_21
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''ieroi''
+  pinned to KN Zc 7 tokens [17..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: ieroi
+  phonemes:
+  - i
+  - e
+  - r
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 17
+  - 21
+  sign_to_phoneme:
+    AB08: i
+    AB06: e
+    AB24: r
+    AB40: o
+    AB39: i

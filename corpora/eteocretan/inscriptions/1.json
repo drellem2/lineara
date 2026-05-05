@@ -1,0 +1,22 @@
+{
+  "completeness": "multi-line",
+  "ic_ref": "IC III.vi.1",
+  "id": 1,
+  "is_bilingual": false,
+  "name": "Praisos 1",
+  "provenance": "Halbherr 1893; stone block from the Praisos acropolis. Six-line inscription, fragmentary at start and end. The earliest published Eteocretan text.",
+  "site": "praisos",
+  "source_citation": "Halbherr, F. (1893). 'Three cretan necropoleis: report of researches at Erganos, Panaghia, and Courtes.' AJA o.s. 5: 197-212. Re-edited in IC III.vi.1 (Inscriptiones Creticae, ed. Guarducci 1942). Duhoux 1982 §I.1.",
+  "text": "ονα δες ιεμετεπιμηρε μητε δοϝαι · βαρξε σαμετιον ιεροι",
+  "transliteration": "ona des iemetepimere mete dowai barkse sametion ieroi",
+  "words": [
+    "ona",
+    "des",
+    "iemetepimere",
+    "mete",
+    "dowai",
+    "barkse",
+    "sametion",
+    "ieroi"
+  ]
+}

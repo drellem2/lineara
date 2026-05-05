@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_niate_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''niate''
+  pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: niate
+  phonemes:
+  - n
+  - i
+  - a
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Younger E10). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: n
+    AB03: i
+    AB81: a
+    AB55: t
+    AB10: e

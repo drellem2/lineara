@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_omosai_HT_Zb_159_0_5
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''omosai''
+  pinned to HT Zb 159 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: omosai
+  phonemes:
+  - o
+  - m
+  - o
+  - s
+  - a
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: o
+    AB06: m
+    AB55: o
+    AB41: s
+    AB57: a
+    AB09: i

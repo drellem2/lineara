@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_dowai_HT_Zb_158b_1_5
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''dowai''
+  pinned to HT Zb 158b tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: dowai
+  phonemes:
+  - d
+  - o
+  - w
+  - a
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 4 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB67: d
+    AB53: o
+    AB04: w
+    AB28: a
+    AB57: i

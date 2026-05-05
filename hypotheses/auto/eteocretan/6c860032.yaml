@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_oma_ARKH_4a_19_21
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''oma''
+  pinned to ARKH 4a tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: oma
+  phonemes:
+  - o
+  - m
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB39: o
+    AB37: m
+    AB24: a

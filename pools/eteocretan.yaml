@@ -1,0 +1,1375 @@
+pool: eteocretan
+source_citation: "Duhoux, Y. (1982). L'Étéocrétois: les textes — la langue. Amsterdam:\n\
+  \  J. C. Gieben. — the canonical scholarly edition of the Eteocretan\n  inscriptional\
+  \ record (Praisos 1-7, Dreros 1-2, Psychro stone).\nWhittaker, H. (2017). 'Of linguistic\
+  \ alterity in Crete: the Eteocretan\n  inscriptions.' Scripta Classica Israelica\
+  \ 36: 7-31. — supplementary\n  Praisos area minor inscriptions whose language is\
+  \ non-Greek.\nYounger, J. G. (2000-present). 'Linear A: text and inscriptions.'\n\
+  \  https://people.ku.edu/~jyounger/LinearA/  — Eteocretan annex covering\n  iron-age\
+  \ Cretan short inscriptions.\nUnderlying inscriptions are public domain (~7th-3rd\
+  \ c. BCE Cretan\n  stone-cut and pottery texts). Manual transcription via\n  scripts/build_eteocretan_corpus.py.\n"
+license: 'Cited fair-use of Duhoux 1982 and Whittaker 2017 for transcription
+
+  conventions and scholarly editing. Underlying inscriptions PD.
+
+  '
+fetched_at: '2026-05-05T00:00:00Z'
+entries:
+- surface: adokarmenos
+  phonemes:
+  - a
+  - d
+  - o
+  - k
+  - a
+  - r
+  - m
+  - e
+  - n
+  - o
+  - s
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos minor 12
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: arka
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 4
+  - Praisos pottery 9
+  - Whittaker S6
+  - Younger E13
+  region: crete
+  citation: 'Attested in 4 inscription(s) (first: Praisos 4). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: arkadi
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  - d
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 7
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos 7). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: arkadioi
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  - d
+  - i
+  - o
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos minor 5
+  - Younger E17
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: arkaginoi
+  phonemes:
+  - a
+  - r
+  - k
+  - a
+  - g
+  - i
+  - n
+  - o
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 3
+  - Praisos pers. name 5
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: bar
+  phonemes:
+  - b
+  - a
+  - r
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 1
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 1). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: barkse
+  phonemes:
+  - b
+  - a
+  - r
+  - k
+  - s
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 1
+  - Praisos 2
+  - Praisos pers. name 1
+  - Younger E20
+  region: crete
+  citation: 'Attested in 4 inscription(s) (first: Praisos 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: bre
+  phonemes:
+  - b
+  - r
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 5
+  - Praisos minor 8
+  - Whittaker S1
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: des
+  phonemes:
+  - d
+  - e
+  - s
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 2
+  - Praisos 1
+  - Praisos 3
+  - Praisos minor 1
+  - Praisos pottery 2
+  - Whittaker S7
+  region: crete
+  citation: 'Attested in 6 inscription(s) (first: Dreros 2). Source: Duhoux 1982 /
+    Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: dioi
+  phonemes:
+  - d
+  - i
+  - o
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 4
+  - Younger E13
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 4). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: dowa
+  phonemes:
+  - d
+  - o
+  - w
+  - a
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 7
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 7). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: dowai
+  phonemes:
+  - d
+  - o
+  - w
+  - a
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  - Praisos 1
+  - Whittaker S18
+  - Younger E3
+  region: crete
+  citation: 'Attested in 4 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: eko
+  phonemes:
+  - e
+  - k
+  - o
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos minor 13
+  - Whittaker S15
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: enete
+  phonemes:
+  - e
+  - n
+  - e
+  - t
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Psychro stone
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Psychro stone). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: epimere
+  phonemes:
+  - e
+  - p
+  - i
+  - m
+  - e
+  - r
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Younger E5
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Younger E5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: epioi
+  phonemes:
+  - e
+  - p
+  - i
+  - o
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Psychro stone
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Psychro stone). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: etion
+  phonemes:
+  - e
+  - t
+  - i
+  - o
+  - n
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 18
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 18). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: ginoi
+  phonemes:
+  - g
+  - i
+  - n
+  - o
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 4
+  - Whittaker S6
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 4). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: iar
+  phonemes:
+  - i
+  - a
+  - r
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 16
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 16). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: iarei
+  phonemes:
+  - i
+  - a
+  - r
+  - e
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 5
+  - Praisos 6
+  - Praisos 7
+  - Praisos minor 3
+  - Praisos pottery 13
+  - Whittaker S11
+  - Whittaker S12
+  - Whittaker S17
+  - Younger E18
+  region: crete
+  citation: 'Attested in 9 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: iareion
+  phonemes:
+  - i
+  - a
+  - r
+  - e
+  - i
+  - o
+  - n
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos minor 14
+  - Whittaker S16
+  - Whittaker S5
+  region: crete
+  citation: 'Attested in 4 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: ieme
+  phonemes:
+  - i
+  - e
+  - m
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 4
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 4). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: iemete
+  phonemes:
+  - i
+  - e
+  - m
+  - e
+  - t
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 3
+  - Younger E6
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: iemetepimere
+  phonemes:
+  - i
+  - e
+  - m
+  - e
+  - t
+  - e
+  - p
+  - i
+  - m
+  - e
+  - r
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 1
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: ier
+  phonemes:
+  - i
+  - e
+  - r
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 19
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 19). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: ieroi
+  phonemes:
+  - i
+  - e
+  - r
+  - o
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 1
+  - Whittaker S14
+  - Younger E9
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: inai
+  phonemes:
+  - i
+  - n
+  - a
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 4
+  - Younger E15
+  - Younger E16
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 4). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: inaipe
+  phonemes:
+  - i
+  - n
+  - a
+  - i
+  - p
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 10
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 10). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: inaiperima
+  phonemes:
+  - i
+  - n
+  - a
+  - i
+  - p
+  - e
+  - r
+  - i
+  - m
+  - a
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: ine
+  phonemes:
+  - i
+  - n
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos minor 13
+  - Whittaker S15
+  - Younger E17
+  region: crete
+  citation: 'Attested in 4 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: isal
+  phonemes:
+  - i
+  - s
+  - a
+  - l
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 6
+  - Praisos pottery 14
+  - Whittaker S20
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 6). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: isala
+  phonemes:
+  - i
+  - s
+  - a
+  - l
+  - a
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 5
+  - Praisos minor 8
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: isalabre
+  phonemes:
+  - i
+  - s
+  - a
+  - l
+  - a
+  - b
+  - r
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 3
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: kanet
+  phonemes:
+  - k
+  - a
+  - n
+  - e
+  - t
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 3
+  - Praisos pers. name 8
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: kilenti
+  phonemes:
+  - k
+  - i
+  - l
+  - e
+  - n
+  - t
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 2
+  - Praisos 2
+  - Praisos minor 6
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Dreros 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: komnai
+  phonemes:
+  - k
+  - o
+  - m
+  - n
+  - a
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 3
+  - Praisos pers. name 7
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: kse
+  phonemes:
+  - k
+  - s
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 1
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 1). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: magini
+  phonemes:
+  - m
+  - a
+  - g
+  - i
+  - n
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: mere
+  phonemes:
+  - m
+  - e
+  - r
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 6
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 6). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: mete
+  phonemes:
+  - m
+  - e
+  - t
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 1
+  - Younger E7
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: mi
+  phonemes:
+  - m
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: mo
+  phonemes:
+  - m
+  - o
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: naiperima
+  phonemes:
+  - n
+  - a
+  - i
+  - p
+  - e
+  - r
+  - i
+  - m
+  - a
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos minor 15
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos minor 15). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: nato
+  phonemes:
+  - n
+  - a
+  - t
+  - o
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Younger E10
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Younger E10). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: natoniate
+  phonemes:
+  - n
+  - a
+  - t
+  - o
+  - n
+  - i
+  - a
+  - t
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos pers. name 3
+  - Younger E19
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: netamoi
+  phonemes:
+  - n
+  - e
+  - t
+  - a
+  - m
+  - o
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos minor 7
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: niate
+  phonemes:
+  - n
+  - i
+  - a
+  - t
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Younger E10
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Younger E10). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: noi
+  phonemes:
+  - n
+  - o
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos pottery 12
+  - Whittaker S14
+  - Whittaker S5
+  region: crete
+  citation: 'Attested in 4 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: oma
+  phonemes:
+  - o
+  - m
+  - a
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 5
+  - Praisos pottery 15
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omai
+  phonemes:
+  - o
+  - m
+  - a
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  - Praisos pers. name 9
+  - Whittaker S10
+  - Whittaker S18
+  - Whittaker S19
+  region: crete
+  citation: 'Attested in 5 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omal
+  phonemes:
+  - o
+  - m
+  - a
+  - l
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 17
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 17). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omali
+  phonemes:
+  - o
+  - m
+  - a
+  - l
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 6
+  - Whittaker S13
+  - Whittaker S20
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 6). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omalioi
+  phonemes:
+  - o
+  - m
+  - a
+  - l
+  - i
+  - o
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 2
+  - Praisos 2
+  - Praisos 4
+  - Praisos 7
+  - Praisos minor 2
+  - Whittaker S17
+  - Younger E11
+  - Younger E16
+  region: crete
+  citation: 'Attested in 8 inscription(s) (first: Dreros 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omalos
+  phonemes:
+  - o
+  - m
+  - a
+  - l
+  - o
+  - s
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  - Praisos pers. name 12
+  - Whittaker S8
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omaltos
+  phonemes:
+  - o
+  - m
+  - a
+  - l
+  - t
+  - o
+  - s
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos pers. name 2
+  - Younger E20
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omaphos
+  phonemes:
+  - o
+  - m
+  - a
+  - p
+  - h
+  - o
+  - s
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos minor 9
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omoion
+  phonemes:
+  - o
+  - m
+  - o
+  - i
+  - o
+  - n
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  - Praisos pers. name 15
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omokrates
+  phonemes:
+  - o
+  - m
+  - o
+  - k
+  - r
+  - a
+  - t
+  - e
+  - s
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos minor 11
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omos
+  phonemes:
+  - o
+  - m
+  - o
+  - s
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 2
+  - Praisos 2
+  - Praisos 5
+  - Praisos 7
+  - Praisos minor 4
+  - Whittaker S11
+  - Whittaker S12
+  - Whittaker S16
+  - Whittaker S2
+  - Younger E12
+  region: crete
+  citation: 'Attested in 10 inscription(s) (first: Dreros 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: omosai
+  phonemes:
+  - o
+  - m
+  - o
+  - s
+  - a
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  - Younger E2
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: ona
+  phonemes:
+  - o
+  - n
+  - a
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 2
+  - Praisos 1
+  - Praisos 3
+  - Praisos minor 1
+  - Praisos pottery 3
+  region: crete
+  citation: 'Attested in 5 inscription(s) (first: Dreros 2). Source: Duhoux 1982 /
+    Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: onai
+  phonemes:
+  - o
+  - n
+  - a
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 3
+  - Whittaker S7
+  - Younger E14
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: onoi
+  phonemes:
+  - o
+  - n
+  - o
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 6
+  - Younger E18
+  - Younger E8
+  region: crete
+  citation: 'Attested in 3 inscription(s) (first: Praisos 6). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: os
+  phonemes:
+  - o
+  - s
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: parsiphai
+  phonemes:
+  - p
+  - a
+  - r
+  - s
+  - i
+  - p
+  - h
+  - a
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Psychro stone
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Psychro stone). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: phortou
+  phonemes:
+  - p
+  - h
+  - o
+  - r
+  - t
+  - o
+  - u
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  - Praisos pers. name 11
+  - Whittaker S19
+  - Whittaker S9
+  region: crete
+  citation: 'Attested in 4 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: phos
+  phonemes:
+  - p
+  - h
+  - o
+  - s
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 5
+  - Whittaker S3
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: phraisona
+  phonemes:
+  - p
+  - h
+  - r
+  - a
+  - i
+  - s
+  - o
+  - n
+  - a
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 3
+  - Praisos pers. name 6
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: porta
+  phonemes:
+  - p
+  - o
+  - r
+  - t
+  - a
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  - Praisos pers. name 10
+  - Whittaker S19
+  - Whittaker S9
+  region: crete
+  citation: 'Attested in 4 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: rima
+  phonemes:
+  - r
+  - i
+  - m
+  - a
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 11
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 11). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: sam
+  phonemes:
+  - s
+  - a
+  - m
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 18
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 18). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: samet
+  phonemes:
+  - s
+  - a
+  - m
+  - e
+  - t
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 8
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 8). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: sameti
+  phonemes:
+  - s
+  - a
+  - m
+  - e
+  - t
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 7
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos 7). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: sametion
+  phonemes:
+  - s
+  - a
+  - m
+  - e
+  - t
+  - i
+  - o
+  - n
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 1
+  - Praisos pers. name 4
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: sante
+  phonemes:
+  - s
+  - a
+  - n
+  - t
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Praisos 4
+  - Praisos 5
+  - Praisos 6
+  - Praisos minor 4
+  - Whittaker S10
+  - Whittaker S13
+  - Whittaker S20
+  - Younger E11
+  region: crete
+  citation: 'Attested in 9 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: si
+  phonemes:
+  - s
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos 2
+  - Younger E19
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: siatas
+  phonemes:
+  - s
+  - i
+  - a
+  - t
+  - a
+  - s
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  - Praisos pers. name 13
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: tanthon
+  phonemes:
+  - t
+  - a
+  - n
+  - t
+  - h
+  - o
+  - n
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  - Younger E1
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: tepi
+  phonemes:
+  - t
+  - e
+  - p
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Praisos pottery 5
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 5). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: wai
+  phonemes:
+  - w
+  - a
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Whittaker S4
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Whittaker S4). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: wantai
+  phonemes:
+  - w
+  - a
+  - n
+  - t
+  - a
+  - i
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 1
+  - Praisos pers. name 14
+  - Praisos pottery 20
+  - Whittaker S8
+  - Younger E4
+  region: crete
+  citation: 'Attested in 5 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: waw
+  phonemes:
+  - w
+  - a
+  - w
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 2
+  - Praisos 2
+  - Praisos minor 10
+  - Whittaker S15
+  region: crete
+  citation: 'Attested in 4 inscription(s) (first: Dreros 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: wow
+  phonemes:
+  - w
+  - o
+  - w
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Dreros 2
+  - Younger E12
+  region: crete
+  citation: 'Attested in 2 inscription(s) (first: Dreros 2). Source: Duhoux 1982 /
+    Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+- surface: zethante
+  phonemes:
+  - z
+  - e
+  - t
+  - h
+  - a
+  - n
+  - t
+  - e
+  gloss: unknown
+  semantic_field: eteocretan_root
+  attestations:
+  - Psychro stone
+  region: crete
+  citation: 'Attested in 1 inscription(s) (first: Psychro stone). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'

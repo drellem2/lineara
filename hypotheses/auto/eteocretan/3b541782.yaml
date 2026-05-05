@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_rima_HT_122b_15_18
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''rima''
+  pinned to HT 122b tokens [15..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: rima
+  phonemes:
+  - r
+  - i
+  - m
+  - a
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 11). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 122b
+  span:
+  - 15
+  - 18
+  sign_to_phoneme:
+    AB65: r
+    AB10: i
+    AB45: m
+    AB17: a

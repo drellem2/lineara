@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_ieroi_HT_Zb_159_1_5
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''ieroi''
+  pinned to HT Zb 159 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: ieroi
+  phonemes:
+  - i
+  - e
+  - r
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB06: i
+    AB55: e
+    AB41: r
+    AB57: o
+    AB09: i

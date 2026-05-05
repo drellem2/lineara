@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_kilenti_KN_Zc_7_14_20
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''kilenti''
+  pinned to KN Zc 7 tokens [14..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: kilenti
+  phonemes:
+  - k
+  - i
+  - l
+  - e
+  - n
+  - t
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Dreros 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 20
+  sign_to_phoneme:
+    AB57: k
+    AB31: i
+    AB60: l
+    AB08: e
+    AB06: n
+    AB24: t
+    AB40: i

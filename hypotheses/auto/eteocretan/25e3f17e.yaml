@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_mere_HT_128a_6_9
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''mere''
+  pinned to HT 128a tokens [6..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: mere
+  phonemes:
+  - m
+  - e
+  - r
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos pottery 6). Source: Duhoux
+    1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT 128a
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    AB26: m
+    AB56: e
+    AB09: r
+    AB13: e

@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_eteocretan_omali_HT_Wc_3017a_0_4
+description: 'Auto-generated candidate equation: pool=''eteocretan'' entry surface=''omali''
+  pinned to HT Wc 3017a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: eteocretan
+root:
+  surface: omali
+  phonemes:
+  - o
+  - m
+  - a
+  - l
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 6). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: HT Wc 3017a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB16: o
+    AB81: m
+    AB27: a
+    AB06: l
+    A306: i
