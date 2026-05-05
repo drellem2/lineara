@@ -1,9 +1,12 @@
 # Mechanical Falsifiable Testing of Substrate-Language Hypotheses for Linear A
 
-**Methodology paper draft (v16, mg-d5ed)** — a publication-readable
-consolidation of what the Lineara project has mechanically established
-about Linear A across 19 work items (v0 through v15;
-`mg-d5ef` through `mg-7ecb`). The companion log `docs/findings.md`
+**Methodology paper draft (v16, mg-d5ed; lineage citations corrected
+in v17, mg-2bfd)** — a publication-readable consolidation of what the
+Lineara project has mechanically established about Linear A across 19
+work items, anchored on the SigLA corpus ingest (`mg-1c8c`) and
+spanning the harness pipeline `mg-d5ef` (v0) through `mg-7ecb` (v15).
+The repo scaffold (`mg-9e00`) predates the corpus ingest. The
+companion log `docs/findings.md`
 carries the per-ticket history; this document carries the consolidated
 methodology, results, and supportable / unsupportable claim split,
 audited end-to-end against the committed result files in `results/` and
@@ -121,9 +124,11 @@ unsupported claims (§5).
 
 ## 2. Methods
 
-The pipeline is built up across `mg-d5ef` (v0) through `mg-7ecb` (v15)
-and is deterministic end-to-end: re-running any rollup against the
-same `experiments.external_phoneme_perplexity_v0.jsonl` and the same
+The pipeline is built up across the harness sequence `mg-d5ef` (v0)
+through `mg-7ecb` (v15), atop the SigLA corpus ingest (`mg-1c8c`) and
+the initial repo scaffold (`mg-9e00`). It is deterministic end-to-end:
+re-running any rollup against the same
+`experiments.external_phoneme_perplexity_v0.jsonl` and the same
 pool / hypothesis manifests produces byte-identical output. No RNG
 sits in the scoring or aggregation path.
 
@@ -845,5 +850,8 @@ committed artefacts under `results/`:
 
 Per-ticket merge notes are in `docs/findings.md` under
 `## Findings from mg-XXXX` headers, in chronological order from
-`mg-d5ef` (v0, 2026-05-04 first commit) through `mg-7ecb` (v15,
-2026-05-05).
+`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-7ecb`
+(v15, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
+(v0, 2026-05-04 first harness commit) through `mg-7ecb`. The
+repo scaffold (`mg-9e00`) predates `findings.md`'s introduction
+in `mg-13a2` and so does not have a per-ticket entry there.

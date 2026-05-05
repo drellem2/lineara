@@ -3564,3 +3564,133 @@ in confidence accordingly.***
 - **Line-break recovery.** SVG coordinates are in the cached HTML; a
   y-coordinate clustering pass would emit `BREAK` tokens. Schema already
   permits them.
+
+## Findings from mg-2bfd (v17 — manuscript correction: lineage citations + audit-of-the-audit, 2026-05-05)
+
+Single-purpose documentation-correction ticket against the v16 polish
+in mg-d5ed. Three lineage-span citations in `docs/findings_summary.md`
+were rewritten by the v16 polecat under the false belief that
+`mg-1c8c` did not exist in the repo (the worktree at audit time
+appears to have had partial visibility into archived tickets). The
+project lineage in fact starts at the SigLA corpus ingest `mg-1c8c`
+(264k tokens spent, status archived), preceded only by the auto-
+generated repo scaffold `mg-9e00`. v17 restores the citations.
+
+### What was changed
+
+In `docs/findings_summary.md`:
+
+- Header (lines 3-9): the abstract bracket "across 19 work items
+  (v0 through v15; `mg-d5ef` through `mg-7ecb`)" is rewritten to
+  anchor on `mg-1c8c` (corpus ingest) and span the harness pipeline
+  `mg-d5ef` through `mg-7ecb`, with `mg-9e00` (scaffold) noted as
+  predecessor.
+- §2 lead (line ~125): "The pipeline is built up across `mg-d5ef`
+  (v0) through `mg-7ecb` (v15)" rewritten to add "atop the SigLA
+  corpus ingest (`mg-1c8c`) and the initial repo scaffold
+  (`mg-9e00`)". The harness span itself is unchanged — the harness
+  pipeline genuinely is `mg-d5ef` through `mg-7ecb`.
+- Appendix (line ~848): chronological lineage description rewritten
+  to start at `mg-1c8c` (SigLA corpus ingest, 2026-05-04). Note
+  added that `mg-9e00` predates `findings.md`'s introduction in
+  `mg-13a2` and therefore lacks a per-ticket entry.
+
+The "19 work items" count is preserved unchanged — it matches the 19
+`## Findings from mg-XXXX` entries in `findings.md` (the per-ticket
+log span is `mg-1c8c` through `mg-d5ed`; the v17 entry will make 20)
+and was not part of the lineage-citation drift.
+
+The lone `mg-d5ef` reference outside a span (line 178: "candidate_
+equation.v1 (mg-d5ef, mg-fb23)" — citing the schema-introducing
+ticket, not a lineage span) was left untouched: it is correct as
+written.
+
+### Audit-of-the-audit: are the v16 polecat's other two claimed fixes correct?
+
+The v16 commit message (mg-d5ed) lists three drift fixes; one of
+them (the lineage-citation fix) is being undone here. v17 spot-
+checked the other two against the committed result files.
+
+1. **Cluster-A inscription concentration mislabeling**
+   (claimed fix in v16 commit message: "corrected the Aquitanian-
+   side surfaces (`bihotz`, `entzun`, `hanna`, `itsaso`, `zelai`,
+   `zortzi`) that had been mislabeled as part of the 'Etruscan
+   religious / praenomen / time-reference cluster' — they are
+   from the Aquitanian top-20").
+
+   Verified against `results/rollup.right_tail_inscription_concen
+   tration.md`:
+   - That file's "v10 top-20 substrate surfaces (passing pools)"
+     list confirms `bihotz`, `entzun`, `hanna`, `itsaso`, `zelai`,
+     `zortzi` are all in the Aquitanian top-20 (line 9 of the
+     rollup), not the Etruscan top-20 (line 11).
+   - The `findings_summary.md` §3.9 text (lines 574-581) correctly
+     splits the cluster: 8 Etruscan-side surfaces (`aiser`, `avils`,
+     `camthi`, `hanthe`, `laris`, `matam`, `thesan`, `zelar`)
+     plus 6 Aquitanian-side (`bihotz`, `entzun`, `hanna`, `itsaso`,
+     `zelai`, `zortzi`), matching the 14 surfaces listed in the
+     `top_substrate_surfaces_present` column for tablets HT Wc
+     3010, HT Wc 3017a, KH 60, KN Zb 5, HT 90, KH 10, KH 5 (rollup
+     ranks 1-7 by density).
+   - The Knossos-votive subset citation (`caitim`, `thanchvil`,
+     `spureri`) maps to `KN Zc 6`, `KN Zc 7`, `KN Zf 13` (rollup
+     ranks 15-17), all of which list those three surfaces in the
+     rollup. Correct.
+
+   **Verdict: v16 fix is correct. No re-fix needed.**
+
+2. **High-frequency-sign entropy range tightened from "3.6–4.0
+   bits" to "3.7–3.9 bits"** (claimed fix in v16 commit message).
+
+   Verified against `results/consensus_sign_phoneme_map.md`. The
+   three high-frequency signs cited explicitly in `findings_summary
+   .md` §3.7 (lines 502-504) are AB08 (n_proposals=464,
+   entropy=3.925 bits), AB37 (n=227, entropy=3.713), AB28 (n=225,
+   entropy=3.788). All three values round to one decimal as
+   3.7-3.9. The §4.2 carryover citation (line 643) is consistent
+   with these. The v16 narrowing is faithful to the cited examples.
+
+   Caveat for future audits (not a fix): if "high-frequency signs"
+   is interpreted more inclusively (e.g. all signs with
+   n_proposals ≥ ~190, which includes AB04, AB27, AB67, AB58,
+   AB01, AB81, AB31, AB07, AB59, AB09, AB80, AB24, AB57, AB06,
+   AB41, AB10, AB53, AB45), the upper end of the entropy band
+   crosses 3.95 (AB24=3.954, AB57=3.960). At one-decimal
+   resolution that rounds up to 4.0, so a literal "3.7–4.0 bits"
+   would also be defensible. v17 leaves the v16 phrasing in place
+   because the cited examples are AB08/AB37/AB28 specifically and
+   "3.7–3.9 bits" is correct for that explicit set. Re-broadening
+   the citation set is a separate editorial decision out of scope
+   here.
+
+   **Verdict: v16 fix is correct as written for the cited
+   examples. No re-fix.**
+
+### Summary of v16 polish accuracy
+
+Of the three drift items the v16 polecat documented as fixing:
+
+- (1) Lineage-citation: incorrectly applied (v17 reverts).
+- (2) Cluster-A inscription concentration: correctly applied.
+- (3) High-frequency-sign entropy range: correctly applied.
+
+The v16 audit's structural restructuring (methodology-paper section
+ordering, claim-by-claim ticket/result-file citations, supportable
+vs unsupportable split) is sound and was not re-audited; out-of-
+scope per the v17 ticket. v17 also did **not** modify any
+quantitative result, table, gate value, p-value, or claim — it
+touched three lineage-span citations and the doc header marker, and
+appended this findings entry. No new corpora, no new metrics, no
+re-derivation.
+
+### Lineage citation choice (documented per ticket guidance)
+
+v17 chose `mg-1c8c` (SigLA corpus ingest) as the canonical start of
+the project lineage in three-place narrative citations, with
+`mg-9e00` (repo scaffold) noted as predecessor. Rationale: the
+corpus is the empirical foundation of every downstream measurement,
+while `mg-9e00` is auto-generated directory layout (corpus/,
+hypotheses/, results/, harness/ with .gitkeep stubs and a 1-page
+README) and contains no data the harness reads. The harness-span
+citation `mg-d5ef` through `mg-7ecb` is preserved where it accurately
+describes pipeline build-up.
