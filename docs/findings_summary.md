@@ -2,11 +2,13 @@
 
 **Methodology paper draft (v16, mg-d5ed; lineage citations corrected
 in v17, mg-2bfd; v19 cascade-candidate / external-validation
-integration in v20, mg-711c)** — a publication-readable consolidation
+integration in v20, mg-711c; Eteocretan 4th-pool integration in v21,
+mg-6ccd; population-level scholar-proposed-reading external-validation
+integration in v22, mg-46d5)** — a publication-readable consolidation
 of what the Lineara project has mechanically established about
-Linear A across 20 work items, anchored on the SigLA corpus ingest
+Linear A across 22 work items, anchored on the SigLA corpus ingest
 (`mg-1c8c`) and spanning the harness pipeline `mg-d5ef` (v0) through
-`mg-3438` (v19). The repo scaffold (`mg-9e00`) predates the corpus
+`mg-46d5` (v22). The repo scaffold (`mg-9e00`) predates the corpus
 ingest. The companion log `docs/findings.md` carries the per-ticket
 history; this document carries the consolidated methodology, results,
 and supportable / unsupportable claim split, audited end-to-end
@@ -74,12 +76,24 @@ formula-span sign (0/5 consonantal-segment match). A targeted
 follow-up search (mg-711c) for additional comparable sequences in
 the cascade-candidate inscriptions — the well-attested accountancy
 totals `ku-ro` (AB81-AB02) and `ki-ro` (AB67-AB02) — finds neither
-sequence in `KH 10` or `KH 5`, leaving the libation formula on
-`PS Za 2` as the project's sole external comparand to date.
+sequence in `KH 10` or `KH 5`. v22 (mg-46d5) broadens the
+external-validation footprint to a 35-entry, 76-AB-sign-comparison-
+point set drawn from Younger's contextual scholarly readings
+across 6 sites and 21+ scholar-attested CV combinations
+(ku-ro, ki-ro, ja-sa-sa-ra-me, ku-mi-na, ta-na, pi-ta-ja, ma-te,
+ku-pa, ki-ra, ka-pa, da-re, da-ta, di-na, pa-ja, a-ra, ta-i,
+ku-ra, ku-pa3, ku-se, mi-na, ka-ru). The aggregate match rate is
+**3.95% (3/76)** on the consonantal first segment of the
+scholarly CV — strong-null-band (the pre-registered < 5% threshold
+for "reinforces v13 / v19 verdicts"), with 32 of 35 entries scoring
+zero and the 3 non-zero entries owing their match to vowel-initial
+syllables or chance overlap on common phonemes.
 **Internal consensus across surviving candidates does not imply
 external correctness:** mechanical scoring + phonotactically-matched
 controls catches a failure mode that internal-consensus-only
-methodology would miss.
+methodology would miss, and the v22 35-entry result moves that
+claim from "one inscription, decisively divergent" to
+"population-level decisively divergent".
 
 The supportable claim is therefore strictly narrower than "Linear A
 is X": the framework identifies which substrate phonotactic profiles
@@ -325,9 +339,9 @@ Five auxiliary checks were pre-registered against the v10 outcome:
 
 ### 3.1 Acceptance-gate outcomes — summary table
 
-The twelve pre-registered gates / pre-specified tests and their
+The thirteen pre-registered gates / pre-specified tests and their
 outcomes are (gates 1–7 form the original v15-shape pre-registration;
-gates 8–12 were added by v18–v21 follow-on tickets within the same
+gates 8–13 were added by v18–v22 follow-on tickets within the same
 pre-registered scoring discipline):
 
 | # | test | ticket | result | outcome |
@@ -344,8 +358,9 @@ pre-registered scoring discipline):
 | 10 | per-inscription cascade-candidate test on right-tail / short / known-content populations | mg-3438 (v19) | 3 cascade candidates emerged: `KH 10` (robust frac 0.55), `KH 5` (0.50), `PS Za 2` (0.71) | local-vs-global aggregate gap genuine; per-inscription internal consensus does not imply external correctness (see §3.12) |
 | 11 | external validation against scholarly proposals (libation formula on `PS Za 2`; KU-RO / KI-RO on `KH 10` / `KH 5`) | mg-3438 (v19), mg-711c (v20) | `PS Za 2` AB57-AB31-AB31-AB60-AB13 mechanical `th-u-u-n-i` vs scholarly `ja-sa-sa-ra-me`: **0/5 consonantal-segment match**; `KH 10` and `KH 5` contain no AB81-AB02 (KU-RO) or AB67-AB02 (KI-RO) sequences (no comparable substring available) | **decisive negative external validation** where comparand exists; targeted search for additional comparands returns null (see §3.13) |
 | 12 | Eteocretan substrate pool, own-LM bigram-preserving control | mg-6ccd (v21) | gate p = 4.10e-06 (PASS); cross-LM under Basque p = 2.58e-03 (PASS, ~600× weaker) | **strongest pool PASS in the validation series** (closest-genealogical-relative substrate; see §3.14) |
+| 13 | population-level external validation against scholar-proposed Linear A readings (35-entry curated set drawn from Younger; 76 AB-sign comparison points across 6 sites; categories include accountancy totals, libation formulae, theonyms, commodity terms, names) | mg-46d5 (v22) | aggregate match rate **3.95%** (3/76) on consonantal first segment of scholarly CV; robust 1.32% (1/76); 32/35 entries score zero | **decisive negative external validation at population scale** (strong-null band, < 5%; reinforces v13 / v19 / v20 — internal consensus does not imply external correctness; see §3.13.4 / §4.6) |
 
-All twelve outcomes are reproducible from
+All thirteen outcomes are reproducible from
 `results/rollup.bayesian_posterior.*.md`, the supporting provenance
 breakdowns in `results/rollup.bayesian_posterior.*.provenance.md`,
 `results/consensus_sign_phoneme_map.md`,
@@ -959,6 +974,103 @@ shows divergence rather than corroboration. Both lines of
 evidence — global aggregate (v13) AND local cascade-candidate
 external check (v19 + v20) — point the same direction.
 
+#### 3.13.4 Population-level external validation against the Younger scholar-reading set (v22)
+
+v22 (mg-46d5) broadens the §3.13.1 / §3.13.2 footprint to a
+**35-entry curated scholar-proposed-reading set** drawn from
+Younger's online catalog (canonical scholarly Linear A reference;
+*Linear A texts in phonetic transcription*, retrieved 2026-05-04)
+and the upstream Schoep 2002 / Salgarella 2020 / Palmer 1995 /
+Davis 2014 sources Younger references. Each entry is a
+*contextual* claim — "this AB-sequence in this inscription means
+this thing in this language" — not a sign-value-only
+transliteration; sign-value-only entries (`AB67 = ki`) are
+excluded by construction since they are not contextual readings.
+
+The set spans 6 sites (Haghia Triada, Khania, Phaistos, Zakros,
+Arkhanes, Psykhro) and 21+ scholar-attested CV combinations
+(ku-ro, ki-ro, ja-sa-sa-ra-me, ku-mi-na, mi-na, pi-ta-ja, ma-te,
+ku-pa, ku-pa3, ku-ra, ki-ra, ka-pa, ka-ru, da-re, da-ta, di-na,
+pa-ja, ta-na, ta-i, a-ra, ku-se), distributed across 15
+categories: accountancy_total (5), accountancy_deficit (3),
+libation_formula (1), libation_or_onomastic (3), commodity (2),
+commodity_or_name (2), name_family (5), name_or_kinship (2),
+name_or_suffix (2), name_or_votive (2), personal_name (1),
+onomastic_prefix (2), transaction_term (1), lexeme (2),
+onomastic (2). Total: 76 AB-sign comparison points.
+
+The comparison strategy follows §3.13.1's PS Za 2 convention
+exactly: for each AB sign in each entry's span, take the
+per-inscription mechanical modal phoneme (the same v19 per-sign
+local-Dirichlet-smoothed consensus over all positive-paired-diff
+candidate equations targeting that inscription across the 3
+validated substrate pools — aquitanian, etruscan, toponym —
+under the same-LM `external_phoneme_perplexity_v0` metric);
+compare to the *first phoneme* of the scholarly CV (consonant for
+CV syllables, vowel itself for vowel-initial syllables a/e/i/o/u).
+
+| metric | value |
+|:--|:--:|
+| n entries | 35 |
+| n AB-sign comparison points | 76 |
+| n with at least one substrate proposal | 45 |
+| **aggregate match rate (consonantal first segment)** | **3.95%** (3/76) |
+| aggregate match rate (robust: + modal posterior > 0.5 + n_proposals ≥ 2) | 1.32% (1/76) |
+| aggregate match rate (full CV — strict) | 2.63% (2/76) |
+| per-entry mean | 4.29% |
+| per-entry median | 0.00% |
+| per-entry max | 50.00% (3 entries) |
+
+Per-entry distribution:
+
+| bucket | n entries |
+|:--|---:|
+| 0%             | 32 |
+| (0%, 20%)      |  0 |
+| [20%, 40%)     |  0 |
+| [40%, 60%)     |  3 |
+| [60%, 80%)     |  0 |
+| [80%, 100%]    |  0 |
+
+The 3 entries that score the per-entry max (50% match):
+
+- `ara_ARKH1a` (a-ra → mechanical `a-z`) — the vowel-initial AB08 has consensus modal `a` (matches scholarly `a`); AB60 mechanical `z` does not match scholarly `r`.
+- `ara_HT1` (a-ra → mechanical `a-a`) — AB08 again matches `a`; AB60 mechanical `a` does not match `r`.
+- `karu_HT2` (ka-ru → mechanical `u-r`) — AB77 mechanical `u` does not match scholarly `k`; AB26 mechanical `r` matches scholarly `r` (the single robust match in the 35-entry set).
+
+The headline 3.95% rate sits squarely in the pre-registered
+**strong-null band** (< 5%; the threshold for "reinforces v13 /
+v19 verdicts"). Two interpretive points are load-bearing:
+
+1. *The non-zero matches do not constitute partial recovery.* The
+   2 `ara_*` matches both fire on the same AB-sign (AB08), whose
+   consensus modal phoneme `a` is dominated by Aquitanian-pool
+   priors (the substrate alphabet has high `a` mass). This is
+   the random-coincidence-on-common-phonemes shape — a vowel-
+   initial scholarly syllable hitting a vowel-modal mechanical
+   consensus. The single robust match (`karu_HT2` AB26 → `r`) is
+   the only entry where the comparison *and* the modal-posterior
+   threshold *and* the n_proposals ≥ 2 condition all hold; one
+   of 76 is consistent with random chance.
+2. *Population-level v.s. single-inscription claim shape.* Before
+   v22, §3.13's verdict rested on PS Za 2 alone (one inscription,
+   five comparison points, 0/5). v22 extends to 76 comparison
+   points across 35 entries; the rate stays in the same band.
+   The "internal consensus does not imply external correctness"
+   claim is now backed by a population-level external-validation
+   set, not a single inscription.
+
+| acceptance band | meaning | observed |
+|:--|:--|:--:|
+| < 5%   | strong reinforcement of v13 / v19's "internal consensus does not imply external correctness" | **3.95% — observed band** |
+| 5–20%  | ambiguous middle case; document with hedging | not observed |
+| > 20%  | partial recovery of scholar-meaningful readings; warrants follow-up | not observed |
+
+The result is reproducible from
+`results/rollup.scholar_proposed_readings_comparison.md`; the
+underlying entry set lives in
+`corpora/scholar_proposed_readings/all.jsonl`.
+
 ### 3.14 Eteocretan: 4th external-validation pool (v21)
 
 v21 (mg-6ccd) adds a 4th external-validation pool to the framework:
@@ -1231,20 +1343,39 @@ modes that have plagued Linear A studies historically.
 ### 4.6 Internal consensus does not imply external correctness
 
 The methodology paper's headline external-validation result is the
-v19 + v20 cascade-candidate finding (§3.12 / §3.13). It is the
-project's first mechanical comparison of a framework reading to
-a scholarly proposal *independent* of the framework's own
-pipeline, and on the one inscription where the comparison is
-performable (`PS Za 2`, libation-formula span AB57-AB31-AB31-
-AB60-AB13) the framework's confidently-cascading mechanical
-reading `th-u-u-n-i` diverges from the scholarly transliteration
-`ja-sa-sa-ra-me` on every formula-span sign (0/5 consonantal-
-segment match). v20's follow-up search for additional comparable
-sequences (canonical KU-RO = AB81-AB02 and KI-RO = AB67-AB02)
-in the other two cascade candidates `KH 10` and `KH 5` finds
-neither sequence present, so the external-validation evidence
-base remains a single comparable inscription. That is enough
-to ground the load-bearing methodological claim:
+v19 + v20 + v22 cascade-candidate / population-level finding
+(§3.12 / §3.13). It is the project's first mechanical comparison
+of a framework reading to scholarly proposals *independent* of
+the framework's own pipeline. The evidence base has three
+layered components:
+
+1. **One cascade-candidate inscription, decisively divergent (v19).**
+   On `PS Za 2`, the libation-formula span AB57-AB31-AB31-AB60-
+   AB13 yields the framework's confidently-cascading mechanical
+   reading `th-u-u-n-i`, divergent from the scholarly
+   transliteration `ja-sa-sa-ra-me` on every formula-span sign
+   (0/5 consonantal-segment match).
+2. **Targeted accountancy follow-up, null comparand (v20).** A
+   search for the canonical KU-RO = AB81-AB02 and KI-RO =
+   AB67-AB02 sequences in the other two cascade candidates
+   (`KH 10`, `KH 5`) finds neither sequence present.
+3. **Population-level scholar-set comparison (v22).** A 35-entry
+   curated scholar-proposed-reading set drawn from Younger's
+   online catalog (76 AB-sign comparison points across 6 sites
+   and 21+ scholar-attested CV combinations) yields **aggregate
+   match rate 3.95%** (3/76) on the consonantal first segment of
+   the scholarly CV, with 32 of 35 entries scoring zero and the
+   3 non-zero entries owing their match to vowel-initial
+   syllables or chance overlap on common phonemes. The single
+   robust match (1/76; modal posterior > 0.5 AND n_proposals ≥
+   2) is consistent with random chance. The result sits squarely
+   in the pre-registered strong-null band (< 5%).
+
+That layered evidence base — one inscription decisively divergent,
+two follow-up cascade candidates with no comparand, and a
+35-entry / 76-comparison-point population-level set with 3.95%
+aggregate match — is enough to ground the load-bearing
+methodological claim:
 
 > **Internal consensus among surviving substrate candidates does
 > not imply external correctness.** A cascade candidate emerges
@@ -1270,7 +1401,14 @@ not a setback but a verification that the methodology *catches
 its own optimistic case*: the framework's surviving candidates
 on a known-content inscription, when checked against scholarly
 ground truth, are decisively wrong, and the framework is honest
-enough about its own structure to surface that.
+enough about its own structure to surface that. The v22
+population-level scholar-set comparison (3.95% aggregate over 76
+comparison points across 35 entries) extends that
+discipline-protection from "one inscription, decisively
+divergent" to "population-level decisively divergent" — the
+framework does not partially recover scholar-meaningful readings
+even when measured across the broader, multi-category Younger
+catalog.
 
 The result also tightens what the v10 / v18 PASSes mean.
 Surface-aggregate PASS at the population level (Aquitanian,
@@ -1319,15 +1457,27 @@ metrics cannot.
   searched the other two cascade candidates for additional
   comparable scholarly sequences — the well-attested accountancy
   totals `ku-ro` (AB81-AB02) and `ki-ro` (AB67-AB02) — and found
-  no instance of either sequence in `KH 10` or `KH 5`. The
-  external-validation evidence base is therefore a single
-  comparable inscription with a confidently-divergent reading,
-  with no successful corroborating comparand located by targeted
-  follow-up. Both lines of evidence (global aggregate v13, local
-  cascade-candidate external-comparison v19 + v20) support the
-  same supportable-claim shape: per-sign decipherment is not
-  established by this framework. *This does not constitute a
-  decipherment.* The cascade candidates are hypotheses for
+  no instance of either sequence in `KH 10` or `KH 5`. v22
+  (mg-46d5) extended the external-validation footprint to a
+  35-entry / 76-AB-sign-comparison-point Younger-catalog
+  scholar-proposed-reading set spanning 6 sites and 21+ CV
+  combinations; the aggregate match rate is **3.95%** (3/76) on
+  the consonantal first segment of the scholarly CV, with 32 of
+  35 entries scoring zero — squarely in the pre-registered
+  strong-null band (< 5%). The external-validation evidence base
+  is therefore three layered components: one cascade-candidate
+  inscription decisively divergent (v19), one targeted accountancy
+  follow-up returning null comparand (v20), and one population-
+  level 35-entry scholar-set comparison with 3.95% aggregate
+  match (v22). All three lines of evidence — global aggregate v13,
+  local cascade-candidate external-comparison v19 + v20, and
+  population-level scholar-set comparison v22 — support the same
+  supportable-claim shape: per-sign decipherment is not
+  established by this framework, and where independent scholarly
+  ground truth is available at population scale the mechanical
+  consensus does not partially recover it. *This does not
+  constitute a decipherment.* The cascade candidates are
+  hypotheses for
   domain-expert review, not decipherment claims; internal
   consensus among surviving candidates does not imply external
   correctness (§4.6).
@@ -1441,8 +1591,14 @@ divergent from the scholarly proposal on every formula-span sign.
 v20's targeted follow-up search for additional scholarly comparands
 in the other two cascade candidates (`KH 10`, `KH 5`) — the
 well-attested accountancy totals `ku-ro` (AB81-AB02) and `ki-ro`
-(AB67-AB02) — finds neither sequence in either tablet, leaving the
-libation formula as the project's sole external comparand to date.
+(AB67-AB02) — finds neither sequence in either tablet. v22 (mg-46d5)
+broadens the external-validation footprint to a 35-entry curated
+Younger-catalog scholar-proposed-reading set (76 AB-sign comparison
+points across 6 sites and 21+ CV combinations); the aggregate
+mechanical-vs-scholarly match rate is **3.95%** on the consonantal
+first segment of the scholarly CV, with 32 of 35 entries scoring
+zero — squarely in the pre-registered strong-null band (< 5%) for
+"reinforces v13 / v19 / v20 verdicts".
 
 The supportable claim is therefore strictly narrower than past
 decipherment-shape claims for Linear A: the framework identifies
@@ -1460,7 +1616,11 @@ plagued past Linear A work. The framework's null findings — no
 per-sign coherence at the global aggregate level (v13), no
 real-vs-conjectural surface discrimination at the same-distribution
 pollution level (v14), and decisive divergence on the one
-performable external comparison (v19 / v20) — are themselves
+performable single-inscription external comparison (v19 / v20)
+plus the **3.95% aggregate match rate (3/76)** on a 35-entry,
+6-site, 21+ CV-combination Younger-catalog scholar-proposed-
+reading set (v22, mg-46d5; squarely in the pre-registered
+strong-null band) — are themselves
 contributions to the methodological literature on undeciphered-
 script analysis: each is a falsification result that internal-only
 methodology, by construction, cannot produce.
@@ -1486,13 +1646,14 @@ committed artefacts under `results/`:
 | per-inscription concentration | `rollup.right_tail_inscription_concentration.md` |
 | v19 per-inscription coherence + cascade candidates | `rollup.per_inscription_coherence.md` |
 | v20 KU-RO / KI-RO scholarly-anchor search on `KH 10` / `KH 5` | `corpus/Khania/KH%2010.json`, `corpus/Khania/KH%205.json` (token streams) + `pools/linear_b_carryover.yaml` (canonical AB-sequence anchors) |
+| v22 population-level external validation against Younger scholar-set (mg-46d5) | `rollup.scholar_proposed_readings_comparison.md` + `../corpora/scholar_proposed_readings/all.jsonl` (35-entry curated set) |
 | corpus ingestion record | `../corpus_status.md` |
 
 Per-ticket merge notes are in `docs/findings.md` under
 `## Findings from mg-XXXX` headers, in chronological order from
-`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-711c`
-(v20, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
-(v0, 2026-05-04 first harness commit) through `mg-3438` (v19,
+`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-46d5`
+(v22, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
+(v0, 2026-05-04 first harness commit) through `mg-46d5` (v22,
 2026-05-05), with mg-711c (v20) a documentation-and-investigation
 ticket that adds no harness code path. The repo scaffold
 (`mg-9e00`) predates `findings.md`'s introduction in `mg-13a2`
