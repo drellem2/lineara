@@ -3135,8 +3135,187 @@ recalling chic-v1's mg-c7e3 missed-update incident that mg-0ea1 had
 to backfill retroactively): the findings update is a
 non-negotiable acceptance blocker.
 
+#### chic-v11 — additional within-scope evidence on the 3 chic-v5 tier-2 candidates: cross-pool L3 robustness + #032 ku-pa context inspection (mg-d69c)
+
+chic-v9 (above) gave a framework-level negative on the chic-v5
+machinery; chic-v11 asks the two remaining additional-evidence
+questions in scope for a polecat against the 3 individual
+candidates. The pre-registered tests are mechanical (no specialist
+judgment beyond cross-referencing committed metadata).
+
+**Test 1: Cross-pool L3 robustness.** chic-v5's L3 substrate-
+consistency line was scored under the v21 Eteocretan LM only. If
+the L3 votes for the 3 candidates are an Eteocretan-LM artifact, we
+expect them to disagree under the other 3 substrate pools' LMs.
+chic-v11 reruns the chic-v5 L3 machinery byte-identically except
+for the (substrate-pool, LM) dispatch — 12 cells = 3 candidates ×
+4 pool-LM dispatches (aquitanian → basque, etruscan → etruscan,
+toponym → basque, eteocretan → eteocretan; chic-v3/chic-v5
+convention). The candidate-value pool is rebuilt per pool because
+the chic-v5 phoneme-inventory filter is per-substrate. Output:
+`results/chic_v11_cross_pool_l3.md`.
+
+| candidate | chic-v5 class | top cross-pool class | vote split | verdict | agrees with chic-v5 |
+|:--|:--|:--|:--|:--|:--:|
+| `#001` | glide | stop (3/4) | stop=3 / glide=1 | mostly LM-robust (3 of 4 agree, on stop) | ✗ |
+| `#012` | glide | stop (2/4) | stop=2 / glide=1 / nasal=1 | weak agreement (2 of 4) | ✗ |
+| `#032` | stop | stop (2/4) | stop=2 / glide=1 / nasal=1 | weak agreement (2 of 4) | ✓ |
+
+**Per-candidate cross-pool L3 reading:**
+
+- `#001 → wa`/glide: under aquitanian, etruscan, toponym pools, L3
+  votes **stop** (winning value `ta` in all 3); under eteocretan
+  alone, L3 votes glide (winning value `wa`). The chic-v5 glide
+  vote for `#001` is **an Eteocretan-LM-specific artifact**: 3 of
+  4 substrate-pool LMs reject the glide reading and converge on
+  stop. This is a cross-pool L3 negative.
+- `#012 → wa`/glide: 2 stop (etruscan, toponym), 1 nasal (aquitanian),
+  1 glide (eteocretan). The chic-v5 glide vote for `#012` is
+  supported by **only 1 of 4 LMs** (eteocretan, the chic-v5
+  default); the cross-pool L3 winning class is stop with weak
+  agreement (2/4). This is a cross-pool L3 negative — `#012`'s
+  glide vote is also LM-specific to Eteocretan.
+- `#032 → ki`/stop: 2 stop (etruscan, eteocretan), 1 glide
+  (aquitanian), 1 nasal (toponym). The chic-v5 stop vote for `#032`
+  is **supported by 2 of 4 LMs**, including the chic-v5 default
+  Eteocretan (winning value `ki` matches chic-v5 exactly) plus
+  Etruscan (winning value `ti` — same class, different value).
+  Cross-pool L3 weakly corroborates the stop reading; the verdict
+  is `weak agreement (2 of 4)` but **agrees with chic-v5**, unlike
+  `#001` and `#012`.
+
+**Test 2: #032 ku-pa context inspection.** chic-v6 produced a
++3-inscription / +20-hit tier-1 → tier-2 verification lift on the
+source-A scholar-proposed-Linear-A-readings test. The portion
+attributable to `#032 → ki + #013 → pa` literal/literal lands on
+**1 CHIC inscription (CHIC #057) with 4 scholar-entry hits** from
+the ku-pa name-family / ka-pa transaction-term family attested in
+the four Linear A tablets HT 1, HT 16, HT 102, HT 110a. Output:
+`results/chic_v11_032_ku_pa_context.md`.
+
+The mechanical metadata cross-check:
+
+- **Source Linear A tablets** (HT 1, HT 16, HT 102, HT 110a): all
+  four are `genre_hint = accountancy`, `support = tablet`,
+  `period = LM IB`, `site = Haghia Triada`. The scholarly readings
+  `ku-pa` (name family / commodity prefix), `ku-pa3` (variant),
+  and `ka-pa` (recurring transaction term) are extracted by
+  Younger's online edition from Hagia Triada accountancy tablets
+  in their native-corpus genre.
+- **Matched CHIC inscription** (CHIC #057, Knossos, support `bar`,
+  partial transcription): the partial reading under chic-v2 anchors
+  + `#032 → ki` is `wa #029 ki #011 / NUM:10 / #079 ki pa / NUM:20
+  / i [?:mu] #034 / NUM:20 / #011 #029 #037 / NUM:50`. The matched
+  `(#032, #013)` literal pair sits in the second DIV-bounded
+  segment as `#079 ki pa`, **immediately followed (after the next
+  DIV) by `NUM:20`** — the canonical CHIC accountancy formula
+  structure (sign-run = entry, followed by a quantity numeral).
+  The inscription's overall structure is four DIV-bounded
+  numerical entries (NUM:10 / NUM:20 / NUM:20 / NUM:50), confirming
+  the accountancy reading on the CHIC side as well.
+
+**Combined #032 verdict.** The chic-v6 ku-pa-family lift
+attributable to `#032 → ki` is **corroborated by inscription-level
+context on both sides of the match**: scholarly readings in their
+native LM IB Hagia Triada accountancy context on the Linear A
+source side; the matched CHIC bar inscription with the canonical
+sign-run-followed-by-numeral accountancy-formula structure on the
+CHIC target side. This is contextual corroboration of the chic-v6
+mechanical lift specifically for `#032 → ki`, **not validation of
+the chic-v5 framework as a whole** — chic-v9's framework-level
+LOO accuracy (20.0% / 0/3 tier-2 unanimity correct) is unaffected.
+
+**Per-candidate post-chic-v11 status (combined chic-v5 + chic-v6 + chic-v9 + chic-v11):**
+
+- **`#001 → wa`/glide.** chic-v9 LOO-framework negative; chic-v11
+  cross-pool L3 actively undermines (3 of 4 substrate-pool LMs
+  vote stop, not glide; the chic-v5 glide vote is an Eteocretan-LM
+  artifact); chic-v6 produced **no `#001 → wa`-attributable lift**
+  (the chic-v6 enumeration shows `#001 → wa` did not enter any
+  source-A literal-match pair). Net: `#001` retains the weakest
+  evidentiary basis of the three candidates. **Status: weakened
+  beyond the chic-v9 generic downgrade.**
+- **`#012 → wa`/glide.** chic-v9 LOO-framework negative; chic-v11
+  cross-pool L3 weakly undermines (only 1 of 4 LMs supports glide;
+  cross-pool top is stop at 2/4 weak agreement); chic-v6 produced
+  **no `#012 → wa`-attributable lift**. Net: same shape as `#001`.
+  **Status: weakened beyond the chic-v9 generic downgrade.**
+- **`#032 → ki`/stop.** chic-v9 LOO-framework negative; chic-v11
+  cross-pool L3 weakly corroborates (2 of 4 LMs vote stop, including
+  the chic-v5 default Eteocretan with byte-identical `ki` winning
+  value, plus Etruscan with `ti` winning value); chic-v6 lift
+  contextually corroborated on both sides of the `(#032, #013)`
+  match (accountancy-tablet source + accountancy-formula CHIC
+  context). Net: `#032` retains the strongest evidentiary basis of
+  the three candidates by every chic-v11 axis, while still
+  inheriting the chic-v9 framework-level negative. **Status:
+  partially corroborated within polecat scope — but the
+  framework-level chic-v9 negative remains the dominant constraint.**
+
+**Implication for the methodology paper's per-candidate framing.**
+The chic-v10 generic downgrade (chic-v5 tier-2 candidates →
+"candidate proposals contingent on the framework's currently-low
+validation accuracy") was applied uniformly to all three candidates.
+chic-v11 produces an **asymmetric refinement** of that framing:
+
+- For `#001` and `#012`, chic-v11 adds an additional negative axis
+  (cross-pool L3 disagrees with chic-v5's class) on top of the
+  chic-v9 generic downgrade. The methodology paper's per-candidate
+  framing for these two should explicitly note the cross-pool L3
+  result as an additional Eteocretan-LM-artifact concern.
+- For `#032`, chic-v11 adds a partial positive axis (cross-pool L3
+  weakly corroborates the stop class; chic-v6 lift contextually
+  corroborated). The methodology paper's per-candidate framing for
+  `#032` can note this asymmetry — `#032` is the strongest of the
+  three under polecat-scope mechanical evidence — without lifting
+  the chic-v9 framework-level constraint that would let the
+  candidate clear the journal-submission bar.
+
+The combined post-chic-v11 framing remains: **none of the three
+candidates clears specialist-review elevation under the
+chic-v9-validated framework's currently-low accuracy band**, but
+within that band the relative evidentiary basis is now ranked
+`#032 > #001 ≈ #012` rather than uniform.
+
+**`docs/findings.md` (mg-d69c entry)** records the 12-cell cross-
+pool L3 table, the ku-pa context-inspection metadata, the
+per-candidate post-chic-v11 status, and the asymmetric methodology-
+paper-framing implication. Per AGENTS.md: the findings update is a
+non-negotiable acceptance blocker.
+
+**Determinism.** chic-v11 inherits chic-v5's L3 sha256-keyed
+permutation construction and operates on committed input artifacts;
+re-running `scripts/build_chic_v11.py` produces byte-identical
+result files (md5 stability verified at chic-v11 build time,
+2026-05-06).
+
 #### Pre-registered chic-v10+ (chic-v9 done in mg-18cb)
 
+- **chic-v11 done.** Cross-pool L3 robustness check + #032 ku-pa
+  context inspection on the 3 chic-v5 tier-2 candidates. Cross-
+  pool L3: of 12 cells (3 candidates × 4 substrate-pool LMs),
+  `#001 → wa`/glide is rejected by 3 of 4 LMs (only Eteocretan
+  votes glide), `#012 → wa`/glide is rejected by 3 of 4 LMs (only
+  Eteocretan votes glide), `#032 → ki`/stop is supported by 2 of
+  4 LMs including the chic-v5 default Eteocretan. The chic-v5
+  glide votes for `#001`/`#012` are Eteocretan-LM-specific
+  artifacts; `#032`'s stop vote is partially LM-robust. #032 ku-pa
+  context: chic-v6 lift attribution lands on CHIC #057 (Knossos
+  bar) via 4 ku-pa-family scholar entries from accountancy-tablet
+  Hagia Triada inscriptions HT 1, HT 16, HT 102, HT 110a. The
+  matched `(#032, #013)` token run sits in an accountancy-formula
+  position (`#079 ki pa / NUM:20`) on the CHIC side; the chic-v6
+  ku-pa lift for `#032 → ki` is corroborated by inscription-level
+  context on both sides. Per-candidate post-chic-v11 status:
+  `#032` retains the strongest evidentiary basis (partial
+  corroboration); `#001` and `#012` are weakened beyond the
+  chic-v9 generic downgrade (cross-pool L3 actively undermines).
+  Outputs: `results/chic_v11_cross_pool_l3.md`,
+  `results/chic_v11_032_ku_pa_context.md`. **Done in mg-d69c.**
+  Net: the chic-v9 framework-level negative is unaffected, but the
+  per-candidate framing for the methodology paper is now
+  asymmetric — `#032 > #001 ≈ #012` on within-polecat-scope
+  mechanical evidence.
 - **chic-v9 done.** Leave-one-out held-out validation of the
   chic-v5 framework on the chic-v2 anchor pool. **Aggregate
   accuracy 20.0% (4/20)**, near the 16.7% chance baseline for a
