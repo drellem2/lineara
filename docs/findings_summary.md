@@ -1991,18 +1991,172 @@ framework's PASS signal on Linear A is not Linear-A-corpus-specific
 but a substrate-LM-phonotactic-kinship signature that generalises to
 the older sister-script under the same scoring infrastructure.
 
-#### Pre-registered chic-v5+
+#### chic-v5 — per-sign syllable-value extraction framework for unknown CHIC syllabographic signs (Eteocretan-LM-anchored, four-line-of-evidence discipline) (mg-7c6d)
 
-- **chic-v5+** — per-sign syllable-value extraction framework on
-  the chic-v3-validated Eteocretan pool. The PASS on Eteocretan
-  means the framework has detected a real substrate-shape signal
-  in CHIC; chic-v5 turns that aggregate signal into per-sign
-  proposed-value assignments by ranking candidates whose per-window
-  posterior is in the right-tail of the Eteocretan distribution.
-- **chic-v6** — mechanical value proposals for unknown CHIC signs,
-  built on chic-v5's per-sign extraction.
-- **chic-v7** — methodology-paper extension integrating chic-v0..v4
-  cleanly into the v25 manuscript shape.
+The chic-v5 ticket builds the methodologically delicate per-sign
+counterpart to chic-v3's population-level gate. The chic-v3 PASS on
+Eteocretan (p = 7.33e-04) and the chic-v4 cross-script Spearman
+ρ = +1.0 jointly established Eteocretan as the substrate whose
+phonotactic shape carries a detectable signal on the CHIC
+syllabographic stream; chic-v5 mechanically asks, for every CHIC
+syllabographic sign that is not a chic-v2 paleographic anchor (76 such
+unknowns out of 96 syllabographic signs total), whether four
+independent lines of evidence converge on a single proposed phoneme
+class. **The discipline is the deliverable, not the count of tier-2
+candidates.** The framework is built to fail loudly when the lines
+diverge — that's the anti-motivated-reasoning property the
+methodology paper has insisted on since v13's per-sign coherence
+failure.
+
+The four lines (`scripts/build_chic_v5.py`, with full per-sign tables
+in `results/chic_value_extraction_leaderboard.md`,
+`results/chic_anchor_distance_map.md`,
+`results/chic_substrate_consistency.md`,
+`harness/chic_sign_fingerprints.json`,
+`pools/cretan_hieroglyphic_signs.distributional.yaml`):
+
+1. **Distributional plurality.** Per-sign Bhattacharyya similarity to
+   each chic-v2 anchor across four fingerprint dimensions
+   (`left_neighbor`, `right_neighbor`, `position`, `support`); the
+   top-3 nearest anchors vote on phoneme class by plurality.
+2. **Anchor-distance (strict top-1).** The single-closest anchor's
+   phoneme class. Same fingerprint machinery as line 1, different
+   aggregation; lines diverge when the top-1 differs from the
+   top-3 plurality.
+3. **Substrate-consistency under Eteocretan LM.** For every candidate
+   phoneme value V drawn from the union of the anchor pool's
+   Linear-B carryover values plus bare vowels — filtered to only
+   values whose first character is in the Eteocretan phoneme
+   inventory, which excludes the glide values `ja` and `je`
+   (Eteocretan vocabulary has no `j` phoneme; the LM would fold it
+   to OOV) and leaves a 20-value pool — the chic-v2 anchor mapping
+   extended with `(unknown_sign → V)` is scored against a
+   class-disjoint deterministic-permutation control (sha256-keyed;
+   no RNG) under the v21 Eteocretan LM. The per-class mean
+   paired_diff picks the line-3 winning class. The 20-value pool
+   breaks down as 5 vowel / 8 stop / 4 nasal / 2 liquid / 1 glide
+   (`wa` only), with no fricatives — an inevitable consequence of
+   the chic-v2 anchor pool's contents (no fricative-onset Linear-B
+   carryover values are paleographically anchored on CHIC).
+4. **Cross-script paleographic.** Where the chic-v1
+   PALEOGRAPHIC_CANDIDATES list flags a Linear A counterpart for the
+   unknown sign with a known/proposed value. **Silent for all 76
+   unknowns** in chic-v5: the chic-v1 paleographic-candidate list is
+   precisely the seed for the chic-v2 anchor pool, so by construction
+   no unknown carries a paleographic note. This is documented as a
+   methodological limitation rather than papered over; line 4
+   contributes 0 votes for every unknown, and tier-2 in chic-v5
+   therefore requires unanimous agreement of the three remaining
+   non-silent lines (1, 2, 3). Domain-curated extension of line 4 is
+   the natural chic-v6 target.
+
+Tier classification is mechanical (≥3 of 4 agreeing → tier-2; 2 of 4
+→ tier-3; 1 of 4 → tier-4; 0 → untiered) with exact phoneme-class
+identity as the agreement predicate (`vowel`, `stop`, `nasal`,
+`liquid`, `fricative`, `glide` — coarser than phonemes, since the
+framework's per-sign resolution is unlikely to be more granular).
+Unknown signs with corpus frequency below n=3 are marked **untiered**
+on the discipline-protecting grounds that their distributional
+fingerprints are too thin (≤2 occurrences) to support meaningful
+Bhattacharyya similarity.
+
+Headline counts (76 unknowns, n=3 frequency floor):
+
+| tier | meaning | n |
+|:--|:--|---:|
+| tier-1 | chic-v2 anchor (already established; carried over) | 20 |
+| **tier-2** | ≥3 of 4 lines agree on a phoneme class — **candidate proposal pending domain-expert review** | **3** |
+| tier-3 | 2 of 4 lines agree — suggestive but insufficient for a candidate proposal | 29 |
+| tier-4 | 1 of 4 lines yields a class — single line of evidence; not a proposal | 17 |
+| untiered | no line of evidence yields a class (frequency < 3 floor) | 27 |
+
+The three tier-2 candidates:
+
+| sign | freq | proposed class | L1 nearest-anchor | L2 nearest-anchor (sim) | L3 best-value (paired_diff) |
+|:--|---:|:--|:--|:--|:--|
+| `#001` | 4 | glide | `#057` | `#057` (`je`, BC=0.5533) | `wa` (+0.002212) |
+| `#012` | 5 | glide | `#042` | `#042` (`wa`, BC=0.6611) | `wa` (+0.005331) |
+| `#032` | 9 | stop | `#061` | `#061` (`te`, BC=0.6021) | `ki` (+0.004579) |
+
+**The chic-v5 methodology paper framing must lead with the
+discipline, not the count.** The supportable claim is: a four-line-
+of-evidence framework, mechanically derived from chic-v2 + chic-v3
+machinery + per-sign distributional fingerprints under a
+Bhattacharyya similarity metric and Eteocretan LM substrate-
+consistency scoring, surfaces **3 candidate proposals at tier-2** out
+of 76 unknown CHIC syllabographic signs, where tier-2 requires three
+independent lines (one of the four canonical lines being silent for
+chic-v5 by construction) to converge on a single coarse phoneme
+class. **These are candidate proposals pending domain-expert review
+by an Aegean-syllabary specialist; they are not decipherment claims**
+— the framework's per-sign resolution is class-level, not
+phoneme-specific, and the line 1 / line 2 distributional machinery
+is built on the chic-v2 anchor pool's fingerprints rather than a
+fully-independent paleographic ground truth. The 29 tier-3 signs
+are the next-stratum candidates (29 of 76 unknowns showing 2-of-3
+non-silent line agreement); these are the ones where chic-v6's
+hand-curated paleographic-line extension would most plausibly raise
+to tier-2 by adding a fourth confirming vote.
+
+**Per-sign substrate-consistency paired_diffs are uniformly small
+(top values in the +0.002 to +0.005 nat-per-char range).** This is
+qualitatively consistent with the chic-v3 corpus-size caveat (~1,420
+syllabographic positions across 288 partly-fragmentary inscriptions
+is small for per-sign value extraction even when the substrate-
+pool-level signal is strong) and with the chic-v4 cross-script gap-
+magnitude observation (CHIC's Eteocretan gap +0.111 is roughly half
+of Linear A's +0.201). The line-3 paired_diff magnitudes shouldn't
+be over-read as decipherment-grade per-sign signal; they are *a
+ranking of candidate phoneme values by substrate-consistency*, not
+absolute confidence. The tier classification, not the magnitude,
+carries the chic-v5 discipline.
+
+**Disagreement bookkeeping + L3 systematic class bias.** Per the
+brief's anti-motivated-reasoning instruction, the script reports
+per-sign votes from each line even where they disagree (full
+per-sign breakdown in the leaderboard `## Per-sign tier verdict`
+table). Above the n=3 frequency floor (49 of 76 unknowns): lines
+1 and 2 (distributional plurality vs strict top-1) agree on 26
+of 49 (53%) and diverge on 23 of 49 (47%) — the natural
+consequence of the top-3-plurality vs strict-top-1 distinction;
+the lines share the same fingerprint machinery but differ in
+aggregation. The line-3 class distribution is heavily skewed:
+26/49 votes for `nasal`, 20/49 for `glide`, 2/49 for `liquid`,
+1/49 for `stop`, and 0/49 for `vowel` or `fricative` — qualitatively
+consistent with the Eteocretan LM's bigram distribution rewarding
+common Eteocretan-vocabulary onset patterns (`na`/`ni`/`no`/
+`ma`/`me`; pool unigram counts m=32, n=32) and with the
+candidate-value pool composition (smaller class pools producing
+higher mean paired_diffs by construction). The L3 bias is a
+**property of the framework, not random noise** — the methodology
+paper should disclose it explicitly. It also means line 3 is
+under-discriminating in isolation; the tier-2 / tier-3 discipline
+is precisely what filters out the L3 systematic bias by requiring
+independent confirmation from at least one distributional line.
+
+**`docs/findings.md` (mg-7c6d entry)** records the per-line vote
+counts, the tier-2 / tier-3 candidate lists, the
+phoneme-class-taxonomy choice, and the 3 tier-2 candidates' per-line
+evidence breakdown. Per AGENTS.md (cited explicitly per the
+chic-v5 brief, recalling chic-v1's mg-c7e3 missed-update incident
+that mg-0ea1 had to backfill retroactively): the findings update is
+a non-negotiable acceptance blocker for the chic sub-program, not
+an optional accompaniment to the experiment ticket.
+
+#### Pre-registered chic-v6+
+
+- **chic-v6** — domain-expert review of chic-v5's tier-2 candidates
+  (3 candidate proposals at the v5 commit; this is an Aegean-
+  syllabary specialist task, not a polecat task). Hand-curated
+  extension of line 4 (cross-script paleographic) from O&G 1996,
+  Salgarella 2020, Decorte 2017, and adjacent paleography
+  scholarship would also raise additional tier-3 candidates to
+  tier-2 by adding a fourth confirming vote where the
+  distributional + substrate lines already converge.
+- **chic-v7** — methodology-paper extension integrating chic-v0..v5
+  cleanly into the v25 manuscript shape; the final consolidation
+  pass before journal-submission handoff for the cross-script
+  paper.
 
 ---
 
@@ -2281,14 +2435,17 @@ committed artefacts under `results/`:
 | chic-v2 CHIC paleographic anchor inheritance + partial-reading map (mg-362d) | `../pools/cretan_hieroglyphic_anchors.yaml`, `chic_partial_readings.md`, `chic_anchor_density_leaderboard.md`, `chic_mg_perplexity_sanity_check.md` |
 | chic-v3 substrate framework on CHIC, 4 pools, right-tail bayesian gate per pool (mg-9700) | `../corpora/cretan_hieroglyphic/syllabographic.jsonl`, `../corpora/cretan_hieroglyphic/syllabographic_stats.md`, `experiments.external_phoneme_perplexity_v0.chic.jsonl`, `rollup.bayesian_posterior.{aquitanian,etruscan,toponym,eteocretan}.chic.md`, `rollup.bayesian_posterior.chic.md` (combined) |
 | chic-v4 cross-script correlation analysis Linear A vs CHIC (mg-c769) | `rollup.linear_a_vs_chic_substrate_comparison.md` |
+| chic-v5 per-sign syllable-value extraction framework (mg-7c6d) | `chic_value_extraction_leaderboard.md`, `chic_anchor_distance_map.md`, `chic_substrate_consistency.md`, `../harness/chic_sign_fingerprints.json`, `../pools/cretan_hieroglyphic_signs.distributional.yaml` |
 | corpus ingestion record | `../corpus_status.md` |
 
 Per-ticket merge notes are in `docs/findings.md` under
 `## Findings from mg-XXXX` headers, in chronological order from
-`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-c103`
-(v24, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
+`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-7c6d`
+(chic-v5, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
 (v0, 2026-05-04 first harness commit) through `mg-c103` (v24,
 2026-05-05), with mg-711c (v20) a documentation-and-investigation
-ticket that adds no harness code path. The repo scaffold
+ticket that adds no harness code path. The chic sub-program
+spans `mg-99df` (chic-v0 corpus ingest) through `mg-7c6d`
+(chic-v5 per-sign value extraction). The repo scaffold
 (`mg-9e00`) predates `findings.md`'s introduction in `mg-13a2`
 and so does not have a per-ticket entry there.
