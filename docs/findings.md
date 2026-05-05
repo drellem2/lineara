@@ -8909,3 +8909,364 @@ rather than uniform.
   Introduction* (revised ed.). Manchester / New York.
 - Beekes, R. S. P. (2010). *Etymological Dictionary of Greek*,
   vol. 2 appendix on Pre-Greek substrate. Leiden: Brill.
+
+## Findings from mg-a1e2 (v29 — methodology paper polish pass integrating v28 + chic-v11; cross-script structural-at-chance LOO verdict + chic-v11 candidate-evidence findings unified into a symmetric §4.6 / §4.7 narrative; LOO framed as the fifth discipline-protecting pillar, 2026-05-06)
+
+### Summary
+
+Editorial / verification ticket. No harness commits. v29 audits
+`docs/findings_summary.md` end-to-end after the v28 (mg-4a7b)
+Linear A-side analogous LOO validation polecat and the chic-v11
+(mg-d69c) within-polecat-scope candidate-evidence pass have both
+landed. Both polecats had already integrated their results into
+the document — v28 added a §4.6 v28 subsection (lines 2161–2274
+pre-v29) and a §4.6 cross-reference paragraph; chic-v11 added a
+§4.7 chic-v11 subsection (lines 3138–3290 pre-v29) and a per-
+candidate post-chic-v11 status block. v29 audits each, then
+extends the document's higher-level integration sections (Abstract;
+§4.6 post-v28 framing intro paragraph parallel to §4.7's post-
+chic-v9 framing; §5.4 Cross-script CHIC limitations with v28 LA-
+side LOO entry parallel to chic-v9's CHIC-side entry plus a
+chic-v11 axis-restricted-evidence entry; §6 Conclusion with the
+**five discipline-protecting pillars** framing leading on LOO as
+pillar 5; §7 Three-sentence reading test for the post-v28 +
+chic-v11 register; the document-lineage citation block at the top
+of the file; the Cross-script methodological synthesis subsection;
+the Appendix A result-file index) to lead with the symmetric
+**LOO accuracy 20.0% on CHIC (chic-v9) / 33.3% on Linear A (v28),
+0/3 tier-2 unanimous correct on both scripts** verdict — the
+sharpened claim that **the at-chance per-sign behaviour is
+structural to the chic-v5 framework rather than CHIC-corpus-
+specific** — and to integrate chic-v11's per-candidate asymmetric
+refinement (`#032 > #001 ≈ #012`) within the chic-v9 generic
+downgrade.
+
+### Restructure / edits made
+
+1. **Document-lineage citation block (top of file, lines 3–37)**
+   — extended to enumerate v28 (mg-4a7b), chic-v11 (mg-d69c),
+   and v29 (mg-a1e2). The work-item count updated from "27
+   Linear A + 10 chic" to "28 Linear A + 11 chic". The
+   editorial-only-pass list now reads "v25, chic-v7, v27,
+   chic-v10, and v29 are editorial-only (no harness commits)".
+   The Linear A pipeline span updated from `mg-d5ef` (v0)
+   through `mg-c202` (v26) to `mg-d5ef` (v0) through `mg-4a7b`
+   (v28); the chic span from `mg-99df` (chic-v0) through
+   `mg-18cb` (chic-v9) to `mg-99df` (chic-v0) through `mg-d69c`
+   (chic-v11).
+2. **Abstract** — extended the chic-v9 paragraph with a v28 LA-
+   side parallel block (33.3% aggregate / 0/3 tier-2 unanimous
+   correct; per-line L1=33.3%, L2=33.3%, L3=9.5%; +13.3
+   percentage points on the L1+L2+L3 consensus delta vs CHIC;
+   both scripts in the low-agreement / not-validated band; the
+   structural-vs-CHIC-specific question resolved in favour of
+   the structural-limitation arm); plus a chic-v11 within-
+   polecat-scope candidate-evidence block (cross-pool L3
+   robustness verdict per candidate: `#001` 3/4 stop ≠ glide
+   chic-v5; `#012` 2/4 stop / 1 glide / 1 nasal weak ≠ glide
+   chic-v5; `#032` 2/4 stop = stop chic-v5 weak agreement; ku-pa
+   context corroborated on both sides for `#032 → ki`); the
+   downgrade framing extended from "chic-v5 / chic-v6 / chic-v8
+   framing of the three tier-2 candidates downgrades to
+   'candidate proposals contingent on the framework's currently-
+   low validation accuracy'" to "...on both scripts", with the
+   §4.6 / §4.7 narrative leading symmetrically and §7
+   restructured for the post-v28 + chic-v11 register.
+3. **§4.6 Internal consensus does not imply external
+   correctness** — added a "Post-v28 framing" intro paragraph
+   immediately after the §4.6 header, parallel in role to
+   §4.7's "Post-chic-v9 framing" intro paragraph (mg-1178
+   chic-v10's polish-pass addition). The new paragraph leads
+   with v28's 33.3% aggregate / 0/3 tier-2 verdict, cites the
+   structural-vs-CHIC-specific resolution, downgrades the v22 +
+   v26 leaderboard top-K results' per-sign-value claims, notes
+   the population-level cross-script claim survives intact,
+   and explicitly frames the section's layered v19 / v20 / v22
+   / v24 / v26 narrative as read in the post-v28 register with
+   leave-one-out held-out validation as the fifth discipline-
+   protecting pillar.
+4. **§5.4 Cross-script CHIC limitations** — extended the
+   chic-v5 tier-2 candidates limitation entry with a per-
+   candidate post-chic-v11 ranking (`#032 > #001 ≈ #012` on
+   within-polecat-scope mechanical evidence: cross-pool L3
+   rejects #001 / #012's glide vote at 3 of 4 LMs, weakly
+   corroborates #032's stop vote at 2 of 4 LMs including the
+   chic-v5 default Eteocretan plus Etruscan; chic-v6 ku-pa-
+   family lift contextually corroborated on both sides for
+   `#032 → ki`); added a v28 LA-side LOO limitation entry
+   parallel to the chic-v9 entry (full per-line decomposition;
+   L4 exclusion as circular by construction in direct symmetry
+   with chic-v9; v21 Eteocretan LM choice as direct symmetry
+   with chic-v9; small-N caveat; the structural-vs-CHIC-
+   specific resolution); added a chic-v11 axis-restricted-
+   evidence limitation entry (cross-pool L3 is L3-only, not
+   full L1+L2+L3; even all-4-pools-agree L3 wouldn't lift the
+   framework-level chic-v9 verdict; ku-pa context inspection
+   is contextual corroboration of one chic-v6 verification-
+   line hit, not framework-level validation; the chic-v11
+   deliverable is per-candidate refinement of the chic-v9
+   generic downgrade, not a lift).
+5. **§6 Conclusion** — extended the framework's null-findings
+   enumeration to include v28's 33.3% / 0/3 verdict alongside
+   chic-v9's 20.0% / 0/3 (the two LOO verdicts now cited
+   symmetrically); restructured the Cross-script extension
+   subsection to add a v28 LA-side LOO paragraph (parallel to
+   the existing chic-v9 paragraph), a chic-v11 per-candidate
+   refinement paragraph (asymmetric `#032 > #001 ≈ #012`
+   framing within the chic-v9 generic downgrade), and updated
+   the cross-script header from "(chic-v0..v9)" to
+   "(chic-v0..v11) and the symmetric Linear A LOO companion
+   (v28)"; added a new "**Five discipline-protecting pillars**"
+   subsection at the end of §6 enumerating (i) per-surface
+   coherence (v13), (ii) per-inscription cascade-candidate
+   external validation (v19/v20), (iii) population-level
+   scholar comparison (v22/v24), (iv) cross-pool reproduction +
+   leaderboard top-K mechanical verification with sign-level
+   inverse-verification companion (v24/v26/chic-v6), (v) **leave-
+   one-out held-out validation against known anchors on both
+   scripts** (chic-v9/v28). Each pillar paragraph names the
+   failure mode it catches and cites the load-bearing
+   quantitative result.
+6. **§7 Three-sentence reading test** — restructured for the
+   post-v28 + chic-v11 register per the v29 brief. Sentence 2
+   now reads explicitly "**Per-sign decipherment is unsupported
+   on either script, and the framework's per-sign mechanical
+   recovery on known anchors via L1+L2+L3 is at chance baseline
+   on both scripts (CHIC 20%, Linear A 33%); per-sign value-
+   extraction proposals from chic-v5 / its LA analog are
+   downgraded accordingly**", threading both LOO verdicts
+   (chic-v9 + v28) through the negative-validation evidence
+   and noting the structural-vs-CHIC-specific resolution as
+   established by the +13.3 percentage-point cross-script
+   delta; sentence 3 restructured to lead on the **five
+   discipline-protecting pillars** framing as the
+   methodological contribution, with chic-v11's per-candidate
+   refinement (`#032 > #001 ≈ #012`) called out within the
+   chic-v9 generic downgrade. Updated the canonical-reading-
+   test lineage line to enumerate v29 (mg-a1e2) as the post-
+   v28 + chic-v11 polish pass.
+7. **Cross-script methodological synthesis subsection** —
+   updated the section's lead to mention v28 + chic-v11
+   symmetrically with chic-v9; preserved the chic-v9 LOO
+   bullet but added a v28 cross-script-symmetry framing.
+8. **Appendix A result-file index** — added rows for chic-v9
+   (mg-18cb, `chic_v9_loo_validation.md`), v28 (mg-4a7b,
+   `v28_la_loo_validation.md`), and chic-v11 (mg-d69c,
+   `chic_v11_cross_pool_l3.md`, `chic_v11_032_ku_pa_context.md`).
+   The per-ticket merge-notes paragraph that follows the table
+   updated to span `mg-1c8c` (SigLA corpus ingest) through
+   `mg-d69c` (chic-v11) with v29 (mg-a1e2) added to the
+   editorial-only-pass enumeration.
+
+### Audit-of-the-audit on v28's polecat updates
+
+v28's polecat-incremental edits to `findings_summary.md` were
+audited against `results/v28_la_loo_validation.md`:
+
+- 7/21 = 33.3% aggregate LOO accuracy ✓ (matches the result file's
+  "Aggregate accuracy" headline section)
+- Chance baseline ~16.7% for 6-class taxonomy ✓
+- chic-v9 (CHIC-side) aggregate 20.0%; cross-script delta +13.3% ✓
+- Tier breakdown 3 LOO tier-2 / 11 tier-3 / 7 tier-4 / 0 untiered ✓
+- Per-line L1=7/21=33.3%, L2=7/21=33.3%, L3=2/21=9.5% ✓
+- Cross-script per-line deltas +13.3% / +13.3% / +4.5% ✓
+- LOO tier-2 0/3 correct ✓
+- The 3 LA-side LOO tier-2 anchors named (`AB06 = na`/nasal →
+  framework stop; `AB08 = a`/vowel → framework stop;
+  `AB27 = re`/liquid → framework nasal) match the per-anchor
+  table ✓
+- L4 exclusion rationale (LB-carryover anchors derive from
+  Linear B paleographic similarity; including L4 would inflate
+  accuracy by construction) consistent with chic-v9's L4-
+  exclusion rationale on the CHIC side ✓
+- L3 ⚠ marker for 2/21 cases where the held-out anchor's class
+  has no other representative in the rebuilt 20-anchor candidate-
+  value pool (AB09 = se / fricative; AB57 = ja / glide) matches
+  the per-anchor table ✓
+- v21 Eteocretan LM choice for L3 (in direct symmetry with
+  chic-v9) consistent with the result file's "LM choice for L3"
+  subsection ✓
+- Determinism claim (no RNG; sha256-keyed permutation
+  construction; same inputs → byte-identical output) consistent
+  with chic-v5 / chic-v9 / v28 build scripts ✓
+
+Conclusion: v28 polecat-incremental edits required no
+correction. v29 polish layered on top of them without amendment
+to the v28 subsection itself.
+
+### Audit-of-the-audit on chic-v11's polecat updates
+
+chic-v11's polecat-incremental edits to `findings_summary.md`
+were audited against `results/chic_v11_cross_pool_l3.md` and
+`results/chic_v11_032_ku_pa_context.md`:
+
+Cross-pool L3 robustness (12 cells = 3 candidates × 4 LMs):
+
+- `#001 → wa`/glide: aquitanian/etruscan/toponym all vote stop
+  (winning value `ta` / `ta` / `ta`); eteocretan votes glide
+  (winning value `wa`). Verdict: 3/4 stop, mostly LM-robust on
+  stop, disagrees with chic-v5 glide. ✓
+- `#012 → wa`/glide: aquitanian votes nasal (winning value
+  `me`); etruscan votes stop (winning value `te`); toponym
+  votes stop (winning value `de`); eteocretan votes glide
+  (winning value `wa`). Verdict: 2/4 stop, weak agreement,
+  disagrees with chic-v5 glide. ✓
+- `#032 → ki`/stop: aquitanian votes glide (winning value
+  `ja`); etruscan votes stop (winning value `ti`); toponym
+  votes nasal (winning value `me`); eteocretan votes stop
+  (winning value `ki` — byte-identical to chic-v5). Verdict:
+  2/4 stop, weak agreement, agrees with chic-v5 stop. ✓
+
+#032 ku-pa context inspection:
+
+- 4 source Linear A tablets all metadata-confirmed as `genre_hint
+  = accountancy`, `support = tablet`, `period = LM IB`,
+  `site = Haghia Triada`: HT 1, HT 16, HT 102, HT 110a ✓
+- 4 ku-pa-family scholar entries (`kupa3_HT1`, `kupa_HT16`,
+  `kapa_HT102`, `kupa_HT110a`) ✓
+- Matched CHIC inscription is CHIC #057 (Knossos, support `bar`,
+  partial transcription confidence) ✓
+- Partial reading rendered under chic-v2 anchors + `#032 → ki`:
+  `wa #029 ki #011 / NUM:10 / #079 ki pa / NUM:20 / i [?:mu]
+  #034 / NUM:20 / #011 #029 #037 / NUM:50` ✓
+- The `(#032, #013)` literal pair sits in the second DIV-bounded
+  segment as `#079 ki pa`, immediately followed (after the next
+  DIV) by `NUM:20` ✓
+- Combined verdict: contextual corroboration of chic-v6
+  mechanical lift specifically for `#032 → ki`, not framework-
+  level validation; the chic-v9 framework-level negative
+  (LOO accuracy 20.0% / 0/3 tier-2 correct) stands ✓
+
+Determinism claim (no RNG; sha256-keyed permutation
+construction inherited from chic-v5; byte-identical re-runs)
+consistent with the chic-v11 build script ✓.
+
+Conclusion: chic-v11 polecat-incremental edits required no
+correction. v29 polish layered on top of them without
+amendment to the chic-v11 subsection itself.
+
+### Three-sentence reading test (§7) — post-v28 + chic-v11 register
+
+The §7 reading test has been restructured per the v29 brief:
+
+1. **What the framework detects (population level, both
+   scripts).** Population-level kinship detection across two
+   undeciphered Cretan scripts; per-pool gate-magnitude
+   ordering tracking a-priori genealogical relatedness; cross-
+   script Spearman ρ=+1.000 on per-pool right-tail gap; mean
+   top-20 substrate-surface overlap 0.47.
+2. **Per-sign decipherment is unsupported on either script,
+   and the framework's per-sign mechanical recovery on known
+   anchors via L1+L2+L3 is at chance baseline on both scripts
+   (CHIC 20%, Linear A 33%); per-sign value-extraction
+   proposals from chic-v5 / its LA analog are downgraded
+   accordingly.** chic-v9 places the chic-v5 framework's
+   mechanical recovery on the 20 known chic-v2 anchors at
+   20.0% aggregate / 0/3 on the tier-2 unanimity criterion;
+   v28 places the same framework's mechanical recovery on the
+   21 LB-carryover anchors at 33.3% aggregate / 0/3 on the
+   tier-2 unanimity criterion; both in the low-agreement /
+   not-validated band; +13.3 percentage-point cross-script
+   delta within the regime that establishes the at-chance
+   per-sign behaviour as structural rather than CHIC-corpus-
+   specific. The 3 chic-v5 tier-2 candidates downgrade to
+   "candidate proposals contingent on the framework's
+   currently-low validation accuracy on both scripts", with
+   chic-v11's per-candidate refinement noting `#032 > #001 ≈
+   #012` on within-polecat-scope mechanical evidence
+   (cross-pool L3 + chic-v6 ku-pa context).
+3. **The cross-script methodological contribution: five
+   discipline-protecting pillars.** (i) per-surface coherence
+   (v13); (ii) per-inscription cascade-candidate external
+   validation (v19/v20); (iii) population-level scholar
+   comparison (v22/v24); (iv) cross-pool reproduction +
+   leaderboard top-K mechanical verification with sign-level
+   inverse-verification companion (v24/v26/chic-v6); (v)
+   leave-one-out held-out validation against known anchors on
+   both scripts (chic-v9/v28). Each pillar catches a different
+   failure mode; their conjunction is the methodology paper's
+   central contribution. The framework's negative findings
+   across all five pillars constitute a transferable cross-
+   script methodology that any research group testing a
+   substrate-language hypothesis on an undeciphered script can
+   adopt.
+
+### Acceptance gate — v29 brief
+
+Acceptance criteria from the v29 (mg-a1e2) brief, all met by this
+ticket:
+
+- `docs/findings_summary.md` audited end-to-end with v28 + chic-v11
+  findings integrated. ✓
+- §4.6 / §4.7 symmetric "structural at-chance LOO" framing:
+  §4.6 has a post-v28 framing intro parallel to §4.7's post-chic-v9
+  framing intro; both subsections have parallel LOO + verification
+  + bilingual + (where applicable) candidate-specific evidence
+  subsections. ✓
+- §6 Conclusion frames LOO as fifth discipline-protecting pillar:
+  added a new "**Five discipline-protecting pillars**" subsection
+  at the end of §6 enumerating v13/v19+v20/v22+v24/v24+v26+chic-v6/
+  chic-v9+v28 with each pillar's failure mode named explicitly. ✓
+- §7 Three-sentence reading test in post-v28 + chic-v11 register:
+  sentence 2 leads with "the framework's per-sign mechanical
+  recovery on known anchors via L1+L2+L3 is at chance baseline on
+  both scripts (CHIC 20%, Linear A 33%)" verbatim from the brief;
+  sentence 3 leads with the five-pillars framing. ✓
+- findings.md appended (this entry). ✓
+- Audit-of-the-audit results documented in this entry: v28's
+  polecat updates audited against `results/v28_la_loo_validation.md`
+  (no drift); chic-v11's polecat updates audited against
+  `results/chic_v11_cross_pool_l3.md` and
+  `results/chic_v11_032_ku_pa_context.md` (no drift). ✓
+
+### Out of scope for v29
+
+Per the v29 brief and AGENTS.md polecat scope:
+
+- **Journal submission** (LaTeX, target-venue, peer review). Out
+  of polecat scope.
+- **Domain-expert review** of the chic-v5 tier-2 candidates and
+  chic-v6 / v26 mechanical-verification matched enumerations.
+  Out of polecat scope; remains the natural follow-up step that
+  v28 + chic-v9 + chic-v11 do not substitute for.
+- **Indus Valley / Rongorongo / Proto-Elamite extensions**.
+  Pivot — separate program of work.
+- **Olivier-Godart paleographic deep-dive on the 3 unknown
+  chic-v5 tier-2 candidates.** Borderline polecat-scope; would
+  reactivate L4 (cross-script paleographic) which is silent for
+  all 76 unknowns by chic-v1 construction.
+- **CHIC corpus expansion** (the missing 29 of 331 Olivier-Godart
+  catalog entries; the candidate-dual-script CMS sealstone
+  catalog ingest). Would reactivate L5 (LA-constraint, currently
+  silent by chic-v8 corpus-state observation) and could raise
+  borderline-FAIL CHIC right-tail gate signals (toponym at
+  p=0.435) above α=0.05.
+- **Cleanup tickets.** Cosmetic.
+
+### Determinism
+
+v29 is editorial-only (no harness commits, no result files
+generated, no script changes). Determinism claims of v28
+(`scripts/build_linear_a_v28.py`) and chic-v11
+(`scripts/build_chic_v11.py`) inherit unchanged: no RNG; the
+L3 control-phoneme selection inherits chic-v5's sha256-keyed
+permutation construction; same inputs → byte-identical output.
+
+### Citations
+
+- Olivier, J.-P. & Godart, L. (1996). *Corpus Hieroglyphicarum
+  Inscriptionum Cretae* (Études Crétoises 31). Paris.
+- Salgarella, E. (2020). *Aegean Linear Script(s).* Cambridge.
+- Ventris, M. & Chadwick, J. (1956). *Documents in Mycenaean
+  Greek.* Cambridge.
+- Younger, J. G. (online). *Linear A texts in phonetic
+  transcription* (retrieved 2026-05-04). Includes the `ku-pa`
+  / `ku-pa3` / `ka-pa` Hagia Triada accountancy entries cited
+  in the chic-v11 #032 ku-pa context inspection.
+- Duhoux, Y. (1982). *L'Étéocrétois: les textes — la langue.*
+  Amsterdam: J. C. Gieben.
+- Trask, R. L. (1997). *The History of Basque.* London: Routledge.
+- Bonfante, G. & Bonfante, L. (2002). *The Etruscan Language: An
+  Introduction* (revised ed.). Manchester / New York.
+- Beekes, R. S. P. (2010). *Etymological Dictionary of Greek*,
+  vol. 2 appendix on Pre-Greek substrate. Leiden: Brill.
