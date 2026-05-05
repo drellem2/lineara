@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_zahar_ARKH_2_14_19
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''zahar'' pinned to ARKH 2 tokens [14..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: zahar
+  phonemes:
+  - z
+  - a
+  - h
+  - a
+  - r
+  gloss_hint: old
+  citation: Trask 1997 ch. 3; cf. Aq. SAHAR-.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 19
+  sign_to_phoneme:
+    AB79: z
+    A301: a
+    AB09: h
+    AB45: a
+    AB118: r

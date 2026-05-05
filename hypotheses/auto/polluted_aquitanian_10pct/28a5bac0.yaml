@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_arreba_KN_Zf_13_3_8
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''arreba'' pinned to KN Zf 13 tokens [3..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: arreba
+  phonemes:
+  - a
+  - r
+  - r
+  - e
+  - b
+  - a
+  gloss_hint: sister (of a man)
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 8
+  sign_to_phoneme:
+    AB41: a
+    AB07: r
+    A301: r
+    AB39: e
+    AB44: b
+    AB03: a

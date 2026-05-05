@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_idiar_KN_Zc_7_15_19
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''idiar'' pinned to KN Zc 7 tokens [15..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: idiar
+  phonemes:
+  - i
+  - d
+  - i
+  - a
+  - r
+  gloss_hint: ox-related (proposed)
+  citation: Gorrochategui 1984, Aq. IDI- element; Basque idi 'ox'.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 19
+  sign_to_phoneme:
+    AB31: i
+    AB60: d
+    AB08: i
+    AB06: a
+    AB24: r

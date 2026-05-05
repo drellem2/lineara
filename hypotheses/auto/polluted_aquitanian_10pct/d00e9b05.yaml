@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_gau_ARKH_5_0_2
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''gau'' pinned to ARKH 5 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: gau
+  phonemes:
+  - g
+  - a
+  - u
+  gloss_hint: night
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB08: g
+    AB51: a
+    AB30: u

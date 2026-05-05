@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_gizon_KN_Zc_7_16_20
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''gizon'' pinned to KN Zc 7 tokens [16..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: gizon
+  phonemes:
+  - g
+  - i
+  - z
+  - o
+  - n
+  gloss_hint: man
+  citation: Trask 1997 ch. 3; cf. Aq. CISON.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 16
+  - 20
+  sign_to_phoneme:
+    AB60: g
+    AB08: i
+    AB06: z
+    AB24: o
+    AB40: n

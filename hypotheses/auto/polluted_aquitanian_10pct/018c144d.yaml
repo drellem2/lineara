@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_senben_KN_Zf_13_7_12
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''senben'' pinned to KN Zf 13 tokens [7..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: senben
+  phonemes:
+  - s
+  - e
+  - n
+  - b
+  - e
+  - n
+  gloss_hint: son (variant)
+  citation: Gorrochategui 1984; variant of SEMBE.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 7
+  - 12
+  sign_to_phoneme:
+    AB44: s
+    AB03: e
+    AB57: n
+    AB59: b
+    AB53: e
+    AB09: n

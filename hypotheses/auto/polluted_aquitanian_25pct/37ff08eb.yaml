@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_izotz_HT_104_19_22
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''izotz'' pinned to HT 104 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: izotz
+  phonemes:
+  - i
+  - z
+  - o
+  - tz
+  gloss_hint: ice, frost
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 104
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB03: i
+    AB01: z
+    AB58: o
+    AB37: tz

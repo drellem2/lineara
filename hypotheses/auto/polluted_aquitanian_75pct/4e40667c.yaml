@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_gari_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''gari'' pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: gari
+  phonemes:
+  - g
+  - a
+  - r
+  - i
+  gloss_hint: wheat
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: g
+    AB58: a
+    AB47: r
+    AB04: i

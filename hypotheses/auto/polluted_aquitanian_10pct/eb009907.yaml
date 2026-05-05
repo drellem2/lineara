@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_mendi_HT_90_14_18
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''mendi'' pinned to HT 90 tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: mendi
+  phonemes:
+  - m
+  - e
+  - n
+  - d
+  - i
+  gloss_hint: mountain
+  citation: Trask 1997 ch. 3 (Basque mendi).
+equation:
+  inscription_id: HT 90
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB41: m
+    AB26: e
+    AB80: n
+    AB53: d
+    AB66: i

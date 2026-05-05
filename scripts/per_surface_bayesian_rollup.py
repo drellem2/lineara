@@ -84,6 +84,14 @@ _SUBSTRATE_POOLS: tuple[str, ...] = (
     "linear_b_carryover",
     "polluted_aquitanian",
     "greek_polluted_aquitanian",
+    # mg-9f18 (harness v18): pollution-level sweep variants and
+    # toponym bigram-control re-evaluation pool. The toponym pool
+    # itself stays in the substrate list and gets paired against
+    # `control_toponym_bigram` in the v18 dedicated analysis script;
+    # we don't add it here a second time.
+    "polluted_aquitanian_10pct",
+    "polluted_aquitanian_25pct",
+    "polluted_aquitanian_75pct",
 )
 _DEFAULT_NMIN = 10
 _DEFAULT_TOP_PER_POOL = 50
@@ -106,6 +114,16 @@ _DEFAULT_LANGUAGE_DISPATCH: dict[str, str] = {
     "control_polluted_aquitanian": "basque",
     "greek_polluted_aquitanian": "basque",
     "control_greek_polluted_aquitanian": "basque",
+    # mg-9f18 (harness v18): pollution-level sweep variants and
+    # toponym bigram-preserving control. Same Basque LM as the
+    # underlying substrates.
+    "polluted_aquitanian_10pct": "basque",
+    "control_polluted_aquitanian_10pct": "basque",
+    "polluted_aquitanian_25pct": "basque",
+    "control_polluted_aquitanian_25pct": "basque",
+    "polluted_aquitanian_75pct": "basque",
+    "control_polluted_aquitanian_75pct": "basque",
+    "control_toponym_bigram": "basque",
 }
 
 
@@ -235,14 +253,22 @@ def build_v8_records(
     score_rows: dict[tuple[str, str], dict],
     pool_phonemes: dict[str, list[list[str]]],
     language_dispatch: dict[str, str],
+    control_pool: str | None = None,
 ) -> list[dict]:
     """Return one paired_diff record per substrate v8 candidate that has
     an exact-window control match in ``control_<pool>``. Each record
     carries the *substrate* and *control* surfaces so per-surface
     aggregation can read both sides off a single record.
+
+    ``control_pool`` defaults to ``f"control_{pool}"`` — the standard
+    matched-control naming. Override it (mg-9f18 / v18 toponym bigram
+    re-evaluation) to pair the substrate against a non-default control,
+    e.g. ``pool='toponym', control_pool='control_toponym_bigram'``.
     """
+    if control_pool is None:
+        control_pool = f"control_{pool}"
     sub_path = auto_dir / f"{pool}.manifest.jsonl"
-    ctrl_path = auto_dir / f"control_{pool}.manifest.jsonl"
+    ctrl_path = auto_dir / f"{control_pool}.manifest.jsonl"
     sub_rows = _load_manifest(sub_path)
     ctrl_rows = _load_manifest(ctrl_path)
     if not sub_rows or not ctrl_rows:
@@ -254,9 +280,9 @@ def build_v8_records(
         by_window[key].append(row)
 
     sub_phon = pool_phonemes.get(pool, [])
-    ctrl_phon = pool_phonemes.get(f"control_{pool}", [])
+    ctrl_phon = pool_phonemes.get(control_pool, [])
     sub_lang = language_dispatch.get(pool, "")
-    ctrl_lang = language_dispatch.get(f"control_{pool}", sub_lang)
+    ctrl_lang = language_dispatch.get(control_pool, sub_lang)
 
     records: list[dict] = []
     for sub in sub_rows:
@@ -292,7 +318,7 @@ def build_v8_records(
             {
                 "kind": "v8",
                 "pool": pool,
-                "control_pool": f"control_{pool}",
+                "control_pool": control_pool,
                 "substrate_surfaces": (sub["pool_entry_surface"],),
                 "control_surfaces": (best["pool_entry_surface"],),
                 "substrate_score": sub_score,
@@ -316,13 +342,19 @@ def build_v9_records(
     auto_dir: Path,
     score_rows: dict[tuple[str, str], dict],
     language_dispatch: dict[str, str],
+    control_pool: str | None = None,
 ) -> list[dict]:
     """Return one paired_diff record per substrate v9 signature that has
     a matched control (paired_substrate_hash). Carries both substrate
     and control root_surfaces.
+
+    ``control_pool`` defaults to ``f"control_{pool}"``; the same override
+    semantics apply as :func:`build_v8_records`.
     """
+    if control_pool is None:
+        control_pool = f"control_{pool}"
     sub_path = auto_dir / f"{pool}.manifest.jsonl"
-    ctrl_path = auto_dir / f"control_{pool}.manifest.jsonl"
+    ctrl_path = auto_dir / f"{control_pool}.manifest.jsonl"
     sub_rows = _load_manifest(sub_path)
     ctrl_rows = _load_manifest(ctrl_path)
     if not sub_rows or not ctrl_rows:
@@ -333,7 +365,7 @@ def build_v9_records(
         ctrl_by_paired[row["paired_substrate_hash"]] = row
 
     sub_lang = language_dispatch.get(pool, "")
-    ctrl_lang = language_dispatch.get(f"control_{pool}", sub_lang)
+    ctrl_lang = language_dispatch.get(control_pool, sub_lang)
 
     records: list[dict] = []
     for sub in sub_rows:
@@ -351,7 +383,7 @@ def build_v9_records(
             {
                 "kind": "v9",
                 "pool": pool,
-                "control_pool": f"control_{pool}",
+                "control_pool": control_pool,
                 "substrate_surfaces": tuple(sub["root_surfaces"]),
                 "control_surfaces": tuple(ctrl["root_surfaces"]),
                 "substrate_score": sub_score,

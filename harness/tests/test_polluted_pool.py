@@ -74,7 +74,10 @@ sys.path.insert(0, str(_REPO_ROOT))
 sys.path.insert(0, str(_REPO_ROOT / "scripts"))
 
 from scripts.build_polluted_pool import (  # noqa: E402
+    _conjectural_lengths,
+    _n_conjectural_for_ratio,
     _phoneme_class,
+    _polluted_pool_name,
     _seed_for,
     _spans_two_classes,
     build_polluted_pool,
@@ -616,6 +619,218 @@ class CrossLanguagePollutedPoolBuilderTest(unittest.TestCase):
         warning_pos = text.lower().find("test artifact")
         algo_pos = text.find("Construction algorithm")
         self.assertLess(warning_pos, algo_pos)
+
+
+class PollutionLevelSweepBuilderTest(unittest.TestCase):
+    """v18 (mg-9f18) pollution-level sweep variants. Smoke-tests the
+    ``--ratio-pct`` flag on the same fixture used by
+    :class:`PollutedPoolBuilderTest`; verifies pool naming, conjectural
+    counts, length-distribution preservation under cyclic indexing,
+    and determinism across re-builds.
+    """
+
+    def setUp(self) -> None:
+        self.tmp = Path(tempfile.mkdtemp(prefix="mg_9f18_sweep_"))
+        (self.tmp / "schemas").mkdir(parents=True)
+        shutil.copy(_POOL_SCHEMA_PATH, self.tmp / "schemas" / "pool.v1.schema.json")
+        self.substrate = _smoke_substrate_pool()
+        self.substrate_path = self.tmp / "aquitanian.yaml"
+        self.substrate_path.write_text(
+            yaml.safe_dump(self.substrate, sort_keys=False, allow_unicode=True),
+            encoding="utf-8",
+        )
+
+    def tearDown(self) -> None:
+        shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def _load(self, path: Path) -> dict:
+        return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+    def test_ratio_to_n_conjectural(self) -> None:
+        # 6 real entries × ratio / (100 - ratio).
+        # 10pct → round(6 * 10/90) = round(0.667) = 1.
+        # 25pct → round(6 * 25/75) = round(2.0) = 2.
+        # 50pct → round(6 * 50/50) = 6.
+        # 75pct → round(6 * 75/25) = 18.
+        n_real = len(self.substrate["entries"])
+        self.assertEqual(_n_conjectural_for_ratio(n_real, 10), 1)
+        self.assertEqual(_n_conjectural_for_ratio(n_real, 25), 2)
+        self.assertEqual(_n_conjectural_for_ratio(n_real, 50), 6)
+        self.assertEqual(_n_conjectural_for_ratio(n_real, 75), 18)
+
+    def test_ratio_oob_raises(self) -> None:
+        with self.assertRaises(ValueError):
+            _n_conjectural_for_ratio(10, -5)
+        with self.assertRaises(ValueError):
+            _n_conjectural_for_ratio(10, 100)
+        with self.assertRaises(ValueError):
+            _n_conjectural_for_ratio(10, 150)
+
+    def test_pool_name_includes_ratio_suffix(self) -> None:
+        self.assertEqual(
+            _polluted_pool_name("aquitanian", None, 10),
+            "polluted_aquitanian_10pct",
+        )
+        self.assertEqual(
+            _polluted_pool_name("aquitanian", None, 75),
+            "polluted_aquitanian_75pct",
+        )
+        # Default (no ratio) preserves v14 naming.
+        self.assertEqual(
+            _polluted_pool_name("aquitanian", None, None),
+            "polluted_aquitanian",
+        )
+
+    def test_conjectural_lengths_cycle_through_real(self) -> None:
+        # 6 real entries with lengths [3, 4, 2, 6, 4, 3].
+        real_lengths = [
+            len(e["phonemes"]) for e in self.substrate["entries"]
+        ]
+        # 1 conjectural → first real's length.
+        self.assertEqual(
+            _conjectural_lengths(self.substrate, 1), real_lengths[:1]
+        )
+        # 6 conjecturals (50%) → exact match to real lengths.
+        self.assertEqual(
+            _conjectural_lengths(self.substrate, 6), real_lengths
+        )
+        # 18 conjecturals (75% on 6 reals) = 3× cycle.
+        cycled = _conjectural_lengths(self.substrate, 18)
+        self.assertEqual(cycled, real_lengths * 3)
+
+    def test_build_10pct_variant(self) -> None:
+        summary = build_polluted_pool(
+            "aquitanian", self.tmp, ratio_pct=10
+        )
+        self.assertEqual(summary["polluted_pool"], "polluted_aquitanian_10pct")
+        self.assertEqual(summary["ratio_pct"], 10)
+        # 6 real + 1 conjectural = 7 entries.
+        self.assertEqual(summary["n_real"], 6)
+        self.assertEqual(summary["n_conjectural"], 1)
+        self.assertEqual(summary["n_entries"], 7)
+        # File layout: ratio-suffixed name.
+        self.assertTrue(
+            (self.tmp / "polluted_aquitanian_10pct.yaml").exists(),
+            "v18 pollution-sweep must write the ratio-suffixed YAML",
+        )
+
+    def test_build_25pct_variant(self) -> None:
+        summary = build_polluted_pool(
+            "aquitanian", self.tmp, ratio_pct=25
+        )
+        self.assertEqual(summary["polluted_pool"], "polluted_aquitanian_25pct")
+        self.assertEqual(summary["n_real"], 6)
+        self.assertEqual(summary["n_conjectural"], 2)
+        self.assertEqual(summary["n_entries"], 8)
+
+    def test_build_75pct_variant(self) -> None:
+        summary = build_polluted_pool(
+            "aquitanian", self.tmp, ratio_pct=75
+        )
+        self.assertEqual(summary["polluted_pool"], "polluted_aquitanian_75pct")
+        self.assertEqual(summary["n_real"], 6)
+        # 75% of 24 total = 18 conjectural.
+        self.assertEqual(summary["n_conjectural"], 18)
+        self.assertEqual(summary["n_entries"], 24)
+        # Length distribution under 75% pollution: 3× the real pool's.
+        polluted = self._load(self.tmp / "polluted_aquitanian_75pct.yaml")
+        sub_lens = Counter(len(e["phonemes"]) for e in self.substrate["entries"])
+        pol_lens = Counter(len(e["phonemes"]) for e in polluted["entries"])
+        for L, n in sub_lens.items():
+            self.assertEqual(
+                pol_lens[L],
+                4 * n,
+                f"length {L}: substrate has {n}, 75pct should have "
+                f"{4 * n} (1× real + 3× cycled conjectural), got "
+                f"{pol_lens[L]}",
+            )
+
+    def test_ratio_variants_have_disjoint_seeds_from_v14(self) -> None:
+        v14_seed = _seed_for("polluted_aquitanian")
+        seeds = {pct: _seed_for(f"polluted_aquitanian_{pct}pct") for pct in (10, 25, 75)}
+        # v14 50% pool's seed must not match any of the ratio variants
+        # (otherwise the variants would draw the same conjectural
+        # surfaces in the same order — minus length mismatches — which
+        # would defeat the sweep's purpose).
+        for pct, seed in seeds.items():
+            self.assertNotEqual(
+                v14_seed,
+                seed,
+                f"v14 50% seed collides with {pct}% sweep seed",
+            )
+        # Each of the three sweep variants also has a distinct seed
+        # from its peers.
+        seed_values = list(seeds.values())
+        self.assertEqual(len(set(seed_values)), len(seed_values))
+
+    def test_ratio_variant_determinism(self) -> None:
+        build_polluted_pool("aquitanian", self.tmp, ratio_pct=25)
+        path = self.tmp / "polluted_aquitanian_25pct.yaml"
+        first = path.read_bytes()
+        path.unlink()
+        build_polluted_pool("aquitanian", self.tmp, ratio_pct=25)
+        second = path.read_bytes()
+        self.assertEqual(
+            first,
+            second,
+            "ratio-variant polluted YAML must be byte-identical "
+            "across rebuilds",
+        )
+
+    def test_ratio_variant_provenance_tagging(self) -> None:
+        build_polluted_pool("aquitanian", self.tmp, ratio_pct=25)
+        polluted = self._load(self.tmp / "polluted_aquitanian_25pct.yaml")
+        provenances = Counter(e.get("provenance") for e in polluted["entries"])
+        self.assertEqual(provenances["real"], 6)
+        self.assertEqual(provenances["conjectural"], 2)
+        # Conjectural entries match the v14 region/semantic conventions.
+        for e in polluted["entries"]:
+            if e.get("provenance") == "conjectural":
+                self.assertEqual(e["region"], "aquitania")
+                self.assertNotIn("semantic_field", e)
+
+
+class CommittedPollutionLevelSweepTest(unittest.TestCase):
+    """Sanity check on the committed
+    pools/polluted_aquitanian_{10,25,75}pct.yaml (mg-9f18, harness
+    v18); only runs if all three exist."""
+
+    def test_committed_10pct(self) -> None:
+        self._check("polluted_aquitanian_10pct", expected_real=153, expected_conjectural=17)
+
+    def test_committed_25pct(self) -> None:
+        self._check("polluted_aquitanian_25pct", expected_real=153, expected_conjectural=51)
+
+    def test_committed_75pct(self) -> None:
+        self._check("polluted_aquitanian_75pct", expected_real=153, expected_conjectural=459)
+
+    def _check(self, pool_name: str, expected_real: int, expected_conjectural: int) -> None:
+        path = _REPO_ROOT / "pools" / f"{pool_name}.yaml"
+        if not path.exists():
+            self.skipTest(
+                f"{path} not built; run scripts/build_polluted_pool.py "
+                f"--ratio-pct <N>"
+            )
+        polluted = yaml.safe_load(path.read_text(encoding="utf-8"))
+        self.assertEqual(
+            len(polluted["entries"]),
+            expected_real + expected_conjectural,
+            f"{pool_name} must have {expected_real + expected_conjectural} entries",
+        )
+        provenances = Counter(e.get("provenance") for e in polluted["entries"])
+        self.assertEqual(provenances["real"], expected_real)
+        self.assertEqual(provenances["conjectural"], expected_conjectural)
+        # No duplicate surfaces.
+        surfaces = [e["surface"] for e in polluted["entries"]]
+        self.assertEqual(len(surfaces), len(set(surfaces)))
+        # Schema valid.
+        schema = json.loads(_POOL_SCHEMA_PATH.read_text(encoding="utf-8"))
+        Draft202012Validator(schema).validate(polluted)
+        # Conjectural region/semantic conventions.
+        for entry in polluted["entries"]:
+            if entry.get("provenance") == "conjectural":
+                self.assertEqual(entry["region"], "aquitania")
+                self.assertNotIn("semantic_field", entry)
 
 
 class CommittedGreekPollutedPoolTest(unittest.TestCase):

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_hil_HT_102_21_23
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''hil'' pinned to HT 102 tokens [21..23].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: hil
+  phonemes:
+  - h
+  - i
+  - l
+  gloss_hint: dead, kill
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 102
+  span:
+  - 21
+  - 23
+  sign_to_phoneme:
+    AB07: h
+    AB53: i
+    AB06: l

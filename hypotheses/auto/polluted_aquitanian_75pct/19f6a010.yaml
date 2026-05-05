@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_tolose_KN_Zc_6_19_25
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''tolose'' pinned to KN Zc 6 tokens [19..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: tolose
+  phonemes:
+  - t
+  - o
+  - l
+  - o
+  - s
+  - e
+  gloss_hint: fortified town
+  citation: Gorrochategui 1984; cf. toponym Tolosa (modern Toulouse, Tolosa GI).
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 25
+  sign_to_phoneme:
+    AB03: t
+    AB81: o
+    AB55: l
+    AB10: o
+    AB28: s
+    AB79: e

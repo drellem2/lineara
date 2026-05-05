@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_nescato_KN_Zc_7_15_21
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''nescato'' pinned to KN Zc 7 tokens [15..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: nescato
+  phonemes:
+  - n
+  - e
+  - s
+  - c
+  - a
+  - t
+  - o
+  gloss_hint: little girl
+  citation: Gorrochategui 1984; diminutive of nesca.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 21
+  sign_to_phoneme:
+    AB31: n
+    AB60: e
+    AB08: s
+    AB06: c
+    AB24: a
+    AB40: t
+    AB39: o

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_nesca_KN_Zf_13_12_16
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''nesca'' pinned to KN Zf 13 tokens [12..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: nesca
+  phonemes:
+  - n
+  - e
+  - s
+  - c
+  - a
+  gloss_hint: girl
+  citation: Gorrochategui 1984, Aq. NESCATO; Basque neska (Trask 1997 ch. 3).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 16
+  sign_to_phoneme:
+    AB09: n
+    AB04: e
+    AB53: s
+    AB23: c
+    AB08: a

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_ilur_HT_115a_9_12
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''ilur'' pinned to HT 115a tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: ilur
+  phonemes:
+  - i
+  - l
+  - u
+  - r
+  gloss_hint: dark (variant of ilun)
+  citation: Gorrochategui 1984, Aq. ILUR- variant; cf. toponym Iluro (Oloron).
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB53: i
+    AB59: l
+    AB80: u
+    AB55: r

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_idiar_HT_Zb_159_1_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''idiar'' pinned to HT Zb 159 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: idiar
+  phonemes:
+  - i
+  - d
+  - i
+  - a
+  - r
+  gloss_hint: ox-related (proposed)
+  citation: Gorrochategui 1984, Aq. IDI- element; Basque idi 'ox'.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB06: i
+    AB55: d
+    AB41: i
+    AB57: a
+    AB09: r

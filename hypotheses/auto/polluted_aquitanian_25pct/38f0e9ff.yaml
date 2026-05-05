@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_sudur_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''sudur'' pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: sudur
+  phonemes:
+  - s
+  - u
+  - d
+  - u
+  - r
+  gloss_hint: nose
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: s
+    AB31: u
+    AB58: d
+    AB80: u
+    AB28: r

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_ume_HT_1_0_2
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''ume'' pinned to HT 1 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: ume
+  phonemes:
+  - u
+  - m
+  - e
+  gloss_hint: child, young
+  citation: Trask 1997 ch. 3; cf. Aq. UMME.
+equation:
+  inscription_id: HT 1
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB78: u
+    AB76: m
+    AB10: e

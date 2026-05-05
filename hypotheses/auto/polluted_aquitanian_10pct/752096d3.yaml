@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_baigor_KN_Zf_13_2_7
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''baigor'' pinned to KN Zf 13 tokens [2..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: baigor
+  phonemes:
+  - b
+  - a
+  - i
+  - g
+  - o
+  - r
+  gloss_hint: red valley
+  citation: Gorrochategui 1984, theonym BAIGORRIX; Basque ibai 'river' + gorri 'red'.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 7
+  sign_to_phoneme:
+    AB24: b
+    AB41: a
+    AB07: i
+    A301: g
+    AB39: o
+    AB44: r

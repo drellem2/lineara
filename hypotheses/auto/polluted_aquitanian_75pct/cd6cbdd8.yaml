@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_ekarri_KN_Zf_13_5_10
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''ekarri'' pinned to KN Zf 13 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: ekarri
+  phonemes:
+  - e
+  - k
+  - a
+  - r
+  - r
+  - i
+  gloss_hint: bring
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    A301: e
+    AB39: k
+    AB44: a
+    AB03: r
+    AB57: r
+    AB59: i

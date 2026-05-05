@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_gatz_HT_104_6_8
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''gatz'' pinned to HT 104 tokens [6..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: gatz
+  phonemes:
+  - g
+  - a
+  - tz
+  gloss_hint: salt
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 104
+  span:
+  - 6
+  - 8
+  sign_to_phoneme:
+    AB81: g
+    AB09: a
+    AB24: tz

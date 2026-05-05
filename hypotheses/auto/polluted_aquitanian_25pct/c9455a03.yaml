@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_ogi_GO_Wc_1a_2_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''ogi'' pinned to GO Wc 1a tokens [2..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: ogi
+  phonemes:
+  - o
+  - g
+  - i
+  gloss_hint: bread
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 2
+  - 4
+  sign_to_phoneme:
+    AB58: o
+    AB80: g
+    AB28: i

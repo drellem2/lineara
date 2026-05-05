@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_bihotz_HT_104_5_9
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''bihotz'' pinned to HT 104 tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: bihotz
+  phonemes:
+  - b
+  - i
+  - h
+  - o
+  - tz
+  gloss_hint: heart
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 104
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB01: b
+    AB81: i
+    AB09: h
+    AB24: o
+    AB37: tz

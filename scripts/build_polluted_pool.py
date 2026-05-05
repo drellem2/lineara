@@ -131,17 +131,36 @@ _StringDateLoader.yaml_implicit_resolvers = {
 }
 
 
-def _polluted_pool_name(base_pool: str, prefix: str | None) -> str:
-    """Compose the polluted-pool name from a base name and an optional prefix.
+def _ratio_suffix(ratio_pct: int | None) -> str:
+    """Suffix for a polluted pool keyed on its conjectural-entry share.
 
-    ``prefix=None`` (v14 default) ⇒ ``polluted_<base>`` (e.g.
-    ``polluted_aquitanian``).
-    ``prefix='greek'`` (v15) ⇒ ``greek_polluted_<base>`` (e.g.
-    ``greek_polluted_aquitanian``).
+    ``ratio_pct=None`` (v14 default) ⇒ no suffix; the polluted pool is
+    the canonical 50% same-distribution pool. Any explicit integer
+    percentage produces ``_<n>pct`` (e.g. 10 → ``_10pct``).
     """
+    if ratio_pct is None:
+        return ""
+    return f"_{ratio_pct}pct"
+
+
+def _polluted_pool_name(
+    base_pool: str,
+    prefix: str | None,
+    ratio_pct: int | None = None,
+) -> str:
+    """Compose the polluted-pool name from a base name, optional prefix,
+    and optional pollution-ratio percentage.
+
+    ``prefix=None, ratio_pct=None`` (v14 default) ⇒ ``polluted_<base>``
+    (e.g. ``polluted_aquitanian``, the canonical 50% same-distribution
+    pool).
+    ``prefix='greek', ratio_pct=None`` (v15) ⇒ ``greek_polluted_<base>``.
+    ``prefix=None, ratio_pct=10`` (v18) ⇒ ``polluted_<base>_10pct``.
+    """
+    suffix = _ratio_suffix(ratio_pct)
     if prefix:
-        return f"{prefix}_polluted_{base_pool}"
-    return f"polluted_{base_pool}"
+        return f"{prefix}_polluted_{base_pool}{suffix}"
+    return f"polluted_{base_pool}{suffix}"
 
 
 def _provenance_tag(prefix: str | None) -> str:
@@ -268,6 +287,33 @@ def _sample_word_from_external_lm(
     return chars
 
 
+def _conjectural_lengths(real_pool: dict, n_conjectural: int) -> list[int]:
+    """Length sequence for ``n_conjectural`` conjecturals, cycling through
+    the real pool's per-entry lengths so the realized length sequence
+    preserves the real pool's length distribution.
+
+    For ``n_conjectural == len(real_pool['entries'])`` this is exactly the
+    v14 behavior: i-th conjectural matches i-th real. For other values
+    (the v18 pollution-level sweep at 10%/25%/75%), we cycle:
+    ``conjectural[i].length = real[i % len(real)].length``. So:
+
+      * 10% (17 conjecturals on a 153-entry pool): the first 17 reals'
+        lengths.
+      * 25% (51 conjecturals): the first 51 reals' lengths.
+      * 50% (153 conjecturals, v14 default): exactly the real pool's
+        lengths.
+      * 75% (459 = 3 × 153 conjecturals): the real pool's lengths
+        repeated three times — exact length-distribution match.
+
+    Lengths within the substrate pool are pre-sorted by entry index, so
+    cycling preserves a deterministic length sequence across re-runs.
+    """
+    real_lengths = [len(e["phonemes"]) for e in real_pool["entries"]]
+    if not real_lengths:
+        return []
+    return [real_lengths[i % len(real_lengths)] for i in range(n_conjectural)]
+
+
 def build_conjectural_entries(
     *,
     base_pool_name: str,
@@ -277,12 +323,20 @@ def build_conjectural_entries(
     provenance_tag: str,
     citation_blurb: str,
     source_lm_path: Path | None = None,
+    n_conjectural: int | None = None,
 ) -> list[dict]:
-    """Generate len(base_pool['entries']) conjectural entries.
+    """Generate ``n_conjectural`` conjectural entries (default: one per
+    real entry, v14 / v15 behavior).
 
-    Each conjectural entry shares its length with the corresponding real
-    entry (so the polluted pool's overall length distribution is exactly
-    2× the real pool's). Phonemes are sampled from either:
+    Each conjectural entry's length matches the corresponding real entry's
+    length under cyclic indexing (see :func:`_conjectural_lengths`); the
+    polluted pool's realized length distribution is therefore exactly
+    ``ceil(n_conjectural / len(real)) ×`` the real pool's distribution at
+    the *first ``n_conjectural`` entries*, which is the real pool's
+    distribution itself when ``n_conjectural`` is a multiple of
+    ``len(real)``.
+
+    Phonemes are sampled from either:
 
       * the real pool's marginal phoneme-frequency histogram
         (``source_lm_path=None``, v14 default); OR
@@ -319,11 +373,14 @@ def build_conjectural_entries(
                 rng=rng,
             )
 
+    if n_conjectural is None:
+        n_conjectural = len(base_pool["entries"])
+    lengths = _conjectural_lengths(base_pool, n_conjectural)
+
     out: list[dict] = []
     seen_conjectural: set[str] = set()
 
-    for idx, real_entry in enumerate(base_pool["entries"]):
-        n = len(real_entry["phonemes"])
+    for idx, n in enumerate(lengths):
         attempts = 0
         bumps = 0
         while True:
@@ -374,12 +431,27 @@ def _dump_yaml(doc: dict) -> str:
     )
 
 
+def _n_conjectural_for_ratio(n_real: int, ratio_pct: int) -> int:
+    """Number of conjectural entries needed for a given ratio (percent of
+    polluted pool that is conjectural).
+
+    ratio_pct = 100 * n_conjectural / (n_real + n_conjectural), so
+    n_conjectural = round(n_real * ratio_pct / (100 - ratio_pct)).
+    """
+    if ratio_pct < 0 or ratio_pct >= 100:
+        raise ValueError(
+            f"ratio_pct must be in [0, 100); got {ratio_pct!r}"
+        )
+    return int(round(n_real * ratio_pct / (100 - ratio_pct)))
+
+
 def build_polluted_pool(
     base_pool_name: str,
     pools_dir: Path,
     *,
     source_lm_path: Path | None = None,
     prefix: str | None = None,
+    ratio_pct: int | None = None,
 ) -> dict:
     """Build, validate, and write the polluted pool YAML.
 
@@ -392,6 +464,12 @@ def build_polluted_pool(
     ``<prefix>_polluted_<base>`` when ``prefix`` is provided, else
     ``polluted_<base>``.
 
+    ``ratio_pct=None`` (v14 default) keeps the 50% same-distribution
+    pool. ``ratio_pct=N`` (v18 pollution-level sweep) builds an N%
+    conjectural / (100−N)% real pool with the corresponding name
+    suffix ``_<N>pct``; the conjectural count is computed by
+    :func:`_n_conjectural_for_ratio`.
+
     Returns a summary dict.
     """
     base_path = pools_dir / f"{base_pool_name}.yaml"
@@ -402,10 +480,18 @@ def build_polluted_pool(
         # The user can always override with --prefix.
         prefix = source_lm_path.stem.split("_")[-1]
 
-    polluted_pool_name = _polluted_pool_name(base_pool_name, prefix)
+    polluted_pool_name = _polluted_pool_name(
+        base_pool_name, prefix, ratio_pct
+    )
     provenance_tag = _provenance_tag(prefix)
 
     real_entries = build_real_entries(base_pool)
+    if ratio_pct is None:
+        n_conjectural = len(base_pool["entries"])
+    else:
+        n_conjectural = _n_conjectural_for_ratio(
+            len(base_pool["entries"]), ratio_pct
+        )
 
     if source_lm_path is None:
         citation_blurb = (
@@ -438,25 +524,51 @@ def build_polluted_pool(
         provenance_tag=provenance_tag,
         citation_blurb=citation_blurb,
         source_lm_path=source_lm_path,
+        n_conjectural=n_conjectural,
     )
     entries = real_entries + conjectural_entries
 
     seed_hex = f"{_seed_for(polluted_pool_name):016x}"
+    realized_ratio = (
+        100 * len(conjectural_entries) / max(len(entries), 1)
+    )
     if source_lm_path is None:
-        source_citation = (
-            f"DELIBERATELY POLLUTED test pool generated from "
-            f"{base_pool_name}.yaml (mg-6b73). Half real, half "
-            f"conjectural — a test artifact for the held-out pool-"
-            f"curation test, NOT a substrate claim. Conjectural "
-            f"surfaces are drawn from the {base_pool_name} pool's "
-            f"marginal phoneme-frequency histogram and length "
-            f"distribution under deterministic seed 0x{seed_hex} "
-            f"(sha256(\"{polluted_pool_name}:conjectural\")"
-            f"[:16]). See pools/{polluted_pool_name}.README.md for "
-            f"the full construction algorithm and a prominent warning "
-            f"that this pool exists only to test the framework's "
-            f"curation-sensitivity.\n"
-        )
+        if ratio_pct is None:
+            # Preserve the v14 source_citation byte-for-byte so re-runs
+            # of the canonical 50% same-distribution pool stay clean.
+            source_citation = (
+                f"DELIBERATELY POLLUTED test pool generated from "
+                f"{base_pool_name}.yaml (mg-6b73). Half real, half "
+                f"conjectural — a test artifact for the held-out pool-"
+                f"curation test, NOT a substrate claim. Conjectural "
+                f"surfaces are drawn from the {base_pool_name} pool's "
+                f"marginal phoneme-frequency histogram and length "
+                f"distribution under deterministic seed 0x{seed_hex} "
+                f"(sha256(\"{polluted_pool_name}:conjectural\")"
+                f"[:16]). See pools/{polluted_pool_name}.README.md for "
+                f"the full construction algorithm and a prominent warning "
+                f"that this pool exists only to test the framework's "
+                f"curation-sensitivity.\n"
+            )
+        else:
+            source_citation = (
+                f"DELIBERATELY POLLUTED test pool generated from "
+                f"{base_pool_name}.yaml (mg-9f18 / harness v18 "
+                f"pollution-level sweep). {len(real_entries)} real + "
+                f"{len(conjectural_entries)} conjectural "
+                f"({realized_ratio:.0f}% conjectural; target "
+                f"{ratio_pct}%) — a test artifact for the v18 "
+                f"curation-sensitivity gradient characterization, NOT "
+                f"a substrate claim. Conjectural surfaces are drawn "
+                f"from the {base_pool_name} pool's marginal phoneme-"
+                f"frequency histogram and length distribution under "
+                f"deterministic seed 0x{seed_hex} "
+                f"(sha256(\"{polluted_pool_name}:conjectural\")"
+                f"[:16]). See pools/{polluted_pool_name}.README.md for "
+                f"the full construction algorithm and a prominent warning "
+                f"that this pool exists only to test the framework's "
+                f"curation-sensitivity.\n"
+            )
         license_blurb = (
             "Mixed: real entries inherit the underlying "
             f"{base_pool_name} pool's license (cited fair-use of "
@@ -535,11 +647,13 @@ def build_polluted_pool(
         "base_pool": base_pool_name,
         "polluted_pool": polluted_pool_name,
         "prefix": prefix,
+        "ratio_pct": ratio_pct,
         "provenance_tag": provenance_tag,
         "source_lm": str(source_lm_path) if source_lm_path else None,
         "n_entries": len(entries),
         "n_real": n_real,
         "n_conjectural": n_conjectural,
+        "realized_pct_conjectural": round(realized_ratio, 1),
         "polluted_path": rel_out,
         "seed_hex": f"0x{seed_hex}",
     }
@@ -551,15 +665,17 @@ def write_readme(
     *,
     source_lm_path: Path | None = None,
     prefix: str | None = None,
+    ratio_pct: int | None = None,
 ) -> Path:
     """Write the per-pool README documenting the construction algorithm
     and prominently warning that this pool is a test artifact."""
     if source_lm_path is not None and prefix is None:
         prefix = source_lm_path.stem.split("_")[-1]
 
-    polluted_pool_name = _polluted_pool_name(base_pool_name, prefix)
+    polluted_pool_name = _polluted_pool_name(base_pool_name, prefix, ratio_pct)
     provenance_tag = _provenance_tag(prefix)
     is_cross_language = source_lm_path is not None
+    is_ratio_variant = ratio_pct is not None
 
     base_path = pools_dir / f"{base_pool_name}.yaml"
     polluted_path = pools_dir / f"{polluted_pool_name}.yaml"
@@ -638,6 +754,42 @@ def write_readme(
             f"PASS-on-same-distribution-pollution holds because the "
             f"conjecturals shared {base_pool_name} shape, and the "
             f"v14 manuscript-shape claim stands as written.\n"
+        )
+    elif is_ratio_variant:
+        realized_pct = round(
+            100 * len(conj_entries) / max(len(polluted_pool["entries"]), 1)
+        )
+        lines.append(
+            "> ⚠️ **This pool is a test artifact, not a research claim.** "
+            f"Of its {len(polluted_pool['entries'])} entries, "
+            f"{len(real_entries)} are real {base_pool_name} substrate "
+            f"roots and {len(conj_entries)} are deliberately-conjectural "
+            f"surfaces tagged as if they were real (≈{realized_pct}% "
+            f"conjectural; target {ratio_pct}%). Do **NOT** use this "
+            f"pool to make substrate claims, build derived dictionaries, "
+            f"or train downstream models. It exists solely for the "
+            f"harness v18 / mg-9f18 pollution-level sweep, which "
+            f"characterizes how the right-tail bayesian gate's p-value "
+            f"scales with curation noise across 10%/25%/50%/75% "
+            f"conjectural pollution.\n"
+        )
+        lines.append("## Why this pool exists\n")
+        lines.append(
+            f"v14 (mg-6b73) found that the right-tail bayesian gate on "
+            f"the clean `{base_pool_name}` pool **PASSes** at the same "
+            f"v10-magnitude p-value even when 50% of the pool is "
+            f"conjectural-same-distribution. The polecat noted that "
+            f"this leaves an open question: is the gate essentially "
+            f"insensitive to pollution within the substrate's "
+            f"phonotactic distribution, or is there a sharp threshold "
+            f"(e.g. ≥90% conjectural) at which the gate finally fails? "
+            f"v18 (mg-9f18) characterizes the gate's sensitivity "
+            f"gradient by sweeping the conjectural ratio across 10%, "
+            f"25%, and 75% same-distribution pollution. This pool is "
+            f"the **{realized_pct}% / target {ratio_pct}%** variant; "
+            f"the 50% pool is `pools/polluted_aquitanian.yaml`.\n\n"
+            f"The full sweep table lands in "
+            f"`results/rollup.pollution_level_sweep.md`.\n"
         )
     else:
         lines.append(
@@ -724,6 +876,19 @@ def write_readme(
             f"Asserted by `harness/tests/test_polluted_pool.py`.\n"
         )
     else:
+        if is_ratio_variant:
+            length_note = (
+                f"Length: matches `real[i mod {len(real_entries)}]` "
+                f"under cyclic indexing, so the realized length "
+                f"distribution preserves the real pool's distribution "
+                f"in expectation (and is exact when `n_conjectural` is "
+                f"a multiple of `n_real`)."
+            )
+        else:
+            length_note = (
+                "Length: same length as the i-th real entry (so the "
+                "length distribution doubles exactly)."
+            )
         lines.append(
             f"1. **Real half.** All {len(real_entries)} entries from "
             f"`pools/{base_pool_name}.yaml` are carried over verbatim "
@@ -732,8 +897,7 @@ def write_readme(
             f"2. **Conjectural half.** {len(conj_entries)} synthetic "
             f"entries are drawn under the same algorithm as "
             f"`scripts/build_control_pools.py`:\n"
-            f"   - Length: same length as the i-th real entry (so the "
-            f"length distribution doubles exactly).\n"
+            f"   - {length_note}\n"
             f"   - Phonemes: sampled with replacement from the real pool's "
             f"marginal phoneme-frequency histogram.\n"
             f"   - Surface: concatenation of sampled phonemes.\n"
@@ -772,9 +936,21 @@ def write_readme(
     lines.append("")
 
     lines.append("## Length distribution\n")
-    lines.append("Real and conjectural entries share length pairwise (i-th "
-                 "conjectural matches i-th real). The polluted pool's "
-                 "length distribution is exactly 2× the real pool's.\n")
+    if is_ratio_variant:
+        lines.append(
+            f"Real and conjectural entries share length under cyclic "
+            f"indexing (`conjectural[i].length = real[i mod "
+            f"{len(real_entries)}].length`). The polluted pool's "
+            f"length distribution preserves the real pool's "
+            f"distribution in expectation; it is exact when "
+            f"`n_conjectural` is a multiple of `n_real` (e.g. 75% "
+            f"pollution = 3× real_n). Length is **not** a confound "
+            f"between the real and conjectural halves.\n"
+        )
+    else:
+        lines.append("Real and conjectural entries share length pairwise (i-th "
+                     "conjectural matches i-th real). The polluted pool's "
+                     "length distribution is exactly 2× the real pool's.\n")
     lines.append("| length | real pool | polluted pool |")
     lines.append("|---:|---:|---:|")
     for L in sorted(set(sub_lens) | set(pol_lens)):
@@ -793,12 +969,25 @@ def write_readme(
             f"for the realized 153 conjectural draws.\n"
         )
     else:
-        lines.append(
-            "The conjectural draw uses the real pool's marginal phoneme "
-            "frequency, so the polluted pool's overall histogram should "
-            "track ~2× the real pool's in expectation. Realized counts are "
-            "approximate due to finite sample size.\n"
-        )
+        if is_ratio_variant:
+            ratio_factor = (
+                len(conj_entries) / max(len(real_entries), 1)
+            )
+            lines.append(
+                f"The conjectural draw uses the real pool's marginal "
+                f"phoneme frequency, so the polluted pool's overall "
+                f"histogram should track ~{1 + ratio_factor:.2f}× "
+                f"(real + {ratio_factor:.2f}×conjectural) the real "
+                f"pool's in expectation. Realized counts are "
+                f"approximate due to finite sample size.\n"
+            )
+        else:
+            lines.append(
+                "The conjectural draw uses the real pool's marginal phoneme "
+                "frequency, so the polluted pool's overall histogram should "
+                "track ~2× the real pool's in expectation. Realized counts are "
+                "approximate due to finite sample size.\n"
+            )
     lines.append("| phoneme | real pool count | real pool % | polluted pool count | polluted pool % |")
     lines.append("|---|---:|---:|---:|---:|")
     sub_total = sum(sub_hist.values()) or 1
@@ -828,6 +1017,23 @@ def write_readme(
             "phoneme-inventory matched to the polluted pool's *combined* "
             "(real + cross-language-conjectural) distribution, drawn "
             "under a distinct seed.\n"
+        )
+    elif is_ratio_variant:
+        lines.append(
+            f"- **IS:** A test fixture for the v18 pollution-level sweep "
+            f"(mg-9f18). Characterizes how the right-tail bayesian "
+            f"gate's p-value scales with curation noise; this is the "
+            f"{ratio_pct}%-conjectural variant.\n"
+            f"- **IS NOT:** A research claim. Conjectural surfaces are "
+            f"synthetic. Do not cite, do not gloss, do not derive "
+            f"secondary artifacts.\n"
+            f"- **IS NOT:** A replacement for `pools/{base_pool_name}.yaml`. "
+            f"The clean substrate pool remains the substrate-claim "
+            f"pool; this polluted pool is parallel scaffolding.\n"
+            f"- **Matched control:** `pools/control_{polluted_pool_name}.yaml`, "
+            f"built by `scripts/build_control_pools.py`. Length and "
+            f"phoneme-inventory matched to the polluted pool, drawn "
+            f"under a distinct seed.\n"
         )
     else:
         lines.append(
@@ -891,6 +1097,20 @@ def main(argv: list[str] | None = None) -> int:
             "(e.g. mycenaean_greek.json → 'greek')."
         ),
     )
+    parser.add_argument(
+        "--ratio-pct",
+        type=int,
+        default=None,
+        help=(
+            "Optional conjectural-share percentage in [0, 100). When "
+            "set, the polluted pool's name is suffixed with `_<N>pct` "
+            "and the number of conjectural entries is "
+            "n_real * N / (100 - N). Used by the v18 pollution-level "
+            "sweep (mg-9f18) to characterize the gate's curation-"
+            "sensitivity gradient at 10/25/75 percent (50 percent "
+            "remains the v14 default with --ratio-pct unset)."
+        ),
+    )
     args = parser.parse_args(argv)
 
     summary = build_polluted_pool(
@@ -898,12 +1118,14 @@ def main(argv: list[str] | None = None) -> int:
         args.pools_dir,
         source_lm_path=args.source_lm,
         prefix=args.prefix,
+        ratio_pct=args.ratio_pct,
     )
     readme = write_readme(
         args.pool,
         args.pools_dir,
         source_lm_path=args.source_lm,
         prefix=args.prefix,
+        ratio_pct=args.ratio_pct,
     )
     try:
         summary["readme_path"] = readme.resolve().relative_to(_REPO_ROOT).as_posix()

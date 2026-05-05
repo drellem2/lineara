@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_eki_ARKH_1a_11_13
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''eki'' pinned to ARKH 1a tokens [11..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: eki
+  phonemes:
+  - e
+  - k
+  - i
+  gloss_hint: sun (short form)
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 11
+  - 13
+  sign_to_phoneme:
+    AB58: e
+    AB73: k
+    AB118: i

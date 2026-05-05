@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_erori_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''erori'' pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: erori
+  phonemes:
+  - e
+  - r
+  - o
+  - r
+  - i
+  gloss_hint: fall
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: e
+    AB67: r
+    AB59: o
+    AB06: r
+    AB41: i

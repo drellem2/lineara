@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_izar_HT_13_30_33
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''izar'' pinned to HT 13 tokens [30..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: izar
+  phonemes:
+  - i
+  - z
+  - a
+  - r
+  gloss_hint: star
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 13
+  span:
+  - 30
+  - 33
+  sign_to_phoneme:
+    AB28: i
+    AB51: z
+    AB24: a
+    AB41: r

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_ilun_ARKH_2_14_17
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''ilun'' pinned to ARKH 2 tokens [14..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: ilun
+  phonemes:
+  - i
+  - l
+  - u
+  - n
+  gloss_hint: dark
+  citation: Gorrochategui 1984, Aq. ILUN-; Basque ilun (Trask 1997 ch. 3).
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB79: i
+    A301: l
+    AB09: u
+    AB45: n

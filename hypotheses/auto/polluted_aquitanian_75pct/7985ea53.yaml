@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_ume_GO_Wc_1a_2_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''ume'' pinned to GO Wc 1a tokens [2..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: ume
+  phonemes:
+  - u
+  - m
+  - e
+  gloss_hint: child, young
+  citation: Trask 1997 ch. 3; cf. Aq. UMME.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 2
+  - 4
+  sign_to_phoneme:
+    AB58: u
+    AB80: m
+    AB28: e

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_aita_HT_122b_32_35
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''aita'' pinned to HT 122b tokens [32..35].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: aita
+  phonemes:
+  - a
+  - i
+  - t
+  - a
+  gloss_hint: father
+  citation: Trask 1997 ch. 3; cf. Aq. ATTA.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 32
+  - 35
+  sign_to_phoneme:
+    AB11: a
+    AB05: i
+    AB81: t
+    AB02: a

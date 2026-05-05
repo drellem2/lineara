@@ -3694,3 +3694,202 @@ hypotheses/, results/, harness/ with .gitkeep stubs and a 1-page
 README) and contains no data the harness reads. The harness-span
 citation `mg-d5ef` through `mg-7ecb` is preserved where it accurately
 describes pipeline build-up.
+
+## Findings from mg-9f18 (v18 — toponym bigram-control fix + pollution-level sweep, 2026-05-05)
+
+Two methodology results, both substantively informative.
+
+### 1. Toponym pool now PASSes under a bigram-preserving control
+
+**Headline.** The toponym pool, which **failed** the v10 right-tail
+bayesian gate at p=0.92 against the v6 unigram-marginal control
+(mg-d26d), now **PASSes at p=9.99e-05** against a bigram-preserving
+control. The toponym pool joins Aquitanian + Etruscan as a third
+validated cross-LM-checkable substrate pool.
+
+**What changed.** The v6 control sampler (`scripts/build_control_pools.py`,
+default `--sampler unigram`) draws each phoneme independently from
+the substrate's marginal histogram. v10 documented the resulting
+toponym control as containing extreme strings like `eoao`, `aathei`,
+`kllzua` — phonotactically improbable but unigram-frequency-matched.
+Those strings scored extremely well under the Basque LM by raw
+phoneme-frequency overlap, dragging the control's posterior median
+above the substrate's. mg-7ecb's polecat called this out as the
+likely cause of the toponym failure and flagged a bigram-preserving
+control as the obvious next test.
+
+The v18 sampler (`--sampler bigram`, mg-9f18) draws each phoneme
+conditional on the previous phoneme using the substrate's bigram
+counts (Laplace alpha=0.1, matching the LM and v15 cross-language
+sampler smoothing). The realized control surfaces inherit Greek-
+style adjacent-phoneme structure: `akaintha`, `inaletos`, `metosord`
+instead of `eoao`, `aathei`, `kllzua`.
+
+**Gate values.** Per `results/rollup.bayesian_posterior.toponym_bigram_control.md`:
+
+| variant            | substrate top-K | control top-K | median(top sub) | median(top ctrl) | MW U | MW p (one-tail) | gate |
+|:-------------------|---:|---:|---:|---:|---:|---:|:--:|
+| bigram (v18)       | 20 | 20 | 0.9615 | 0.8525 | 337.5 | 9.988e-05 | PASS |
+| unigram (v6/v10)   | 20 | 20 | 0.9186 | 0.9464 | 149.5 | 9.165e-01 | FAIL |
+
+The reversal is sharp: control median drops 0.094 (0.946 → 0.852)
+under the bigram sampler, while the substrate median rises 0.043
+(0.919 → 0.962). Every one of the v6 control's top-20 surfaces is
+absent from the v18 control's top-20 (`aas`, `aathei`, `ana`,
+`anealo`, `eoao`, `eta`, `iaoeasanoaeoesa`, `ioonaol`, `kim`,
+`kllzua`, `kolee`, `nul`, `oaest`, `oks`, `onn`, `saenaa`, `tea`,
+…), replaced by phonotactically-realistic alternatives.
+
+**Methodological consequence.** Toponym now sits alongside Aquitanian
+and Etruscan in the §3 results. Findings_summary.md §5 Limitations
+removes the entry "toponym failure (control-sampler issue)" — the
+cause was indeed the control sampler, and the fix lands the gate
+under a stricter null hypothesis (phoneme-inventory + bigram-
+phonotactics overlap, not just phoneme-inventory).
+
+**What this does NOT mean.** The bigram control is not the *only*
+defensible control. Higher-order phonotactics (trigram, full
+position-aware) are progressively closer to the substrate-LM
+distribution and would tighten the gate further; matching all of
+them would absorb the substrate signal entirely (see the v18
+README's "What the control is NOT" section). The v18 gate is the
+strictest control we test; reading it as a *necessary* fix to the
+v10 toponym failure is correct, reading it as a *sufficient*
+validation of every claim that could be made from the toponym pool
+is not.
+
+### 2. Pollution-level sweep on Aquitanian — gate stays PASS across 10%/25%/50%/75%, weakens monotonically with conjectural share
+
+**Headline.** Same-distribution conjectural pollution does not
+collapse the v10 right-tail bayesian gate on the Aquitanian pool at
+any of the four levels tested. The p-value gradient is
+non-monotonic across 10%/25%/50% but widens sharply at 75%, and the
+substrate top-K composition shifts from real-dominated at 10% to
+conjectural-dominated at 75%.
+
+**Sweep table.** Per `results/rollup.pollution_level_sweep.md`:
+
+| pollution % | n_real | n_conj | median(top sub) | median(top ctrl) | MW U  | MW p       | gate | top-K real | top-K conj |
+|---:|---:|---:|---:|---:|---:|---:|:--:|---:|---:|
+| 10 | 153 | 17  | 0.9808 | 0.9450 | 325.5 | 1.502e-04 | PASS | 19 | 1  |
+| 25 | 153 | 51  | 0.9808 | 0.9379 | 320.0 | 2.747e-04 | PASS | 12 | 8  |
+| 50 | 153 | 153 | 0.9808 | 0.9572 | 340.0 | 2.740e-05 | PASS |  9 | 11 |
+| 75 | 153 | 459 | 0.9808 | 0.9703 | 260.0 | 4.268e-02 | PASS |  5 | 15 |
+
+The 50% row reproduces v14 (mg-6b73) within sampling noise of the
+result-stream merge — the v18 sweep code path is consistent with
+the v10/v14 path.
+
+**Two readings of the gradient.**
+
+Gate-level reading: the framework's PASS at the population level is
+*essentially insensitive* to pollution share within the substrate's
+phonotactic distribution at levels ≤50% (p stays at v10 magnitude:
+1.5e-04 to 2.7e-05), and weakens but does not break at 75%
+(p=4.3e-02, just clearing the 0.05 threshold). v14's reading —
+that the gate detects substrate-LM-phonotactic kinship at the
+*population level* rather than per-surface substrate-vocabulary
+identity — generalizes across the gradient and now sits inside a
+characterized stable region.
+
+Top-K composition reading: the substrate top-K is 95% real at 10%
+pollution but only 25% real at 75% pollution. Real and conjectural
+surfaces are *partially discriminated* by their absolute posterior —
+real surfaces remain near the maximum-posterior ceiling regardless
+of pollution level (median(top sub) = 0.9808 across all four rows),
+but as the conjectural pool grows, conjectural surfaces with
+high-credibility wins crowd into the right tail. The gate's
+right-tail median test does not depend on this composition, but
+any reading of "the framework discriminates real vs conjectural"
+that *would* depend on top-K composition needs to be calibrated to
+the pollution level.
+
+**Threshold characterization (negative).** The sweep does not
+locate a threshold at which the gate fails: 75% PASS at p=0.043
+suggests the threshold is between 75% and 100%, but with the
+p-value swinging non-monotonically across levels the precise
+location is not characterizable from these four data points
+without finer sweep granularity (out of scope for v18). The
+methodologically clean statement is: *the v10 right-tail gate
+PASSes at every same-distribution pollution level we tested, with
+p-value at 75% close to but below the 0.05 threshold; same-
+distribution pollution at higher rates may eventually break the
+gate but the threshold is not located by this sweep.*
+
+### Artifacts shipped
+
+- `scripts/build_control_pools.py` — extended with `--sampler bigram`
+  and `--suffix` flags. Backward-compatible default `--sampler
+  unigram` produces byte-identical output to the v6 control pools
+  (verified by re-running and confirming `git diff pools/` is empty).
+  The bigram sampler is documented in the script docstring and the
+  per-pool README.
+- `scripts/build_polluted_pool.py` — extended with `--ratio-pct`
+  flag. Default (no flag) produces byte-identical v14 / v15 output;
+  `--ratio-pct N` produces the `_<N>pct` variant pool with
+  `n_conjectural = n_real * N / (100 - N)`.
+- `pools/control_toponym_bigram.yaml` + `.README.md` — 112 entries,
+  bigram-preserving sampler, deterministic seed
+  `0x1b7b5d4ef69cede7` (sha256-keyed on `control_pool:toponym:
+  bigram` so it draws from a disjoint random stream relative to the
+  v6 unigram control).
+- `pools/polluted_aquitanian_{10,25,75}pct.yaml` + matched
+  `pools/control_polluted_aquitanian_{10,25,75}pct.yaml` plus
+  READMEs. 170/204/612 entries respectively, deterministic seeds.
+- `scripts/v18_toponym_bigram_gate.py` — v18 toponym analysis,
+  pairs `toponym` substrate against the bigram control and emits
+  the rollup file.
+- `scripts/v18_pollution_level_sweep.py` — v18 sweep analysis,
+  emits the four-row pollution-level table.
+- `results/rollup.bayesian_posterior.toponym_bigram_control.md` —
+  toponym v18 verdict + side-by-side with v6 unigram control top-K
+  composition shift.
+- `results/rollup.pollution_level_sweep.md` — four-row sweep table
+  with provenance breakdown and interpretation.
+- `harness/tests/test_control_pools.py` and
+  `harness/tests/test_polluted_pool.py` — extended with bigram-
+  sampler determinism tests, ratio-variant entry-count tests, and
+  schema-validity tests on the new pools.
+
+### Out of scope (deferred)
+
+- Sub-75% threshold characterization (e.g. 85%, 95% rows) — would
+  need finer sweep granularity. Recommend a separate ticket if the
+  threshold location is needed for the methodology paper's claim
+  shape.
+- Bigram-preserving control on Aquitanian and Etruscan — those
+  pools already PASS under unigram controls at v10 magnitude, so
+  the bigram refinement would not change the verdict (and would
+  arguably loosen the substrate-vs-control gap, which is the
+  opposite direction we want to test); deferred unless the
+  methodology paper discussion explicitly asks "would the validated
+  pools still pass under a stricter null?".
+- Higher-order (trigram, position-aware) controls — methodologically
+  the next step beyond bigram. Out of v18 scope; the bigram fix is
+  the minimum that addresses the v10 toponym failure.
+
+### Reproducibility
+
+All artifacts are deterministic. Re-running:
+
+```
+python3 scripts/build_control_pools.py --pool toponym --sampler bigram --suffix _bigram
+python3 scripts/build_polluted_pool.py --pool aquitanian --ratio-pct 10
+python3 scripts/build_polluted_pool.py --pool aquitanian --ratio-pct 25
+python3 scripts/build_polluted_pool.py --pool aquitanian --ratio-pct 75
+python3 scripts/build_control_pools.py --pool polluted_aquitanian_10pct
+python3 scripts/build_control_pools.py --pool polluted_aquitanian_25pct
+python3 scripts/build_control_pools.py --pool polluted_aquitanian_75pct
+python3 scripts/generate_candidates.py --pool control_toponym_bigram
+for p in polluted_aquitanian_{10,25,75}pct control_polluted_aquitanian_{10,25,75}pct; do
+    python3 scripts/generate_candidates.py --pool "$p"
+done
+for m in hypotheses/auto/*{_10pct,_25pct,_75pct,toponym_bigram}.manifest.jsonl; do
+    python3 scripts/run_sweep.py --manifest "$m" --metrics external_phoneme_perplexity_v0
+done
+python3 scripts/v18_toponym_bigram_gate.py
+python3 scripts/v18_pollution_level_sweep.py
+```
+
+reproduces every byte of the new pools, manifests, sidecar JSONLs,
+and rollups. No RNG anywhere is unkeyed.

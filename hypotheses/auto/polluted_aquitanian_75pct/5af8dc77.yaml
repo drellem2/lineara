@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_bi_ARKH_4a_19_20
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''bi'' pinned to ARKH 4a tokens [19..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: bi
+  phonemes:
+  - b
+  - i
+  gloss_hint: two
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 19
+  - 20
+  sign_to_phoneme:
+    AB39: b
+    AB37: i

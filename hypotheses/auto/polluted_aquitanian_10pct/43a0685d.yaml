@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_zelai_HT_Zb_159_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''zelai'' pinned to HT Zb 159 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: zelai
+  phonemes:
+  - z
+  - e
+  - l
+  - a
+  - i
+  gloss_hint: meadow, plain
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: z
+    AB06: e
+    AB55: l
+    AB41: a
+    AB57: i

@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_belarri_KN_Zf_13_1_7
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''belarri'' pinned to KN Zf 13 tokens [1..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: belarri
+  phonemes:
+  - b
+  - e
+  - l
+  - a
+  - r
+  - r
+  - i
+  gloss_hint: ear
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 7
+  sign_to_phoneme:
+    AB27: b
+    AB24: e
+    AB41: l
+    AB07: a
+    A301: r
+    AB39: r
+    AB44: i

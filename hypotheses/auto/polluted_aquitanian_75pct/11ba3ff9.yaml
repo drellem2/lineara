@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_zortzi_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''zortzi'' pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: zortzi
+  phonemes:
+  - z
+  - o
+  - r
+  - tz
+  - i
+  gloss_hint: eight
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: z
+    AB26: o
+    AB78: r
+    AB76: tz
+    AB10: i

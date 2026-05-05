@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_hanna_ARKH_2_8_12
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''hanna'' pinned to ARKH 2 tokens [8..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: hanna
+  phonemes:
+  - h
+  - a
+  - n
+  - n
+  - a
+  gloss_hint: brother (proposed)
+  citation: Gorrochategui 1984, Aq. HANN- element; cf. Basque anaia.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    AB08: h
+    AB41: a
+    AB01: n
+    AB05: n
+    AB28: a

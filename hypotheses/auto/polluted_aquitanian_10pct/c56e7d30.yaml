@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_haran_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''haran'' pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: haran
+  phonemes:
+  - h
+  - a
+  - r
+  - a
+  - n
+  gloss_hint: valley
+  citation: Trask 1997 ch. 3 (Basque haran).
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: h
+    AB07: a
+    AB06: r
+    AB58: a
+    AB77: n

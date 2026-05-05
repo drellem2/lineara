@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_lau_ARKH_2_21_23
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''lau'' pinned to ARKH 2 tokens [21..23].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: lau
+  phonemes:
+  - l
+  - a
+  - u
+  gloss_hint: four
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 21
+  - 23
+  sign_to_phoneme:
+    AB08: l
+    AB58: a
+    AB50: u

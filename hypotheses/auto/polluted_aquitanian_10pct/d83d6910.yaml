@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_gison_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''gison'' pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: gison
+  phonemes:
+  - g
+  - i
+  - s
+  - o
+  - n
+  gloss_hint: man (modern reflex of CISON)
+  citation: Gorrochategui 1984; Basque gizon (modern Basque).
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: g
+    AB31: i
+    AB58: s
+    AB80: o
+    AB28: n

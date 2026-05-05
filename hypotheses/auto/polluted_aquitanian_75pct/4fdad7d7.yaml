@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_begi_HT_13_0_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''begi'' pinned to HT 13 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: begi
+  phonemes:
+  - b
+  - e
+  - g
+  - i
+  gloss_hint: eye
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 13
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB77: b
+    AB10: e
+    AB45: g
+    AB59: i

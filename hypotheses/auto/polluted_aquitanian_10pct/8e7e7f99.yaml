@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_txerri_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''txerri'' pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: txerri
+  phonemes:
+  - tx
+  - e
+  - r
+  - r
+  - i
+  gloss_hint: pig
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: tx
+    AB45: e
+    AB80: r
+    A323: r
+    AB06: i

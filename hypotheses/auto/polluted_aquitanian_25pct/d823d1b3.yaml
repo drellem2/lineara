@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_ona_GO_Wc_1a_2_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''ona'' pinned to GO Wc 1a tokens [2..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: ona
+  phonemes:
+  - o
+  - n
+  - a
+  gloss_hint: good (the good)
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 2
+  - 4
+  sign_to_phoneme:
+    AB58: o
+    AB80: n
+    AB28: a

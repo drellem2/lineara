@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_nire_HT_13_30_33
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''nire'' pinned to HT 13 tokens [30..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: nire
+  phonemes:
+  - n
+  - i
+  - r
+  - e
+  gloss_hint: my
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 13
+  span:
+  - 30
+  - 33
+  sign_to_phoneme:
+    AB28: n
+    AB51: i
+    AB24: r
+    AB41: e

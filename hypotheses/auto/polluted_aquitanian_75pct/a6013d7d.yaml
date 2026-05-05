@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_gison_ARKH_2_14_19
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''gison'' pinned to ARKH 2 tokens [14..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: gison
+  phonemes:
+  - g
+  - i
+  - s
+  - o
+  - n
+  gloss_hint: man (modern reflex of CISON)
+  citation: Gorrochategui 1984; Basque gizon (modern Basque).
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 19
+  sign_to_phoneme:
+    AB79: g
+    A301: i
+    AB09: s
+    AB45: o
+    AB118: n

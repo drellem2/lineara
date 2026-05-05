@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_ilun_HT_13_30_33
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''ilun'' pinned to HT 13 tokens [30..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: ilun
+  phonemes:
+  - i
+  - l
+  - u
+  - n
+  gloss_hint: dark
+  citation: Gorrochategui 1984, Aq. ILUN-; Basque ilun (Trask 1997 ch. 3).
+equation:
+  inscription_id: HT 13
+  span:
+  - 30
+  - 33
+  sign_to_phoneme:
+    AB28: i
+    AB51: l
+    AB24: u
+    AB41: n

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_itur_HT_122b_15_18
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''itur'' pinned to HT 122b tokens [15..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: itur
+  phonemes:
+  - i
+  - t
+  - u
+  - r
+  gloss_hint: spring, fountain
+  citation: Gorrochategui 1984; Basque iturri (Trask 1997).
+equation:
+  inscription_id: HT 122b
+  span:
+  - 15
+  - 18
+  sign_to_phoneme:
+    AB65: i
+    AB10: t
+    AB45: u
+    AB17: r

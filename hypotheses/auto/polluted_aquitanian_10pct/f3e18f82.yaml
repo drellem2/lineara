@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_behar_KN_Zf_13_1_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''behar'' pinned to KN Zf 13 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: behar
+  phonemes:
+  - b
+  - e
+  - h
+  - a
+  - r
+  gloss_hint: need
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB27: b
+    AB24: e
+    AB41: h
+    AB07: a
+    A301: r

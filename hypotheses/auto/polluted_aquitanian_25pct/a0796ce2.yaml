@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_nahi_ARKH_1a_21_24
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''nahi'' pinned to ARKH 1a tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: nahi
+  phonemes:
+  - n
+  - a
+  - h
+  - i
+  gloss_hint: want, desire
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB73: n
+    AB67: a
+    AB31: h
+    AB24: i

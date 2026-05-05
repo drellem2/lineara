@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_mihi_HT_110a_0_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''mihi'' pinned to HT 110a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: mihi
+  phonemes:
+  - m
+  - i
+  - h
+  - i
+  gloss_hint: tongue
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB41: m
+    AB51: i
+    AB34: h
+    AB81: i

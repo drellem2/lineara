@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_bihotz_HT_Wc_3017a_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''bihotz'' pinned to HT Wc 3017a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: bihotz
+  phonemes:
+  - b
+  - i
+  - h
+  - o
+  - tz
+  gloss_hint: heart
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Wc 3017a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB16: b
+    AB81: i
+    AB27: h
+    AB06: o
+    A306: tz

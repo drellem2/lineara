@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_eki_GO_Wc_1a_1_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''eki'' pinned to GO Wc 1a tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: eki
+  phonemes:
+  - e
+  - k
+  - i
+  gloss_hint: sun (short form)
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB31: e
+    AB58: k
+    AB80: i

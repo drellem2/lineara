@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_egun_HT_123b_25_28
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''egun'' pinned to HT 123b tokens [25..28].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: egun
+  phonemes:
+  - e
+  - g
+  - u
+  - n
+  gloss_hint: day
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 25
+  - 28
+  sign_to_phoneme:
+    AB69: e
+    AB02: g
+    AB07: u
+    AB01: n

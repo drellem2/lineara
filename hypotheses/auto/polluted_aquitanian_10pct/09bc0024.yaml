@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_zahar_HT_Zb_159_1_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''zahar'' pinned to HT Zb 159 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: zahar
+  phonemes:
+  - z
+  - a
+  - h
+  - a
+  - r
+  gloss_hint: old
+  citation: Trask 1997 ch. 3; cf. Aq. SAHAR-.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB06: z
+    AB55: a
+    AB41: h
+    AB57: a
+    AB09: r

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_hartz_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''hartz'' pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: hartz
+  phonemes:
+  - h
+  - a
+  - r
+  - tz
+  gloss_hint: bear
+  citation: Trask 1997 ch. 3; cf. Aq. HARS-.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: h
+    AB58: a
+    AB47: r
+    AB04: tz

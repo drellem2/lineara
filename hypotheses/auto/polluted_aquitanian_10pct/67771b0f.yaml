@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_izotz_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''izotz'' pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: izotz
+  phonemes:
+  - i
+  - z
+  - o
+  - tz
+  gloss_hint: ice, frost
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: i
+    AB58: z
+    AB47: o
+    AB04: tz

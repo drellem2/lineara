@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_lur_ARKH_2_14_16
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''lur'' pinned to ARKH 2 tokens [14..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  gloss_hint: earth, ground
+  citation: Gorrochategui 1984, Aq. LUR- compound element; Basque lur.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 16
+  sign_to_phoneme:
+    AB79: l
+    A301: u
+    AB09: r

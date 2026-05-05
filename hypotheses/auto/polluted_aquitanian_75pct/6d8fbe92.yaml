@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_larre_KN_Zc_6_19_24
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''larre'' pinned to KN Zc 6 tokens [19..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: larre
+  phonemes:
+  - l
+  - a
+  - r
+  - r
+  - e
+  gloss_hint: pasture, moor
+  citation: Gorrochategui 1984, Aq. theonym LARRAHI; Basque larre.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 24
+  sign_to_phoneme:
+    AB03: l
+    AB81: a
+    AB55: r
+    AB10: r
+    AB28: e

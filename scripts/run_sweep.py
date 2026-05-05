@@ -107,6 +107,19 @@ _PER_POOL_SIDECAR_TAG: dict[str, str] = {
     # limit.
     "greek_polluted_aquitanian": "polluted_greek",
     "control_greek_polluted_aquitanian": "polluted_greek",
+    # mg-9f18 (harness v18): pollution-level sweep — three variants
+    # share one sidecar so the v18 sweep is independently versionable
+    # without expanding the sidecar count linearly.
+    "polluted_aquitanian_10pct": "polluted_levels",
+    "control_polluted_aquitanian_10pct": "polluted_levels",
+    "polluted_aquitanian_25pct": "polluted_levels",
+    "control_polluted_aquitanian_25pct": "polluted_levels",
+    "polluted_aquitanian_75pct": "polluted_levels",
+    "control_polluted_aquitanian_75pct": "polluted_levels",
+    # mg-9f18 (harness v18): bigram-preserving toponym control — own
+    # sidecar so the v18 toponym re-evaluation is versionable
+    # alongside the v6 unigram control's existing rows.
+    "control_toponym_bigram": "toponym_bigram",
 }
 
 # Pool → external-language-model mapping for external_phoneme_perplexity_v0.
@@ -144,6 +157,19 @@ _EXT_POOL_LANGUAGE: dict[str, str] = {
     # shape, so a PASS here would mean the gate has no shape selectivity.
     "greek_polluted_aquitanian": "basque",
     "control_greek_polluted_aquitanian": "basque",
+    # mg-9f18 (harness v18): pollution-level sweep variants. Same
+    # routing as the v14 50% pool — each is a same-distribution
+    # polluted pool over the Aquitanian substrate.
+    "polluted_aquitanian_10pct": "basque",
+    "control_polluted_aquitanian_10pct": "basque",
+    "polluted_aquitanian_25pct": "basque",
+    "control_polluted_aquitanian_25pct": "basque",
+    "polluted_aquitanian_75pct": "basque",
+    "control_polluted_aquitanian_75pct": "basque",
+    # mg-9f18 (harness v18): bigram-preserving toponym control —
+    # same Basque LM as the toponym substrate, paired against the
+    # toponym pool by the v18 gate analysis.
+    "control_toponym_bigram": "basque",
 }
 
 # Metrics that the candidate_signature.v1 shape supports. The signature

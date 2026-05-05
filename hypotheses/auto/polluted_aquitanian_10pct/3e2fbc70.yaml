@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_atta_HT_108_0_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''atta'' pinned to HT 108 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: atta
+  phonemes:
+  - a
+  - t
+  - t
+  - a
+  gloss_hint: father
+  citation: Gorrochategui 1984, Aq. ATTA; Basque aita (Trask 1997 ch. 3).
+equation:
+  inscription_id: HT 108
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB67: a
+    AB27: t
+    AB59: t
+    AB06: a

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_nire_ARKH_1a_10_13
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''nire'' pinned to ARKH 1a tokens [10..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: nire
+  phonemes:
+  - n
+  - i
+  - r
+  - e
+  gloss_hint: my
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    AB08: n
+    AB58: i
+    AB73: r
+    AB118: e

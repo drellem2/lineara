@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_leher_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''leher'' pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: leher
+  phonemes:
+  - l
+  - e
+  - h
+  - e
+  - r
+  gloss_hint: pine
+  citation: Gorrochategui 1984, Aq. theonym LEHERENNO; Basque leher.
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: l
+    AB07: e
+    AB06: h
+    AB58: e
+    AB77: r

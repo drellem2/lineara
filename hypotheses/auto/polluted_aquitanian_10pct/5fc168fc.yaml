@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_hanna_KN_Zf_13_1_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''hanna'' pinned to KN Zf 13 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: hanna
+  phonemes:
+  - h
+  - a
+  - n
+  - n
+  - a
+  gloss_hint: brother (proposed)
+  citation: Gorrochategui 1984, Aq. HANN- element; cf. Basque anaia.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB27: h
+    AB24: a
+    AB41: n
+    AB07: n
+    A301: a

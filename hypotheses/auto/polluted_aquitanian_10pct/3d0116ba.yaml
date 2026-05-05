@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_sukalde_KN_Zc_7_15_21
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''sukalde'' pinned to KN Zc 7 tokens [15..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: sukalde
+  phonemes:
+  - s
+  - u
+  - k
+  - a
+  - l
+  - d
+  - e
+  gloss_hint: kitchen, hearth
+  citation: Trask 1997 ch. 3 (sukalde as compound of su 'fire' + kalde).
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 15
+  - 21
+  sign_to_phoneme:
+    AB31: s
+    AB60: u
+    AB08: k
+    AB06: a
+    AB24: l
+    AB40: d
+    AB39: e

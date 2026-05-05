@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_haragi_HT_Zb_158b_0_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''haragi'' pinned to HT Zb 158b tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: haragi
+  phonemes:
+  - h
+  - a
+  - r
+  - a
+  - g
+  - i
+  gloss_hint: flesh, meat
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB58: h
+    AB67: a
+    AB53: r
+    AB04: a
+    AB28: g
+    AB57: i

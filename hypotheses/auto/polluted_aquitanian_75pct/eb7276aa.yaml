@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_gau_HT_1_0_2
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''gau'' pinned to HT 1 tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: gau
+  phonemes:
+  - g
+  - a
+  - u
+  gloss_hint: night
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 1
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB78: g
+    AB76: a
+    AB10: u

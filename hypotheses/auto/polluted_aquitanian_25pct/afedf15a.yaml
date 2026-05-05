@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_bels_GO_Wc_1a_1_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''bels'' pinned to GO Wc 1a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: bels
+  phonemes:
+  - b
+  - e
+  - l
+  - s
+  gloss_hint: black, raven
+  citation: Gorrochategui 1984, Aq. BELS-/BELES-; Basque beltz (Trask 1997 ch. 3).
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB31: b
+    AB58: e
+    AB80: l
+    AB28: s

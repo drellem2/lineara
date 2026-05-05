@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_beltz_HT_13_30_33
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''beltz'' pinned to HT 13 tokens [30..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: beltz
+  phonemes:
+  - b
+  - e
+  - l
+  - tz
+  gloss_hint: black
+  citation: Trask 1997 ch. 3; cf. Aq. BELS-.
+equation:
+  inscription_id: HT 13
+  span:
+  - 30
+  - 33
+  sign_to_phoneme:
+    AB28: b
+    AB51: e
+    AB24: l
+    AB41: tz

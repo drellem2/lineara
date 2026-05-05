@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_jan_HT_103_19_21
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''jan'' pinned to HT 103 tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: jan
+  phonemes:
+  - j
+  - a
+  - n
+  gloss_hint: eat
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB01: j
+    AB81: a
+    AB09: n

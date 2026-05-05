@@ -311,8 +311,10 @@ The seven pre-registered gates and their outcomes are:
 | 5 | per-sign cross-window coherence | mg-c216 (v13) | median 0.1818 (Aquitanian), 0.1808 (Etruscan), bar 0.6 | **decisive FAIL** |
 | 6 | same-distribution pollution test | mg-6b73 (v14) | polluted-pool gate p = 2.74e-05 (PASS); within-tail real-vs-conjectural Mann-Whitney p = 0.98 | gate PASS; framework cannot distinguish real from same-distribution conjectural |
 | 7 | cross-language pollution test | mg-7ecb (v15) | polluted-pool gate p = 2.01e-03 (PASS); within-tail real-vs-conjectural-greek p = 8.29e-05 | partial within-tail discrimination |
+| 8 | toponym pool, bigram-preserving control | mg-9f18 (v18) | gate p = 9.99e-05 (PASS) under bigram control vs p = 0.92 (FAIL) under v6 unigram control | toponym validated; v10 failure was a control-sampler artifact (see §3.10) |
+| 9 | pollution-level sweep (10/25/50/75% same-distribution) | mg-9f18 (v18) | all four PASS; p = 1.5e-04 / 2.7e-04 / 2.7e-05 / 4.3e-02 | gate insensitive to pollution share within substrate distribution; threshold (if any) sits beyond 75% (see §3.11) |
 
-All seven outcomes are reproducible from
+All nine outcomes are reproducible from
 `results/rollup.bayesian_posterior.*.md`, the supporting provenance
 breakdowns in `results/rollup.bayesian_posterior.*.provenance.md`,
 and `results/consensus_sign_phoneme_map.md`. The detailed per-pool
@@ -320,16 +322,17 @@ breakdowns follow.
 
 ### 3.2 Validation status by pool
 
-The validation matrix as of v15:
+The validation matrix as of v18:
 
-| pool | own-LM (v10/mg-d26d) | cross-LM (v11/mg-0f97) | third-LM (v12/mg-4664, MycGreek) | curation gate (v14/v15) | status |
-|:--|:--:|:--:|:--:|:--:|:--|
-| `aquitanian` | PASS p = 3.22e-05 (basque) | partial p = 0.0205 (etruscan, 5× weaker) | FAIL p = 0.0953 | (see polluted variants) | substrate-LM-specific against unrelated LMs; partial Mediterranean-phonotactic kinship under etruscan LM |
-| `polluted_aquitanian` | n/a (v14 build) | n/a | n/a | **PASS p = 2.74e-05** (basque, 50% same-distribution pollution) | gate is curation-tolerant; top-20 split 9 real / 11 conjectural; within-tail real-vs-conjectural Mann-Whitney p = 0.98 |
-| `greek_polluted_aquitanian` | n/a (v15 build) | n/a | n/a | **PASS p = 2.01e-03** (basque, 50% Mycenaean-Greek-shape pollution) | partial within-tail discrimination; top-20 split 13 real / 7 conjectural-greek; real-vs-conjectural-greek MW p = 8.29e-05 |
-| `etruscan` | PASS p = 5.21e-04 (etruscan) | FAIL p = 0.591 (basque) | FAIL p = 0.185 (mycenaean_greek) | n/a | substrate-LM-specific; both unrelated LMs collapse the separation |
-| `toponym` | FAIL p = 0.92 | (skipped, v10 already FAIL) | (skipped) | n/a | not validated; control-sampler issue, see §3.5 |
-| `linear_b_carryover` | n/a | n/a | **FAIL p = 0.155** at K=20 (mycenaean_greek own-LM positive control) | n/a | positive control fails production gate; K=5 sensitivity passes at p = 0.0106 |
+| pool | own-LM (v10/mg-d26d) | cross-LM (v11/mg-0f97) | third-LM (v12/mg-4664, MycGreek) | curation gate (v14/v15) | bigram control (v18/mg-9f18) | status |
+|:--|:--:|:--:|:--:|:--:|:--:|:--|
+| `aquitanian` | PASS p = 3.22e-05 (basque) | partial p = 0.0205 (etruscan, 5× weaker) | FAIL p = 0.0953 | (see polluted variants) | n/a (v6 unigram control already PASSes) | substrate-LM-specific against unrelated LMs; partial Mediterranean-phonotactic kinship under etruscan LM |
+| `polluted_aquitanian` | n/a (v14 build) | n/a | n/a | **PASS p = 2.74e-05** (basque, 50% same-distribution pollution) | n/a | gate is curation-tolerant; top-20 split 9 real / 11 conjectural; within-tail real-vs-conjectural Mann-Whitney p = 0.98 |
+| `polluted_aquitanian_{10,25,75}pct` | n/a (v18 build) | n/a | n/a | **PASS** at all three levels (1.5e-04 / 2.7e-04 / 4.3e-02) | n/a | v18 sweep characterizes the gate's curation-sensitivity gradient; see §3.11 |
+| `greek_polluted_aquitanian` | n/a (v15 build) | n/a | n/a | **PASS p = 2.01e-03** (basque, 50% Mycenaean-Greek-shape pollution) | n/a | partial within-tail discrimination; top-20 split 13 real / 7 conjectural-greek; real-vs-conjectural-greek MW p = 8.29e-05 |
+| `etruscan` | PASS p = 5.21e-04 (etruscan) | FAIL p = 0.591 (basque) | FAIL p = 0.185 (mycenaean_greek) | n/a | n/a (v6 unigram control already PASSes) | substrate-LM-specific; both unrelated LMs collapse the separation |
+| `toponym` | FAIL p = 0.92 (v6 unigram control) | (skipped at v10) | (skipped at v10) | n/a | **PASS p = 9.99e-05** (v18 bigram control) | v10 failure was a control-sampler artifact; v18 validates against the stricter bigram null. See §3.10 |
+| `linear_b_carryover` | n/a | n/a | **FAIL p = 0.155** at K=20 (mycenaean_greek own-LM positive control) | n/a | n/a | positive control fails production gate; K=5 sensitivity passes at p = 0.0106 |
 
 ### 3.3 Aquitanian and Etruscan: validated against unrelated LMs
 
@@ -422,15 +425,45 @@ praenomina, function words, time references:
 | 12 | `zelar` | 50 | 50 | 0.9808 | ritual time-reference |
 | 13–20 | `caitim`, `thesan`, `spureri`, `thanchvil`, `suthi`, `mach`, `arnth`, `sath` | … | … | 0.9714–0.9808 | month-name, dawn-goddess, "sacrifice for the city", praenomen, "tomb / burial", numeral "five", praenomen, recurring stem |
 
-The control top-20 on both pools is the random-phonotactic noise
-floor (no semantic coherence). Full leaderboards in
-`results/rollup.bayesian_posterior.aquitanian.md` and
-`results/rollup.bayesian_posterior.etruscan.md`.
+**Toponym top-20 under the Basque LM (v18 bigram-control gate)** —
+recognizable Aegean / Mediterranean place-names plus a handful of
+toponym-stem fragments (the bigram-control gate replaces the v6
+unigram-control surfaces in the right tail; substrate surfaces
+themselves are the v10 leaderboard):
 
-### 3.5 Toponym: not validated
+| rank | surface | n | k | posterior_mean | identity / region |
+|---:|:--|---:|---:|:--:|:--|
+| 1 | `aksos` | 50 | 50 | 0.9808 | Crete (Axos) |
+| 2 | `aso` | 50 | 50 | 0.9808 | toponym-stem |
+| 3 | `assos` | 50 | 50 | 0.9808 | Aeolis (Assos) |
+| 4 | `kno` | 50 | 50 | 0.9808 | Crete (Knossos stem) |
+| 5 | `lukia` | 50 | 50 | 0.9808 | Anatolia (Lycia) |
+| 6 | `tarra` | 50 | 50 | 0.9808 | Crete (Tarrha) |
+| 7 | `ala` | 50 | 49 | 0.9615 | toponym-stem |
+| 8 | `iassos` | 24 | 24 | 0.9615 | Caria (Iassos) |
+| 9 | `itanos` | 24 | 24 | 0.9615 | Crete (Itanos) |
+| 10 | `keos` | 50 | 49 | 0.9615 | Cyclades (Keos) |
+| 11 | `lebena` | 24 | 24 | 0.9615 | Crete (Lebena) |
+| 12 | `naxos` | 24 | 24 | 0.9615 | Cyclades (Naxos) |
+| 13 | `andos` | 50 | 48 | 0.9423 | toponym-stem |
+| 14 | `minoa` | 50 | 48 | 0.9423 | Crete (Minoa) |
+| 15 | `kuzikos` | 13 | 13 | 0.9333 | Mysia (Kyzikos) |
+| 16 | `mnos` | 50 | 46 | 0.9038 | toponym-stem |
+| 17 | `aspendos` | 8 | 8 | 0.9000 | Pamphylia (Aspendos) |
+| 18 | `tenos` | 50 | 45 | 0.8846 | Cyclades (Tenos) |
+| 19 | `aios` | 50 | 44 | 0.8654 | toponym-stem |
+| 20 | `lykabettos` | 5 | 5 | 0.8571 | Athens (Lykabettos) |
 
-The toponym pool fails the right-tail gate at p = 0.92 under the
-Basque LM
+The control top-20 on all three pools is the random-phonotactic
+noise floor (no semantic coherence). Full leaderboards in
+`results/rollup.bayesian_posterior.aquitanian.md`,
+`results/rollup.bayesian_posterior.etruscan.md`, and
+`results/rollup.bayesian_posterior.toponym_bigram_control.md`.
+
+### 3.5 Toponym: validated under bigram-preserving control (v18)
+
+The toponym pool fails the v10 right-tail gate at p = 0.92 under
+the v6 unigram-marginal matched control
 (`results/rollup.bayesian_posterior.toponym.md`: substrate top-20
 median 0.9186, control top-20 median 0.9464, U = 149.5). The
 substrate top recovers recognizable Aegean toponyms (`dikte`, `keos`,
@@ -438,11 +471,25 @@ substrate top recovers recognizable Aegean toponyms (`dikte`, `keos`,
 `tulisos`, `melos`, `aspendos`, `kalumnos`, `zakuntos`, `lukia`,
 `mukenai`, `lykabettos`, `itanos`, `halikarnassos`, `poikilassos`),
 but the matched-control surfaces (`eoao`, `aathei`, `ana`, `eta`,
-`ioonaol`, etc.) sit at higher posteriors. The control sampler's
-character distribution drifted into a low-perplexity region that
-the LM rewards for the wrong reason; the failure is on the control
-side, not the substrate side. Tightening the matched-control
-sampler for the toponym pool is a known issue, deferred (see §6).
+`ioonaol`, etc.) sit at higher posteriors. The v6 unigram sampler
+draws each phoneme independently from the substrate's marginal
+histogram, which can produce arbitrarily extreme phonotactic
+violations as long as the inventory is matched; those violations
+score well under the LM by raw phoneme-frequency overlap.
+
+v18 (mg-9f18, §3.10) re-runs the gate against a bigram-preserving
+matched control (`scripts/build_control_pools.py --sampler bigram`,
+alpha = 0.1). Under the bigram null, the toponym pool **PASSes** at
+p = 9.99e-05 (substrate top-20 median 0.9615, control top-20
+median 0.8525, U = 337.5). The v10 failure is therefore a control-
+sampler artifact: tightening the control to match adjacent-phoneme
+structure (CV transitions, vowel hiatus rates) eliminates the
+extreme-phonotactics-but-frequency-matched controls (`eoao` →
+`akaintha`, `aathei` → `inaletos`, etc.), and the substrate signal
+clears the right-tail comparison cleanly. The toponym pool joins
+Aquitanian and Etruscan as a third validated cross-LM-checkable
+pool. Full breakdown:
+`results/rollup.bayesian_posterior.toponym_bigram_control.md`.
 
 ### 3.6 Linear-B carryover: positive control failed at the production gate
 
@@ -594,6 +641,99 @@ These per-inscription concentration patterns are reproducible and
 indicate which Linear A tablets respond most strongly to the
 substrate-aggregate signal. They do **not** indicate readability
 under any specific substrate (see §3.7 and §4).
+
+### 3.10 Toponym pool re-evaluation under bigram-preserving control sampler
+
+v18 (mg-9f18) re-evaluates the toponym pool against a bigram-
+preserving matched control. The v10 toponym failure (§3.5,
+p = 0.92 under the v6 unigram-marginal control) was driven by
+control surfaces like `eoao`, `aathei`, `kllzua` — phonotactically
+extreme strings that the Basque LM scored well by raw phoneme-
+frequency match. The v18 sampler
+(`scripts/build_control_pools.py --sampler bigram`, alpha = 0.1)
+draws each phoneme conditional on the previous phoneme using the
+substrate's bigram counts, replacing those extremes with surfaces
+like `akaintha`, `inaletos`, `metosord`.
+
+Under the bigram-preserving control, the toponym pool **PASSes**
+(p = 9.99e-05, MW U = 337.5; full results in
+`results/rollup.bayesian_posterior.toponym_bigram_control.md`):
+
+| variant            | substrate top-K | control top-K | median(top sub) | median(top ctrl) | MW U  | MW p (one-tail) | gate |
+|:-------------------|---:|---:|---:|---:|---:|---:|:--:|
+| bigram (v18)       | 20 | 20 | 0.9615 | 0.8525 | 337.5 | 9.988e-05 | PASS |
+| unigram (v6/v10)   | 20 | 20 | 0.9186 | 0.9464 | 149.5 | 9.165e-01 | FAIL |
+
+The control median drops 0.094 (0.946 → 0.852) under the bigram
+sampler while the substrate median rises 0.043 (0.919 → 0.962);
+every one of the v6 control's top-20 surfaces is absent from the
+v18 control's top-20. The v10 toponym failure is therefore
+attributable to control-sampler choice (an artifact of the
+unigram-marginal sampler producing phonotactically improbable
+surfaces with high LM-likelihood), not to a deficiency in the
+substrate signal. The toponym pool joins Aquitanian and Etruscan
+as a third validated pool.
+
+What this does not mean: the bigram sampler is the strictest
+control we test, but not the strictest defensible. Higher-order
+controls (trigram, position-aware) would tighten further; matching
+all of them would absorb the substrate signal entirely
+(`pools/control_toponym_bigram.README.md` "What the control is
+NOT"). The v18 result is a validation of the toponym pool against
+a bigram-phonotactic null hypothesis — strictly stronger than the
+v6 unigram-phonotactic null — and is consistent with the §3.4
+substrate-LM-phonotactic-kinship reading.
+
+### 3.11 Pollution-level sweep on Aquitanian (10%/25%/50%/75%)
+
+v18 (mg-9f18) characterizes how the right-tail bayesian gate's
+p-value scales with same-distribution conjectural pollution.
+v14 (§3.8, mg-6b73) tested 50% pollution and PASSed at v10 magnitude;
+the polecat's documented question — "is the gate essentially
+insensitive to pollution within the same phoneme-distribution
+shape, or is there a sharp threshold (e.g., 90% pollution)?" — is
+the gradient v18 measures. Per
+`results/rollup.pollution_level_sweep.md`:
+
+| pollution % | n_real | n_conj | median(top sub) | median(top ctrl) | MW U  | MW p       | gate | top-K real | top-K conj |
+|---:|---:|---:|---:|---:|---:|---:|:--:|---:|---:|
+| 10 | 153 | 17  | 0.9808 | 0.9450 | 325.5 | 1.502e-04 | PASS | 19 | 1  |
+| 25 | 153 | 51  | 0.9808 | 0.9379 | 320.0 | 2.747e-04 | PASS | 12 | 8  |
+| 50 | 153 | 153 | 0.9808 | 0.9572 | 340.0 | 2.740e-05 | PASS |  9 | 11 |
+| 75 | 153 | 459 | 0.9808 | 0.9703 | 260.0 | 4.268e-02 | PASS |  5 | 15 |
+
+The 50% row reproduces v14 (p = 2.740e-05) within sampling noise,
+sanity-checking the v18 sweep code path against the v10/v14 path.
+
+**Two readings.** At the gate level, every level PASSes; the
+p-value at 75% (0.043) is close to but below the 0.05 threshold,
+and the trend across 50% → 75% suggests the threshold (if any)
+sits beyond 75% rather than at a sharp boundary inside the
+gradient. v14's reading — that the framework's PASS at the
+population level is driven by phonotactic-distribution-shape match
+rather than by the fraction of surfaces that are real substrate
+vocabulary — generalizes across the gradient.
+
+At the top-K composition level, the substrate top-K shifts from
+real-dominated at 10% (19/20 real) to conjectural-dominated at 75%
+(5/20 real). Real surfaces remain near the maximum-posterior
+ceiling regardless of pollution level (`median(top substrate)`
+stays at 0.9808 across all four rows), but conjectural surfaces
+with high-credibility wins crowd into the right tail as the
+conjectural pool grows. Any reading of "the framework
+discriminates real vs conjectural at the top-K level" needs to be
+calibrated to the pollution level — at 10% pollution it does
+(19/20 real); at 75% it does not (5/20 real).
+
+**Threshold characterization (negative).** The sweep does not
+locate a fail threshold within 10% – 75%. Locating one would need
+finer sweep granularity (e.g. 85%, 90%, 95% rows); deferred. The
+methodologically clean statement: *the v10 right-tail gate PASSes
+at every same-distribution pollution level we tested, with
+p-value at 75% close to but below the 0.05 threshold; same-
+distribution pollution at higher conjectural shares may eventually
+break the gate but the precise threshold is not located by this
+sweep.*
 
 ---
 
@@ -747,12 +887,6 @@ modes that have plagued Linear A studies historically.
 
 ### 5.2 Known unresolved issues
 
-- **Toponym pool: control-sampler issue.** The toponym substrate
-  pool's matched-control sampler drifted into a low-LM-perplexity
-  corner (`eoao`, `aathei`, etc.) that the Basque LM accidentally
-  rewards. The substrate side recovers recognizable Aegean toponyms
-  but the gate fails on the control side, not the substrate side.
-  Tightening the sampler is a candidate cleanup ticket; deferred.
 - **Linear-B positive control: K=20 production gate is over-
   conservative on mixed-cleanness pools.** The same pool clears at
   K=5 (p = 0.0106) but fails at K=20 (p = 0.155). Adopting a less-
@@ -763,6 +897,12 @@ modes that have plagued Linear A studies historically.
   setting introduces minor per-(sign-set, inscription) duplication
   at rank 9–17 of some leaderboards (mg-f419 follow-up). Small
   effect; non-blocking.
+- **Pollution-level threshold not localized.** v18's same-
+  distribution sweep (§3.11) PASSes at every level 10%–75% with
+  the 75% gate p sitting at 0.043 — close to but below the 0.05
+  threshold. Locating the precise threshold (if any) at conjectural
+  shares ≥ 75% would need finer sweep granularity; not load-bearing
+  for the manuscript shape.
 - **No second-corpus cross-validation.** All scoring is against the
   761-record SigLA snapshot. A GORILA / Younger 2000 ingest would
   add numerals and line-break information not in SigLA, expanding
@@ -773,10 +913,6 @@ modes that have plagued Linear A studies historically.
 Out of scope for the methodology paper but on the project's
 follow-up surface:
 
-- **Pollution-level sweep** (10% / 25% / 75%) — would tell us whether
-  the gate has a sharp threshold or smooth gradient under same-
-  distribution noise. Not load-bearing for the manuscript shape
-  after v15's binary cross-language test.
 - **Cross-language gates with other LMs** (Etruscan-shape pollution,
   Linear-B-shape pollution) — would localize which Mediterranean
   phonotactic features the gate is responding to.

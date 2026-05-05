@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_leher_KN_Zf_13_3_7
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''leher'' pinned to KN Zf 13 tokens [3..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: leher
+  phonemes:
+  - l
+  - e
+  - h
+  - e
+  - r
+  gloss_hint: pine
+  citation: Gorrochategui 1984, Aq. theonym LEHERENNO; Basque leher.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 7
+  sign_to_phoneme:
+    AB41: l
+    AB07: e
+    A301: h
+    AB39: e
+    AB44: r

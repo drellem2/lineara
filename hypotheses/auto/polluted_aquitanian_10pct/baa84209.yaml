@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_ekarri_HT_Zb_159_0_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''ekarri'' pinned to HT Zb 159 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: ekarri
+  phonemes:
+  - e
+  - k
+  - a
+  - r
+  - r
+  - i
+  gloss_hint: bring
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: e
+    AB06: k
+    AB55: a
+    AB41: r
+    AB57: r
+    AB09: i

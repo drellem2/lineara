@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_beltz_GO_Wc_1a_2_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''beltz'' pinned to GO Wc 1a tokens [2..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: beltz
+  phonemes:
+  - b
+  - e
+  - l
+  - tz
+  gloss_hint: black
+  citation: Trask 1997 ch. 3; cf. Aq. BELS-.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    AB58: b
+    AB80: e
+    AB28: l
+    AB09: tz

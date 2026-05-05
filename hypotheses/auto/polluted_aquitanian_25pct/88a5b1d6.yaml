@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_nor_ARKH_2_9_11
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''nor'' pinned to ARKH 2 tokens [9..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: nor
+  phonemes:
+  - n
+  - o
+  - r
+  gloss_hint: who
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB41: n
+    AB01: o
+    AB05: r

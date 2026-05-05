@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_txiki_HT_110a_1_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''txiki'' pinned to HT 110a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: txiki
+  phonemes:
+  - tx
+  - i
+  - k
+  - i
+  gloss_hint: small
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 110a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB51: tx
+    AB34: i
+    AB81: k
+    AB73: i

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_harri_HT_115a_9_13
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''harri'' pinned to HT 115a tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: harri
+  phonemes:
+  - h
+  - a
+  - r
+  - r
+  - i
+  gloss_hint: stone
+  citation: Trask 1997 ch. 3 (Basque harri).
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB53: h
+    AB59: a
+    AB80: r
+    AB55: r
+    AB40: i

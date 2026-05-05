@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_ume_ARKH_2_9_11
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''ume'' pinned to ARKH 2 tokens [9..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: ume
+  phonemes:
+  - u
+  - m
+  - e
+  gloss_hint: child, young
+  citation: Trask 1997 ch. 3; cf. Aq. UMME.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 11
+  sign_to_phoneme:
+    AB41: u
+    AB01: m
+    AB05: e

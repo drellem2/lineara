@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_ohe_ARKH_1a_22_24
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''ohe'' pinned to ARKH 1a tokens [22..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: ohe
+  phonemes:
+  - o
+  - h
+  - e
+  gloss_hint: bed
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 22
+  - 24
+  sign_to_phoneme:
+    AB67: o
+    AB31: h
+    AB24: e

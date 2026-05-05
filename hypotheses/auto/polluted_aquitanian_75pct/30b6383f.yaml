@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_zahar_KN_Zb_5_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''zahar'' pinned to KN Zb 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: zahar
+  phonemes:
+  - z
+  - a
+  - h
+  - a
+  - r
+  gloss_hint: old
+  citation: Trask 1997 ch. 3; cf. Aq. SAHAR-.
+equation:
+  inscription_id: KN Zb 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: z
+    AB69: a
+    AB53: h
+    AB41: a
+    AB37: r

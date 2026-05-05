@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_hagin_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''hagin'' pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: hagin
+  phonemes:
+  - h
+  - a
+  - g
+  - i
+  - n
+  gloss_hint: tooth
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: h
+    AB07: a
+    AB06: g
+    AB58: i
+    AB77: n

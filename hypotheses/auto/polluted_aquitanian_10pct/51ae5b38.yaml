@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_erori_ARKH_5_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''erori'' pinned to ARKH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: erori
+  phonemes:
+  - e
+  - r
+  - o
+  - r
+  - i
+  gloss_hint: fall
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: e
+    AB51: r
+    AB30: o
+    AB59: r
+    AB06: i

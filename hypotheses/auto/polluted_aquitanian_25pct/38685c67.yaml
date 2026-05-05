@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_arrain_KN_Zc_7_14_19
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''arrain'' pinned to KN Zc 7 tokens [14..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: arrain
+  phonemes:
+  - a
+  - r
+  - r
+  - a
+  - i
+  - n
+  gloss_hint: fish
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 19
+  sign_to_phoneme:
+    AB57: a
+    AB31: r
+    AB60: r
+    AB08: a
+    AB06: i
+    AB24: n

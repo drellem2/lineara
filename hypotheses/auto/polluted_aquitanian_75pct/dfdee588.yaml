@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_odol_HT_123b_25_28
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''odol'' pinned to HT 123b tokens [25..28].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: odol
+  phonemes:
+  - o
+  - d
+  - o
+  - l
+  gloss_hint: blood
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 25
+  - 28
+  sign_to_phoneme:
+    AB69: o
+    AB02: d
+    AB07: o
+    AB01: l

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_ogi_HT_104_5_7
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''ogi'' pinned to HT 104 tokens [5..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: ogi
+  phonemes:
+  - o
+  - g
+  - i
+  gloss_hint: bread
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 104
+  span:
+  - 5
+  - 7
+  sign_to_phoneme:
+    AB01: o
+    AB81: g
+    AB09: i

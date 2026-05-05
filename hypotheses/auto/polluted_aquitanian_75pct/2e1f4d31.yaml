@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_hox_ARKH_4a_13_16
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''hox'' pinned to ARKH 4a tokens [13..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: hox
+  phonemes:
+  - h
+  - o
+  - x
+  gloss_hint: cold (proposed)
+  citation: Gorrochategui 1984, Aq. HOX- onomastic element; cf. Basque hotz.
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 16
+  sign_to_phoneme:
+    AB45: h
+    AB58: o
+    AB47: x

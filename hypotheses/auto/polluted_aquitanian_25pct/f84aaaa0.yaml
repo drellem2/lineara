@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_ate_GO_Wc_1a_1_3
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''ate'' pinned to GO Wc 1a tokens [1..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: ate
+  phonemes:
+  - a
+  - t
+  - e
+  gloss_hint: door
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    AB31: a
+    AB58: t
+    AB80: e

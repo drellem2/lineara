@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_lan_HT_1_15_17
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''lan'' pinned to HT 1 tokens [15..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: lan
+  phonemes:
+  - l
+  - a
+  - n
+  gloss_hint: work
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 1
+  span:
+  - 15
+  - 17
+  sign_to_phoneme:
+    AB81: l
+    AB56: a
+    AB55: n

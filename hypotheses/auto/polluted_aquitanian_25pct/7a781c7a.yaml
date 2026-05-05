@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_edun_ARKH_1a_10_13
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''edun'' pinned to ARKH 1a tokens [10..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: edun
+  phonemes:
+  - e
+  - d
+  - u
+  - n
+  gloss_hint: have, possess (proposed verbal stem)
+  citation: Gorrochategui 1984, Aq. EDUNN-; Basque verbal *edun.
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    AB08: e
+    AB58: d
+    AB73: u
+    AB118: n

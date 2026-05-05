@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_sagar_KN_Zf_13_9_13
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''sagar'' pinned to KN Zf 13 tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: sagar
+  phonemes:
+  - s
+  - a
+  - g
+  - a
+  - r
+  gloss_hint: apple
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB57: s
+    AB59: a
+    AB53: g
+    AB09: a
+    AB04: r

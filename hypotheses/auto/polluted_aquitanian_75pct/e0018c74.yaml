@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_zubi_HT_117a_72_75
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''zubi'' pinned to HT 117a tokens [72..75].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: zubi
+  phonemes:
+  - z
+  - u
+  - b
+  - i
+  gloss_hint: bridge
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 117a
+  span:
+  - 72
+  - 75
+  sign_to_phoneme:
+    AB01: z
+    AB24: u
+    AB81: b
+    AB37: i

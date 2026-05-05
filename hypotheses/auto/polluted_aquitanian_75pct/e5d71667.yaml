@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_hiru_HT_128a_6_9
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''hiru'' pinned to HT 128a tokens [6..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: hiru
+  phonemes:
+  - h
+  - i
+  - r
+  - u
+  gloss_hint: three
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: HT 128a
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    AB26: h
+    AB56: i
+    AB09: r
+    AB13: u

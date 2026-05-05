@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_cison_KN_Zf_13_3_7
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''cison'' pinned to KN Zf 13 tokens [3..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: cison
+  phonemes:
+  - c
+  - i
+  - s
+  - o
+  - n
+  gloss_hint: man
+  citation: Gorrochategui 1984, Aq. CISON; Basque cognate gizon (Trask 1997).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 7
+  sign_to_phoneme:
+    AB41: c
+    AB07: i
+    A301: s
+    AB39: o
+    AB44: n

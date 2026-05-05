@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_nor_HT_103_6_8
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''nor'' pinned to HT 103 tokens [6..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: nor
+  phonemes:
+  - n
+  - o
+  - r
+  gloss_hint: who
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 6
+  - 8
+  sign_to_phoneme:
+    AB01: n
+    AB81: o
+    AB09: r

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_ere_HT_103_7_9
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''ere'' pinned to HT 103 tokens [7..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: ere
+  phonemes:
+  - e
+  - r
+  - e
+  gloss_hint: also
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 7
+  - 9
+  sign_to_phoneme:
+    AB81: e
+    AB09: r
+    AB24: e

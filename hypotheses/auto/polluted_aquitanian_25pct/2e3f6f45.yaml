@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_entzun_ARKH_2_14_19
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''entzun'' pinned to ARKH 2 tokens [14..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: entzun
+  phonemes:
+  - e
+  - n
+  - tz
+  - u
+  - n
+  gloss_hint: hear
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 19
+  sign_to_phoneme:
+    AB79: e
+    A301: n
+    AB09: tz
+    AB45: u
+    AB118: n

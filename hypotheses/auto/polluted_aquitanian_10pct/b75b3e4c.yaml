@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_eki_HT_103_19_21
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''eki'' pinned to HT 103 tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: eki
+  phonemes:
+  - e
+  - k
+  - i
+  gloss_hint: sun (short form)
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB01: e
+    AB81: k
+    AB09: i

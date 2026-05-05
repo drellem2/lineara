@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_entzun_KH_5_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''entzun'' pinned to KH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: entzun
+  phonemes:
+  - e
+  - n
+  - tz
+  - u
+  - n
+  gloss_hint: hear
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: e
+    AB01: n
+    AB67: tz
+    AB41: u
+    AB77: n

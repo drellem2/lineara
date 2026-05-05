@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_berri_KN_Zf_13_12_16
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''berri'' pinned to KN Zf 13 tokens [12..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: berri
+  phonemes:
+  - b
+  - e
+  - r
+  - r
+  - i
+  gloss_hint: new
+  citation: Trask 1997 ch. 3; cf. Aq. ILIBERRI 'new town'.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 16
+  sign_to_phoneme:
+    AB09: b
+    AB04: e
+    AB53: r
+    AB23: r
+    AB08: i

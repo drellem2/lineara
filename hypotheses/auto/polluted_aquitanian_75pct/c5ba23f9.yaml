@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_gorri_KN_Zc_7_14_18
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''gorri'' pinned to KN Zc 7 tokens [14..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: gorri
+  phonemes:
+  - g
+  - o
+  - r
+  - r
+  - i
+  gloss_hint: red
+  citation: Trask 1997 ch. 3; cf. Aq. BAIGOR 'red valley'.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    AB57: g
+    AB31: o
+    AB60: r
+    AB08: r
+    AB06: i

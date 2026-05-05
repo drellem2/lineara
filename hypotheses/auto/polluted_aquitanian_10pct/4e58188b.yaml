@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_entzun_HT_Zb_159_1_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''entzun'' pinned to HT Zb 159 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: entzun
+  phonemes:
+  - e
+  - n
+  - tz
+  - u
+  - n
+  gloss_hint: hear
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB06: e
+    AB55: n
+    AB41: tz
+    AB57: u
+    AB09: n

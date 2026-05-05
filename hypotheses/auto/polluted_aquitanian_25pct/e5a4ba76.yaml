@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_sembe_KN_Zf_13_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''sembe'' pinned to KN Zf 13 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: sembe
+  phonemes:
+  - s
+  - e
+  - m
+  - b
+  - e
+  gloss_hint: son
+  citation: Gorrochategui 1984, Aq. SEMBE/SENBE; Basque cognate seme (Trask 1997 ch.
+    3).
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: s
+    AB27: e
+    AB24: m
+    AB41: b
+    AB07: e

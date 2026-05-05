@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_buru_HT_103_5_8
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''buru'' pinned to HT 103 tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: buru
+  phonemes:
+  - b
+  - u
+  - r
+  - u
+  gloss_hint: head
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 103
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB56: b
+    AB01: u
+    AB81: r
+    AB09: u

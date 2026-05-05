@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_leiho_KN_Zb_5_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''leiho'' pinned to KN Zb 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: leiho
+  phonemes:
+  - l
+  - e
+  - i
+  - h
+  - o
+  gloss_hint: window
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zb 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: l
+    AB69: e
+    AB53: i
+    AB41: h
+    AB37: o

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_etxe_HT_104_20_22
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''etxe'' pinned to HT 104 tokens [20..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: etxe
+  phonemes:
+  - e
+  - tx
+  - e
+  gloss_hint: house
+  citation: Trask 1997 ch. 3 (Basque etxe).
+equation:
+  inscription_id: HT 104
+  span:
+  - 20
+  - 22
+  sign_to_phoneme:
+    AB01: e
+    AB58: tx
+    AB37: e

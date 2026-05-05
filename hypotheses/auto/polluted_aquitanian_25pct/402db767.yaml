@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_zazpi_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''zazpi'' pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: zazpi
+  phonemes:
+  - z
+  - a
+  - z
+  - p
+  - i
+  gloss_hint: seven
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: z
+    AB03: a
+    AB81: z
+    AB55: p
+    AB10: i

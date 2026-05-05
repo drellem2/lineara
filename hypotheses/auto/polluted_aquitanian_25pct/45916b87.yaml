@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_mahats_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''mahats'' pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: mahats
+  phonemes:
+  - m
+  - a
+  - h
+  - a
+  - ts
+  gloss_hint: grape
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: m
+    AB67: a
+    AB59: h
+    AB06: a
+    AB41: ts

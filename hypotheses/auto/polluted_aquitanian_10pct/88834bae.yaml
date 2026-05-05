@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_hars_HT_128a_5_8
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''hars'' pinned to HT 128a tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: hars
+  phonemes:
+  - h
+  - a
+  - r
+  - s
+  gloss_hint: bear
+  citation: Gorrochategui 1984, Aq. HARS-; Basque hartz (Trask 1997 ch. 3).
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB69: h
+    AB26: a
+    AB56: r
+    AB09: s

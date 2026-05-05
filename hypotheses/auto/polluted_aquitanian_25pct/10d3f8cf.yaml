@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_hiru_GO_Wc_1a_2_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''hiru'' pinned to GO Wc 1a tokens [2..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: hiru
+  phonemes:
+  - h
+  - i
+  - r
+  - u
+  gloss_hint: three
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    AB58: h
+    AB80: i
+    AB28: r
+    AB09: u

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_hiru_HT_110a_1_4
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''hiru'' pinned to HT 110a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: hiru
+  phonemes:
+  - h
+  - i
+  - r
+  - u
+  gloss_hint: three
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: HT 110a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB51: h
+    AB34: i
+    AB81: r
+    AB73: u

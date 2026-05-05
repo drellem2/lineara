@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_25pct_baso_HT_122b_14_17
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_25pct''
+  entry surface=''baso'' pinned to HT 122b tokens [14..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_25pct
+root:
+  surface: baso
+  phonemes:
+  - b
+  - a
+  - s
+  - o
+  gloss_hint: forest
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: HT 122b
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    AB60: b
+    AB65: a
+    AB10: s
+    AB45: o

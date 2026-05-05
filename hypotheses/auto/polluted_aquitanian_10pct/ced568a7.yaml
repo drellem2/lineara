@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_andere_HT_Zb_158b_0_5
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''andere'' pinned to HT Zb 158b tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: andere
+  phonemes:
+  - a
+  - n
+  - d
+  - e
+  - r
+  - e
+  gloss_hint: lady, woman of standing
+  citation: Gorrochategui 1984, Aquitanian theonym/anthroponym ANDERE; Trask 1997
+    ch. 3 (Basque cognate andere).
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB58: a
+    AB67: n
+    AB53: d
+    AB04: e
+    AB28: r
+    AB57: e

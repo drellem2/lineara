@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_75pct_mahats_KN_Zf_13_7_11
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_75pct''
+  entry surface=''mahats'' pinned to KN Zf 13 tokens [7..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_75pct
+root:
+  surface: mahats
+  phonemes:
+  - m
+  - a
+  - h
+  - a
+  - ts
+  gloss_hint: grape
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 7
+  - 11
+  sign_to_phoneme:
+    AB44: m
+    AB03: a
+    AB57: h
+    AB59: a
+    AB53: ts

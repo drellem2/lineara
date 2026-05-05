@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_polluted_aquitanian_10pct_lur_GO_Wc_1a_0_2
+description: 'Auto-generated candidate equation: pool=''polluted_aquitanian_10pct''
+  entry surface=''lur'' pinned to GO Wc 1a tokens [0..2].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: polluted_aquitanian_10pct
+root:
+  surface: lur
+  phonemes:
+  - l
+  - u
+  - r
+  gloss_hint: earth, ground
+  citation: Gorrochategui 1984, Aq. LUR- compound element; Basque lur.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    AB08: l
+    AB31: u
+    AB58: r
