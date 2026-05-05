@@ -8097,3 +8097,253 @@ identical output.
 - Salgarella, E. (2020). *Aegean Linear Script(s).* Cambridge.
 - Ventris, M. & Chadwick, J. (1956). *Documents in Mycenaean
   Greek.* Cambridge.
+
+---
+
+## Findings from mg-1178 (chic-v10 — methodology paper polish pass integrating chic-v9 leave-one-out validation result; downgrade chic-v5 tier-2 candidates' credibility per the 20% LOO accuracy / 0/3 tier-2 correct verdict, 2026-05-05)
+
+### Summary
+
+Editorial / verification ticket. No harness commits. chic-v10
+audits `docs/findings_summary.md` end-to-end after the chic-v9
+(mg-18cb) leave-one-out held-out validation polecat lands. The
+chic-v9 polecat had already integrated its result into §4.7 as a
+new chic-v9 subsection and into the abstract; chic-v10 audits each,
+then extends the document's higher-level integration sections
+(§4.7 intro post-chic-v9 framing, chic-v5 closing summary, chic-v6
+closing summary, chic-v8 closing summary, the Pre-registered
+chic-v10+ subsection, the Cross-script methodological synthesis,
+§5.4 Cross-script CHIC limitations, §6 Conclusion, §7 Three-
+sentence reading test, §2.11 Methods Cross-script extension
+pipeline) to lead with the **20.0% aggregate / 0/3 tier-2
+unanimous correct** LOO verdict and downgrade the chic-v5 tier-2
+candidates' credibility from "candidate proposals pending
+domain-expert review by an Aegean-syllabary specialist" to
+**"candidate proposals contingent on the framework's currently-low
+validation accuracy"**.
+
+### Restructure / edits made
+
+1. **§4.7 heading** — updated from "Cross-script extension:
+   Cretan Hieroglyphic (chic-v0 through chic-v5)" to
+   "(chic-v0 through chic-v9)".
+2. **§4.7 intro paragraph** — added a "Post-chic-v9 framing"
+   summary paragraph at the head of the section setting the
+   load-bearing register: 20.0% aggregate LOO accuracy / 0/3
+   on the tier-2 unanimity criterion places the framework in
+   the low-agreement / not-validated band per the chic-v9
+   brief's pre-registered thresholds; the 3 chic-v5 tier-2
+   candidates are downgraded to "proposals contingent on the
+   framework's currently-low validation accuracy"; chic-v6's
+   +3-inscription / +20-hit lift remains independent evidence;
+   L4 paleographic agreement remains a falsifiable evidence
+   axis pending hand-curated extension. Updated the editorial-
+   pass enumeration to mention v27 (mg-b731) and chic-v10
+   (mg-1178) alongside chic-v7 (mg-9508).
+3. **chic-v5 subsection** — hedged the tier-2 framing in the
+   headline-counts table ("candidate proposal contingent on the
+   framework's currently-low validation accuracy (chic-v9,
+   below)") and the closing summary paragraph (downgrade from
+   "pending domain-expert review" to "contingent on currently-
+   low validation accuracy", with explicit cross-reference to
+   chic-v9 below).
+4. **chic-v6 subsection closing** — rewrote the "remains
+   'candidate proposals pending domain-expert review'" framing
+   paragraph to lead with the post-chic-v9 register; preserved
+   chic-v6's +3-inscription / +20-hit lift as independent
+   evidence; explicitly noted chic-v6's lift is no longer
+   carrying the weight of "specialist-review priority".
+5. **chic-v8 subsection closing** — hedged the "tier-2 candidate
+   count remains 3 unchanged" claim with a forward-reference to
+   chic-v9's downgrade; the chic-v8 zero-contribution null
+   result framing is preserved.
+6. **chic-v9 subsection (already integrated by chic-v9 polecat)**
+   — audit-of-the-audit confirmed all numbers verify against
+   `results/chic_v9_loo_validation.md`: 4/20 = 20.0% aggregate
+   accuracy; chance baseline ~16.7%; per-line L1=20%, L2=20%,
+   L3=5%; LOO tier-2 count 3 (all incorrect); tier breakdown
+   3/14/3/0; the 3 LOO tier-2 anchors named (`#031 = ro`/liquid,
+   `#042 = wa`/glide ⚠ L3 structurally unable to recover glide,
+   `#053 = me`/nasal); 1/20 ⚠ marker matches the per-anchor
+   table. No drift; no edits needed.
+7. **Pre-registered chic-v10+ subsection** — added a chic-v10
+   "Done in mg-1178" entry enumerating the §4.7 intro
+   restructure, chic-v5 hedging, §5.4 entry add, §6 + §7 + §2.11
+   integration, and the audit-of-the-audit on chic-v9's
+   incremental edits.
+8. **Cross-script methodological synthesis** — updated subsection
+   header from "(chic-v0..v5 + Linear A v0..v25)" to
+   "(chic-v0..v9 + Linear A v0..v26)"; updated the "31-ticket
+   sequence" line to "36-ticket sequence"; rewrote the lead
+   methodology-paper claim to include the per-sign-machinery-
+   fails-LOO finding; rewrote the "Per-sign decipherment remains
+   unsupported on either script" bullet to include chic-v9's
+   20.0% / 0/3 verdict and downgrade the candidates; rewrote the
+   "Internal consensus does not imply external correctness"
+   bullet to add the population-vs-per-sign axis; added a new
+   bullet "Held-out validation as the falsification check
+   internal-consensus-only methodology cannot supply" enumerating
+   the v13/v22/v24/chic-v6/chic-v9 negative-validation lineage
+   with chic-v9 as the fifth piece of evidence.
+9. **§5.4 Cross-script CHIC limitations** — added a chic-v9
+   limitation entry per the chic-v10 brief: "the chic-v5
+   framework's mechanical recovery on known cases (LOO
+   validation, chic-v9) is at chance baseline; per-sign value-
+   extraction proposals derived via the framework should be
+   read as 'phonotactically-coherent candidates contingent on
+   the framework's currently-low validation accuracy' rather
+   than 'validated phoneme-class assignments deserving elevated
+   specialist-review priority', pending domain-expert review
+   and an independent line of evidence (paleographic, dual-
+   script, or otherwise) per candidate"; with full per-line
+   decomposition (L1=20%, L2=20%, L3=5%) and chic-v9 brief
+   pre-registered thresholds (>70% high; 40-70% moderate; <40%
+   low) cited.
+10. **§6 Conclusion** — extended the framework's null-findings
+    enumeration to include chic-v9's 20.0% / 0/3 verdict
+    alongside the existing v13 / v14 / v19 / v20 / v22 / v24
+    negative-validation pattern; updated the Cross-script
+    extension subsection to mention chic-v9 explicitly (header,
+    chic-v5 closing summary, chic-v8 paragraph) and downgrade
+    the candidates from "candidate proposals pending domain-
+    expert review" to "candidate proposals contingent on the
+    framework's currently-low validation accuracy".
+11. **§7 Three-sentence reading test** — restructured to lead
+    with chic-v9's LOO accuracy number rather than the tier-2
+    candidate count; sentence 2 now opens with "Per-sign
+    decipherment is unsupported on either script, and the
+    per-sign machinery fails a held-out validation against
+    known anchors at chance-baseline accuracy" and threads
+    chic-v9's 20.0% / 0/3 verdict through the negative-
+    validation evidence; sentence 3's methodological-
+    contribution list adds "the leave-one-out held-out
+    validation against known anchors as the falsification
+    check that internal-consensus-only methodology cannot
+    supply"; updated the canonical-reading-test lineage line
+    to enumerate chic-v10 (mg-1178) as the post-chic-v9
+    polish pass.
+12. **§2.11 Methods Cross-script extension pipeline** — updated
+    header from "(chic-v0–chic-v8)" to "(chic-v0–chic-v9)";
+    hedged the chic-v5 tier-2 description ("post-chic-v9:
+    contingent on the framework's currently-low validation
+    accuracy"); added a chic-v9 bullet covering the LOO
+    method, L4-exclusion-for-circularity, and the pre-
+    registered acceptance bands.
+13. **Abstract heading** — updated "(chic-v0..v5)" to
+    "(chic-v0..v9)" for consistency with §4.7 + §2.11. The
+    abstract's chic-v9 paragraph (already added by the
+    chic-v9 polecat) provides the post-chic-v9 framing in
+    the abstract proper.
+
+### Audit-of-the-audit on chic-v9's polecat updates
+
+chic-v9's polecat-incremental edits to `findings_summary.md` were
+audited. The chic-v9 §4.7 subsection (lines 2820–2952 pre-
+chic-v10) is well-structured and quantitatively accurate:
+
+- 4/20 = 20.0% aggregate LOO accuracy ✓ (matches
+  `results/chic_v9_loo_validation.md` headline accuracy section)
+- Chance baseline ~16.7% for 6-class taxonomy ✓
+- Tier breakdown 3 LOO tier-2 / 14 tier-3 / 3 tier-4 / 0 untiered ✓
+- Per-line L1=20%, L2=20%, L3=5% ✓
+- LOO tier-2 0/3 correct ✓
+- The 3 LOO tier-2 anchors named (#031=ro/liquid; #042=wa/glide
+  with L3 ⚠; #053=me/nasal) match the per-anchor table ✓
+- ⚠ marker for #042 (1/20 cases where the held-out class has no
+  other representative in the rebuilt 19-anchor candidate-value
+  pool) matches the chic-v9 result file's per-anchor table ✓
+- L3 ⚠ explanation (Eteocretan-phoneme-inventory filter excludes
+  `ja`/`je` because Eteocretan has no `j`, leaving `wa` as the
+  only glide value in the candidate pool) is consistent with
+  chic-v5 build script's documented filter behaviour ✓
+- Determinism claim (no RNG; sha256-keyed permutation
+  construction; same inputs → byte-identical output) consistent
+  with chic-v5 / chic-v9 build scripts ✓
+
+Conclusion: chic-v9 polecat-incremental edits required no
+correction. chic-v10 polish layered on top of them without
+amendment to the chic-v9 subsection itself.
+
+### Three-sentence reading test (§7) — post-chic-v9 register
+
+The §7 reading test has been restructured per the chic-v10 brief:
+
+1. **What the framework detects (population level, both
+   scripts).** Population-level kinship detection across two
+   undeciphered Cretan scripts; per-pool gate-magnitude ordering
+   tracking a-priori genealogical relatedness; cross-script
+   Spearman ρ=+1.000.
+2. **Per-sign decipherment is unsupported on either script, and
+   the per-sign machinery fails a held-out validation against
+   known anchors at chance-baseline accuracy.** Linear A v13
+   coherence median 0.18; v22/v24 3.95% scholar-set match rate;
+   v26 19–30 sign-level contradictions per pool; **chic-v9 LOO
+   places the chic-v5 framework's mechanical recovery on the 20
+   known chic-v2 anchors at 20.0% aggregate / 0/3 on the tier-2
+   unanimity criterion** (low-agreement / not-validated band per
+   the chic-v9 brief's pre-registered thresholds); 3 chic-v5
+   tier-2 candidates downgraded to "contingent on the framework's
+   currently-low validation accuracy"; chic-v6 +3-inscription /
+   +20-hit lift retained as independent evidence; chic-v8 0 new
+   tier-2 candidates on v0 corpora.
+3. **The cross-script methodological contribution.** The
+   substrate-LM-phonotactic-kinship test + matched-control
+   protocol + cascade-candidate framing + external-comparand
+   bookkeeping + four-line-of-evidence per-sign discipline +
+   leaderboard-top-K mechanical-verification + falsifiable
+   bilingual fifth-axis extension + **leave-one-out held-out
+   validation against known anchors** (the falsification check
+   internal-consensus-only methodology cannot supply) constitute
+   a transferable cross-script methodology; the framework's
+   negative findings on Linear A (v13/v14/v19/v20/v22/v24/v26)
+   together with cross-script transfer on CHIC (chic-v3/chic-v4/
+   chic-v5/chic-v6/chic-v8) and held-out validation verdict
+   (chic-v9) are themselves the methodological deliverable.
+
+The reading test passes in the post-chic-v9 register: the LOO
+accuracy number leads, the candidates carry post-chic-v9
+hedging, and the methodological-discipline contribution is
+unchanged in shape but extended to include held-out validation
+as the fifth pillar.
+
+### Acceptance criteria status
+
+- `docs/findings_summary.md` audited end-to-end with chic-v9
+  result integrated and the 3 chic-v5 tier-2 candidates
+  appropriately downgraded ✓
+- §4.7 restructured to lead with chic-v9 verdict and implication
+  for candidates ✓
+- §6 Conclusion + §7 three-sentence test + §5.4 limitations
+  updated ✓
+- Three-sentence reading test passes in the post-chic-v9
+  register ✓
+- findings.md appended (this entry) ✓
+- Audit-of-the-audit on chic-v9's polecat updates: no drift
+  found ✓
+
+### Out of scope (deferred to subsequent tickets)
+
+- **Linear A side analogous LOO validation.** Now warranted
+  given chic-v9's negative result — would the v10/v18/v21
+  leaderboard top-K substrate surfaces (or the per-sign
+  consensus map) survive a similar held-out test against the
+  Linear-B-carryover anchor pool? Substantive follow-up; deferred
+  to v28 or later. Filed for pm-lineara triage; chic-v9
+  strengthens the case but is not a prerequisite.
+- **Domain-expert review** of any chic-v5 candidates regardless
+  of chic-v9 outcome. Out of polecat scope; specialist judgment
+  remains the load-bearing next step for advancing any matched
+  candidate to "decipherment".
+- **Journal-submission editorial.** Out of polecat scope.
+- **Cleanup tickets** (AGENTS.md, Linear-B small-K, dedup).
+  Cosmetic; deferred.
+- **Pivot programs** (Indus Valley / Rongorongo / Proto-Elamite).
+  Need Daniel's go-ahead.
+
+### Citations
+
+- Olivier, J.-P. & Godart, L. (1996). *Corpus Hieroglyphicarum
+  Inscriptionum Cretae* (Études Crétoises 31). Paris.
+- Salgarella, E. (2020). *Aegean Linear Script(s).* Cambridge.
+- Ventris, M. & Chadwick, J. (1956). *Documents in Mycenaean
+  Greek.* Cambridge.

@@ -181,7 +181,7 @@ inscription. Both signals are real and publishable; neither alone
 supports a decipherment claim, which remains conditional on Aegean-
 syllabary specialist review.
 
-**Cross-script extension to Cretan Hieroglyphic (chic-v0..v5).** A
+**Cross-script extension to Cretan Hieroglyphic (chic-v0..v9).** A
 parallel chic sub-program ports the same substrate-LM-phonotactic-
 kinship framework to **CHIC**, the older sister-script to Linear A
 (302 of 331 catalog inscriptions ingested from the Younger web
@@ -592,7 +592,7 @@ added in the v18–v26 sequence within the same scoring discipline:
   CHIC-side (chic-v6) / Linear A-side mechanical-verification
   reporting at the leaderboard-top-K granularity.
 
-### 2.11 Cross-script extension pipeline (chic-v0–chic-v8)
+### 2.11 Cross-script extension pipeline (chic-v0–chic-v9)
 
 The chic sub-program reuses the same scoring infrastructure
 verbatim — same external phoneme LMs, same matched-control pools
@@ -654,7 +654,8 @@ value-extraction framework (chic-v5). Full per-stage detail in §4.7.
   for the chic-v2 anchor pool, so by construction no unknown
   carries a paleographic note; documented as a limitation).
   Tier classification mechanical: ≥3 of 4 lines agreeing →
-  tier-2 candidate proposal pending domain-expert review; 2 of 4 →
+  tier-2 candidate proposal (post-chic-v9: contingent on the
+  framework's currently-low validation accuracy); 2 of 4 →
   tier-3 (suggestive); 1 of 4 → tier-4; 0 → untiered. Coarse
   phoneme classes (`vowel`, `stop`, `nasal`, `liquid`, `fricative`,
   `glide`).
@@ -683,6 +684,21 @@ value-extraction framework (chic-v5). Full per-stage detail in §4.7.
   Refuse to invoke genre-parallels (CHIC #328 offering table vs LA
   libation tables PS Za 2 / SY Za 4) as load-bearing evidence —
   reported informationally only.
+- **chic-v9 leave-one-out held-out validation** (mg-18cb). For each
+  of the 20 chic-v2 anchors S with known scholarly value V: remove
+  S from the chic-v2 anchor pool, treat S as unknown, recompute
+  L1+L2+L3 against the reduced 19-anchor pool (rebuilding the L3
+  candidate-value pool from the reduced 19-anchor pool plus bare
+  vowels under the chic-v5 Eteocretan-phoneme-inventory filter),
+  apply the chic-v5 tier classification with L4 silent (3-of-3
+  unanimity → LOO tier-2; 2-of-3 → tier-3; 1-of-3 → tier-4; 0 →
+  untiered), and compare framework class to V's known class. **L4
+  is deliberately excluded for circularity** (the chic-v1
+  PALEOGRAPHIC_CANDIDATES list is the source of the chic-v2 anchor
+  pool, so for any anchor S the L4 line trivially recovers V by
+  construction; including L4 would inflate accuracy by circularity).
+  Pre-registered acceptance bands: >70% high; 40-70% moderate; <40%
+  low / not validated.
 
 ---
 
@@ -2142,7 +2158,7 @@ methodology paper's previous asymmetry: the cross-script
 verification methodology is now reported at the leaderboard
 top-K granularity on both sides.
 
-### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 through chic-v5)
+### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 through chic-v9)
 
 A parallel sub-program (the **chic-v\*** ticket series) extends
 the same mechanical-falsifiability discipline to **Cretan
@@ -2175,10 +2191,46 @@ The chic sub-program is positioned as a **methodology test**, not
 a CHIC decipherment claim. Each ticket is treated the same way as
 the Linear A pipeline: outputs are committed, artefacts are
 byte-identical on rebuild, and findings are filed in
-`docs/findings.md`. The chic-v7 polish pass (mg-9508, this
-document's chic-integration-and-final-consolidation pass before
-journal-submission handoff for the cross-script paper) is
-editorial-only and adds no new harness commits.
+`docs/findings.md`. The chic-v7 polish pass (mg-9508), the v27
+polish pass (mg-b731), and the chic-v10 polish pass (mg-1178, this
+document's post-chic-v9 polish pass for journal-submission handoff
+of the cross-script paper) are editorial-only and add no new
+harness commits.
+
+**Post-chic-v9 framing (the load-bearing register for this
+section).** chic-v9's leave-one-out held-out validation
+(mg-18cb, full subsection below) places the chic-v5 framework's
+mechanical recovery on the chic-v2 anchor pool of 20 known
+scholarly values at **20.0% aggregate accuracy** (4 of 20),
+essentially at the **~16.7% chance baseline** for a 6-class
+phoneme taxonomy, and at **0/3 = 0.0%** on the tier-2 unanimity
+criterion (every LOO tier-2 anchor's framework class disagrees
+with its known class). Per the chic-v9 brief's pre-registered
+thresholds (>70% high; 40-70% moderate; <40% low), the framework
+is in the **low-agreement / not-validated band**. The implication
+for the three chic-v5 tier-2 candidate proposals (`#001 → wa`/
+glide, `#012 → wa`/glide, `#032 → ki`/stop) is a **substantial
+credibility downgrade**: they are no longer "proposals pending
+domain-expert review by an Aegean-syllabary specialist" (the
+chic-v5 / chic-v6 / chic-v8 framing) but **"proposals contingent
+on the framework's currently-low validation accuracy"**. The
+candidates do not disappear — chic-v6's small-but-non-zero
++3-inscription / +20-hit tier-1 → tier-2 mechanical-verification
+lift is independent of chic-v9's framework-validation result, and
+L4 (cross-script paleographic agreement) was deliberately excluded
+from the LOO test as circular by construction but remains a
+falsifiable evidence axis contingent on hand-curated extension
+from O&G 1996, Salgarella 2020, Decorte 2017, and adjacent
+paleography scholarship — but the framing across this entire
+section reads in the post-chic-v9 register: **the chic-v0..v9
+sub-program demonstrates that mechanical scoring + pre-registered
+falsifiable acceptance gates + cross-script transfer + leave-one-
+out held-out validation is a discipline-protecting protocol that
+catches per-sign motivated-reasoning failure modes, and the
+discipline is the deliverable**. The per-ticket subsections that
+follow are read in this register, with chic-v5's tier-2 candidates
+flagged as candidate proposals contingent on chic-v9's verdict
+rather than as elevated-priority specialist-review targets.
 
 #### chic-v0 — corpus ingest (mg-99df)
 
@@ -2458,7 +2510,7 @@ Headline counts (76 unknowns, n=3 frequency floor):
 | tier | meaning | n |
 |:--|:--|---:|
 | tier-1 | chic-v2 anchor (already established; carried over) | 20 |
-| **tier-2** | ≥3 of 4 lines agree on a phoneme class — **candidate proposal pending domain-expert review** | **3** |
+| **tier-2** | ≥3 of 4 lines agree on a phoneme class — **candidate proposal contingent on the framework's currently-low validation accuracy (chic-v9, below)** | **3** |
 | tier-3 | 2 of 4 lines agree — suggestive but insufficient for a candidate proposal | 29 |
 | tier-4 | 1 of 4 lines yields a class — single line of evidence; not a proposal | 17 |
 | untiered | no line of evidence yields a class (frequency < 3 floor) | 27 |
@@ -2480,12 +2532,19 @@ consistency scoring, surfaces **3 candidate proposals at tier-2** out
 of 76 unknown CHIC syllabographic signs, where tier-2 requires three
 independent lines (one of the four canonical lines being silent for
 chic-v5 by construction) to converge on a single coarse phoneme
-class. **These are candidate proposals pending domain-expert review
-by an Aegean-syllabary specialist; they are not decipherment claims**
-— the framework's per-sign resolution is class-level, not
-phoneme-specific, and the line 1 / line 2 distributional machinery
-is built on the chic-v2 anchor pool's fingerprints rather than a
-fully-independent paleographic ground truth. The 29 tier-3 signs
+class. **Post-chic-v9, these are candidate proposals contingent on
+the framework's currently-low validation accuracy** (the same
+machinery that produced them recovers known anchor classes at
+20.0% aggregate / 0/3 on the tier-2 unanimity criterion under
+leave-one-out; see chic-v9 below). They remain candidate proposals
+pending domain-expert review by an Aegean-syllabary specialist —
+they are not decipherment claims — but the credibility weight the
+methodology paper attaches to them is bounded above by the chic-v9
+framework-validation accuracy. The framework's per-sign resolution
+is class-level, not phoneme-specific, and the line 1 / line 2
+distributional machinery is built on the chic-v2 anchor pool's
+fingerprints rather than a fully-independent paleographic ground
+truth. The 29 tier-3 signs
 are the next-stratum candidates (29 of 76 unknowns showing 2-of-3
 non-silent line agreement); these are the ones where chic-v6's
 hand-curated paleographic-line extension would most plausibly raise
@@ -2675,25 +2734,31 @@ reading: source-C produces zero matches at tier-1 / tier-2, so even
 the verification-grade tier-2 lift does not extend to per-inscription
 geographic consistency on this corpus.
 
-**The methodology paper's chic-v5 / §4.7 framing remains "candidate
-proposals pending domain-expert review".** The chic-v6
-mechanical-verification result narrows the framing slightly:
-chic-v5's three tier-2 candidates *do* clear a low-bar mechanical
-verification check (small but non-zero lift), while the larger
-tier-3 / tier-4 strata's apparent verification lift is dominated
-by class-level-matching permissiveness and does not constitute
-verification-grade evidence in the absence of a permutation control.
-A specialist review remains the load-bearing next step for advancing
-any of these from "matched" to "decipherment". **The chic-v9 LOO
-test (mg-18cb, below) further constrains this framing**: the same
-framework that proposed the three tier-2 candidates recovers known
-chic-v2 anchor classes at only 20% aggregate accuracy under
-leave-one-out (and 0/3 on the tier-2 unanimity criterion), so the
-chic-v6 +3-inscription / +20-hit verification lift cannot be
-read as independent corroboration of the candidates' specific
-phoneme values — it remains a small mechanical signal whose
-load-bearing weight is bounded above by the chic-v9 framework
-validation accuracy.
+**Post-chic-v9, the methodology paper's chic-v5 / §4.7 framing is
+"candidate proposals contingent on the framework's currently-low
+validation accuracy"** (downgraded from the pre-chic-v9 framing
+"candidate proposals pending domain-expert review by an Aegean-
+syllabary specialist"). The chic-v6 mechanical-verification result
+narrows the framing slightly: chic-v5's three tier-2 candidates
+*do* clear a low-bar mechanical verification check (small but
+non-zero lift), while the larger tier-3 / tier-4 strata's apparent
+verification lift is dominated by class-level-matching
+permissiveness and does not constitute verification-grade evidence
+in the absence of a permutation control. A specialist review
+remains the load-bearing next step for advancing any of these from
+"matched" to "decipherment". **The chic-v9 LOO test (mg-18cb,
+below) is what loads the post-chic-v9 framing onto the candidates**:
+the same framework that proposed the three tier-2 candidates
+recovers known chic-v2 anchor classes at only 20.0% aggregate
+accuracy under leave-one-out (and 0/3 on the tier-2 unanimity
+criterion), so the chic-v6 +3-inscription / +20-hit verification
+lift cannot be read as independent corroboration of the
+candidates' specific phoneme values — it remains a small
+mechanical signal whose load-bearing weight is bounded above by
+the chic-v9 framework validation accuracy. chic-v6's lift stays
+on the page as independent evidence that the three candidates do
+produce mechanical hits against external scholarship; it is just
+no longer carrying the weight of "specialist-review priority".
 
 **Inputs / outputs.** Inputs:
 `corpora/cretan_hieroglyphic/all.jsonl` (chic-v0; 302 inscriptions),
@@ -2805,7 +2870,12 @@ for all 76 unknowns by chic-v8 corpus state, the chic-v5 tier-2
 candidate count (3) and chic-v6 mechanical-verification result
 (small but non-zero +3-inscription / +20-hit tier-1 → tier-2 lift,
 with the larger tier-3/4 lifts caveated for class-level-matching
-permissiveness) remain the load-bearing chic sub-program findings;
+permissiveness) carry forward as the chic sub-program's per-sign
+deliverables — though the chic-v9 LOO validation (mg-18cb, below)
+subsequently downgrades the credibility of the 3 tier-2 candidates
+to "contingent on the framework's currently-low validation
+accuracy" by placing the framework's mechanical recovery on known
+anchors at 20.0% aggregate / 0/3 on the tier-2 unanimity criterion.
 chic-v8 adds a methodologically-coherent zero contribution
 documented as a corpus-state observation.
 
@@ -3018,16 +3088,39 @@ non-negotiable acceptance blocker.
   `results/chic_sign_inventory.md` is **3 consensus / 10 proposed
   / 7 debated**, and the audit pass corrected the manuscript text
   accordingly).
+- **chic-v10** — methodology-paper polish pass integrating chic-v9's
+  leave-one-out held-out validation (mg-18cb) result and
+  downgrading the chic-v5 tier-2 candidates' credibility per the
+  20% LOO accuracy / 0/3 tier-2 unanimity verdict. **Done in
+  mg-1178** (this document); editorial-only, no new harness commits.
+  The chic-v10 polish pass restructured §4.7's narrative to lead
+  with the post-chic-v9 framing in the section's intro, hedged the
+  chic-v5 tier-2 framing from "candidate proposal pending domain-
+  expert review" to "candidate proposal contingent on the
+  framework's currently-low validation accuracy", added a chic-v9
+  entry to §5.4 (Cross-script CHIC limitations), integrated chic-v9
+  into §6 (Conclusion) alongside the existing v13 / v22 / v24 /
+  chic-v6 negative-validation lineage, and restructured §7's three-
+  sentence reading test to lead with the LOO accuracy number rather
+  than the tier-2 candidate count. The chic-v10 audit-of-the-audit
+  on chic-v9's incremental edits confirmed all numbers in the §4.7
+  chic-v9 subsection verify against `results/chic_v9_loo_validation.md`
+  (4/20 = 20.0% aggregate; chance baseline ~16.7%; per-line L1=20%,
+  L2=20%, L3=5%; 0/3 LOO tier-2 correct; the 3 LOO tier-2 anchors
+  `#031 = ro` / `#042 = wa` ⚠ / `#053 = me`).
 
-#### Cross-script methodological synthesis (chic-v0..v5 + Linear A v0..v25)
+#### Cross-script methodological synthesis (chic-v0..v9 + Linear A v0..v26)
 
 The two parallel result blocks of this manuscript — Linear A
 §3.1–§3.14 and CHIC §4.7 above — converge on a single
 methodology-paper claim: **the framework's right-tail bayesian
 gate detects substrate-LM-phonotactic kinship at the population
 level, with the magnitude scaling monotonically with a-priori
-genealogical relatedness, and that signal is cross-script.** The
-load-bearing observations across the 31-ticket sequence:
+genealogical relatedness, that signal is cross-script, and the
+per-sign machinery layered on top of the population-level gate
+does not recover known phoneme classes when run blind under
+leave-one-out held-out validation.** The load-bearing observations
+across the 36-ticket sequence:
 
 - *Population-level kinship detection across two scripts.* All
   four substrate pools' own-LM right-tail gate behaviours on
@@ -3051,11 +3144,17 @@ load-bearing observations across the 31-ticket sequence:
   unknown CHIC syllabographic signs under Eteocretan-LM
   substrate-consistency scoring, surfaces 3 tier-2 candidate
   proposals (≥3 of 4 lines agreeing on a coarse phoneme class,
-  with line 4 silent for all unknowns by construction) — these
-  are **candidate proposals pending domain-expert review by an
-  Aegean-syllabary specialist, not decipherments**. The
-  framework's per-sign resolution is class-level on either
-  script.
+  with line 4 silent for all unknowns by construction) — and
+  chic-v9's leave-one-out held-out validation places the same
+  framework's mechanical recovery on 20 known anchor classes at
+  **20.0% aggregate / 0/3 on the tier-2 unanimity criterion**
+  when run blind, near the ~16.7% chance baseline for the 6-class
+  taxonomy. The 3 chic-v5 tier-2 candidates are therefore
+  **candidate proposals contingent on the framework's currently-
+  low validation accuracy** (chic-v9 verdict: low-agreement / not
+  validated band) rather than mechanical proposals deserving
+  elevated specialist-review priority. The framework's per-sign
+  resolution is class-level on either script.
 - *The discipline is the deliverable on both scripts.* On Linear
   A, the methodology paper's central methodological warning
   (§4.5) — that qualitative-impression evidence is structurally
@@ -3069,18 +3168,40 @@ load-bearing observations across the 31-ticket sequence:
   thresholding) are the cross-script port of the v13 / v19 /
   v22 discipline.
 - *Internal consensus does not imply external correctness, and
-  this generalises across scripts and across substrate pools.*
-  On Linear A, v22 / v24's 3.95% aggregate match rate against
-  the Younger scholar set holds across substrate-pool unions
-  (eteocretan-only 0.00%; three-pool 3.95%; four-pool 3.95%
-  byte-identical to three-pool). On CHIC, the chic-v5 tier-2
-  candidates carry the same caveat — they are not corroborated
-  by independent scholarly comparand on the per-sign level
-  (line 4 silent for all 76 unknowns). The cross-script lesson:
-  mechanical scoring against phonotactically-matched controls,
-  paired with explicit external-comparand bookkeeping, catches
-  failure modes that internal-consensus-only methodology
-  produces uniformly across scripts.
+  this generalises across scripts, substrate pools, and across
+  the population / per-sign axis.* On Linear A, v22 / v24's 3.95%
+  aggregate match rate against the Younger scholar set holds
+  across substrate-pool unions (eteocretan-only 0.00%; three-pool
+  3.95%; four-pool 3.95% byte-identical to three-pool). On CHIC,
+  chic-v9's LOO test puts a quantitative number on the analogous
+  internal-vs-external gap at the per-sign machinery level: the
+  chic-v5 framework's L1+L2+L3 mechanical recovery on the 20
+  known chic-v2 anchors is 20.0% / 0/3 tier-2 unanimous correct
+  when run blind, and the 3 chic-v5 tier-2 candidates inherit
+  that internal-consensus-vs-validation gap. The cross-script
+  lesson: mechanical scoring against phonotactically-matched
+  controls, paired with explicit external-comparand bookkeeping
+  AND held-out validation, catches failure modes that internal-
+  consensus-only methodology produces uniformly across scripts.
+- *Held-out validation as the falsification check internal-
+  consensus-only methodology cannot supply.* chic-v9's leave-one-
+  out test is the chic sub-program's analogue to v22 / v24 on
+  the Linear A side: it places a quantitative number on the
+  per-sign machinery's reliability under known ground truth. The
+  chic-v9 verdict — 20.0% aggregate / 0/3 tier-2 correct — is the
+  fifth piece of evidence in the methodology paper's negative-
+  validation lineage (v13 cross-window coherence median 0.18 vs
+  0.6 bar; v22 35-entry scholar-set 3.95% aggregate; v24
+  eteocretan-only 0/76 = 0.00%; chic-v6 +3-inscription / +20-hit
+  tier-1 → tier-2 lift caveated by chic-v9; chic-v9 LOO 20.0% /
+  0/3). All five point in the same methodological direction:
+  the framework detects substrate-LM-phonotactic kinship at the
+  population level, but per-sign decipherment is unsupported by
+  any of the validation channels the framework has been tested
+  against. The discipline of pre-registered falsifiable
+  acceptance gates + cross-script transfer + leave-one-out held-
+  out validation is what catches motivated-reasoning failure
+  modes that internal-consensus-only analyses cannot.
 - *Cross-script transferability of the methodology is the
   novel methodology-paper deliverable of the chic sub-program.*
   The Linear A v0..v25 result is "the framework detects
@@ -3350,6 +3471,44 @@ parallel in role to §5.1–§5.3 above for the Linear A pipeline:
   entries) could reactivate L5; the chic-v8 build script
   (`scripts/build_chic_v8.py`) would surface any L5 votes
   automatically against the new corpus state.
+- **chic-v5 framework's mechanical recovery on known cases (LOO
+  validation, chic-v9) is at chance baseline.** chic-v9's leave-
+  one-out held-out validation against the 20-anchor chic-v2 pool
+  places the chic-v5 framework's L1+L2+L3 mechanical recovery at
+  **20.0% aggregate** (4/20), near the **~16.7% chance baseline**
+  for a 6-class phoneme taxonomy (vowel / stop / nasal / liquid /
+  fricative / glide), with **tier-2 classification accuracy at
+  0/3 = 0.0%** (every LOO tier-2 anchor's framework-proposed
+  class disagrees with the known scholarly class). Per-line
+  decomposition: L1 = 4/20 = 20.0%, L2 = 4/20 = 20.0%, L3 =
+  1/20 = 5.0% (below chance, consistent with the known L3
+  systematic class bias under the Eteocretan LM disclosed in
+  chic-v5). Per the chic-v9 brief's pre-registered thresholds
+  (>70% high; 40-70% moderate; <40% low), the framework is in the
+  **low-agreement / not-validated band**. Per-sign value-extraction
+  proposals derived via the chic-v5 framework should be read as
+  **"phonotactically-coherent candidates contingent on the
+  framework's currently-low validation accuracy"** rather than
+  "validated phoneme-class assignments deserving elevated
+  specialist-review priority", pending domain-expert review and
+  an independent line of evidence (paleographic, dual-script, or
+  otherwise) per candidate. The L4 (cross-script paleographic)
+  line was deliberately excluded from the LOO test as circular by
+  construction (chic-v1's PALEOGRAPHIC_CANDIDATES list is the
+  source of the chic-v2 anchor pool); the L1+L2+L3-only setup is
+  the honest test, and L4 remains a falsifiable evidence axis
+  contingent on hand-curated extension from O&G 1996, Salgarella
+  2020, Decorte 2017, and adjacent paleography scholarship. The
+  N=20 LOO test is small (±5% differences fall within the
+  binomial noise floor for this sample size); the headline 20%
+  is a point estimate with substantial uncertainty, but the
+  qualitative reading (recovery near chance; 0/3 tier-2 correct)
+  is robust to that uncertainty. The chic-v9 verdict is what the
+  methodology-paper framing of the chic-v5 candidates loads on:
+  in the post-chic-v9 register, the 3 tier-2 candidates are
+  **candidate proposals contingent on the framework's currently-
+  low validation accuracy**, not "candidate proposals pending
+  domain-expert review by an Aegean-syllabary specialist".
 - **v26 per-surface verification status is structurally
   permissive.** Every top-20 surface across all four pools is
   classified "verified" under v26's per-surface verification
@@ -3457,13 +3616,18 @@ on the one performable single-inscription external comparison
 (v19 / v20), the 3.95% aggregate match rate (3/76) on a 35-entry,
 6-site, 21+ CV-combination Younger-catalog scholar-proposed-reading
 set (v22, mg-46d5; squarely in the pre-registered strong-null band),
-and the v24 confirmation that the closest-genealogical-relative
+the v24 confirmation that the closest-genealogical-relative
 substrate's strongest-own-LM PASS does **not** propagate to a
 per-inscription decipherment signal under any candidate substrate
-the framework has tested — are themselves contributions to the
-methodological literature on undeciphered-script analysis: each is
-a falsification result that internal-only methodology, by
-construction, cannot produce. v26 (mg-c202) extends the external-
+the framework has tested, and chic-v9's leave-one-out held-out
+validation placing the chic-v5 per-sign extraction framework's
+mechanical recovery on 20 known anchor classes at **20.0% aggregate
+/ 0/3 tier-2 unanimous correct** (near the ~16.7% chance baseline
+for a 6-class phoneme taxonomy; in the low-agreement / not-
+validated band per the chic-v9 brief's pre-registered thresholds)
+— are themselves contributions to the methodological literature on
+undeciphered-script analysis: each is a falsification result that
+internal-only methodology, by construction, cannot produce. v26 (mg-c202) extends the external-
 validation surface to the leaderboard-top-K granularity: each Linear
 A pool's top-20 substrate surfaces produce a positive inscription-
 count match-rate lift over the LB-carryover-only baseline
@@ -3484,11 +3648,14 @@ granularity, then validating against external scholarly ground
 truth, as discipline-protecting checks against motivated-reasoning
 failure modes that internal-only analyses cannot catch.
 
-**Cross-script extension (chic-v0..v5).** The chic sub-program
+**Cross-script extension (chic-v0..v9).** The chic sub-program
 ports the framework verbatim to a second undeciphered Cretan
 script — Cretan Hieroglyphic — and demonstrates that the Linear A
 substrate-LM-phonotactic-kinship signal **transfers across
-scripts under the same scoring infrastructure**. The Linear A
+scripts under the same scoring infrastructure**, and that the
+per-sign machinery layered on top of the population-level gate
+**fails a held-out leave-one-out validation against known anchor
+classes**. The Linear A
 monotonic-with-relatedness ordering across the 4 substrate pools
 (Eteocretan > toponym > Etruscan > Aquitanian) reproduces exactly
 on CHIC: Eteocretan PASSes the right-tail bayesian gate on **both**
@@ -3506,13 +3673,21 @@ four-line-of-evidence per-sign value-extraction framework, applied
 to 76 unknown CHIC syllabographic signs under the Eteocretan-LM
 substrate-consistency line, classifies 3 as tier-2 candidate
 proposals (≥3 of 4 lines agreeing on a coarse phoneme class —
-`vowel`, `stop`, `nasal`, `liquid`, `fricative`, `glide`); these
-are **candidate proposals pending domain-expert review by an
-Aegean-syllabary specialist**, not decipherments, and the
-discipline (mechanical agreement predicate, explicit silent-line
-bookkeeping for the construction-silent line 4, the
-L3-systematic-class-bias disclosure) is the chic-v5 contribution
-rather than the count. A CHIC-side mechanical-verification pass
+`vowel`, `stop`, `nasal`, `liquid`, `fricative`, `glide`); the
+chic-v9 leave-one-out held-out validation (mg-18cb) subsequently
+places the same framework's mechanical recovery on the 20 known
+chic-v2 anchors at **20.0% aggregate accuracy / 0/3 on the
+tier-2 unanimity criterion** (near the ~16.7% chance baseline
+for a 6-class taxonomy; in the low-agreement / not-validated band
+per the chic-v9 brief's pre-registered thresholds), so the 3
+tier-2 candidates are **candidate proposals contingent on the
+framework's currently-low validation accuracy**, not
+decipherments — and the discipline (mechanical agreement
+predicate, explicit silent-line bookkeeping for the construction-
+silent line 4, the L3-systematic-class-bias disclosure, plus
+chic-v9's leave-one-out held-out validation as the falsification
+check internal-consensus-only methodology cannot supply) is the
+chic-v0..v9 sub-program's contribution rather than the count. A CHIC-side mechanical-verification pass
 against the same three external-scholarship sources used by v26
 (chic-v6, mg-a557) produces a small-but-non-zero +3-inscriptions /
 +20-hits tier-1 → tier-2 lift; the larger tier-3 / tier-4 lifts
@@ -3525,9 +3700,28 @@ unilingual-CHIC per the Olivier-Godart 1996 catalog, and finds
 line of evidence (L5, LA-constraint) is silent for all 76 unknown
 CHIC syllabographic signs by corpus state, **0 new tier-2
 candidates** are derivable on v0 corpora, and the chic-v5 tier-2
-candidate count remains 3 unchanged — a publishable null result
-preserving the bilingual extension as a falsifiable fifth axis
-contingent on future corpus expansion. The cross-script claim the
+candidate count remains 3 — a publishable null result preserving
+the bilingual extension as a falsifiable fifth axis contingent on
+future corpus expansion. **chic-v9's leave-one-out held-out
+validation (mg-18cb)** subsequently runs the chic-v5 framework
+blind on the 20-anchor chic-v2 pool and places the per-sign
+mechanical recovery at **20.0% aggregate accuracy / 0/3 on the
+tier-2 unanimity criterion**, near the ~16.7% chance baseline for
+a 6-class taxonomy and in the **low-agreement / not-validated
+band** per the chic-v9 brief's pre-registered thresholds (>70%
+high; 40-70% moderate; <40% low); per-line decomposition L1 =
+20%, L2 = 20%, L3 = 5% (below chance, consistent with chic-v5's
+disclosed Eteocretan-LM systematic class bias); the 3 chic-v5
+tier-2 candidates are accordingly downgraded from "candidate
+proposals pending domain-expert review by an Aegean-syllabary
+specialist" to **"candidate proposals contingent on the
+framework's currently-low validation accuracy"**, with chic-v6's
+small-but-non-zero +3-inscription / +20-hit tier-1 → tier-2
+mechanical-verification lift retained as independent evidence
+that the candidates produce mechanical hits against external
+scholarship and L4 (cross-script paleographic) preserved as a
+falsifiable evidence axis pending hand-curated extension from
+adjacent paleography scholarship. The cross-script claim the
 chic sub-program adds to the methodology paper, beyond what the
 single-script v25 manuscript could support, is therefore: **the
 substrate-LM-phonotactic-kinship signal the framework detects is
@@ -3549,12 +3743,13 @@ decipherment remains unsupported on either script.
 
 The methodology paper canonical reading test, established at v16
 (mg-d5ed) for Linear A, extended to cross-script by chic-v7
-(mg-9508), and updated for the now-fully-cross-script + symmetric-
-mechanical-verification document by v27 (mg-b731), asks: what would
-a hypothetical Linear-A scholar (or broader Aegean-syllabary
-specialist) reading this document cold learn from it? Three
-sentences, in the narrower-but-defensible register the v16 reading
-test established:
+(mg-9508), updated for the now-fully-cross-script + symmetric-
+mechanical-verification document by v27 (mg-b731), and updated
+again for the post-chic-v9 register by chic-v10 (mg-1178), asks:
+what would a hypothetical Linear-A scholar (or broader Aegean-
+syllabary specialist) reading this document cold learn from it?
+Three sentences, in the narrower-but-defensible register the v16
+reading test established and the chic-v9 verdict has tightened:
 
 1. **What the framework detects (population level, both scripts).**
    A mechanical, falsifiable substrate-LM-phonotactic-kinship test
@@ -3572,35 +3767,40 @@ test established:
    Spearman ρ=+1.000 on per-pool right-tail gap; mean top-20
    substrate-surface overlap 0.47 across the two scripts).
 
-2. **The verification methodology runs symmetrically on both
-   sides, and per-sign decipherment is unsupported on either.**
-   Mechanical verification of the leaderboard top-K substrate
-   surfaces against three pre-registered external-scholarship
-   sources (scholar-proposed Linear-A readings, Cretan/Aegean
-   toponym substrings, item-location consistency) produces
-   small-but-positive lift over the carryover-only baseline on
-   *both* sides — chic-v6's +3-inscription / +20-hit CHIC tier-1 →
-   tier-2 lift parallels v26's +5/+6/+7/+5 inscription-count
-   lifts across the four Linear A pools' top-20 extensions over
-   the LB-carryover-only baseline (177/772 = 22.93%) — and
-   neither script's mechanical proposals match scholarly
-   proposals at an actionable rate: Linear A's v13 cross-window
-   coherence median is 0.18 against a 0.6 bar; v22/v24 internal-
-   consensus mechanical readings match scholarly proposals at an
-   aggregate 3.95% rate (3/76) on the Younger 35-entry set
-   (squarely in the strong-null band); v26's per-pool sign-level
-   inverse-verification companion table reports 19–30 sign-level
-   contradictions of scholarly proposals per pool; CHIC's chic-v5
-   four-line-of-evidence framework surfaces 3 class-level (not
-   phoneme-level) tier-2 candidates out of 76 unknown
-   syllabographic signs pending domain-expert review, and the
-   chic-v8 dual-script bilingual fifth-axis extension on the v0
-   corpora produces 0 new tier-2 candidates because no
-   genuinely-dual-script artifact (the candidate Malia altar
-   stone CHIC #328 is unilingual-CHIC per Olivier-Godart 1996) is
-   ingested in either v0 corpus.
+2. **Per-sign decipherment is unsupported on either script, and
+   the per-sign machinery fails a held-out validation against
+   known anchors at chance-baseline accuracy.** On Linear A the
+   v13 cross-window coherence median is 0.18 against a 0.6 bar,
+   v22/v24 internal-consensus mechanical readings match the
+   Younger 35-entry scholar-proposed-reading set at an aggregate
+   3.95% rate (3/76) — squarely in the strong-null band — and
+   v26's per-pool sign-level inverse-verification companion
+   table reports 19–30 sign-level contradictions of scholarly
+   proposals per pool; on CHIC, **chic-v9's leave-one-out held-
+   out validation places the chic-v5 four-line-of-evidence per-
+   sign extraction framework's mechanical recovery on the 20
+   known chic-v2 anchors at 20.0% aggregate accuracy / 0/3 on
+   the tier-2 unanimity criterion** when run blind, near the
+   ~16.7% chance baseline for the 6-class taxonomy and in the
+   low-agreement / not-validated band per the chic-v9 brief's
+   pre-registered thresholds, so the 3 chic-v5 tier-2 candidate
+   class-level proposals (`#001` glide, `#012` glide, `#032`
+   stop) are **candidate proposals contingent on the framework's
+   currently-low validation accuracy**, not decipherments — with
+   chic-v6's small-but-non-zero +3-inscription / +20-hit tier-1
+   → tier-2 mechanical-verification lift retained as independent
+   evidence and L4 (cross-script paleographic) preserved as a
+   falsifiable evidence axis pending hand-curated extension from
+   O&G 1996 / Salgarella 2020 / Decorte 2017 paleography
+   scholarship — and the chic-v8 dual-script bilingual fifth-
+   axis extension produces 0 new tier-2 candidates on v0 corpora
+   because no genuinely-dual-script artifact (the candidate Malia
+   altar stone CHIC #328 is unilingual-CHIC per Olivier-Godart
+   1996) is ingested in either v0 corpus.
 
-3. **The cross-script methodological contribution.** The
+3. **The cross-script methodological contribution: discipline +
+   pre-registered falsifiable acceptance gates + cross-script
+   transfer + leave-one-out held-out validation.** The
    substrate-LM-phonotactic-kinship test, plus the matched-
    control protocol, plus the cascade-candidate framing for
    per-inscription internal-consensus surface, plus the external-
@@ -3610,17 +3810,21 @@ test established:
    registered external-scholarship sources with the sign-level
    inverse-verification companion, plus the falsifiable bilingual
    fifth-axis extension (silent on v0 corpus state, reactivable
-   under future corpus expansion), constitute a **transferable
-   cross-script methodology** that any research group testing a
-   substrate-language hypothesis on an undeciphered script can
-   adopt: the framework's null findings on Linear A (v13 / v14 /
-   v19 / v20 / v22 / v24 / v26) together with its cross-script
-   transfer on CHIC (chic-v3 / chic-v4 / chic-v5 / chic-v6 /
-   chic-v8) are themselves the methodological deliverable — a
-   discipline-protecting protocol that catches motivated-
-   reasoning failure modes which internal-only analyses produce
-   uniformly across scripts, substrate pools, and external-
-   validation channels.
+   under future corpus expansion), plus **the leave-one-out held-
+   out validation against known anchors as the falsification
+   check that internal-consensus-only methodology cannot supply**
+   (chic-v9's 20% / 0-of-3 verdict on the chic-v5 framework),
+   constitute a **transferable cross-script methodology** that
+   any research group testing a substrate-language hypothesis on
+   an undeciphered script can adopt: the framework's negative
+   findings on Linear A (v13 / v14 / v19 / v20 / v22 / v24 / v26)
+   together with its cross-script transfer on CHIC (chic-v3 /
+   chic-v4 / chic-v5 / chic-v6 / chic-v8) and held-out validation
+   verdict on CHIC (chic-v9) are themselves the methodological
+   deliverable — a discipline-protecting protocol that catches
+   motivated-reasoning failure modes which internal-only analyses
+   produce uniformly across scripts, substrate pools, external-
+   validation channels, and the population / per-sign axis.
 
 ---
 
