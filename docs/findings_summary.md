@@ -1300,6 +1300,139 @@ under Mycenaean Greek FAILs as expected). Per-cell rollup files:
 `results/rollup.bayesian_posterior.eteocretan.under_{mg,etruscan}_lm.md`;
 `results/rollup.bayesian_posterior.{aquitanian,etruscan,toponym}.under_eteocretan_lm.md`.
 
+#### Per-inscription cascade-candidate analysis under Eteocretan LM (v24)
+
+v24 (mg-c103) extends v19's per-inscription cascade analysis
+(§3.12, originally on aquitanian + etruscan + toponym) to include
+v21's Eteocretan pool — the closest-genealogical-relative
+substrate, and the strongest own-LM PASS in the project. Two
+analyses ship: an **eteocretan-only** aggregation (substrate-LM-
+specific test of whether Eteocretan candidates concentrate per-
+inscription), and a **four-pool** aggregation
+(`aquitanian + etruscan + toponym + eteocretan`, the natural
+extension of v19's three-pool). Both populations evaluated:
+top-30 right-tail, short ≤5 sign tokens, libation-formula
+carriers (PS Za 2). Outputs:
+`results/rollup.per_inscription_coherence.eteocretan_only.md` and
+`.four_pools.md`; sub-piece v21-equivalent right-tail rollups at
+`results/rollup.right_tail_inscription_concentration.eteocretan_only.md`
+and `.four_pools.md`. The same `--control-pools` machinery is
+threaded through `right_tail_inscription_concentration.py`,
+`per_inscription_coherence.py`, and `compare_scholar_proposed.py`
+so eteocretan→`control_eteocretan_bigram` substrate pairing
+applies automatically when eteocretan is in the pool list.
+
+| view | n cascade candidates | n partial cascades | inscriptions |
+|:--|---:|---:|:--|
+| **eteocretan-only** | **0** | **0** | — |
+| four-pool (aquitanian + etruscan + toponym + eteocretan) | 3 | 1 | KH 10, KH 5, PS Za 2 (cascade); HT 95a (partial) |
+| v19 three-pool (baseline) | 3 | 2 | KH 10, KH 5, PS Za 2 (cascade); HT 95a, HT 31 (partial) |
+
+**Eteocretan-only result.** Zero cascade candidates and zero
+partial cascades across all three populations. Population A
+(top-30 right-tail eteocretan-concentration inscriptions) is
+filled to n=30, but every inscription classifies as Noise
+(robust fraction < 0.25); the highest robust fraction in the
+population is 0.22 (HT 110a, HT 115a, HT Zb 158b, HT Zb 159 all
+in the 0.15–0.22 band). Population B is degenerate at n=4 (only
+4 short inscriptions have positive eteocretan paired_diff
+records). Population C is **n=0**: PS Za 2 has *zero* positive
+eteocretan paired_diff records; under the v21
+bigram-preserving control, no eteocretan substrate surface beats
+the matched control on any PS Za 2 span. The Eteocretan candidate
+count (~2,985 substrate + ~2,635 control records) is too sparse
+for per-inscription consensus to form at the 50% robust bar
+under eteocretan-LM-only aggregation. This is the "no cascade
+candidates emerge at all" outcome the v24 brief flagged as the
+unexpected possibility — it is the actual eteocretan-only result.
+
+**Four-pool result.** Three cascade candidates emerge:
+**KH 10, KH 5, PS Za 2** — *the same set as v19's three-pool
+result*. Robust fractions are unchanged from v19 to one part in
+ten thousand (KH 10 0.5455, KH 5 0.5000, PS Za 2 0.7143).
+Mechanical readings on high-coherence positions are identical
+to v19; only the low-coherence (`(parens)`) positions show minor
+phoneme shifts as eteocretan candidates contribute additional
+mass at signs that did not have v19 robust consensus to begin
+with. **PS Za 2's mechanical reading on the libation-formula span
+is byte-identical between v19 and v24**:
+`c-e-a-(ch)-th-(ch)-th-u-u-n-i-(l)-a-(l)`. The eteocretan-LM-
+conditioned aggregation does *not* yield a different mechanical
+reading on the libation-formula carrier — the substrate-LM
+conditioning is invariant on this inscription. HT 31 falls out
+of the partial-cascade list because the four-pool right-tail
+ranking (with eteocretan top-20 surfaces added to the universe)
+reorders the top-30; HT 95a remains as the sole partial cascade.
+
+**External-validation comparison (v22 machinery on v24 outputs).**
+Both v24 aggregations were scored against the 35-entry Younger
+scholar-proposed-reading set. Output:
+`results/rollup.scholar_proposed_readings_comparison.eteocretan_only.md`
+and `.four_pools.md`; cascade-candidate-filtered run at
+`.four_pools_cascades.md`. Aggregate match-rate comparison:
+
+| view | matches first | n signs | aggregate match rate | n with ≥1 substrate proposal | band |
+|:--|---:|---:|---:|---:|:--|
+| **v22 three-pool (baseline)** | 3 | 76 | **3.95%** | 45 | STRONG NULL |
+| **v24 eteocretan-only** | 0 | 76 | **0.00%** | 19 | STRONG NULL |
+| **v24 four-pool** | 3 | 76 | **3.95%** | 45 | STRONG NULL |
+| v24 four-pool, filtered to cascade candidates (PS Za 2 only — KH 10 / KH 5 absent from scholar set) | 0 | 5 | 0.00% | 5 | STRONG NULL |
+
+The eteocretan-only aggregation produces 0/76 matches — strict
+strong-null, the most negative possible result. Of the 76
+AB-sign comparison points, only 19 receive any positive
+eteocretan paired_diff record (vs 45 under three-pool); the
+other 57 have *no* eteocretan substrate proposal at all because
+no eteocretan surface beats the bigram-preserving control on
+those inscriptions. The four-pool aggregation lands at *exactly
+the same 3/76* the v22 three-pool did, with *exactly the same*
+45/76 coverage — adding eteocretan to the substrate pool union
+does not change the match count or the coverage. Cascade-
+filtered: only PS Za 2 has any scholar-proposed entry among the
+three four-pool cascade candidates (KH 10 and KH 5 carry no
+contextual scholarly readings); the cascade-filtered headline is
+0/5 on PS Za 2's libation-formula span — identical to v19's
+single-entry verdict.
+
+**Interpretation.** v24 closes the §3.13/§4.6 narrative
+unambiguously. The two informative possibilities the v24 brief
+flagged were (a) *eteocretan-LM aggregation surfaces different
+cascade candidates with better external-validation match rates
+than three-pool* — would have reopened the per-sign decipherment
+question — and (b) *eteocretan-LM aggregation produces near-zero
+match rates similar to v19/v22* — strongest evidence that the
+substrate-LM-phonotactic-kinship signal is structural-only and
+not recoverable as readings under any pool, regardless of
+genealogical relatedness. The actual outcome combines the
+predicted strong-null with an additional sparseness observation:
+eteocretan-only aggregation produces *no* cascade candidates at
+all (and 0% external match rate), while the four-pool
+aggregation reproduces the v19 cascade candidates and the v22
+3.95% population-level rate to the digit. Eteocretan, the
+closest-relative substrate with the strongest own-LM PASS
+(p=4.10e-06, gap +0.20), does not improve external-validation
+match rates and does not produce per-inscription consensus that
+differs from the existing three-pool view. This is the strongest
+evidence yet that the v10/v18/v21 PASSes detect substrate-LM-
+phonotactic-kinship at the population level *only*, and that
+this kinship signal does not concentrate at any specific Linear A
+sign or inscription as a phoneme-recoverable reading — under any
+candidate substrate the framework has tested, including the
+closest-relative one.
+
+The result also clarifies the v21 narrative: Eteocretan's
+strongest-own-LM PASS reflects population-level phonotactic
+selectivity (right-tail substrate-vs-control gap +0.20) but does
+*not* propagate to a stronger per-inscription cascade signal.
+Right-tail population statistics and per-inscription cascade
+geometry are different observables; v21's PASS magnitude is
+about how Eteocretan-shape phonotactic patterns concentrate in
+the substrate side's right tail relative to bigram-preserving
+controls, not about how Eteocretan-LM-conditioned candidate
+equations agree on specific Linear A signs at specific tablets.
+v24 is the first analysis to make that distinction load-bearing
+in the manuscript narrative.
+
 ---
 
 ## 4. Discussion
@@ -1484,11 +1617,29 @@ layered components:
    2) is consistent with random chance. The result sits squarely
    in the pre-registered strong-null band (< 5%).
 
-That layered evidence base — one inscription decisively divergent,
-two follow-up cascade candidates with no comparand, and a
-35-entry / 76-comparison-point population-level set with 3.95%
-aggregate match — is enough to ground the load-bearing
-methodological claim:
+v24 (mg-c103) extends the layered evidence base by re-running
+the per-inscription cascade analysis with v21's Eteocretan pool
+included. The eteocretan-only aggregation produces **zero
+cascade candidates and a 0/76 (0.00%) aggregate match rate** on
+the 35-entry scholar set; the four-pool
+(`aquitanian + etruscan + toponym + eteocretan`) aggregation
+reproduces v19's three cascade candidates **with byte-identical
+high-coherence mechanical readings on PS Za 2** and matches v22's
+3/76 (3.95%) aggregate rate to the digit. The eteocretan-LM-
+conditioned aggregation does *not* produce a different mechanical
+reading on the libation-formula span and does *not* improve the
+match rate against scholarly proposals. v24 is therefore a fourth
+layer of external-validation evidence: a substrate-LM swap to the
+closest-genealogical-relative pool (the strongest a-priori case
+in the validation series) leaves the external-validation match
+rate unchanged.
+
+That four-layer evidence base — one inscription decisively
+divergent (v19), two follow-up cascade candidates with no
+comparand (v20), a 35-entry / 76-comparison-point population-
+level set with 3.95% aggregate match (v22), and an eteocretan-
+LM-conditioned re-run that does not move the match rate (v24) —
+is enough to ground the load-bearing methodological claim:
 
 > **Internal consensus among surviving substrate candidates does
 > not imply external correctness.** A cascade candidate emerges
@@ -1626,7 +1777,19 @@ metrics cannot.
   variance than under Basque / Etruscan / Mycenaean-Greek. The
   Eteocretan epigraphic record is finite at ~9 substantive texts;
   expanding the corpus is not a v22+ engineering action item but a
-  fact about the surviving inscriptional record.
+  fact about the surviving inscriptional record. v24 (mg-c103)
+  surfaces a related sparseness observation: the eteocretan-only
+  candidate count (~2,985 substrate + ~2,635 control) is large
+  enough for the population-level right-tail PASS but too sparse
+  for per-inscription consensus to form at the 50% robust bar —
+  zero cascade candidates emerge across all three populations
+  (top-30 right-tail, short ≤5 sign tokens, libation-formula
+  carriers) under eteocretan-LM-only aggregation. PS Za 2 in
+  particular has *zero* positive eteocretan paired_diff records
+  under the bigram-preserving control. This is not a
+  framework-blocking limitation but a fact about Eteocretan-pool
+  granularity; the v22 / v24 four-pool aggregations remain the
+  load-bearing per-inscription view.
 
 ### 5.3 Out-of-scope for this methodology characterization
 
@@ -1761,13 +1924,14 @@ committed artefacts under `results/`:
 | v19 per-inscription coherence + cascade candidates | `rollup.per_inscription_coherence.md` |
 | v20 KU-RO / KI-RO scholarly-anchor search on `KH 10` / `KH 5` | `corpus/Khania/KH%2010.json`, `corpus/Khania/KH%205.json` (token streams) + `pools/linear_b_carryover.yaml` (canonical AB-sequence anchors) |
 | v22 population-level external validation against Younger scholar-set (mg-46d5) | `rollup.scholar_proposed_readings_comparison.md` + `../corpora/scholar_proposed_readings/all.jsonl` (35-entry curated set) |
+| v24 per-inscription cascade-candidate analysis under Eteocretan LM (mg-c103) | `rollup.per_inscription_coherence.eteocretan_only.md`, `rollup.per_inscription_coherence.four_pools.md`, `rollup.right_tail_inscription_concentration.eteocretan_only.md`, `rollup.right_tail_inscription_concentration.four_pools.md`, `rollup.scholar_proposed_readings_comparison.eteocretan_only.md`, `rollup.scholar_proposed_readings_comparison.four_pools.md`, `rollup.scholar_proposed_readings_comparison.four_pools_cascades.md` |
 | corpus ingestion record | `../corpus_status.md` |
 
 Per-ticket merge notes are in `docs/findings.md` under
 `## Findings from mg-XXXX` headers, in chronological order from
-`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-b599`
-(v23, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
-(v0, 2026-05-04 first harness commit) through `mg-b599` (v23,
+`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-c103`
+(v24, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
+(v0, 2026-05-04 first harness commit) through `mg-c103` (v24,
 2026-05-05), with mg-711c (v20) a documentation-and-investigation
 ticket that adds no harness code path. The repo scaffold
 (`mg-9e00`) predates `findings.md`'s introduction in `mg-13a2`

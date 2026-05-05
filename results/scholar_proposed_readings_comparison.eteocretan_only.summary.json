@@ -1,0 +1,174 @@
+{
+  "aggregate_match_rate_first": 0.0,
+  "aggregate_match_rate_full": 0.0,
+  "aggregate_match_rate_robust": 0.0,
+  "alpha": 0.5,
+  "by_category": {
+    "accountancy_deficit": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 3,
+      "n_signs": 6,
+      "n_with_proposals": 2
+    },
+    "accountancy_total": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 5,
+      "n_signs": 10,
+      "n_with_proposals": 2
+    },
+    "commodity": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 2,
+      "n_signs": 6,
+      "n_with_proposals": 0
+    },
+    "commodity_or_name": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 2,
+      "n_signs": 4,
+      "n_with_proposals": 2
+    },
+    "lexeme": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 2,
+      "n_signs": 4,
+      "n_with_proposals": 0
+    },
+    "libation_formula": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 1,
+      "n_signs": 5,
+      "n_with_proposals": 0
+    },
+    "libation_or_onomastic": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 3,
+      "n_signs": 6,
+      "n_with_proposals": 4
+    },
+    "name_family": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 5,
+      "n_signs": 10,
+      "n_with_proposals": 5
+    },
+    "name_or_kinship": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 2,
+      "n_signs": 4,
+      "n_with_proposals": 0
+    },
+    "name_or_suffix": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 2,
+      "n_signs": 4,
+      "n_with_proposals": 0
+    },
+    "name_or_votive": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 2,
+      "n_signs": 4,
+      "n_with_proposals": 0
+    },
+    "onomastic": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 2,
+      "n_signs": 4,
+      "n_with_proposals": 4
+    },
+    "onomastic_prefix": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 2,
+      "n_signs": 4,
+      "n_with_proposals": 0
+    },
+    "personal_name": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 1,
+      "n_signs": 3,
+      "n_with_proposals": 0
+    },
+    "transaction_term": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 1,
+      "n_signs": 2,
+      "n_with_proposals": 0
+    }
+  },
+  "entries_path": "corpora/scholar_proposed_readings/all.jsonl",
+  "matches_first_total": 0,
+  "matches_full_total": 0,
+  "matches_robust_total": 0,
+  "n_entries": 35,
+  "n_signs_total": 76,
+  "n_with_proposals_total": 19,
+  "outcome_band": "STRONG NULL: < 5% (reinforces v13 / v19 verdicts)",
+  "per_entry_max": 0.0,
+  "per_entry_mean": 0.0,
+  "per_entry_median": 0.0,
+  "per_entry_min": 0.0,
+  "pools": [
+    "eteocretan"
+  ],
+  "threshold": 0.5
+}

@@ -1,0 +1,37 @@
+{
+  "aggregate_match_rate_first": 0.0,
+  "aggregate_match_rate_full": 0.0,
+  "aggregate_match_rate_robust": 0.0,
+  "alpha": 0.5,
+  "by_category": {
+    "libation_formula": {
+      "match_rate_first": 0.0,
+      "match_rate_robust": 0.0,
+      "matches_first": 0,
+      "matches_full": 0,
+      "matches_robust": 0,
+      "n_entries": 1,
+      "n_signs": 5,
+      "n_with_proposals": 5
+    }
+  },
+  "entries_path": "corpora/scholar_proposed_readings/all.jsonl",
+  "matches_first_total": 0,
+  "matches_full_total": 0,
+  "matches_robust_total": 0,
+  "n_entries": 1,
+  "n_signs_total": 5,
+  "n_with_proposals_total": 5,
+  "outcome_band": "STRONG NULL: < 5% (reinforces v13 / v19 verdicts)",
+  "per_entry_max": 0.0,
+  "per_entry_mean": 0.0,
+  "per_entry_median": 0.0,
+  "per_entry_min": 0.0,
+  "pools": [
+    "aquitanian",
+    "etruscan",
+    "toponym",
+    "eteocretan"
+  ],
+  "threshold": 0.5
+}

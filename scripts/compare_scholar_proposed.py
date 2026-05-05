@@ -97,6 +97,13 @@ _DEFAULT_ENTRIES_PATH = (
 _DEFAULT_OUT_PATH = (
     Path("results") / "rollup.scholar_proposed_readings_comparison.md"
 )
+# v21 (mg-6ccd) introduced bigram-preserving controls as the
+# production default for new pools. v24 (mg-c103) threads the override
+# through compare_scholar_proposed so eteocretan-included pool sets can
+# aggregate without per-call CLI plumbing.
+_DEFAULT_CONTROL_POOL_OVERRIDES: dict[str, str] = {
+    "eteocretan": "control_eteocretan_bigram",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -693,7 +700,34 @@ def main(argv: list[str] | None = None) -> int:
         default=",".join(_DEFAULT_VALIDATED_POOLS),
         help=(
             "Comma-separated substrate pools to aggregate over. Default: "
-            "the three validated pools (aquitanian, etruscan, toponym)."
+            "the three validated pools (aquitanian, etruscan, toponym). "
+            "v24 (mg-c103) extends this to ``eteocretan`` and the four-"
+            "pool union for the strongest-pool external-validation "
+            "comparison."
+        ),
+    )
+    parser.add_argument(
+        "--control-pools",
+        type=str,
+        default=None,
+        help=(
+            "JSON object mapping substrate pool name → control pool name "
+            "(overrides ``control_<pool>``). v24 wires "
+            "``eteocretan→control_eteocretan_bigram``; if omitted the "
+            f"defaults ({_DEFAULT_CONTROL_POOL_OVERRIDES}) apply."
+        ),
+    )
+    parser.add_argument(
+        "--filter-inscriptions",
+        type=str,
+        default=None,
+        help=(
+            "Comma-separated inscription_id list. If supplied, only "
+            "scholar-proposed-reading entries whose inscription_id is "
+            "in this list are scored. v24 uses this to filter the 35-"
+            "entry set to four-pool cascade candidates "
+            "(``KH 10,KH 5,PS Za 2``) for cascade-specific match-rate "
+            "reporting."
         ),
     )
     parser.add_argument("--alpha", type=float, default=_DEFAULT_ALPHA)
@@ -720,6 +754,11 @@ def main(argv: list[str] | None = None) -> int:
     pools = [p.strip() for p in args.pools.split(",") if p.strip()]
     language_dispatch = dict(_DEFAULT_LANGUAGE_DISPATCH)
 
+    if args.control_pools:
+        control_overrides = json.loads(args.control_pools)
+    else:
+        control_overrides = dict(_DEFAULT_CONTROL_POOL_OVERRIDES)
+
     proposals = collect_per_inscription_proposals(
         pools=pools,
         auto_dir=args.auto_dir,
@@ -728,11 +767,19 @@ def main(argv: list[str] | None = None) -> int:
         results_dir=args.results_dir,
         repo_root=args.repo_root,
         language_dispatch=language_dispatch,
+        control_pool_overrides=control_overrides,
     )
     histograms_by_ins = proposals["histograms_by_ins"]
 
     corpus_by_id = load_corpus(args.corpus)
     entries = load_entries(args.entries)
+
+    if args.filter_inscriptions:
+        wanted = {
+            ins.strip() for ins in args.filter_inscriptions.split(",")
+            if ins.strip()
+        }
+        entries = [e for e in entries if e["inscription_id"] in wanted]
 
     rows: list[dict] = []
     for entry in entries:

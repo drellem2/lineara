@@ -4957,3 +4957,247 @@ matrix builder is pure-function over the same. No RNG anywhere.
   the methodological limit; deferred indefinitely.
 - **GORILA / Younger ingest.** Different scope.
 - **LaTeX / journal submission.** Out of polecat scope.
+
+## Findings from mg-c103 (v24 — per-inscription cascade-candidate analysis under Eteocretan LM, 2026-05-05)
+
+### Headline
+
+The v24 brief flagged three possible outcomes for per-inscription
+cascade analysis under the Eteocretan LM (the strongest own-LM
+PASS in the project, the closest-genealogical-relative substrate):
+
+* **(a)** different cascade candidates with better external-
+  validation match rates than v19/v22 — would have reopened the
+  per-sign decipherment question;
+* **(b)** same / similar cascade candidates with v19/v22-near-zero
+  external-validation match rates — strongest evidence the
+  substrate-LM-phonotactic-kinship signal is structural-only;
+* **(c)** no cascade candidates emerge at all — sparseness.
+
+The actual outcome combines (b) and (c). **Eteocretan-only**
+aggregation produces **zero cascade candidates and zero partial
+cascades** across all three populations; **four-pool**
+(`aquitanian + etruscan + toponym + eteocretan`) aggregation
+produces **the same three cascade candidates as v19**
+(KH 10, KH 5, PS Za 2) with **byte-identical mechanical reading**
+on PS Za 2's libation-formula span and minor-only shifts on
+low-coherence positions in KH 10 and KH 5. External-validation
+comparison on the 35-entry Younger scholar-proposed-reading set:
+
+| view | matches first | n signs | aggregate | n with proposal | band |
+|:--|---:|---:|---:|---:|:--|
+| v22 three-pool (baseline) | 3 | 76 | **3.95%** | 45 | STRONG NULL |
+| v24 eteocretan-only | 0 | 76 | **0.00%** | 19 | STRONG NULL |
+| v24 four-pool | 3 | 76 | **3.95%** | 45 | STRONG NULL |
+| v24 four-pool cascade-filtered (PS Za 2 only — KH 10 / KH 5 absent from scholar set) | 0 | 5 | **0.00%** | 5 | STRONG NULL |
+
+Eteocretan-only is **0/76 = 0.00%** (strict strong-null) with
+*coverage* dropping to 19/76 because eteocretan candidates are
+sparse on most scholar-set inscriptions and *zero* on PS Za 2
+(no eteocretan substrate surface beats `control_eteocretan_bigram`
+on any PS Za 2 span). Four-pool is identical to v22's three-pool
+result — adding eteocretan to the substrate union changes
+neither the match count (3) nor the coverage (45). The cascade-
+filtered four-pool run lands at 0/5 on PS Za 2 — identical to
+v19's single-entry baseline.
+
+This is the strongest evidence yet that the v10/v18/v21 PASSes
+detect substrate-LM-phonotactic-kinship at the population level
+*only*, and that the kinship signal does not concentrate at any
+specific Linear A sign or inscription as a phoneme-recoverable
+reading — under any candidate substrate the framework has tested,
+**including the closest-relative one with the strongest own-LM
+PASS**.
+
+### Two narrative observations
+
+1. **Right-tail population PASS magnitude does not propagate to
+   per-inscription cascade strength.** v21 reported Eteocretan's
+   own-LM gate at p=4.10e-06 with substrate-vs-control posterior-
+   median gap +0.20 — by both metrics the strongest PASS in the
+   validation series. Per-inscription cascade analysis under the
+   same eteocretan candidate pool produces zero cascade candidates
+   and zero partial cascades. Population-level right-tail
+   substrate-vs-control concentration and per-inscription per-sign
+   consensus are different observables; v24 makes that distinction
+   load-bearing in the manuscript narrative.
+
+2. **PS Za 2's mechanical reading is invariant across pool sets.**
+   Under v19's three-pool aggregation
+   (`aquitanian + etruscan + toponym`), the libation-formula span
+   reads `c-e-a-(ch)-th-(ch)-th-u-u-n-i-(l)-a-(l)`. Under v24's
+   four-pool aggregation (adding eteocretan), the reading is
+   *byte-identical*. The eteocretan-LM-conditioned aggregation
+   does not produce a different mechanical reading on this
+   inscription. The 0/5 consonantal divergence from scholarly
+   `ja-sa-sa-ra-me` does not depend on pool-set choice — it is
+   robust under substrate-LM swap to the closest-genealogical-
+   relative pool.
+
+### What this ticket built
+
+Pure analysis layer on top of the existing v8 + v9 paired-diff
+infrastructure plus v21's eteocretan candidate manifests. No new
+corpora, no new pools, no new metrics, no new rescores:
+
+* **`scripts/right_tail_inscription_concentration.py` extended.**
+  Adds `_V10_TOP20_BY_POOL["eteocretan"]` (the 20 substrate
+  surfaces from `results/rollup.bayesian_posterior.eteocretan.md`,
+  v21 leaderboard) and a `--control-pools` JSON CLI flag that
+  threads per-pool control overrides through to
+  `build_v8_records` / `build_v9_records`. The CLI default
+  applies the v21+ overrides (`eteocretan→control_eteocretan_bigram`)
+  automatically, so existing aquitanian + etruscan invocations
+  are unchanged. Rendering generalised to N-pool case.
+* **`scripts/per_inscription_coherence.py` extended.** Adds
+  matching `--control-pools` CLI flag and a `--suffix` flag that,
+  when set, automatically appends to both the rollup output name
+  and the default Population A source path
+  (`rollup.right_tail_inscription_concentration<suffix>.md`).
+  `collect_per_inscription_proposals` accepts a
+  `control_pool_overrides` parameter; default-applied as the
+  v21+ override dict.
+* **`scripts/compare_scholar_proposed.py` extended.** Same
+  `--control-pools` CLI thread-through; new
+  `--filter-inscriptions` CLI flag for cascade-candidate-only
+  scoring (used to filter to KH 10 / KH 5 / PS Za 2 in v24's
+  four-pool cascade-filtered run; KH 10 / KH 5 are absent from
+  the scholar set so the filter resolves to PS Za 2 alone).
+* **Eight new committed result files** (see Files touched / added
+  below).
+* **Determinism preserved.** All 203 existing tests pass under
+  `python3 -m unittest discover -s harness/tests -t .`. The
+  default-applied control-pool overrides do not change behavior
+  for legacy invocations because `aquitanian`, `etruscan`, and
+  `toponym` are not in the override dict — only `eteocretan` is —
+  so the default control resolution (`control_<pool>`) is
+  preserved for those pools.
+
+### Files touched / added
+
+* `scripts/right_tail_inscription_concentration.py` —
+  `_V10_TOP20_BY_POOL["eteocretan"]`,
+  `_DEFAULT_CONTROL_POOL_OVERRIDES`, `--control-pools` CLI flag,
+  generalised N-pool rendering.
+* `scripts/per_inscription_coherence.py` —
+  `_DEFAULT_CONTROL_POOL_OVERRIDES`, `--control-pools` /
+  `--suffix` CLI flags, `control_pool_overrides` parameter on
+  `collect_per_inscription_proposals`.
+* `scripts/compare_scholar_proposed.py` —
+  `_DEFAULT_CONTROL_POOL_OVERRIDES`, `--control-pools` /
+  `--filter-inscriptions` CLI flags.
+* `results/rollup.right_tail_inscription_concentration.eteocretan_only.md`
+  (NEW) — eteocretan-pool right-tail population A source.
+* `results/rollup.right_tail_inscription_concentration.four_pools.md`
+  (NEW) — four-pool union right-tail population A source.
+* `results/rollup.per_inscription_coherence.eteocretan_only.md`
+  (NEW) — eteocretan-only per-inscription coherence (zero
+  cascade candidates).
+* `results/rollup.per_inscription_coherence.four_pools.md` (NEW)
+  — four-pool per-inscription coherence (KH 10, KH 5, PS Za 2;
+  HT 95a partial).
+* `results/rollup.scholar_proposed_readings_comparison.eteocretan_only.md`
+  (NEW) — 0/76 = 0.00% aggregate; 19/76 coverage.
+* `results/rollup.scholar_proposed_readings_comparison.four_pools.md`
+  (NEW) — 3/76 = 3.95% aggregate; 45/76 coverage.
+* `results/rollup.scholar_proposed_readings_comparison.four_pools_cascades.md`
+  (NEW) — cascade-candidate-filtered (PS Za 2 only); 0/5 on
+  libation-formula span.
+* `results/per_inscription_coherence.eteocretan_only.summary.json`
+  (NEW) — summary sidecar.
+* `results/per_inscription_coherence.four_pools.summary.json`
+  (NEW) — summary sidecar.
+* `results/scholar_proposed_readings_comparison.eteocretan_only.summary.json`
+  (NEW) — summary sidecar.
+* `results/scholar_proposed_readings_comparison.four_pools.summary.json`
+  (NEW) — summary sidecar.
+* `results/scholar_proposed_readings_comparison.four_pools_cascades.summary.json`
+  (NEW) — summary sidecar.
+* `docs/findings_summary.md` — §3.14 extended with new "Per-
+  inscription cascade-candidate analysis under Eteocretan LM
+  (v24)" subsection; §4.6 evidence-base extended from three
+  layers to four; §5.2 small-corpus Eteocretan caveat extended
+  with the per-inscription sparseness observation; Appendix A
+  row added; provenance trailer date-bumped to mg-c103.
+* `docs/findings.md` — this entry.
+
+### Reproducibility
+
+```
+# Right-tail population A sources (per_inscription_coherence
+# auto-resolves the suffix-matched file as Population A):
+python3 scripts/right_tail_inscription_concentration.py \
+    --pools eteocretan \
+    --out results/rollup.right_tail_inscription_concentration.eteocretan_only.md
+python3 scripts/right_tail_inscription_concentration.py \
+    --pools aquitanian,etruscan,eteocretan \
+    --out results/rollup.right_tail_inscription_concentration.four_pools.md
+
+# Per-inscription cascade analyses:
+python3 scripts/per_inscription_coherence.py \
+    --pools eteocretan --suffix .eteocretan_only \
+    --summary-json results/per_inscription_coherence.eteocretan_only.summary.json
+python3 scripts/per_inscription_coherence.py \
+    --pools aquitanian,etruscan,toponym,eteocretan --suffix .four_pools \
+    --summary-json results/per_inscription_coherence.four_pools.summary.json
+
+# External-validation comparisons:
+python3 scripts/compare_scholar_proposed.py \
+    --pools eteocretan \
+    --out results/rollup.scholar_proposed_readings_comparison.eteocretan_only.md \
+    --summary-json results/scholar_proposed_readings_comparison.eteocretan_only.summary.json
+python3 scripts/compare_scholar_proposed.py \
+    --pools aquitanian,etruscan,toponym,eteocretan \
+    --out results/rollup.scholar_proposed_readings_comparison.four_pools.md \
+    --summary-json results/scholar_proposed_readings_comparison.four_pools.summary.json
+python3 scripts/compare_scholar_proposed.py \
+    --pools aquitanian,etruscan,toponym,eteocretan \
+    --filter-inscriptions 'KH 10,KH 5,PS Za 2' \
+    --out results/rollup.scholar_proposed_readings_comparison.four_pools_cascades.md \
+    --summary-json results/scholar_proposed_readings_comparison.four_pools_cascades.summary.json
+```
+
+Determinism: every step is byte-deterministic given the same
+inputs. The downstream rollups are pure-function over the result
+stream + manifests + hypothesis YAMLs + scholar_proposed_readings
+JSONL; tie-breaking on modal phoneme is alphabetical (inherited
+from `per_sign_consensus_local`). No RNG anywhere.
+
+### Limitations specific to v24
+
+- **Eteocretan candidate sparseness.** ~2,985 substrate +
+  ~2,635 control records is large enough for the v21
+  population-level right-tail PASS but too sparse for per-
+  inscription consensus to form at the 50% robust bar.
+  Expanding the pool would require expanding the underlying
+  Eteocretan corpus (already at the surviving-record ceiling
+  per v21 §3.14 / §5.2). This is not a v24-engineering action
+  item but a fact about Eteocretan's epigraphic record.
+- **PS Za 2 has zero positive eteocretan paired_diff records.**
+  Under the bigram-preserving control, no eteocretan substrate
+  surface beats the control on any PS Za 2 span. The
+  eteocretan-only Population C is consequently empty, and the
+  cascade-filtered four-pool run effectively re-tests v19's
+  three-pool 0/5 PS Za 2 result — confirming pool-set
+  invariance on the libation-formula span but not adding
+  fresh evidence.
+- **Cascade-candidate-filtered run is informationally thin.**
+  KH 10 and KH 5 carry no scholarly contextual readings in the
+  35-entry Younger set; the four-pool cascade filter resolves
+  to PS Za 2 alone. The 0/5 result on PS Za 2 is a regression
+  test on v19's single-entry headline, not a population
+  observation. The four-pool aggregate (3/76, 3.95%) and the
+  eteocretan-only aggregate (0/76, 0.00%) are the load-bearing
+  population-level statistics.
+
+### Out of scope (deferred to subsequent tickets)
+
+- **Methodology paper polish pass** integrating v22 + v23 + v24
+  cleanly (v25, separate ticket).
+- **Toponym × {Etruscan, Mycenaean Greek} cells** of the cross-
+  LM matrix (low-priority follow-up; would complete the 4×4).
+- **Eteocretan bilingual decoding.** Methodologically distinct.
+- **Phoenician / Sumerian / Hattic substrate pools.** v15 settled
+  the methodological limit; deferred indefinitely.
+- **GORILA / Younger ingest.** Different scope.
+- **LaTeX / journal submission.** Out of polecat scope.

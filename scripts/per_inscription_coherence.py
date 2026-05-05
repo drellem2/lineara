@@ -128,6 +128,14 @@ _DEFAULT_PARTIAL_BAR = 0.25
 _DEFAULT_TOP_N = 30
 _LIBATION_NEEDLE: tuple[str, ...] = ("AB57", "AB31", "AB31", "AB60", "AB13")
 
+# v21 (mg-6ccd) introduced bigram-preserving controls as the production
+# default for new pools. Pools without a legacy ``control_<pool>``
+# matched-control register their override here so v24 (mg-c103) can
+# aggregate eteocretan candidates without a CLI argument every time.
+_DEFAULT_CONTROL_POOL_OVERRIDES: dict[str, str] = {
+    "eteocretan": "control_eteocretan_bigram",
+}
+
 
 # ---------------------------------------------------------------------------
 # Token filtering
@@ -193,6 +201,7 @@ def collect_per_inscription_proposals(
     results_dir: Path,
     repo_root: Path,
     language_dispatch: dict[str, str],
+    control_pool_overrides: dict[str, str] | None = None,
 ) -> dict:
     """Walk substrate paired_diff records → per-inscription (sign, phoneme) tally.
 
@@ -209,9 +218,11 @@ def collect_per_inscription_proposals(
     """
     score_rows = _load_score_rows(results_dir)
     pool_phonemes = _load_pool_phonemes(pools_dir)
+    control_pool_overrides = control_pool_overrides or {}
 
     sub_records: list[dict] = []
     for pool in pools:
+        ctrl = control_pool_overrides.get(pool)
         sub_records.extend(
             build_v8_records(
                 pool=pool,
@@ -219,6 +230,7 @@ def collect_per_inscription_proposals(
                 score_rows=score_rows,
                 pool_phonemes=pool_phonemes,
                 language_dispatch=language_dispatch,
+                control_pool=ctrl,
             )
         )
         sub_records.extend(
@@ -227,6 +239,7 @@ def collect_per_inscription_proposals(
                 auto_dir=auto_sig_dir,
                 score_rows=score_rows,
                 language_dispatch=language_dispatch,
+                control_pool=ctrl,
             )
         )
 
@@ -1200,7 +1213,23 @@ def main(argv: list[str] | None = None) -> int:
         default=",".join(_DEFAULT_VALIDATED_POOLS),
         help=(
             "Comma-separated substrate pools to aggregate over. Default: "
-            "the three validated pools (aquitanian, etruscan, toponym)."
+            "the three validated pools (aquitanian, etruscan, toponym). "
+            "v24 (mg-c103) extends this to ``eteocretan`` (eteocretan-"
+            "only run) and the four-pool union "
+            "``aquitanian,etruscan,toponym,eteocretan``."
+        ),
+    )
+    parser.add_argument(
+        "--control-pools",
+        type=str,
+        default=None,
+        help=(
+            "JSON object mapping substrate pool name → control pool name "
+            "(overrides the default ``control_<pool>``). v24 wires "
+            "``eteocretan→control_eteocretan_bigram``. If omitted, the "
+            f"default overrides ({_DEFAULT_CONTROL_POOL_OVERRIDES}) are "
+            "applied automatically so eteocretan substrate aggregation "
+            "works out-of-the-box."
         ),
     )
     parser.add_argument(
@@ -1222,6 +1251,20 @@ def main(argv: list[str] | None = None) -> int:
         default=Path("results") / "rollup.per_inscription_coherence.md",
     )
     parser.add_argument(
+        "--suffix",
+        type=str,
+        default="",
+        help=(
+            "Optional suffix inserted into both the rollup output name "
+            "(``rollup.per_inscription_coherence<suffix>.md``) and the "
+            "default Population A source (``rollup.right_tail_inscription"
+            "_concentration<suffix>.md``). Set when running v24's "
+            "eteocretan-only / four-pool variants. The suffix is used "
+            "ONLY when ``--out`` / ``--rollup-a`` are not explicitly "
+            "passed; explicit overrides win."
+        ),
+    )
+    parser.add_argument(
         "--summary-json",
         type=Path,
         default=None,
@@ -1232,6 +1275,27 @@ def main(argv: list[str] | None = None) -> int:
     pools = [p.strip() for p in args.pools.split(",") if p.strip()]
     language_dispatch = dict(_DEFAULT_LANGUAGE_DISPATCH)
 
+    if args.control_pools:
+        control_overrides = json.loads(args.control_pools)
+    else:
+        control_overrides = dict(_DEFAULT_CONTROL_POOL_OVERRIDES)
+
+    if args.suffix:
+        default_out = Path("results") / "rollup.per_inscription_coherence.md"
+        if args.out == default_out:
+            args.out = (
+                Path("results")
+                / f"rollup.per_inscription_coherence{args.suffix}.md"
+            )
+        default_a = (
+            Path("results") / "rollup.right_tail_inscription_concentration.md"
+        )
+        if args.rollup_a == default_a:
+            args.rollup_a = (
+                Path("results")
+                / f"rollup.right_tail_inscription_concentration{args.suffix}.md"
+            )
+
     proposals = collect_per_inscription_proposals(
         pools=pools,
         auto_dir=args.auto_dir,
@@ -1240,6 +1304,7 @@ def main(argv: list[str] | None = None) -> int:
         results_dir=args.results_dir,
         repo_root=args.repo_root,
         language_dispatch=language_dispatch,
+        control_pool_overrides=control_overrides,
     )
 
     corpus = _load_corpus(args.corpus)

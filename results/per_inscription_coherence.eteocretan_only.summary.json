@@ -1,0 +1,27 @@
+{
+  "pools": [
+    "eteocretan"
+  ],
+  "alpha": 0.5,
+  "threshold": 0.5,
+  "cascade_bar": 0.5,
+  "partial_bar": 0.25,
+  "classification_statistic": "fraction_robust_high_coherence_signs",
+  "robust_min_n": 2,
+  "n_inscriptions": {
+    "population_a": 30,
+    "population_b": 4,
+    "population_c": 0
+  },
+  "n_cascade_candidates": {
+    "population_a": 0,
+    "population_b": 0,
+    "population_c": 0
+  },
+  "n_partial_cascades": {
+    "population_a": 0,
+    "population_b": 0,
+    "population_c": 0
+  },
+  "cascade_candidates": []
+}
