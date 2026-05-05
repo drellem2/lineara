@@ -2158,6 +2158,120 @@ methodology paper's previous asymmetry: the cross-script
 verification methodology is now reported at the leaderboard
 top-K granularity on both sides.
 
+#### v28 — Linear A side leave-one-out validation of the chic-v5 framework on LB-carryover anchors (mg-4a7b)
+
+The §4.6 framing was previously **asymmetric on held-out
+validation**. The CHIC side acquired a held-out validation
+companion (chic-v9, §4.7 mg-18cb) that holds each chic-v2
+paleographic anchor out of the pool, runs the chic-v5 framework
+blind under L1+L2+L3 (L4 excluded as circular), and reports
+recovery accuracy. The Linear A side never ran the analogous
+LOO pass on its LB-carryover anchor pool. v28 closes that
+asymmetry, parallel to how v26 closed the asymmetry on
+mechanical-verification.
+
+For each of 21 LB-carryover anchors S (parsed from
+`pools/linear_b_carryover.yaml`'s well-attested AB-sign →
+phoneme citations; AB123 excluded as conjectural per Younger),
+v28 holds S out of the LB-carryover pool, treats S as unknown,
+and recomputes L1 (distributional plurality on top-3 nearest
+anchors over the four-dimensional Bhattacharyya fingerprint),
+L2 (strict-top-1 anchor distance), and L3 (substrate-consistency
+under the v21 Eteocretan LM) for S against the reduced 20-anchor
+pool. Per-AB-sign distributional fingerprints (`left_neighbor`,
+`right_neighbor`, `position`, `support`) are computed over the
+full 772-inscription Linear A corpus. L4 is **deliberately
+excluded**: the LB-carryover anchor pool's known values are
+themselves derived via paleographic similarity to deciphered
+Linear B signs (Ventris-Chadwick 1956), so for any anchor S the
+L4 line trivially recovers V by construction, exactly mirroring
+chic-v9's L4-exclusion rationale. The LM choice for L3 is the
+v21 Eteocretan LM in **direct symmetry with chic-v9** (the
+strongest pool on both LA and CHIC; LB-carryover anchors are not
+naturally partitioned across the v10/v18/v21 substrate pools).
+
+**Headline LA-side LOO accuracy: 7 of 21 anchors recover
+correctly = 33.3%.** Above chic-v9's 20% (delta +13.3%) but
+**still below the 40% moderate-agreement threshold** the chic-v9
+brief pre-registered. The chance baseline for a 6-class taxonomy
+is ~16.7%, so 33.3% is **modestly above chance** — comparable
+to chic-v9's 20% in being in the low-agreement / not-validated
+band, not at the validation threshold. Per-line accuracies
+(L1=33.3%, L2=33.3%, L3=9.5%) are each higher on LA than on CHIC
+(chic-v9: L1=20.0%, L2=20.0%, L3=5.0%) but the deltas are small:
++13.3 / +13.3 / +4.5 percentage points. L3 is **below chance on
+both scripts**, identical in direction across scripts — strong
+evidence that L3's near-zero recovery is a property of the
+Eteocretan-LM machinery itself (the LM's onset distribution
+rewards `na`/`ni`/`no`/`ma`/`me` and `fa`/`fe`/`fi` over the
+held-out values' actual classes), not a property of either
+corpus.
+
+| metric | LA-side (v28) | CHIC-side (chic-v9) | delta (LA − CHIC) |
+|:--|:--:|:--:|---:|
+| n anchors run blind | 21 | 20 | +1 |
+| n with framework_class == known_class | 7 | 4 | +3 |
+| **aggregate LOO accuracy** | **33.3%** | **20.0%** | **+13.3%** |
+| chance baseline (6-class taxonomy) | ~16.7% | ~16.7% | 0% |
+| L1 (distributional plurality) | 33.3% | 20.0% | +13.3% |
+| L2 (strict top-1) | 33.3% | 20.0% | +13.3% |
+| L3 (substrate-consistency, Eteocretan LM) | 9.5% | 5.0% | +4.5% |
+| n LOO tier-2 (3-of-3 unanimous) | 3 | 3 | 0 |
+| **n LOO tier-2 correctly classified** | **0/3 = 0.0%** | **0/3 = 0.0%** | **0%** |
+
+**Tier-2 unanimity classification accuracy is 0/3 on both
+scripts.** Each LA-side tier-2 case mirrors a chic-v9 tier-2
+case structurally: unanimous-but-wrong, with all three lines
+voting the framework's most-typed class (stop or nasal) over
+the held-out anchor's actual class. The unanimity criterion does
+not require the unanimously-voted class to be correct — under
+both scripts, unanimity is achievable on systematic distributional
+biases (frequent neighbors and positions cluster anchors of the
+same broad class together), and the systematic biases do not
+align with held-out anchor values. The three LA-side LOO tier-2
+anchors are `AB06 = na` (nasal → stop), `AB08 = a` (vowel →
+stop), and `AB27 = re` (liquid → nasal); none of the three
+unanimous votes lands on the held-out anchor's actual class.
+
+**Implication for the broader chic-v5 / v22 / v26 framework's
+per-sign credibility.** The pre-registered three-way hypothesis
+resolves to the **structural-limitation arm**:
+
+1. **The at-chance behaviour is structural to the chic-v5
+   framework, not CHIC-specific.** The framework detects
+   substrate-LM-phonotactic kinship at the **population level**
+   (the v10/v18/v21 PASSes on Linear A; the chic-v3 right-tail
+   bayesian gate PASS for Eteocretan against CHIC at p=7.33e-04)
+   but per-sign value extraction is below the noise floor on
+   both scripts under our held-out validation.
+2. **The chic-v5 tier-2 candidates' credibility downgrade (per
+   chic-v9 / chic-v10) extends to the v22 + v26 leaderboard
+   top-K mechanical-verification results' per-sign-value
+   claims.** The leaderboard top-K substrates were detected by
+   the same population-level kinship machinery whose per-sign
+   extraction is at chance; v26's tier-1 → tier-2 mechanical
+   lift on Linear A and chic-v6's analogous +3-inscription /
+   +20-hit lift on CHIC are **mechanical findings about the
+   framework's sign-coverage ladder**, not independent evidence
+   for the per-sign phoneme-class assignments.
+3. **The population-level cross-script claim survives intact.**
+   chic-v3 / chic-v4's right-tail bayesian gate PASS and
+   Spearman ρ=+1.000 cross-script ranking are population-level
+   signals that do not depend on the per-sign machinery; v28's
+   LA-side null does not move those numbers.
+
+This v28 paragraph is the §4.6 Linear-A-side analog of the
+chic-v9 paragraph in §4.7 (mg-18cb). The two together close the
+methodology paper's previous asymmetry: held-out validation of
+the chic-v5 per-sign value-extraction framework is now reported
+on both sides, with **symmetrically negative verdicts** —
+low-agreement / not-validated band on both LA and CHIC; 0/3
+tier-2 unanimity correct on both. The methodology paper's
+post-v28 framing reads: **the chic-v5 framework is a discipline-
+protecting protocol that catches per-sign motivated-reasoning
+failure modes through pre-registered held-out validation, and
+the discipline — not the per-sign output — is the deliverable**.
+
 ### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 through chic-v9)
 
 A parallel sub-program (the **chic-v\*** ticket series) extends

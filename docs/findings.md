@@ -8347,3 +8347,334 @@ as the fifth pillar.
 - Salgarella, E. (2020). *Aegean Linear Script(s).* Cambridge.
 - Ventris, M. & Chadwick, J. (1956). *Documents in Mycenaean
   Greek.* Cambridge.
+
+---
+
+## Findings from mg-4a7b (v28 — Linear A side analogous LOO validation of the chic-v5 framework on LB-carryover anchors, 2026-05-06)
+
+### Summary
+
+chic-v9 (mg-18cb) showed that chic-v5's L1+L2+L3 framework
+recovers known CHIC anchor values at **20% accuracy** (chance
+baseline ~16.7% for the 6-class taxonomy) — squarely in the
+low-agreement / not-validated band. v28 runs the symmetric
+Linear A side analog: apply the same chic-v5 per-sign value-
+extraction framework to Linear-B carryover anchors on the
+Linear A corpus, leave-one-out each anchor, compute recovery
+accuracy. The pre-registered hypothesis was three-way:
+
+- **High LA-side accuracy (>70%)** → chic-v9's 20% reflects a
+  CHIC-specific limitation; the methodology paper's framing
+  becomes "framework validates on LA but not on CHIC".
+- **Low LA-side accuracy (<40%)** → at-chance behaviour is
+  structural to the framework, not CHIC-specific; both scripts'
+  per-sign extraction is below the noise floor.
+- **Moderate (40-70%)** → partial validation; methodology paper
+  hedges accordingly.
+
+This ticket runs the LOO test cleanly:
+
+1. For each of 21 LB-carryover anchors S (parsed from
+   `pools/linear_b_carryover.yaml`'s well-attested AB-sign →
+   phoneme citations; AB123 excluded as conjectural per Younger):
+   remove S from the LB-carryover pool, treat S as unknown,
+   recompute L1 (distributional plurality on top-3 nearest
+   anchors), L2 (strict-top-1 anchor distance), L3 (substrate-
+   consistency under the v21 Eteocretan LM) for S against the
+   reduced 20-anchor pool. Per-AB-sign distributional fingerprints
+   (`left_neighbor`, `right_neighbor`, `position`, `support`) are
+   computed over the full 772-inscription Linear A corpus.
+2. **L4 (cross-script paleographic) is deliberately excluded.**
+   The LB-carryover anchor pool's known values are themselves
+   derived via paleographic similarity to deciphered Linear B
+   signs (Ventris-Chadwick 1956); for any anchor S, L4 trivially
+   recovers V by construction. Including L4 would make the LOO
+   test circular and inflate accuracy.
+3. Apply chic-v5's tier classification with L4 silent: 3-of-3
+   unanimity = LOO tier-2; 2-of-3 = tier-3; 1-of-3 = tier-4;
+   0 = untiered.
+4. Compare framework's proposed class to S's known scholarly
+   class.
+
+LM choice for L3 is the **v21 Eteocretan LM**, in direct symmetry
+with chic-v9. The methodologically-symmetric alternative would
+be a per-pool LM swap, but LB-carryover anchors are not naturally
+partitioned across the v10/v18/v21 substrate pools — they are
+paleographic carryovers, not predictions from any single substrate.
+Eteocretan was the strongest pool on LA (v21 PASSed at +0.20 gap)
+and on CHIC, so the LM-bias profile is symmetric across scripts.
+
+### Headline result: low-agreement / not validated (the structural-limitation hypothesis verifies)
+
+**Aggregate LA-side LOO accuracy: 7 of 21 anchors recover
+correctly = 33.3%.** Above chic-v9's 20% (delta +13.3%) but
+**still below the 40% moderate-agreement threshold** the chic-v9
+brief pre-registered. The chance baseline for a 6-class taxonomy
+is ~16.7%, so 33.3% is **modestly above chance** — comparable to
+chic-v9's 20% in being in the low-agreement / not-validated band,
+not at the validation threshold.
+
+| metric | value |
+|:--|---:|
+| n anchors run blind | 21 |
+| n with framework_class == known_class | 7 |
+| **aggregate LA-side LOO accuracy** | **33.3%** |
+| chance baseline (6-class taxonomy) | ~16.7% |
+| chic-v9 (CHIC-side) aggregate accuracy | 20.0% |
+| **delta (LA − CHIC)** | **+13.3%** |
+| n LOO tier-2 (3-of-3 unanimity) | 3 |
+| **n LOO tier-2 correctly classified** | **0/3 = 0.0%** |
+| n LOO tier-3 (2-of-3) | 11 |
+| n LOO tier-4 (1-of-3) | 7 |
+| n LOO untiered | 0 |
+
+### Per-line accuracy decomposition (LA-side vs chic-v9)
+
+| line | LA-side | chic-v9 | delta (LA − CHIC) |
+|:--|:--:|:--:|---:|
+| L1 (distributional plurality, top-3) | 7/21 = 33.3% | 4/20 = 20.0% | +13.3% |
+| L2 (strict-top-1 anchor distance) | 7/21 = 33.3% | 4/20 = 20.0% | +13.3% |
+| L3 (substrate-consistency under Eteocretan LM) | 2/21 = 9.5% | 1/20 = 5.0% | +4.5% |
+| **L1+L2+L3 consensus (framework class)** | **7/21 = 33.3%** | **4/20 = 20.0%** | **+13.3%** |
+
+L1 and L2 tie at 33.3% on LA and at 20% on CHIC — both lines
+read the same Bhattacharyya fingerprint distance machinery,
+differing only in aggregation (top-3 plurality vs top-1 strict).
+L3 at 9.5% is **below chance** on the LA side, consistent with
+chic-v9's L3 = 5.0% **also below chance** on the CHIC side: the
+Eteocretan-LM substrate-consistency line carries a systematic
+class bias (the Eteocretan vocabulary's onset distribution
+rewards `na`/`ni`/`no`/`ma`/`me` and `fa`/`fe`/`fi` over the
+held-out values' actual classes regardless of which value is
+held out). The cross-script L3-below-chance behaviour is
+**identical in direction across both scripts** — strong evidence
+that L3's near-zero recovery is a property of the Eteocretan-LM
+machinery itself, not a property of either corpus.
+
+The voted L1+L2+L3 consensus inherits the distributional lines'
+plurality on the LA side (33.3%) and on the CHIC side (20.0%);
+L3 cannot pull the consensus below the L1+L2 floor on either
+script because L3 disagrees noisily, not systematically wrongly
+in the same direction.
+
+### Tier-2 classification accuracy: 0/3 = 0.0% (identical to chic-v9)
+
+Three anchors emerged at LA-side LOO tier-2 (3-of-3 unanimity
+on a top class): **all three disagree with the known class**,
+matching chic-v9's 0/3 verdict on the CHIC side.
+
+| LA LOO tier-2 anchor | known phoneme | known class | framework class | L1 | L2 | L3 |
+|:--|:--|:--|:--|:--:|:--:|:--:|
+| `AB06 = na` | na | nasal | stop | stop | stop | stop |
+| `AB08 = a` | a | vowel | stop | stop | stop | stop |
+| `AB27 = re` | re | liquid | nasal | nasal | nasal | nasal |
+
+Each LA-side tier-2 case mirrors a chic-v9 tier-2 case
+structurally: unanimous-but-wrong, with all three lines voting
+the framework's most-typed class (stop or nasal) over the
+held-out anchor's actual class. The unanimity criterion does
+not require the unanimously-voted class to be correct — under
+both scripts, unanimity is achievable on systematic distributional
+biases (frequent neighbors and positions cluster anchors of the
+same broad class together), and the systematic biases do not
+align with held-out anchor values.
+
+### What recovers correctly (7 of 21 LA-side anchors)
+
+| anchor | known phoneme | known class | framework class | tier |
+|:--|:--|:--|:--|:--|
+| `AB02` | ro | liquid | liquid | tier-3 |
+| `AB03` | pa | stop | stop | tier-3 |
+| `AB07` | di | stop | stop | tier-3 |
+| `AB26` | ru | liquid | liquid | tier-4 |
+| `AB59` | ta | stop | stop | tier-3 |
+| `AB67` | ki | stop | stop | tier-3 |
+| `AB81` | ku | stop | stop | tier-3 |
+
+5 of 7 recoveries are **stop** (the largest class in the
+candidate value pool, with 11 stop values: `da`, `di`, `ka`,
+`ki`, `ku`, `pa`, `pa3`, `pi`, `ta`, `te`, `ti`); 2 are
+**liquid** (`ro`/`ru`). Class-pool size matters: a class with
+more representatives is mechanically easier to vote for under
+L1/L2's plurality / top-1 aggregation. The 14 incorrect cases
+include high-frequency anchors with strong distributional
+fingerprints (`AB08 = a` freq=136, `AB59 = ta` freq=106 — but
+`AB59` recovers correctly; the high-freq anchors that
+**don't** recover are `AB01 = da` freq=99, `AB06 = na` freq=97,
+`AB27 = re` freq=91, `AB28 = i` freq=95, `AB60 = ra` freq=85,
+`AB80 = ma` freq=84, `AB77 = ka` freq=92), so the recovery
+failures are not explained by low corpus frequency alone — the
+framework's mechanical machinery genuinely doesn't recover the
+right class on the bulk of the anchor pool, on both scripts.
+
+### Implication for the chic-v5 / v22 / v26 framework's per-sign credibility
+
+The LA-side aggregate of 33.3% is below the 40% moderate-
+agreement threshold. **The at-chance behaviour is structural
+to the chic-v5 framework, not CHIC-specific.** The methodology
+paper's reading becomes:
+
+1. **The framework detects substrate-LM-phonotactic kinship at
+   the population level (the v10/v18/v21 PASSes on Linear A;
+   the chic-v3 right-tail bayesian gate PASS for Eteocretan
+   against CHIC at p=7.33e-04) but per-sign value extraction
+   is below the noise floor on both scripts under our held-out
+   validation.** The chic-v9 brief's pre-registered low-band
+   verdict applies symmetrically across scripts.
+2. **The chic-v5 tier-2 candidates' credibility downgrade (per
+   chic-v9 / chic-v10) extends to the v22 + v26 leaderboard
+   top-K mechanical-verification results' per-sign-value
+   claims.** The leaderboard top-K substrates were detected by
+   the same population-level kinship machinery whose per-sign
+   extraction is at chance; v26's tier-1 → tier-2 mechanical
+   lift on Linear A and chic-v6's analogous +3-inscription /
+   +20-hit lift on CHIC are mechanical findings about the
+   framework's sign-coverage ladder, not independent evidence
+   for the per-sign phoneme-class assignments.
+3. **The population-level cross-script claim survives intact.**
+   chic-v3 / chic-v4's right-tail bayesian gate PASS and
+   Spearman ρ=+1.000 cross-script ranking are population-level
+   signals that do not depend on the per-sign machinery; v28's
+   LA-side null does not move those numbers.
+4. **v28 closes the methodology paper's CHIC/LA asymmetry on
+   held-out validation.** v26 (mg-c202) closed the asymmetry
+   on mechanical-verification (LA top-K vs chic-v6 tier-2 lift)
+   by adding a §4.6 paragraph parallel to §4.7's chic-v6
+   paragraph; v28 closes the analogous asymmetry on per-sign-
+   recovery validation by adding a §4.6 paragraph parallel to
+   §4.7's chic-v9 paragraph.
+
+This is the negative-result pattern the chic and lineara sub-
+programs have emphasised since chic-v1's missed-update incident
+(mg-c7e3 backfilled by mg-0ea1) and the broader Linear A v13 /
+v19 / v22 / v24 / chic-v6 / chic-v9 per-sign-coherence-failure
+lineage. **The framework is structured to fail loudly when
+the lines diverge or the validation evidence is silent**; v28
+is the held-out evidence — symmetric to chic-v9 — that the
+per-sign machinery has not, in fact, been recovering signal on
+the cases where ground truth was available, on either script.
+
+### Caveats
+
+- **Small N (21 anchors).** Comparable in size to chic-v9's
+  20 CHIC anchors; ±5% differences fall within the binomial
+  noise floor. The headline 33.3% should be read as a point
+  estimate with substantial uncertainty, but the qualitative
+  reading (recovery in low-agreement band, well below the 40%
+  moderate threshold; 0/3 tier-2 correct) is robust and
+  symmetric to chic-v9.
+- **Anchor-pool composition.** The 21 LB-carryover anchors are
+  paleographically-derived AB signs, not a random sample of
+  Linear A syllabograms; the LOO test measures recovery on
+  **anchor-shaped** signs. The 56 non-anchored AB signs in the
+  LA corpus may differ systematically.
+- **L4 exclusion is non-negotiable.** Including L4 would inflate
+  accuracy by construction; the L1+L2+L3-only setup is the
+  honest test the chic-v9 brief specified, here applied to the
+  LA side symmetrically.
+- **Class-level evaluation.** Agreement is exact phoneme-class
+  identity (vowel / stop / nasal / liquid / fricative / glide).
+  The framework's per-sign resolution is class-level, so this
+  is the correct evaluation granularity. The LOO test does not
+  adjudicate whether the framework could correctly recover the
+  **specific phoneme value** within the class.
+- **L3 candidate-pool reduction.** Where the held-out value's
+  class itself has no other representative in the rebuilt pool,
+  L3 cannot recover the class by construction. 2/21 LA anchors
+  fall into this structural-impossibility bucket (flagged ⚠ in
+  the per-anchor table); this is comparable to chic-v9's 1/20.
+- **LM symmetry.** The v21 Eteocretan LM is used in direct
+  symmetry with chic-v9. A per-pool LM swap would couple L3
+  to candidate-substrate identity, which is methodologically
+  odd for an LB-carryover anchor pool not naturally partitioned
+  across substrate pools.
+
+### Per-anchor breakdown (full table)
+
+(See `results/v28_la_loo_validation.md` for the formatted table
+with per-line votes, similarity scores, and L3 best-paired-diff
+values. Below is a compact summary by recovery status.)
+
+**Correctly recovered (7):** `AB02 = ro` / `AB03 = pa` /
+`AB07 = di` / `AB26 = ru` / `AB59 = ta` / `AB67 = ki` /
+`AB81 = ku`. 5 are stop (the largest candidate-pool class);
+2 are liquid.
+
+**Incorrectly recovered (14):** `AB01 = da` (stop → fricative);
+`AB04 = te` (stop → fricative); `AB06 = na` (nasal → stop, **LOO
+tier-2**); `AB08 = a` (vowel → stop, **LOO tier-2**); `AB09 = se`
+(fricative → stop, L3 ⚠); `AB27 = re` (liquid → nasal, **LOO
+tier-2**); `AB28 = i` (vowel → fricative); `AB39 = pi` (stop →
+glide); `AB56 = pa3` (stop → liquid); `AB57 = ja` (glide →
+nasal, L3 ⚠); `AB60 = ra` (liquid → nasal); `AB73 = mi` (nasal
+→ stop); `AB77 = ka` (stop → fricative); `AB80 = ma` (nasal →
+fricative).
+
+A pattern in the L1/L2 errors that mirrors chic-v9: the
+distributional fingerprint machinery often confuses **stop**
+and **fricative** classes (e.g. `AB01 = da` → fricative,
+`AB04 = te` → fricative, `AB77 = ka` → fricative), and
+**nasal** and **stop** classes (e.g. `AB06 = na` → stop,
+`AB73 = mi` → stop). Consistent with chic-v9's identification
+that the fingerprint dimensions (`left_neighbor`, `right_neighbor`,
+`position`, `support`) measure **syntactic-position kinship**
+rather than phonetic kinship — two signs occurring in similar
+syntactic contexts can carry different phonetic classes, and the
+framework cannot distinguish syntactic from phonetic kinship in
+its current form. This is a structural property of chic-v5's
+per-sign machinery on both scripts, not a tunable parameter.
+
+### Artifacts shipped
+
+- `scripts/build_linear_a_v28.py` — the LA-side LOO validation
+  driver. Imports L1/L2/L3 helpers from
+  `scripts/build_chic_v5.py` (Bhattacharyya similarity,
+  fingerprint averaging, candidate-class taxonomy, per-class
+  aggregation, sha256-keyed control-phoneme selection) and the
+  `external_phoneme_perplexity_v0` metric from `harness.metrics`.
+  LA-specific token normalization and per-AB-sign fingerprint
+  computation are in the v28 script (the chic-v5 versions are
+  hardcoded for `#NNN` tokens). Idempotent; deterministic; same
+  inputs → byte-identical output.
+- `results/v28_la_loo_validation.md` — per-anchor LOO result
+  table, aggregate accuracy, per-line decomposition, tier-
+  classification accuracy, cross-script comparison vs chic-v9,
+  implications for the framework's per-sign credibility, full
+  caveats. md5-stable across re-runs.
+
+### Determinism
+
+No RNG. The L3 control-phoneme selection inherits chic-v5's
+sha256-keyed permutation construction (deterministic, no
+`random.Random(seed)` draw). md5 stability of
+`results/v28_la_loo_validation.md` verified across two
+consecutive runs at v28 build time, 2026-05-06. Same
+(LA corpus, LB-carryover anchor map, eteocretan pool yaml,
+v21 Eteocretan LM) → byte-identical output.
+
+### Out of scope (deferred to subsequent tickets)
+
+- **Methodology paper polish pass** integrating v28 + v26 +
+  chic-v9 + chic-v10 into the §4.6 + §4.7 cross-script synthesis.
+  Filed for pm-lineara triage; v28's negative result strengthens
+  the case but is not a prerequisite for any single editorial
+  pass.
+- **Domain-expert review** of any chic-v5 / v22 / v26 candidates
+  regardless of v28 outcome. Out of polecat scope; specialist
+  judgment is the load-bearing next step for advancing any
+  matched candidate from "matched" to "decipherment".
+- **Cleanup tickets** (AGENTS.md, dedup). Cosmetic; deferred.
+- **Pivot programs** (Indus Valley / Rongorongo / Proto-Elamite).
+  Need Daniel's go-ahead.
+
+### Citations
+
+- Younger, J. G. (2020). *Linear A texts in phonetic
+  transcription* (online edition).
+- Salgarella, E. (2020). *Aegean Linear Script(s).* Cambridge.
+- Ventris, M. & Chadwick, J. (1956). *Documents in Mycenaean
+  Greek.* Cambridge.
+- Schoep, I. (2002). *The Administration of Neopalatial Crete.*
+  Liège.
+- Olivier, J.-P. & Godart, L. (1996). *Corpus Hieroglyphicarum
+  Inscriptionum Cretae* (Études Crétoises 31). Paris.
