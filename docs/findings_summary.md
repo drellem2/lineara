@@ -1915,6 +1915,110 @@ for any specific Linear A sign, and the v19 + v20 external
 validation makes that specific in a way that internal-only
 metrics cannot.
 
+#### v26 — Linear A side leaderboard top-K mechanical verification (mg-c202)
+
+The §4.6 framing was previously **asymmetric**. The CHIC side
+acquired a mechanical-verification companion (chic-v6, §4.7
+mg-a557) that pre-registers three external-scholarship sources
+and reports per-tier match counts at the leaderboard top-K
+extension. The Linear A side never ran the analogous pass at
+the leaderboard top-K granularity — v22 (mg-46d5) covered the
+*per-inscription consensus* layer (3.95% aggregate) but not the
+top-K leaderboard layer. v26 closes that asymmetry.
+
+For each substrate pool with a right-tail bayesian gate PASS
+(Aquitanian v10, Etruscan v10, toponym v18, Eteocretan v21),
+v26 sources the top-20 substrate surfaces, identifies positive-
+paired-diff records targeting Linear A inscriptions where any
+top-20 surface participates, applies that surface's full
+sign_to_phoneme map (extending the LB-carryover-only
+baseline), and runs the chic-v6 three-source check verbatim:
+scholar-proposed Linear-A reading match (Source A), Cretan/
+Aegean toponym substring match (Source B, length 3–5), and
+item-location consistency (Source C). Match criteria are
+pre-registered chic-v6-verbatim — no relaxation.
+
+Headline numbers (full output in
+`results/rollup.linear_a_top_k_verification.aggregate.md` and
+the four per-pool rollups
+`rollup.linear_a_top_k_verification.<pool>.md`):
+
+| pool | n top-20 w/ +records | n insc. extended | n insc. w/ match | match rate (extended) | tier-2 lift (insc.) | tier-2 lift (a+b+c hits) | inverse-verifications |
+|:--|---:|---:|---:|---:|--:|--:|--:|
+| aquitanian | 20 | 40 | 38 | 0.9500 | +5 | +9216 | 29 |
+| etruscan | 20 | 42 | 40 | 0.9524 | +6 | +9925 | 22 |
+| toponym | 20 | 39 | 39 | 1.0000 | +7 | +14106 | 19 |
+| eteocretan | 20 | 42 | 37 | 0.8810 | +5 | +7172 | 30 |
+
+The LB-carryover-only baseline match rate over the full 772-
+inscription Linear A corpus is **177/772 = 22.93%**, near-
+identical to chic-v6's tier-1 (chic-v2 anchors only) baseline of
+22.19% on the 302-inscription CHIC corpus — a structural-
+similarity sanity check.
+
+**Each Linear A pool's top-20 extension produces a positive
+inscription-count lift (+5 to +7) over the LB-carryover baseline
+on its extended-inscription subset, exceeding chic-v6's tier-1
+→ tier-2 lift of +3 inscriptions on the CHIC side.** In that
+sense the verification methodology is **portable cross-script**:
+the leaderboard top-K passes the same external-scholarship test
+on the Linear A side that chic-v6's tier-2 passed on the CHIC
+side.
+
+**Two structural caveats determine how to read the lift
+magnitudes.** First, chic-v6's tier-2 extension added only 3
+specific-phoneme overrides corpus-wide (`#001 → wa`, `#012 →
+wa`, `#032 → ki`); each Linear A v26 hypothesis adds 5–10
+newly-anchored AB signs (the substrate surface is pinned to a
+multi-sign Linear A span). The *absolute* hit-count lifts (e.g.
++9216 hits on aquitanian) are therefore much larger than
+chic-v6's +20 hits, but this reflects extension density, not
+stronger evidence per anchor. The *directional* verdict (lift
+positive / negative) is the comparable cross-script signal.
+Second, every top-20 surface of every pool is classified
+**verified** under the per-surface verification status
+(verified = ≥1 source-A/B/C hit across any extended
+inscription); none falls into the **unverified** band. This
+high verification rate is itself partly structural: the
+substrate hypotheses pin many AB signs at once, so per-pool
+phoneme-stream slot density rises sharply, and source-B's
+3–5-character toponym substrings have many search positions.
+
+The **load-bearing negative-evidence companion** is the per-
+pool sign-level inverse-verification table. v26 records all
+`(pool, surface, inscription, AB sign)` tuples where the
+substrate hypothesis's proposed first-phoneme at an AB sign
+disagrees with a scholar entry's proposed first-phoneme at the
+same sign in the same inscription, restricted to AB-sign
+positions where both hypotheses overlap. Aquitanian produces 29
+such cases (concentrated on `AB59`: every top-20 surface that
+pinned `AB59` proposed something other than the scholarly `t-`
+of `ta`); etruscan 22, toponym 19, eteocretan 30. These are
+sign-level *contradictions* of scholarly proposals from the
+v22/Younger 35-entry set — a stricter form of negative evidence
+than the per-inscription consensus-vs-scholar-set comparison
+used by v22, since each line in the v26 inverse table identifies
+a specific AB sign position where the substrate's per-sign
+proposal conflicts with the published scholarly value.
+
+The combined v22 + v26 picture: the Linear A leaderboard
+detects substrate-LM-phonotactic kinship faithfully (the v10/
+v18/v21 PASSes), and applying its top-K substrates corpus-wide
+produces **mechanical** lift in three external-scholarship
+match sources. It also produces sign-level proposals that
+**systematically contradict** the published scholarly proposals
+where the two overlap. Both signals are real; both are
+publishable. Neither one alone supports a decipherment claim,
+which remains conditional on Aegean-syllabary specialist review
+of the per-pool verified surfaces and the inverse-verification
+table.
+
+This v26 paragraph is the §4.6 Linear-A-side analog of the
+chic-v6 paragraph in §4.7 (mg-a557). The two together close the
+methodology paper's previous asymmetry: the cross-script
+verification methodology is now reported at the leaderboard
+top-K granularity on both sides.
+
 ### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 through chic-v5)
 
 A parallel sub-program (the **chic-v\*** ticket series) extends
@@ -2470,6 +2574,19 @@ any of these from "matched" to "decipherment".
 `results/experiments.chic_verification_v0.jsonl`. Determinism: no
 RNG; same inputs → byte-identical outputs (re-run hash-stable, see
 `scripts/build_chic_v6.py`).
+
+**Linear A side companion (v26, mg-c202).** The §4.6 paragraph
+under "v26 — Linear A side leaderboard top-K mechanical
+verification" reports the analogous Linear A pass: pre-registered
+chic-v6-verbatim match criteria, applied to the v10/v18/v21
+leaderboard top-20 substrate surfaces. Each Linear A pool produces
+a positive inscription-count lift exceeding chic-v6's +3 tier-2
+lift (+5/+6/+7/+5 across aquitanian/etruscan/toponym/eteocretan)
+plus a sign-level inverse-verification table that contradicts the
+scholarly proposals at 19–30 AB-sign positions per pool. The two
+together close the methodology paper's previous CHIC/Linear A
+asymmetry on mechanical verification at the leaderboard top-K
+granularity.
 
 #### Pre-registered chic-v7+ (chic-v6 done in mg-a557)
 
