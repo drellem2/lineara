@@ -116,6 +116,52 @@ _ETEOCRETAN_CROSS_LM_DISPATCH: dict[str, str] = {
     "control_eteocretan_bigram": "basque",
 }
 
+# mg-b599 (harness v23): full cross-LM matrix for Eteocretan. Five
+# additional dispatch tables fill out the LM × pool grid:
+#
+# (1) ``eteocretan_under_mg`` — Eteocretan + control under Mycenaean
+#     Greek LM. A truly unrelated LM (Indo-European, Bronze-Age
+#     Greek). Should NOT reward Eteocretan-shaped phonemes if the v21
+#     PASS reflects substrate-LM-phonotactic kinship rather than a
+#     generic natural-language-LM bias.
+# (2) ``eteocretan_under_etruscan`` — Eteocretan + control under
+#     Etruscan LM. Both are Mediterranean substrate-style LMs but
+#     historically unrelated (Etruscan is Italic; Eteocretan is
+#     presumed Linear-A continuation in Crete). A PASS here would
+#     suggest Mediterranean-natural-language-LM bias in general; a
+#     FAIL would corroborate the Eteocretan-specific signal.
+# (3-5) ``{aquitanian,etruscan,toponym}_under_eteocretan`` — the
+#     reverse direction: do other substrate pools score well under
+#     the closest-genealogical-relative LM? If yes, the Eteocretan
+#     LM is detecting general substrate-style phonotactics; if no,
+#     the Eteocretan LM has Eteocretan-specific selectivity. Either
+#     is informative for the methodology paper's "what does the LM
+#     detect" framing.
+_ETEOCRETAN_UNDER_MG_DISPATCH: dict[str, str] = {
+    "eteocretan": "mycenaean_greek",
+    "control_eteocretan_bigram": "mycenaean_greek",
+}
+
+_ETEOCRETAN_UNDER_ETRUSCAN_DISPATCH: dict[str, str] = {
+    "eteocretan": "etruscan",
+    "control_eteocretan_bigram": "etruscan",
+}
+
+_AQUITANIAN_UNDER_ETEOCRETAN_DISPATCH: dict[str, str] = {
+    "aquitanian": "eteocretan",
+    "control_aquitanian": "eteocretan",
+}
+
+_ETRUSCAN_UNDER_ETEOCRETAN_DISPATCH: dict[str, str] = {
+    "etruscan": "eteocretan",
+    "control_etruscan": "eteocretan",
+}
+
+_TOPONYM_UNDER_ETEOCRETAN_DISPATCH: dict[str, str] = {
+    "toponym": "eteocretan",
+    "control_toponym_bigram": "eteocretan",
+}
+
 
 def _load_manifest(path: Path) -> list[dict]:
     rows: list[dict] = []
@@ -152,6 +198,32 @@ def _load_seen(*paths: Path) -> set[tuple[str, str]]:
                     continue
                 seen.add((h, lang))
     return seen
+
+
+def _all_metric_paths(results_dir: Path) -> list[Path]:
+    """All result-stream files that may contain rows for ``_METRIC``.
+
+    Mirrors the per_surface_bayesian_rollup loader: the primary
+    ``experiments.jsonl``, the per-metric primary sidecar, plus every
+    tagged sidecar matching ``experiments.{_METRIC}.*.jsonl``. mg-b599
+    extends the resume cache to honour all of these so a re-run with
+    ``--sidecar-tag <tag>`` does not duplicate rows that already exist
+    in a different (e.g. legacy) sidecar.
+    """
+    out: list[Path] = [
+        results_dir / "experiments.jsonl",
+        results_dir / f"experiments.{_METRIC}.jsonl",
+    ]
+    out.extend(sorted(results_dir.glob(f"experiments.{_METRIC}.*.jsonl")))
+    # Deduplicate while preserving order.
+    seen: set[Path] = set()
+    deduped: list[Path] = []
+    for p in out:
+        if p in seen:
+            continue
+        seen.add(p)
+        deduped.append(p)
+    return deduped
 
 
 def _build_row(
@@ -208,6 +280,7 @@ def run(
     progress_every: int,
     repo_root: Path,
     dispatch: dict[str, str] | None = None,
+    sidecar_tag: str | None = None,
 ) -> dict:
     if dispatch is None:
         dispatch = _CROSS_LM_DISPATCH
@@ -246,10 +319,21 @@ def run(
             file=sys.stderr,
         )
 
-    sidecar_path = results_dir / f"experiments.{_METRIC}.jsonl"
-    primary_path = results_dir / "experiments.jsonl"
-    seen = _load_seen(primary_path, sidecar_path)
-    print(f"seen ({_METRIC}): {len(seen)} (hash, language) pairs", file=sys.stderr)
+    if sidecar_tag:
+        sidecar_path = results_dir / f"experiments.{_METRIC}.{sidecar_tag}.jsonl"
+    else:
+        sidecar_path = results_dir / f"experiments.{_METRIC}.jsonl"
+    # Resume cache: include every result-stream file that may contain
+    # rows for this metric (primary + per-metric sidecar + every tagged
+    # sidecar). Without this, a tagged-sidecar re-run would re-rescore
+    # rows that legacy runs wrote to a different file.
+    seen_paths = _all_metric_paths(results_dir)
+    seen = _load_seen(*seen_paths)
+    print(
+        f"seen ({_METRIC}): {len(seen)} (hash, language) pairs across "
+        f"{len(seen_paths)} files; writing to {sidecar_path.name}",
+        file=sys.stderr,
+    )
 
     result_validator = Draft202012Validator(
         json.loads(_RESULT_SCHEMA_PATH.read_text(encoding="utf-8"))
@@ -362,6 +446,9 @@ def run(
         "skipped_resumed": skipped,
         "elapsed_s": round(elapsed, 2),
         "snapshot": snapshot,
+        "sidecar": str(sidecar_path.relative_to(repo_root))
+        if sidecar_path.is_relative_to(repo_root)
+        else str(sidecar_path),
     }
     return summary
 
@@ -381,7 +468,16 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--mode",
-        choices=("cross", "third", "eteocretan_under_basque"),
+        choices=(
+            "cross",
+            "third",
+            "eteocretan_under_basque",
+            "eteocretan_under_mg",
+            "eteocretan_under_etruscan",
+            "aquitanian_under_eteocretan",
+            "etruscan_under_eteocretan",
+            "toponym_under_eteocretan",
+        ),
         default="cross",
         help=(
             "Which dispatch to use. ``cross`` (default) is mg-0f97's "
@@ -389,13 +485,30 @@ def main(argv: list[str] | None = None) -> int:
             "Greek third-LM rescore for both Aquitanian and Etruscan. "
             "``eteocretan_under_basque`` (mg-6ccd, v21) routes the "
             "Eteocretan substrate + bigram-preserving control through "
-            "the Basque LM — the v21 cross-LM negative control sketch."
+            "the Basque LM — the v21 cross-LM negative control sketch. "
+            "``eteocretan_under_mg``, ``eteocretan_under_etruscan``, "
+            "``aquitanian_under_eteocretan``, ``etruscan_under_eteocretan``, "
+            "``toponym_under_eteocretan`` (mg-b599, v23) fill out the "
+            "full cross-LM matrix for Eteocretan: the substrate pool is "
+            "rescored under the named non-own LM."
         ),
     )
     parser.add_argument(
         "--note",
         default="mg-0f97 harness v11 cross-LM negative control",
         help="Free-form note attached to every result row.",
+    )
+    parser.add_argument(
+        "--sidecar-tag",
+        type=str,
+        default=None,
+        help=(
+            "Optional sidecar tag. When set, rescore rows are appended "
+            "to ``results/experiments.<metric>.<tag>.jsonl`` rather than "
+            "the primary metric sidecar. Used by mg-b599 / v23 to keep "
+            "the ~42 MB of cross-LM matrix rows off the 88 MB primary "
+            "sidecar (which is approaching GitHub's 100 MB push cap)."
+        ),
     )
     parser.add_argument(
         "--progress-every",
@@ -411,6 +524,16 @@ def main(argv: list[str] | None = None) -> int:
         dispatch = _THIRD_LM_DISPATCH
     elif args.mode == "eteocretan_under_basque":
         dispatch = _ETEOCRETAN_CROSS_LM_DISPATCH
+    elif args.mode == "eteocretan_under_mg":
+        dispatch = _ETEOCRETAN_UNDER_MG_DISPATCH
+    elif args.mode == "eteocretan_under_etruscan":
+        dispatch = _ETEOCRETAN_UNDER_ETRUSCAN_DISPATCH
+    elif args.mode == "aquitanian_under_eteocretan":
+        dispatch = _AQUITANIAN_UNDER_ETEOCRETAN_DISPATCH
+    elif args.mode == "etruscan_under_eteocretan":
+        dispatch = _ETRUSCAN_UNDER_ETEOCRETAN_DISPATCH
+    elif args.mode == "toponym_under_eteocretan":
+        dispatch = _TOPONYM_UNDER_ETEOCRETAN_DISPATCH
     else:
         dispatch = _CROSS_LM_DISPATCH
     summary = run(
@@ -424,6 +547,7 @@ def main(argv: list[str] | None = None) -> int:
         progress_every=args.progress_every,
         repo_root=args.repo_root,
         dispatch=dispatch,
+        sidecar_tag=args.sidecar_tag,
     )
     print(json.dumps(summary, indent=2))
     return 0

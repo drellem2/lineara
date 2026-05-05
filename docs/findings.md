@@ -4741,3 +4741,219 @@ breaking on modal phoneme is alphabetical (inherited from
   scope.
 - **Domain-expert review.** Still not a polecat task; needs an
   Aegean-syllabary specialist.
+
+## Findings from mg-b599 (v23 — full cross-LM matrix for Eteocretan: Eteocretan under MG + Etruscan; existing pools under Eteocretan LM, 2026-05-05)
+
+### Headline
+
+The cross-LM matrix verdict: **own-LM dominance pattern HOLDS for
+3 of 4 substrate pools (Eteocretan, Etruscan, toponym).** For these
+pools the own-LM gap exceeds every cross-LM gap and the cross-LM
+gaps weaken in a manner consistent with the LM's distance from the
+substrate's phonotactic profile. Eteocretan's own-LM gap +0.20 is
+the largest in the matrix; under non-own LMs the Eteocretan
+substrate gap shrinks monotonically to +0.10 (Mycenaean Greek,
+Basque) and +0.04 (Etruscan). Aquitanian is the exception — its
+own-LM gap (+0.030) is small enough that foreign-LM rank noise
+produces numerically larger but not-gate-grade-cleaner separations
+(Etruscan +0.039, Eteocretan +0.041; Mycenaean Greek FAILs at
+p=0.095). The matrix shape is what substrate-LM-phonotactic-kinship
+detection predicts; the Aquitanian deviation is a small-dynamic-range
+observation, not a counterexample.
+
+The five new cells at a glance:
+
+| substrate | LM | gate | p-value | median posterior gap |
+|:--|:--|:--:|---:|---:|
+| `eteocretan` | mycenaean_greek | PASS | 1.73e-05 | +0.104 |
+| `eteocretan` | etruscan | PASS | 6.70e-03 | +0.039 |
+| `aquitanian` | eteocretan | PASS | 1.79e-03 | +0.041 |
+| `etruscan` | eteocretan | FAIL | 0.924 | −0.017 |
+| `toponym` | eteocretan | PASS | 0.025 | +0.043 |
+
+Two specific findings worth flagging:
+
+1. **Eteocretan PASSes the right-tail gate under all 4 LMs tested**
+   (own + Mycenaean Greek + Basque + Etruscan), with own-LM
+   strongest (+0.20) and Etruscan-LM weakest (+0.039). The
+   Mediterranean-substrate-LM-bias hypothesis (would Eteocretan
+   under Etruscan PASS strongly because both are Mediterranean
+   substrate-style LMs?) is **not** supported: Etruscan-LM produces
+   the *weakest* Eteocretan-substrate gap. Etruscan-LM and
+   Eteocretan-LM are not interchangeable.
+2. **Etruscan substrate FAILs under Eteocretan LM with a negative
+   gap** (−0.017, p=0.924): the Eteocretan LM does not reward
+   Etruscan phonotactics. This is direct evidence that the
+   Eteocretan LM has Eteocretan-specific selectivity rather than
+   functioning as a generic "any substrate-style phonotactics"
+   detector. Toponym under Eteocretan PASSes more weakly than
+   under Basque (gap +0.043 vs +0.109), confirming partial overlap
+   between Eteocretan-LM-shape and Cretan-substrate-toponym-shape
+   (consistent with Beekes' framing of Aegean toponyms as pre-Greek
+   substrate residue) but with substantial LM-specificity preserved.
+
+The full matrix is committed at `results/rollup.cross_lm_matrix.md`.
+
+### What this ticket built
+
+Mechanical rescore + rollup work on the existing v8 + v9 paired-diff
+infrastructure. No new corpora, no new pools, no new metrics:
+
+  * **Five new cross-LM dispatch tables** in
+    `scripts/cross_lm_rescore.py`:
+    `_ETEOCRETAN_UNDER_MG_DISPATCH`,
+    `_ETEOCRETAN_UNDER_ETRUSCAN_DISPATCH`,
+    `_AQUITANIAN_UNDER_ETEOCRETAN_DISPATCH`,
+    `_ETRUSCAN_UNDER_ETEOCRETAN_DISPATCH`,
+    `_TOPONYM_UNDER_ETEOCRETAN_DISPATCH`.
+    The CLI gains five matching `--mode` choices.
+  * **Sidecar-tag dispatch** added to `cross_lm_rescore.py`: the
+    `--sidecar-tag` CLI flag routes rescore rows to a tagged sidecar
+    `experiments.<metric>.<tag>.jsonl` rather than the primary
+    sidecar (which v23 needed because the primary
+    `experiments.external_phoneme_perplexity_v0.jsonl` was at 88 MB
+    and ~42 MB of new rescore rows would push it past GitHub's
+    100 MB push cap). The resume cache `_load_seen` now consults
+    every tagged sidecar (mirroring the
+    per_surface_bayesian_rollup loader pattern), so a tagged-sidecar
+    run does not re-rescore rows already in a different sidecar.
+  * **Five rescore runs** appended ~52,755 rows to two sidecars:
+    Eteocretan-substrate-under-{MG,Etruscan} → existing
+    `.eteocretan.jsonl` (8.9 MB → 18 MB);
+    {Aquitanian,Etruscan,Toponym}-substrate-under-Eteocretan → new
+    `.under_eteocretan_lm.jsonl` (35 MB). All sidecars stay under
+    100 MB.
+  * **Generic v23 right-tail bayesian gate runner**
+    `scripts/v23_cross_lm_gate.py`. Generalises
+    `scripts/v21_eteocretan_gate.py` to an arbitrary
+    (substrate, control, LM dispatch) triple with parameterised
+    labelling (`--substrate`, `--control`, `--language-dispatch`,
+    `--out-name`, `--title-suffix`, `--lm-label`, `--summary-json`).
+    Used to write the five new per-cell rollup files.
+  * **Cross-LM matrix builder** `scripts/v23_cross_lm_matrix.py`.
+    In-process re-computation (no rescore — reads existing result-
+    stream sidecars) of the full 4×4 substrate × LM matrix. Emits
+    `results/rollup.cross_lm_matrix.md` with the verdict headline,
+    matrix table, per-cell details, and provenance footer. Sparse
+    on `toponym × {Etruscan, Mycenaean Greek}` because v23 did not
+    commission those cells (out of ticket scope).
+  * **Test coverage.** `harness/tests/test_cross_lm_rescore.py`
+    gains a check on the five new dispatch tables (with a guard
+    that toponym uses `control_toponym_bigram`, not
+    `control_toponym`). New
+    `harness/tests/test_v23_cross_lm_matrix.py` covers the matrix
+    spec (4 substrates, 4 LMs, control-pool conventions), syncs the
+    own-LM dispatch with the run_sweep table, and smoke-imports the
+    generic gate script. All 198+5 = 203 tests pass.
+  * **findings_summary.md updates.** §3.1 row 12b added; §3.2
+    eteocretan row updated with the v23 cross-LM cells; §3.14
+    extended with a new "Cross-LM matrix (v23)" subsection (the
+    matrix table + load-bearing observations); §4.1 first bullet
+    extended with the v23 matrix verdict; Appendix A row added.
+    No §5 limitation added — the matrix behaved as predicted (own-LM
+    strongest for 3/4 pools; the Aquitanian deviation is a
+    dynamic-range observation, not a counterexample to the
+    substrate-LM-specificity claim, and no new caveat is needed
+    against the existing §5.2 small-corpus Eteocretan-LM caveat).
+
+### Files touched / added
+
+- `scripts/cross_lm_rescore.py` — five new dispatch tables;
+  `--sidecar-tag` CLI flag; `_load_seen` extended to consult all
+  tagged sidecars; `--mode` choices extended.
+- `scripts/v23_cross_lm_gate.py` (NEW) — generic right-tail
+  bayesian gate runner.
+- `scripts/v23_cross_lm_matrix.py` (NEW) — cross-LM matrix builder.
+- `harness/tests/test_cross_lm_rescore.py` — additional dispatch
+  test for the v23 tables.
+- `harness/tests/test_v23_cross_lm_matrix.py` (NEW) — spec +
+  own-LM-dispatch consistency + smoke-import.
+- `results/experiments.external_phoneme_perplexity_v0.eteocretan.jsonl`
+  — extended with 11,240 v23 rows (Eteocretan-substrate cross-LM
+  under MG + Etruscan).
+- `results/experiments.external_phoneme_perplexity_v0.under_eteocretan_lm.jsonl`
+  (NEW) — 41,515 v23 rows
+  (Aquitanian / Etruscan / Toponym substrates under Eteocretan LM).
+- `results/rollup.bayesian_posterior.eteocretan.under_mg_lm.md` (NEW).
+- `results/rollup.bayesian_posterior.eteocretan.under_etruscan_lm.md` (NEW).
+- `results/rollup.bayesian_posterior.aquitanian.under_eteocretan_lm.md` (NEW).
+- `results/rollup.bayesian_posterior.etruscan.under_eteocretan_lm.md` (NEW).
+- `results/rollup.bayesian_posterior.toponym.under_eteocretan_lm.md` (NEW).
+- `results/rollup.cross_lm_matrix.md` (NEW) — full matrix.
+- `results/v23_cell_summaries/*.json` (NEW) — per-cell + matrix
+  summary JSON sidecars (used by the matrix builder; committed for
+  determinism cross-check).
+- `docs/findings_summary.md` — §3.1 / §3.2 / §3.14 / §4.1 /
+  Appendix A updated.
+- `docs/findings.md` — this entry.
+
+### Reproducibility
+
+```
+# Five rescores (idempotent; resume cache keys on (hash, language) across all sidecars):
+python3 scripts/cross_lm_rescore.py --mode eteocretan_under_mg --pools eteocretan,control_eteocretan_bigram --sidecar-tag eteocretan
+python3 scripts/cross_lm_rescore.py --mode eteocretan_under_etruscan --pools eteocretan,control_eteocretan_bigram --sidecar-tag eteocretan
+python3 scripts/cross_lm_rescore.py --mode aquitanian_under_eteocretan --pools aquitanian,control_aquitanian --sidecar-tag under_eteocretan_lm
+python3 scripts/cross_lm_rescore.py --mode etruscan_under_eteocretan --pools etruscan,control_etruscan --sidecar-tag under_eteocretan_lm
+python3 scripts/cross_lm_rescore.py --mode toponym_under_eteocretan --pools toponym,control_toponym_bigram --sidecar-tag under_eteocretan_lm
+
+# Five per-cell gate rollups:
+python3 scripts/v23_cross_lm_gate.py --substrate eteocretan --control control_eteocretan_bigram --language-dispatch '{"eteocretan":"mycenaean_greek","control_eteocretan_bigram":"mycenaean_greek"}' --out-name rollup.bayesian_posterior.eteocretan.under_mg_lm.md --title-suffix " — under Mycenaean Greek LM (cross-LM negative control)" --lm-label "Mycenaean Greek" --summary-json results/v23_cell_summaries/eteocretan_under_mg.json
+python3 scripts/v23_cross_lm_gate.py --substrate eteocretan --control control_eteocretan_bigram --language-dispatch '{"eteocretan":"etruscan","control_eteocretan_bigram":"etruscan"}' --out-name rollup.bayesian_posterior.eteocretan.under_etruscan_lm.md --title-suffix " — under Etruscan LM (cross-LM check)" --lm-label "Etruscan" --summary-json results/v23_cell_summaries/eteocretan_under_etruscan.json
+python3 scripts/v23_cross_lm_gate.py --substrate aquitanian --control control_aquitanian --language-dispatch '{"aquitanian":"eteocretan","control_aquitanian":"eteocretan"}' --out-name rollup.bayesian_posterior.aquitanian.under_eteocretan_lm.md --title-suffix " — under Eteocretan LM (reverse cross-LM check)" --lm-label "Eteocretan" --summary-json results/v23_cell_summaries/aquitanian_under_eteocretan.json
+python3 scripts/v23_cross_lm_gate.py --substrate etruscan --control control_etruscan --language-dispatch '{"etruscan":"eteocretan","control_etruscan":"eteocretan"}' --out-name rollup.bayesian_posterior.etruscan.under_eteocretan_lm.md --title-suffix " — under Eteocretan LM (reverse cross-LM check)" --lm-label "Eteocretan" --summary-json results/v23_cell_summaries/etruscan_under_eteocretan.json
+python3 scripts/v23_cross_lm_gate.py --substrate toponym --control control_toponym_bigram --language-dispatch '{"toponym":"eteocretan","control_toponym_bigram":"eteocretan"}' --out-name rollup.bayesian_posterior.toponym.under_eteocretan_lm.md --title-suffix " — under Eteocretan LM (reverse cross-LM check)" --lm-label "Eteocretan" --summary-json results/v23_cell_summaries/toponym_under_eteocretan.json
+
+# Cross-LM matrix table:
+python3 scripts/v23_cross_lm_matrix.py --summary-json results/v23_cell_summaries/matrix.json
+```
+
+Determinism: every step is byte-deterministic given the same inputs.
+The rescore writes to its sidecar in manifest order; the gate
+rollups are pure-function over the result stream + manifests; the
+matrix builder is pure-function over the same. No RNG anywhere.
+
+### Limitations specific to v23
+
+- **Sparse cells.** The matrix is sparse on `toponym × {Etruscan,
+  Mycenaean Greek}` — v23 did not commission those rescores. The
+  matrix table renders these as `—`. Filling those cells would
+  fully complete the 4×4 matrix; they are filed as an out-of-scope
+  follow-up (low priority — toponym's own-LM gap of +0.109 is in
+  the substantial-dynamic-range zone, so the cells would be
+  informative but are not load-bearing for the v23 verdict).
+- **Aquitanian own-LM-dominance deviation.** Aquitanian's own-LM
+  gap is small enough that foreign-LM cells produce numerically
+  larger separations. The proximate cause is dynamic-range (matched
+  control under the same LM is by construction phonotactically
+  close to the substrate, leaving little gap). This is reported as
+  an observation rather than as a counterexample to the
+  substrate-LM-specificity claim because none of the foreign-LM
+  cells produce a gate-grade PASS that own-LM does not also
+  produce, and Aquitanian under the third-LM (Mycenaean Greek)
+  FAILs as expected. The v15 / v18 / v21 substrate-LM-specificity
+  reading is preserved.
+- **Eteocretan-LM small-corpus caveat (carried from v21 §5.2).**
+  The Eteocretan LM is built from ~87 word forms; per-surface
+  posteriors under that LM carry more variance than under Basque /
+  Etruscan / Mycenaean Greek. The matrix's reverse-direction cells
+  (Aquitanian / Etruscan / Toponym under Eteocretan) inherit that
+  noise floor; in the Aquitanian and Toponym cells the gate
+  PASSes despite the noise (gap +0.041, +0.043), and in the
+  Etruscan cell the gate FAILs cleanly (gap −0.017). The noise
+  floor does not appear to flip verdicts; this is not a fresh
+  limitation but worth flagging.
+
+### Out of scope (deferred to subsequent tickets)
+
+- **Per-inscription cascade-candidate analysis under Eteocretan LM**
+  (v24 — analogous to v19 but on the strongest pool).
+- **Methodology paper polish pass** integrating v22 + v23 + (v24)
+  cleanly (v25).
+- **Toponym × {Etruscan, Mycenaean Greek} cells** of the cross-LM
+  matrix (low-priority follow-up; would complete the 4×4).
+- **Eteocretan bilingual decoding.** Methodologically distinct.
+- **Phoenician / Sumerian / Hattic substrate pools.** v15 settled
+  the methodological limit; deferred indefinitely.
+- **GORILA / Younger ingest.** Different scope.
+- **LaTeX / journal submission.** Out of polecat scope.

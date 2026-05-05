@@ -63,6 +63,33 @@ class CrossLMDispatchTest(unittest.TestCase):
         self.assertEqual(d["etruscan"], "mycenaean_greek")
         self.assertEqual(d["control_etruscan"], "mycenaean_greek")
 
+    def test_v23_eteocretan_cross_lm_dispatch_tables(self) -> None:
+        # mg-b599 (v23): full cross-LM matrix for Eteocretan. Five new
+        # dispatch tables route Eteocretan under non-own LMs and route
+        # the existing pools under the Eteocretan LM.
+        eu_mg = self.cross._ETEOCRETAN_UNDER_MG_DISPATCH
+        self.assertEqual(eu_mg["eteocretan"], "mycenaean_greek")
+        self.assertEqual(eu_mg["control_eteocretan_bigram"], "mycenaean_greek")
+
+        eu_etr = self.cross._ETEOCRETAN_UNDER_ETRUSCAN_DISPATCH
+        self.assertEqual(eu_etr["eteocretan"], "etruscan")
+        self.assertEqual(eu_etr["control_eteocretan_bigram"], "etruscan")
+
+        a_eu = self.cross._AQUITANIAN_UNDER_ETEOCRETAN_DISPATCH
+        self.assertEqual(a_eu["aquitanian"], "eteocretan")
+        self.assertEqual(a_eu["control_aquitanian"], "eteocretan")
+
+        e_eu = self.cross._ETRUSCAN_UNDER_ETEOCRETAN_DISPATCH
+        self.assertEqual(e_eu["etruscan"], "eteocretan")
+        self.assertEqual(e_eu["control_etruscan"], "eteocretan")
+
+        t_eu = self.cross._TOPONYM_UNDER_ETEOCRETAN_DISPATCH
+        self.assertEqual(t_eu["toponym"], "eteocretan")
+        # Toponym uses the v18 bigram-preserving control, not the
+        # legacy unigram control.
+        self.assertEqual(t_eu["control_toponym_bigram"], "eteocretan")
+        self.assertNotIn("control_toponym", t_eu)
+
 
 class CrossLMSeenTest(unittest.TestCase):
     @classmethod

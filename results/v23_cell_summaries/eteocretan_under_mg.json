@@ -1,0 +1,17 @@
+{
+  "substrate_pool": "eteocretan",
+  "control_pool": "control_eteocretan_bigram",
+  "lm": "mycenaean_greek",
+  "lm_label": "Mycenaean Greek",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.9423076923076923,
+  "median_control_top": 0.8381542699724518,
+  "median_gap": 0.1041534223352405,
+  "mean_substrate_top": 0.943301282051282,
+  "mean_control_top": 0.8255873191585472,
+  "mean_gap": 0.11771396289273484,
+  "mw_u_substrate": 353.0,
+  "mw_p_one_tail": 1.725298451371593e-05,
+  "gate": "PASS"
+}

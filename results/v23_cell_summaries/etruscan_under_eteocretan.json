@@ -1,0 +1,17 @@
+{
+  "substrate_pool": "etruscan",
+  "control_pool": "control_etruscan",
+  "lm": "eteocretan",
+  "lm_label": "Eteocretan",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.934116809116809,
+  "median_control_top": 0.9508572808500362,
+  "median_gap": -0.016740471733227125,
+  "mean_substrate_top": 0.925606260349309,
+  "mean_control_top": 0.9498958650901134,
+  "mean_gap": -0.024289604740804327,
+  "mw_u_substrate": 147.5,
+  "mw_p_one_tail": 0.9243278436197695,
+  "gate": "FAIL"
+}

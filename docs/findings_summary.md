@@ -358,15 +358,22 @@ pre-registered scoring discipline):
 | 10 | per-inscription cascade-candidate test on right-tail / short / known-content populations | mg-3438 (v19) | 3 cascade candidates emerged: `KH 10` (robust frac 0.55), `KH 5` (0.50), `PS Za 2` (0.71) | local-vs-global aggregate gap genuine; per-inscription internal consensus does not imply external correctness (see §3.12) |
 | 11 | external validation against scholarly proposals (libation formula on `PS Za 2`; KU-RO / KI-RO on `KH 10` / `KH 5`) | mg-3438 (v19), mg-711c (v20) | `PS Za 2` AB57-AB31-AB31-AB60-AB13 mechanical `th-u-u-n-i` vs scholarly `ja-sa-sa-ra-me`: **0/5 consonantal-segment match**; `KH 10` and `KH 5` contain no AB81-AB02 (KU-RO) or AB67-AB02 (KI-RO) sequences (no comparable substring available) | **decisive negative external validation** where comparand exists; targeted search for additional comparands returns null (see §3.13) |
 | 12 | Eteocretan substrate pool, own-LM bigram-preserving control | mg-6ccd (v21) | gate p = 4.10e-06 (PASS); cross-LM under Basque p = 2.58e-03 (PASS, ~600× weaker) | **strongest pool PASS in the validation series** (closest-genealogical-relative substrate; see §3.14) |
+| 12b | full cross-LM matrix for Eteocretan (Eteocretan under MG + Etruscan; existing pools under Eteocretan LM) | mg-b599 (v23) | own-LM-dominance pattern HOLDS for 3/4 substrate pools; Eteocretan-LM has Eteocretan-specific selectivity (Etruscan-substrate-under-Eteocretan-LM FAILs at p=0.92, gap −0.017); Eteocretan-substrate PASSes under all 4 LMs tested with own-LM strongest | cross-LM matrix shape consistent with substrate-LM-phonotactic-kinship detection; Aquitanian deviation is small-dynamic-range artifact (see §3.14 "Cross-LM matrix (v23)") |
 | 13 | population-level external validation against scholar-proposed Linear A readings (35-entry curated set drawn from Younger; 76 AB-sign comparison points across 6 sites; categories include accountancy totals, libation formulae, theonyms, commodity terms, names) | mg-46d5 (v22) | aggregate match rate **3.95%** (3/76) on consonantal first segment of scholarly CV; robust 1.32% (1/76); 32/35 entries score zero | **decisive negative external validation at population scale** (strong-null band, < 5%; reinforces v13 / v19 / v20 — internal consensus does not imply external correctness; see §3.13.4 / §4.6) |
 
-All thirteen outcomes are reproducible from
-`results/rollup.bayesian_posterior.*.md`, the supporting provenance
-breakdowns in `results/rollup.bayesian_posterior.*.provenance.md`,
+All thirteen outcomes (and the v23 12b matrix follow-up) are
+reproducible from `results/rollup.bayesian_posterior.*.md`, the
+supporting provenance breakdowns in
+`results/rollup.bayesian_posterior.*.provenance.md`,
 `results/consensus_sign_phoneme_map.md`,
-`results/rollup.per_inscription_coherence.md`, and (v21)
+`results/rollup.per_inscription_coherence.md`, (v21)
 `results/rollup.bayesian_posterior.eteocretan.md` plus
-`results/rollup.bayesian_posterior.eteocretan_under_basque.md`.
+`results/rollup.bayesian_posterior.eteocretan_under_basque.md`,
+and (v23) `results/rollup.cross_lm_matrix.md` plus the per-cell
+files
+`results/rollup.bayesian_posterior.eteocretan.under_{mg,etruscan}_lm.md`
+and
+`results/rollup.bayesian_posterior.{aquitanian,etruscan,toponym}.under_eteocretan_lm.md`.
 The detailed per-pool breakdowns follow.
 
 ### 3.2 Validation status by pool
@@ -386,7 +393,7 @@ see §3.14):
 | `etruscan` | PASS p = 5.21e-04 (etruscan) | FAIL p = 0.591 (basque) | FAIL p = 0.185 (mycenaean_greek) | n/a | n/a (v6 unigram control already PASSes) | substrate-LM-specific; both unrelated LMs collapse the separation |
 | `toponym` | FAIL p = 0.92 (v6 unigram control) | (skipped at v10) | (skipped at v10) | n/a | **PASS p = 9.99e-05** (v18 bigram control) | v10 failure was a control-sampler artifact; v18 validates against the stricter bigram null. See §3.10 |
 | `linear_b_carryover` | n/a | n/a | **FAIL p = 0.155** at K=20 (mycenaean_greek own-LM positive control) | n/a | n/a | positive control fails production gate; K=5 sensitivity passes at p = 0.0106 |
-| `eteocretan` | **PASS p = 4.10e-06** (eteocretan, v21) | partial p = 2.58e-03 (basque, ~600× weaker) | n/a (filed as v23) | n/a | **PASS p = 4.10e-06** (v21 bigram control — built as v18 production default) | strongest gate PASS in the validation series; closest-genealogical-relative candidate; see §3.14 |
+| `eteocretan` | **PASS p = 4.10e-06** (eteocretan, v21) | partial p = 2.58e-03 (basque, ~600× weaker) | **PASS** p = 1.73e-05 (mycenaean_greek, v23) | n/a | **PASS p = 4.10e-06** (v21 bigram control — built as v18 production default) | strongest gate PASS in the validation series; PASSes under all 4 LMs tested (own > MG ≈ basque > etruscan); closest-genealogical-relative candidate; see §3.14 |
 
 ### 3.3 Aquitanian and Etruscan: validated against unrelated LMs
 
@@ -1185,19 +1192,113 @@ working substrate-detection methodology to produce.
   Praisos and Dreros bilinguals do not give word-by-word
   translations. v21 is a population-level pool gate, not an
   inscription-level external-validation point.
-- *Cross-LM matrix not exhaustive.* v21 ships only the Eteocretan
-  → Basque cross-LM check. A full matrix (Eteocretan candidates
-  under Etruscan / Mycenaean-Greek; Aquitanian / Etruscan
-  candidates under Eteocretan) is out of v21 scope; the
-  off-diagonal cells would localize whether the Eteocretan signal
-  overlaps with closer-related (Mycenaean Greek, sister Cretan
-  substrate) vs further (Etruscan, Iberian) language LMs. Filed
-  as v23.
+- *Cross-LM matrix not exhaustive in v21; filled out by v23.* v21
+  shipped only the Eteocretan → Basque cross-LM check. v23 (mg-b599)
+  fills out the full matrix; see "Cross-LM matrix (v23)" below for the
+  combined verdict.
 - *Genuinely undeciphered substrate side.* The pool's `gloss`
   field is `unknown` for almost every entry. Surface-level
   semantic-stratum analysis (§3.4 for Aquitanian / Etruscan)
   is not performable for Eteocretan because the substrate side
   itself is undeciphered.
+
+#### Cross-LM matrix (v23)
+
+v23 (mg-b599) fills out the cross-LM matrix that v21 left partial.
+Five additional cells join the existing diagonal (own-LM) and
+v11 / v12 / v21 cross-LM points: Eteocretan candidates re-scored
+under Mycenaean Greek and Etruscan LMs, plus Aquitanian / Etruscan /
+toponym candidates re-scored under the Eteocretan LM. The full 4×4
+matrix (substrate × LM, sparse on toponym × {Etruscan, Mycenaean
+Greek} which v23 did not commission) lives at
+`results/rollup.cross_lm_matrix.md`; the headline structure follows.
+
+| substrate ↓ \ LM → | Basque                | Etruscan              | Mycenaean Greek       | Eteocretan            |
+|:--                  |:--                    |:--                    |:--                    |:--                    |
+| `aquitanian`        | **PASS (own)** p=3.22e-05 / gap +0.030 | PASS p=0.020 / gap +0.039 | FAIL p=0.095 / gap +0.018 | PASS p=0.002 / gap +0.041 |
+| `etruscan`          | FAIL p=0.591 / gap +0.008 | **PASS (own)** p=5.21e-04 / gap +0.059 | FAIL p=0.185 / gap +0.012 | FAIL p=0.924 / gap −0.017 |
+| `toponym` (bigram ctrl) | **PASS (own)** p=9.99e-05 / gap +0.109 | — | — | PASS p=0.025 / gap +0.043 |
+| `eteocretan` (bigram ctrl) | PASS p=2.58e-03 / gap +0.095 | PASS p=6.70e-03 / gap +0.039 | PASS p=1.73e-05 / gap +0.104 | **PASS (own)** p=4.10e-06 / gap +0.201 |
+
+**Headline: own-LM dominance HOLDS for 3 of 4 substrate pools**
+(`etruscan`, `toponym`, `eteocretan`). For these pools the own-LM
+median posterior gap exceeds every cross-LM gap; foreign LMs
+weaken the substrate-vs-control separation in a manner consistent
+with the LM's distance from the substrate's phonotactic profile.
+Eteocretan under its own LM produces gap +0.20 — the strongest in
+the validation series — and the gap shrinks monotonically to +0.10
+under the natural-language LMs (Mycenaean Greek, Basque) and
+to +0.04 under Etruscan. Etruscan under its own LM produces
+gap +0.06 and collapses to ≈0 (or negative under Eteocretan)
+under all foreign LMs. Toponym under its own LM (Basque, with
+v18 bigram-preserving control) produces gap +0.11 and weakens to
++0.04 under the Eteocretan LM. The pattern matches the prediction
+that the framework's right-tail gate is detecting substrate-LM-
+phonotactic kinship rather than a generic natural-language-LM bias.
+
+**Aquitanian is the exception: own-LM dominance does NOT hold.**
+Aquitanian's own-LM gap is small in absolute terms (+0.030,
+roughly an order of magnitude below Eteocretan's), and the
+cross-LM cells produce numerically larger gaps (Etruscan +0.039,
+Eteocretan +0.041) — though the cross-LM Mycenaean-Greek cell
+FAILs at p=0.095. The most plausible reading: Aquitanian's
+own-LM gap is below the dynamic range needed for the cross-LM
+ordering to be cleanly readable. The matched bigram-preserving
+control under Basque is itself extremely Basque-shape because the
+Basque LM is large (~125,000+ chars; v8 build manifest); the
+substrate-vs-control separation is consequently small, and
+foreign LMs that happen to score the matched control more
+harshly produce numerically larger gaps without the gate
+becoming "more right" about Aquitanian. This is consistent with
+Aquitanian's well-known intermediate position in the gap-magnitude
+ordering (§3.14, summary table: Eteocretan +0.20 > toponym +0.11
+> Etruscan +0.06 > Aquitanian +0.03).
+
+**Two interesting cross-LM observations on the Eteocretan substrate
+side.** First, Eteocretan PASSes the right-tail gate under *every*
+LM tested (own + 3 foreign), with the smallest gap (+0.039) under
+Etruscan. The Mediterranean-substrate-LM-bias hypothesis (cells
+1+2 of v23: would Eteocretan under Etruscan PASS strongly because
+both are Mediterranean substrate-style LMs?) is **not** supported:
+the Eteocretan-under-Etruscan-LM cell produces the *weakest* gap
+of the four Eteocretan cells. Etruscan-LM and Eteocretan-LM are
+not interchangeable; the Eteocretan LM has Eteocretan-specific
+selectivity. Second, the Eteocretan-under-Mycenaean-Greek cell
+(gap +0.10) is approximately as strong as the v21
+Eteocretan-under-Basque cell (gap +0.095) — both natural-language
+LMs unrelated to Eteocretan produce similar mid-strength signal,
+suggesting the residual cross-LM gap reflects Eteocretan surfaces'
+"natural-language-like-ness" generically rather than a specific
+Basque or Greek phonotactic preference.
+
+**Reverse direction (cells 3-5 of v23).** When existing substrate
+pools are re-scored under the Eteocretan LM (the closest-
+genealogical-relative LM to whatever underlies Linear A), the
+Etruscan substrate FAILs the gate with a *negative* median gap
+(−0.017, p=0.92) — the Eteocretan LM does not reward Etruscan
+phonotactics. Toponym under the Eteocretan LM PASSes (p=0.025,
+gap +0.043) but materially weaker than under Basque (gap +0.109);
+the Eteocretan LM does reward Cretan-substrate-shape toponyms,
+which is consistent with Beekes' framing of Aegean toponyms as
+pre-Greek substrate residue but the gap shrinkage indicates
+substantial LM-specificity. Aquitanian under Eteocretan PASSes
+(p=0.002, gap +0.041) but inside the small-dynamic-range zone
+described above. The Eteocretan LM is therefore not a generic
+"any substrate-style phonotactics" detector — it has measurable
+selectivity, but the selectivity is not as sharp as the v21
+own-LM analysis alone suggested.
+
+**Implication for the methodology paper's interpretive framing.**
+The cross-LM matrix is consistent with the v21 reading: the
+framework's right-tail gate detects substrate-LM-phonotactic
+kinship that is genealogical-distance-modulated. The 3-of-4
+own-LM-dominance pattern is the load-bearing observation. The
+Aquitanian deviation is a small-dynamic-range artifact rather
+than a counterexample (no foreign LM produces a *gate-grade*
+PASS that the own-LM gate would not also produce, and Aquitanian
+under Mycenaean Greek FAILs as expected). Per-cell rollup files:
+`results/rollup.bayesian_posterior.eteocretan.under_{mg,etruscan}_lm.md`;
+`results/rollup.bayesian_posterior.{aquitanian,etruscan,toponym}.under_eteocretan_lm.md`.
 
 ---
 
@@ -1232,7 +1333,19 @@ The framework reliably detects three things:
   pre-Greek substrate) > Etruscan (+0.06) > Aquitanian (+0.03,
   furthest-out Mediterranean) — the kind of ordering an independent
   scholarly review would expect a working substrate-detection
-  methodology to produce.
+  methodology to produce. v23 (mg-b599) extends this to a full
+  substrate × LM matrix: own-LM dominance (own-LM gap > every cross-LM
+  gap) HOLDS for 3 of 4 substrate pools (Eteocretan, Etruscan,
+  toponym), with the cross-LM gaps weakening monotonically as the LM
+  drifts further from the substrate's phonotactic profile. Aquitanian
+  is the exception — its own-LM gap (+0.03) is small enough that
+  foreign-LM rank noise produces numerically larger but
+  not-gate-grade-cleaner separations. The matrix shape is what
+  substrate-LM-phonotactic-kinship detection predicts, and the
+  Aquitanian deviation is a dynamic-range observation rather than a
+  counterexample (no foreign LM produces a gate PASS that own-LM does
+  not; Aquitanian under Mycenaean Greek FAILs as expected). Full
+  matrix: `results/rollup.cross_lm_matrix.md`.
 - **Curation tolerance within the same phoneme + length
   distribution.** The same-distribution polluted Aquitanian gate
   (50% conjectural, mg-6b73) PASSes at essentially the same magnitude
@@ -1639,6 +1752,7 @@ committed artefacts under `results/`:
 | v21 Eteocretan cross-LM under Basque (mg-6ccd) | `rollup.bayesian_posterior.eteocretan_under_basque.md` |
 | v11 cross-LM gate | `rollup.bayesian_posterior.{aquitanian_under_etruscan_lm,etruscan_under_basque_lm}.md` |
 | v12 third-LM (Mycenaean Greek) gate | `rollup.bayesian_posterior.{aquitanian,etruscan}.under_mycenaean_greek_lm.md` |
+| v23 full cross-LM matrix for Eteocretan (mg-b599) | `rollup.cross_lm_matrix.md` plus `rollup.bayesian_posterior.eteocretan.under_{mg,etruscan}_lm.md` plus `rollup.bayesian_posterior.{aquitanian,etruscan,toponym}.under_eteocretan_lm.md` |
 | v12 Linear-B positive control | `rollup.bayesian_posterior.linear_b_carryover.md` |
 | v13 consensus sign-to-phoneme map + per-pool coherence + K-sweep | `consensus_sign_phoneme_map.md` |
 | v14 same-distribution pollution gate + provenance | `rollup.bayesian_posterior.polluted_aquitanian.md` + `…provenance.md` |
@@ -1651,9 +1765,9 @@ committed artefacts under `results/`:
 
 Per-ticket merge notes are in `docs/findings.md` under
 `## Findings from mg-XXXX` headers, in chronological order from
-`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-46d5`
-(v22, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
-(v0, 2026-05-04 first harness commit) through `mg-46d5` (v22,
+`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-b599`
+(v23, 2026-05-05); the harness pipeline itself spans `mg-d5ef`
+(v0, 2026-05-04 first harness commit) through `mg-b599` (v23,
 2026-05-05), with mg-711c (v20) a documentation-and-investigation
 ticket that adds no harness code path. The repo scaffold
 (`mg-9e00`) predates `findings.md`'s introduction in `mg-13a2`

@@ -1,0 +1,17 @@
+{
+  "substrate_pool": "toponym",
+  "control_pool": "control_toponym_bigram",
+  "lm": "eteocretan",
+  "lm_label": "Eteocretan",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.9615384615384616,
+  "median_control_top": 0.9188596491228069,
+  "median_gap": 0.04267881241565463,
+  "mean_substrate_top": 0.9457692307692307,
+  "mean_control_top": 0.921003673433138,
+  "mean_gap": 0.024765557336092647,
+  "mw_u_substrate": 272.5,
+  "mw_p_one_tail": 0.025027202900386403,
+  "gate": "PASS"
+}

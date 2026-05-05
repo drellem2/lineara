@@ -1,0 +1,17 @@
+{
+  "substrate_pool": "aquitanian",
+  "control_pool": "control_aquitanian",
+  "lm": "eteocretan",
+  "lm_label": "Eteocretan",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.9807692307692307,
+  "median_control_top": 0.9401176133103843,
+  "median_gap": 0.04065161745884638,
+  "mean_substrate_top": 0.9699541763502619,
+  "mean_control_top": 0.9403152142035882,
+  "mean_gap": 0.02963896214667372,
+  "mw_u_substrate": 307.0,
+  "mw_p_one_tail": 0.0017907675217787578,
+  "gate": "PASS"
+}
