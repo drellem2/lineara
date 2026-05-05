@@ -1,19 +1,23 @@
 # Mechanical Falsifiable Testing of Substrate-Language Hypotheses for Linear A
 
-**Methodology paper draft (v16, mg-d5ed; lineage citations corrected
-in v17, mg-2bfd; v19 cascade-candidate / external-validation
-integration in v20, mg-711c; Eteocretan 4th-pool integration in v21,
-mg-6ccd; population-level scholar-proposed-reading external-validation
-integration in v22, mg-46d5)** — a publication-readable consolidation
-of what the Lineara project has mechanically established about
-Linear A across 22 work items, anchored on the SigLA corpus ingest
-(`mg-1c8c`) and spanning the harness pipeline `mg-d5ef` (v0) through
-`mg-46d5` (v22). The repo scaffold (`mg-9e00`) predates the corpus
-ingest. The companion log `docs/findings.md` carries the per-ticket
-history; this document carries the consolidated methodology, results,
-and supportable / unsupportable claim split, audited end-to-end
-against the committed result files in `results/` and the merge notes
-in `docs/findings.md`.
+**Methodology paper draft (v16, mg-d5ed initial polish; lineage
+citations corrected in v17, mg-2bfd; v19 cascade-candidate /
+external-validation integration in v20, mg-711c; Eteocretan 4th-pool
+integration in v21, mg-6ccd; population-level scholar-proposed-reading
+external-validation integration in v22, mg-46d5; full Eteocretan
+cross-LM matrix integration in v23, mg-b599; per-inscription
+cascade-candidate analysis under Eteocretan LM in v24, mg-c103;
+final consolidation pass before journal-submission handoff in v25,
+mg-36bd)** — a publication-readable consolidation of what the
+Lineara project has mechanically established about Linear A across
+25 work items, anchored on the SigLA corpus ingest (`mg-1c8c`) and
+spanning the harness pipeline `mg-d5ef` (v0) through `mg-c103`
+(v24); v25 is editorial-only (no harness commits). The repo scaffold
+(`mg-9e00`) predates the corpus ingest. The companion log
+`docs/findings.md` carries the per-ticket history; this document
+carries the consolidated methodology, results, and supportable /
+unsupportable claim split, audited end-to-end against the committed
+result files in `results/` and the merge notes in `docs/findings.md`.
 
 The intended reader is a research scientist or Aegean-syllabary
 specialist who has not followed the merge notes. Section ordering
@@ -45,15 +49,31 @@ surface beats its matched control on a given Linear A window). The
 top-K substrate posteriors versus the top-K matched-control posteriors,
 with K=20 the production setting.
 
-We evaluate three substrate hypotheses (Aquitanian, Etruscan, pre-Greek
-Aegean toponyms) plus a Linear-B-carryover positive control under
-seven falsifiable acceptance gates: own-LM right-tail (mg-d26d),
-cross-LM and third-LM negative controls (mg-0f97 / mg-4664), per-sign
-cross-window coherence (mg-c216), and same-distribution and
-cross-language pollution tests (mg-6b73 / mg-7ecb). The framework
-**detects substrate-LM-phonotactic kinship at the population level**
-(Aquitanian PASS p = 3.22e-05, Etruscan PASS p = 5.21e-04 under their
-own LMs) and **partially discriminates substrate-shape from
+We evaluate four substrate hypotheses — Aquitanian, Etruscan,
+pre-Greek Aegean toponyms, and Eteocretan (presumed Linear-A
+linguistic descendant) — plus a Linear-B-carryover positive control,
+under thirteen pre-registered falsifiable acceptance gates: own-LM
+right-tail (mg-d26d), cross-LM and third-LM negative controls
+(mg-0f97 / mg-4664), per-sign cross-window coherence (mg-c216),
+same-distribution and cross-language pollution tests
+(mg-6b73 / mg-7ecb), bigram-preserving control sampler (mg-9f18),
+per-inscription cascade-candidate test (mg-3438), targeted
+KU-RO / KI-RO scholarly-anchor search (mg-711c), Eteocretan own-LM
+gate (mg-6ccd), full Eteocretan cross-LM matrix (mg-b599),
+population-level scholar-proposed-reading comparison (mg-46d5), and
+per-inscription cascade analysis under the Eteocretan LM (mg-c103).
+The framework **detects substrate-LM-phonotactic kinship at the
+population level**, with all four substrate pools clearing their
+own-LM gates (Aquitanian under Basque LM p = 3.22e-05; Etruscan under
+Etruscan LM p = 5.21e-04; toponym under Basque LM with bigram-
+preserving control p = 9.99e-05; Eteocretan under Eteocretan LM
+p = 4.10e-06). The **gap-magnitude ordering** across pools is
+consistent with a-priori genealogical relatedness: Eteocretan +0.20
+(closest-relative) > toponym +0.11 (Cretan pre-Greek substrate) >
+Etruscan +0.06 > Aquitanian +0.03 (furthest-out Mediterranean).
+The **full cross-LM matrix** (v23) shows own-LM dominance HOLDS
+for 3 of 4 pools; Aquitanian is the small-dynamic-range exception.
+The framework **partially discriminates substrate-shape from
 non-substrate-shape within the right tail** (real-vs-Greek-shape
 within-tail Mann-Whitney p = 8.29e-05). It does **not** support
 per-sign decipherment: the consensus sign-to-phoneme map fails the
@@ -93,7 +113,18 @@ external correctness:** mechanical scoring + phonotactically-matched
 controls catches a failure mode that internal-consensus-only
 methodology would miss, and the v22 35-entry result moves that
 claim from "one inscription, decisively divergent" to
-"population-level decisively divergent".
+"population-level decisively divergent". v24 (mg-c103) closes the
+external-validation narrative: re-running the per-inscription
+cascade analysis with v21's Eteocretan pool included produces zero
+cascade candidates under eteocretan-only aggregation (and a 0/76
+match rate against the scholar set), while the four-pool aggregation
+reproduces v19's three cascade candidates with byte-identical
+high-coherence mechanical readings on PS Za 2 and matches v22's
+3.95% aggregate rate to the digit. The closest-genealogical-
+relative substrate's strongest-own-LM PASS therefore reflects
+population-level phonotactic selectivity but does **not** propagate
+to a per-inscription decipherment signal under any candidate
+substrate the framework has tested.
 
 The supportable claim is therefore strictly narrower than "Linear A
 is X": the framework identifies which substrate phonotactic profiles
@@ -154,18 +185,24 @@ expansion to less-attested substrate families (Phoenician, Sumerian,
 Hattic, etc.).
 
 The remainder of this document specifies the pipeline (§2), reports
-the eleven pre-registered falsifiable acceptance-gate / external-
-validation outcomes (§3), discusses what the framework does and
-does not detect (§4), and explicitly enumerates unsupported claims
-(§5).
+the thirteen pre-registered falsifiable acceptance-gate / external-
+validation outcomes plus the v23 cross-LM matrix follow-up (§3),
+discusses what the framework does and does not detect (§4), and
+explicitly enumerates unsupported claims (§5).
 
 ---
 
 ## 2. Methods
 
 The pipeline is built up across the harness sequence `mg-d5ef` (v0)
-through `mg-7ecb` (v15), atop the SigLA corpus ingest (`mg-1c8c`) and
-the initial repo scaffold (`mg-9e00`). It is deterministic end-to-end:
+through `mg-c103` (v24), atop the SigLA corpus ingest (`mg-1c8c`) and
+the initial repo scaffold (`mg-9e00`); the v8–v15 harness lineage
+established the production scoring path (paired-difference under
+external phoneme LMs, Beta-binomial per-surface posteriors,
+right-tail Mann-Whitney gate), and v18–v24 added the bigram-
+preserving control sampler, Eteocretan substrate pool, full cross-LM
+matrix, and per-inscription cascade-candidate analysis. It is
+deterministic end-to-end:
 re-running any rollup against the same
 `experiments.external_phoneme_perplexity_v0.jsonl` and the same
 pool / hypothesis manifests produces byte-identical output. No RNG
@@ -194,6 +231,7 @@ surfaces with phoneme decompositions, attestations, and citations:
 | `aquitanian` | 153 | Trask 1997 + Gorrochategui 1984 (Vasconic / pre-IE roots) | basque |
 | `etruscan` | 143 | Bonfante & Bonfante 2002 + TLE | etruscan |
 | `toponym` | 112 | Beekes 2010 (pre-Greek Aegean toponyms) | basque (substrate-style stand-in) |
+| `eteocretan` | 84 | Duhoux 1982 + Whittaker 2017 + Younger online catalog (Praisos 1–7, Dreros 1–2 + minor short attestations; mg-6ccd) | eteocretan |
 | `linear_b_carryover` | 20 | Ventris & Chadwick 1956 carryover values + Younger 2000 conjecturals (positive control) | mycenaean_greek |
 
 The three pollution variants used for the curation-tolerance and
@@ -208,11 +246,19 @@ cross-language-pollution tests are:
 
 For each substrate pool, a corresponding `control_<name>` pool is
 generated by sampling random surfaces of matching length from the
-substrate's marginal phoneme histogram. Determinism is preserved by
-seeding from `sha256(pool_name)`. The LM dispatch routes each control
-pool through its substrate's LM so the paired-difference cancels the
-LM choice out of the comparison
-(`scripts/build_control_pools.py`, `mg-f419` + `mg-c2af`).
+substrate's phoneme distribution. Two samplers are committed: a
+**unigram-marginal sampler** (v6) draws each phoneme independently
+from the substrate's marginal histogram; a **bigram-preserving
+sampler** (v18, `--sampler bigram`, alpha = 0.1) draws each phoneme
+conditional on the previous phoneme using the substrate's bigram
+counts, so adjacent-phoneme structure (CV transitions, vowel hiatus
+rates) is matched. The bigram sampler is the production default for
+new pools after v18 (mg-9f18); v6 unigram is retained for backwards-
+compatible reruns. Determinism is preserved by seeding from
+`sha256(pool_name)`. The LM dispatch routes each control pool
+through its substrate's LM so the paired-difference cancels the LM
+choice out of the comparison
+(`scripts/build_control_pools.py`, `mg-f419` + `mg-c2af` + `mg-9f18`).
 
 ### 2.4 Hypothesis schemas
 
@@ -240,8 +286,10 @@ The headline metric is **`external_phoneme_perplexity_v0`** (mg-ee18),
 which feeds the candidate's phoneme stream through a held-out
 char-bigram language model trained on real substrate text and reads
 off the per-record log-likelihood. The bigram LMs are at
-`harness/external_phoneme_models/{basque,etruscan,mycenaean_greek}.json`,
-each fit with α=0.1 add-α smoothing on real text:
+`harness/external_phoneme_models/{basque,etruscan,mycenaean_greek,eteocretan}.json`,
+each fit with add-α smoothing on real text (α=0.1 for the v8 LMs;
+α=1.0 for the v21 Eteocretan LM, set higher because the corpus is
+small):
 
 - **basque.json** — Basque text (Aquitanian's modern descendant) used
   as the LM for the Aquitanian substrate pool.
@@ -249,6 +297,12 @@ each fit with α=0.1 add-α smoothing on real text:
 - **mycenaean_greek.json** — LiBER (`https://liber.cnr.it`) corpus,
   5,638 Linear-B inscriptions yielding 21,634 word tokens and
   5,113 unique forms (mg-4664).
+- **eteocretan.json** — manual transcription of the canonical
+  Eteocretan corpus (Duhoux 1982 + Whittaker 2017 + Younger online
+  catalog), 100 inscriptions / 87 unique word forms; the LM is
+  genuinely small-corpus by reality (the Eteocretan epigraphic
+  record is finite at ~9 substantive multi-line texts) and uses
+  α=1.0 to compensate (mg-6ccd).
 
 Earlier metric variants (`compression_delta_v0`,
 `partial_mapping_compression_delta_v0`, `local_fit_v0`/`v1`,
@@ -332,6 +386,39 @@ Five auxiliary checks were pre-registered against the v10 outcome:
   Mycenaean-Greek-shape conjecturals, mg-7ecb); rerun the v10 gate
   on each. Tests whether the gate signal depends on uniformly-clean
   substrate pools or on a substrate-specific phonotactic shape.
+
+### 2.10 Post-v15 additional gates (v18–v24)
+
+Four additional pre-registered gates were added in the v18–v24
+sequence within the same scoring discipline:
+
+- **Bigram-preserving control sampler** (mg-9f18, v18). Re-evaluate
+  the toponym pool against the v18 bigram-preserving control;
+  re-run the v10 gate at four pollution levels (10/25/50/75%) to
+  characterize the gate's curation-sensitivity gradient.
+- **Per-inscription cascade-candidate test** (mg-3438, v19). For
+  each Linear A inscription I drawn from a top-30 right-tail,
+  short, or libation-formula population, aggregate all positive-
+  paired-diff candidate equations targeting I; report the per-token
+  *robust* fraction (modal_posterior > 0.5 AND n_proposals ≥ 2);
+  classify as cascade candidate (≥ 0.5), partial (0.25–0.5), or
+  noise. mg-711c (v20) extended this with a targeted KU-RO / KI-RO
+  scholarly-anchor search on the v19 cascade-candidate accountancy
+  tablets `KH 10` / `KH 5`.
+- **Eteocretan substrate pool** (mg-6ccd, v21; mg-b599, v23). Add
+  Eteocretan as a 4th substrate pool with its own bigram-preserving
+  control; re-run the v10 gate; fill out the full substrate × LM
+  cross-LM matrix (Eteocretan candidates re-scored under Mycenaean
+  Greek and Etruscan LMs; existing pools re-scored under the
+  Eteocretan LM).
+- **Population-level scholar-proposed-reading comparison**
+  (mg-46d5, v22; mg-c103, v24). Score the per-inscription
+  mechanical modal phonemes against a 35-entry curated set of
+  scholar-proposed contextual readings drawn from Younger's
+  online catalog; report the aggregate match rate on the
+  consonantal first segment of the scholarly CV. v24 (mg-c103)
+  re-runs the per-inscription cascade analysis under the
+  Eteocretan-only and four-pool aggregations.
 
 ---
 
@@ -1333,18 +1420,19 @@ partial cascades across all three populations. Population A
 (top-30 right-tail eteocretan-concentration inscriptions) is
 filled to n=30, but every inscription classifies as Noise
 (robust fraction < 0.25); the highest robust fraction in the
-population is 0.22 (HT 110a, HT 115a, HT Zb 158b, HT Zb 159 all
-in the 0.15–0.22 band). Population B is degenerate at n=4 (only
-4 short inscriptions have positive eteocretan paired_diff
-records). Population C is **n=0**: PS Za 2 has *zero* positive
-eteocretan paired_diff records; under the v21
-bigram-preserving control, no eteocretan substrate surface beats
-the matched control on any PS Za 2 span. The Eteocretan candidate
-count (~2,985 substrate + ~2,635 control records) is too sparse
-for per-inscription consensus to form at the 50% robust bar
-under eteocretan-LM-only aggregation. This is the "no cascade
-candidates emerge at all" outcome the v24 brief flagged as the
-unexpected possibility — it is the actual eteocretan-only result.
+population is **0.1667** (`HT Zb 158b` and `HT Zb 159`), with
+the rest of the population in the 0.00–0.17 band. Population B
+is degenerate at n=4 (only 4 short inscriptions have positive
+eteocretan paired_diff records). Population C is **n=0**:
+PS Za 2 has *zero* positive eteocretan paired_diff records;
+under the v21 bigram-preserving control, no eteocretan substrate
+surface beats the matched control on any PS Za 2 span. The
+Eteocretan candidate count (~2,985 substrate + ~2,635 control
+records) is too sparse for per-inscription consensus to form at
+the 50% robust bar under eteocretan-LM-only aggregation. This is
+the "no cascade candidates emerge at all" outcome the v24 brief
+flagged as the unexpected possibility — it is the actual
+eteocretan-only result.
 
 **Four-pool result.** Three cascade candidates emerge:
 **KH 10, KH 5, PS Za 2** — *the same set as v19's three-pool
@@ -1842,14 +1930,26 @@ A mechanical, falsifiable framework for testing substrate-language
 hypotheses against Linear A — paired-difference scoring under
 external phoneme language models with phonotactically-matched
 controls, aggregated as per-surface Beta-binomial posteriors and
-gated against a right-tail Mann-Whitney U test — detects substrate-
-LM-phonotactic kinship at the population level for two of three
-substrate hypotheses (Aquitanian under the Basque LM at p = 3.22e-05;
-Etruscan under the Etruscan LM at p = 5.21e-04), under negative
-controls that confirm substrate-LM specificity. The framework also
-exhibits partial within-tail shape selectivity: under cross-language
-pollution it discriminates real Aquitanian surfaces from Greek-shape
-conjecturals at p = 8.29e-05.
+gated against a right-tail Mann-Whitney U test — detects
+substrate-LM-phonotactic kinship at the population level for **all
+four** substrate hypotheses tested under their own LMs (Aquitanian
+under Basque LM p = 3.22e-05; Etruscan under Etruscan LM
+p = 5.21e-04; toponym under Basque LM with bigram-preserving control
+p = 9.99e-05; Eteocretan under Eteocretan LM p = 4.10e-06), under
+negative controls that confirm substrate-LM specificity. The
+**gap-magnitude ordering** across the four pools is consistent with
+a-priori genealogical relatedness: Eteocretan +0.20 (presumed
+Linear-A linguistic descendant) > toponym +0.11 (Cretan pre-Greek
+substrate) > Etruscan +0.06 > Aquitanian +0.03 (furthest-out
+Mediterranean substrate). The **full cross-LM matrix** (v23,
+mg-b599) shows own-LM dominance HOLDS for 3 of 4 pools (Eteocretan,
+Etruscan, toponym); the Aquitanian deviation is a small-dynamic-
+range artifact rather than a counterexample (no foreign LM produces
+a gate PASS that own-LM does not, and Aquitanian under Mycenaean
+Greek FAILs as expected). The framework also exhibits partial
+within-tail shape selectivity: under cross-language pollution it
+discriminates real Aquitanian surfaces from Greek-shape conjecturals
+at p = 8.29e-05.
 
 The framework does **not** support per-sign decipherment claims.
 A consensus sign-to-phoneme map built from the v10 top-20 substrate
@@ -1874,32 +1974,53 @@ points across 6 sites and 21+ CV combinations); the aggregate
 mechanical-vs-scholarly match rate is **3.95%** on the consonantal
 first segment of the scholarly CV, with 32 of 35 entries scoring
 zero — squarely in the pre-registered strong-null band (< 5%) for
-"reinforces v13 / v19 / v20 verdicts".
+"reinforces v13 / v19 / v20 verdicts". v24 (mg-c103) closes the
+external-validation narrative: re-running the per-inscription
+cascade analysis with v21's Eteocretan pool — the closest-
+genealogical-relative substrate, and the strongest own-LM PASS in
+the project — included produces **zero** cascade candidates under
+eteocretan-only aggregation and a 0/76 (0.00%) match rate against
+the scholar set, while the four-pool aggregation reproduces v19's
+three cascade candidates with byte-identical high-coherence
+mechanical readings on PS Za 2 and matches v22's 3.95% aggregate
+rate to the digit. A substrate-LM swap to the closest-relative
+pool — the strongest a-priori case in the validation series —
+leaves the external-validation match rate unchanged.
 
 The supportable claim is therefore strictly narrower than past
 decipherment-shape claims for Linear A: the framework identifies
 which substrate phonotactic profiles produce population-level signal
-in the SigLA corpus, and on which specific inscriptions that signal
-concentrates, but does not validate per-sign readings or per-tablet
-glosses — and where the cascade candidates *do* admit external
-comparison to scholarly ground truth, the mechanical reading
-diverges. **Internal consensus among surviving substrate candidates
-does not imply external correctness;** mechanical scoring against
-phonotactically-matched controls, paired with external comparison
-to independent scholarly proposals, is what distinguishes the
-framework's claim from the qualitative-impression claims that have
-plagued past Linear A work. The framework's null findings — no
-per-sign coherence at the global aggregate level (v13), no
-real-vs-conjectural surface discrimination at the same-distribution
-pollution level (v14), and decisive divergence on the one
-performable single-inscription external comparison (v19 / v20)
-plus the **3.95% aggregate match rate (3/76)** on a 35-entry,
-6-site, 21+ CV-combination Younger-catalog scholar-proposed-
-reading set (v22, mg-46d5; squarely in the pre-registered
-strong-null band) — are themselves
-contributions to the methodological literature on undeciphered-
-script analysis: each is a falsification result that internal-only
-methodology, by construction, cannot produce.
+in the SigLA corpus, with the magnitude of that signal scaling with
+a-priori genealogical relatedness, and identifies the specific
+inscriptions on which that signal concentrates; but it does not
+validate per-sign readings or per-tablet glosses — and where the
+cascade candidates *do* admit external comparison to scholarly
+ground truth, the mechanical reading diverges. **Internal consensus
+among surviving substrate candidates does not imply external
+correctness;** mechanical scoring against phonotactically-matched
+controls, paired with external comparison to independent scholarly
+proposals, is what distinguishes the framework's claim from the
+qualitative-impression claims that have plagued past Linear A work.
+The framework's null findings — no per-sign coherence at the global
+aggregate level (v13), no real-vs-conjectural surface discrimination
+at the same-distribution pollution level (v14), decisive divergence
+on the one performable single-inscription external comparison
+(v19 / v20), the 3.95% aggregate match rate (3/76) on a 35-entry,
+6-site, 21+ CV-combination Younger-catalog scholar-proposed-reading
+set (v22, mg-46d5; squarely in the pre-registered strong-null band),
+and the v24 confirmation that the closest-genealogical-relative
+substrate's strongest-own-LM PASS does **not** propagate to a
+per-inscription decipherment signal under any candidate substrate
+the framework has tested — are themselves contributions to the
+methodological literature on undeciphered-script analysis: each is
+a falsification result that internal-only methodology, by
+construction, cannot produce. The **cascade-candidate framing**
+(v19 + v24) is itself transferable: any research group testing a
+substrate-language hypothesis on an undeciphered script can adopt
+the protocol of finding inscriptions with high local internal
+consensus, then validating against external scholarly ground truth,
+as a discipline-protecting check against motivated-reasoning failure
+modes that internal-only analyses cannot catch.
 
 ---
 

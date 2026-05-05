@@ -5201,3 +5201,201 @@ from `per_sign_consensus_local`). No RNG anywhere.
   the methodological limit; deferred indefinitely.
 - **GORILA / Younger ingest.** Different scope.
 - **LaTeX / journal submission.** Out of polecat scope.
+
+## Findings from mg-36bd (v25 — methodology paper polish pass integrating v22 + v23 + v24, final consolidation before journal-submission handoff, 2026-05-05)
+
+### Summary
+
+Editorial / verification ticket. No harness commits. v25 audits
+`docs/findings_summary.md` end-to-end after the v17–v24 incremental
+edits and integrates v22 (35-entry scholar-set comparison, 3.95%
+aggregate match), v23 (full cross-LM matrix, own-LM dominance for
+3/4 pools), and v24 (Eteocretan per-inscription cascade analysis,
+zero cascade candidates eteocretan-only / 0/76 match rate /
+four-pool reproduces v19 cascade set with byte-identical PS Za 2
+reading) into a coherent methodology-paper-shape draft suitable
+for a journal-submission editorial pass.
+
+### Restructure / edits made
+
+1. **Title block** — extended to enumerate v23 / v24 / v25 in the
+   per-version lineage; corrected harness-pipeline span from
+   `mg-46d5 (v22)` to `mg-c103 (v24)`; corrected work-item count
+   from 22 to 25; flagged v25 as editorial-only.
+2. **Abstract** — promoted from "three substrate hypotheses" to
+   "four" (Eteocretan added as 4th pool); promoted gate-PASS
+   summary from Aquitanian + Etruscan only to all four pools with
+   their own-LM p-values; added the gap-magnitude ordering
+   (Eteocretan +0.20 > toponym +0.11 > Etruscan +0.06 >
+   Aquitanian +0.03); added the v23 cross-LM matrix verdict
+   (own-LM dominance for 3/4 pools); added a v24-closure
+   paragraph explaining that the closest-genealogical-relative
+   substrate's strongest-own-LM PASS does not propagate to
+   per-inscription decipherment signal under any candidate
+   substrate.
+3. **§1 Introduction** — corrected outcome counter from "eleven"
+   to "thirteen pre-registered falsifiable acceptance-gate /
+   external-validation outcomes plus the v23 cross-LM matrix
+   follow-up" (the §3.1 table now lists 13 + 12b).
+4. **§2 Methods** — extended harness-pipeline span statement to
+   mg-c103 (v24) with a one-sentence summary of the v18–v24
+   additions; added Eteocretan to the §2.2 substrate-pools table
+   (84 entries; Duhoux 1982 / Whittaker 2017 / Younger sources;
+   eteocretan LM dispatch); rewrote §2.3 to describe both unigram
+   and bigram-preserving control samplers and flagged bigram as
+   the v18+ production default; extended §2.5's LM list to
+   include `eteocretan.json` with corpus-size and α=1.0 smoothing
+   notes; added new §2.10 "Post-v15 additional gates (v18–v24)"
+   summarizing the four additional gates added in the
+   v18 / v19+v20 / v21+v23 / v22+v24 sequence.
+5. **§3.1 outcomes table** — verified 13 + 12b structure remains
+   accurate after audit; no edits needed (already integrated by
+   prior tickets).
+6. **§3.14 Eteocretan section** — corrected a numerical error in
+   the v24 subsection: doc claimed Population A's highest robust
+   fraction was 0.22 (range 0.15–0.22); rollup data shows actual
+   max is 0.1667 (HT Zb 158b, HT Zb 159) with range 0.00–0.17.
+   Corrected the inline statement to match the rollup.
+7. **§6 Conclusion** — expanded from "two of three substrate
+   hypotheses" (stale, pre-v18) to "all four substrate hypotheses
+   ... clearing their own-LM gates" with all four p-values and the
+   gap-magnitude ordering; integrated the v23 cross-LM matrix
+   verdict explicitly; added a v24-closure paragraph (zero
+   cascade candidates eteocretan-only / 0/76 match rate /
+   four-pool reproduces v19 set); added a closing paragraph on
+   the cascade-candidate framing as a transferable methodological
+   contribution other research groups can adopt.
+
+### Cross-check: quantitative claims vs. committed result files
+
+Every quantitative claim in the polished draft was verified against
+the committed `results/` files. **One discrepancy resolved** (the
+0.22 / 0.15–0.22 typo in §3.14's v24 subsection — see edit 6
+above). Every other claim verified against:
+
+- `rollup.bayesian_posterior.{aquitanian,etruscan}.md` (v10 own-LM gates).
+- `rollup.bayesian_posterior.toponym_bigram_control.md` (v18 toponym).
+- `rollup.bayesian_posterior.eteocretan.md` + `..eteocretan_under_basque.md` (v21).
+- `rollup.cross_lm_matrix.md` (v23) — all 14 cell values verified.
+- `rollup.scholar_proposed_readings_comparison.md` (v22 35-entry / 76-comparison-point / 3.95%).
+- `rollup.per_inscription_coherence.md` (v19 three-pool cascade candidates).
+- `rollup.per_inscription_coherence.eteocretan_only.md` + `.four_pools.md` (v24).
+- `rollup.scholar_proposed_readings_comparison.{eteocretan_only,four_pools,four_pools_cascades}.md` (v24 external-validation re-runs).
+
+PS Za 2's mechanical reading (`c-e-a-(ch)-th-(ch)-th-u-u-n-i-(l)-a-(l)`)
+is byte-identical between v19 (three-pool) and v24 (four-pool) — the
+doc claim verified at the byte level. KH 10 and KH 5 high-coherence
+positions are byte-identical between v19 and v24; only the
+low-coherence (parens) positions show minor phoneme shifts as the
+v24 four-pool aggregation re-distributes mass at signs that did not
+have v19 robust consensus to begin with — consistent with the v24
+text.
+
+### Three-sentence reading test
+
+The polished document supports three quotable sentences a Linear A
+scholar reading cold would learn from it:
+
+1. "On the SigLA Linear A corpus (761 inscriptions), mechanical
+   paired-difference scoring against phonotactically-matched
+   controls — aggregated as Beta-binomial per-surface posteriors
+   and gated by a right-tail Mann-Whitney U test — detects
+   substrate-LM-phonotactic kinship at the population level for
+   all four substrate hypotheses tested, with posterior-median
+   gap magnitudes scaling with a-priori genealogical relatedness
+   (Eteocretan +0.20 > toponym +0.11 > Etruscan +0.06 >
+   Aquitanian +0.03) and own-LM dominance holding for three of
+   four pools across the full cross-LM matrix."
+2. "The same framework does not support per-sign decipherment
+   under any of the four pools: a consensus sign-to-phoneme map
+   fails the 0.6 cross-window-coherence bar at median 0.18, a
+   same-distribution pollution test cannot distinguish real
+   substrate roots from phonotactically-matched conjecturals
+   (within-tail p = 0.98), and the population-level mechanical
+   consensus matches scholar-proposed contextual readings from
+   Younger's catalog at 3.95% (3/76) on the consonantal first
+   segment — squarely in the pre-registered strong-null band,
+   with v24's re-run under the closest-genealogical-relative
+   substrate (Eteocretan) confirming the result at 0/76."
+3. "Internal consensus among surviving substrate candidates does
+   not imply external correctness: the discipline of mechanical
+   scoring against phonotactically-matched controls,
+   pre-registered falsifiable acceptance gates, and the
+   cascade-candidate framing (find inscriptions with high local
+   internal consensus, then validate against external scholarly
+   ground truth) catches motivated-reasoning failure modes that
+   internal-consensus-only methodology cannot — a transferable
+   protocol any research group testing a substrate hypothesis on
+   an undeciphered script can adopt."
+
+The reading test passes. The document captures (a) what the
+framework detects, (b) what the framework does NOT support (with
+the specific match-rate numbers), and (c) the methodological
+contribution at the cascade-candidate-framing level.
+
+### Audit-of-the-audit on v17 / v18 / v19 / v20 / v21 / v22 / v23 / v24 incremental edits
+
+Per the v25 brief: v25 should do its own audit-of-the-audit on
+v17's correction and each post-v17 incremental edit. Spot checks:
+
+- **v17 lineage citations** (mg-2bfd) — `mg-1c8c` and `mg-9e00`
+  references survive in §3.13.3, Appendix A, and the title block.
+  No drift.
+- **v18 toponym bigram-preserving control** (mg-9f18) — §3.5,
+  §3.10, §3.1 row 8. Numbers (p = 9.99e-05, gap +0.109,
+  substrate top-20 median 0.9615 vs control 0.8525) verified.
+  v18 pollution-level sweep §3.11 numbers (p = 1.5e-04 / 2.7e-04
+  / 2.7e-05 / 4.3e-02) verified against
+  `rollup.pollution_level_sweep.md`.
+- **v19 cascade-candidate test** (mg-3438) — §3.12, §3.13. Robust
+  fractions (KH 10 0.5455, KH 5 0.5000, PS Za 2 0.7143) verified.
+  PS Za 2 mechanical reading (c-e-a-(ch)-th-(ch)-th-u-u-n-i-(l)-a-(l))
+  verified.
+- **v20 methodology integration** (mg-711c) — §3.13.2 and Appendix A.
+  KU-RO/KI-RO null-comparand finding verified against the actual
+  KH 10 / KH 5 token streams in `corpus/Khania/`.
+- **v21 Eteocretan integration** (mg-6ccd) — §3.14, Appendix A.
+  Own-LM gate p = 4.10e-06 / gap +0.20 / cross-LM under Basque
+  p = 2.58e-03 / gap +0.10 verified.
+- **v22 35-entry scholar-set comparison** (mg-46d5) — §3.13.4,
+  §4.6, §6, Appendix A. 3.95% (3/76) / 1.32% robust (1/76) /
+  per-entry distribution verified. Pre-registered band thresholds
+  (< 5% strong null) verified.
+- **v23 cross-LM matrix** (mg-b599) — §3.1 row 12b, §3.14
+  "Cross-LM matrix" subsection, §4.1, Appendix A. All 14
+  matrix cells verified against `rollup.cross_lm_matrix.md`.
+- **v24 per-inscription cascade under Eteocretan LM** (mg-c103)
+  — §3.14 "Per-inscription cascade-candidate analysis under
+  Eteocretan LM" subsection, §4.6, §5.2, Appendix A. Eteocretan-
+  only headline (zero cascade / zero partial / 0/76 match)
+  verified. Four-pool reproduction of v19 cascade set verified
+  (KH 10 0.5455, KH 5 0.5000, PS Za 2 0.7143). PS Za 2 byte-
+  identical reading verified.
+
+No additional inconsistencies surfaced beyond the §3.14 0.22 → 0.17
+correction noted above.
+
+### What this ticket does NOT do
+
+- **No new experiments.** v25 is editorial / verification only.
+  Any new experimental data would invalidate the v22 / v23 / v24
+  numbers cited as load-bearing.
+- **No journal-submission preparation.** LaTeX, target-venue
+  formatting, peer-review concerns are out of polecat scope.
+  v25 brings the document to the **handoff point**; subsequent
+  editorial work happens with Daniel directly outside the
+  polecat-spawn flow.
+- **No domain-expert review.** The cascade candidates and top-K
+  substrate surfaces still need an Aegean-syllabary specialist's
+  read; out of polecat scope.
+- **No additional substrate pools.** Phoenician / Sumerian /
+  Hattic remain deferred per v15.
+
+### Out of scope (deferred to subsequent editorial work)
+
+- **Journal-submission editorial pass** (LaTeX, target-venue
+  narrative, peer review). Out of polecat scope.
+- **Domain-expert review** of cascade candidates, top-K substrate
+  surfaces, etc.
+- **GORILA / Younger ingest** (numerals + line breaks).
+  Different scope.
