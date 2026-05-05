@@ -735,6 +735,87 @@ distribution pollution at higher conjectural shares may eventually
 break the gate but the precise threshold is not located by this
 sweep.*
 
+### 3.12 Per-inscription coherence: cascade candidates emerge but diverge from scholarly readings
+
+v19 (mg-3438,
+`results/rollup.per_inscription_coherence.md`) asks the
+*per-inscription* counterpart of v13's per-surface coherence
+question: for a given Linear A inscription I, do the multiple
+substrate candidates that target I agree on what each sign in I
+should be?
+
+The test aggregates all positive-paired-diff candidate equations
+(across the three validated pools — Aquitanian, Etruscan,
+toponym) targeting each inscription, computes a per-inscription
+modal-phoneme posterior under local Dirichlet smoothing for every
+sign in I, and reports the per-token *robust* fraction
+(modal_posterior > 0.5 AND n_proposals ≥ 2) plus the *literal*
+fraction (no n_proposals minimum) for transparency. Three
+populations are evaluated: A — the top-30 v10 right-tail-
+concentration inscriptions (mg-0f97); B — short inscriptions
+(n_signs ≤ 5) capped at top-30 by candidate count; C — the
+inscriptions whose token sequence contains the libation-formula
+syllabogram run AB57-AB31-AB31-AB60-AB13 (`JA-SA-SA-RA-ME`).
+
+**Cascade candidates** (robust fraction ≥ 0.5):
+
+| inscription | site | population | robust fraction | mechanical reading |
+|:--|:--|:--|---:|:--|
+| `KH 10`   | Khania  | A | 0.5455 | `s-e-n-i-u-r-(a)-(e)-(l)-(a)-(a)` |
+| `KH 5`    | Khania  | A | 0.5000 | `(s)-(a)-(l)-(a)-(a)-(s)-e-n-(a)-z-t-t-a-z-a-l-a-·-·-·` |
+| `PS Za 2` | Psykhro | C | 0.7143 | `c-e-a-(ch)-th-(ch)-th-u-u-n-i-(l)-a-(l)` |
+
+Two **partial cascades** (robust fraction in [0.25, 0.5)):
+`HT 95a` (0.32) and `HT 31` (0.33). The literal-vs-robust gap on
+the partial cascades arises because most signs that pass the
+literal threshold are lone-proposal signs (n=1, modal_posterior =
+1.0 trivially) — the robust filter catches that.
+
+**Population C scholarly comparison.** The libation formula has a
+long-standing scholarly transliteration `ja-sa-sa-ra-me` (Younger
+2000–; Davis 2014; cf. broader Aegean-syllabary literature) with
+consonantal segments j-s-s-r-m on AB57-AB31-AB31-AB60-AB13. On
+`PS Za 2`, the framework's per-inscription mechanical modal
+phonemes for that span are `th-u-u-n-i` — divergent from the
+scholarly proposal on every formula-span sign (0/5 match on the
+consonantal segment).
+
+Population breakdown by classification (robust statistic):
+
+| population | n inscriptions | cascade | partial | noise |
+|:--|---:|---:|---:|---:|
+| A: top-30 right-tail | 30 | 2 | 2 | 26 |
+| B: short ≤5 signs    |  4 | 0 | 0 |  4 |
+| C: libation formula  |  1 | 1 | 0 |  0 |
+
+**Interpretation.** v13's per-surface coherence median was 0.18
+(against a 0.6 bar) — across all the windows where each top-20
+substrate surface was used, the proposed sign-to-phoneme mappings
+disagreed heavily. v19 is local rather than global: instead of
+asking "do the candidate equations using surface S agree on what
+sign s should be?" it asks "do the multiple substrate surfaces
+hitting inscription I agree on what each sign in I should be?"
+The local-vs-global aggregate gap is genuine — three of 35
+evaluated inscriptions yield internal-consensus cascade candidates
+— but on the only inscription with a known-content scholarly
+proposal (PS Za 2), the mechanical consensus DIVERGES from the
+scholarly transliteration on every formula-span sign.
+
+The honest read: per-inscription internal consensus does not imply
+external correctness. The cascade candidates are hypotheses for
+domain-expert review (an Aegean-syllabary specialist), not
+decipherment claims. The framework's surviving candidates agree on
+PS Za 2 because the signs in that inscription have phonotactic
+shapes consistent with the substrate-LM expectations — not because
+the agreed-upon phoneme mappings correspond to the historically-
+attested Linear A values.
+
+This refines rather than reverses the per-surface coherence
+verdict (§3.7 / §5): per-sign decipherment remains unsupported at
+the aggregate level, and the one available comparison to a
+known-content scholarly proposal at the local level (libation-
+formula PS Za 2) shows divergence rather than corroboration.
+
 ---
 
 ## 4. Discussion
@@ -880,10 +961,22 @@ modes that have plagued Linear A studies historically.
   substrate phonemes. The mechanical signal is consistent with
   multiple causal stories.
 - **Per-inscription gloss generation was queued (originally v14) and
-  abandoned.** The mg-c216 cross-window coherence verdict ruled out
-  per-inscription reading-shape claims. Future generations of this
-  framework that produce gloss output will need to clear the
-  coherence bar first.
+  abandoned at the AGGREGATE level.** The mg-c216 cross-window
+  coherence verdict (per-surface median 0.18 vs the 0.6 bar) ruled
+  out per-surface reading-shape claims. v19 (mg-3438) re-opens the
+  question at the LOCAL per-inscription level and finds three
+  cascade candidates (KH 10, KH 5, PS Za 2) where ≥50% of the
+  signs in the inscription have ≥2 substrate candidates agreeing
+  on the same modal phoneme. *This does not constitute a
+  decipherment.* On the one cascade candidate with a known-content
+  scholarly proposal — PS Za 2's libation-formula span
+  AB57-AB31-AB31-AB60-AB13 (`ja-sa-sa-ra-me`) — the framework's
+  mechanical consensus reads `th-u-u-n-i`, divergent from the
+  scholarly transliteration on every formula-span sign (0/5
+  consonantal-segment match). Internal consensus among surviving
+  candidates does not imply external correctness; the cascade
+  candidates are hypotheses for domain-expert review, not
+  decipherment claims.
 
 ### 5.2 Known unresolved issues
 
@@ -927,6 +1020,15 @@ follow-up surface:
   into "the right tail is real Aquitanian vocabulary present in
   Linear A" is independent expert review by an Aegean-syllabary
   specialist.
+- **Domain-expert review of v19 per-inscription cascade candidates.**
+  The three cascade candidates `KH 10`, `KH 5`, and `PS Za 2`
+  (§3.12) emerge with internal-consensus mechanical readings; on
+  the one with a scholarly comparand (PS Za 2's libation formula),
+  the mechanical reading diverges from the scholarly proposal.
+  Whether either reading is correct on the cascade-candidate
+  inscriptions is a question only an Aegean-syllabary specialist
+  can adjudicate. v19 surfaces the candidates honestly without
+  drawing decipherment-shaped conclusions.
 
 ---
 
@@ -982,6 +1084,7 @@ committed artefacts under `results/`:
 | v14 same-distribution pollution gate + provenance | `rollup.bayesian_posterior.polluted_aquitanian.md` + `…provenance.md` |
 | v15 cross-language pollution gate + provenance | `rollup.bayesian_posterior.greek_polluted_aquitanian.md` + `…provenance.md` |
 | per-inscription concentration | `rollup.right_tail_inscription_concentration.md` |
+| v19 per-inscription coherence + cascade candidates | `rollup.per_inscription_coherence.md` |
 | corpus ingestion record | `../corpus_status.md` |
 
 Per-ticket merge notes are in `docs/findings.md` under

@@ -3893,3 +3893,191 @@ python3 scripts/v18_pollution_level_sweep.py
 
 reproduces every byte of the new pools, manifests, sidecar JSONLs,
 and rollups. No RNG anywhere is unkeyed.
+
+## Findings from mg-3438 (v19 — per-inscription coherence test on right-tail / short / known-content inscriptions, 2026-05-05)
+
+### Headline
+
+The per-inscription coherence test produces **3 cascade candidates**
+under the robust statistic (modal_posterior > 0.5 AND n_proposals ≥ 2,
+weighted by sign frequency in the inscription):
+
+- **`KH 10`** (Khania, accountancy, 11 syllabographic tokens) —
+  robust fraction 0.5455, mechanical reading
+  `s-e-n-i-u-r-(a)-(e)-(l)-(a)-(a)`. Six of the eleven sign positions
+  show ≥2 substrate candidates agreeing on the same modal phoneme.
+  The high-coherence span runs over the leading 6 tokens.
+- **`KH 5`** (Khania, accountancy, 20 syllabographic tokens) —
+  robust fraction 0.5000, mechanical reading
+  `(s)-(a)-(l)-(a)-(a)-(s)-e-n-(a)-z-t-t-a-z-a-l-a-·-·-·`. Ten of
+  twenty signs are robust-coherent; the trailing three tokens have
+  no positive-paired-diff candidate at all.
+- **`PS Za 2`** (Psykhro, votive_or_inscription, 14 tokens) —
+  robust fraction 0.7143, mechanical reading
+  `c-e-a-(ch)-th-(ch)-th-u-u-n-i-(l)-a-(l)`. The libation-formula
+  span AB57-AB31-AB31-AB60-AB13 yields the modal sequence
+  `th-u-u-n-i`.
+
+Two **partial cascades** (robust fraction in [0.25, 0.5)):
+
+- **`HT 95a`** (Haghia Triada, accountancy, 19 tokens) — robust
+  fraction 0.3158, literal fraction 0.5789. The literal-vs-robust
+  gap arises because most of the signs that pass the literal
+  threshold are lone-proposal signs (n_proposals = 1), which
+  trivially yield modal_posterior = 1.0 under any smoothing but do
+  not constitute a multi-surface collision.
+- **`HT 31`** (Haghia Triada, accountancy, 24 tokens) — robust
+  fraction 0.3333, literal fraction 0.5000. Same lone-proposal
+  attrition as HT 95a.
+
+Population breakdown by classification (robust statistic):
+
+| population | n inscriptions | cascade | partial | noise |
+|:--|---:|---:|---:|---:|
+| A: top-30 right-tail | 30 | 2 | 2 | 26 |
+| B: short ≤5 signs    |  4 | 0 | 0 |  4 |
+| C: libation formula  |  1 | 1 | 0 |  0 |
+| **all**              | **35** | **3** | **2** | **30** |
+
+### What this means and what it does NOT mean
+
+**What it means.** v13 (mg-c216) showed the per-SURFACE consensus
+median is 0.18 — across all the windows where a top-20 substrate
+surface was used, the proposed sign-to-phoneme mappings disagreed
+heavily. v19 asks the per-INSCRIPTION question and finds three
+inscriptions where the *local* consensus on signs they share is
+above the cascade bar. The local-aggregate-vs-global-aggregate gap
+is genuine: the per-surface measure averages over many candidates
+and many inscriptions; the per-inscription measure picks out a
+small set of signs where multiple substrate hypotheses happen to
+agree.
+
+**What it does NOT mean.** A cascade candidate is a hypothesis for
+domain-expert review, not a decipherment claim. The per-inscription
+consensus tells us "the framework's surviving candidates agree on
+these phoneme assignments at this inscription"; it does NOT tell us
+"these phoneme assignments are correct Linear A". Internal consensus
+is a necessary but not sufficient condition for correctness.
+
+### Population C: comparison to scholarly libation-formula proposal
+
+The libation-formula `JA-SA-SA-RA-ME` has a long-standing scholarly
+transliteration `ja-sa-sa-ra-me` (consonantal segments j-s-s-r-m on
+the five signs AB57-AB31-AB31-AB60-AB13). On `PS Za 2`, the framework
+mechanical modal phonemes for that span are **`th-u-u-n-i`** —
+divergent from the scholarly proposal on every position (0/5 match
+on the consonantal segment).
+
+The honest read of this divergence: the per-inscription consensus
+on PS Za 2 is *internally* high (robust fraction 0.71) but the
+agreed-upon phonemes do NOT correspond to the best-attested
+scholarly phoneme values for these signs. This is consistent with
+v13's per-surface failure (median 0.18) and with v15's (mg-7ecb)
+finding that the gate detects *substrate-LM-phonotactic kinship*
+rather than per-surface substrate-vocabulary identity. The
+framework's surviving candidates agree on `PS Za 2` because the
+signs in that inscription have phonotactic shapes consistent with
+the substrate-LM expectations — not because the sign-to-phoneme
+mappings being agreed upon are the historically correct ones.
+
+### What this changes about the methodology paper's claims
+
+The "what the framework does NOT support" section in
+`findings_summary.md` claimed (correctly under v13) that the
+framework cannot underwrite per-sign decipherment. That claim
+remains true at the AGGREGATE level (per-surface coherence median
+0.18). But v19 introduces a distinct piece of evidence: per-
+inscription LOCAL coherence on a small set of inscriptions (3 of
+35 evaluated) yields high consensus internally. The right framing
+is:
+
+  > Per-sign decipherment is NOT supported at the per-surface
+  > aggregate level (v13). At the per-inscription local level
+  > (v19), three inscriptions show consensus among multiple
+  > substrate candidates targeting them — but on the one
+  > inscription with a known-content scholarly proposal (PS Za 2,
+  > libation formula), the mechanical consensus DIVERGES from the
+  > scholarly transliteration on all five formula-span signs.
+  > Internal consensus does not imply external correctness.
+
+This is a refinement of the existing claim, not a reversal. The
+methodology paper (`docs/findings_summary.md`) is updated to add a
+short paragraph in §5 noting v19 as a follow-up that strengthens
+the case against decipherment claims rather than supporting them.
+
+### Methodological notes
+
+- *All-positive-paired-diff scope.* v19 aggregates over ALL
+  positive-paired-diff candidates targeting an inscription —
+  including candidates whose surface is NOT in the v10 top-20.
+  Restricting to the top-20 would have re-imposed v13's selection
+  filter and confounded the per-inscription test. Cf. the script
+  docstring for the rationale.
+- *Local Dirichlet smoothing (V_local).* The per-sign modal
+  posterior uses V = number of distinct phonemes proposed for that
+  sign at that inscription, not the global vocabulary. This is the
+  natural local-consensus formulation; it differs from v13's
+  global-V smoothing.
+- *Robust statistic.* The headline classification uses
+  `fraction_robust_high_coherence_signs` (modal_posterior > 0.5
+  AND n_proposals ≥ 2) rather than the literal-brief
+  `fraction_high_coherence_signs`. The literal statistic is
+  reported alongside in every per-population table. Lone-proposal
+  signs (n=1) trivially satisfy the literal threshold under any
+  smoothing — a single candidate proposing anything yields
+  modal_posterior = 1.0 — but a single proposal is not a
+  multi-surface "collision" and not a genuine consensus. The
+  robust statistic operationalizes Daniel's brief framing
+  ("multiple surfaces collide on the same handful of signs")
+  directly.
+- *Three pools (aquitanian + etruscan + toponym).* The brief
+  explicitly enumerates these three as the validated pools.
+  Toponym FAILed v10's aggregate right-tail gate; that aggregate
+  failure does not invalidate individual positive-paired-diff
+  records on specific inscriptions, which is what v19 aggregates.
+
+### Artifacts shipped
+
+- `scripts/per_inscription_coherence.py` — per-inscription
+  consensus aggregation, modal-phoneme posterior under local
+  Dirichlet smoothing, robust + literal coherence statistics,
+  cascade classification, and mechanical-reading rendering.
+- `results/rollup.per_inscription_coherence.md` — three-population
+  rollup with cascade-candidate enumeration, partial-cascade
+  enumeration, per-sign breakdowns for all three cascade
+  candidates, and the Population C scholarly-comparison section.
+- `harness/tests/test_per_inscription_coherence.py` — 22 smoke
+  tests covering token filtering, per-sign consensus, end-to-end
+  per-inscription aggregation on a hand-built minimal dataset
+  (3 signs × 4 candidates), cascade classification thresholds,
+  Population B selection, Population C needle matching, empty-
+  tokens edge case, and determinism.
+
+### Reproducibility
+
+```
+python3 scripts/per_inscription_coherence.py
+```
+
+reproduces `results/rollup.per_inscription_coherence.md` byte-for-
+byte against the same `results/experiments.external_phoneme_perplexity_v0*.jsonl`,
+`hypotheses/auto/*`, `hypotheses/auto_signatures/*`, and `pools/*`.
+No RNG.
+
+### Out of scope (deferred)
+
+- **Domain-expert review of cascade candidates.** Not a polecat
+  task; would need an Aegean syllabary specialist. The mechanical
+  readings for `KH 10`, `KH 5`, and `PS Za 2` are the natural
+  starting point for that review.
+- **Broader known-content comparison.** The libation formula is
+  the most-attested known-content reading available against which
+  to compare. Comparing the cascade-candidate readings on KH 10 /
+  KH 5 to scholarly proposals (where they exist for accountancy
+  context) would require deeper secondary-source ingest.
+- **Methodology paper rewrite.** v19's findings refine rather than
+  reverse v13's claim. A minimal `findings_summary.md` paragraph is
+  added; deeper rewriting (if the cascade-candidate framing
+  warrants paper-shape integration) is its own ticket.
+- **Per-window deduplication / Linear-B small-K gate adoption.**
+  Out of v19 scope per the brief.
