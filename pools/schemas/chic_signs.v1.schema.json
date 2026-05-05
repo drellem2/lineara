@@ -1,0 +1,146 @@
+{
+  "$id": "https://github.com/drellem2/lineara/pools/schemas/chic_signs.v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "Per-sign metadata for the CHIC sign inventory. Each entry carries a class label (syllabographic / ideogram / ambiguous), frequency stats, positional + genre fingerprints, and an optional list of cross-script paleographic candidates.",
+  "properties": {
+    "catalog": {
+      "const": "cretan_hieroglyphic_signs"
+    },
+    "classification_rule": {
+      "type": "string"
+    },
+    "fetched_at": {
+      "type": "string"
+    },
+    "n_ambiguous": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "n_ideogram": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "n_paleographic_candidates": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "n_signs_total": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "n_syllabographic": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "signs": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "frequency": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "frequency_clean": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "frequency_uncertain": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "genre_fingerprint": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "description": "Fraction of occurrences by inscription support type (top-6).",
+            "type": "object"
+          },
+          "id": {
+            "description": "CHIC catalog id, zero-padded.",
+            "pattern": "^#\\d{3}$",
+            "type": "string"
+          },
+          "inscription_count": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "notes_from_olivier_godart": {
+            "type": "string"
+          },
+          "paleographic_candidates": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "type": "string"
+                },
+                "confidence": {
+                  "enum": [
+                    "consensus",
+                    "proposed",
+                    "debated"
+                  ]
+                },
+                "linear_a_sign": {
+                  "pattern": "^AB\\d+$",
+                  "type": "string"
+                },
+                "linear_b_value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "linear_a_sign",
+                "linear_b_value",
+                "confidence",
+                "citation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "position_fingerprint": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "description": "Fraction of occurrences in start/middle/end third of the sign-only token sequence; 'single' bucket counts solo-sign inscriptions.",
+            "type": "object"
+          },
+          "sign_class": {
+            "enum": [
+              "syllabographic",
+              "ideogram",
+              "ambiguous"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "sign_class",
+          "frequency",
+          "position_fingerprint",
+          "notes_from_olivier_godart"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "source_citation": {
+      "type": "string"
+    },
+    "version": {
+      "const": 1
+    }
+  },
+  "required": [
+    "catalog",
+    "version",
+    "classification_rule",
+    "source_citation",
+    "signs"
+  ],
+  "title": "Cretan Hieroglyphic sign inventory (v1)",
+  "type": "object"
+}
