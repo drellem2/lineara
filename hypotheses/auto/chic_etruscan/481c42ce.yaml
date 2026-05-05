@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_ruva_CHIC__328_3_6
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''ruva''
+  pinned to CHIC #328 tokens [3..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: ruva
+  phonemes:
+  - r
+  - u
+  - v
+  - a
+  gloss_hint: brother
+  citation: Bonfante & Bonfante 2002, glossary ruva.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 3
+  - 6
+  sign_to_phoneme:
+    '#070': r
+    '#025': u
+    '#019': v
+    '#051': a

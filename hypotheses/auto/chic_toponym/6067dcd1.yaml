@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_parnassos_CHIC__328_6_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''parnassos''
+  pinned to CHIC #328 tokens [6..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: parnassos
+  phonemes:
+  - p
+  - a
+  - r
+  - n
+  - a
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Parnassos (sacred mountain)
+  citation: Beekes 2010 s.v. Parnassos; Furnée 1972 §122.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 14
+  sign_to_phoneme:
+    '#051': p
+    '#070': a
+    '#094': r
+    '#034': n
+    '#056': a
+    '#077': s
+    '#049': s
+    '#038': o
+    '#029': s

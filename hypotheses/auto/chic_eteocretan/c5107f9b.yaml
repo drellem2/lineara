@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_des_CHIC__074_0_2
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''des''
+  pinned to CHIC #074 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: des
+  phonemes:
+  - d
+  - e
+  - s
+  gloss_hint: unknown
+  citation: 'Attested in 6 inscription(s) (first: Dreros 2). Source: Duhoux 1982 /
+    Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #074'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#042': d
+    '#070': e
+    '#060': s

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_tul_CHIC__031_1_3
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''tul'' pinned
+  to CHIC #031 tokens [1..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: tul
+  phonemes:
+  - t
+  - u
+  - l
+  gloss_hint: tul- (initial fragment; Tylissos)
+  citation: Beekes 2010 s.v. Tylissos.
+equation:
+  inscription_id: 'CHIC #031'
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    '#049': t
+    '#056': u
+    '#052': l

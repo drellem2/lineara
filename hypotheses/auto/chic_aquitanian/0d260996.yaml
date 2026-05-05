@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_ikusi_CHIC__328_6_10
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''ikusi''
+  pinned to CHIC #328 tokens [6..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: ikusi
+  phonemes:
+  - i
+  - k
+  - u
+  - s
+  - i
+  gloss_hint: see
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 10
+  sign_to_phoneme:
+    '#051': i
+    '#070': k
+    '#094': u
+    '#034': s
+    '#056': i

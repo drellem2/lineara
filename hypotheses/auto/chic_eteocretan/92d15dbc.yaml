@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_omosai_CHIC__294_10_15
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''omosai''
+  pinned to CHIC #294 tokens [10..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: omosai
+  phonemes:
+  - o
+  - m
+  - o
+  - s
+  - a
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Dreros 1). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 15
+  sign_to_phoneme:
+    '#047': o
+    '#070': m
+    '#092': o
+    '#019': s
+    '#044': a
+    '#050': i

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_katu_CHIC__324_0_3
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''katu''
+  pinned to CHIC #324 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: katu
+  phonemes:
+  - k
+  - a
+  - t
+  - u
+  gloss_hint: cat
+  citation: Trask 1997 ch. 3 (Latin loan, but inherited form).
+equation:
+  inscription_id: 'CHIC #324'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#057': k
+    '#023': a
+    '#070': t
+    '#018': u

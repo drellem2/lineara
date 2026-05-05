@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_amnisos_CHIC__328_6_12
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''amnisos''
+  pinned to CHIC #328 tokens [6..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: amnisos
+  phonemes:
+  - a
+  - m
+  - n
+  - i
+  - s
+  - o
+  - s
+  gloss_hint: Amnisos (Cretan port)
+  citation: Beekes 2010 s.v. Amnisos; Furnée 1972 §122.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 12
+  sign_to_phoneme:
+    '#051': a
+    '#070': m
+    '#094': n
+    '#034': i
+    '#056': s
+    '#077': o
+    '#049': s

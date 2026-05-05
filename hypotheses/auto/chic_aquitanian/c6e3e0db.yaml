@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_eki_CHIC__003_11_13
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''eki''
+  pinned to CHIC #003 tokens [11..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: eki
+  phonemes:
+  - e
+  - k
+  - i
+  gloss_hint: sun (short form)
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #003'
+  span:
+  - 11
+  - 13
+  sign_to_phoneme:
+    '#050': e
+    '#016': k
+    '#042': i

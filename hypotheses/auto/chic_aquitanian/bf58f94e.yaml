@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_edun_CHIC__328_4_7
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''edun''
+  pinned to CHIC #328 tokens [4..7].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: edun
+  phonemes:
+  - e
+  - d
+  - u
+  - n
+  gloss_hint: have, possess (proposed verbal stem)
+  citation: Gorrochategui 1984, Aq. EDUNN-; Basque verbal *edun.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 7
+  sign_to_phoneme:
+    '#025': e
+    '#019': d
+    '#051': u
+    '#070': n

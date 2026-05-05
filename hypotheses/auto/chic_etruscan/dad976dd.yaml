@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_cezp_CHIC__294_10_13
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''cezp''
+  pinned to CHIC #294 tokens [10..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: cezp
+  phonemes:
+  - c
+  - e
+  - z
+  - p
+  gloss_hint: eight
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    '#047': c
+    '#070': e
+    '#092': z
+    '#019': p

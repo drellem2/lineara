@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_zazpi_CHIC__294_14_18
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''zazpi''
+  pinned to CHIC #294 tokens [14..18].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: zazpi
+  phonemes:
+  - z
+  - a
+  - z
+  - p
+  - i
+  gloss_hint: seven
+  citation: Trask 1997 ch. 4.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 14
+  - 18
+  sign_to_phoneme:
+    '#044': z
+    '#050': a
+    '#019': z
+    '#028': p
+    '#056': i

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_atta_CHIC__328_0_3
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''atta''
+  pinned to CHIC #328 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: atta
+  phonemes:
+  - a
+  - t
+  - t
+  - a
+  gloss_hint: father
+  citation: Gorrochategui 1984, Aq. ATTA; Basque aita (Trask 1997 ch. 3).
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#034': a
+    '#002': t
+    '#056': t
+    '#070': a

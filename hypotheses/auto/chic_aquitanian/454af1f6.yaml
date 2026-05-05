@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_esku_CHIC__294_12_15
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''esku''
+  pinned to CHIC #294 tokens [12..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: esku
+  phonemes:
+  - e
+  - s
+  - k
+  - u
+  gloss_hint: hand
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 12
+  - 15
+  sign_to_phoneme:
+    '#092': e
+    '#019': s
+    '#044': k
+    '#050': u

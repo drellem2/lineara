@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_avils_CHIC__328_7_11
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''avils''
+  pinned to CHIC #328 tokens [7..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: avils
+  phonemes:
+  - a
+  - v
+  - i
+  - l
+  - s
+  gloss_hint: of years (genitive)
+  citation: Bonfante & Bonfante 2002, glossary avils.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 11
+  sign_to_phoneme:
+    '#070': a
+    '#094': v
+    '#034': i
+    '#056': l
+    '#077': s

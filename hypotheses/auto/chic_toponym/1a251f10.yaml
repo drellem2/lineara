@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_olous_CHIC__065_0_4
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''olous''
+  pinned to CHIC #065 tokens [0..4].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: olous
+  phonemes:
+  - o
+  - l
+  - o
+  - u
+  - s
+  gloss_hint: Olous (NE Cretan coast)
+  citation: Beekes 2010 s.v. Olous.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    '#072': o
+    '#049': l
+    '#071': o
+    '#050': u
+    '#005': s

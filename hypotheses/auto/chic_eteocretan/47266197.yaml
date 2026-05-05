@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_omokrates_CHIC__328_6_14
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''omokrates''
+  pinned to CHIC #328 tokens [6..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: omokrates
+  phonemes:
+  - o
+  - m
+  - o
+  - k
+  - r
+  - a
+  - t
+  - e
+  - s
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 14
+  sign_to_phoneme:
+    '#051': o
+    '#070': m
+    '#094': o
+    '#034': k
+    '#056': r
+    '#077': a
+    '#049': t
+    '#038': e
+    '#029': s

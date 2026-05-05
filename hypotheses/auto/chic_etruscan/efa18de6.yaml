@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_larth_CHIC__065_0_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''larth''
+  pinned to CHIC #065 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: larth
+  phonemes:
+  - l
+  - a
+  - r
+  - th
+  gloss_hint: Larth (common male praenomen)
+  citation: Bonfante & Bonfante 2002, ch. 5 onomastics.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#072': l
+    '#049': a
+    '#071': r
+    '#050': th

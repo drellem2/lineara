@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_sa_CHIC__027_9_10
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''sa'' pinned
+  to CHIC #027 tokens [9..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: sa
+  phonemes:
+  - s
+  - a
+  gloss_hint: six (or four; debated)
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals (debated value).
+equation:
+  inscription_id: 'CHIC #027'
+  span:
+  - 9
+  - 10
+  sign_to_phoneme:
+    '#025': s
+    '#034': a

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_ziche_CHIC__294_14_17
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''ziche''
+  pinned to CHIC #294 tokens [14..17].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: ziche
+  phonemes:
+  - z
+  - i
+  - ch
+  - e
+  gloss_hint: wrote, inscribed
+  citation: Bonfante & Bonfante 2002, glossary ziche.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 14
+  - 17
+  sign_to_phoneme:
+    '#044': z
+    '#050': i
+    '#019': ch
+    '#028': e

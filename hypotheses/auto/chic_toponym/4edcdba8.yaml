@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_gortyn_CHIC__328_0_5
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''gortyn''
+  pinned to CHIC #328 tokens [0..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: gortyn
+  phonemes:
+  - g
+  - o
+  - r
+  - t
+  - u
+  - n
+  gloss_hint: Gortyn (Cretan southern Mesara plain)
+  citation: Beekes 2010 s.v. Gortyn.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    '#034': g
+    '#002': o
+    '#056': r
+    '#070': t
+    '#025': u
+    '#019': n

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_sori_CHIC__328_11_14
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''sori''
+  pinned to CHIC #328 tokens [11..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: sori
+  phonemes:
+  - s
+  - o
+  - r
+  - i
+  gloss_hint: hawk (proposed)
+  citation: Gorrochategui 1984, Aq. SORI- onomastic element.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 11
+  - 14
+  sign_to_phoneme:
+    '#077': s
+    '#049': o
+    '#038': r
+    '#029': i

@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_olympos_CHIC__328_5_11
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''olympos''
+  pinned to CHIC #328 tokens [5..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: olympos
+  phonemes:
+  - o
+  - l
+  - u
+  - m
+  - p
+  - o
+  - s
+  gloss_hint: Olympos (sacred mountain; pre-Greek)
+  citation: Beekes 2010 s.v. Olympos; argued non-IE substrate.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 11
+  sign_to_phoneme:
+    '#019': o
+    '#051': l
+    '#070': u
+    '#094': m
+    '#034': p
+    '#056': o
+    '#077': s

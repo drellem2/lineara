@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_tolose_CHIC__328_8_13
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''tolose''
+  pinned to CHIC #328 tokens [8..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: tolose
+  phonemes:
+  - t
+  - o
+  - l
+  - o
+  - s
+  - e
+  gloss_hint: fortified town
+  citation: Gorrochategui 1984; cf. toponym Tolosa (modern Toulouse, Tolosa GI).
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 13
+  sign_to_phoneme:
+    '#094': t
+    '#034': o
+    '#056': l
+    '#077': o
+    '#049': s
+    '#038': e

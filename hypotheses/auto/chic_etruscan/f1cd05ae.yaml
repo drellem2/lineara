@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_alpan_CHIC__328_2_6
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''alpan''
+  pinned to CHIC #328 tokens [2..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: alpan
+  phonemes:
+  - a
+  - l
+  - p
+  - a
+  - n
+  gloss_hint: gift, votive
+  citation: Bonfante & Bonfante 2002, glossary alpan.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 2
+  - 6
+  sign_to_phoneme:
+    '#056': a
+    '#070': l
+    '#025': p
+    '#019': a
+    '#051': n

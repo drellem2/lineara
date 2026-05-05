@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_nire_CHIC__113_27_30
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''nire''
+  pinned to CHIC #113 tokens [27..30].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: nire
+  phonemes:
+  - n
+  - i
+  - r
+  - e
+  gloss_hint: my
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #113'
+  span:
+  - 27
+  - 30
+  sign_to_phoneme:
+    '#023': n
+    '#042': i
+    '#063': r
+    '#060': e

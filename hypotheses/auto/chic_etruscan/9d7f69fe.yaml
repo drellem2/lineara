@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_alike_CHIC__328_8_12
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''alike''
+  pinned to CHIC #328 tokens [8..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: alike
+  phonemes:
+  - a
+  - l
+  - i
+  - k
+  - e
+  gloss_hint: gave (variant)
+  citation: Bonfante & Bonfante 2002, glossary alike.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    '#094': a
+    '#034': l
+    '#056': i
+    '#077': k
+    '#049': e

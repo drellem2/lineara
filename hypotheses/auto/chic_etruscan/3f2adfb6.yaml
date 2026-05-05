@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_vinum_CHIC__328_2_6
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''vinum''
+  pinned to CHIC #328 tokens [2..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: vinum
+  phonemes:
+  - v
+  - i
+  - n
+  - u
+  - m
+  gloss_hint: wine
+  citation: Bonfante & Bonfante 2002, glossary vinum.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 2
+  - 6
+  sign_to_phoneme:
+    '#056': v
+    '#070': i
+    '#025': n
+    '#019': u
+    '#051': m

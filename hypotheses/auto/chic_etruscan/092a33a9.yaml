@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_velkans_CHIC__328_4_10
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''velkans''
+  pinned to CHIC #328 tokens [4..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: velkans
+  phonemes:
+  - v
+  - e
+  - l
+  - k
+  - a
+  - n
+  - s
+  gloss_hint: Velkans (~Volcanus)
+  citation: Bonfante & Bonfante 2002, glossary velkans.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    '#025': v
+    '#019': e
+    '#051': l
+    '#070': k
+    '#094': a
+    '#034': n
+    '#056': s

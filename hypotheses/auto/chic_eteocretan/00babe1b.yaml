@@ -1,0 +1,35 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_isalabre_CHIC__328_7_14
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''isalabre''
+  pinned to CHIC #328 tokens [7..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: isalabre
+  phonemes:
+  - i
+  - s
+  - a
+  - l
+  - a
+  - b
+  - r
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 14
+  sign_to_phoneme:
+    '#070': i
+    '#094': s
+    '#034': a
+    '#056': l
+    '#077': a
+    '#049': b
+    '#038': r
+    '#029': e

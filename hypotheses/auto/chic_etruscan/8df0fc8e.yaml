@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_papals_CHIC__328_4_9
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''papals''
+  pinned to CHIC #328 tokens [4..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: papals
+  phonemes:
+  - p
+  - a
+  - p
+  - a
+  - l
+  - s
+  gloss_hint: grandchild (paternal)
+  citation: Bonfante & Bonfante 2002, glossary papals.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 9
+  sign_to_phoneme:
+    '#025': p
+    '#019': a
+    '#051': p
+    '#070': a
+    '#094': l
+    '#034': s

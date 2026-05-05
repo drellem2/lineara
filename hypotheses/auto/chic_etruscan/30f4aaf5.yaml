@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_lupuce_CHIC__328_7_12
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''lupuce''
+  pinned to CHIC #328 tokens [7..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: lupuce
+  phonemes:
+  - l
+  - u
+  - p
+  - u
+  - c
+  - e
+  gloss_hint: died
+  citation: Bonfante & Bonfante 2002, glossary lupuce.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 12
+  sign_to_phoneme:
+    '#070': l
+    '#094': u
+    '#034': p
+    '#056': u
+    '#077': c
+    '#049': e

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_lasaia_CHIC__328_8_13
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''lasaia''
+  pinned to CHIC #328 tokens [8..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: lasaia
+  phonemes:
+  - l
+  - a
+  - s
+  - a
+  - i
+  - a
+  gloss_hint: Lasaia (Cretan southern town)
+  citation: Beekes 2010 s.v. Lasaia.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 13
+  sign_to_phoneme:
+    '#094': l
+    '#034': a
+    '#056': s
+    '#077': a
+    '#049': i
+    '#038': a

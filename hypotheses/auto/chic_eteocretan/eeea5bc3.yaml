@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_wai_CHIC__058_4_6
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''wai''
+  pinned to CHIC #058 tokens [4..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: wai
+  phonemes:
+  - w
+  - a
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Whittaker S4). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #058'
+  span:
+  - 4
+  - 6
+  sign_to_phoneme:
+    '#047': w
+    '#070': a
+    '#031': i

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_nefts_CHIC__065_0_4
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''nefts''
+  pinned to CHIC #065 tokens [0..4].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: nefts
+  phonemes:
+  - n
+  - e
+  - f
+  - t
+  - s
+  gloss_hint: nephew, grandson
+  citation: Bonfante & Bonfante 2002, glossary nefts.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    '#072': n
+    '#049': e
+    '#071': f
+    '#050': t
+    '#005': s

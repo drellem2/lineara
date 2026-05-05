@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_gure_CHIC__328_9_12
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''gure''
+  pinned to CHIC #328 tokens [9..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: gure
+  phonemes:
+  - g
+  - u
+  - r
+  - e
+  gloss_hint: our
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    '#034': g
+    '#056': u
+    '#077': r
+    '#049': e

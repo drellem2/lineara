@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_tivr_CHIC__270_6_9
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''tivr''
+  pinned to CHIC #270 tokens [6..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: tivr
+  phonemes:
+  - t
+  - i
+  - v
+  - r
+  gloss_hint: moon, month
+  citation: Bonfante & Bonfante 2002, glossary tivr.
+equation:
+  inscription_id: 'CHIC #270'
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    '#038': t
+    '#031': i
+    '#010': v
+    '#061': r

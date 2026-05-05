@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_phaistos_CHIC__328_4_11
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''phaistos''
+  pinned to CHIC #328 tokens [4..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: phaistos
+  phonemes:
+  - p
+  - h
+  - a
+  - i
+  - s
+  - t
+  - o
+  - s
+  gloss_hint: Phaistos (Cretan palatial site)
+  citation: Beekes 2010 s.v. Phaistos; Linear-B/Linear-A carryover pa-i-to.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 11
+  sign_to_phoneme:
+    '#025': p
+    '#019': h
+    '#051': a
+    '#070': i
+    '#094': s
+    '#034': t
+    '#056': o
+    '#077': s

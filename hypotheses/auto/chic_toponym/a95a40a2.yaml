@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_ephesos_CHIC__328_7_13
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''ephesos''
+  pinned to CHIC #328 tokens [7..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: ephesos
+  phonemes:
+  - e
+  - p
+  - h
+  - e
+  - s
+  - o
+  - s
+  gloss_hint: Ephesos (Ionian coast major city; pre-Greek Apaša)
+  citation: Beekes 2010 s.v. Ephesos; Hittite Apaša carryover.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 13
+  sign_to_phoneme:
+    '#070': e
+    '#094': p
+    '#034': h
+    '#056': e
+    '#077': s
+    '#049': o
+    '#038': s

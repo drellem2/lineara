@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_hilarthune_CHIC__328_6_14
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''hilarthune''
+  pinned to CHIC #328 tokens [6..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: hilarthune
+  phonemes:
+  - h
+  - i
+  - l
+  - a
+  - r
+  - th
+  - u
+  - n
+  - e
+  gloss_hint: festive title (uncertain)
+  citation: Bonfante & Bonfante 2002, glossary hilarthune.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 14
+  sign_to_phoneme:
+    '#051': h
+    '#070': i
+    '#094': l
+    '#034': a
+    '#056': r
+    '#077': th
+    '#049': u
+    '#038': n
+    '#029': e

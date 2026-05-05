@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_olunthos_CHIC__328_0_6
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''olunthos''
+  pinned to CHIC #328 tokens [0..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: olunthos
+  phonemes:
+  - o
+  - l
+  - u
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: Olynthos (Chalkidike town with -nthos suffix)
+  citation: Beekes 2010 s.v. Olynthos; Furnée 1972 §123.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 0
+  - 6
+  sign_to_phoneme:
+    '#034': o
+    '#002': l
+    '#056': u
+    '#070': n
+    '#025': th
+    '#019': o
+    '#051': s

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_gorri_CHIC__113_26_30
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''gorri''
+  pinned to CHIC #113 tokens [26..30].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: gorri
+  phonemes:
+  - g
+  - o
+  - r
+  - r
+  - i
+  gloss_hint: red
+  citation: Trask 1997 ch. 3; cf. Aq. BAIGOR 'red valley'.
+equation:
+  inscription_id: 'CHIC #113'
+  span:
+  - 26
+  - 30
+  sign_to_phoneme:
+    '#057': g
+    '#023': o
+    '#042': r
+    '#063': r
+    '#060': i

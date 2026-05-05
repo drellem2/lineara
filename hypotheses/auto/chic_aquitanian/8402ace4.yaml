@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_itur_CHIC__294_10_13
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''itur''
+  pinned to CHIC #294 tokens [10..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: itur
+  phonemes:
+  - i
+  - t
+  - u
+  - r
+  gloss_hint: spring, fountain
+  citation: Gorrochategui 1984; Basque iturri (Trask 1997).
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    '#047': i
+    '#070': t
+    '#092': u
+    '#019': r

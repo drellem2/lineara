@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_zathrum_CHIC__328_5_10
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''zathrum''
+  pinned to CHIC #328 tokens [5..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: zathrum
+  phonemes:
+  - z
+  - a
+  - th
+  - r
+  - u
+  - m
+  gloss_hint: twenty
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    '#019': z
+    '#051': a
+    '#070': th
+    '#094': r
+    '#034': u
+    '#056': m

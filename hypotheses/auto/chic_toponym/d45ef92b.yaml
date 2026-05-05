@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_tirintha_CHIC__328_6_12
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''tirintha''
+  pinned to CHIC #328 tokens [6..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: tirintha
+  phonemes:
+  - t
+  - i
+  - r
+  - i
+  - n
+  - th
+  - a
+  gloss_hint: Tirintha (Argolid; cf. Tiryns - alternate -ntha form)
+  citation: Furnée 1972 §123; Beekes vol. 2.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 12
+  sign_to_phoneme:
+    '#051': t
+    '#070': i
+    '#094': r
+    '#034': i
+    '#056': n
+    '#077': th
+    '#049': a

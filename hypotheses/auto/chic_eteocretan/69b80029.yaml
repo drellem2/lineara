@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_netamoi_CHIC__328_6_12
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''netamoi''
+  pinned to CHIC #328 tokens [6..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: netamoi
+  phonemes:
+  - n
+  - e
+  - t
+  - a
+  - m
+  - o
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 12
+  sign_to_phoneme:
+    '#051': n
+    '#070': e
+    '#094': t
+    '#034': a
+    '#056': m
+    '#077': o
+    '#049': i

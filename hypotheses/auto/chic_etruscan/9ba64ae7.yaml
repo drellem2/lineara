@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_zilath_CHIC__328_9_13
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''zilath''
+  pinned to CHIC #328 tokens [9..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: zilath
+  phonemes:
+  - z
+  - i
+  - l
+  - a
+  - th
+  gloss_hint: magistrate
+  citation: Bonfante & Bonfante 2002, glossary zilath.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    '#034': z
+    '#056': i
+    '#077': l
+    '#049': a
+    '#038': th

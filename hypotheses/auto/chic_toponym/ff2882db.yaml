@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_ala_CHIC__017_0_2
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''ala'' pinned
+  to CHIC #017 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: ala
+  phonemes:
+  - a
+  - l
+  - a
+  gloss_hint: ala- (substrate cluster fragment)
+  citation: Furnée 1972; Kretschmer 1896 §57 on /ala-/ substrate.
+equation:
+  inscription_id: 'CHIC #017'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#059': a
+    '#054': l
+    '#031': a

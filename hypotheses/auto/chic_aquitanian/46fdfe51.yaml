@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_izotz_CHIC__294_9_12
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''izotz''
+  pinned to CHIC #294 tokens [9..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: izotz
+  phonemes:
+  - i
+  - z
+  - o
+  - tz
+  gloss_hint: ice, frost
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    '#019': i
+    '#047': z
+    '#070': o
+    '#092': tz

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_olio_CHIC__328_5_8
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''olio''
+  pinned to CHIC #328 tokens [5..8].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: olio
+  phonemes:
+  - o
+  - l
+  - i
+  - o
+  gloss_hint: oil
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    '#019': o
+    '#051': l
+    '#070': i
+    '#094': o

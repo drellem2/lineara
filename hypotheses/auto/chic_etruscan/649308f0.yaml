@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_cletram_CHIC__328_7_13
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''cletram''
+  pinned to CHIC #328 tokens [7..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: cletram
+  phonemes:
+  - c
+  - l
+  - e
+  - t
+  - r
+  - a
+  - m
+  gloss_hint: bier, litter (ritual)
+  citation: Bonfante & Bonfante 2002, glossary cletram.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 13
+  sign_to_phoneme:
+    '#070': c
+    '#094': l
+    '#034': e
+    '#056': t
+    '#077': r
+    '#049': a
+    '#038': m

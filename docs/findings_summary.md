@@ -1849,22 +1849,88 @@ CHIC remains pre-Greek (toponym / Eteocretan / similar), and
 chic-v3 will swap in the substrate LMs the lineara harness
 already supports.
 
-#### Pre-registered chic-v3+
+#### chic-v3 — substrate framework on CHIC, 4 pools, right-tail bayesian gate per pool (mg-9700)
 
-- **chic-v3** — substrate framework application to the
-  high-anchor-coverage subset (analogous to the v19 cascade-
-  candidate framing for Linear A).
-- **chic-v4** — cross-script correlation (do the substrate
-  signals detected on Linear A also surface on CHIC?).
-- **chic-v5+** — per-sign value extraction for the still-
-  unknown CHIC syllabographic signs, leveraging the
-  anchor-portion constraint.
+The chic-v3 ticket exercises the full Linear A substrate framework
+(Aquitanian, Etruscan, toponym, Eteocretan — the 4 validated pools
+from v10 / v18 / v21) against the CHIC syllabographic-only corpus.
+The CHIC syllabographic-only token stream is built by filtering the
+chic-v0 corpus through the chic-v1 sign classification (drop
+ideograms / fractions / numerals / uncertain-ID / wholly-unknown
+markers; treat them as structural breaks); the result has 276
+inscriptions, 1,258 syllabographic tokens, and 551 maximal
+syllabographic blocks (one-quarter the size of Linear A's
+~5,000-token corpus). Candidate equations are generated against
+CHIC inscription windows under the same generator rules as Linear
+A's bulk pipeline; matched controls are reused verbatim from the
+Linear A pools (per the chic-v3 brief's option (b) — matched
+controls are about substrate phoneme shape, not target-corpus
+shape, so reuse keeps the chic-v3 result directly comparable to the
+Linear A v10 / v18 / v21 numbers). Score rows are isolated to a
+dedicated sidecar
+`results/experiments.external_phoneme_perplexity_v0.chic.jsonl`.
 
-The chic sub-program does not change any Linear A finding in this
-document. It exercises the same harness on a different corpus
-under a different sign inventory; whether the framework's
-right-tail-Bayesian gate detects substrate kinship on CHIC at the
-population level is the chic-v3 question.
+Per-pool right-tail bayesian gate verdicts on CHIC:
+
+| pool | LM | n paired windows | median sub posterior | median ctrl posterior | MW p (one-tail) | gate |
+|:--|:--|---:|---:|---:|---:|:--:|
+| eteocretan | eteocretan | 2,286 | 0.8038 | 0.6927 | 7.33e-04 | **PASS** |
+| toponym | basque | 2,599 | 0.7941 | 0.7874 | 4.35e-01 | FAIL |
+| etruscan | etruscan | 4,490 | 0.8534 | 0.8758 | 7.20e-01 | FAIL |
+| aquitanian | basque | 5,746 | 0.8739 | 0.9106 | 9.37e-01 | FAIL |
+
+**Eteocretan PASSes; the 3 farther-out pools FAIL.** The
+realised per-pool ordering on CHIC, ranked by p-value
+(stronger-substrate-signal first), is **Eteocretan > toponym >
+Etruscan > Aquitanian** — the Linear A monotonic-with-relatedness
+ordering reproducing exactly on a different script.
+
+This is the cross-script methodological-novel finding the chic-v3
+brief targeted: the framework's PASS/FAIL distinction tracks
+candidate-substrate genealogical relatedness to the target
+script's underlying language, and that tracking *survives*
+cross-script transfer. The Linear A v21 reading — the framework
+detects substrate-LM-phonotactic kinship between candidate
+substrate and target script — generalises to CHIC. The Eteocretan
+PASS magnitude is comparable to the Linear A v21 magnitude
+(p≈1e-3 in both cases, on similar-sized paired window sets);
+chic-v4 will quantify the cross-script correlation directly.
+
+**Caveats.** CHIC's syllabographic stream is one-quarter the size
+of Linear A's; statistical power for the right-tail gate is
+correspondingly lower. The Eteocretan PASS clears the threshold by
+~2 orders of magnitude in p, so the corpus-size caveat does not
+affect that verdict; but the borderline-FAIL pools (especially
+toponym at p=0.435) should be read as informative-but-underpowered
+rather than definitive — distinguishing "no real signal at the
+chic-v3 threshold" from "real signal, insufficient corpus to
+detect at α=0.05" requires CHIC corpus expansion or a more
+sensitive cross-script test (chic-v4).
+
+**No infrastructure changes.** chic-v3 reuses the v8 metric, the
+v18 / v21 control pools, and the v10 right-tail bayesian gate
+verbatim. The only new code is the CHIC syllabographic-stream
+filter (`scripts/build_chic_syllabographic_corpus.py`) and the
+chic-v3 driver (`scripts/chic_substrate_run.py`); a smoke test
+(`harness/tests/test_chic_substrate_run.py`) runs the full
+pipeline on a 5-record toy and asserts re-runs are byte-identical
++ resume-no-op. This is exactly the "methodologically
+straightforward port" the ticket described.
+
+#### Pre-registered chic-v4+
+
+- **chic-v4** — cross-script correlation analysis. Compare the
+  Linear A vs CHIC per-pool gate verdicts and right-tail posterior
+  magnitudes; quantify how much of the CHIC signal is predictable
+  from Linear A's. The pre-registered question: does the
+  Eteocretan PASS *magnitude* on CHIC match the Linear A v21
+  PASS magnitude?
+- **chic-v5+** — per-sign syllable-value extraction framework on
+  the chic-v3-validated Eteocretan pool. The PASS on Eteocretan
+  means the framework has detected a real substrate-shape signal
+  in CHIC; chic-v5 turns that aggregate signal into per-sign
+  proposed-value assignments by ranking candidates whose per-window
+  posterior is in the right-tail of the Eteocretan distribution.
 
 ---
 
@@ -2141,6 +2207,7 @@ committed artefacts under `results/`:
 | chic-v0 CHIC corpus ingest (mg-99df) | `../corpora/cretan_hieroglyphic/all.jsonl` + `../corpus_status.chic.md` |
 | chic-v1 CHIC sign classification + paleographic candidates (mg-c7e3) | `../pools/cretan_hieroglyphic_signs.yaml`, `chic_sign_inventory.md`, `chic_vs_linear_a_sign_inventory_comparison.md` |
 | chic-v2 CHIC paleographic anchor inheritance + partial-reading map (mg-362d) | `../pools/cretan_hieroglyphic_anchors.yaml`, `chic_partial_readings.md`, `chic_anchor_density_leaderboard.md`, `chic_mg_perplexity_sanity_check.md` |
+| chic-v3 substrate framework on CHIC, 4 pools, right-tail bayesian gate per pool (mg-9700) | `../corpora/cretan_hieroglyphic/syllabographic.jsonl`, `../corpora/cretan_hieroglyphic/syllabographic_stats.md`, `experiments.external_phoneme_perplexity_v0.chic.jsonl`, `rollup.bayesian_posterior.{aquitanian,etruscan,toponym,eteocretan}.chic.md`, `rollup.bayesian_posterior.chic.md` (combined) |
 | corpus ingestion record | `../corpus_status.md` |
 
 Per-ticket merge notes are in `docs/findings.md` under

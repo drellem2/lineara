@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_hartu_CHIC__328_10_14
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''hartu''
+  pinned to CHIC #328 tokens [10..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: hartu
+  phonemes:
+  - h
+  - a
+  - r
+  - t
+  - u
+  gloss_hint: take
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 10
+  - 14
+  sign_to_phoneme:
+    '#056': h
+    '#077': a
+    '#049': r
+    '#038': t
+    '#029': u

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_aho_CHIC__058_21_23
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''aho''
+  pinned to CHIC #058 tokens [21..23].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: aho
+  phonemes:
+  - a
+  - h
+  - o
+  gloss_hint: mouth
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #058'
+  span:
+  - 21
+  - 23
+  sign_to_phoneme:
+    '#078': a
+    '#032': h
+    '#070': o

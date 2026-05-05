@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_etnam_CHIC__126_0_4
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''etnam''
+  pinned to CHIC #126 tokens [0..4].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: etnam
+  phonemes:
+  - e
+  - t
+  - n
+  - a
+  - m
+  gloss_hint: and, also
+  citation: Bonfante & Bonfante 2002, ch. 5 conjunctions.
+equation:
+  inscription_id: 'CHIC #126'
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    '#036': e
+    '#047': t
+    '#009': n
+    '#056': a
+    '#062': m

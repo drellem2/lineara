@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_priene_CHIC__065_0_5
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''priene''
+  pinned to CHIC #065 tokens [0..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: priene
+  phonemes:
+  - p
+  - r
+  - i
+  - e
+  - n
+  - e
+  gloss_hint: Priene (Ionian coast city)
+  citation: Beekes 2010 s.v. Priene.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    '#072': p
+    '#049': r
+    '#071': i
+    '#050': e
+    '#005': n
+    '#063': e

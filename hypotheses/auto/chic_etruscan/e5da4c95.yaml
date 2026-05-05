@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_hanthin_CHIC__294_10_15
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''hanthin''
+  pinned to CHIC #294 tokens [10..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: hanthin
+  phonemes:
+  - h
+  - a
+  - n
+  - th
+  - i
+  - n
+  gloss_hint: in front, before (ritual variant)
+  citation: Bonfante & Bonfante 2002, glossary hanthin.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 15
+  sign_to_phoneme:
+    '#047': h
+    '#070': a
+    '#092': n
+    '#019': th
+    '#044': i
+    '#050': n

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_lukia_CHIC__328_6_10
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''lukia''
+  pinned to CHIC #328 tokens [6..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: lukia
+  phonemes:
+  - l
+  - u
+  - k
+  - i
+  - a
+  gloss_hint: Lykia (Lycia; SW Anatolia)
+  citation: Beekes 2010 s.v. Lykia; Hittite Lukka.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 10
+  sign_to_phoneme:
+    '#051': l
+    '#070': u
+    '#094': k
+    '#034': i
+    '#056': a

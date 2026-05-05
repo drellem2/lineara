@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_assos_CHIC__328_1_5
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''assos''
+  pinned to CHIC #328 tokens [1..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: assos
+  phonemes:
+  - a
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Assos (Troad coastal town)
+  citation: Beekes 2010 s.v. Assos; -ssos suffix.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    '#002': a
+    '#056': s
+    '#070': s
+    '#025': o
+    '#019': s

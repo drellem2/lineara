@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_rhytion_CHIC__328_5_11
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''rhytion''
+  pinned to CHIC #328 tokens [5..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: rhytion
+  phonemes:
+  - r
+  - h
+  - u
+  - t
+  - i
+  - o
+  - n
+  gloss_hint: Rhytion (south-Cretan town)
+  citation: Beekes 2010 s.v. Rhytion; Linear-B carryover ru-ki-to.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 11
+  sign_to_phoneme:
+    '#019': r
+    '#051': h
+    '#070': u
+    '#094': t
+    '#034': i
+    '#056': o
+    '#077': n

@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_an_CHIC__039_2_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''an'' pinned
+  to CHIC #039 tokens [2..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: an
+  phonemes:
+  - a
+  - n
+  gloss_hint: who, he (relative)
+  citation: Bonfante & Bonfante 2002, ch. 5 pronouns.
+equation:
+  inscription_id: 'CHIC #039'
+  span:
+  - 2
+  - 3
+  sign_to_phoneme:
+    '#043': a
+    '#070': n

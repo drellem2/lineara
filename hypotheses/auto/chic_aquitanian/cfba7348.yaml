@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_sudur_CHIC__113_26_30
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''sudur''
+  pinned to CHIC #113 tokens [26..30].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: sudur
+  phonemes:
+  - s
+  - u
+  - d
+  - u
+  - r
+  gloss_hint: nose
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #113'
+  span:
+  - 26
+  - 30
+  sign_to_phoneme:
+    '#057': s
+    '#023': u
+    '#042': d
+    '#063': u
+    '#060': r

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_thebai_CHIC__113_26_30
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''thebai''
+  pinned to CHIC #113 tokens [26..30].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: thebai
+  phonemes:
+  - th
+  - e
+  - b
+  - a
+  - i
+  gloss_hint: Thebai (Boeotian Mycenaean palace site)
+  citation: Beekes 2010 s.v. Thebai; Linear-B te-qa-i.
+equation:
+  inscription_id: 'CHIC #113'
+  span:
+  - 26
+  - 30
+  sign_to_phoneme:
+    '#057': th
+    '#023': e
+    '#042': b
+    '#063': a
+    '#060': i

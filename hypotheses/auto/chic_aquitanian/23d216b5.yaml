@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_ile_CHIC__071_1_3
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''ile''
+  pinned to CHIC #071 tokens [1..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: ile
+  phonemes:
+  - i
+  - l
+  - e
+  gloss_hint: hair
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #071'
+  span:
+  - 1
+  - 3
+  sign_to_phoneme:
+    '#056': i
+    '#070': l
+    '#061': e

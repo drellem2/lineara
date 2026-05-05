@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_muvalch_CHIC__294_10_15
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''muvalch''
+  pinned to CHIC #294 tokens [10..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: muvalch
+  phonemes:
+  - m
+  - u
+  - v
+  - a
+  - l
+  - ch
+  gloss_hint: fifty (or forty; debated)
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals (debated).
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 15
+  sign_to_phoneme:
+    '#047': m
+    '#070': u
+    '#092': v
+    '#019': a
+    '#044': l
+    '#050': ch

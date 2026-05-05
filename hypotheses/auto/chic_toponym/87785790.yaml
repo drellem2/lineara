@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_tiruns_CHIC__328_0_5
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''tiruns''
+  pinned to CHIC #328 tokens [0..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: tiruns
+  phonemes:
+  - t
+  - i
+  - r
+  - u
+  - n
+  - s
+  gloss_hint: Tiryns (Argolid Mycenaean site, pre-Greek name)
+  citation: Beekes 2010 s.v. Tiryns.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    '#034': t
+    '#002': i
+    '#056': r
+    '#070': u
+    '#025': n
+    '#019': s

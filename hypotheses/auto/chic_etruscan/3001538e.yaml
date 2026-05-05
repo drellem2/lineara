@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_sech_CHIC__058_4_6
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''sech''
+  pinned to CHIC #058 tokens [4..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: sech
+  phonemes:
+  - s
+  - e
+  - ch
+  gloss_hint: daughter
+  citation: Bonfante & Bonfante 2002, glossary sech; funerary epitaphs.
+equation:
+  inscription_id: 'CHIC #058'
+  span:
+  - 4
+  - 6
+  sign_to_phoneme:
+    '#047': s
+    '#070': e
+    '#031': ch

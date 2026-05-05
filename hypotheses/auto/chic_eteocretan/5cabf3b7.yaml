@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_komnai_CHIC__255_4_9
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''komnai''
+  pinned to CHIC #255 tokens [4..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: komnai
+  phonemes:
+  - k
+  - o
+  - m
+  - n
+  - a
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 3). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 4
+  - 9
+  sign_to_phoneme:
+    '#028': k
+    '#049': o
+    '#042': m
+    '#031': n
+    '#056': a
+    '#036': i

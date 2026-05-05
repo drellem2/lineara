@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_capra_CHIC__255_5_9
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''capra''
+  pinned to CHIC #255 tokens [5..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: capra
+  phonemes:
+  - c
+  - a
+  - p
+  - r
+  - a
+  gloss_hint: goat
+  citation: Bonfante & Bonfante 2002, glossary capra; cf. Latin loan.
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    '#049': c
+    '#042': a
+    '#031': p
+    '#056': r
+    '#036': a

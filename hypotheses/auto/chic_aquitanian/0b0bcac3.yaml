@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_hauten_CHIC__328_5_10
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''hauten''
+  pinned to CHIC #328 tokens [5..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: hauten
+  phonemes:
+  - h
+  - a
+  - u
+  - t
+  - e
+  - n
+  gloss_hint: great (proposed)
+  citation: Gorrochategui 1984, Aq. HAUTEN-/HAVTAN-.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    '#019': h
+    '#051': a
+    '#070': u
+    '#094': t
+    '#034': e
+    '#056': n

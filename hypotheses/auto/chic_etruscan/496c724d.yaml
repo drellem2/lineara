@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_nethuns_CHIC__294_10_15
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''nethuns''
+  pinned to CHIC #294 tokens [10..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: nethuns
+  phonemes:
+  - n
+  - e
+  - th
+  - u
+  - n
+  - s
+  gloss_hint: Nethuns (~Neptune)
+  citation: Bonfante & Bonfante 2002, glossary nethuns.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 15
+  sign_to_phoneme:
+    '#047': n
+    '#070': e
+    '#092': th
+    '#019': u
+    '#044': n
+    '#050': s

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_etxe_CHIC__043_0_2
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''etxe''
+  pinned to CHIC #043 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: etxe
+  phonemes:
+  - e
+  - tx
+  - e
+  gloss_hint: house
+  citation: Trask 1997 ch. 3 (Basque etxe).
+equation:
+  inscription_id: 'CHIC #043'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#007': e
+    '#010': tx
+    '#006': e

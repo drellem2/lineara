@@ -1,0 +1,29 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_iarei_CHIC__255_4_8
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''iarei''
+  pinned to CHIC #255 tokens [4..8].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: iarei
+  phonemes:
+  - i
+  - a
+  - r
+  - e
+  - i
+  gloss_hint: unknown
+  citation: 'Attested in 9 inscription(s) (first: Praisos 5). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    '#028': i
+    '#049': a
+    '#042': r
+    '#031': e
+    '#056': i

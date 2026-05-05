@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_nthos_CHIC__294_8_11
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''nthos''
+  pinned to CHIC #294 tokens [8..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: nthos
+  phonemes:
+  - n
+  - th
+  - o
+  - s
+  gloss_hint: -nthos (Pre-Greek substrate suffix; Korinthos / Probalinthos / Hyakinthos
+    / Olynthos)
+  citation: Beekes 2010 vol. 2 §4 on -nthos; Furnée 1972 §123.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    '#041': n
+    '#019': th
+    '#047': o
+    '#070': s

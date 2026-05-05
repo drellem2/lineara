@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_mete_CHIC__057_0_3
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''mete''
+  pinned to CHIC #057 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: mete
+  phonemes:
+  - m
+  - e
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 2 inscription(s) (first: Praisos 1). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #057'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#042': m
+    '#029': e
+    '#032': t
+    '#011': e

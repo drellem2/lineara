@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_pergamos_CHIC__328_7_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''pergamos''
+  pinned to CHIC #328 tokens [7..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: pergamos
+  phonemes:
+  - p
+  - e
+  - r
+  - g
+  - a
+  - m
+  - o
+  - s
+  gloss_hint: Pergamos / Pergamon (Mysian highland city)
+  citation: Beekes 2010 s.v. Pergamos.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 14
+  sign_to_phoneme:
+    '#070': p
+    '#094': e
+    '#034': r
+    '#056': g
+    '#077': a
+    '#049': m
+    '#038': o
+    '#029': s

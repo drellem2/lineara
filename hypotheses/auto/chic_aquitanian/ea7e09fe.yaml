@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_buru_CHIC__294_10_13
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''buru''
+  pinned to CHIC #294 tokens [10..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: buru
+  phonemes:
+  - b
+  - u
+  - r
+  - u
+  gloss_hint: head
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    '#047': b
+    '#070': u
+    '#092': r
+    '#019': u

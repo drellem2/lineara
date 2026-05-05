@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_iassos_CHIC__328_8_13
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''iassos''
+  pinned to CHIC #328 tokens [8..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: iassos
+  phonemes:
+  - i
+  - a
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Iassos (Carian coast town)
+  citation: Beekes 2010 s.v. Iassos.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 13
+  sign_to_phoneme:
+    '#094': i
+    '#034': a
+    '#056': s
+    '#077': s
+    '#049': o
+    '#038': s

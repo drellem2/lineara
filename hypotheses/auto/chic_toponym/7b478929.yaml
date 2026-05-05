@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_kuthera_CHIC__065_0_5
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''kuthera''
+  pinned to CHIC #065 tokens [0..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: kuthera
+  phonemes:
+  - k
+  - u
+  - th
+  - e
+  - r
+  - a
+  gloss_hint: Kythera (south-Aegean island; Linear-A site)
+  citation: Beekes 2010 s.v. Kythera.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    '#072': k
+    '#049': u
+    '#071': th
+    '#050': e
+    '#005': r
+    '#063': a

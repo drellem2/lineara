@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_trutnu_CHIC__328_4_9
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''trutnu''
+  pinned to CHIC #328 tokens [4..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: trutnu
+  phonemes:
+  - t
+  - r
+  - u
+  - t
+  - n
+  - u
+  gloss_hint: priestly title (haruspex / diviner)
+  citation: Bonfante & Bonfante 2002, glossary trutnu.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 9
+  sign_to_phoneme:
+    '#025': t
+    '#019': r
+    '#051': u
+    '#070': t
+    '#094': n
+    '#034': u

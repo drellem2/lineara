@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_penthuna_CHIC__328_6_12
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''penthuna''
+  pinned to CHIC #328 tokens [6..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: penthuna
+  phonemes:
+  - p
+  - e
+  - n
+  - th
+  - u
+  - n
+  - a
+  gloss_hint: stone-marker, cippus
+  citation: Bonfante & Bonfante 2002, glossary penthuna.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 12
+  sign_to_phoneme:
+    '#051': p
+    '#070': e
+    '#094': n
+    '#034': th
+    '#056': u
+    '#077': n
+    '#049': a

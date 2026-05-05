@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_huth_CHIC__004_0_2
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''huth''
+  pinned to CHIC #004 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: huth
+  phonemes:
+  - h
+  - u
+  - th
+  gloss_hint: four (or six; debated)
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals (debated value).
+equation:
+  inscription_id: 'CHIC #004'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#019': h
+    '#038': u
+    '#059': th

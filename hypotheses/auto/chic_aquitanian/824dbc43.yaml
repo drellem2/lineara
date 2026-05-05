@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_zuri_CHIC__328_6_9
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''zuri''
+  pinned to CHIC #328 tokens [6..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: zuri
+  phonemes:
+  - z
+  - u
+  - r
+  - i
+  gloss_hint: white
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    '#051': z
+    '#070': u
+    '#094': r
+    '#034': i

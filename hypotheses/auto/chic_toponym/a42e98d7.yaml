@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_dikte_CHIC__328_1_5
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''dikte''
+  pinned to CHIC #328 tokens [1..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: dikte
+  phonemes:
+  - d
+  - i
+  - k
+  - t
+  - e
+  gloss_hint: Dikte (sacred mountain, eastern Crete)
+  citation: Beekes 2010 s.v. Dikte; argued non-IE substrate.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    '#002': d
+    '#056': i
+    '#070': k
+    '#025': t
+    '#019': e

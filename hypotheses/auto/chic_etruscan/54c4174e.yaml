@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_thunchulth_CHIC__328_4_10
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''thunchulth''
+  pinned to CHIC #328 tokens [4..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: thunchulth
+  phonemes:
+  - th
+  - u
+  - n
+  - ch
+  - u
+  - l
+  - th
+  gloss_hint: at one time, once
+  citation: Bonfante & Bonfante 2002, glossary thunchulth.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    '#025': th
+    '#019': u
+    '#051': n
+    '#070': ch
+    '#094': u
+    '#034': l
+    '#056': th

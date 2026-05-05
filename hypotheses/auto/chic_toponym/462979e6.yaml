@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_gor_CHIC__004_0_2
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''gor'' pinned
+  to CHIC #004 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: gor
+  phonemes:
+  - g
+  - o
+  - r
+  gloss_hint: gor- (initial fragment; Gortyn)
+  citation: Beekes 2010 s.v. Gortyn.
+equation:
+  inscription_id: 'CHIC #004'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#019': g
+    '#038': o
+    '#059': r

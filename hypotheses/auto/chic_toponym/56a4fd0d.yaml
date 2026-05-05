@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_mna_CHIC__071_0_2
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''mna'' pinned
+  to CHIC #071 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: mna
+  phonemes:
+  - m
+  - n
+  - a
+  gloss_hint: -mna (Pre-Greek substrate suffix variant)
+  citation: Furnée 1972.
+equation:
+  inscription_id: 'CHIC #071'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#022': m
+    '#056': n
+    '#070': a

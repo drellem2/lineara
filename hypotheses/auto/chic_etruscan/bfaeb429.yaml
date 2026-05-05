@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_aiser_CHIC__294_8_12
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''aiser''
+  pinned to CHIC #294 tokens [8..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: aiser
+  phonemes:
+  - a
+  - i
+  - s
+  - e
+  - r
+  gloss_hint: gods (plural)
+  citation: Bonfante & Bonfante 2002, glossary aiser.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 8
+  - 12
+  sign_to_phoneme:
+    '#041': a
+    '#019': i
+    '#047': s
+    '#070': e
+    '#092': r

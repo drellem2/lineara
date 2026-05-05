@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_athenai_CHIC__294_10_15
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''athenai''
+  pinned to CHIC #294 tokens [10..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: athenai
+  phonemes:
+  - a
+  - th
+  - e
+  - n
+  - a
+  - i
+  gloss_hint: Athenai (Athens; cf. pre-Greek Athena)
+  citation: Beekes 2010 s.v. Athena (substrate goddess).
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 15
+  sign_to_phoneme:
+    '#047': a
+    '#070': th
+    '#092': e
+    '#019': n
+    '#044': a
+    '#050': i

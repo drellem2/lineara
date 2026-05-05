@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_fler_CHIC__113_27_30
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''fler''
+  pinned to CHIC #113 tokens [27..30].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: fler
+  phonemes:
+  - f
+  - l
+  - e
+  - r
+  gloss_hint: offering, sacrifice
+  citation: Bonfante & Bonfante 2002, glossary fler.
+equation:
+  inscription_id: 'CHIC #113'
+  span:
+  - 27
+  - 30
+  sign_to_phoneme:
+    '#023': f
+    '#042': l
+    '#063': e
+    '#060': r

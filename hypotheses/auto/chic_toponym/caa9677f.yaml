@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_keos_CHIC__065_0_3
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''keos''
+  pinned to CHIC #065 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: keos
+  phonemes:
+  - k
+  - e
+  - o
+  - s
+  gloss_hint: Keos (Cycladic island; Linear-A inscription site)
+  citation: Beekes 2010 s.v. Keos; Linear-A finds at Ayia Irini.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#072': k
+    '#049': e
+    '#071': o
+    '#050': s

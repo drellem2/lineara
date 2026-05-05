@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_praisos_CHIC__328_7_13
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''praisos''
+  pinned to CHIC #328 tokens [7..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: praisos
+  phonemes:
+  - p
+  - r
+  - a
+  - i
+  - s
+  - o
+  - s
+  gloss_hint: Praisos (Eastern Cretan town with Eteocretan inscriptions)
+  citation: Beekes 2010 s.v. Praisos; Furnée 1972 §122.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 13
+  sign_to_phoneme:
+    '#070': p
+    '#094': r
+    '#034': a
+    '#056': i
+    '#077': s
+    '#049': o
+    '#038': s

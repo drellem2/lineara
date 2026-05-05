@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_mi_CHIC__017_1_2
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''mi'' pinned
+  to CHIC #017 tokens [1..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: mi
+  phonemes:
+  - m
+  - i
+  gloss_hint: I (also "this is")
+  citation: Bonfante & Bonfante 2002, ch. 5 pronouns; "mi" opens many votives.
+equation:
+  inscription_id: 'CHIC #017'
+  span:
+  - 1
+  - 2
+  sign_to_phoneme:
+    '#054': m
+    '#031': i

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_anai_CHIC__302_0_3
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''anai''
+  pinned to CHIC #302 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: anai
+  phonemes:
+  - a
+  - n
+  - a
+  - i
+  gloss_hint: brother
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #302'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#057': a
+    '#034': n
+    '#044': a
+    '#049': i

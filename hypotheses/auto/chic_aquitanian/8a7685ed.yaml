@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_behar_CHIC__328_2_6
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''behar''
+  pinned to CHIC #328 tokens [2..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: behar
+  phonemes:
+  - b
+  - e
+  - h
+  - a
+  - r
+  gloss_hint: need
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 2
+  - 6
+  sign_to_phoneme:
+    '#056': b
+    '#070': e
+    '#025': h
+    '#019': a
+    '#051': r

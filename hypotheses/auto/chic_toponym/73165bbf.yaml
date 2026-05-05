@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_chios_CHIC__328_10_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''chios''
+  pinned to CHIC #328 tokens [10..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: chios
+  phonemes:
+  - k
+  - h
+  - i
+  - o
+  - s
+  gloss_hint: Chios (East-Aegean island)
+  citation: Beekes 2010 s.v. Chios.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 10
+  - 14
+  sign_to_phoneme:
+    '#056': k
+    '#077': h
+    '#049': i
+    '#038': o
+    '#029': s

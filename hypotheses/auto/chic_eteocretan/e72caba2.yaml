@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_eko_CHIC__027_8_10
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''eko''
+  pinned to CHIC #027 tokens [8..10].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: eko
+  phonemes:
+  - e
+  - k
+  - o
+  gloss_hint: unknown
+  citation: 'Attested in 3 inscription(s) (first: Praisos 2). At least one attestation
+    is from a partial bilingual (Praisos 2 / Dreros 1); see corpora/eteocretan/inscriptions/.
+    Source: Duhoux 1982 / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #027'
+  span:
+  - 8
+  - 10
+  sign_to_phoneme:
+    '#057': e
+    '#025': k
+    '#034': o

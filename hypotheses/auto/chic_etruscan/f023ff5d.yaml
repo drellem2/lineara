@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_cesu_CHIC__294_12_15
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''cesu''
+  pinned to CHIC #294 tokens [12..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: cesu
+  phonemes:
+  - c
+  - e
+  - s
+  - u
+  gloss_hint: lies (in tomb)
+  citation: Bonfante & Bonfante 2002, glossary cesu; funerary verb.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 12
+  - 15
+  sign_to_phoneme:
+    '#092': c
+    '#019': e
+    '#044': s
+    '#050': u

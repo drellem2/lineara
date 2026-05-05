@@ -1,0 +1,40 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_poikilassos_CHIC__328_4_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''poikilassos''
+  pinned to CHIC #328 tokens [4..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: poikilassos
+  phonemes:
+  - p
+  - o
+  - i
+  - k
+  - i
+  - l
+  - a
+  - s
+  - s
+  - o
+  - s
+  gloss_hint: Poikilassos (south-Cretan town with -ssos suffix)
+  citation: Furnée 1972 §122; Beekes vol. 2 appendix.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 4
+  - 14
+  sign_to_phoneme:
+    '#025': p
+    '#019': o
+    '#051': i
+    '#070': k
+    '#094': i
+    '#034': l
+    '#056': a
+    '#077': s
+    '#049': s
+    '#038': o
+    '#029': s

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_ttos_CHIC__328_8_11
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''ttos''
+  pinned to CHIC #328 tokens [8..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: ttos
+  phonemes:
+  - t
+  - t
+  - o
+  - s
+  gloss_hint: -ttos (Attic substrate suffix; Hymettos / Lykabettos / Ardettos)
+  citation: Beekes 2010 vol. 2 §5 on -ttos; Furnée 1972 §124.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    '#094': t
+    '#034': t
+    '#056': o
+    '#077': s

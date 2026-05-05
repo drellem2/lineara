@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_sagar_CHIC__255_4_8
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''sagar''
+  pinned to CHIC #255 tokens [4..8].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: sagar
+  phonemes:
+  - s
+  - a
+  - g
+  - a
+  - r
+  gloss_hint: apple
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #255'
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    '#028': s
+    '#049': a
+    '#042': g
+    '#031': a
+    '#056': r

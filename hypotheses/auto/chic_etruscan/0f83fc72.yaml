@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_semph_CHIC__305_0_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''semph''
+  pinned to CHIC #305 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: semph
+  phonemes:
+  - s
+  - e
+  - m
+  - ph
+  gloss_hint: seven
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals.
+equation:
+  inscription_id: 'CHIC #305'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#042': s
+    '#066': e
+    '#016': m
+    '#062': ph

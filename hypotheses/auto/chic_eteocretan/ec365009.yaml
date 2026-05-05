@@ -1,0 +1,35 @@
+schema_version: candidate_equation.v1
+name: chic_eteocretan_zethante_CHIC__328_6_13
+description: 'chic-v3 candidate equation: pool=''eteocretan'' entry surface=''zethante''
+  pinned to CHIC #328 tokens [6..13].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: eteocretan
+root:
+  surface: zethante
+  phonemes:
+  - z
+  - e
+  - t
+  - h
+  - a
+  - n
+  - t
+  - e
+  gloss_hint: unknown
+  citation: 'Attested in 1 inscription(s) (first: Psychro stone). Source: Duhoux 1982
+    / Whittaker 2017 / Younger online catalog (see corpora/eteocretan.README.md).'
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 13
+  sign_to_phoneme:
+    '#051': z
+    '#070': e
+    '#094': t
+    '#034': h
+    '#056': a
+    '#077': n
+    '#049': t
+    '#038': e

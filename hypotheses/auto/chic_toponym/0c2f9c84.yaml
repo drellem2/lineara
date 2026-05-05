@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_sos_CHIC__017_0_2
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''sos'' pinned
+  to CHIC #017 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: sos
+  phonemes:
+  - s
+  - o
+  - s
+  gloss_hint: -sos (Pre-Greek substrate ending; reduced -ssos variant)
+  citation: Beekes 2010 vol. 2 §3 on the -ssos > -sos reflex.
+equation:
+  inscription_id: 'CHIC #017'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#059': s
+    '#054': o
+    '#031': s

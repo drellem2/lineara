@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_naxos_CHIC__065_0_5
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''naxos''
+  pinned to CHIC #065 tokens [0..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: naxos
+  phonemes:
+  - n
+  - a
+  - k
+  - s
+  - o
+  - s
+  gloss_hint: Naxos (Cycladic island, largest)
+  citation: Beekes 2010 s.v. Naxos; aksos / -aksos substrate suffix.
+equation:
+  inscription_id: 'CHIC #065'
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    '#072': n
+    '#049': a
+    '#071': k
+    '#050': s
+    '#005': o
+    '#063': s

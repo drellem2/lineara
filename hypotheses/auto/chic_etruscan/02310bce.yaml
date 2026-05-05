@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_puia_CHIC__328_1_4
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''puia''
+  pinned to CHIC #328 tokens [1..4].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: puia
+  phonemes:
+  - p
+  - u
+  - i
+  - a
+  gloss_hint: wife
+  citation: Bonfante & Bonfante 2002, glossary puia; cf. TLE 887.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    '#002': p
+    '#056': u
+    '#070': i
+    '#025': a

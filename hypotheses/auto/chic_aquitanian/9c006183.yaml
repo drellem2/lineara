@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_arreba_CHIC__294_10_15
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''arreba''
+  pinned to CHIC #294 tokens [10..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: arreba
+  phonemes:
+  - a
+  - r
+  - r
+  - e
+  - b
+  - a
+  gloss_hint: sister (of a man)
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 10
+  - 15
+  sign_to_phoneme:
+    '#047': a
+    '#070': r
+    '#092': r
+    '#019': e
+    '#044': b
+    '#050': a

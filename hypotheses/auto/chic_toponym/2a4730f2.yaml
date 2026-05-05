@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_orchomenos_CHIC__328_5_14
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''orchomenos''
+  pinned to CHIC #328 tokens [5..14].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: orchomenos
+  phonemes:
+  - o
+  - r
+  - k
+  - h
+  - o
+  - m
+  - e
+  - n
+  - o
+  - s
+  gloss_hint: Orchomenos (Boeotian Mycenaean palace)
+  citation: Beekes 2010 s.v. Orchomenos; Linear-B e-ko-me-no.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 14
+  sign_to_phoneme:
+    '#019': o
+    '#051': r
+    '#070': k
+    '#094': h
+    '#034': o
+    '#056': m
+    '#077': e
+    '#049': n
+    '#038': o
+    '#029': s

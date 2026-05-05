@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_phai_CHIC__328_2_5
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''phai''
+  pinned to CHIC #328 tokens [2..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: phai
+  phonemes:
+  - p
+  - h
+  - a
+  - i
+  gloss_hint: phai- (initial fragment; Phaistos)
+  citation: Beekes 2010 s.v. Phaistos.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    '#056': p
+    '#070': h
+    '#025': a
+    '#019': i

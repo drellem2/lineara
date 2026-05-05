@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_seni_CHIC__328_2_5
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''seni''
+  pinned to CHIC #328 tokens [2..5].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: seni
+  phonemes:
+  - s
+  - e
+  - n
+  - i
+  gloss_hint: child, kin
+  citation: Gorrochategui 1984, Aq. SENI- name element; Basque sein "child" (Trask
+    1997).
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 2
+  - 5
+  sign_to_phoneme:
+    '#056': s
+    '#070': e
+    '#025': n
+    '#019': i

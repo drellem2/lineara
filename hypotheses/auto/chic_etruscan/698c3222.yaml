@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_leu_CHIC__027_4_6
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''leu''
+  pinned to CHIC #027 tokens [4..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: leu
+  phonemes:
+  - l
+  - e
+  - u
+  gloss_hint: lion (in some readings)
+  citation: Bonfante & Bonfante 2002, glossary leu (uncertain).
+equation:
+  inscription_id: 'CHIC #027'
+  span:
+  - 4
+  - 6
+  sign_to_phoneme:
+    '#092': l
+    '#067': e
+    '#032': u

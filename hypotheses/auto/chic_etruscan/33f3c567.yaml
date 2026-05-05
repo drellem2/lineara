@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_fleres_CHIC__328_7_12
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''fleres''
+  pinned to CHIC #328 tokens [7..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: fleres
+  phonemes:
+  - f
+  - l
+  - e
+  - r
+  - e
+  - s
+  gloss_hint: statue, votive figure
+  citation: Bonfante & Bonfante 2002, glossary fleres.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 7
+  - 12
+  sign_to_phoneme:
+    '#070': f
+    '#094': l
+    '#034': e
+    '#056': r
+    '#077': e
+    '#049': s

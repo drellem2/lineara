@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_aios_CHIC__031_0_3
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''aios''
+  pinned to CHIC #031 tokens [0..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: aios
+  phonemes:
+  - a
+  - i
+  - o
+  - s
+  gloss_hint: -aios (Pre-Greek substrate adjective suffix)
+  citation: Beekes 2010 vol. 2 appendix.
+equation:
+  inscription_id: 'CHIC #031'
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    '#034': a
+    '#049': i
+    '#056': o
+    '#052': s

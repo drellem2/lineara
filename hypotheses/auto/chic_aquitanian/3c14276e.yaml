@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_ohe_CHIC__056_0_2
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''ohe''
+  pinned to CHIC #056 tokens [0..2].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: ohe
+  phonemes:
+  - o
+  - h
+  - e
+  gloss_hint: bed
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #056'
+  span:
+  - 0
+  - 2
+  sign_to_phoneme:
+    '#070': o
+    '#031': h
+    '#019': e

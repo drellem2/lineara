@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_seme_CHIC__294_9_12
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''seme''
+  pinned to CHIC #294 tokens [9..12].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: seme
+  phonemes:
+  - s
+  - e
+  - m
+  - e
+  gloss_hint: son
+  citation: Trask 1997 ch. 3; cf. Aq. SEMBE.
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    '#019': s
+    '#047': e
+    '#070': m
+    '#092': e

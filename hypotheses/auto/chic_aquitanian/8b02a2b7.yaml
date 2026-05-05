@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_cison_CHIC__294_11_15
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''cison''
+  pinned to CHIC #294 tokens [11..15].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: cison
+  phonemes:
+  - c
+  - i
+  - s
+  - o
+  - n
+  gloss_hint: man
+  citation: Gorrochategui 1984, Aq. CISON; Basque cognate gizon (Trask 1997).
+equation:
+  inscription_id: 'CHIC #294'
+  span:
+  - 11
+  - 15
+  sign_to_phoneme:
+    '#070': c
+    '#092': i
+    '#019': s
+    '#044': o
+    '#050': n

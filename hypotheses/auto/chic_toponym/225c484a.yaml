@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_pulos_CHIC__328_5_9
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''pulos''
+  pinned to CHIC #328 tokens [5..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: pulos
+  phonemes:
+  - p
+  - u
+  - l
+  - o
+  - s
+  gloss_hint: Pylos (Messenian Mycenaean palace)
+  citation: Beekes 2010 s.v. Pylos; Linear-B pu-ro.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    '#019': p
+    '#051': u
+    '#070': l
+    '#094': o
+    '#034': s

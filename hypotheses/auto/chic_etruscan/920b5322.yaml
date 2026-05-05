@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_thesan_CHIC__328_5_9
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''thesan''
+  pinned to CHIC #328 tokens [5..9].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: thesan
+  phonemes:
+  - th
+  - e
+  - s
+  - a
+  - n
+  gloss_hint: dawn (goddess)
+  citation: Bonfante & Bonfante 2002, glossary thesan.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    '#019': th
+    '#051': e
+    '#070': s
+    '#094': a
+    '#034': n

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_andros_CHIC__328_6_11
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''andros''
+  pinned to CHIC #328 tokens [6..11].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: andros
+  phonemes:
+  - a
+  - n
+  - d
+  - r
+  - o
+  - s
+  gloss_hint: Andros (Cycladic island)
+  citation: Beekes 2010 s.v. Andros.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 6
+  - 11
+  sign_to_phoneme:
+    '#051': a
+    '#070': n
+    '#094': d
+    '#034': r
+    '#056': o
+    '#077': s

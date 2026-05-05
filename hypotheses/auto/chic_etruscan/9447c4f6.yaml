@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: chic_etruscan_ci_CHIC__039_2_3
+description: 'chic-v3 candidate equation: pool=''etruscan'' entry surface=''ci'' pinned
+  to CHIC #039 tokens [2..3].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: etruscan
+root:
+  surface: ci
+  phonemes:
+  - c
+  - i
+  gloss_hint: three
+  citation: Bonfante & Bonfante 2002, ch. 5 numerals; dice of Tuscania.
+equation:
+  inscription_id: 'CHIC #039'
+  span:
+  - 2
+  - 3
+  sign_to_phoneme:
+    '#043': c
+    '#070': i

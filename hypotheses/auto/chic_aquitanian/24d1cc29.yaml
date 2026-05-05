@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: chic_aquitanian_ate_CHIC__057_5_7
+description: 'chic-v3 candidate equation: pool=''aquitanian'' entry surface=''ate''
+  pinned to CHIC #057 tokens [5..7].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: aquitanian
+root:
+  surface: ate
+  phonemes:
+  - a
+  - t
+  - e
+  gloss_hint: door
+  citation: Trask 1997 ch. 3.
+equation:
+  inscription_id: 'CHIC #057'
+  span:
+  - 5
+  - 7
+  sign_to_phoneme:
+    '#079': a
+    '#032': t
+    '#013': e

@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: chic_toponym_kudonia_CHIC__328_0_6
+description: 'chic-v3 candidate equation: pool=''toponym'' entry surface=''kudonia''
+  pinned to CHIC #328 tokens [0..6].'
+author: scripts/chic_substrate_run.py
+created: '2026-05-05'
+source_pool: toponym
+root:
+  surface: kudonia
+  phonemes:
+  - k
+  - u
+  - d
+  - o
+  - n
+  - i
+  - a
+  gloss_hint: Kydonia (NW Cretan town, modern Khania)
+  citation: Beekes 2010 s.v. Kudonia.
+equation:
+  inscription_id: 'CHIC #328'
+  span:
+  - 0
+  - 6
+  sign_to_phoneme:
+    '#034': k
+    '#002': u
+    '#056': d
+    '#070': o
+    '#025': n
+    '#019': i
+    '#051': a
