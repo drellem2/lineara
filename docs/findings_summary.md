@@ -38,17 +38,35 @@ asymmetric per-candidate refinement** in chic-v11, mg-d69c;
 **unified v28 + chic-v11 polish pass integrating Linear A + CHIC
 LOO verdicts into a symmetric §4.6/§4.7 narrative and framing
 leave-one-out held-out validation as the fifth discipline-
-protecting pillar** in v29, mg-a1e2)** — a publication-readable
+protecting pillar** in v29, mg-a1e2; **cross-pool L3 robustness
+extended to the 29 chic-v5 tier-3 candidates (8 reclassify to
+tier-2-equivalent, 4 tier-3-corroborated, 17 tier-3-uncorroborated)**
+in chic-v12, mg-2035; **within-window context inspection on the
+8 chic-v12 tier-2-equivalent candidates** yielding **6 consistent
+/ 2 inconclusive / 0 inconsistent** in chic-v13, mg-5261;
+**leave-one-out held-out validation of the chic-v12 cross-pool L3
+reclassification methodology on the 20 chic-v2 anchors** yielding
+**60.0% LOO recovery vs chic-v12's 27.6% on the tier-3 set
+(-32.4pp below baseline → cross-pool L3 reclassification is
+anti-evidentiary on the tier-3 set; cross-pool L3 demoted to
+permissive corroboration; chic-v13 within-window context
+inspection becomes the load-bearing fourth discipline pillar)**
+in chic-v14, mg-7f57; **methodology paper polish pass integrating
+chic-v12 + chic-v13 + chic-v14 — cross-pool L3 demoted to
+permissive corroboration; n=32 evidence-graded candidates with 7
+carrying paired cross-pool L3 + within-window context-inspection
+evidence; within-window context inspection promoted to the
+load-bearing fourth discipline pillar** in v30, mg-ee1f)** — a publication-readable
 consolidation of what
 the Lineara project has mechanically established **across two
 undeciphered Cretan scripts (Linear A and Cretan Hieroglyphic)**
-across 28 Linear A work items + 11 chic sub-program work items,
+across 28 Linear A work items + 14 chic sub-program work items,
 anchored on the SigLA corpus ingest (`mg-1c8c`, Linear A) and the
 Younger CHIC web edition ingest (`mg-99df`, CHIC), spanning the
 Linear A harness pipeline `mg-d5ef` (v0) through `mg-4a7b` (v28)
-and the chic sub-program `mg-99df` (chic-v0) through `mg-d69c`
-(chic-v11); v25, chic-v7, v27, chic-v10, and v29 are editorial-
-only (no harness commits).
+and the chic sub-program `mg-99df` (chic-v0) through `mg-7f57`
+(chic-v14); v25, chic-v7, v27, chic-v10, v29, and v30 are
+editorial-only (no harness commits).
 The repo scaffold (`mg-9e00`) predates the corpus ingest. The
 companion log `docs/findings.md` carries the per-ticket history;
 this document carries the consolidated methodology, results, and
@@ -195,7 +213,7 @@ inscription. Both signals are real and publishable; neither alone
 supports a decipherment claim, which remains conditional on Aegean-
 syllabary specialist review.
 
-**Cross-script extension to Cretan Hieroglyphic (chic-v0..v9).** A
+**Cross-script extension to Cretan Hieroglyphic (chic-v0..v14).** A
 parallel chic sub-program ports the same substrate-LM-phonotactic-
 kinship framework to **CHIC**, the older sister-script to Linear A
 (302 of 331 catalog inscriptions ingested from the Younger web
@@ -298,19 +316,62 @@ ku-pa context inspection corroborates the chic-v6 lift on both
 sides (4 source Linear A tablets HT 1, HT 16, HT 102, HT 110a are
 all LM IB Hagia Triada accountancy tablets; the matched CHIC #057
 context is `#079 ki pa / NUM:20`, the canonical sign-run-followed-
-by-numeral accountancy-formula structure). The post-chic-v11
-per-candidate framing is `#032 > #001 ≈ #012` on within-polecat-
-scope mechanical evidence — but **the v28 + chic-v9 framework-
-level negative remains the dominant constraint**, and none of the
-three candidates clears specialist-review elevation. The chic-v5
-/ chic-v6 / chic-v8 framing of the three tier-2 candidates
-downgrades from "mechanical proposals deserving specialist
-review" to **"candidate proposals contingent on the framework's
-currently-low validation accuracy on both scripts"**; the §4.6 /
-§4.7 narrative leads symmetrically with the LOO accuracy numbers
-rather than the candidate counts, and the methodology paper's
-three-sentence reading test (§7) is restructured for the post-v28
-+ chic-v11 register accordingly.
+by-numeral accountancy-formula structure). **chic-v12 (mg-2035)**
+extends the cross-pool L3 robustness check methodologically
+symmetrically to the **29 chic-v5 tier-3 candidates**: **8
+reclassify to ``tier-2-equivalent``** (≥1 non-Eteocretan substrate
+LM corroborates the chic-v5 proposed class — same band-level
+evidence structure as `#032`: `#005`, `#017`, `#021`, `#039`,
+`#055`, `#056`, `#065`, `#072`, all stop or nasal class), 4 to
+``tier-3-corroborated`` (Eteocretan-only, the chic-v5 baseline
+state for the L1+L2-disagree subset), 17 to
+``tier-3-uncorroborated``. **chic-v13 (mg-5261)** runs within-
+window context inspection on the 8 tier-2-equivalent candidates
+following the chic-v11 `#032`/CHIC #057 ku-pa template: **6
+consistent / 0 inconsistent / 2 inconclusive on corpus state**;
+the strongest evidence falls on `#072` (two `[stop:#072]-de NUM`
+accountancy entries at Knossos bar CHIC #065, mirroring the
+chic-v11 ku-pa NUM-following structure directly), `#056`
+(multiple `[?] [stop:#056] NUM` entries at Knossos bar CHIC #061,
+including one preceding `ke-de NUM:1`), and `#021` (3-fold cross-
+site recurrence of `031-021-061` plus direct adjacency with
+`ki-de` at #059). **chic-v14 (mg-7f57)** then leave-one-out tests
+the chic-v12 cross-pool L3 reclassification rule on the 20
+chic-v2 anchors with **known** class as reference: **12/20 = 60.0%
+LOO recovery rate**, so chic-v12's 27.6% on the tier-3 set is
+**-32.4pp BELOW the LOO baseline → the chic-v12 reclassification
+on the tier-3 set is anti-evidentiary** (cross-pool L3 corroborates
+ground-truth class on known anchors *more often* than chic-v12
+corroborates the chic-v5 proposed class on the tier-3 set).
+**Cross-pool L3 is therefore demoted from a discipline-protecting
+pillar to a permissive corroboration test**, useful only in
+combination with at least one other independent line of evidence;
+**within-window context inspection (chic-v13) becomes the load-
+bearing fourth discipline pillar**, with the framework-level
+chic-v9 + v28 LOO negatives unchanged as the fifth pillar. The
+post-chic-v14 per-candidate framing extends the chic-v11 register
+into a 32-candidate evidence-graded set: **n = 32 evidence-graded
+candidates** (3 chic-v5 tier-2 + 29 chic-v5 tier-3) with **7
+carrying paired cross-pool L3 + within-window context-inspection
+evidence** (`#032` chic-v11 + 6 chic-v13 consistent: `#005`,
+`#017`, `#021`, `#039`, `#056`, `#072`), 2 inconclusive on
+context inspection (`#055`, `#065` chic-v13), 2 chic-v5 tier-2
+demoted by chic-v11 cross-pool L3 (`#001`, `#012`), 4 chic-v5
+tier-3 / Eteocretan-only L3 corroborated (`#006`, `#033`, `#050`,
+`#063`), and 17 chic-v5 tier-3 / cross-pool L3 not corroborated.
+**The v28 + chic-v9 framework-level negative remains the dominant
+constraint**, and none of the 7 paired-evidence candidates clears
+specialist-review elevation; the chic-v5 / chic-v6 / chic-v8
+framing of the three tier-2 candidates remains "candidate
+proposals contingent on the framework's currently-low validation
+accuracy on both scripts"; the §4.6 / §4.7 narrative leads
+symmetrically with the LOO accuracy numbers rather than the
+candidate counts; the methodology paper's three-sentence reading
+test (§7) is restructured for the post-chic-v14 register
+accordingly. The 7 paired-evidence candidates remain "candidate
+proposals pending domain-expert review" at the same tier as
+`#032` was post-chic-v11; promotion to higher tiers requires
+specialist review out of polecat scope.
 
 ---
 
@@ -363,7 +424,7 @@ of specific tablets, semantic gloss generation, syntactic claims, and
 expansion to less-attested substrate families (Phoenician, Sumerian,
 Hattic, etc.).
 
-A parallel chic sub-program (chic-v0 through chic-v5) extends the
+A parallel chic sub-program (chic-v0 through chic-v14) extends the
 same mechanical-falsifiability discipline to a second undeciphered
 Cretan script — **Cretan Hieroglyphic (CHIC)**, the older
 sister-script to Linear A (~1900–1600 BCE; sealstone-dominated,
@@ -379,10 +440,69 @@ framework detects (§3.14, §4.1) is **specific to Linear A** or
 **transferable across scripts under the same a-priori
 genealogical-relatedness ordering of substrate candidates**.
 
+The methodology paper's central methodological claim is best
+read as a union of **five pre-registered falsifiable discipline-
+protecting pillars**, each catching a different motivated-
+reasoning failure mode that internal-consensus-only methodology
+cannot catch:
+
+1. **Per-surface coherence** (v13, mg-c216) — cross-window-
+   consensus median 0.18 against a 0.6 bar (catches the
+   "framework converges on a stable mapping" failure).
+2. **Per-inscription cascade-candidate external validation**
+   (v19 / v24, mg-3438 + mg-c103) — combined with v22 / v26
+   sign-level inverse-verification companions yielding 19–30
+   sign-level contradictions of scholarly proposals per pool
+   on Linear A (catches the "internal-consensus inscription is
+   correctly read" failure).
+3. **Population-level scholar comparison** (v22, mg-46d5;
+   chic-v6, mg-a557) — aggregate match rate 3.95% (3/76) on the
+   Younger 35-entry scholar set on Linear A; small-but-non-zero
+   +3-inscription / +20-hit chic-v6 tier-1 → tier-2 lift on CHIC
+   (catches the "population-level matching averages out
+   individual divergence" failure).
+4. **Within-window context inspection** (chic-v11, mg-d69c;
+   chic-v13, mg-5261) — the chic-v11 `#032`/CHIC #057 ku-pa
+   accountancy-formula corroboration and the chic-v13 6-of-8
+   consistent verdict on the chic-v12 tier-2-equivalent
+   candidates (catches the "cross-pool L3 corroboration alone
+   confirms a class-level value" failure mode that chic-v14's
+   LOO baseline finding made acute). **This pillar is load-
+   bearing as the fourth discipline-protecting axis post-
+   chic-v14**: chic-v14's leave-one-out test of the chic-v12
+   cross-pool L3 reclassification rule recovers known anchor
+   classes at 60.0% baseline, demoting cross-pool L3 from a
+   discipline-protecting axis in its own right to a permissive
+   corroboration test that requires within-window context
+   evidence to be load-bearing.
+5. **Leave-one-out held-out validation** (chic-v9 / v28 /
+   chic-v14, mg-18cb + mg-4a7b + mg-7f57) — chic-v5 framework
+   per-sign recovery 20.0% on CHIC and 33.3% on Linear A
+   (low-agreement / not-validated band, both scripts; 0/3 on
+   the tier-2 unanimity criterion); chic-v12 cross-pool L3
+   reclassification rule 27.6% on the tier-3 set vs 60.0% LOO
+   baseline on known anchors → -32.4pp below baseline → cross-
+   pool L3 reclassification is anti-evidentiary on the tier-3
+   set (catches the "framework that produces candidates fails
+   to recover known values when run blind" and "permissive
+   corroboration mistaken for discriminative gate" failure
+   modes).
+
+The pillar-4 demotion of cross-pool L3 robustness from a
+discipline-protecting axis to a permissive corroboration test
+is itself a discipline-protecting outcome: the held-out
+validation pillar (chic-v14) caught a permissive corroboration
+axis (chic-v11 + chic-v12 cross-pool L3) before it could
+load-bear in the methodology paper, demonstrating that the
+discipline pillars work. The chic-v11 / chic-v12 cross-pool L3
+results stand as documented (per-candidate evidence structure
+information), but their interpretive weight is bounded above by
+chic-v14's LOO baseline.
+
 The remainder of this document specifies the pipeline (§2), reports
 the thirteen pre-registered falsifiable acceptance-gate / external-
 validation outcomes plus the v23 cross-LM matrix follow-up on Linear
-A (§3), the chic-v0..v5 cross-script extension to CHIC (§4.7;
+A (§3), the chic-v0..v14 cross-script extension to CHIC (§4.7;
 positioned within the Discussion as the methodology paper's
 cross-script Part-B because §4.7 simultaneously delivers chic
 results and the cross-script methodological synthesis), the
@@ -640,7 +760,7 @@ added in the v18–v26 sequence within the same scoring discipline:
   CHIC-side (chic-v6) / Linear A-side mechanical-verification
   reporting at the leaderboard-top-K granularity.
 
-### 2.11 Cross-script extension pipeline (chic-v0–chic-v9)
+### 2.11 Cross-script extension pipeline (chic-v0–chic-v14)
 
 The chic sub-program reuses the same scoring infrastructure
 verbatim — same external phoneme LMs, same matched-control pools
@@ -747,6 +867,48 @@ value-extraction framework (chic-v5). Full per-stage detail in §4.7.
   construction; including L4 would inflate accuracy by circularity).
   Pre-registered acceptance bands: >70% high; 40-70% moderate; <40%
   low / not validated.
+- **chic-v11 cross-pool L3 robustness on the 3 chic-v5 tier-2
+  candidates + #032 ku-pa context inspection** (mg-d69c). Re-runs
+  the chic-v5 L3 substrate-consistency line under all 4 substrate-
+  pool LMs (12 cells = 3 candidates × 4 LMs) plus a metadata
+  cross-check on the chic-v6 ku-pa-family lift attributable to
+  `#032 → ki`. Pre-registered output: per-candidate cross-pool L3
+  reading + asymmetric per-candidate refinement.
+- **chic-v12 cross-pool L3 robustness on the 29 chic-v5 tier-3
+  candidates** (mg-2035). Methodologically symmetric extension of
+  chic-v11 to the tier-3 set (29 × 4 = 116 cells). Pre-registered
+  reclassification bands: ``tier-2-equivalent`` (≥1 non-Eteocretan
+  substrate LM corroborates the chic-v5 proposed class — same
+  band-level evidence structure as `#032`); ``tier-3-corroborated``
+  (only Eteocretan-L3 corroborates); ``tier-3-uncorroborated`` (no
+  LM's L3 corroborates). Pre-registered bail rule on within-window
+  context inspection at > 5 reclassifications: defer the
+  inspection to a chic-v13 follow-up because the count itself is
+  the scale signal.
+- **chic-v13 within-window context inspection on the chic-v12
+  tier-2-equivalent candidates** (mg-5261). For each candidate ×
+  1–3 high-density host inscriptions: render with chic-v2 anchors
+  substituted and the candidate as a class-level placeholder
+  (`[stop:#NNN]`, `[N:#NNN]`); check whether the rendered reading
+  is consistent with surrounding accountancy / sealing / sealstone-
+  formula structure on the chosen inscriptions and whether it
+  contradicts canonical CHIC sealstone formulas (`i-ja-ro`,
+  `ki-de`, `wa-ke`) or any chic-v2 anchor's known value. Output:
+  per-candidate verdict in {`consistent`, `inconsistent`,
+  `inconclusive`}.
+- **chic-v14 leave-one-out held-out validation of the chic-v12
+  cross-pool L3 reclassification methodology** (mg-7f57). For each
+  of the 20 chic-v2 anchors S with known phoneme class V: hold S
+  out, treat as unknown, rebuild candidate-value pool per (LOO
+  iteration, substrate pool), regenerate the sha256-keyed control
+  mapping per cell, apply the chic-v12 reclassification rule with
+  S's **known** class as reference (in chic-v12 the reference was
+  the chic-v5 proposed class). Pre-registered LOO output:
+  cross_pool_l3_recovery_rate; eteocretan_only_recovery_rate;
+  no_corroboration_rate. Pre-registered comparison band: chic-v12
+  rate vs chic-v14 LOO baseline; if the chic-v12 rate is below
+  baseline, cross-pool L3 reclassification is anti-evidentiary on
+  the tier-3 set.
 
 ---
 
@@ -775,8 +937,13 @@ pre-registered scoring discipline):
 | 12 | Eteocretan substrate pool, own-LM bigram-preserving control | mg-6ccd (v21) | gate p = 4.10e-06 (PASS); cross-LM under Basque p = 2.58e-03 (PASS, ~600× weaker) | **strongest pool PASS in the validation series** (closest-genealogical-relative substrate; see §3.14) |
 | 12b | full cross-LM matrix for Eteocretan (Eteocretan under MG + Etruscan; existing pools under Eteocretan LM) | mg-b599 (v23) | own-LM-dominance pattern HOLDS for 3/4 substrate pools; Eteocretan-LM has Eteocretan-specific selectivity (Etruscan-substrate-under-Eteocretan-LM FAILs at p=0.92, gap −0.017); Eteocretan-substrate PASSes under all 4 LMs tested with own-LM strongest | cross-LM matrix shape consistent with substrate-LM-phonotactic-kinship detection; Aquitanian deviation is small-dynamic-range artifact (see §3.14 "Cross-LM matrix (v23)") |
 | 13 | population-level external validation against scholar-proposed Linear A readings (35-entry curated set drawn from Younger; 76 AB-sign comparison points across 6 sites; categories include accountancy totals, libation formulae, theonyms, commodity terms, names) | mg-46d5 (v22) | aggregate match rate **3.95%** (3/76) on consonantal first segment of scholarly CV; robust 1.32% (1/76); 32/35 entries score zero | **decisive negative external validation at population scale** (strong-null band, < 5%; reinforces v13 / v19 / v20 — internal consensus does not imply external correctness; see §3.13.4 / §4.6) |
+| 14 (chic-v12) | cross-pool L3 robustness reclassification on the 29 chic-v5 tier-3 candidates (4 substrate-pool LMs × 29 candidates = 116-cell matrix; reclassification rule: ≥1 non-Eteocretan substrate LM corroborates the chic-v5 proposed class → ``tier-2-equivalent``; same band-level evidence structure as the chic-v11 surviving tier-2 `#032`) | mg-2035 (chic-v12) | **8 of 29 reclassify to ``tier-2-equivalent``** (`#005`, `#017`, `#021`, `#039`, `#055`, `#056`, `#065`, `#072`; all stop or nasal class), 4 to ``tier-3-corroborated`` (Eteocretan-only), 17 to ``tier-3-uncorroborated``; bail on within-window context inspection at 8 > 5 (chic-v12 brief pre-registered scale signal) | **n=32 evidence-graded candidates** (3 chic-v5 tier-2 + 29 chic-v5 tier-3); per-candidate evidence grading within the chic-v9 framework-level negative; subsequently re-interpreted by chic-v14 LOO (gate 16) — see §4.7 |
+| 15 (chic-v13) | within-window context inspection on the 8 chic-v12 ``tier-2-equivalent`` candidates following the chic-v11 `#032 → ki` ku-pa context inspection methodology (each candidate × 1–3 high-density host inscriptions × rendered reading + structural commentary + per-candidate verdict) | mg-5261 (chic-v13) | **6 consistent / 0 inconsistent / 2 inconclusive** out of 8; consistent: `#021`, `#005`, `#072`, `#017`, `#039`, `#056`; inconclusive: `#055`, `#065` (predominantly fragmentary host inscriptions); strongest cases at `#072` (Knossos bar #065 `[stop:#072]-de NUM:1` accountancy entries — direct mirror of chic-v11 ku-pa structure), `#056` (Knossos bar #061 `[?] [stop:#056] NUM` adjacent to `ke-de NUM:1`), `#021` (3-fold cross-site `031-021-061` recurrence + `ki-de` adjacency) | **load-bearing fourth discipline pillar post-chic-v14** (cross-pool L3 corroboration alone is not sufficient for class-level value confirmation; see §4.7) |
+| 16 (chic-v14) | leave-one-out held-out validation of the chic-v12 cross-pool L3 reclassification rule on the 20 chic-v2 paleographic anchors (per LOO iteration: hold one anchor out, treat as unknown, rebuild candidate-value pool per pool, regenerate sha256-keyed control mapping per cell, apply chic-v12 reclassification rule with the held-out anchor's **known** class as reference; in chic-v12 the reference was the chic-v5 proposed class) | mg-7f57 (chic-v14) | **12/20 = 60.0% LOO cross_pool_l3_recovery_rate** to ``tier-2-equivalent``; 0/20 ``tier-3-corroborated``; 8/20 ``tier-3-uncorroborated``; chic-v12's 27.6% (8/29) on the tier-3 set is **-32.4pp BELOW the LOO baseline** | **decisive demotion of cross-pool L3 from a discipline-protecting pillar to a permissive corroboration test**; chic-v12 reclassification on the tier-3 set is **anti-evidentiary** (cross-pool L3 corroborates ground-truth class on known anchors *more often* than chic-v12 corroborates the chic-v5 proposed class on the tier-3 set); chic-v13 within-window context inspection becomes the load-bearing fourth pillar (see §4.7) |
 
-All thirteen outcomes (and the v23 12b matrix follow-up) are
+All thirteen outcomes (and the v23 12b matrix follow-up, plus
+the chic-v12 / chic-v13 / chic-v14 cross-script extension rows
+14–16) are
 reproducible from `results/rollup.bayesian_posterior.*.md`, the
 supporting provenance breakdowns in
 `results/rollup.bayesian_posterior.*.provenance.md`,
@@ -2357,7 +2524,7 @@ protecting protocol that catches per-sign motivated-reasoning
 failure modes through pre-registered held-out validation, and
 the discipline — not the per-sign output — is the deliverable**.
 
-### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 through chic-v13)
+### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 through chic-v14)
 
 A parallel sub-program (the **chic-v\*** ticket series) extends
 the same mechanical-falsifiability discipline to **Cretan
@@ -2377,7 +2544,7 @@ ordering of substrate candidates*.
 
 This subsection is positioned within the Discussion as the
 methodology paper's **cross-script Part B**: it simultaneously
-delivers the chic-v0..v5 results and the cross-script
+delivers the chic-v0..v14 results and the cross-script
 methodological synthesis, parallel in narrative role to the
 single-script Discussion §4.1–§4.6. The chic-v5 per-sign
 syllable-value extraction framework (chic-v5 below) is the chic
@@ -2396,40 +2563,117 @@ document's post-chic-v9 polish pass for journal-submission handoff
 of the cross-script paper) are editorial-only and add no new
 harness commits.
 
-**Post-chic-v9 framing (the load-bearing register for this
-section).** chic-v9's leave-one-out held-out validation
-(mg-18cb, full subsection below) places the chic-v5 framework's
-mechanical recovery on the chic-v2 anchor pool of 20 known
-scholarly values at **20.0% aggregate accuracy** (4 of 20),
-essentially at the **~16.7% chance baseline** for a 6-class
-phoneme taxonomy, and at **0/3 = 0.0%** on the tier-2 unanimity
-criterion (every LOO tier-2 anchor's framework class disagrees
-with its known class). Per the chic-v9 brief's pre-registered
-thresholds (>70% high; 40-70% moderate; <40% low), the framework
-is in the **low-agreement / not-validated band**. The implication
-for the three chic-v5 tier-2 candidate proposals (`#001 → wa`/
-glide, `#012 → wa`/glide, `#032 → ki`/stop) is a **substantial
-credibility downgrade**: they are no longer "proposals pending
-domain-expert review by an Aegean-syllabary specialist" (the
-chic-v5 / chic-v6 / chic-v8 framing) but **"proposals contingent
-on the framework's currently-low validation accuracy"**. The
-candidates do not disappear — chic-v6's small-but-non-zero
+**Post-chic-v14 framing (the load-bearing register for this
+section).** Three layered LOO + per-candidate evidence-grading
+results jointly load the §4.7 register:
+
+- *chic-v9 (mg-18cb)*: leave-one-out held-out validation of the
+  chic-v5 four-line framework on the chic-v2 anchor pool of 20
+  known scholarly values places the framework's mechanical
+  recovery at **20.0% aggregate accuracy** (4 of 20), essentially
+  at the **~16.7% chance baseline** for a 6-class phoneme
+  taxonomy, and at **0/3 = 0.0%** on the tier-2 unanimity
+  criterion. Per the chic-v9 brief's pre-registered thresholds
+  (>70% high; 40-70% moderate; <40% low), the framework is in
+  the **low-agreement / not-validated band**. This is the
+  framework-level negative bound on per-sign decipherment.
+- *chic-v12 + chic-v13 + chic-v14 (mg-2035 + mg-5261 + mg-7f57)*:
+  the cross-pool L3 robustness check chic-v11 introduced for the
+  3 chic-v5 tier-2 candidates is extended methodologically
+  symmetrically to the **29 chic-v5 tier-3 candidates** (chic-v12)
+  and **leave-one-out tested on the 20 chic-v2 anchors** with
+  known class as reference (chic-v14). chic-v12 reclassifies 8 of
+  29 tier-3 candidates to ``tier-2-equivalent`` (≥1 non-Eteocretan
+  substrate LM corroborates the chic-v5 proposed class — same
+  band-level evidence structure as chic-v11's surviving tier-2
+  `#032`); chic-v14 recovers 12 of 20 known anchors to
+  ``tier-2-equivalent`` (60.0% LOO baseline) when the reference
+  is ground-truth class. **chic-v12's 27.6% on the tier-3 set is
+  -32.4pp BELOW the LOO baseline → cross-pool L3 reclassification
+  is anti-evidentiary on the tier-3 set** — cross-pool L3
+  corroborates known anchor class *more often* than chic-v12
+  corroborates the chic-v5 proposed class on the tier-3 set, so
+  cross-pool L3 corroboration alone does not discriminate "true
+  class" candidates from "L3-favoured class" candidates.
+  **Cross-pool L3 is therefore demoted from a discipline-
+  protecting pillar to a permissive corroboration test**, useful
+  only in combination with at least one other independent line
+  of evidence. chic-v13 supplies that line: within-window context
+  inspection on the 8 chic-v12 tier-2-equivalent candidates
+  yields **6 consistent / 0 inconsistent / 2 inconclusive on
+  corpus state**; **within-window context inspection becomes the
+  load-bearing fourth discipline pillar** post-chic-v14, replacing
+  cross-pool L3 robustness in that role.
+
+The chic-v14 demotion of cross-pool L3 is itself a discipline-
+protecting outcome: the held-out validation pillar (chic-v14)
+caught a permissive corroboration axis (chic-v11 + chic-v12
+cross-pool L3) before it could load-bear in the methodology
+paper, demonstrating that the discipline pillars work. Note
+explicitly that the **LA-side cross-pool L3 axis was already
+exercised** in v15–v18 (4-pool × 4-LM gates in §3.3 / §3.10 and
+the v23 cross-LM matrix in §3.14); the CHIC-side analog now
+produces the **same anti-evidentiary verdict** on the tier-3 set
+under held-out validation, mirroring v15–v23's cross-LM-matrix
+shape findings on Linear A.
+
+The implication for the chic-v5 tier-2 candidate proposals
+(`#001 → wa`/glide, `#012 → wa`/glide, `#032 → ki`/stop) is
+unchanged from the post-chic-v9 framing: they remain
+**"candidate proposals contingent on the framework's currently-
+low validation accuracy"**. The new contribution post-chic-v14
+is a **per-candidate evidence-graded set across both axes
+(cross-pool L3 corroboration + within-window context
+inspection)**:
+
+| paired-evidence status | n | identity |
+|---|---:|---|
+| cross-pool L3 + context-inspection consistent | 7 | `#032` (chic-v11), `#021`, `#005`, `#072`, `#017`, `#039`, `#056` (chic-v13) |
+| cross-pool L3 only (context inspection inconclusive on corpus state) | 2 | `#055`, `#065` (chic-v13 inconclusive on fragmentary inscriptions) |
+| cross-pool L3 only (context inspection failed) | 0 | (none — chic-v13 found 0 inconsistent) |
+| chic-v5 tier-2 / cross-pool L3 fail | 2 | `#001`, `#012` (chic-v11 demoted) |
+| chic-v5 tier-3 / cross-pool L3 not corroborated | 17 | tier-3-uncorroborated set |
+| chic-v5 tier-3 / Eteocretan-only L3 corroborated | 4 | `#006`, `#033`, `#050`, `#063` (tier-3-corroborated) |
+
+**The framework-level negative is unchanged**. chic-v9's 20.0%
+aggregate / 0/3 tier-2 unanimity correct on the chic-v5 four-line
+framework remains the headline negative-finding result, and the
+v28 + chic-v9 framework-level negative (with chic-v14 now adding
+the cross-pool L3 anti-evidentiary verdict on the tier-3 set as a
+third LOO data point) is the dominant constraint. v30's
+contribution is per-candidate evidence-graded granularity within
+the chic-v9-validated low-accuracy band: 7 of 32 evidence-graded
+candidates carry paired cross-pool L3 + within-window context-
+inspection evidence; 2 inconclusive; 2 demoted; 21 do not clear
+both axes. **None of the 7 paired-evidence candidates is
+promoted to chic-v2 anchor status or to "domain-expert-confirmed"**;
+they remain "candidate proposals pending domain-expert review"
+at the same tier as `#032` was post-chic-v11. Promotion to
+higher tiers requires specialist review, out of polecat scope.
+
+The candidates do not disappear — chic-v6's small-but-non-zero
 +3-inscription / +20-hit tier-1 → tier-2 mechanical-verification
-lift is independent of chic-v9's framework-validation result, and
-L4 (cross-script paleographic agreement) was deliberately excluded
+lift is independent of chic-v9's framework-validation result; L4
+(cross-script paleographic agreement) was deliberately excluded
 from the LOO test as circular by construction but remains a
 falsifiable evidence axis contingent on hand-curated extension
 from O&G 1996, Salgarella 2020, Decorte 2017, and adjacent
-paleography scholarship — but the framing across this entire
-section reads in the post-chic-v9 register: **the chic-v0..v9
-sub-program demonstrates that mechanical scoring + pre-registered
-falsifiable acceptance gates + cross-script transfer + leave-one-
-out held-out validation is a discipline-protecting protocol that
-catches per-sign motivated-reasoning failure modes, and the
-discipline is the deliverable**. The per-ticket subsections that
-follow are read in this register, with chic-v5's tier-2 candidates
-flagged as candidate proposals contingent on chic-v9's verdict
-rather than as elevated-priority specialist-review targets.
+paleography scholarship; chic-v13's within-window context
+inspection contributes a fourth axis distinct from L1/L2/L3 — but
+the framing across this entire section reads in the post-chic-v14
+register: **the chic-v0..v14 sub-program demonstrates that
+mechanical scoring + pre-registered falsifiable acceptance gates
++ cross-script transfer + leave-one-out held-out validation +
+within-window context inspection is a 5-pillar discipline-
+protecting protocol that catches per-sign motivated-reasoning
+failure modes (including, via chic-v14, the failure mode of
+treating a permissive corroboration axis as a discriminative
+gate), and the discipline is the deliverable**. The per-ticket
+subsections that follow are read in this register, with chic-v5's
+tier-2 candidates and the 7 chic-v13-consistent candidates flagged
+as candidate proposals contingent on the chic-v9 + v28 framework-
+level verdict rather than as elevated-priority specialist-review
+targets.
 
 #### chic-v0 — corpus ingest (mg-99df)
 
@@ -3498,7 +3742,14 @@ and **17 cross-pool L3 uncorroborated**. The chic-v9 framework-
 level negative (LOO accuracy 20.0% / 0/3 tier-2 unanimity
 correct) is unchanged; chic-v12's contribution is per-candidate
 evidence-grading granularity within the chic-v9-validated low-
-accuracy band.
+accuracy band. **(Post-chic-v14 caveat: chic-v14's LOO test of
+the cross-pool L3 reclassification rule on the 20 chic-v2
+anchors recovers known-class to ``tier-2-equivalent`` at 60.0%,
+so the 9-candidate count above represents per-candidate
+*permissive corroboration* evidence rather than a discriminative
+gate verdict; the load-bearing per-candidate axis is now the
+within-window context inspection chic-v13 supplies on top of the
+chic-v12 cross-pool L3 corroboration. See chic-v14 below.)**
 
 **Pre-registered chic-v13 candidate.** The bail on within-window
 context inspection at 8 > 5 tier-2-equivalents is itself a
@@ -3804,6 +4055,55 @@ chic-v14 build time, 2026-05-06):
   to "candidate proposal pending domain-expert review" prose is a
   PM call after seeing both chic-v13 and the sibling chic-v14
   LOO-on-cross-pool-L3-methodology results.
+- **chic-v14 done.** Leave-one-out held-out validation of the
+  chic-v12 cross-pool L3 reclassification methodology on the 20
+  chic-v2 paleographic anchors with **known** class as reference
+  (in chic-v12 the reference was the chic-v5 proposed class).
+  **12 of 20 LOO iterations reclassify the held-out anchor to
+  ``tier-2-equivalent`` = 60.0% LOO recovery rate** (cross_pool_
+  l3_recovery_rate); 0 to ``tier-3-corroborated``; 8 to
+  ``tier-3-uncorroborated``. **chic-v12's 27.6% (8/29) on the
+  tier-3 set is -32.4pp BELOW the chic-v14 LOO baseline → the
+  chic-v12 reclassification on the tier-3 set is anti-evidentiary**
+  (cross-pool L3 corroborates ground-truth class on known anchors
+  *more often* than chic-v12 corroborates the chic-v5 proposed
+  class on the tier-3 set). **Cross-pool L3 is therefore a
+  permissive corroboration test, not a discriminative gate**;
+  chic-v13's within-window context inspection (sibling ticket)
+  becomes the load-bearing fourth discipline pillar. Outputs:
+  `results/chic_v14_loo_validation.md`,
+  `results/chic_v14_summary.md`. **Done in mg-7f57.** Net: the
+  chic-v9 framework-level negative is unaffected; the chic-v12
+  reclassification stands as documented per-candidate evidence-
+  grading (8 of 29 tier-3 candidates have the same band-level
+  evidence structure as `#032`), but its interpretive weight is
+  bounded above by the chic-v14 60.0% LOO baseline — cross-pool
+  L3 corroboration is a *permissive corroboration* signal, not a
+  per-candidate signal that lifts a candidate above the
+  chic-v9 / v28 framework-level negative. The held-out validation
+  pillar (chic-v14) catching a permissive corroboration axis
+  before it could load-bear in the methodology paper is itself a
+  discipline-protecting outcome.
+- **chic-v13 done (re-stated for chronology).** Within-window
+  context inspection on the 8 chic-v12 tier-2-equivalent
+  candidates following the chic-v11 `#032 → ki` ku-pa context
+  inspection methodology. **6 consistent / 0 inconsistent / 2
+  inconclusive on corpus state.** Strongest cases at `#072`
+  (Knossos bar #065 `[stop:#072]-de NUM` accountancy entries),
+  `#056` (Knossos bar #061 `[?] [stop:#056] NUM` adjacent to
+  `ke-de NUM:1`), `#021` (3-fold cross-site `031-021-061` plus
+  `ki-de` adjacency at #059). Inconclusive: `#055`, `#065`
+  (predominantly fragmentary host inscriptions). Outputs:
+  `results/chic_v13_context_inspection.md`,
+  `results/chic_v13_summary.md`. **Done in mg-5261.** Per the
+  post-chic-v14 framing, chic-v13 is the load-bearing fourth
+  discipline pillar (replacing cross-pool L3 robustness in that
+  role); the 6 chic-v13-consistent candidates plus chic-v11's
+  `#032` constitute the **7 paired-evidence candidates** the
+  post-v30 §4.7 reframe centres on. Specialist review remains
+  the load-bearing next step for any candidate; promotion to
+  "candidate proposal pending domain-expert review" prose is
+  per-candidate within the v30 register.
 - **chic-v12 done.** Cross-pool L3 robustness check on the 29
   chic-v5 tier-3 candidates, methodologically symmetric extension
   of chic-v11. **8 of 29 tier-3 candidates reclassify to
@@ -3825,7 +4125,12 @@ chic-v14 build time, 2026-05-06):
   framework's per-sign discrimination claim now spans n = 32
   evidence-graded candidates (3 chic-v5 tier-2 + 29 chic-v5
   tier-3, of which 9 are cross-pool L3 corroborated by ≥ 1
-  non-Eteocretan substrate LM).
+  non-Eteocretan substrate LM). **(Post-chic-v14: cross-pool L3
+  alone is permissive corroboration, not a discriminative gate;
+  the per-candidate evidence-grading provided by this 9-count
+  is interpretively load-bearing only when paired with chic-v13's
+  within-window context inspection — see chic-v14 entry above
+  and the post-chic-v14 framing block at the top of §4.7.)**
 - **chic-v11 done.** Cross-pool L3 robustness check + #032 ku-pa
   context inspection on the 3 chic-v5 tier-2 candidates. Cross-
   pool L3: of 12 cells (3 candidates × 4 substrate-pool LMs),
@@ -3937,7 +4242,7 @@ chic-v14 build time, 2026-05-06):
   L2=20%, L3=5%; 0/3 LOO tier-2 correct; the 3 LOO tier-2 anchors
   `#031 = ro` / `#042 = wa` ⚠ / `#053 = me`).
 
-#### Cross-script methodological synthesis (chic-v0..v9 + Linear A v0..v26)
+#### Cross-script methodological synthesis (chic-v0..v14 + Linear A v0..v28)
 
 The two parallel result blocks of this manuscript — Linear A
 §3.1–§3.14 and CHIC §4.7 above — converge on a single
@@ -3948,7 +4253,7 @@ genealogical relatedness, that signal is cross-script, and the
 per-sign machinery layered on top of the population-level gate
 does not recover known phoneme classes when run blind under
 leave-one-out held-out validation.** The load-bearing observations
-across the 36-ticket sequence:
+across the 42-ticket sequence:
 
 - *Population-level kinship detection across two scripts.* All
   four substrate pools' own-LM right-tail gate behaviours on
@@ -4022,14 +4327,28 @@ across the 36-ticket sequence:
   0.6 bar; v22 35-entry scholar-set 3.95% aggregate; v24
   eteocretan-only 0/76 = 0.00%; chic-v6 +3-inscription / +20-hit
   tier-1 → tier-2 lift caveated by chic-v9; chic-v9 LOO 20.0% /
-  0/3). All five point in the same methodological direction:
-  the framework detects substrate-LM-phonotactic kinship at the
-  population level, but per-sign decipherment is unsupported by
-  any of the validation channels the framework has been tested
-  against. The discipline of pre-registered falsifiable
+  0/3). **chic-v14 (mg-7f57) extends the held-out-validation
+  pillar a second time** by leave-one-out testing the chic-v12
+  cross-pool L3 reclassification rule on the 20 chic-v2 anchors
+  with known class as reference: 60.0% LOO recovery on known
+  anchors vs 27.6% on the chic-v5 tier-3 set →
+  **-32.4pp anti-evidentiary verdict on cross-pool L3
+  reclassification on the tier-3 set**, demoting cross-pool L3
+  robustness from a discipline-protecting axis in its own right
+  to a permissive corroboration test that requires within-window
+  context evidence (chic-v13) to be load-bearing. All six
+  validation channels point in the same methodological
+  direction: the framework detects substrate-LM-phonotactic
+  kinship at the population level, but per-sign decipherment is
+  unsupported by any of the validation channels the framework
+  has been tested against, and held-out validation continues to
+  catch new permissive-corroboration failure modes (most
+  recently chic-v14's verdict on cross-pool L3) before they can
+  load-bear. The discipline of pre-registered falsifiable
   acceptance gates + cross-script transfer + leave-one-out held-
-  out validation is what catches motivated-reasoning failure
-  modes that internal-consensus-only analyses cannot.
+  out validation + within-window context inspection is what
+  catches motivated-reasoning failure modes that internal-
+  consensus-only analyses cannot.
 - *Cross-script transferability of the methodology is the
   novel methodology-paper deliverable of the chic sub-program.*
   The Linear A v0..v25 result is "the framework detects
@@ -4207,7 +4526,7 @@ follow-up surface:
 
 ### 5.4 Cross-script (CHIC) limitations
 
-Limitations specific to the chic-v0..v5 sub-program (§4.7),
+Limitations specific to the chic-v0..v14 sub-program (§4.7),
 parallel in role to §5.1–§5.3 above for the Linear A pipeline:
 
 - **CHIC corpus is incomplete.** 302 of 331 catalog entries
@@ -4422,6 +4741,69 @@ parallel in role to §5.1–§5.3 above for the Linear A pipeline:
   validation. The chic-v11 deliverable is a per-candidate
   refinement of the chic-v9 generic downgrade, not a lift on
   chic-v9's verdict.
+- **Cross-pool L3 robustness is a permissive corroboration test,
+  not a discriminative gate (chic-v14 LOO).** chic-v14's leave-
+  one-out test of the chic-v12 cross-pool L3 reclassification
+  rule on the 20 chic-v2 paleographic anchors with **known**
+  class as reference recovers 12 of 20 anchors to
+  ``tier-2-equivalent`` (60.0%); chic-v12's 27.6% (8/29) on the
+  chic-v5 tier-3 candidates is **-32.4pp BELOW the LOO baseline**.
+  Cross-pool L3 corroborates ground-truth class on known anchors
+  *more often* than chic-v12 corroborates the chic-v5 proposed
+  class on the tier-3 set, so the chic-v12 reclassification on
+  the tier-3 set is **anti-evidentiary**. Cross-pool L3 is
+  therefore demoted from a discipline-protecting axis in its own
+  right to a permissive corroboration test, useful only in
+  combination with at least one other independent line of
+  evidence (chic-v13 within-window context inspection supplies
+  that line). The chic-v11 / chic-v12 cross-pool L3 results stand
+  as documented per-candidate evidence-grading information; their
+  interpretive weight as standalone evidence for a candidate's
+  class is bounded above by chic-v14's 60.0% LOO baseline. The
+  LA-side cross-pool L3 axis was already exercised in v15–v18
+  (4-pool × 4-LM gates in §3.3 / §3.10 and the v23 cross-LM
+  matrix in §3.14); the CHIC-side analog now produces the same
+  anti-evidentiary verdict on the chic-v5 tier-3 set under held-
+  out validation, mirroring v15–v23's cross-LM-matrix shape
+  findings on Linear A. **chic-v13's within-window context
+  inspection is the load-bearing fourth discipline pillar
+  post-chic-v14**, replacing cross-pool L3 robustness in that
+  role.
+- **2 of 8 chic-v12 tier-2-equivalent candidates fail the
+  chic-v13 within-window context inspection on corpus-quality
+  grounds, not framework grounds.** chic-v13's verdict on the 8
+  chic-v12 tier-2-equivalent candidates is 6 consistent / 0
+  inconsistent / 2 inconclusive; the 2 inconclusive cases
+  (`#055`, `#065`) reflect honest under-determination on corpus
+  state — `#055` occurs predominantly in `fragmentary`-confidence
+  inscriptions, and `#065`'s only `clean`-confidence occurrence
+  is itself in a variant-bracketed transcription `{065}` (CHIC
+  #174). Neither candidate is rejected; both await cleaner
+  inscription evidence to elevate or reject. The 2 inconclusive
+  verdicts are a corpus-quality limitation, not a chic-v13
+  framework limitation. A future corpus-expansion pass that adds
+  cleaner host inscriptions for these two signs (manual
+  transcription of the 29 missing CHIC catalog entries; CMS
+  sealstone-catalog entries containing `#055` / `#065` in
+  cleaner contexts) would reactivate chic-v13's within-window
+  context inspection on these candidates without modifying the
+  discipline.
+- **The chic-v9 / v28 framework-level LOO negative on per-sign
+  decipherment continues to hold, regardless of v30's per-
+  candidate evidence-graded refinement.** v30's contribution is
+  **granularity within the chic-v9 + v28 framework-level negative
+  band** (low-agreement / not-validated; 20.0% on CHIC, 33.3% on
+  Linear A; 0/3 on tier-2 unanimity correct on both scripts), not
+  a lift on the framework-level negative. The 7 paired-evidence
+  candidates (`#032` chic-v11 + 6 chic-v13 consistent: `#005`,
+  `#017`, `#021`, `#039`, `#056`, `#072`) carry per-candidate
+  evidence at two distinct axes (cross-pool L3 corroboration +
+  within-window context inspection) but inherit the framework-
+  level negative on per-sign decipherment claims. They remain
+  **"candidate proposals pending domain-expert review"** at the
+  same tier as `#032` was post-chic-v11; the chic-v9 + v28
+  framework-level negative continues to apply, and promotion to
+  higher tiers requires specialist review out of polecat scope.
 - **v26 per-surface verification status is structurally
   permissive.** Every top-20 surface across all four pools is
   classified "verified" under v26's per-surface verification
@@ -4571,7 +4953,7 @@ granularity, then validating against external scholarly ground
 truth, as discipline-protecting checks against motivated-reasoning
 failure modes that internal-only analyses cannot catch.
 
-**Cross-script extension (chic-v0..v11) and the symmetric Linear A
+**Cross-script extension (chic-v0..v14) and the symmetric Linear A
 LOO companion (v28).** The chic sub-program
 ports the framework verbatim to a second undeciphered Cretan
 script — Cretan Hieroglyphic — and demonstrates that the Linear A
@@ -4615,7 +4997,7 @@ predicate, explicit silent-line bookkeeping for the construction-
 silent line 4, the L3-systematic-class-bias disclosure, plus
 chic-v9's leave-one-out held-out validation as the falsification
 check internal-consensus-only methodology cannot supply) is the
-chic-v0..v9 sub-program's contribution rather than the count. A CHIC-side mechanical-verification pass
+chic-v0..v14 sub-program's contribution rather than the count. A CHIC-side mechanical-verification pass
 against the same three external-scholarship sources used by v26
 (chic-v6, mg-a557) produces a small-but-non-zero +3-inscriptions /
 +20-hits tier-1 → tier-2 lift; the larger tier-3 / tier-4 lifts
@@ -4682,7 +5064,44 @@ polecat-scope mechanical evidence — but the v28 + chic-v9
 framework-level negative remains the dominant constraint, and
 none of the three candidates clears specialist-review elevation
 under the chic-v5 framework's currently-low accuracy band on
-**either script**. The cross-script claim the
+**either script**. **chic-v12 (mg-2035)** extends the
+cross-pool L3 robustness check to the 29 chic-v5 tier-3
+candidates and reclassifies 8 to ``tier-2-equivalent`` (≥1 non-
+Eteocretan substrate LM corroborates the chic-v5 proposed class:
+`#005`, `#017`, `#021`, `#039`, `#055`, `#056`, `#065`, `#072`),
+4 to ``tier-3-corroborated`` (Eteocretan-only), 17 to
+``tier-3-uncorroborated``. **chic-v13 (mg-5261)** runs within-
+window context inspection on the 8 tier-2-equivalent candidates
+following the chic-v11 ku-pa template: **6 consistent / 0
+inconsistent / 2 inconclusive on corpus state**, with the
+strongest evidence at `#072` (Knossos bar #065 `[stop:#072]-de
+NUM` accountancy entries — direct mirror of chic-v11 ku-pa
+structure), `#056` (Knossos bar #061 `[?] [stop:#056] NUM`
+adjacent to `ke-de NUM:1`), and `#021` (3-fold cross-site
+`031-021-061` recurrence + `ki-de` adjacency at #059).
+**chic-v14 (mg-7f57)** then leave-one-out tests the chic-v12
+cross-pool L3 reclassification rule on the 20 chic-v2 anchors
+with **known** class as reference: 12 of 20 LOO iterations
+reclassify to ``tier-2-equivalent`` (60.0%), so chic-v12's 27.6%
+on the tier-3 set is **-32.4pp BELOW the LOO baseline → cross-
+pool L3 reclassification on the tier-3 set is anti-evidentiary**.
+**Cross-pool L3 is therefore demoted from a discipline-
+protecting pillar to a permissive corroboration test**, useful
+only in combination with at least one other independent line of
+evidence; **within-window context inspection (chic-v13) becomes
+the load-bearing fourth discipline pillar** post-chic-v14. The
+post-chic-v14 per-candidate evidence-graded set: **n = 32
+evidence-graded candidates** with **7 carrying paired cross-pool
+L3 + within-window context-inspection evidence** (`#032` chic-v11
++ 6 chic-v13 consistent), 2 inconclusive on context state
+(`#055`, `#065`), 2 chic-v11-demoted (`#001`, `#012`), 4
+Eteocretan-only L3 corroborated (`#006`, `#033`, `#050`, `#063`),
+17 cross-pool L3 not corroborated. **The v28 + chic-v9 +
+chic-v14 framework-level negative remains the dominant
+constraint**; none of the 7 paired-evidence candidates clears
+specialist-review elevation; all remain "candidate proposals
+pending domain-expert review" at the same tier as `#032` was
+post-chic-v11. The cross-script claim the
 chic sub-program adds to the methodology paper, beyond what the
 single-script v25 manuscript could support, is therefore: **the
 substrate-LM-phonotactic-kinship signal the framework detects is
@@ -4695,17 +5114,22 @@ methodology against pre-registered external-scholarship sources
 runs symmetrically on both sides** (v26 on Linear A, chic-v6 on
 CHIC) at the leaderboard-top-K granularity, while the **leave-
 one-out held-out validation runs symmetrically on both sides**
-(v28 on Linear A, chic-v9 on CHIC) at the per-sign value-
-extraction granularity, with the **bilingual fifth-axis
+(v28 on Linear A, chic-v9 + chic-v14 on CHIC) at both the
+per-sign value-extraction granularity (chic-v9 / v28; 20.0% /
+33.3% LOO accuracy on the chic-v5 four-line framework) and the
+per-candidate evidence-graded granularity (chic-v14; 60.0% LOO
+baseline on cross-pool L3 reclassification, demoting cross-pool
+L3 to permissive corroboration), with the **bilingual fifth-axis
 extension reported as a null result** on the v0 corpus state
 under the same anti-motivated-reasoning discipline. Per-sign
 decipherment remains unsupported on either script.
 
-**Five discipline-protecting pillars.** The chic-v0..v11 +
-Linear A v0..v28 evidence base is most usefully read as the
-union of five pre-registered falsifiable pillars, each catching
-a different motivated-reasoning failure mode that internal-
-consensus-only methodology, by construction, cannot catch:
+**Five discipline-protecting pillars (post-v30 register).** The
+chic-v0..v14 + Linear A v0..v28 evidence base is most usefully
+read as the union of five pre-registered falsifiable pillars,
+each catching a different motivated-reasoning failure mode that
+internal-consensus-only methodology, by construction, cannot
+catch:
 
 1. **Per-surface coherence** (v13, mg-c216). Cross-window-
    consensus median 0.18 against a 0.6 bar; the framework cannot
@@ -4713,45 +5137,70 @@ consensus-only methodology, by construction, cannot catch:
    top-20 substrate surfaces' candidate equations. Catches the
    "framework converges on a stable mapping" failure mode.
 2. **Per-inscription cascade-candidate external validation**
-   (v19 / v20, mg-3438 + mg-711c). On the cascade candidate that
-   admits scholarly comparison (`PS Za 2` libation formula), the
-   mechanical reading diverges from the scholarly proposal at
-   0/5 consonantal-segment match; targeted accountancy follow-up
-   on `KH 10` / `KH 5` returns null comparand. Catches the
-   "internal-consensus inscription is correctly read" failure
-   mode.
-3. **Population-level scholar comparison** (v22 / v24, mg-46d5 +
-   mg-c103). Aggregate match rate 3.95% (3/76) on the 35-entry
-   Younger scholar set; substrate-LM swap to the closest-
-   genealogical-relative pool (Eteocretan) leaves the rate
-   unchanged at four-pool (3.95%) and produces 0.00% under
-   eteocretan-only. Catches the "population-level matching
-   averages out individual divergence" failure mode.
-4. **Cross-pool reproduction + leaderboard top-K mechanical
-   verification** (v24 / v26 / chic-v6, mg-c103 + mg-c202 +
-   mg-a557). Cross-script Spearman ρ=+1.0 on per-pool gate gap;
-   leaderboard top-K verification produces small-but-non-zero
-   inscription-count lift on both scripts, with the load-bearing
-   sign-level inverse-verification companion table reporting
-   19–30 sign-level contradictions of scholarly proposals per
-   pool on Linear A. Catches the "population-level signal
-   propagates to per-sign correctness" failure mode by separating
-   the verification-grade lift (+3 to +7 inscriptions, +20 hits
-   on the load-bearing chic-v6 tier-1 → tier-2 specific-phoneme-
-   override line; the larger tier-3 / tier-4 lifts caveated for
-   class-level-matching permissiveness) from the per-sign
-   contradictions.
+   (v19 / v20 / v24, mg-3438 + mg-711c + mg-c103). On the
+   cascade candidate that admits scholarly comparison
+   (`PS Za 2` libation formula), the mechanical reading diverges
+   from the scholarly proposal at 0/5 consonantal-segment match;
+   targeted accountancy follow-up on `KH 10` / `KH 5` returns
+   null comparand; v22 / v24 sign-level inverse-verification
+   companion produces 19–30 sign-level contradictions per pool
+   on Linear A. Catches the "internal-consensus inscription is
+   correctly read" / "population-level matching averages out
+   individual divergence" failure modes.
+3. **Population-level scholar comparison + leaderboard-top-K
+   mechanical verification** (v22 / v26 / chic-v6, mg-46d5 +
+   mg-c202 + mg-a557). Aggregate match rate 3.95% (3/76) on the
+   35-entry Younger scholar set; substrate-LM swap to the
+   closest-genealogical-relative pool (Eteocretan) leaves the
+   rate unchanged at four-pool (3.95%) and produces 0.00% under
+   eteocretan-only. Leaderboard top-K verification produces
+   small-but-non-zero inscription-count lift on both scripts
+   (+5/+6/+7/+5 across LA pools, +3 inscriptions on the chic-v6
+   tier-1 → tier-2 lift); the larger tier-3 / tier-4 lifts on
+   CHIC are caveated for class-level-matching permissiveness.
+   Catches the "population-level signal propagates to per-sign
+   correctness" failure mode.
+4. **Within-window context inspection** (chic-v11 / chic-v13,
+   mg-d69c + mg-5261). The chic-v11 `#032 → ki` ku-pa
+   accountancy-formula corroboration (CHIC #057 `#079 ki pa /
+   NUM:20` + 4 source LM IB Hagia Triada accountancy tablets HT
+   1, HT 16, HT 102, HT 110a) and the chic-v13 6-of-8 consistent
+   verdict on the chic-v12 tier-2-equivalent candidates jointly
+   constitute the **fourth discipline-protecting pillar**, load-
+   bearing as of chic-v14. Catches the "cross-pool L3
+   corroboration alone confirms a class-level value" failure
+   mode that chic-v14's LOO baseline finding (60.0% on known
+   anchors) made acute. The chic-v11 + chic-v12 cross-pool L3
+   robustness check is **demoted from a discipline-protecting
+   pillar in its own right to a permissive corroboration test
+   that requires within-window context evidence to be load-
+   bearing**: chic-v14's leave-one-out test recovered known
+   class to ``tier-2-equivalent`` at 60.0%, vs chic-v12's 27.6%
+   on the chic-v5 tier-3 set → -32.4pp anti-evidentiary verdict
+   on cross-pool L3 reclassification on the tier-3 set, and the
+   per-candidate evidence-grading work cross-pool L3 supports is
+   itself bounded above by within-window context inspection
+   pairing.
 5. **Leave-one-out held-out validation against known anchors**
-   (chic-v9 / v28, mg-18cb + mg-4a7b). The chic-v5 framework's
-   L1+L2+L3 mechanical recovery on known anchor classes is **20.0%
-   on CHIC and 33.3% on Linear A** when run blind under leave-
-   one-out, both in the low-agreement / not-validated band per
-   the chic-v9 brief's pre-registered thresholds, with **0/3 on
-   the tier-2 unanimity criterion on both scripts** (every
-   unanimous LOO call is wrong). Catches the **"framework that
-   produces candidates fails to recover known values when run
-   blind"** failure mode — the framework-level falsification
-   check that internal-consensus-only methodology cannot supply.
+   (chic-v9 / v28 / chic-v14, mg-18cb + mg-4a7b + mg-7f57). The
+   chic-v5 framework's L1+L2+L3 mechanical recovery on known
+   anchor classes is **20.0% on CHIC and 33.3% on Linear A**
+   when run blind under leave-one-out, both in the low-agreement
+   / not-validated band per the chic-v9 brief's pre-registered
+   thresholds, with **0/3 on the tier-2 unanimity criterion on
+   both scripts**. **chic-v14 (mg-7f57)** extends the LOO pillar
+   a second time by running held-out validation on the chic-v12
+   cross-pool L3 reclassification rule itself, recovering known
+   anchor class to ``tier-2-equivalent`` at 60.0% LOO baseline →
+   chic-v12's 27.6% on the chic-v5 tier-3 set is -32.4pp below
+   the LOO baseline → cross-pool L3 reclassification is anti-
+   evidentiary on the tier-3 set; this is the demotion that
+   relegates pillar 4 to within-window context inspection.
+   Catches the **"framework that produces candidates fails to
+   recover known values when run blind"** and the **"permissive
+   corroboration mistaken for discriminative gate"** failure
+   modes — the framework-level falsification check that
+   internal-consensus-only methodology cannot supply.
 
 The five pillars point in the same methodological direction
 across the project's full ticket sequence: the framework detects
@@ -4760,18 +5209,43 @@ faithfully, and it produces no per-sign decipherment-grade
 output that survives any of the five held-out / external /
 cross-pool / cross-script validation channels. Each pillar
 catches a *different* failure mode; their conjunction is the
-methodology paper's central contribution. The chic-v5 + chic-v6
-+ chic-v8 framing of the three chic-v5 tier-2 CHIC candidates
-(`#001 → wa`, `#012 → wa`, `#032 → ki`) downgrades from
-"mechanical proposals deserving specialist review" to **"candidate
-proposals contingent on the framework's currently-low validation
-accuracy on both scripts"**, with the chic-v11 per-candidate
-refinement noting that `#032` retains the strongest evidentiary
-basis of the three under within-polecat-scope mechanical evidence
-(cross-pool L3 weakly corroborates + chic-v6 ku-pa lift
-contextually corroborated on both sides) while `#001` and `#012`
-are weakened beyond the chic-v9 generic downgrade (cross-pool L3
-actively undermines).
+methodology paper's central contribution. The pillar-4 demotion
+of cross-pool L3 robustness from a discipline-protecting axis
+to a permissive corroboration test is itself a discipline-
+protecting outcome: the held-out validation pillar (chic-v14)
+caught a permissive corroboration axis (chic-v11 + chic-v12
+cross-pool L3) before it could load-bear in the methodology
+paper, demonstrating that the discipline pillars work.
+
+The chic-v5 + chic-v6 + chic-v8 framing of the three chic-v5
+tier-2 CHIC candidates (`#001 → wa`, `#012 → wa`, `#032 → ki`)
+remains "candidate proposals contingent on the framework's
+currently-low validation accuracy on both scripts", with the
+chic-v11 per-candidate refinement noting that `#032` retains the
+strongest evidentiary basis of the three (cross-pool L3 weakly
+corroborates + chic-v6 ku-pa lift contextually corroborated on
+both sides) while `#001` and `#012` are weakened beyond the
+chic-v9 generic downgrade (cross-pool L3 actively undermines).
+**Post-v30 the per-candidate evidence-graded set extends to n =
+32 candidates** (3 chic-v5 tier-2 + 29 chic-v5 tier-3) across
+two coarse evidence axes:
+
+| paired-evidence status | n | identity |
+|---|---:|---|
+| **cross-pool L3 + context-inspection consistent** | **7** | `#032` (chic-v11), `#021`, `#005`, `#072`, `#017`, `#039`, `#056` (chic-v13) |
+| cross-pool L3 only (context inspection inconclusive on corpus state) | 2 | `#055`, `#065` |
+| chic-v5 tier-2 / cross-pool L3 fail | 2 | `#001`, `#012` |
+| chic-v5 tier-3 / cross-pool L3 not corroborated | 17 | (tier-3-uncorroborated set) |
+| chic-v5 tier-3 / Eteocretan-only L3 corroborated | 4 | `#006`, `#033`, `#050`, `#063` |
+
+The 7 paired-evidence candidates remain "candidate proposals
+pending domain-expert review" at the same tier as `#032` was
+post-chic-v11. Promotion to higher tiers (chic-v2 anchor;
+"domain-expert-confirmed") requires specialist review out of
+polecat scope. The framework-level negative bound on per-sign
+decipherment is unchanged; v30's contribution is granularity
+within the chic-v9 + v28-validated low-accuracy band, not
+displacement of the chic-v9 / v28 verdict.
 
 ---
 
@@ -4781,13 +5255,14 @@ The methodology paper canonical reading test, established at v16
 (mg-d5ed) for Linear A, extended to cross-script by chic-v7
 (mg-9508), updated for the now-fully-cross-script + symmetric-
 mechanical-verification document by v27 (mg-b731), updated again
-for the post-chic-v9 register by chic-v10 (mg-1178), and updated
-again here for the post-v28 + chic-v11 register by v29 (mg-a1e2),
-asks: what would a hypothetical Linear-A scholar (or broader
-Aegean-syllabary specialist) reading this document cold learn
-from it? Three sentences, in the narrower-but-defensible register
-the v16 reading test established and the v28 + chic-v9 + chic-v11
-verdicts have tightened:
+for the post-chic-v9 register by chic-v10 (mg-1178), updated for
+the post-v28 + chic-v11 register by v29 (mg-a1e2), and updated
+again here for the post-chic-v12 + chic-v13 + chic-v14 register
+by v30 (mg-ee1f), asks: what would a hypothetical Linear-A
+scholar (or broader Aegean-syllabary specialist) reading this
+document cold learn from it? Three sentences, in the narrower-
+but-defensible register the v16 reading test established and the
+v28 + chic-v9 + chic-v11 + chic-v14 verdicts have tightened:
 
 1. **What the framework detects (population level, both scripts).**
    A mechanical, falsifiable substrate-LM-phonotactic-kinship test
@@ -4809,83 +5284,125 @@ verdicts have tightened:
    the framework's per-sign mechanical recovery on known anchors
    via L1+L2+L3 is at chance baseline on both scripts (CHIC 20%,
    Linear A 33%); per-sign value-extraction proposals from
-   chic-v5 / its LA analog are downgraded accordingly.** On Linear
-   A the v13 cross-window coherence median is 0.18 against a 0.6
-   bar, v22/v24 internal-consensus mechanical readings match the
-   Younger 35-entry scholar-proposed-reading set at an aggregate
-   3.95% rate (3/76) — squarely in the strong-null band — and
-   v26's per-pool sign-level inverse-verification companion table
-   reports 19–30 sign-level contradictions of scholarly proposals
-   per pool; **chic-v9's CHIC-side leave-one-out held-out
-   validation places the chic-v5 framework's mechanical recovery
-   on the 20 known chic-v2 anchors at 20.0% aggregate accuracy /
-   0/3 on the tier-2 unanimity criterion**, and **v28's
-   symmetric Linear A-side leave-one-out validation places the
-   same framework's mechanical recovery on the 21 LB-carryover
-   anchors at 33.3% aggregate / 0/3 tier-2 unanimous correct** —
-   both in the low-agreement / not-validated band per the chic-v9
-   brief's pre-registered thresholds (>70% high; 40-70% moderate;
-   <40% low; chance baseline ~16.7% for the 6-class taxonomy),
-   with the +13.3 percentage-point cross-script delta within the
+   chic-v5 / its LA analog are downgraded accordingly, and the
+   chic-v11 + chic-v12 cross-pool L3 robustness check is itself
+   demoted by chic-v14 LOO from a discipline-protecting axis to
+   a permissive corroboration test (60.0% LOO baseline on known
+   anchors vs chic-v12's 27.6% on the tier-3 set = -32.4pp anti-
+   evidentiary).** On Linear A the v13 cross-window coherence
+   median is 0.18 against a 0.6 bar, v22/v24 internal-consensus
+   mechanical readings match the Younger 35-entry scholar-
+   proposed-reading set at an aggregate 3.95% rate (3/76) —
+   squarely in the strong-null band — and v26's per-pool sign-
+   level inverse-verification companion table reports 19–30 sign-
+   level contradictions of scholarly proposals per pool; **chic-
+   v9's CHIC-side leave-one-out held-out validation places the
+   chic-v5 framework's mechanical recovery on the 20 known
+   chic-v2 anchors at 20.0% aggregate accuracy / 0/3 on the
+   tier-2 unanimity criterion**, and **v28's symmetric Linear
+   A-side leave-one-out validation places the same framework's
+   mechanical recovery on the 21 LB-carryover anchors at 33.3%
+   aggregate / 0/3 tier-2 unanimous correct** — both in the
+   low-agreement / not-validated band per the chic-v9 brief's
+   pre-registered thresholds (>70% high; 40-70% moderate; <40%
+   low; chance baseline ~16.7% for the 6-class taxonomy), with
+   the +13.3 percentage-point cross-script delta within the
    regime that establishes **the at-chance per-sign behaviour as
    structural to the chic-v5 framework rather than CHIC-corpus-
    specific**, so the 3 chic-v5 tier-2 candidate class-level
    proposals on CHIC (`#001` glide, `#012` glide, `#032` stop)
    are **candidate proposals contingent on the framework's
    currently-low validation accuracy on both scripts**, not
-   decipherments — with the chic-v11 per-candidate refinement
-   noting `#032 > #001 ≈ #012` on within-polecat-scope
-   mechanical evidence (#032 cross-pool L3 weakly corroborates
-   stop at 2/4 LMs + chic-v6 ku-pa lift contextually
-   corroborated on both sides; #001 / #012 cross-pool L3 actively
-   undermines glide at 3/4 stop), chic-v6's small-but-non-zero
-   +3-inscription / +20-hit tier-1 → tier-2 mechanical-
-   verification lift retained as independent evidence, L4 (cross-
-   script paleographic) preserved as a falsifiable evidence axis
-   pending hand-curated extension from O&G 1996 / Salgarella
-   2020 / Decorte 2017 paleography scholarship, and the chic-v8
-   dual-script bilingual fifth-axis extension producing 0 new
-   tier-2 candidates on v0 corpora because no genuinely-dual-
-   script artifact (the candidate Malia altar stone CHIC #328 is
-   unilingual-CHIC per Olivier-Godart 1996) is ingested in
-   either v0 corpus.
+   decipherments. **chic-v12 / chic-v13 / chic-v14 (mg-2035 +
+   mg-5261 + mg-7f57)** then build a **per-candidate evidence-
+   graded set spanning n = 32 candidates** (3 chic-v5 tier-2 +
+   29 chic-v5 tier-3) across two coarse axes — cross-pool L3
+   corroboration and within-window context inspection — and
+   surface **7 paired-evidence candidates** carrying both axes
+   (`#032` chic-v11 + 6 chic-v13 consistent: `#005`, `#017`,
+   `#021`, `#039`, `#056`, `#072`); 2 inconclusive on context
+   state (`#055`, `#065` — corpus-quality limitation); 2
+   chic-v11-demoted (`#001`, `#012`); 4 Eteocretan-only L3
+   corroborated; 17 cross-pool L3 not corroborated. chic-v14's
+   LOO baseline of 60.0% on known anchors against chic-v12's
+   27.6% on the tier-3 set produces a **-32.4pp anti-evidentiary
+   verdict on cross-pool L3 reclassification on the tier-3 set**,
+   demoting cross-pool L3 robustness from a discipline-protecting
+   axis to a permissive corroboration test and elevating
+   **within-window context inspection (chic-v13) to the load-
+   bearing fourth discipline pillar**. The 7 paired-evidence
+   candidates remain "candidate proposals pending domain-expert
+   review" at the same tier as `#032` was post-chic-v11;
+   chic-v6's small-but-non-zero +3-inscription / +20-hit tier-1
+   → tier-2 mechanical-verification lift is retained as
+   independent evidence; L4 (cross-script paleographic) is
+   preserved as a falsifiable evidence axis pending hand-curated
+   extension from O&G 1996 / Salgarella 2020 / Decorte 2017
+   paleography scholarship; the chic-v8 dual-script bilingual
+   fifth-axis extension produces 0 new tier-2 candidates on v0
+   corpora because no genuinely-dual-script artifact (the
+   candidate Malia altar stone CHIC #328 is unilingual-CHIC per
+   Olivier-Godart 1996) is ingested in either v0 corpus; and the
+   chic-v9 + v28 + chic-v14 framework-level negative remains the
+   dominant constraint, with v30's per-candidate evidence-graded
+   refinement strictly inside the chic-v9-validated low-accuracy
+   band rather than displacing chic-v9's verdict.
 
 3. **The cross-script methodological contribution: five
-   discipline-protecting pillars.** The methodology paper's
-   accumulated contribution across its 28 Linear A + 11 chic
-   sub-program tickets is best read as **five pre-registered
-   falsifiable pillars**, each catching a different motivated-
-   reasoning failure mode that internal-consensus-only analyses
-   cannot catch — (i) **per-surface coherence** (v13, mg-c216),
-   (ii) **per-inscription cascade-candidate external validation**
-   (v19 / v20, mg-3438 + mg-711c), (iii) **population-level
-   scholar comparison** (v22 / v24, mg-46d5 + mg-c103), (iv)
-   **cross-pool reproduction + leaderboard-top-K mechanical
-   verification with sign-level inverse-verification companion**
-   (v24 / v26 / chic-v6, mg-c103 + mg-c202 + mg-a557), and
-   (v) **leave-one-out held-out validation against known anchors
-   on both scripts** (chic-v9 / v28, mg-18cb + mg-4a7b; LOO
-   accuracy 20.0% on CHIC and 33.3% on Linear A; 0/3 on the
-   tier-2 unanimity criterion on both scripts) — together with
-   the cross-script transfer demonstration (chic-v3 / chic-v4
-   Spearman ρ=+1.0 on per-pool gate gap; mean top-20 substrate-
-   surface overlap 0.47 across the two scripts), the falsifiable
-   bilingual fifth-axis extension (chic-v8, silent on v0 corpus
-   state, reactivable under future corpus expansion), and the
-   chic-v11 per-candidate within-polecat-scope refinement
-   (mg-d69c, asymmetric `#032 > #001 ≈ #012` framing within the
-   chic-v9 generic downgrade), constitute a **transferable cross-
-   script methodology** that any research group testing a
-   substrate-language hypothesis on an undeciphered script can
-   adopt; the framework's negative findings on Linear A (v13 /
-   v14 / v19 / v20 / v22 / v24 / v26 / v28) together with its
-   cross-script transfer on CHIC (chic-v3 / chic-v4 / chic-v5 /
-   chic-v6 / chic-v8 / chic-v9 / chic-v11) are themselves the
-   methodological deliverable — a discipline-protecting protocol
-   that catches motivated-reasoning failure modes which internal-
-   only analyses produce uniformly across scripts, substrate
-   pools, external-validation channels, and the population /
-   per-sign axis.
+   discipline-protecting pillars (post-v30 register).** The
+   methodology paper's accumulated contribution across its 28
+   Linear A + 14 chic sub-program tickets is best read as **five
+   pre-registered falsifiable pillars**, each catching a
+   different motivated-reasoning failure mode that internal-
+   consensus-only analyses cannot catch — (i) **per-surface
+   coherence** (v13, mg-c216), (ii) **per-inscription cascade-
+   candidate external validation** (v19 / v20 / v24, mg-3438 +
+   mg-711c + mg-c103, with v22 / v26 sign-level inverse-
+   verification companion at 19–30 contradictions per pool),
+   (iii) **population-level scholar comparison + leaderboard-
+   top-K mechanical verification** (v22 / v26 / chic-v6, mg-46d5
+   + mg-c202 + mg-a557; 3.95% LA aggregate match rate; small-
+   but-non-zero +3-inscription / +20-hit chic-v6 tier-1 → tier-2
+   lift), (iv) **within-window context inspection** (chic-v11 /
+   chic-v13, mg-d69c + mg-5261; chic-v11 `#032`/CHIC #057 ku-pa
+   accountancy-formula corroboration + chic-v13 6-of-8 consistent
+   verdict on the chic-v12 tier-2-equivalent candidates;
+   load-bearing as the fourth discipline pillar post-chic-v14,
+   replacing cross-pool L3 robustness in that role), and
+   (v) **leave-one-out held-out validation** (chic-v9 / v28 /
+   chic-v14, mg-18cb + mg-4a7b + mg-7f57; LOO accuracy 20.0% on
+   CHIC and 33.3% on Linear A on the chic-v5 four-line
+   framework; 0/3 on the tier-2 unanimity criterion on both
+   scripts; chic-v14's 60.0% LOO baseline on the chic-v12
+   cross-pool L3 reclassification rule produces the -32.4pp
+   anti-evidentiary verdict that demoted cross-pool L3 in
+   pillar 4) — together with the cross-script transfer
+   demonstration (chic-v3 / chic-v4 Spearman ρ=+1.0 on per-pool
+   gate gap; mean top-20 substrate-surface overlap 0.47 across
+   the two scripts), the falsifiable bilingual fifth-axis
+   extension (chic-v8, silent on v0 corpus state, reactivable
+   under future corpus expansion), the chic-v11 per-candidate
+   within-polecat-scope refinement (mg-d69c, asymmetric
+   `#032 > #001 ≈ #012` framing within the chic-v9 generic
+   downgrade), and the post-chic-v14 per-candidate evidence-
+   graded set (n = 32 candidates with 7 carrying paired cross-
+   pool L3 + within-window context-inspection evidence remaining
+   as "candidate proposals pending domain-expert review"
+   contingent on the chic-v9 + v28 + chic-v14 framework-level
+   negative), constitute a **transferable cross-script
+   methodology** that any research group testing a substrate-
+   language hypothesis on an undeciphered script can adopt; the
+   framework's negative findings on Linear A (v13 / v14 / v19 /
+   v20 / v22 / v24 / v26 / v28) together with its cross-script
+   transfer on CHIC (chic-v3 / chic-v4 / chic-v5 / chic-v6 /
+   chic-v8 / chic-v9 / chic-v11 / chic-v12 / chic-v13 / chic-v14)
+   are themselves the methodological deliverable — a discipline-
+   protecting protocol that catches motivated-reasoning failure
+   modes which internal-only analyses produce uniformly across
+   scripts, substrate pools, external-validation channels, and
+   the population / per-sign axis, including (via chic-v14) the
+   failure mode of treating a permissive corroboration axis as
+   a discriminative gate.
 
 ---
 
@@ -4923,19 +5440,24 @@ committed artefacts under `results/`:
 | chic-v9 leave-one-out held-out validation of the chic-v5 framework on the chic-v2 anchor pool (mg-18cb) | `chic_v9_loo_validation.md` |
 | v28 Linear A-side analogous LOO validation of the chic-v5 framework on LB-carryover anchors (mg-4a7b) | `v28_la_loo_validation.md` |
 | chic-v11 cross-pool L3 robustness check + #032 ku-pa context inspection on the 3 chic-v5 tier-2 candidates (mg-d69c) | `chic_v11_cross_pool_l3.md`, `chic_v11_032_ku_pa_context.md` |
+| chic-v12 cross-pool L3 robustness check on the 29 chic-v5 tier-3 candidates (mg-2035) | `chic_v12_cross_pool_l3.md`, `chic_v12_tier3_summary.md` |
+| chic-v13 within-window context inspection on the 8 chic-v12 tier-2-equivalent candidates (mg-5261) | `chic_v13_context_inspection.md`, `chic_v13_summary.md` |
+| chic-v14 leave-one-out held-out validation of the chic-v12 cross-pool L3 reclassification methodology on the 20 chic-v2 anchors (mg-7f57) | `chic_v14_loo_validation.md`, `chic_v14_summary.md` |
 | corpus ingestion record | `../corpus_status.md` |
 
 Per-ticket merge notes are in `docs/findings.md` under
 `## Findings from mg-XXXX` headers, in chronological order from
-`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-d69c`
-(chic-v11, 2026-05-06); the Linear A harness pipeline itself spans
+`mg-1c8c` (SigLA corpus ingest, 2026-05-04) through `mg-7f57`
+(chic-v14, 2026-05-06); the Linear A harness pipeline itself spans
 `mg-d5ef` (v0, 2026-05-04 first harness commit) through `mg-4a7b`
 (v28, 2026-05-06), with mg-711c (v20) a documentation-and-
 investigation ticket that adds no harness code path and mg-36bd
-(v25), mg-9508 (chic-v7), mg-b731 (v27), mg-1178 (chic-v10), and
-mg-a1e2 (v29) editorial-only methodology-paper polish passes. The
+(v25), mg-9508 (chic-v7), mg-b731 (v27), mg-1178 (chic-v10),
+mg-a1e2 (v29), and mg-ee1f (v30) editorial-only methodology-paper
+polish passes. The
 chic sub-program spans `mg-99df` (chic-v0 corpus ingest) through
-`mg-d69c` (chic-v11 within-polecat-scope candidate-evidence pass).
+`mg-7f57` (chic-v14 leave-one-out held-out validation of the
+chic-v12 cross-pool L3 reclassification methodology).
 The repo scaffold (`mg-9e00`) predates `findings.md`'s
 introduction in `mg-13a2` and so does not have a per-ticket entry
 there.

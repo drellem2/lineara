@@ -10060,3 +10060,404 @@ elevated credibility, not the cross-pool L3 axis alone.
   Introduction* (revised ed.). Manchester / New York.
 - Beekes, R. S. P. (2010). *Etymological Dictionary of Greek*,
   vol. 2 appendix on Pre-Greek substrate. Leiden: Brill.
+
+## Findings from mg-ee1f (v30 — methodology paper polish pass integrating chic-v12 + chic-v13 + chic-v14; cross-pool L3 demoted to permissive corroboration; chic-v13 within-window context inspection promoted to load-bearing fourth discipline pillar; n=32 evidence-graded candidates with 7 carrying paired cross-pool L3 + within-window context-inspection evidence, 2026-05-06)
+
+### Summary
+
+Editorial / verification ticket. No harness commits. v30 audits
+`docs/findings_summary.md` end-to-end after the chic-v12 (mg-2035)
+cross-pool L3 robustness check on the 29 chic-v5 tier-3 candidates,
+the chic-v13 (mg-5261) within-window context inspection on the 8
+chic-v12 tier-2-equivalent candidates, and the chic-v14 (mg-7f57)
+leave-one-out held-out validation of the chic-v12 cross-pool L3
+reclassification methodology have all landed. Each polecat had
+already integrated its own per-ticket subsection into §4.7. v30
+extends the document's higher-level integration (Abstract; §1
+Introduction; §2.11 cross-script extension pipeline; §3.1
+Acceptance-gate outcomes summary table; §4.7 post-chic-v9 framing
+intro paragraph rewritten as a post-chic-v14 framing block; §5.4
+Cross-script CHIC limitations; §6 Conclusion's five-pillar
+discipline framing and the cross-script-extension paragraph; §7
+Three-sentence reading test; the document-lineage citation block
+at the top of the file; the Cross-script methodological synthesis
+subsection; the Appendix A result-file index) to lead with the
+**chic-v14 anti-evidentiary verdict on cross-pool L3
+reclassification on the tier-3 set** (60.0% LOO recovery on known
+anchors vs chic-v12's 27.6% on the chic-v5 tier-3 set =
+-32.4pp below baseline) and to surface the **post-chic-v14
+per-candidate evidence-graded set spanning n = 32 candidates with
+7 carrying paired cross-pool L3 + within-window context-inspection
+evidence** (`#032` chic-v11 + 6 chic-v13 consistent: `#005`,
+`#017`, `#021`, `#039`, `#056`, `#072`; 2 inconclusive on context
+state: `#055`, `#065`; 2 chic-v11-demoted: `#001`, `#012`; 4
+Eteocretan-only L3 corroborated; 17 cross-pool L3 not corroborated).
+
+The four-pillar → five-pillar discipline structure is now
+explicitly load-bearing on **within-window context inspection
+(chic-v11 + chic-v13)** as pillar 4, with **cross-pool L3
+robustness demoted from a discipline-protecting axis in its own
+right to a permissive corroboration test** (the chic-v11 + chic-v12
+cross-pool L3 results stand as documented per-candidate evidence-
+grading information; their interpretive weight as standalone
+evidence for a candidate's class is bounded above by chic-v14's
+60.0% LOO baseline). The held-out validation pillar (pillar 5)
+extends to chic-v14 alongside chic-v9 / v28: chic-v14 is the
+falsification check that caught the cross-pool L3 permissiveness
+before it could load-bear in the methodology paper, demonstrating
+that the discipline pillars work.
+
+The chic-v9 + v28 framework-level negative on per-sign
+decipherment (LOO accuracy 20.0% on CHIC; 33.3% on Linear A;
+0/3 tier-2 unanimity correct on both scripts) remains the
+dominant constraint. v30's contribution is **granularity within
+the chic-v9 + v28-validated low-accuracy band**, not displacement
+of the chic-v9 / v28 verdict. The 7 paired-evidence candidates
+remain "candidate proposals pending domain-expert review" at the
+same tier as `#032` was post-chic-v11; promotion to higher tiers
+(chic-v2 anchor; "domain-expert-confirmed") requires specialist
+review out of polecat scope.
+
+### Restructure / edits made
+
+1. **Document-lineage citation block (top of file, lines 3–69)**
+   — extended to enumerate chic-v12 (mg-2035), chic-v13
+   (mg-5261), chic-v14 (mg-7f57), and v30 (mg-ee1f). The
+   work-item count updated from "28 Linear A + 11 chic" to
+   "28 Linear A + 14 chic". The editorial-only-pass list now
+   reads "v25, chic-v7, v27, chic-v10, v29, and v30 are
+   editorial-only (no harness commits)". The chic span updated
+   from `mg-99df` (chic-v0) through `mg-d69c` (chic-v11) to
+   `mg-99df` (chic-v0) through `mg-7f57` (chic-v14).
+2. **Abstract** — extended the chic-v11 paragraph with a
+   post-chic-v12 + chic-v13 + chic-v14 block: chic-v12's 8 of 29
+   tier-3 reclassifications to ``tier-2-equivalent`` named
+   (`#005`, `#017`, `#021`, `#039`, `#055`, `#056`, `#065`,
+   `#072`; all stop or nasal class); chic-v13's 6 consistent / 0
+   inconsistent / 2 inconclusive verdict with the strongest
+   cases (`#072`, `#056`, `#021`) cited; chic-v14's 60.0% LOO
+   baseline vs chic-v12's 27.6% on the tier-3 set with the
+   -32.4pp anti-evidentiary verdict; cross-pool L3 demoted from
+   discipline-protecting pillar to permissive corroboration test;
+   within-window context inspection promoted to load-bearing
+   fourth discipline pillar; the n=32 evidence-graded candidate
+   set surfaced (7 paired-evidence + 2 inconclusive + 2 demoted
+   + 4 Eteocretan-only-L3-corroborated + 17 not corroborated).
+   The downgrade framing extended consistently: the 7 paired-
+   evidence candidates remain "candidate proposals pending
+   domain-expert review" at the same tier as `#032` was post-
+   chic-v11.
+3. **§1 Introduction** — added the **five discipline-protecting
+   pillars** enumeration explicitly to §1, with **pillar 4
+   (within-window context inspection)** named as load-bearing
+   post-chic-v14 (replacing cross-pool L3 robustness in that
+   role per chic-v14's anti-evidentiary verdict). The pillar-4
+   demotion of cross-pool L3 from discipline-protecting axis to
+   permissive corroboration test is documented explicitly as a
+   discipline-protecting outcome (the chic-v14 LOO pillar caught
+   the permissiveness before it could load-bear).
+4. **§2.11 Cross-script extension pipeline** — header updated
+   from "(chic-v0–chic-v9)" to "(chic-v0–chic-v14)"; added
+   per-ticket method descriptions for chic-v11, chic-v12,
+   chic-v13, and chic-v14 (cross-pool L3 robustness on tier-2
+   candidates; cross-pool L3 robustness on tier-3 candidates;
+   within-window context inspection methodology; LOO of the
+   chic-v12 reclassification rule).
+5. **§3.1 Acceptance-gate outcomes summary table** — added three
+   new rows: row 14 (chic-v12 cross-pool L3 reclassification on
+   the 29 chic-v5 tier-3 candidates; 8 to tier-2-equivalent / 4
+   to tier-3-corroborated / 17 to tier-3-uncorroborated); row 15
+   (chic-v13 within-window context inspection on the 8 chic-v12
+   tier-2-equivalent candidates; 6 consistent / 0 inconsistent /
+   2 inconclusive); row 16 (chic-v14 LOO held-out validation of
+   the chic-v12 cross-pool L3 reclassification rule on the 20
+   chic-v2 anchors; 60.0% LOO baseline; chic-v12's 27.6% on the
+   tier-3 set is -32.4pp below baseline; anti-evidentiary
+   verdict). The table preamble updated to acknowledge the
+   chic-side cross-script extension rows.
+6. **§4.7 Cross-script extension** — header updated from
+   "(chic-v0 through chic-v13)" to "(chic-v0 through chic-v14)".
+   The post-chic-v9 framing intro paragraph rewritten as a
+   **post-chic-v14 framing block** that:
+   - Cites the three layered LOO + per-candidate evidence-
+     grading results (chic-v9 framework-level LOO; chic-v12 +
+     chic-v13 + chic-v14 per-candidate evidence-grading);
+   - Names the chic-v14 anti-evidentiary verdict explicitly
+     (-32.4pp below baseline; cross-pool L3 reclassification on
+     the tier-3 set is anti-evidentiary; cross-pool L3 demoted
+     to permissive corroboration test);
+   - Cites the v15-v18 LA-side cross-pool L3 axis (4-pool × 4-LM
+     gates in §3.3 / §3.10 + the v23 cross-LM matrix in §3.14)
+     as already-exercised, with the CHIC-side analog now
+     producing the same anti-evidentiary verdict on the tier-3
+     set under held-out validation;
+   - Surfaces the post-chic-v14 per-candidate evidence-graded
+     set as a 6-row table (7 paired-evidence + 2 inconclusive +
+     2 demoted + 4 Eteocretan-only + 17 not corroborated);
+   - Frames the held-out validation pillar (chic-v14) catching
+     the permissive corroboration axis (chic-v11 + chic-v12
+     cross-pool L3) as itself a discipline-protecting outcome;
+   - Names within-window context inspection (chic-v13 + chic-v11)
+     as the load-bearing fourth discipline pillar post-chic-v14.
+
+   The chic-v12 subsection extended with a **post-chic-v14
+   caveat** noting that the 9-candidate count (chic-v11 `#032`
+   + 8 chic-v12 tier-2-equivalents) represents per-candidate
+   permissive corroboration evidence rather than a discriminative
+   gate verdict; the load-bearing per-candidate axis is now the
+   within-window context inspection chic-v13 supplies on top of
+   the chic-v12 cross-pool L3 corroboration.
+7. **§5.4 Cross-script CHIC limitations** — header updated from
+   "chic-v0..v5 sub-program" to "chic-v0..v14 sub-program";
+   added three new entries:
+   - **Cross-pool L3 robustness is a permissive corroboration
+     test, not a discriminative gate (chic-v14 LOO)**: 60.0% LOO
+     baseline; chic-v12's 27.6% on the tier-3 set is -32.4pp
+     below baseline; cross-pool L3 corroborates ground-truth
+     class on known anchors more often than chic-v12 corroborates
+     the chic-v5 proposed class on the tier-3 set; cross-pool L3
+     demoted to permissive corroboration test; chic-v13 within-
+     window context inspection is the load-bearing fourth
+     discipline pillar post-chic-v14.
+   - **2 of 8 chic-v12 tier-2-equivalent candidates fail the
+     chic-v13 within-window context inspection on corpus-quality
+     grounds**: `#055` predominantly fragmentary; `#065` only
+     clean occurrence variant-bracketed; corpus-quality
+     limitation, not chic-v13 framework limitation; future
+     corpus-expansion pass would reactivate chic-v13 on these
+     candidates.
+   - **The chic-v9 / v28 framework-level LOO negative continues
+     to hold**: v30's contribution is granularity within the
+     chic-v9 + v28-validated low-accuracy band, not a lift on
+     the framework-level negative; the 7 paired-evidence
+     candidates remain "candidate proposals pending domain-
+     expert review" at the same tier as `#032` was post-chic-v11.
+8. **§6 Conclusion** — extended the cross-script-extension
+   paragraph with chic-v12 / chic-v13 / chic-v14 outcomes (8
+   tier-3 reclassifications named; 6/0/2 chic-v13 verdict;
+   60.0% LOO baseline + -32.4pp anti-evidentiary verdict;
+   cross-pool L3 demotion; within-window context inspection
+   promotion); the cross-script header updated from
+   "(chic-v0..v11) and the symmetric Linear A LOO companion
+   (v28)" to "(chic-v0..v14) and the symmetric Linear A LOO
+   companion (v28)". The **five discipline-protecting pillars**
+   subsection rewritten as a post-v30 register: pillar 2
+   updated to fold v22 / v26 sign-level inverse-verification
+   into per-inscription cascade-candidate external validation;
+   pillar 3 updated to combine population-level scholar
+   comparison + leaderboard-top-K mechanical verification;
+   **pillar 4 updated to within-window context inspection**
+   (chic-v11 + chic-v13) as load-bearing post-chic-v14, with
+   cross-pool L3 robustness explicitly demoted to permissive
+   corroboration; pillar 5 updated to fold chic-v14 LOO into
+   the held-out-validation pillar alongside chic-v9 / v28. The
+   per-candidate evidence-graded set (n = 32 candidates × 6 row
+   classification) added to §6 explicitly. The pillar-4
+   demotion is itself framed as a discipline-protecting outcome
+   (chic-v14 caught the permissive corroboration axis before it
+   could load-bear).
+9. **§7 Three-sentence reading test** — restructured for the
+   post-chic-v12 + chic-v13 + chic-v14 register. Sentence 2
+   extended to cite the chic-v12 / chic-v13 / chic-v14 layered
+   results (n=32 evidence-graded candidates; 7 paired-evidence;
+   chic-v14 -32.4pp anti-evidentiary verdict; cross-pool L3
+   demotion; within-window context inspection promotion).
+   Sentence 3's pillar enumeration updated to the post-v30
+   five-pillar structure (within-window context inspection as
+   pillar 4 load-bearing; held-out validation as pillar 5
+   extending to chic-v14). The canonical-reading-test lineage
+   line updated to enumerate v30 (mg-ee1f) as the post-chic-v12
+   + chic-v13 + chic-v14 polish pass.
+10. **Cross-script methodological synthesis subsection** —
+    header updated from "(chic-v0..v9 + Linear A v0..v26)" to
+    "(chic-v0..v14 + Linear A v0..v28)". The held-out-
+    validation paragraph extended with a chic-v14 second-LOO-
+    extension block (chic-v14 leave-one-out tests the chic-v12
+    cross-pool L3 reclassification rule itself; 60.0% LOO
+    baseline → -32.4pp anti-evidentiary verdict on cross-pool
+    L3 reclassification on the tier-3 set; cross-pool L3
+    demoted to permissive corroboration test; within-window
+    context inspection elevated to load-bearing fourth pillar).
+    The "all five validation channels" line updated to "all six
+    validation channels" with the new chic-v14 entry. The
+    36-ticket-sequence count updated to 42.
+11. **Appendix A result-file index** — added rows for chic-v12
+    (`chic_v12_cross_pool_l3.md`, `chic_v12_tier3_summary.md`),
+    chic-v13 (`chic_v13_context_inspection.md`,
+    `chic_v13_summary.md`), and chic-v14
+    (`chic_v14_loo_validation.md`, `chic_v14_summary.md`). The
+    per-ticket merge-notes paragraph that follows the table
+    updated to span `mg-1c8c` (SigLA corpus ingest) through
+    `mg-7f57` (chic-v14) with v30 (mg-ee1f) added to the
+    editorial-only-pass enumeration.
+
+### Audit-of-the-audit on chic-v12's polecat updates
+
+chic-v12's polecat-incremental edits to `findings_summary.md`
+were audited against `results/chic_v12_cross_pool_l3.md` and
+`results/chic_v12_tier3_summary.md`:
+
+- Reclassification counts 8 / 4 / 17 (out of 29 chic-v5 tier-3
+  candidates) ✓ (matches the result file's "Headline counts"
+  table).
+- 8 tier-2-equivalent candidates named (`#005`, `#017`, `#021`,
+  `#039`, `#055`, `#056`, `#065`, `#072`) ✓ (matches the per-
+  candidate one-line summary).
+- Per-candidate `corroborated_by` sets (`#021` 3 of 3 non-Eteo;
+  `#005`/`#055`/`#065`/`#072` 2 of 3; `#017`/`#039`/`#056` 1 of
+  3) ✓.
+- `#021` 4-of-4 LMs vote nasal (3 non-Eteo + Eteocretan via
+  L1+L2-disagree-via-Eteo construction) ✓.
+- All 8 tier-2-equivalent candidates are stop or nasal class ✓
+  (vowel/glide/liquid candidates do not corroborate cross-pool
+  in the chic-v12 result).
+- Bail-on-context-inspection rationale (8 > 5 reclassifications;
+  scale signal worth surfacing rather than mechanical N
+  candidates to inspect) ✓ (matches the chic-v12 brief and the
+  Verdict section of the summary file).
+- n = 32 evidence-graded candidates total (3 chic-v5 tier-2 + 29
+  chic-v5 tier-3) ✓.
+
+Conclusion: chic-v12 polecat-incremental edits required no
+correction. v30 polish layered on top of them with the
+post-chic-v14 caveat (cross-pool L3 demoted to permissive
+corroboration) added to the §4.7 chic-v12 subsection.
+
+### Audit-of-the-audit on chic-v13's polecat updates
+
+chic-v13's polecat-incremental edits to `findings_summary.md`
+were audited against `results/chic_v13_context_inspection.md`
+and `results/chic_v13_summary.md`:
+
+- Headline counts 6 consistent / 0 inconsistent / 2 inconclusive
+  (out of 8 chic-v12 tier-2-equivalent candidates) ✓ (matches
+  the result file's "Headline counts" table).
+- Per-candidate verdicts: `#021` consistent (3-fold cross-site
+  `031-021-061` + `ki-de` adjacency); `#005` consistent (CHIC
+  #298 clean Crete unprov. seal); `#055` inconclusive (all 5
+  occurrences fragmentary); `#065` inconclusive (only clean
+  occurrence variant-bracketed at CHIC #174); `#072` consistent
+  (Knossos bar #065 two `[stop:#072]-de NUM:1` accountancy
+  entries); `#017` consistent (CHIC #037 clean medallion); `#039`
+  consistent (CHIC #037 medallion + #142); `#056` consistent
+  (Knossos bar #061 multiple `[?] [stop:#056] NUM` entries) ✓.
+- Strongest cases at `#072` (mirrors chic-v11 ku-pa NUM-following
+  structure on CHIC #057), `#056`, and `#021` ✓.
+- Cross-pool L3 corroboration alone is not sufficient for class-
+  level value confirmation: 2/8 tier-2-equivalents fail the
+  within-window context bar despite passing chic-v12 ✓.
+- chic-v9 framework-level negative is unaffected ✓.
+- chic-v13 contributes the fourth within-polecat-scope
+  discipline-protecting axis ✓ (chic-v6 mechanical verification
+  + chic-v9 LOO + chic-v11/v12 cross-pool L3 + chic-v13 within-
+  window context inspection).
+
+Conclusion: chic-v13 polecat-incremental edits required no
+correction. v30 polish layered on top of them with the
+within-window-context-inspection-as-load-bearing-fourth-pillar
+framing post-chic-v14.
+
+### Audit-of-the-audit on chic-v14's polecat updates
+
+chic-v14's polecat-incremental edits to `findings_summary.md`
+were audited against `results/chic_v14_loo_validation.md` and
+`results/chic_v14_summary.md`:
+
+- Headline metrics: 12/20 = 60.0% LOO cross_pool_l3_recovery_rate
+  to ``tier-2-equivalent``; 0/20 ``tier-3-corroborated``; 8/20
+  ``tier-3-uncorroborated`` ✓ (matches the result file's
+  "Headline counts" table).
+- chic-v12's 27.6% (8/29) on the chic-v5 tier-3 set is -32.4pp
+  BELOW the chic-v14 LOO baseline ✓.
+- Reclassified anchors named (12): `#019`, `#031`, `#041`,
+  `#042`, `#044`, `#049`, `#053`, `#057`, `#061`, `#073`,
+  `#077`, `#092` ✓.
+- Non-reclassified anchors named (8): `#010`, `#013`, `#016`,
+  `#025`, `#028`, `#038`, `#054`, `#070` ✓.
+- Anti-evidentiary verdict on the tier-3 set ✓ (cross-pool L3
+  corroborates ground-truth class on known anchors more often
+  than chic-v12 corroborates the chic-v5 proposed class on the
+  tier-3 set).
+- Cross-pool L3 demoted from discipline-protecting axis to
+  permissive corroboration test ✓.
+- chic-v13 context inspection becomes the load-bearing fourth
+  pillar ✓.
+- Per-class breakdown: 6/9 stop, 1/2 liquid, 3/4 nasal, 2/3
+  glide, 0/2 vowel reclassified ✓ (vowel underperforms relative
+  to other classes; mechanically rare due to small candidate-
+  value pool).
+- Determinism: chic-v14 inherits chic-v5's L3 sha256-keyed
+  permutation construction; same inputs produce byte-identical
+  output (md5 stability verified at chic-v14 build time,
+  2026-05-06): `chic_v14_loo_validation.md` md5
+  `b64ba241ef6a3ca65f88e5571d37ce62`; `chic_v14_summary.md`
+  md5 `dce77a6ec28548e9edf275bdfe6aab86` ✓.
+
+Conclusion: chic-v14 polecat-incremental edits required no
+correction. v30 polish layered on top of them with the
+demotion-of-cross-pool-L3-to-permissive-corroboration framing
+threaded through the document and the within-window-context-
+inspection-as-load-bearing-fourth-pillar promotion documented
+explicitly in §1, §4.7, §5.4, §6, and §7.
+
+### Acceptance gate — v30 brief
+
+- §4.7 rewritten with full post-chic-v14 reframe; n=32
+  evidence-graded with 7 paired cross-pool L3 + context-
+  inspection candidates; cross-pool L3 demoted to permissive
+  corroboration ✓.
+- §3.1 outcomes table extended with three new rows (chic-v12 /
+  chic-v13 / chic-v14) ✓.
+- §1 introduction updated with the 5-pillar discipline structure;
+  chic-v13 within-window context inspection named as load-
+  bearing fourth pillar; pillar-4 demotion of cross-pool L3
+  documented explicitly ✓.
+- §5 limitations updated with cross-pool L3 permissive-
+  corroboration entry; chic-v13 inconclusive cases as corpus-
+  quality limitation; chic-v9 framework-level negative
+  preserved as the dominant constraint ✓.
+- §6 conclusion updated with post-v30 candidate counts and the
+  demoted-cross-pool-L3 framing; 5-pillar structure rewritten
+  with within-window context inspection as pillar 4 ✓.
+- §7 three-sentence reading test restructured for post-chic-v14
+  register; chic-v14 -32.4pp anti-evidentiary verdict surfaced
+  in sentence 2 ✓.
+- Title check: existing title still accurate post-v30 (no
+  change needed; the v30 reframe is editorial within the
+  established methodology paper scope) ✓.
+- `docs/findings.md` updated with the v30 entry (this entry,
+  AGENTS.md hard merge-time blocker) ✓.
+- Internal-consistency sweep: stale "n=3 evidence-graded" /
+  "1 weakly corroborated" / "chic-v0..v5" / "chic-v0..v9" /
+  "chic-v0..v11" references updated to post-chic-v14 framing
+  ✓.
+
+### Out of scope (per the brief)
+
+- No new chic-side experiments; v30 is editorial integration,
+  not new evidence work.
+- No LA-side analogous tickets (already covered by v22 / v26 /
+  v28 chain).
+- No promotion of paired-evidence candidates to chic-v2 anchors
+  or to "domain-expert-confirmed" status (out of polecat scope;
+  specialist review is the load-bearing next step).
+- No invented CV expansions beyond the class-level evidence the
+  framework supports.
+- No journal-submission editorial pass (LaTeX, target-venue
+  formatting); contingent on Daniel's editorial choice of target
+  venue.
+- No per-window dedup, no AGENTS.md cosmetics, no Linear-B
+  carryover refinement.
+
+### Citations
+
+- Olivier, J.-P. & Godart, L. (1996). *Corpus Hieroglyphicarum
+  Inscriptionum Cretae* (Études Crétoises 31). Paris.
+- Younger, J. G. (online). *The Cretan Hieroglyphic Texts: a web
+  edition of CHIC with commentary.* Wayback Machine snapshot
+  20220703170656.
+- Salgarella, E. (2020). *Aegean Linear Script(s).* Cambridge.
+- Ventris, M. & Chadwick, J. (1956). *Documents in Mycenaean
+  Greek.* Cambridge.
+- Duhoux, Y. (1982). *L'Étéocrétois: les textes — la langue.*
+  Amsterdam: J. C. Gieben.
