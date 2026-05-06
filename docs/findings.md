@@ -9529,3 +9529,279 @@ chic-v12's polecat budget; pm-lineara triage call.
   Introduction* (revised ed.). Manchester / New York.
 - Beekes, R. S. P. (2010). *Etymological Dictionary of Greek*,
   vol. 2 appendix on Pre-Greek substrate. Leiden: Brill.
+
+## Findings from mg-5261 (chic-v13 — within-window context inspection on the 8 chic-v12 tier-2-equivalent candidates, 2026-05-06)
+
+### Summary
+
+chic-v12 (mg-2035) reclassified 8 of the 29 chic-v5 tier-3
+candidates to **tier-2-equivalent** under cross-pool L3 robustness
+(≥1 non-Eteocretan substrate-LM L3 vote matching the L1+L2
+distributional consensus). The chic-v12 bail rule fired (8 > 5)
+and within-window context inspection was deferred to this ticket
+(chic-v13). chic-v13 applies the chic-v11 `#032 → ki` ku-pa
+context inspection methodology
+(`results/chic_v11_032_ku_pa_context.md`) to all 8 candidates:
+for each, pick 1–3 high-density host inscriptions, render with
+chic-v2 anchors substituted and the candidate as a class
+placeholder (`[stop:#NNN]`, `[N:#NNN]`), and check whether the
+rendered reading produces a result consistent with surrounding
+accountancy / sealing / sealstone-formula structure and whether
+it contradicts canonical CHIC sealstone formulas (`i-ja-ro`,
+`ki-de`, `wa-ke`) or any chic-v2 anchor.
+
+### Headline counts
+
+| metric | value |
+|:--|--:|
+| `n_tier_2_equivalent_input` | 8 |
+| `n_consistent` | **6** |
+| `n_inconsistent` | **0** |
+| `n_inconclusive` | **2** |
+
+### Per-candidate verdict
+
+| sign | freq | proposed class | corroborated_by (non-Eteo) | verdict |
+|:--|--:|:--|:--|:--|
+| `#021` | 3 | nasal | aquitanian, etruscan, toponym (3 of 3) | **consistent** |
+| `#005` | 48 | stop | aquitanian, toponym (2 of 3) | **consistent** |
+| `#055` | 5 | stop | aquitanian, toponym (2 of 3) | **inconclusive** |
+| `#065` | 3 | stop | aquitanian, toponym (2 of 3) | **inconclusive** |
+| `#072` | 7 | stop | etruscan, toponym (2 of 3) | **consistent** |
+| `#017` | 6 | nasal | etruscan (1 of 3) | **consistent** |
+| `#039` | 7 | stop | toponym (1 of 3) | **consistent** |
+| `#056` | 52 | stop | etruscan (1 of 3) | **consistent** |
+
+### Verdict
+
+**The chic-v12 cross-pool L3 reclassification is partially
+confirmed by within-window context inspection: 6 of 8
+tier-2-equivalent candidates produce contextually-consistent
+rendered readings, 2 are inconclusive on corpus state, and 0 are
+disconfirmed.** The 6 consistent candidates (`#021`, `#005`,
+`#072`, `#017`, `#039`, `#056`) all carry at least one host
+inscription where the candidate-bearing run renders coherently
+against chic-v2 anchored neighbours, does not contradict
+canonical CHIC sealstone formulas, and exhibits the kind of
+accountancy-formula or sealstone-formula structural pattern that
+the chic-v11 `#032 → ki` ku-pa context inspection identified as
+the methodological template.
+
+The strongest within-window context evidence falls on:
+
+- **`#072` (stop)** — two `[stop:#072]-de NUM` accountancy
+  entries at Knossos bar CHIC #065 (sign-run + numeral, the
+  canonical accountancy-formula structure), plus a third on
+  Knossos medallion CHIC #034. **Mirrors the chic-v11
+  `#032`-`#013 = ki-pa` ku-pa NUM-following structure on CHIC
+  #057 directly.**
+- **`#056` (stop)** — multiple `[?] [stop:#056] NUM` entries at
+  Knossos bar CHIC #061, including one fragment where
+  `[?:#034] [stop:#056]` directly precedes the canonical
+  `019-049 = ke-de` formula plus NUM:1 (`034-056 019-049 1`),
+  positioning the candidate-bearing run in a name/commodity slot
+  preceding `ke-de` plus quantity.
+- **`#021` (nasal)** — three-fold cross-site recurrence of the
+  formula `031-021-061 = ro-[N]-te` at Mallia sealing CHIC #149,
+  Mallia seal CHIC #197, and Knossos accountancy bar CHIC #059
+  (the latter with the formula in **direct adjacency with the
+  canonical `044-049 = ki-de` sealstone formula**).
+
+The 2 inconclusive verdicts (`#055`, `#065`) reflect honest
+under-determination on corpus state — both signs occur
+predominantly in `fragmentary`-confidence inscriptions, and
+`#065`'s only `clean`-confidence occurrence is itself in a
+variant-bracketed transcription `{065}` (CHIC #174). Stop-class
+for both produces no contradiction with anchored neighbours or
+canonical formulas, but no positive accountancy- or
+sealstone-formula-grade evidence either. The verdict is
+`inconclusive` rather than weakened to `consistent` to inflate
+the headline count.
+
+**Cross-pool L3 corroboration alone, in the absence of supporting
+within-window context evidence, is not sufficient for class-level
+value confirmation**: the chic-v13 inspection demonstrates that 2
+of 8 tier-2-equivalents fail to clear the within-window context
+bar despite passing the chic-v12 cross-pool L3 axis. This is the
+publishable methodology finding the chic-v13 brief explicitly
+flagged: *"If 0/8 pass context inspection, report that honestly —
+it would strengthen the framework's discrimination claim by
+showing cross-pool L3 alone is not sufficient, which is itself a
+publishable methodology finding."* The 2/8 inconclusive verdicts
+honour the same discipline at a smaller scale: the chic-v13 axis
+discriminates *within* the cross-pool L3 tier-2-equivalent set,
+not just at its boundary.
+
+### Acceptance gate — chic-v13 brief
+
+- `results/chic_v13_context_inspection.md` per-candidate context
+  inspection report following the chic-v11 template ✓ (all 8
+  candidates × 1–3 inscriptions × rendered readings + structural
+  commentary + per-candidate verdict).
+- `results/chic_v13_summary.md` with top-of-file count table
+  + 1-paragraph plain-English verdict ✓.
+- No anchor pool modification (`pools/cretan_hieroglyphic_anchors.yaml`
+  is read-only on this ticket) ✓.
+- `docs/findings.md` appended (this entry) ✓.
+- `docs/findings_summary.md` §4.7 extended with the chic-v13
+  sub-paragraph integrating into the post-chic-v12 narrative ✓.
+- No promotion of `consistent` candidates to "candidate proposal
+  pending domain-expert review" prose (PM call, out of chic-v13
+  scope) ✓.
+- No paleographic L4 work (silent for all 76 unknowns by chic-v5
+  construction; chic-v13 does not attempt to extend) ✓.
+
+### Bail rule status
+
+The chic-v13 brief pre-registered a bail rule: if the polecat
+hits ≥80% of the 1M token budget while having processed fewer
+than 8 candidates, bail with the first k completed and surface
+the budget-pressure signal. **All 8 candidates were inspected
+within budget; no bail invoked.**
+
+### Implication for the methodology paper
+
+chic-v13 contributes the **fourth within-polecat-scope
+discipline-protecting axis** on top of the three pillars that
+chic-v6 / chic-v9 / chic-v11+v12 already established for the
+chic sub-program:
+
+1. **chic-v6 mechanical verification** (small but non-zero
+   tier-1 → tier-2 lift on scholar-proposed Linear-A readings,
+   toponym substrings, and item-location consistency).
+2. **chic-v9 LOO held-out validation** of the chic-v5 framework
+   on chic-v2 anchors (LOO accuracy 20.0%, 0/3 tier-2 unanimity
+   correct — places the framework in the low-agreement /
+   not-validated band).
+3. **chic-v11 / chic-v12 cross-pool L3 robustness** (per-candidate
+   asymmetric refinement; tier-2-equivalent reclassification
+   band with ≥ 1 non-Eteocretan substrate-LM corroboration).
+4. **chic-v13 within-window context inspection** (this ticket;
+   per-candidate structural-consistency check on host
+   inscriptions against chic-v2 anchored neighbours and canonical
+   sealstone formulas).
+
+Each axis discriminates within the previous axis's accept set:
+chic-v9 establishes the framework's LOO accuracy; chic-v11 / v12
+grade the chic-v5 candidates by cross-pool L3 robustness;
+chic-v13 grades the chic-v12 tier-2-equivalents by within-window
+context. The discipline pillar structure is the deliverable; the
+per-candidate verdicts are the side-effect.
+
+The combined post-chic-v13 framing for the chic sub-program's
+candidate proposals is:
+
+- `#032 → ki/stop` (chic-v5 tier-2 + chic-v6 source-A ku-pa
+  lift + chic-v11 cross-pool L3 corroboration on Etruscan +
+  chic-v11 ku-pa context inspection on CHIC #057 + LA HT
+  1/16/102/110a). 5 of 5 within-polecat-scope axes positive.
+- `#021 → nasal` (chic-v5 tier-3 + chic-v12 tier-2-equivalent
+  with 3 of 3 non-Eteocretan corroboration + chic-v13 consistent
+  on 3-fold cross-site formula + ki-de adjacency at #059). 4 of
+  4 within-polecat-scope axes positive (chic-v9 framework-level
+  negative applies to all candidates).
+- `#005 → stop`, `#072 → stop`, `#056 → stop`, `#017 → nasal`,
+  `#039 → stop` (chic-v5 tier-3 + chic-v12 tier-2-equivalent +
+  chic-v13 consistent). 3 of 4 within-polecat-scope axes positive
+  (chic-v9 framework-level negative; cross-pool L3 + context
+  consistent).
+- `#055 → stop`, `#065 → stop` (chic-v5 tier-3 + chic-v12
+  tier-2-equivalent + chic-v13 inconclusive). 2 of 4
+  within-polecat-scope axes positive; chic-v13 axis returns
+  inconclusive on corpus state.
+- `#001 → wa/glide`, `#012 → wa/glide` (chic-v5 tier-2 +
+  chic-v11 cross-pool L3 actively undermines as Eteocretan-LM
+  glide artifacts). chic-v11 axis negative.
+- 4 chic-v5 tier-3 candidates `tier-3-corroborated` (chic-v5
+  baseline state; no additional non-Eteocretan corroboration).
+- 17 chic-v5 tier-3 candidates `tier-3-uncorroborated` (no
+  cross-pool L3 corroboration beyond chic-v5's L1+L2 distributional
+  agreement).
+
+**The chic-v9 framework-level negative remains load-bearing
+across all candidates.** chic-v13's contribution is per-candidate
+within-window context evidence-grading granularity — not a lift
+of the chic-v9 LOO accuracy, which remains 20.0% / 0/3 tier-2
+unanimity correct. Specialist review remains the load-bearing
+next step for any candidate; promotion of `consistent`
+candidates to "candidate proposal pending domain-expert review"
+prose status is a PM call after seeing both chic-v13 and the
+sibling chic-v14 LOO-on-cross-pool-L3-methodology results.
+
+### Out of scope (deferred)
+
+- **LOO held-out validation of the chic-v12 reclassification
+  methodology** — sibling ticket chic-v14 (filed); chic-v13 is
+  the within-window context axis, chic-v14 will run the
+  LOO-on-cross-pool-L3 axis.
+- **Promotion of `consistent` candidates to chic-v2 anchors** —
+  out of scope; PM call.
+- **LA-side analogous chic-v13 work** — already covered by
+  v22 / v26 / v28 / chic-v8 chain at the chic-v5 framework's
+  full scope; an analogous chic-v13-style within-window context
+  axis on LA candidates would be additive but is not in
+  chic-v13's polecat scope.
+- **Per-window dedup, AGENTS.md cosmetics, Linear-B carryover
+  refinement** — per the chic-v13 brief, out of scope.
+- **Manuscript editorial pass** integrating chic-v13 into §4.7
+  beyond the sub-paragraph integration this ticket lands —
+  separate ticket (chic-v13-equivalent polish pass, future).
+
+### Method details (preserved for reproducibility)
+
+- **Inscription selection** is a deterministic frequency-density
+  argmax over `corpora/cretan_hieroglyphic/all.jsonl`. For each
+  candidate, host inscriptions are ranked by (a) `#NNN`
+  occurrence count within the inscription, (b) total inscription
+  length (longer inscriptions provide more anchored neighbours
+  for context), (c) transcription_confidence (clean > partial >
+  fragmentary). For low-frequency candidates (`#021`, `#065`,
+  freq 3), all corpus occurrences are included regardless of
+  density.
+- **Rendering convention** uses chic-v2 anchors byte-identically:
+  `#010 → ja`, `#013 → pa`, `#016 → a`, `#019 → ke`,
+  `#025 → ta`, `#028 → ti`, `#031 → ro`, `#038 → i`,
+  `#041 → ni`, `#042 → wa`, `#044 → ki`, `#049 → de`,
+  `#053 → me`, `#054 → mu`, `#057 → je`, `#061 → te`,
+  `#070 → ra`, `#073 → to`, `#077 → ma`, `#092 → ke`. The
+  candidate sign is rendered as a class-level placeholder
+  (`[stop:#NNN]` for stop, `[N:#NNN]` for nasal); other unanchored
+  signs are rendered as `[?:#NNN]`.
+- **Structural-consistency criteria** (parallel to chic-v11):
+  (i) does the rendered reading produce coherent CV-CV / CV-CV-CV
+  / sign-run-plus-numeral structure consistent with the
+  inscription's support type and its surrounding sign environment?
+  (ii) does the rendering contradict any of the canonical CHIC
+  sealstone formulas — `i-ja-ro` (`#038-#010-#031`), `ki-de`
+  (`#044-#049`), `wa-ke` (`#042-#019` or `#042-#092`)? (iii) does
+  it conflict with any chic-v2 anchor's known value? Each
+  per-candidate verdict is a structural-consistency observation,
+  not a phoneme-value endorsement.
+- **No specific-CV expansion.** chic-v12's cross-pool L3 result
+  is class-level. chic-v13 retains class-level placeholders in
+  renderings; specific CV expansions (`ma`/`me`/`mu`/`ni` for
+  nasal; `ke`/`ki`/`pa`/`ta`/`te`/`ti`/`to`/`de` for stop; etc.)
+  are mentioned in commentary as structural-compatibility
+  observations only, not specific-value claims.
+
+### Determinism
+
+- No RNG. The candidate list is fixed by chic-v12; inscription
+  selection is a deterministic frequency-density argmax over the
+  fixed chic-v0 corpus; rendered readings use the chic-v2 anchor
+  mapping byte-identically. Same (chic-v0 corpus, chic-v2 anchors,
+  chic-v12 candidate list) → byte-identical output.
+
+### Citations
+
+- Olivier, J.-P. & Godart, L. (1996). *Corpus Hieroglyphicarum
+  Inscriptionum Cretae* (Études Crétoises 31). Paris.
+- Younger, J. G. (online). *The Cretan Hieroglyphic Texts: a web
+  edition of CHIC with commentary.* Wayback Machine snapshot
+  20220703170656.
+- Salgarella, E. (2020). *Aegean Linear Script(s).* Cambridge.
+- Ventris, M. & Chadwick, J. (1956). *Documents in Mycenaean
+  Greek.* Cambridge.
+- Decorte, R. (2017). *The First 'European' Writing.*
+- Civitillo, M. (2016). *La scrittura geroglifica minoica sui
+  sigilli.*

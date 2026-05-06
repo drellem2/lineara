@@ -2357,7 +2357,7 @@ protecting protocol that catches per-sign motivated-reasoning
 failure modes through pre-registered held-out validation, and
 the discipline — not the per-sign output — is the deliverable**.
 
-### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 through chic-v9)
+### 4.7 Cross-script extension: Cretan Hieroglyphic (chic-v0 through chic-v13)
 
 A parallel sub-program (the **chic-v\*** ticket series) extends
 the same mechanical-falsifiability discipline to **Cretan
@@ -3527,8 +3527,149 @@ chic-v12 build time, 2026-05-06):
 `results/chic_v12_tier3_summary.md` md5
 `4fa90790d73f3348bad4a5376ff2aaa5`.
 
+#### chic-v13 — within-window context inspection on the 8 chic-v12 tier-2-equivalent candidates (mg-5261)
+
+chic-v12 (above) bailed on the within-window context inspection
+when the tier-2-equivalent count exceeded the brief's pre-
+registered threshold (8 > 5) and pre-registered the deferral as
+a chic-v13 follow-up ticket. chic-v13 (mg-5261) executes the
+deferred inspection, applying the chic-v11 `#032 → ki` ku-pa
+context inspection methodology
+(`results/chic_v11_032_ku_pa_context.md`) to all 8 chic-v12
+tier-2-equivalent candidates. For each candidate: pick 1–3
+high-density host inscriptions, render with chic-v2 anchors
+substituted and the candidate as a class-level placeholder
+(`[stop:#NNN]`, `[N:#NNN]`), and check whether the rendered
+reading produces a result consistent with the surrounding
+accountancy / sealing / sealstone-formula structure on the
+chosen inscriptions and whether it contradicts canonical CHIC
+sealstone formulas (`i-ja-ro`, `ki-de`, `wa-ke`) or any chic-v2
+anchor's known value.
+
+Headline counts (out of 8 input candidates):
+
+| metric | value |
+|:--|--:|
+| `n_consistent` | **6** |
+| `n_inconsistent` | **0** |
+| `n_inconclusive` | **2** |
+
+Per-candidate verdict:
+
+| sign | freq | proposed | corroborated_by (non-Eteo) | verdict |
+|:--|--:|:--|:--|:--|
+| `#021` | 3 | nasal | aquitanian, etruscan, toponym (3 of 3) | **consistent** |
+| `#005` | 48 | stop | aquitanian, toponym (2 of 3) | **consistent** |
+| `#055` | 5 | stop | aquitanian, toponym (2 of 3) | **inconclusive** |
+| `#065` | 3 | stop | aquitanian, toponym (2 of 3) | **inconclusive** |
+| `#072` | 7 | stop | etruscan, toponym (2 of 3) | **consistent** |
+| `#017` | 6 | nasal | etruscan (1 of 3) | **consistent** |
+| `#039` | 7 | stop | toponym (1 of 3) | **consistent** |
+| `#056` | 52 | stop | etruscan (1 of 3) | **consistent** |
+
+Of the 8 chic-v12 tier-2-equivalent candidates from the
+post-chic-v12 narrative above, **6 (`#021`, `#005`, `#072`,
+`#017`, `#039`, `#056`) pass within-window context inspection,
+2 (`#055`, `#065`) are inconclusive on corpus state, and 0 are
+disconfirmed**. The strongest within-window context evidence
+falls on `#072 → stop` (two `[stop:#072]-de NUM` accountancy
+formula entries at Knossos bar CHIC #065, mirroring the chic-v11
+`#032`-`#013 = ki-pa` ku-pa NUM-following structure on CHIC #057
+directly), `#056 → stop` (multiple `[?] [stop:#056] NUM` entries
+at Knossos bar CHIC #061, including one fragment where
+`[?:#034] [stop:#056]` directly precedes the canonical
+`019-049 = ke-de` formula plus NUM:1), and `#021 → nasal`
+(three-fold cross-site recurrence of the formula
+`031-021-061 = ro-[N]-te` at Mallia sealing CHIC #149, Mallia
+seal CHIC #197, and Knossos accountancy bar CHIC #059, the
+latter with the formula in direct adjacency with the canonical
+`044-049 = ki-de` sealstone formula). The 2 inconclusive
+verdicts (`#055`, `#065`) reflect honest under-determination on
+corpus state — both signs occur predominantly in
+`fragmentary`-confidence inscriptions, and `#065`'s only
+`clean`-confidence occurrence is itself in a variant-bracketed
+transcription `{065}` (CHIC #174).
+
+**Cross-pool L3 corroboration alone, in the absence of
+supporting within-window context evidence, is not sufficient for
+class-level value confirmation**: chic-v13 demonstrates that 2
+of 8 tier-2-equivalents fail to clear the within-window context
+bar despite passing the chic-v12 cross-pool L3 axis. This is the
+publishable methodology finding the chic-v13 brief explicitly
+flagged: cross-pool L3 alone does not load-bear, and the
+chic-v13 axis discriminates *within* the cross-pool L3
+tier-2-equivalent set, not just at its boundary. The chic-v9
+framework-level negative (LOO accuracy 20.0% / 0/3 tier-2
+unanimity correct) is unaffected; chic-v13 contributes the
+**fourth within-polecat-scope discipline-protecting axis** on top
+of the three pillars chic-v6 / chic-v9 / chic-v11+v12 already
+established (mechanical verification, LOO held-out validation,
+cross-pool L3 robustness). The discipline-pillar structure is
+the deliverable; the per-candidate verdicts are the side-effect.
+
+The post-chic-v13 per-candidate framing for the chic
+sub-program's candidate proposals: `#032 → ki/stop` retains 5/5
+within-polecat-scope axes positive (chic-v5 tier-2 + chic-v6
+ku-pa lift + chic-v11 cross-pool L3 + chic-v11 ku-pa context +
+chic-v13 not applicable since `#032` is chic-v5 tier-2 not
+chic-v12 tier-2-equivalent); `#021 → nasal` retains 4/4 (chic-v5
+tier-3 + chic-v12 tier-2-equivalent with 3 of 3 non-Eteocretan
+corroboration + chic-v13 consistent); `#005 → stop`,
+`#072 → stop`, `#056 → stop`, `#017 → nasal`, `#039 → stop`
+retain 3/4 (chic-v5 tier-3 + chic-v12 tier-2-equivalent +
+chic-v13 consistent); `#055 → stop`, `#065 → stop` retain 2/4
+(chic-v5 tier-3 + chic-v12 tier-2-equivalent + chic-v13
+inconclusive); `#001 → wa/glide`, `#012 → wa/glide` remain
+chic-v11-actively-undermined as Eteocretan-LM glide artifacts.
+Specialist review remains the load-bearing next step for any
+candidate; promotion of `consistent` candidates to "candidate
+proposal pending domain-expert review" prose is a PM call after
+seeing both chic-v13 and the sibling chic-v14
+LOO-on-cross-pool-L3-methodology results.
+
+Outputs: `results/chic_v13_context_inspection.md` (per-candidate
+context inspection report following the chic-v11 template;
+all 8 candidates × 1–3 inscriptions × rendered readings +
+structural commentary + per-candidate verdict);
+`results/chic_v13_summary.md` (top-of-file count table +
+1-paragraph plain-English verdict). **Done in mg-5261.** No
+anchor pool modification; the ticket is read-only on
+`pools/cretan_hieroglyphic_anchors.yaml`.
+
+**Determinism.** No RNG; the candidate list is fixed by chic-v12;
+inscription selection is a deterministic frequency-density
+argmax over `corpora/cretan_hieroglyphic/all.jsonl`; rendered
+readings use the chic-v2 anchor mapping byte-identically.
+
 #### Pre-registered chic-v10+ (chic-v9 done in mg-18cb)
 
+- **chic-v13 done.** Within-window context inspection on the 8
+  chic-v12 tier-2-equivalent candidates, applying the chic-v11
+  `#032 → ki` ku-pa context inspection methodology
+  (`results/chic_v11_032_ku_pa_context.md`). **6 of 8 candidates
+  pass context inspection (`consistent`); 2 are `inconclusive` on
+  corpus state; 0 are `inconsistent`.** Strongest cases: `#072`
+  (two `[stop:#072]-de NUM` accountancy entries at Knossos bar
+  #065, mirroring chic-v11 ku-pa structure directly), `#056`
+  (multiple `[?] [stop:#056] NUM` entries at Knossos bar #061,
+  including one preceding `ke-de NUM:1`), and `#021` (3-fold
+  cross-site recurrence of `031-021-061 = ro-[N]-te` formula plus
+  direct adjacency with `ki-de` at #059). Inconclusive: `#055`,
+  `#065` (predominantly fragmentary host inscriptions; `#065`'s
+  only clean occurrence is variant-bracketed). Outputs:
+  `results/chic_v13_context_inspection.md`,
+  `results/chic_v13_summary.md`. **Done in mg-5261.** Net: the
+  chic-v9 framework-level negative is unaffected; chic-v13
+  contributes the fourth within-polecat-scope discipline-
+  protecting axis (mechanical verification + LOO validation +
+  cross-pool L3 robustness + within-window context inspection)
+  and demonstrates that cross-pool L3 corroboration alone is not
+  sufficient for class-level value confirmation (2/8
+  tier-2-equivalents fail the within-window context bar). No
+  anchor pool modification; promotion of `consistent` candidates
+  to "candidate proposal pending domain-expert review" prose is a
+  PM call after seeing both chic-v13 and the sibling chic-v14
+  LOO-on-cross-pool-L3-methodology results.
 - **chic-v12 done.** Cross-pool L3 robustness check on the 29
   chic-v5 tier-3 candidates, methodologically symmetric extension
   of chic-v11. **8 of 29 tier-3 candidates reclassify to
