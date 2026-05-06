@@ -10742,3 +10742,27 @@ triage); no bail invoked.**
 - Decorte, R. (2017). *The First 'European' Writing.*
 - Civitillo, M. (2016). *La scrittura geroglifica minoica sui
   sigilli.*
+
+## Findings from mg-811e (handoff: state-of-things log + possible follow-up work for project pause, 2026-05-06)
+
+Documentation-only ticket. No new evidence, no manuscript polish, no
+harness changes. Adds **`docs/handoff_2026-05-06.md`** capturing the
+project state at chic-v15 merge so a future revival can resume cleanly.
+
+The handoff doc covers (A) project state snapshot, (B) supportable
+claims post-chic-v15, (C) known gaps in the current manuscript that
+deferred polish v31 should address, (D) three sibling-priced follow-up
+directions in priority order (Linear B control, Eteocretan-Greek
+bilingual constraint, control-pool extension), (E) deferred /
+out-of-polecat-scope items, (F) substantive pivot directions requiring
+Daniel's direction on revival, and (G) verbatim Daniel reminder quotes
+preserving the pause-time framing.
+
+**The Lineara product line pauses at this commit.** `docs/findings_summary.md`
+is intentionally untouched — manuscript polish (chic-v15 integration
+into §4.7 + §1 + §3.1 + §6) is deferred to a possible future v31 polish
+ticket per Daniel's pause directive. `docs/roadmap.md` will be regenerated
+by pm-lineara with a "Paused" notation in the sweep that closes this
+ticket.
+
+See `docs/handoff_2026-05-06.md` for the full state-of-things log.
