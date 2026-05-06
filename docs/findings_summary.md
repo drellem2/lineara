@@ -3374,8 +3374,183 @@ re-running `scripts/build_chic_v11.py` produces byte-identical
 result files (md5 stability verified at chic-v11 build time,
 2026-05-06).
 
+#### chic-v12 — cross-pool L3 robustness on the 29 chic-v5 tier-3 candidates (mg-2035)
+
+chic-v11 (above) ran the chic-v5 L3 substrate-consistency line
+under each of the 4 substrate-pool LMs on the 3 chic-v5 **tier-2**
+candidate proposals and produced sharp per-candidate
+differentiation: `#032` weakly corroborated cross-pool (2 of 4
+LMs vote stop); `#001` and `#012` actively undermined as
+Eteocretan-LM glide artifacts. chic-v12 scales the same robustness
+check to the **29 chic-v5 tier-3 candidates** — the L1+L2-but-not-
+L3-Eteocretan agreement subset (23 candidates), plus the 6 L1+L2-
+disagree subset where the chic-v5 consensus class is via L1-or-L2
++ Eteocretan-L3 agreement.
+
+The methodological question chic-v12 asks: does any tier-3
+candidate have the same evidence structure as the surviving
+tier-2 (`#032`) — three independent lines plus ≥ 1 non-Eteocretan
+substrate-LM corroboration — under the same chic-v11 cross-pool
+L3 axis? The 29 × 4 = 116-cell matrix is byte-identical to
+chic-v11 except for the candidate list. Outputs:
+`results/chic_v12_cross_pool_l3.md` (per-candidate × per-LM table
++ per-candidate per-class mean paired_diff details + bail-or-
+context-inspection block), `results/chic_v12_tier3_summary.md`
+(top-of-file count table + per-candidate one-line summary +
+verdict).
+
+Reclassification bands per the chic-v12 brief:
+
+- **`tier-2-equivalent`** — ≥1 non-Eteocretan substrate LM
+  corroborates the chic-v5 proposed class. Same evidence
+  structure as `#032`.
+- **`tier-3-corroborated`** — only Eteocretan-L3 corroborates
+  the chic-v5 proposed class. For the 23 L1+L2-agree tier-3
+  candidates this is structurally impossible (Eteocretan-L3
+  disagrees by chic-v5 construction). For the 6 L1+L2-disagree
+  tier-3 candidates this is the chic-v5 baseline state by
+  construction.
+- **`tier-3-uncorroborated`** — no LM's L3 corroborates the
+  chic-v5 proposed class.
+
+Headline reclassification counts:
+
+| reclassification | n |
+|:--|--:|
+| **tier-2-equivalent** | **8** |
+| tier-3-corroborated | 4 |
+| tier-3-uncorroborated | 17 |
+| **total tier-3** | **29** |
+
+The 8 `tier-2-equivalent` candidates are `#005`, `#017`, `#021`,
+`#039`, `#055`, `#056`, `#065`, `#072`. Their `corroborated_by`
+sets vary from 1 of 3 non-Eteocretan LMs (`#017` etruscan only;
+`#039` toponym only; `#056` etruscan only) up to 3 of 3 (`#021`
+aquitanian + etruscan + toponym, the strongest case). The 4
+`tier-3-corroborated` candidates are `#006`, `#033`, `#050`,
+`#063` — the L1+L2-disagree subset where Eteocretan-L3
+corroborates the chic-v5 proposed glide class by construction
+and no non-Eteocretan LM additionally agrees. The 17
+`tier-3-uncorroborated` candidates exhaust the L1+L2-agree
+subset where the cross-pool L3 axis adds nothing beyond chic-v5's
+L1+L2 distributional agreement.
+
+**Verdict.** The chic-v12 reclassification rate is large enough
+(8 of 29 tier-3 candidates → tier-2-equivalent) that the chic-v12
+brief's pre-registered bail rule applies on the within-window
+context inspection: the brief expected ≤ 5 candidates and
+pre-registered a bail at > 5 because that count is a scale signal
+worth surfacing rather than a mechanical N candidates to inspect.
+The scale signal itself is the chic-v12 finding: **the cross-pool
+L3 axis is meaningfully more permissive than the Eteocretan-only
+L3 axis chic-v5 used.** For tier-3 candidates whose chic-v5
+proposed class lies in a non-Eteocretan substrate-LM's high-
+probability bigram region (typically `stop` for the basque LM
+under aquitanian / toponym; typically `nasal` for either basque
+or etruscan), at least one non-Eteocretan LM is structurally
+likely to vote the proposed class regardless of the underlying
+truth. This is the same methodological caveat the chic-v9 LOO
+test surfaced for the Eteocretan LM in isolation (L3 recovery
+1/20 = 5%, below the ~16.7% chance baseline for a 6-class
+taxonomy), now extended: the cross-pool L3 axis as a whole shares
+the systematic class bias.
+
+**Differential evidentiary strength among the 8 tier-2-equivalent
+reclassifications is non-trivial.** `#021 → nasal` is the
+strongest case (3 of 3 non-Eteocretan LMs corroborate, plus
+Eteocretan-L3 by L1+L2-disagree-via-Eteo construction = 4 of 4
+LMs vote nasal); `#005`, `#055`, `#065`, `#072` carry 2-of-3
+non-Eteocretan corroborations on stop; `#017`, `#039`, `#056`
+are 1-of-3. By contrast the chic-v11 surviving tier-2 (`#032`)
+carries 1-of-3 non-Eteocretan corroboration (etruscan) **plus**
+Eteocretan-L3 itself, for 4 of 5 mechanical lines (chic-v5 L1
++ L2 + Eteo-L3 + Etruscan-L3) all voting stop — no chic-v12
+tier-2-equivalent matches `#032`'s overall mechanical-lines
+tally; the evidentiary structure is bandwise-equivalent (≥ 1
+non-Eteocretan LM corroborates) but per-line vote counts differ.
+
+**Implication for the methodology paper's per-candidate framing.**
+The chic-v11 asymmetric refinement (`#032 > #001 ≈ #012`) is now
+extended with a tier-3 evidence-grading layer:
+
+- `#032` retains its position as the chic sub-program's strongest
+  per-candidate mechanical evidence basis (cross-pool L3
+  corroborated by Eteocretan + Etruscan; chic-v6 ku-pa context
+  corroborated on both sides; chic-v11).
+- 8 chic-v5 tier-3 candidates reclassify to `tier-2-equivalent`,
+  meaning they have the same band-level evidence structure as
+  `#032` (≥ 1 non-Eteocretan substrate-LM corroborates) but
+  differ in per-line vote tallies and lack the chic-v6 ku-pa
+  context corroboration `#032` carries.
+- 17 chic-v5 tier-3 candidates reclassify to
+  `tier-3-uncorroborated`, meaning the cross-pool L3 axis adds
+  no support beyond chic-v5's L1+L2 distributional agreement.
+- 4 chic-v5 tier-3 candidates reclassify to
+  `tier-3-corroborated`, retaining only the chic-v5 baseline
+  state.
+
+The framework's discrimination claim now spans **n = 32**
+evidence-graded candidates (3 chic-v5 tier-2 + 29 chic-v5
+tier-3) with **9 cross-pool L3 corroborated by ≥ 1 non-
+Eteocretan substrate LM** (`#032` chic-v11 + 8 chic-v12
+tier-2-equivalents), **4 chic-v5-baseline tier-3-corroborated**,
+and **17 cross-pool L3 uncorroborated**. The chic-v9 framework-
+level negative (LOO accuracy 20.0% / 0/3 tier-2 unanimity
+correct) is unchanged; chic-v12's contribution is per-candidate
+evidence-grading granularity within the chic-v9-validated low-
+accuracy band.
+
+**Pre-registered chic-v13 candidate.** The bail on within-window
+context inspection at 8 > 5 tier-2-equivalents is itself a
+pre-registration for a chic-v13 follow-up: run the within-window
+context inspection on a stratified sample of the 8 tier-2-
+equivalent candidates (stratified on `corroborated_by` size:
+1-of-3 vs 2-of-3 vs 3-of-3 non-Eteocretan corroboration) and
+re-evaluate the per-candidate evidence weighting under the
+cross-pool L3 axis. Out of chic-v12's polecat budget; pm-lineara
+triage call.
+
+**`docs/findings.md` (mg-2035 entry)** records the 116-cell
+cross-pool L3 reclassification table, the per-candidate
+`corroborated_by` + `reclassification` columns, the bail-on-
+context-inspection rationale, the differential-evidentiary-
+strength reading, and the implication for the methodology paper's
+per-candidate framing. Per AGENTS.md: the findings update is a
+non-negotiable acceptance blocker.
+
+**Determinism.** chic-v12 inherits chic-v5's L3 sha256-keyed
+permutation construction. Re-running `scripts/build_chic_v12.py`
+produces byte-identical output (md5 stability verified at
+chic-v12 build time, 2026-05-06):
+`results/chic_v12_cross_pool_l3.md` md5
+`0e6444da401d69fd7f8af7fcec0a403c`;
+`results/chic_v12_tier3_summary.md` md5
+`4fa90790d73f3348bad4a5376ff2aaa5`.
+
 #### Pre-registered chic-v10+ (chic-v9 done in mg-18cb)
 
+- **chic-v12 done.** Cross-pool L3 robustness check on the 29
+  chic-v5 tier-3 candidates, methodologically symmetric extension
+  of chic-v11. **8 of 29 tier-3 candidates reclassify to
+  `tier-2-equivalent`** (≥ 1 non-Eteocretan substrate LM
+  corroborates the chic-v5 proposed class — same band-level
+  evidence structure as `#032`); 4 to `tier-3-corroborated` (the
+  L1+L2-disagree subset's chic-v5 baseline state); 17 to
+  `tier-3-uncorroborated`. The reclassification rate (8 > 5)
+  triggers the chic-v12 brief's pre-registered bail on
+  within-window context inspection; the scale signal — the
+  cross-pool L3 axis is meaningfully more permissive than the
+  Eteocretan-only L3 chic-v5 used — is the chic-v12 finding.
+  No chic-v12 tier-2-equivalent matches `#032`'s overall
+  mechanical-lines tally; the evidentiary structure is
+  bandwise-equivalent but per-line vote counts differ. Outputs:
+  `results/chic_v12_cross_pool_l3.md`,
+  `results/chic_v12_tier3_summary.md`. **Done in mg-2035.**
+  Net: the chic-v9 framework-level negative is unaffected; the
+  framework's per-sign discrimination claim now spans n = 32
+  evidence-graded candidates (3 chic-v5 tier-2 + 29 chic-v5
+  tier-3, of which 9 are cross-pool L3 corroborated by ≥ 1
+  non-Eteocretan substrate LM).
 - **chic-v11 done.** Cross-pool L3 robustness check + #032 ku-pa
   context inspection on the 3 chic-v5 tier-2 candidates. Cross-
   pool L3: of 12 cells (3 candidates × 4 substrate-pool LMs),
