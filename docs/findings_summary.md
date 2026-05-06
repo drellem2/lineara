@@ -3641,6 +3641,140 @@ inscription selection is a deterministic frequency-density
 argmax over `corpora/cretan_hieroglyphic/all.jsonl`; rendered
 readings use the chic-v2 anchor mapping byte-identically.
 
+
+#### chic-v14 — leave-one-out held-out validation of the chic-v12 cross-pool L3 reclassification methodology (mg-7f57)
+
+chic-v12 (above) introduced the cross-pool L3 reclassification rule
+and reclassified 8 of 29 chic-v5 tier-3 candidates to
+``tier-2-equivalent`` (27.6%). chic-v12 did not answer the held-out
+validation question: when run blind on **known** chic-v2 anchors,
+what fraction reclassify to ``tier-2-equivalent`` if the reference
+class is the anchor's *known* phoneme class? That rate is the
+cross-pool L3 LOO baseline against which chic-v12's 27.6% reads as
+above-baseline / at-baseline / below-baseline.
+
+chic-v14 closes that gap. **Methodologically symmetric to chic-v9**
+(which closed the analogous LOO gap for the chic-v5 four-line
+framework: aggregate accuracy 20.0%, tier-2 unanimity 0/3 correct,
+``not validated`` band), chic-v14 runs a leave-one-out test of the
+chic-v12 cross-pool L3 reclassification rule on the 20 chic-v2
+paleographic anchors. Per LOO iteration the held-out anchor is
+treated as the single unknown sign, the candidate-value pool is
+rebuilt per (LOO iteration, substrate pool), the class-disjoint
+sha256-keyed control mapping is regenerated per cell (no caching
+across iterations — chic-v14 brief discipline reminder), and the
+chic-v12 reclassification rule is applied with the held-out anchor's
+**known** class as reference (in chic-v12 the reference was the
+chic-v5 proposed class).
+
+Outputs: `results/chic_v14_loo_validation.md` (per-anchor LOO table
++ per-pool per-class mean paired_diff details + headline aggregate
+metrics + verdict + caveats); `results/chic_v14_summary.md`
+(headline-count table + 1-paragraph plain-English verdict + specific
+anchors that did and did not reclassify).
+
+Headline metrics:
+
+| metric | value |
+|:--|--:|
+| n anchors run blind | 20 |
+| **cross_pool_l3_recovery_rate** (tier-2-equivalent) | **12/20 = 60.0%** |
+| eteocretan_only_recovery_rate (tier-3-corroborated) | 0/20 = 0.0% |
+| no_corroboration_rate (tier-3-uncorroborated) | 8/20 = 40.0% |
+| chic-v12 reclassification rate (8 of 29 tier-3) | 8/29 = 27.6% |
+| **chic-v12 minus chic-v14 LOO** | **-32.4pp (below-baseline)** |
+
+The 12 anchors that reclassified to ``tier-2-equivalent`` (cross-
+pool L3 corroborates the known class via at least one non-Eteocretan
+LM): `#019`, `#031`, `#041`, `#042`, `#044`, `#049`, `#053`, `#057`,
+`#061`, `#073`, `#077`, `#092`. The 8 anchors that reclassified to
+``tier-3-uncorroborated``: `#010`, `#013`, `#016`, `#025`, `#028`,
+`#038`, `#054`, `#070`. **Zero** anchors landed in
+``tier-3-corroborated`` — Eteocretan-L3 alone-corroboration without
+any non-Eteocretan LM agreement did not occur on any LOO iteration.
+
+**Verdict (honest read; not soft-pedalled per the chic-v14 brief).**
+The chic-v14 LOO cross-pool L3 recovery rate on known anchors is
+60.0%, so chic-v12's 27.6% reclassification rate on the 29 tier-3
+candidates is **-32.4pp BELOW the LOO baseline**. Cross-pool L3
+corroborates ground-truth class on known anchors **more often** than
+chic-v12 corroborates the chic-v5 proposed class on the tier-3 set.
+Read against the chic-v14 brief's interpretation framework ("if LOO
+shows 80%, the 27.6% is below baseline and the reclassification is
+anti-evidentiary"): the chic-v12 reclassification on the tier-3 set
+is **anti-evidentiary on the tier-3 set**. The chic-v12
+``tier-2-equivalent`` band fires at 60.0% on known anchors vs 27.6%
+on the chic-v5 tier-3 set; the band is therefore a **permissive
+corroboration test, not a discriminative one** — it fires at high
+rate regardless of whether the reference class is the correct
+phoneme class. **chic-v13's context inspection (sibling ticket,
+mg-5261) becomes the load-bearing evidence pillar** for any
+tier-3 candidate's elevated credibility; cross-pool L3 alone is no
+longer the dominant evidence axis on the tier-3 set.
+
+**Why the LOO baseline is high (60%).** With 4 LMs voting and the
+corroboration rule "≥ 1 non-Eteocretan LM votes the reference class"
+(a permissive OR over 3 LMs), it is structurally likely that at
+least one of the 3 non-Eteocretan LMs picks the reference class for
+*any* reference class — including ground-truth class on known
+anchors. The 60.0% LOO baseline is therefore not a sign that cross-
+pool L3 reliably tracks phoneme class; it is a sign that the
+corroboration rule is permissive. This reading explains why
+chic-v12's 27.6% on tier-3 candidates is *below* the LOO 60.0%
+baseline: when chic-v5's L1+L2 distributional consensus is the
+reference (tier-3 candidates), the cross-pool L3 axis fires less
+often than when the reference is ground-truth class on known
+anchors. One natural interpretation is that chic-v5's L1+L2
+proposed classes are biased away from the classes the cross-pool L3
+axis natively favours (basque LM under aquitanian / toponym
+favours `stop`; etruscan LM favours `nasal`; chic-v9's documented L3
+class bias). The chic-v12 ``tier-2-equivalent`` verdict therefore
+**does not separate** "true class" candidates from "L3-favoured
+class" candidates — chic-v14 LOO shows ground-truth class also gets
+corroborated at high rate, so corroboration alone does not
+discriminate.
+
+**Per-class breakdown of the 20 LOO iterations.** 6 stop-class
+anchors reclassified to tier-2-equivalent (out of 9 stop anchors:
+67%); 1 liquid-class out of 2 (50%); 3 nasal-class out of 4 (75%);
+2 glide-class out of 3 (67%); 0 vowel-class out of 2 (0%). The
+vowel class underperforms relative to other classes; this is
+consistent with the chic-v12 cross-pool L3 axis's permissiveness
+toward stop / nasal / glide / liquid and against vowel (the
+candidate-value pool's vowel sub-pool is small — only the bare
+vowels and the chic-v2 anchor values `a` and `i` — which makes
+vowel-class corroboration mechanically rare).
+
+**Implication for the methodology paper.** The chic-v9 framework-
+level negative (LOO accuracy 20.0% on the chic-v5 four-line
+framework, 0/3 tier-2 unanimity correct) and chic-v14's permissive-
+corroboration finding (60.0% LOO baseline; chic-v12 below baseline)
+together imply that **the chic-v12 cross-pool L3 reclassification is
+not a discriminative gate**. The chic-v12 finding stands as
+documented (8 of 29 tier-3 candidates have the same band-level
+evidence structure as `#032`), but the **interpretation of that
+evidence structure is downgraded**: cross-pool L3 corroboration is
+not a per-candidate signal that lifts a candidate above the chic-v9
+framework-level negative. chic-v13's context inspection (sibling
+ticket) is the load-bearing evidence pillar for any candidate's
+elevated credibility.
+
+**`docs/findings.md` (mg-7f57 entry)** records the 20-anchor LOO
+table, the per-pool per-class mean paired_diff details, the
+headline aggregate metrics, the chic-v12-vs-LOO comparison verdict
+(below-baseline), the per-class breakdown, and the implication for
+the methodology paper. Per AGENTS.md: the findings update is a
+hard merge-time blocker.
+
+**Determinism.** chic-v14 inherits chic-v5's L3 sha256-keyed
+permutation construction. Re-running `scripts/build_chic_v14.py`
+produces byte-identical output (md5 stability verified at
+chic-v14 build time, 2026-05-06):
+`results/chic_v14_loo_validation.md` md5
+`b64ba241ef6a3ca65f88e5571d37ce62`;
+`results/chic_v14_summary.md` md5
+`dce77a6ec28548e9edf275bdfe6aab86`.
+
 #### Pre-registered chic-v10+ (chic-v9 done in mg-18cb)
 
 - **chic-v13 done.** Within-window context inspection on the 8
