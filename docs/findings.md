@@ -10461,3 +10461,284 @@ explicitly in §1, §4.7, §5.4, §6, and §7.
   Greek.* Cambridge.
 - Duhoux, Y. (1982). *L'Étéocrétois: les textes — la langue.*
   Amsterdam: J. C. Gieben.
+
+## Findings from mg-2904 (chic-v15 — within-window context inspection on the 17 chic-v12 tier-3-uncorroborated candidates; complementary discriminative test of cross-pool L3 marginal value, 2026-05-06)
+
+### Summary
+
+chic-v13 (mg-5261) ran within-window context inspection on the
+**8 chic-v12 tier-2-equivalent** candidates and reported 6/8 =
+75.0% pass rate. chic-v14 (mg-7f57) showed cross-pool L3 alone is
+anti-evidentiary on the tier-3 set (-32.4pp below the 60.0% LOO
+baseline). v30 (mg-ee1f) demoted cross-pool L3 to permissive
+corroboration and promoted within-window context inspection to
+the load-bearing fourth discipline pillar.
+
+chic-v15 (mg-2904) closes the discriminative-test gap that v30
+left open: does within-window context inspection also pass at
+high rate on the **17 chic-v12 tier-3-uncorroborated** candidates
+(where cross-pool L3 fails completely)? If pass rate ≥ 70%
+(similar to chic-v13's 75%), cross-pool L3 has **no independent
+discriminative value** beyond context inspection. If < 30%, cross-
+pool L3 functions as a useful pre-filter even though it is anti-
+evidentiary alone. Intermediate rates (30–70%) imply partial
+discriminative value.
+
+The chic-v15 method byte-mirrors chic-v13's: (1) pre-execution
+triage (`viable` if n_clean_inscriptions ≥ 3 + clean anchor
+adjacency; `marginal` if 1–2 clean; `non-viable` if 0 clean —
+report `non-viable` as `inconclusive on corpus quality` without
+further inspection); (2) inscription selection by deterministic
+frequency-density argmax over `corpora/cretan_hieroglyphic/all.jsonl`;
+(3) rendering with chic-v2 anchors substituted byte-identically
+and the candidate as a class-level placeholder
+(`[stop:#NNN]` / `[L:#NNN]` / `[G:#NNN]` / `[V:#NNN]` / `[N:#NNN]`);
+(4) structural-consistency commentary against chic-v2 anchored
+neighbours and canonical CHIC sealstone formulas (`i-ja-ro`,
+`ki-de`, `wa-ke`); (5) per-candidate verdict
+(`consistent` / `inconsistent` / `inconclusive`).
+
+### Headline counts
+
+| metric | value |
+|:--|---:|
+| `n_input` (chic-v12 tier-3-uncorroborated) | 17 |
+| `n_consistent` | **12** |
+| `n_inconsistent` | **0** |
+| `n_inconclusive` (within-window) | **3** |
+| `n_inconclusive_on_corpus_quality` (non-viable) | **2** |
+| **pass rate** (consistent / n_input) | **12/17 = 70.6%** |
+| chic-v13 reference pass rate | 6/8 = 75.0% |
+
+### Triage breakdown
+
+| viability band | candidates | n |
+|:--|:--|---:|
+| viable (n_clean ≥ 3 + clean anchor adjacency) | `#007`, `#008`, `#009`, `#011`, `#020`, `#040`, `#059`, `#069` | 8 |
+| marginal (n_clean ∈ {1, 2}) | `#027`, `#037`, `#043`, `#045`, `#058`, `#060`, `#066` | 7 |
+| non-viable (n_clean = 0) | `#002`, `#078` | 2 |
+
+### Per-candidate verdict
+
+| sign | freq | proposed class | viability | verdict |
+|:--|---:|:--|:--|:--|
+| `#002` | 7 | liquid | non-viable | **inconclusive on corpus quality** |
+| `#007` | 8 | vowel | viable | **inconclusive** |
+| `#008` | 7 | glide | viable | **consistent** |
+| `#009` | 10 | stop | viable | **consistent** |
+| `#011` | 24 | liquid | viable | **consistent** |
+| `#020` | 9 | vowel | viable | **inconclusive** |
+| `#027` | 3 | glide | marginal | **inconclusive** |
+| `#037` | 3 | liquid | marginal | **consistent** |
+| `#040` | 17 | stop | viable | **consistent** |
+| `#043` | 6 | liquid | marginal | **consistent** |
+| `#045` | 4 | stop | marginal | **consistent** |
+| `#058` | 5 | stop | marginal | **consistent** |
+| `#059` | 5 | glide | viable | **consistent** |
+| `#060` | 8 | stop | marginal | **consistent** |
+| `#066` | 3 | stop | marginal | **consistent** |
+| `#069` | 3 | stop | viable | **consistent** |
+| `#078` | 3 | stop | non-viable | **inconclusive on corpus quality** |
+
+### Verdict
+
+**Cross-pool L3 has no independent discriminative value.**
+chic-v15's pass rate (12/17 = 70.6%) clears the ≥70% threshold
+the chic-v15 brief pre-registered for the "no independent
+discriminative value" verdict and is comparable to chic-v13's
+6/8 = 75.0% on the chic-v12 tier-2-equivalent set. The 4.4pp gap
+is within the noise of small-sample inspection on a 302-
+inscription corpus, and the qualitative structure of the
+consistent verdicts is indistinguishable across the two sets:
+both are dominated by `[CV]-[stop]-[CV] NUM` accountancy formulas
+and multi-formula sealstone co-occurrence.
+
+The strongest within-window context evidence in chic-v15 falls
+on:
+
+- **`#040 → stop`** — clean `wa-[stop:#040]-de NUM:0`
+  accountancy formula at CHIC #129 (Mallia nodulus, analogous to
+  canonical `ki-de NUM` with stop-class V₂ insertion); co-
+  occurrence with all three canonical sealstone formulas (`i-ja-ro`,
+  `ki-stop:#005`, `ki-de`) at clean Crete-unprov. seal CHIC #298;
+  co-occurrence with `ki-stop:#005` and `i-ja-ro` at clean Pyrgos
+  seal CHIC #309. **Comparable in strength to chic-v13's `#072 →
+  stop`.**
+- **`#069 → stop`** — clean `je-[stop:#069]-ra NUM:110`
+  accountancy formula at Knossos medallion CHIC #038 (parallel to
+  chic-v13's `#017-#039 NUM:100` and chic-v11's `#032-#013 = ki-pa
+  NUM`); co-occurrence with both `ki-de` and `ki-stop:#005` at
+  clean Crete-unprov. seal CHIC #287; 4-sign accountancy entry at
+  clean Knossos medallion CHIC #041. All 3 corpus occurrences are
+  clean.
+- **`#011 → liquid`** — co-occurrence with `ki-de NUM:634`
+  accountancy formula at clean Knossos medallion CHIC #042; co-
+  occurrence with `ki-de` and `ki-stop:#005` at clean Crete-
+  unprov. sealstone CHIC #297; multi-site clean attestations
+  across Knossos / Mallia / Crete-unprov.
+- **`#037 → liquid`** — recurring `037-011-029 NUM` accountancy
+  formula across 3 Knossos administrative inscriptions (clean
+  medallion #042 + partial bar #057 [permuted] + fragmentary bar
+  #061), with the canonical `ki-de NUM:634` on line 2 of #042.
+- **`#043 → liquid`** — clean `i-[L:#043]-de NUM:0` accountancy
+  formula at Crete-unprov. seal CHIC #256, structurally analogous
+  to `i-ja-ro` slot pattern (without collision); cross-line
+  `018-043` repetition at partial Neapolis seal CHIC #314 with
+  `ki-stop:#005` formula.
+
+### Implications
+
+1. **chic-v14's anti-evidentiary verdict on cross-pool L3 is
+   reinforced.** chic-v14 already established that cross-pool L3
+   reclassification is anti-evidentiary on the tier-3 set as a
+   whole (chic-v12 27.6% vs 60.0% LOO baseline). chic-v15 adds
+   the orthogonal per-candidate observation: within the tier-3
+   set, the *discriminative failure* of cross-pool L3 is also
+   confirmed — the candidates that *fail* cross-pool L3
+   corroboration produce within-window context inspection
+   consistency at indistinguishable rates from those that *pass*
+   it. The cross-pool L3 axis adds no per-candidate information
+   beyond what context inspection captures.
+
+2. **The 7 paired-evidence count from v30 is methodologically
+   *narrowed* but not arithmetically lifted.** chic-v15's 12
+   `consistent` candidates lack cross-pool L3 corroboration by
+   definition (they are tier-3-uncorroborated). They become
+   candidates with **context-inspection-only evidence** — distinct
+   from the 7 paired-evidence candidates (`#032` from chic-v11;
+   `#021`, `#005`, `#072`, `#017`, `#039`, `#056` from chic-v13).
+   Total context-inspection-consistent count across the chic sub-
+   program: **12 + 6 + 1 = 19** candidates (7 paired-evidence + 12
+   context-inspection-only).
+
+3. **The chic-v9 framework-level negative remains load-bearing.**
+   chic-v15 contributes no lift to chic-v9's 20.0% LOO accuracy /
+   0/3 tier-2 unanimity correct. It confirms within-window
+   context-axis behaviour on a complementary tier-3 subset, not
+   the framework's external recovery rate.
+
+4. **No anchor pool modification.** chic-v15 is read-only on
+   `pools/cretan_hieroglyphic_anchors.yaml`. No tier-3-
+   uncorroborated candidate is promoted to chic-v2 anchors.
+   Promotion of `consistent` candidates to "candidate proposal
+   pending domain-expert review" prose status remains a PM call,
+   separate from chic-v15's deliverable.
+
+### Acceptance gate — chic-v15 brief
+
+- Pre-execution triage step ✓ (per-candidate `n_clean_inscriptions`,
+  `viability` band; 8 viable + 7 marginal + 2 non-viable).
+- `results/chic_v15_context_inspection.md` per-candidate context
+  inspection report following the chic-v13 template ✓ (15
+  inspected candidates × 1–3 inscriptions × rendered readings +
+  structural commentary + per-candidate verdict; 2 non-viable
+  candidates reported as `inconclusive on corpus quality` after
+  triage).
+- `results/chic_v15_summary.md` with top-of-file count table +
+  triage breakdown + direct comparison to chic-v13's 6/8 = 75%
+  pass rate + verdict line ✓.
+- No anchor pool modification (`pools/cretan_hieroglyphic_anchors.yaml`
+  is read-only on this ticket) ✓.
+- `docs/findings.md` appended (this entry) ✓.
+- `docs/findings_summary.md` §4.7 extended with the chic-v15 sub-
+  paragraph integrating into the post-v30 narrative ✓.
+
+### Bail rule status
+
+The chic-v15 brief pre-registered a bail rule: if the polecat
+hits ≥80% of the 1.2M token budget while having processed fewer
+than 17 candidates, bail with the first k completed. **All 17
+candidates were processed within budget (15 inspected + 2 non-
+viable reported as `inconclusive on corpus quality` after
+triage); no bail invoked.**
+
+### Out of scope (deferred)
+
+- **The 4 chic-v12 tier-3-corroborated candidates** (`#006`,
+  `#033`, `#050`, `#063` — only-Eteocretan-L3 corroboration) —
+  per the chic-v15 brief, deferred to a possible chic-v16 follow-
+  up if the discrimination question is unresolved. Given chic-v15's
+  70.6% pass rate clears the ≥70% threshold, the tier-3-
+  corroborated subset's marginal value question is bounded — but
+  a complete chic-v16 inspection would close the methodological
+  loop.
+- **Promotion of `consistent` candidates to chic-v2 anchors** —
+  out of scope; PM call.
+- **LA-side analogous chic-v15 work** — already covered by v22 /
+  v26 / v28 / chic-v8 chain at the chic-v5 framework's full
+  scope; an analogous chic-v15-style discriminative test on LA
+  candidates would be additive but is not in chic-v15's polecat
+  scope.
+- **LOO held-out validation of within-window context inspection** —
+  already covered at the framework level by chic-v9; chic-v15
+  does not duplicate.
+- **Per-window dedup, AGENTS.md cosmetics, Linear-B carryover
+  refinement** — per the chic-v15 brief, out of scope.
+- **Manuscript editorial pass** integrating chic-v15 into §4.7
+  beyond the sub-paragraph integration this ticket lands —
+  separate ticket (chic-v15-equivalent polish pass, future).
+
+### Method details (preserved for reproducibility)
+
+- **Inscription selection** is a deterministic frequency-density
+  argmax over `corpora/cretan_hieroglyphic/all.jsonl`. For each
+  candidate, host inscriptions are ranked by (a)
+  `transcription_confidence` (clean > partial > fragmentary), (b)
+  total inscription length / anchored neighbour count (longer
+  inscriptions provide more anchored neighbours for context).
+  For low-frequency candidates (freq 3), all corpus occurrences
+  are included regardless of density.
+- **Triage rule** (chic-v15 brief): `viable` if n_clean ≥ 3 and
+  at least one clean inscription has the sign in adjacency to a
+  chic-v2 anchor; `marginal` if n_clean ∈ {1, 2}; `non-viable`
+  if n_clean = 0. `non-viable` candidates are reported as
+  `inconclusive on corpus quality` without further inspection.
+- **Rendering convention** uses chic-v2 anchors byte-identically:
+  `#010 → ja`, `#013 → pa`, `#016 → a`, `#019 → ke`,
+  `#025 → ta`, `#028 → ti`, `#031 → ro`, `#038 → i`,
+  `#041 → ni`, `#042 → wa`, `#044 → ki`, `#049 → de`,
+  `#053 → me`, `#054 → mu`, `#057 → je`, `#061 → te`,
+  `#070 → ra`, `#073 → to`, `#077 → ma`, `#092 → ke`. The
+  candidate sign is rendered as a class-level placeholder
+  (`[stop:#NNN]`, `[L:#NNN]`, `[G:#NNN]`, `[V:#NNN]`,
+  `[N:#NNN]`); other unanchored signs are rendered as `[?:#NNN]`.
+- **Structural-consistency criteria** (parallel to chic-v13):
+  (i) does the rendered reading produce coherent CV-CV / CV-CV-CV
+  / sign-run-plus-numeral structure consistent with the
+  inscription's support type and surrounding sign environment?
+  (ii) does the rendering contradict any of the canonical CHIC
+  sealstone formulas — `i-ja-ro` (`#038-#010-#031`), `ki-de`
+  (`#044-#049`), `wa-ke` (`#042-#019` or `#042-#092`)? (iii) does
+  it conflict with any chic-v2 anchor's known value? Each per-
+  candidate verdict is a structural-consistency observation, not
+  a phoneme-value endorsement.
+- **No specific-CV expansion.** chic-v12's tier-3-uncorroborated
+  candidates have only chic-v5 L1+L2 distributional consensus
+  class proposals (no L3 corroboration in any pool). chic-v15
+  retains class-level placeholders in renderings; specific CV
+  expansions are mentioned in commentary as structural-
+  compatibility observations only, not specific-value claims.
+
+### Determinism
+
+- No RNG. The candidate list is fixed by chic-v12 (the 17
+  tier-3-uncorroborated rows of `results/chic_v12_cross_pool_l3.md`);
+  inscription selection is a deterministic frequency-density
+  argmax over the fixed chic-v0 corpus; rendered readings use the
+  chic-v2 anchor mapping byte-identically. Same (chic-v0 corpus,
+  chic-v2 anchors, chic-v12 candidate list) → byte-identical
+  output.
+
+### Citations
+
+- Olivier, J.-P. & Godart, L. (1996). *Corpus Hieroglyphicarum
+  Inscriptionum Cretae* (Études Crétoises 31). Paris.
+- Younger, J. G. (online). *The Cretan Hieroglyphic Texts: a web
+  edition of CHIC with commentary.* Wayback Machine snapshot
+  20220703170656.
+- Salgarella, E. (2020). *Aegean Linear Script(s).* Cambridge.
+- Ventris, M. & Chadwick, J. (1956). *Documents in Mycenaean
+  Greek.* Cambridge.
+- Decorte, R. (2017). *The First 'European' Writing.*
+- Civitillo, M. (2016). *La scrittura geroglifica minoica sui
+  sigilli.*

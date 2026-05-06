@@ -56,16 +56,26 @@ chic-v12 + chic-v13 + chic-v14 — cross-pool L3 demoted to
 permissive corroboration; n=32 evidence-graded candidates with 7
 carrying paired cross-pool L3 + within-window context-inspection
 evidence; within-window context inspection promoted to the
-load-bearing fourth discipline pillar** in v30, mg-ee1f)** — a publication-readable
+load-bearing fourth discipline pillar** in v30, mg-ee1f;
+**within-window context inspection on the 17 chic-v12
+tier-3-uncorroborated candidates as a complementary
+discriminative test of cross-pool L3 marginal value**, yielding
+**12 consistent / 3 inconclusive (within-window) / 2 inconclusive
+on corpus quality / 0 inconsistent**, pass rate 12/17 = 70.6%
+(comparable to chic-v13's 75%); verdict **"Cross-pool L3 has no
+independent discriminative value"** — chic-v15 reinforces
+chic-v14's anti-evidentiary verdict; total context-inspection-
+consistent count across the chic sub-program is 19 (7 paired-
+evidence + 12 context-inspection-only) in chic-v15, mg-2904)** — a publication-readable
 consolidation of what
 the Lineara project has mechanically established **across two
 undeciphered Cretan scripts (Linear A and Cretan Hieroglyphic)**
-across 28 Linear A work items + 14 chic sub-program work items,
+across 28 Linear A work items + 15 chic sub-program work items,
 anchored on the SigLA corpus ingest (`mg-1c8c`, Linear A) and the
 Younger CHIC web edition ingest (`mg-99df`, CHIC), spanning the
 Linear A harness pipeline `mg-d5ef` (v0) through `mg-4a7b` (v28)
-and the chic sub-program `mg-99df` (chic-v0) through `mg-7f57`
-(chic-v14); v25, chic-v7, v27, chic-v10, v29, and v30 are
+and the chic sub-program `mg-99df` (chic-v0) through `mg-2904`
+(chic-v15); v25, chic-v7, v27, chic-v10, v29, and v30 are
 editorial-only (no harness commits).
 The repo scaffold (`mg-9e00`) predates the corpus ingest. The
 companion log `docs/findings.md` carries the per-ticket history;
@@ -940,10 +950,11 @@ pre-registered scoring discipline):
 | 14 (chic-v12) | cross-pool L3 robustness reclassification on the 29 chic-v5 tier-3 candidates (4 substrate-pool LMs × 29 candidates = 116-cell matrix; reclassification rule: ≥1 non-Eteocretan substrate LM corroborates the chic-v5 proposed class → ``tier-2-equivalent``; same band-level evidence structure as the chic-v11 surviving tier-2 `#032`) | mg-2035 (chic-v12) | **8 of 29 reclassify to ``tier-2-equivalent``** (`#005`, `#017`, `#021`, `#039`, `#055`, `#056`, `#065`, `#072`; all stop or nasal class), 4 to ``tier-3-corroborated`` (Eteocretan-only), 17 to ``tier-3-uncorroborated``; bail on within-window context inspection at 8 > 5 (chic-v12 brief pre-registered scale signal) | **n=32 evidence-graded candidates** (3 chic-v5 tier-2 + 29 chic-v5 tier-3); per-candidate evidence grading within the chic-v9 framework-level negative; subsequently re-interpreted by chic-v14 LOO (gate 16) — see §4.7 |
 | 15 (chic-v13) | within-window context inspection on the 8 chic-v12 ``tier-2-equivalent`` candidates following the chic-v11 `#032 → ki` ku-pa context inspection methodology (each candidate × 1–3 high-density host inscriptions × rendered reading + structural commentary + per-candidate verdict) | mg-5261 (chic-v13) | **6 consistent / 0 inconsistent / 2 inconclusive** out of 8; consistent: `#021`, `#005`, `#072`, `#017`, `#039`, `#056`; inconclusive: `#055`, `#065` (predominantly fragmentary host inscriptions); strongest cases at `#072` (Knossos bar #065 `[stop:#072]-de NUM:1` accountancy entries — direct mirror of chic-v11 ku-pa structure), `#056` (Knossos bar #061 `[?] [stop:#056] NUM` adjacent to `ke-de NUM:1`), `#021` (3-fold cross-site `031-021-061` recurrence + `ki-de` adjacency) | **load-bearing fourth discipline pillar post-chic-v14** (cross-pool L3 corroboration alone is not sufficient for class-level value confirmation; see §4.7) |
 | 16 (chic-v14) | leave-one-out held-out validation of the chic-v12 cross-pool L3 reclassification rule on the 20 chic-v2 paleographic anchors (per LOO iteration: hold one anchor out, treat as unknown, rebuild candidate-value pool per pool, regenerate sha256-keyed control mapping per cell, apply chic-v12 reclassification rule with the held-out anchor's **known** class as reference; in chic-v12 the reference was the chic-v5 proposed class) | mg-7f57 (chic-v14) | **12/20 = 60.0% LOO cross_pool_l3_recovery_rate** to ``tier-2-equivalent``; 0/20 ``tier-3-corroborated``; 8/20 ``tier-3-uncorroborated``; chic-v12's 27.6% (8/29) on the tier-3 set is **-32.4pp BELOW the LOO baseline** | **decisive demotion of cross-pool L3 from a discipline-protecting pillar to a permissive corroboration test**; chic-v12 reclassification on the tier-3 set is **anti-evidentiary** (cross-pool L3 corroborates ground-truth class on known anchors *more often* than chic-v12 corroborates the chic-v5 proposed class on the tier-3 set); chic-v13 within-window context inspection becomes the load-bearing fourth pillar (see §4.7) |
+| 17 (chic-v15) | within-window context inspection on the 17 chic-v12 ``tier-3-uncorroborated`` candidates following the chic-v13 template; complementary discriminative test of cross-pool L3 marginal value (each candidate × pre-execution triage by `n_clean_inscriptions` × 1–3 high-density host inscriptions × rendered reading + structural commentary + per-candidate verdict) | mg-2904 (chic-v15) | **12 consistent / 0 inconsistent / 3 inconclusive (within-window) / 2 inconclusive on corpus quality** out of 17; pass rate **12/17 = 70.6%**, comparable to chic-v13's 6/8 = 75.0%; consistent: `#008`, `#009`, `#011`, `#037`, `#040`, `#043`, `#045`, `#058`, `#059`, `#060`, `#066`, `#069`; strongest cases at `#040 → stop` (clean `wa-[stop:#040]-de NUM:0` accountancy formula at CHIC #129 + co-occurrence with all 3 canonical sealstone formulas at clean #298), `#069 → stop` (clean `je-[stop:#069]-ra NUM:110` accountancy formula at Knossos medallion #038), `#011 → liquid` (multi-site clean attestations + co-occurrence with `ki-de NUM:634` accountancy formula at clean #042) | **"Cross-pool L3 has no independent discriminative value"** verdict (chic-v15 brief's pre-registered ≥70% threshold cleared); reinforces chic-v14's anti-evidentiary verdict on cross-pool L3 with an orthogonal per-candidate observation; 12 candidates with **context-inspection-only evidence** distinct from the 7 paired-evidence candidates → **19 total context-inspection-consistent candidates** across the chic sub-program (12 + 6 + 1) (see §4.7) |
 
-All thirteen outcomes (and the v23 12b matrix follow-up, plus
-the chic-v12 / chic-v13 / chic-v14 cross-script extension rows
-14–16) are
+All fourteen outcomes (and the v23 12b matrix follow-up, plus
+the chic-v12 / chic-v13 / chic-v14 / chic-v15 cross-script
+extension rows 14–17) are
 reproducible from `results/rollup.bayesian_posterior.*.md`, the
 supporting provenance breakdowns in
 `results/rollup.bayesian_posterior.*.provenance.md`,
@@ -4026,8 +4037,199 @@ chic-v14 build time, 2026-05-06):
 `results/chic_v14_summary.md` md5
 `dce77a6ec28548e9edf275bdfe6aab86`.
 
+
+#### chic-v15 — within-window context inspection on the 17 chic-v12 tier-3-uncorroborated candidates; complementary discriminative test of cross-pool L3 marginal value (mg-2904)
+
+chic-v13 (above) ran within-window context inspection on the 8
+chic-v12 tier-2-equivalent candidates and reported 6/8 = 75.0%
+pass rate. chic-v14 (above) showed cross-pool L3 alone is
+anti-evidentiary on the tier-3 set (-32.4pp below the 60.0% LOO
+baseline). v30 (mg-ee1f) demoted cross-pool L3 to permissive
+corroboration and promoted within-window context inspection to
+the load-bearing fourth discipline pillar — but left an open
+methodological question: **does within-window context inspection
+also pass at high rate on the 17 chic-v12 tier-3-uncorroborated
+candidates** (where cross-pool L3 fails completely)? If so,
+cross-pool L3 has *no independent discriminative value* beyond
+context inspection. If not, cross-pool L3 functions as a useful
+pre-filter even though it is anti-evidentiary alone.
+
+chic-v15 (mg-2904) closes that gap. The method byte-mirrors
+chic-v13's per-candidate inspection on the 17 tier-3-
+uncorroborated candidates (`#002`, `#007`, `#008`, `#009`,
+`#011`, `#020`, `#027`, `#037`, `#040`, `#043`, `#045`, `#058`,
+`#059`, `#060`, `#066`, `#069`, `#078`), with a pre-registered
+triage step at the top: candidates are bucketed `viable` (n_clean
+host inscriptions ≥ 3 + clean anchor adjacency), `marginal`
+(n_clean ∈ {1, 2}), or `non-viable` (n_clean = 0). Non-viable
+candidates are reported as `inconclusive on corpus quality`
+without further inspection.
+
+Headline counts (out of 17 input candidates):
+
+| metric | value |
+|:--|--:|
+| `n_input` | 17 |
+| `n_consistent` | **12** |
+| `n_inconsistent` | **0** |
+| `n_inconclusive` (within-window) | **3** |
+| `n_inconclusive_on_corpus_quality` (non-viable) | **2** |
+| **pass rate** (consistent / n_input) | **12/17 = 70.6%** |
+
+Triage breakdown: 8 viable (`#007`, `#008`, `#009`, `#011`,
+`#020`, `#040`, `#059`, `#069`), 7 marginal (`#027`, `#037`,
+`#043`, `#045`, `#058`, `#060`, `#066`), 2 non-viable (`#002`,
+`#078`).
+
+Per-candidate verdict (tabular form in
+`results/chic_v15_summary.md`): `consistent` candidates are
+`#008`, `#009`, `#011`, `#037`, `#040`, `#043`, `#045`, `#058`,
+`#059`, `#060`, `#066`, `#069`; `inconclusive` (within-window)
+are `#007`, `#020`, `#027`; `inconclusive on corpus quality`
+(non-viable) are `#002`, `#078`. **Zero `inconsistent` verdicts.**
+
+**Verdict (per the chic-v15 brief's pre-registered three-option
+verdict line):** **"Cross-pool L3 has no independent
+discriminative value."** chic-v15's pass rate (12/17 = 70.6%)
+clears the ≥70% threshold and is comparable to chic-v13's
+6/8 = 75.0%. Within-window context inspection passes at
+statistically and methodologically comparable rates regardless of
+whether cross-pool L3 corroborates the chic-v5 proposed class.
+The 4.4pp gap between chic-v13 and chic-v15 pass rates is within
+the noise of small-sample inspection on a 302-inscription
+corpus, and the qualitative structure of the consistent verdicts
+is indistinguishable across the two sets — both are dominated by
+`[CV]-[stop]-[CV] NUM` accountancy formulas (chic-v13: `#072`,
+`#017`, `#039`, `#056`; chic-v15: `#040`, `#069`, `#037`, `#043`)
+and multi-formula sealstone co-occurrence (chic-v13: `#005`,
+`#021`; chic-v15: `#040`, `#011`, `#069`, `#066`, `#058`).
+
+The strongest within-window context evidence in chic-v15 falls on
+**`#040 → stop`** (clean `wa-[stop:#040]-de NUM:0` accountancy
+formula at CHIC #129, analogous to canonical `ki-de NUM` with
+stop-class V₂ insertion; co-occurrence with all three canonical
+sealstone formulas (`i-ja-ro`, `ki-stop:#005`, `ki-de`) at clean
+Crete-unprov. seal CHIC #298), **`#069 → stop`** (clean
+`je-[stop:#069]-ra NUM:110` accountancy formula at Knossos
+medallion CHIC #038, parallel to chic-v13's `#017-#039 NUM:100`;
+all 3 corpus occurrences are clean), and **`#011 → liquid`**
+(co-occurrence with `ki-de NUM:634` accountancy formula at clean
+Knossos medallion CHIC #042; multi-site clean attestations across
+Knossos / Mallia / Crete-unprov.). These are comparable in
+strength to chic-v13's strongest candidates (`#072`, `#056`,
+`#021`).
+
+**Implications for the post-v30 framing:**
+
+1. **chic-v14's anti-evidentiary verdict on cross-pool L3 is
+   reinforced.** chic-v14 already established that cross-pool L3
+   reclassification is anti-evidentiary on the tier-3 set as a
+   whole (chic-v12 27.6% vs 60.0% LOO baseline). chic-v15 adds
+   the orthogonal per-candidate observation: within the tier-3
+   set, the *discriminative failure* of cross-pool L3 is also
+   confirmed at the within-window-context level — the candidates
+   that *fail* cross-pool L3 corroboration produce within-window
+   context-inspection consistency at indistinguishable rates from
+   those that *pass* it.
+
+2. **The 7 paired-evidence count from v30 is methodologically
+   *narrowed* but not arithmetically lifted.** chic-v15's 12
+   `consistent` candidates lack cross-pool L3 corroboration by
+   definition (they are tier-3-uncorroborated). They become
+   candidates with **context-inspection-only evidence** —
+   distinct from the 7 paired-evidence candidates (`#032` from
+   chic-v11; `#021`, `#005`, `#072`, `#017`, `#039`, `#056`
+   from chic-v13). Total context-inspection-consistent count
+   across the chic sub-program: **12 + 6 + 1 = 19** candidates
+   (7 paired-evidence + 12 context-inspection-only). The
+   methodology paper's per-candidate framing should distinguish
+   these two evidence-grading bands honestly: the 12 context-
+   inspection-only candidates are weaker than the 7 paired-
+   evidence candidates not because cross-pool L3 carries
+   discriminative information (chic-v14 showed it does not),
+   but because **two independent discipline-protecting axes
+   firing on a candidate is dialectically stronger than one** —
+   even when the second axis (cross-pool L3) is permissive
+   rather than discriminative on its own.
+
+3. **No candidate is promoted to chic-v2 anchors.** chic-v15 is
+   read-only on `pools/cretan_hieroglyphic_anchors.yaml`. The
+   12 chic-v15 `consistent` candidates plus the 6 chic-v13
+   `consistent` candidates plus chic-v11 `#032` constitute
+   the full 19-candidate context-inspection-consistent set;
+   promotion to "candidate proposal pending domain-expert
+   review" prose remains a PM call after seeing the complete
+   chic-v11 / v13 / v15 inspection record.
+
+4. **The chic-v9 / v28 framework-level negative remains load-
+   bearing across all 19 context-inspection-consistent
+   candidates.** chic-v15 confirms the within-window context
+   axis's behaviour on a complementary tier-3 subset; it does
+   not lift the chic-v5 framework's 20.0% LOO accuracy / 0/3
+   tier-2 unanimity correct on the chic-v2 anchor pool. The
+   §4.6 / §4.7 LA / CHIC symmetric narrative is preserved —
+   chic-v15 is a within-§4.7 refinement of the cross-pool L3
+   axis's interpretation, not a §4.6-side analog. (LA-side
+   analogous discriminative work is already covered by the
+   v22 / v26 / v28 / chic-v8 chain at the chic-v5 framework's
+   full scope; an LA-side chic-v15 would be additive but is
+   not in this slice's polecat scope.)
+
+Outputs: `results/chic_v15_context_inspection.md` (per-candidate
+inspection report following the chic-v13 template; 15 inspected
+candidates × 1–3 inscriptions × rendered readings + structural
+commentary + per-candidate verdict; 2 non-viable candidates
+reported as `inconclusive on corpus quality` after triage);
+`results/chic_v15_summary.md` (top-of-file count table + triage
+breakdown + direct comparison to chic-v13's 6/8 = 75% pass rate
++ verdict line). **Done in mg-2904.** No anchor pool modification.
+
+**Determinism.** No RNG; the candidate list is fixed by chic-v12
+(the 17 tier-3-uncorroborated rows of
+`results/chic_v12_cross_pool_l3.md`); inscription selection is a
+deterministic frequency-density argmax over
+`corpora/cretan_hieroglyphic/all.jsonl`; rendered readings use
+the chic-v2 anchor mapping byte-identically.
+
+
 #### Pre-registered chic-v10+ (chic-v9 done in mg-18cb)
 
+- **chic-v15 done.** Within-window context inspection on the 17
+  chic-v12 tier-3-uncorroborated candidates; complementary
+  discriminative test of cross-pool L3 marginal value. **12 of
+  17 candidates pass context inspection (`consistent`); 3 are
+  `inconclusive` (within-window); 2 are `inconclusive on corpus
+  quality` (non-viable, n_clean = 0); 0 are `inconsistent`.**
+  Pass rate **12/17 = 70.6%**, comparable to chic-v13's 6/8 =
+  75.0% on the chic-v12 tier-2-equivalent set. Strongest cases:
+  `#040 → stop` (clean `wa-[stop:#040]-de NUM:0` accountancy
+  formula at CHIC #129; co-occurrence with all 3 canonical
+  sealstone formulas at clean #298), `#069 → stop` (clean
+  `je-[stop:#069]-ra NUM:110` accountancy formula at Knossos
+  medallion #038; all 3 corpus occurrences clean), `#011 →
+  liquid` (multi-site clean attestations + co-occurrence with
+  `ki-de NUM:634` accountancy formula at clean #042). Outputs:
+  `results/chic_v15_context_inspection.md`,
+  `results/chic_v15_summary.md`. **Done in mg-2904.**
+  **Verdict: "Cross-pool L3 has no independent discriminative
+  value."** Within-window context inspection passes at
+  comparable rates regardless of whether cross-pool L3
+  corroborates the chic-v5 proposed class. This **reinforces
+  chic-v14's anti-evidentiary verdict on cross-pool L3** with
+  an orthogonal per-candidate observation: the discriminative
+  failure of cross-pool L3 within the tier-3 set is also
+  confirmed at the within-window-context level. The 7 paired-
+  evidence count from v30 is methodologically *narrowed* but
+  not arithmetically lifted — chic-v15's 12 `consistent`
+  candidates lack cross-pool L3 corroboration by definition,
+  so they count as candidates with **context-inspection-only
+  evidence** (distinct from the 7 paired-evidence candidates).
+  Total context-inspection-consistent count across the chic
+  sub-program: **12 + 6 + 1 = 19** candidates (7 paired-
+  evidence + 12 context-inspection-only). Net: the chic-v9 /
+  v28 framework-level negative is unaffected; the chic-v14
+  anti-evidentiary verdict on cross-pool L3 is reinforced.
+  No anchor pool modification.
 - **chic-v13 done.** Within-window context inspection on the 8
   chic-v12 tier-2-equivalent candidates, applying the chic-v11
   `#032 → ki` ku-pa context inspection methodology
