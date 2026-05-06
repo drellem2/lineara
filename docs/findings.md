@@ -9270,3 +9270,262 @@ permutation construction; same inputs → byte-identical output.
   Introduction* (revised ed.). Manchester / New York.
 - Beekes, R. S. P. (2010). *Etymological Dictionary of Greek*,
   vol. 2 appendix on Pre-Greek substrate. Leiden: Brill.
+
+## Findings from mg-2035 (chic-v12 — cross-pool L3 robustness on the 29 chic-v5 tier-3 candidates, methodologically symmetric extension of chic-v11, 2026-05-06)
+
+### Summary
+
+chic-v11 (mg-d69c) ran the chic-v5 L3 substrate-consistency line
+under each of the 4 substrate-pool LMs on the 3 chic-v5 **tier-2**
+candidate proposals and produced sharp per-candidate
+differentiation: `#032` weakly corroborated cross-pool (2 of 4 LMs
+vote stop); `#001` and `#012` actively undermined as Eteocretan-LM
+glide artifacts. chic-v12 scales the same robustness check to the
+**29 chic-v5 tier-3 candidates** (the L1+L2-but-not-L3-Eteocretan
+agreement subset, plus the 6 L1+L2-disagree subset where the
+chic-v5 consensus class is via L1-or-L2 + Eteocretan-L3
+agreement) to test whether any tier-3 candidate has the same
+evidence structure as the surviving tier-2 (`#032`): three
+independent lines plus ≥ 1 non-Eteocretan substrate-LM
+corroboration.
+
+### Method
+
+Byte-identical to chic-v11 except the candidate list and outputs.
+For each (tier-3 candidate, substrate pool) cell of the
+29 × 4 = 116-cell matrix:
+
+1. Rebuild the candidate-value pool from chic-v2 anchor LB-
+   carryover values + bare vowels, filtered to values whose first
+   character is in the substrate pool's phoneme inventory
+   (chic-v5 convention).
+2. For each candidate value V, score (chic-v2 anchors ∪
+   {sign → V}) against a deterministic class-disjoint sha256-keyed
+   control under the substrate pool's LM via
+   `external_phoneme_perplexity_v0`.
+3. Per-class mean paired_diff picks the L3 winning class.
+
+For each candidate, the chic-v5 proposed class is the reference;
+`corroborated_by` enumerates non-Eteocretan substrate LMs whose
+L3 vote matches the proposed class; `reclassification` is one of
+three bands per the chic-v12 brief:
+
+- `tier-2-equivalent` — ≥1 non-Eteocretan substrate LM
+  corroborates the chic-v5 proposed class. Same evidence
+  structure as `#032`.
+- `tier-3-corroborated` — only Eteocretan-L3 corroborates the
+  chic-v5 proposed class. For the 23 L1+L2-agree tier-3
+  candidates this is structurally impossible (Eteocretan-L3
+  disagrees by chic-v5 construction — that is why they are tier-3
+  and not tier-2). For the 6 L1+L2-disagree tier-3 candidates
+  this is the chic-v5 baseline state by construction.
+- `tier-3-uncorroborated` — no LM's L3 corroborates the chic-v5
+  proposed class.
+
+Outputs: `results/chic_v12_cross_pool_l3.md` (116-cell table +
+per-candidate per-class mean paired_diff details + the bail-or-
+context-inspection block), `results/chic_v12_tier3_summary.md`
+(top-of-file count table + per-candidate one-line summary +
+verdict).
+
+### Headline reclassification counts
+
+| reclassification | n |
+|:--|--:|
+| **tier-2-equivalent** | **8** |
+| tier-3-corroborated | 4 |
+| tier-3-uncorroborated | 17 |
+| **total tier-3** | **29** |
+
+The 8 `tier-2-equivalent` candidates: `#005`, `#017`, `#021`,
+`#039`, `#055`, `#056`, `#065`, `#072`. Their `corroborated_by`
+sets vary from 1 of 3 non-Eteocretan LMs (`#017` etruscan only;
+`#039` toponym only; `#056` etruscan only) to all 3 (`#021`
+aquitanian + etruscan + toponym).
+
+The 4 `tier-3-corroborated` candidates: `#006`, `#033`, `#050`,
+`#063` (the L1+L2-disagree subset where Eteocretan-L3
+corroborates the chic-v5 proposed glide class by chic-v5
+construction; `#017` and `#021` of the L1+L2-disagree subset
+escape this band because they additionally pick up
+non-Eteocretan corroboration → tier-2-equivalent).
+
+### Verdict
+
+**The chic-v12 reclassification rate is large enough (8 of 29
+tier-3 candidates → tier-2-equivalent) that the chic-v12 brief's
+bail rule applies on the within-window context inspection: the
+brief expected ≤ 5 candidates and pre-registered a bail at > 5
+because that count is a scale signal worth surfacing rather than
+a mechanical N candidates to inspect.** The scale signal itself
+is the chic-v12 finding: **the cross-pool L3 axis is meaningfully
+more permissive than the Eteocretan-only L3 axis chic-v5 used.**
+For tier-3 candidates whose chic-v5 proposed class lies in a
+non-Eteocretan substrate-LM's high-probability bigram region
+(typically `stop` for the basque LM under aquitanian / toponym;
+typically `nasal` for either basque or etruscan), at least one
+non-Eteocretan LM is structurally likely to vote the proposed
+class regardless of the underlying truth. This is the same
+methodological caveat the chic-v9 LOO test surfaced for the
+Eteocretan LM in isolation (L3 recovery 1/20 = 5%, below the
+~16.7% chance baseline for a 6-class taxonomy), now extended:
+the cross-pool L3 axis as a whole shares the systematic class
+bias.
+
+**The differential evidentiary strength among the 8 tier-2-
+equivalent reclassifications is non-trivial.** `#021 → nasal` is
+the strongest case (3 of 3 non-Eteocretan LMs corroborate, plus
+Eteocretan-L3 agrees by L1+L2-disagree-via-Eteo construction =
+4 of 4 LMs vote nasal); `#005 → stop`, `#055 → stop`, `#065 →
+stop`, `#072 → stop` are 2-of-3 non-Eteocretan corroborations;
+`#017 → nasal`, `#039 → stop`, `#056 → stop` are 1-of-3.
+By contrast `#032 → stop` (the chic-v11 surviving tier-2)
+carried 1-of-3 non-Eteocretan corroboration (etruscan) plus
+Eteocretan-L3 itself = 4 of 5 mechanical lines (L1, L2,
+Eteo-L3, Etruscan-L3) voting the proposed class. **No tier-3
+candidate matches `#032`'s overall mechanical-lines tally**;
+the evidentiary structure is bandwise-equivalent (≥ 1
+non-Eteocretan LM corroborates) but the per-line vote counts
+differ.
+
+### Acceptance gate — chic-v12 brief
+
+- 116-cell cross-pool L3 run for all 29 tier-3 candidates × 4
+  LMs ✓ (`results/chic_v12_cross_pool_l3.md` per-candidate ×
+  per-LM table).
+- Per-candidate per-class mean paired_diff details for the
+  116 cells ✓ (same file, "Per-candidate per-pool per-class
+  mean paired_diff" subsection).
+- `corroborated_by` + `reclassification` columns per the brief's
+  schema ✓ (same file, Per-candidate cross-pool L3 verdict
+  table).
+- `results/chic_v12_tier3_summary.md` count table + verdict ✓
+  (top-of-file count table + verdict + per-candidate one-line
+  summary).
+- Within-window context inspection — bailed per the chic-v12
+  brief because tier-2-equivalent count (8) exceeds the bail
+  threshold (5). The bail block in
+  `results/chic_v12_cross_pool_l3.md` records the scale signal
+  and pre-registers the chic-v13 follow-up shape.
+- `docs/findings.md` appended (this entry) ✓.
+- `docs/findings_summary.md` §4.7 extended with the chic-v12
+  reclassification table headline counts and 1-paragraph
+  integration into the post-chic-v11 narrative ✓.
+- No paleographic L4 work ✓ (line 4 silent for all 76 unknowns
+  by chic-v5 construction; chic-v12 does not attempt to extend).
+
+### Implication for the methodology paper
+
+The chic-v11 per-candidate asymmetric refinement
+(`#032 > #001 ≈ #012`) is now extended with a tier-3
+evidence-grading layer:
+
+- **`#032`** retains its position as the chic sub-program's
+  strongest per-candidate mechanical evidence basis (cross-pool
+  L3 corroborated by Eteocretan + Etruscan; ku-pa context
+  corroborated on both sides; chic-v6 lift attribution
+  contextually consistent with accountancy structure).
+- **8 tier-3 candidates reclassify to `tier-2-equivalent`**,
+  meaning they have the same band-level evidence structure as
+  `#032` (≥ 1 non-Eteocretan substrate LM corroborates) but
+  differ in per-line vote tallies and lack the chic-v6 ku-pa
+  context corroboration `#032` carries.
+- **17 tier-3 candidates reclassify to `tier-3-uncorroborated`**,
+  meaning the cross-pool L3 axis adds no support beyond
+  chic-v5's L1+L2 distributional agreement (Eteocretan-L3
+  disagrees by chic-v5 construction; no non-Eteocretan LM
+  picks the proposed class either).
+- **4 tier-3 candidates reclassify to `tier-3-corroborated`**,
+  meaning they retain only the chic-v5 baseline state
+  (Eteocretan-L3 corroborates the proposed class via the L1+L2-
+  disagree-via-Eteo construction; no additional non-Eteocretan
+  corroboration).
+
+The framework's discrimination claim spans **n = 32**
+evidence-graded candidates (3 chic-v5 tier-2 + 29 chic-v5
+tier-3) with **9 cross-pool L3 corroborated by ≥ 1 non-
+Eteocretan substrate LM** (`#032` chic-v11 + 8 chic-v12 tier-2-
+equivalents), **4 chic-v5-baseline tier-3-corroborated**, and
+**17 cross-pool L3 uncorroborated**. The chic-v9 framework-
+level negative (LOO accuracy 20.0% / 0/3 tier-2 unanimity
+correct) is unchanged; chic-v12's contribution is per-candidate
+evidence-grading granularity within the chic-v9-validated low-
+accuracy band.
+
+### Pre-registered chic-v13 candidate
+
+The bail on within-window context inspection at 8 > 5
+tier-2-equivalents is itself a pre-registration for a chic-v13
+follow-up: run the within-window context inspection on a
+stratified sample of the 8 tier-2-equivalent candidates
+(stratified on `corroborated_by` size: 1-of-3 vs 2-of-3 vs 3-of-3
+non-Eteocretan corroboration) and re-evaluate the per-candidate
+evidence weighting under the cross-pool L3 axis. This is out of
+chic-v12's polecat budget; pm-lineara triage call.
+
+### Out of scope (deferred)
+
+- **Linear A side analogous tier-3 work**: v22 / v26 / v28 /
+  chic-v8 already cover the LA-side mechanical-verification
+  + bilingual-constraint + LOO chain at the chic-v5 framework's
+  full scope; a tier-3 analogue would be additive but is not
+  in chic-v12's scope.
+- **Promotion of `tier-2-equivalent` candidates to "candidate
+  proposals pending domain-expert review" status**: separate PM
+  call after seeing chic-v12 results. The chic-v12 result on its
+  own does not lift the chic-v9 framework-level negative; the
+  `tier-2-equivalent` band is a discipline-protecting evidence-
+  grading label, not a proposal-elevation gate.
+- **Per-window dedup, AGENTS.md cosmetics, Linear-B carryover
+  refinement**: per the chic-v12 brief, out of scope.
+- **Manuscript editorial pass beyond §4.7 integration**: a
+  separate ticket (chic-v13 / v30 polish pass).
+
+### Method details (preserved for reproducibility)
+
+- **Cross-pool L3 dispatch** uses chic-v3 / chic-v5 / chic-v11's
+  substrate-pool→LM convention: aquitanian→basque,
+  etruscan→etruscan, toponym→basque (substrate-pool stand-in),
+  eteocretan→eteocretan (chic-v5 default). Per-pool candidate-
+  value pools (rebuilt from chic-v2 anchor LB-carryover values
+  + bare vowels filtered by the pool's phoneme inventory) carry
+  sizes 21/18/19/20 respectively, byte-identical to chic-v11
+  since the chic-v2 anchor pool and the substrate-pool yamls
+  are unchanged.
+- **Per-candidate corroboration** is computed as
+  `[pool for pool in {aquitanian, etruscan, toponym} if
+  cross_pool_winning_class[pool] == chic_v5_proposed_class]`.
+  The reclassification is a deterministic function of
+  `(corroborated_by, eteocretan_winning_class,
+  chic_v5_proposed_class)` per the brief's three-band schema.
+- **Within-window context inspection** is stub-implemented in
+  `scripts/build_chic_v12.py` (function `run_context_inspection`)
+  and bails when the eligible candidate count exceeds 5; the
+  inspection logic itself (high-frequency inscription selection,
+  rendered partial reading under chic-v2 anchors + chic-v5 best
+  L3 value override, accountancy-formula neighbor check) is
+  preserved for the pre-registered chic-v13 follow-up.
+- **Determinism.** No RNG. The L3 control-phoneme selection
+  inherits chic-v5's sha256-keyed permutation; cross-pool
+  dispatch + tier-3 candidate enumeration are pure iteration.
+  Re-running `scripts/build_chic_v12.py` produces byte-identical
+  output (md5 stability verified at chic-v12 build time,
+  2026-05-06): `results/chic_v12_cross_pool_l3.md` md5
+  `0e6444da401d69fd7f8af7fcec0a403c`;
+  `results/chic_v12_tier3_summary.md` md5
+  `4fa90790d73f3348bad4a5376ff2aaa5`.
+
+### Citations
+
+- Olivier, J.-P. & Godart, L. (1996). *Corpus Hieroglyphicarum
+  Inscriptionum Cretae* (Études Crétoises 31). Paris.
+- Salgarella, E. (2020). *Aegean Linear Script(s).* Cambridge.
+- Ventris, M. & Chadwick, J. (1956). *Documents in Mycenaean
+  Greek.* Cambridge.
+- Duhoux, Y. (1982). *L'Étéocrétois: les textes — la langue.*
+  Amsterdam: J. C. Gieben.
+- Trask, R. L. (1997). *The History of Basque.* London: Routledge.
+- Bonfante, G. & Bonfante, L. (2002). *The Etruscan Language: An
+  Introduction* (revised ed.). Manchester / New York.
+- Beekes, R. S. P. (2010). *Etymological Dictionary of Greek*,
+  vol. 2 appendix on Pre-Greek substrate. Leiden: Brill.
