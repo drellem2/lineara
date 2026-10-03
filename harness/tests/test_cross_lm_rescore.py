@@ -45,6 +45,28 @@ class CrossLMDispatchTest(unittest.TestCase):
         self.assertEqual(d["etruscan"], "basque")
         self.assertEqual(d["control_etruscan"], "basque")
 
+    def test_hattic_matrix_dispatch(self) -> None:
+        # mg-7b882: Hattic row (hattic under each pre-existing LM) and
+        # column (each pre-existing substrate pool under the Hattic LM).
+        d = self.cross._HATTIC_MATRIX_DISPATCH
+        self.assertEqual(len(d), 8)
+        for lm in ("basque", "etruscan", "mycenaean_greek", "eteocretan"):
+            self.assertEqual(
+                d[f"hattic_under_{lm}"],
+                {"hattic": lm, "control_hattic_bigram": lm},
+            )
+        self.assertEqual(
+            d["toponym_under_hattic"],
+            {"toponym": "hattic", "control_toponym_bigram": "hattic"},
+        )
+        self.assertEqual(
+            d["eteocretan_under_hattic"],
+            {"eteocretan": "hattic", "control_eteocretan_bigram": "hattic"},
+        )
+        for mode, table in d.items():
+            if mode.endswith("_under_hattic"):
+                self.assertEqual(set(table.values()), {"hattic"})
+
     def test_dispatch_excludes_toponym(self) -> None:
         # mg-0f97 ticket: toponym pool excluded from cross-LM rescoring;
         # v10 already failed for toponym (sampler issue) so the cross-LM

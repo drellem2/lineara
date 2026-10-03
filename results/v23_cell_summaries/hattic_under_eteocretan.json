@@ -1,0 +1,17 @@
+{
+  "substrate_pool": "hattic",
+  "control_pool": "control_hattic_bigram",
+  "lm": "eteocretan",
+  "lm_label": "Eteocretan",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.75,
+  "median_control_top": 0.7867647058823529,
+  "median_gap": -0.03676470588235292,
+  "mean_substrate_top": 0.7816346153846154,
+  "mean_control_top": 0.7966079620205362,
+  "mean_gap": -0.014973346635920759,
+  "mw_u_substrate": 177.5,
+  "mw_p_one_tail": 0.7334059062038354,
+  "gate": "FAIL"
+}

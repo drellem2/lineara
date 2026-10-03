@@ -1,0 +1,17 @@
+{
+  "substrate_pool": "hattic",
+  "control_pool": "control_hattic_bigram",
+  "lm": "mycenaean_greek",
+  "lm_label": "Mycenaean Greek",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.9038461538461539,
+  "median_control_top": 0.8452380952380952,
+  "median_gap": 0.05860805860805862,
+  "mean_substrate_top": 0.9039835164835164,
+  "mean_control_top": 0.8364732989858146,
+  "mean_gap": 0.06751021749770181,
+  "mw_u_substrate": 297.5,
+  "mw_p_one_tail": 0.004293755947532452,
+  "gate": "PASS"
+}

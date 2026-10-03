@@ -162,6 +162,32 @@ _TOPONYM_UNDER_ETEOCRETAN_DISPATCH: dict[str, str] = {
     "control_toponym_bigram": "eteocretan",
 }
 
+# mg-7b882: Hattic specificity-probe row + column of the cross-LM
+# matrix. ``hattic_under_<lm>`` rescores the Hattic substrate + its
+# bigram-preserving control under each pre-existing LM;
+# ``<pool>_under_hattic`` rescores each pre-existing substrate pool +
+# its gate control under the Hattic LM. The Hattic LM is trained on the
+# same 72 lexical forms as the Hattic pool, so only the latter direction
+# is free of own-LM circularity.
+_HATTIC_MATRIX_DISPATCH: dict[str, dict[str, str]] = {
+    **{
+        f"hattic_under_{lm}": {"hattic": lm, "control_hattic_bigram": lm}
+        for lm in ("basque", "etruscan", "mycenaean_greek", "eteocretan")
+    },
+    "aquitanian_under_hattic": {
+        "aquitanian": "hattic", "control_aquitanian": "hattic",
+    },
+    "etruscan_under_hattic": {
+        "etruscan": "hattic", "control_etruscan": "hattic",
+    },
+    "toponym_under_hattic": {
+        "toponym": "hattic", "control_toponym_bigram": "hattic",
+    },
+    "eteocretan_under_hattic": {
+        "eteocretan": "hattic", "control_eteocretan_bigram": "hattic",
+    },
+}
+
 
 def _load_manifest(path: Path) -> list[dict]:
     rows: list[dict] = []
@@ -477,6 +503,7 @@ def main(argv: list[str] | None = None) -> int:
             "aquitanian_under_eteocretan",
             "etruscan_under_eteocretan",
             "toponym_under_eteocretan",
+            *_HATTIC_MATRIX_DISPATCH,
         ),
         default="cross",
         help=(
@@ -490,7 +517,9 @@ def main(argv: list[str] | None = None) -> int:
             "``aquitanian_under_eteocretan``, ``etruscan_under_eteocretan``, "
             "``toponym_under_eteocretan`` (mg-b599, v23) fill out the "
             "full cross-LM matrix for Eteocretan: the substrate pool is "
-            "rescored under the named non-own LM."
+            "rescored under the named non-own LM. ``hattic_under_<lm>`` "
+            "and ``<pool>_under_hattic`` (mg-7b882) add the Hattic "
+            "specificity-probe row and column."
         ),
     )
     parser.add_argument(
@@ -534,6 +563,8 @@ def main(argv: list[str] | None = None) -> int:
         dispatch = _ETRUSCAN_UNDER_ETEOCRETAN_DISPATCH
     elif args.mode == "toponym_under_eteocretan":
         dispatch = _TOPONYM_UNDER_ETEOCRETAN_DISPATCH
+    elif args.mode in _HATTIC_MATRIX_DISPATCH:
+        dispatch = _HATTIC_MATRIX_DISPATCH[args.mode]
     else:
         dispatch = _CROSS_LM_DISPATCH
     summary = run(

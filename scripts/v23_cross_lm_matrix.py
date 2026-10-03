@@ -22,7 +22,9 @@ The 11 cells filled by v23 are:
   * Eteocretan × {eteocretan own, basque, mycenaean_greek, etruscan}
 
 mg-7e7d6 registers a Hattic row + ``hattic`` LM column (specificity
-probe); those cells stay empty until the Hattic sweep is run.
+probe); mg-7b882 fills them (Hattic sweep + 8 cross-LM rescores),
+making the grid 5×5. Toponym × {etruscan, mycenaean_greek} remain
+unscored (``—``), as in v23.
 
 Toponym pairs against ``control_toponym_bigram`` (the v18-resolved
 production default for new pools); the older ``control_toponym``
@@ -376,6 +378,21 @@ def render_matrix(cells: list[dict], specs: list[dict]) -> str:
         "pattern HOLDS pool-by-pool, which is the test of substrate-"
         "specific (vs. natural-language-LM-bias) signal.\n"
     )
+    if any(sp["substrate"] == "hattic" for sp in specs):
+        lines.append(
+            "**Hattic row / column (mg-7b882) — specificity probe, not a "
+            "candidate substrate.** Hattic is an Anatolian isolate "
+            "unrelated to Linear A. Its pool has 72 entries (below the "
+            "v21 bar of 80), hand-keyed and not collated against the "
+            "printed editions. The `hattic` LM is trained on the same 72 "
+            "lexical forms that make up the `hattic` pool, so the "
+            "`hattic` × `hattic` (own) cell is circular by construction "
+            "and is not evidence either way; the other cells of the "
+            "`hattic` column (other pools scored under the Hattic LM) are "
+            "not circular. A FAIL in the Hattic own-LM gate is "
+            "inconclusive on data quality, not evidence of "
+            "specificity (pre-registered in `scripts/hattic_gate.py`).\n"
+        )
 
     lines.append("## Provenance\n")
     lines.append(
@@ -390,7 +407,9 @@ def render_matrix(cells: list[dict], specs: list[dict]) -> str:
         f"Toponym substrate rows under the Eteocretan LM); the primary "
         f"sidecar `experiments.{_METRIC}.jsonl` (~88 MB) is left "
         f"unchanged to keep individual files under GitHub's 100 MB "
-        f"push cap.\n"
+        f"push cap. mg-7b882 Hattic rows: own-LM and Hattic-substrate "
+        f"cross-LM rows in `.hattic.jsonl`; other substrate pools under "
+        f"the Hattic LM in `.under_hattic_lm.jsonl`.\n"
         f"- Per-cell rollup files: "
         f"`results/rollup.bayesian_posterior.<substrate>.under_<lm>_lm.md` "
         f"(v23 cross-LM cells); `results/rollup.bayesian_posterior."

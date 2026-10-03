@@ -1,0 +1,17 @@
+{
+  "substrate_pool": "aquitanian",
+  "control_pool": "control_aquitanian",
+  "lm": "hattic",
+  "lm_label": "Hattic",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.961901306240929,
+  "median_control_top": 0.95,
+  "median_gap": 0.011901306240929,
+  "mean_substrate_top": 0.9577058806874692,
+  "mean_control_top": 0.9510505092092455,
+  "mean_gap": 0.006655371478223704,
+  "mw_u_substrate": 238.0,
+  "mw_p_one_tail": 0.15463245695471672,
+  "gate": "FAIL"
+}

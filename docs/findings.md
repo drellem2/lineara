@@ -10794,3 +10794,66 @@ substrate affinity.
   limit and not as affinity.
 * **LM.** `harness/external_phoneme_models/hattic.json`: α = 1.0, 614
   tokens, 470 characters. It is the smallest external LM in the repo.
+
+## Findings from mg-7b882 (Hattic sweep + pre-registered right-tail gate + 5×5 cross-LM matrix, 2026-10-03)
+
+Second slice of the Hattic-only revival. Hattic is a **specificity
+probe**, not a candidate substrate. The gate criterion was committed in
+`scripts/hattic_gate.py` in the branch's first commit, before any run
+output. It is the same criterion as every pool since v10: top-20 `hattic`
+vs top-20 `control_hattic_bigram` posteriors under the `hattic` LM,
+one-tailed Mann-Whitney, PASS iff p < 0.05 and the substrate median is
+higher. pm-lineara's interpretation rules (10:50Z) were fixed in the
+same docstring before the run.
+
+* **Gate verdict: FAIL.** p = 0.393 (U = 210.5), with 72 pool entries
+  (below the v21 bar of 80). Median top-20 posterior is 0.8750 vs 0.8697,
+  a substrate-minus-control gap of **+0.005**. The mean-of-means gap is
+  +0.027 (not part of the gate). Under the pre-registered rules this FAIL
+  is **inconclusive on data quality**: the forms are hand-keyed,
+  uncollated lexical forms and there are fewer than 80 of them. It is
+  not evidence that the gate's signal is substrate-specific.
+  `results/rollup.bayesian_posterior.hattic.md`.
+* **Does Hattic score best under its own LM? No.** Its own-LM gap
+  (+0.005) is beaten by Mycenaean Greek (+0.059, PASS p = 0.004). Under
+  Basque (−0.122), Etruscan (−0.100) and Eteocretan (−0.037) the gaps
+  are negative. This readout is **circular by construction**, because the
+  Hattic LM is trained on the same 72 forms as the pool, so it is not
+  evidence either way. Circularity would inflate the own-LM cell, and it
+  still did not win; that is noted, not interpreted.
+* **Specificity read against Eteocretan / Aquitanian / Etruscan.** Those
+  pools PASS their own-LM gates at p = 4.1e-06 / 3.2e-05 / 5.2e-04, with
+  gaps of +0.201 / +0.030 / +0.059. Hattic did **not** PASS at similar
+  strength, so the own-LM gate adds no new support for the v15
+  generic-structure reading. Per the rules, the FAIL does not support
+  specificity either. The net own-LM read is **inconclusive**.
+* **One cross-LM cell does lean generic-structure: Hattic under
+  Mycenaean Greek PASSes** (p = 0.004, gap +0.059). Neither the pool nor
+  that LM has any kinship with Linear A or with each other, and the cell
+  is not circular. It fits the v15 point that the gate can PASS without
+  substrate affinity. Caveats: this cell was not the pre-registered
+  test, and 1 PASS in 8 new cells at α = 0.05 is not far above the ~0.4
+  expected by chance.
+* **Hattic LM column: no pool PASSes under the Hattic LM.** Aquitanian
+  p = 0.155 (+0.012), Etruscan 0.575 (−0.002), toponym 0.052 (+0.056,
+  just above the bar) and Eteocretan 0.965 (−0.071). Unlike the Basque and
+  Eteocretan LMs, the 72-form Hattic LM does not act as a generic
+  "substrate-shaped" detector. With an LM this small (614 tokens), that
+  cannot be told apart from LM noise.
+* **Matrix.** `results/rollup.cross_lm_matrix.md` is regenerated as 5×5.
+  All 16 earlier cells reproduce unchanged, and toponym × {etruscan,
+  mycenaean_greek} are still unscored. The headline now reads "own-LM
+  dominance HOLDS for 3/5" (aquitanian, hattic not). The renderer adds a
+  Hattic caveat paragraph (circular own cell, 72 < 80, uncollated).
+  Per-cell rollups are at
+  `results/rollup.bayesian_posterior.{hattic.under_*,*.under_hattic}_lm.md`
+  and summaries are in `results/v23_cell_summaries/`.
+* **Rows.** 3,614 own-LM rows and 14,456 Hattic-substrate cross-LM rows
+  are in `experiments.external_phoneme_perplexity_v0.hattic.jsonl`.
+  47,135 other-pool rows under the Hattic LM are in the new
+  `.under_hattic_lm.jsonl` (~37 MB, under the 100 MB push cap).
+* **Tooling fix.** `run_sweep.build_pool_registry` and
+  `per_surface_bayesian_rollup._load_pool_phonemes` raised a KeyError
+  on the CHIC sign / anchor YAMLs in `pools/`, which have no `pool:`
+  key. Both now skip such files. Before this fix, any sweep or gate on
+  main crashed.
