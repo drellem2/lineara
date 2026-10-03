@@ -98,6 +98,10 @@ _SUBSTRATE_POOLS = (
     # v18. This pool typically gets built with --sampler bigram
     # --suffix _bigram.
     "eteocretan",
+    # mg-7e7d6: Hattic specificity-probe pool (Anatolian isolate, no
+    # relation to the Aegean pools). Built with --sampler bigram
+    # --suffix _bigram, same as Eteocretan.
+    "hattic",
 )
 _REDRAW_LIMIT = 50
 

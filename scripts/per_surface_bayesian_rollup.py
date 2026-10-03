@@ -98,6 +98,9 @@ _SUBSTRATE_POOLS: tuple[str, ...] = (
     # production default for new pools per v18). The dedicated
     # gate analysis lives in scripts/v21_eteocretan_gate.py.
     "eteocretan",
+    # mg-7e7d6: Hattic specificity probe, paired against
+    # ``control_hattic_bigram``.
+    "hattic",
 )
 _DEFAULT_NMIN = 10
 _DEFAULT_TOP_PER_POOL = 50
@@ -133,6 +136,9 @@ _DEFAULT_LANGUAGE_DISPATCH: dict[str, str] = {
     # mg-6ccd (harness v21): Eteocretan + bigram-preserving control.
     "eteocretan": "eteocretan",
     "control_eteocretan_bigram": "eteocretan",
+    # mg-7e7d6: Hattic specificity probe + bigram-preserving control.
+    "hattic": "hattic",
+    "control_hattic_bigram": "hattic",
 }
 
 

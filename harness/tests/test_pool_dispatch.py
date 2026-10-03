@@ -476,5 +476,52 @@ class SweepRunnerDispatchTest(_PoolDispatchFixture):
             self.assertEqual(r1["rare_sign_correction"], r2["rare_sign_correction"])
 
 
+class HatticPoolDispatchTest(unittest.TestCase):
+    """mg-7e7d6: the Hattic specificity-probe pool and its bigram-
+    preserving control are registered in every dispatch table and
+    resolve to the committed pool / LM files."""
+
+    def test_ext_pool_language_routes_hattic_to_own_lm(self) -> None:
+        self.assertEqual(run_sweep._EXT_POOL_LANGUAGE["hattic"], "hattic")
+        self.assertEqual(
+            run_sweep._EXT_POOL_LANGUAGE["control_hattic_bigram"], "hattic"
+        )
+        self.assertEqual(run_sweep._PER_POOL_SIDECAR_TAG["hattic"], "hattic")
+        self.assertEqual(
+            run_sweep._PER_POOL_SIDECAR_TAG["control_hattic_bigram"], "hattic"
+        )
+
+    def test_rollup_dispatch_matches_run_sweep(self) -> None:
+        import per_surface_bayesian_rollup as rollup
+
+        self.assertIn("hattic", rollup._SUBSTRATE_POOLS)
+        for pool in ("hattic", "control_hattic_bigram"):
+            self.assertEqual(
+                rollup._DEFAULT_LANGUAGE_DISPATCH[pool],
+                run_sweep._EXT_POOL_LANGUAGE[pool],
+            )
+
+    def test_hattic_lm_file_present_and_loadable(self) -> None:
+        from harness.external_phoneme_model import ExternalPhonemeModel
+
+        path = _REPO_ROOT / "harness" / "external_phoneme_models" / "hattic.json"
+        self.assertTrue(path.exists())
+        model = ExternalPhonemeModel.load_json(path)
+        self.assertEqual(model.name, "hattic")
+
+    def test_hattic_hypothesis_picks_hattic_bigram(self) -> None:
+        # source_pool: hattic resolves to the committed pools/hattic.yaml,
+        # and the bigram model favours an attested Hattic bigram (u, r:
+        # wur, wurun, ...) over one absent from the pool (q, x).
+        ctx = _load_pool_for(None, {"source_pool": "hattic"}, _REPO_ROOT)
+        self.assertIsNotNone(ctx)
+        m = ctx["bigram_model"]
+        self.assertGreater(m.log_prob("u", "r"), m.log_prob("q", "x"))
+        ctrl = _load_pool_for(
+            None, {"source_pool": "control_hattic_bigram"}, _REPO_ROOT
+        )
+        self.assertIsNotNone(ctrl)
+
+
 if __name__ == "__main__":
     unittest.main()

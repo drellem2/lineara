@@ -1,0 +1,15 @@
+{
+  "category": "theonym",
+  "gloss": "sun god",
+  "id": 1,
+  "is_bilingual": true,
+  "name": "Eštan",
+  "provenance": "Hattic sun deity; Hittite Ištanu is the loan.",
+  "source_citation": "Soysal, O. (2004). Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.",
+  "text": "Eštan",
+  "tier": "A",
+  "transliteration": "estan",
+  "words": [
+    "estan"
+  ]
+}

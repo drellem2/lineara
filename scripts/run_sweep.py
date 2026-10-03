@@ -126,6 +126,10 @@ _PER_POOL_SIDECAR_TAG: dict[str, str] = {
     # was already approaching GitHub's 100 MB push limit at v20).
     "eteocretan": "eteocretan",
     "control_eteocretan_bigram": "eteocretan",
+    # mg-7e7d6: Hattic specificity probe + bigram-preserving control —
+    # own sidecar so the probe's rows are independently versionable.
+    "hattic": "hattic",
+    "control_hattic_bigram": "hattic",
 }
 
 # Pool → external-language-model mapping for external_phoneme_perplexity_v0.
@@ -184,6 +188,13 @@ _EXT_POOL_LANGUAGE: dict[str, str] = {
     # candidate substrate (presumed Linear-A continuation).
     "eteocretan": "eteocretan",
     "control_eteocretan_bigram": "eteocretan",
+    # mg-7e7d6: Hattic specificity probe (Bronze Age Anatolian isolate,
+    # no relation to the Aegean pools). Routes to its own char-bigram
+    # LM; the bigram-preserving control mirrors that routing so
+    # paired_diff cancels the LM out. A PASS here as ready as the
+    # Aegean pools' is evidence of generic structure, not affinity.
+    "hattic": "hattic",
+    "control_hattic_bigram": "hattic",
 }
 
 # Metrics that the candidate_signature.v1 shape supports. The signature

@@ -1,0 +1,15 @@
+{
+  "category": "lexeme",
+  "gloss": "temple gate-house",
+  "id": 42,
+  "is_bilingual": true,
+  "name": "ḫilamar",
+  "provenance": "Hittite ḫilammar is the loan.",
+  "source_citation": "Soysal, O. (2004). Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.",
+  "text": "ḫilamar",
+  "tier": "A",
+  "transliteration": "hilamar",
+  "words": [
+    "hilamar"
+  ]
+}

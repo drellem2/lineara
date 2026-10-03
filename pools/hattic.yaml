@@ -1,0 +1,1353 @@
+pool: hattic
+source_citation: "Soysal, O. (2004). Hattischer Wortschatz in hethitischer\n  Textüberlieferung.\
+  \ HdO I/74. Leiden: Brill. — the standard Hattic\n  lexicon; primary reference for\
+  \ the lexemes.\nKlinger, J. (1996). Untersuchungen zur Rekonstruktion der hattischen\n\
+  \  Kultschicht. StBoT 37. Wiesbaden: Harrassowitz.\nKammenhuber, A. (1969). 'Hattisch.'\
+  \ HdO I/2.1-2/2: 428-546.\nTaracha, P. (2009). Religions of Second Millennium Anatolia.\
+  \ DBH 27.\ndel Monte, G. F. & Tischler, J. (1978). RGTC 6 (toponyms).\nBischoff,\
+  \ A. M. (2023). Hungarian Assyriological Review 4: 95-109.\nUnderlying Hittite-archive\
+  \ tablets (CTH 725-745 and Hattic passages in\n  Hittite ritual / festival texts)\
+  \ are Bronze Age, public domain. Manual\n  lexical transcription via scripts/build_hattic_corpus.py;\
+  \ forms not\n  collated against the printed editions (see corpora/hattic.README.md).\n"
+license: 'Cited fair-use of the scholarly literature for the lexical forms and
+
+  glosses. Underlying tablets PD.
+
+  '
+fetched_at: '2026-10-03T00:00:00Z'
+entries:
+- surface: alep
+  phonemes:
+  - a
+  - l
+  - e
+  - p
+  gloss: tongue, word
+  semantic_field: hattic_lexeme
+  attestations:
+  - alep
+  region: central_anatolia
+  citation: 'Corpus record(s) 39 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: an
+  phonemes:
+  - a
+  - n
+  gloss: sea
+  semantic_field: hattic_lexeme
+  attestations:
+  - an
+  region: central_anatolia
+  citation: 'Corpus record(s) 59 (corpora/hattic/inscriptions/). Bischoff, A. M. (2023).
+    ''Some new Hattian-Hittite correspondences from the quasi-bilingual text of CTH
+    733.'' Hungarian Assyriological Review 4: 95-109 (CC BY-NC 4.0). Gloss rests on
+    a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier B
+  provenance: real
+- surface: ankuwa
+  phonemes:
+  - a
+  - n
+  - k
+  - u
+  - w
+  - a
+  gloss: town
+  semantic_field: hattic_toponym
+  attestations:
+  - Ankuwa
+  region: central_anatolia
+  citation: 'Corpus record(s) 78 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: arinna
+  phonemes:
+  - a
+  - r
+  - i
+  - n
+  - n
+  - a
+  gloss: cult city of the sun goddess
+  semantic_field: hattic_toponym
+  attestations:
+  - Arinna
+  region: central_anatolia
+  citation: 'Corpus record(s) 73 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: ashap
+  phonemes:
+  - a
+  - s
+  - h
+  - a
+  - p
+  gloss: god
+  semantic_field: hattic_lexeme
+  attestations:
+  - ašḫap
+  region: central_anatolia
+  citation: 'Corpus record(s) 33 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: estan
+  phonemes:
+  - e
+  - s
+  - t
+  - a
+  - n
+  gloss: sun god
+  semantic_field: hattic_theonym
+  attestations:
+  - Eštan
+  region: central_anatolia
+  citation: 'Corpus record(s) 1 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: hakmis
+  phonemes:
+  - h
+  - a
+  - k
+  - m
+  - i
+  - s
+  gloss: town (also Ḫakpiš)
+  semantic_field: hattic_toponym
+  attestations:
+  - Ḫakmiš
+  region: central_anatolia
+  citation: 'Corpus record(s) 77 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: halentu
+  phonemes:
+  - h
+  - a
+  - l
+  - e
+  - n
+  - t
+  - u
+  gloss: palace
+  semantic_field: hattic_lexeme
+  attestations:
+  - ḫalentu
+  region: central_anatolia
+  citation: 'Corpus record(s) 48 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+  notes: confidence tier B
+  provenance: real
+- surface: halmasuit
+  phonemes:
+  - h
+  - a
+  - l
+  - m
+  - a
+  - s
+  - u
+  - i
+  - t
+  gloss: throne goddess
+  semantic_field: hattic_theonym
+  attestations:
+  - Ḫalmašuit
+  region: central_anatolia
+  citation: 'Corpus record(s) 6 (corpora/hattic/inscriptions/). Klinger, J. (1996).
+    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
+    Harrassowitz. Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: hanhana
+  phonemes:
+  - h
+  - a
+  - n
+  - h
+  - a
+  - n
+  - a
+  gloss: cult town
+  semantic_field: hattic_toponym
+  attestations:
+  - Ḫanḫana
+  region: central_anatolia
+  citation: 'Corpus record(s) 80 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: hanwasuit
+  phonemes:
+  - h
+  - a
+  - n
+  - w
+  - a
+  - s
+  - u
+  - i
+  - t
+  gloss: throne
+  semantic_field: hattic_lexeme
+  attestations:
+  - ḫanwašuit
+  region: central_anatolia
+  citation: 'Corpus record(s) 44 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: hapalki
+  phonemes:
+  - h
+  - a
+  - p
+  - a
+  - l
+  - k
+  - i
+  gloss: iron
+  semantic_field: hattic_lexeme
+  attestations:
+  - ḫapalki
+  region: central_anatolia
+  citation: 'Corpus record(s) 49 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+  notes: confidence tier B
+  provenance: real
+- surface: hapantali
+  phonemes:
+  - h
+  - a
+  - p
+  - a
+  - n
+  - t
+  - a
+  - l
+  - i
+  gloss: tutelary goddess
+  semantic_field: hattic_theonym
+  attestations:
+  - Ḫapantali
+  region: central_anatolia
+  citation: 'Corpus record(s) 7 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: hasammili
+  phonemes:
+  - h
+  - a
+  - s
+  - a
+  - m
+  - m
+  - i
+  - l
+  - i
+  gloss: god
+  semantic_field: hattic_theonym
+  attestations:
+  - Ḫašammili
+  region: central_anatolia
+  citation: 'Corpus record(s) 16 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: hatepinu
+  phonemes:
+  - h
+  - a
+  - t
+  - e
+  - p
+  - i
+  - n
+  - u
+  gloss: goddess, consort of Telipinu
+  semantic_field: hattic_theonym
+  attestations:
+  - Ḫatepinu
+  region: central_anatolia
+  citation: 'Corpus record(s) 25 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier B
+  provenance: real
+- surface: hattus
+  phonemes:
+  - h
+  - a
+  - t
+  - t
+  - u
+  - s
+  gloss: Ḫattuša (pre-Hittite name)
+  semantic_field: hattic_toponym
+  attestations:
+  - Ḫattuš
+  region: central_anatolia
+  citation: 'Corpus record(s) 70 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: hilamar
+  phonemes:
+  - h
+  - i
+  - l
+  - a
+  - m
+  - a
+  - r
+  gloss: temple gate-house
+  semantic_field: hattic_lexeme
+  attestations:
+  - ḫilamar
+  region: central_anatolia
+  citation: 'Corpus record(s) 42 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: huzziya
+  phonemes:
+  - h
+  - u
+  - z
+  - z
+  - i
+  - y
+  - a
+  gloss: Old Hittite royal name
+  semantic_field: hattic_personal_name
+  attestations:
+  - Ḫuzziya
+  region: central_anatolia
+  citation: 'Corpus record(s) 85 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+  notes: confidence tier B
+  provenance: real
+- surface: il
+  phonemes:
+  - i
+  - l
+  gloss: to prosper
+  semantic_field: hattic_lexeme
+  attestations:
+  - il
+  region: central_anatolia
+  citation: 'Corpus record(s) 60 (corpora/hattic/inscriptions/). Bischoff, A. M. (2023).
+    ''Some new Hattian-Hittite correspondences from the quasi-bilingual text of CTH
+    733.'' Hungarian Assyriological Review 4: 95-109 (CC BY-NC 4.0). Gloss rests on
+    a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier B
+  provenance: real
+- surface: inar
+  phonemes:
+  - i
+  - n
+  - a
+  - r
+  gloss: tutelary goddess
+  semantic_field: hattic_theonym
+  attestations:
+  - Inar
+  region: central_anatolia
+  citation: 'Corpus record(s) 13 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: istarazzil
+  phonemes:
+  - i
+  - s
+  - t
+  - a
+  - r
+  - a
+  - z
+  - z
+  - i
+  - l
+  gloss: earth
+  semantic_field: hattic_lexeme
+  attestations:
+  - ištarazzil
+  region: central_anatolia
+  citation: 'Corpus record(s) 50 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier B
+  provenance: real
+- surface: istustaya
+  phonemes:
+  - i
+  - s
+  - t
+  - u
+  - s
+  - t
+  - a
+  - y
+  - a
+  gloss: fate goddess
+  semantic_field: hattic_theonym
+  attestations:
+  - Ištuštaya
+  region: central_anatolia
+  citation: 'Corpus record(s) 22 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier B
+  provenance: real
+- surface: kait
+  phonemes:
+  - k
+  - a
+  - i
+  - t
+  gloss: grain goddess
+  semantic_field: hattic_theonym
+  attestations:
+  - Kait
+  region: central_anatolia
+  citation: 'Corpus record(s) 9 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: kammama
+  phonemes:
+  - k
+  - a
+  - m
+  - m
+  - a
+  - m
+  - a
+  gloss: town
+  semantic_field: hattic_toponym
+  attestations:
+  - Kammama
+  region: central_anatolia
+  citation: 'Corpus record(s) 82 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: kasku
+  phonemes:
+  - k
+  - a
+  - s
+  - k
+  - u
+  gloss: moon god
+  semantic_field: hattic_theonym
+  attestations:
+  - Kašku
+  region: central_anatolia
+  citation: 'Corpus record(s) 4 (corpora/hattic/inscriptions/). Klinger, J. (1996).
+    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
+    Harrassowitz. Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: kastama
+  phonemes:
+  - k
+  - a
+  - s
+  - t
+  - a
+  - m
+  - a
+  gloss: cult town
+  semantic_field: hattic_toponym
+  attestations:
+  - Kaštama
+  region: central_anatolia
+  citation: 'Corpus record(s) 79 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: katah
+  phonemes:
+  - k
+  - a
+  - t
+  - a
+  - h
+  gloss: queen
+  semantic_field: hattic_lexeme
+  attestations:
+  - kataḫ
+  region: central_anatolia
+  citation: 'Corpus record(s) 31 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: katahha
+  phonemes:
+  - k
+  - a
+  - t
+  - a
+  - h
+  - h
+  - a
+  gloss: goddess 'the queen'
+  semantic_field: hattic_theonym
+  attestations:
+  - Kataḫḫa
+  region: central_anatolia
+  citation: 'Corpus record(s) 19 (corpora/hattic/inscriptions/). Klinger, J. (1996).
+    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
+    Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: katahzipuri
+  phonemes:
+  - k
+  - a
+  - t
+  - a
+  - h
+  - z
+  - i
+  - p
+  - u
+  - r
+  - i
+  gloss: goddess (Hittite Kamrušepa)
+  semantic_field: hattic_theonym
+  attestations:
+  - Kataḫzipuri
+  region: central_anatolia
+  citation: 'Corpus record(s) 8 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: katapa
+  phonemes:
+  - k
+  - a
+  - t
+  - a
+  - p
+  - a
+  gloss: town
+  semantic_field: hattic_toponym
+  attestations:
+  - Katapa
+  region: central_anatolia
+  citation: 'Corpus record(s) 83 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: katte
+  phonemes:
+  - k
+  - a
+  - t
+  - t
+  - e
+  gloss: king
+  semantic_field: hattic_lexeme
+  attestations:
+  - katte
+  region: central_anatolia
+  citation: 'Corpus record(s) 30 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: kuzanisu
+  phonemes:
+  - k
+  - u
+  - z
+  - a
+  - n
+  - i
+  - s
+  - u
+  gloss: goddess
+  semantic_field: hattic_theonym
+  attestations:
+  - Kuzanišu
+  region: central_anatolia
+  citation: 'Corpus record(s) 24 (corpora/hattic/inscriptions/). Klinger, J. (1996).
+    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
+    Harrassowitz.'
+  notes: confidence tier B
+  provenance: real
+- surface: leipinu
+  phonemes:
+  - l
+  - e
+  - i
+  - p
+  - i
+  - n
+  - u
+  gloss: his children
+  semantic_field: hattic_lexeme
+  attestations:
+  - le-i-binu
+  region: central_anatolia
+  citation: Corpus record(s) 52 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+  notes: confidence tier A
+  provenance: real
+- surface: lepinu
+  phonemes:
+  - l
+  - e
+  - p
+  - i
+  - n
+  - u
+  gloss: children (le- plural)
+  semantic_field: hattic_lexeme
+  attestations:
+  - le-binu
+  region: central_anatolia
+  citation: Corpus record(s) 51 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+  notes: confidence tier A
+  provenance: real
+- surface: lewae
+  phonemes:
+  - l
+  - e
+  - w
+  - a
+  - e
+  gloss: implements
+  semantic_field: hattic_lexeme
+  attestations:
+  - le-wae
+  region: central_anatolia
+  citation: Corpus record(s) 54 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+  notes: confidence tier A
+  provenance: real
+- surface: lezuh
+  phonemes:
+  - l
+  - e
+  - z
+  - u
+  - h
+  gloss: cloths
+  semantic_field: hattic_lexeme
+  attestations:
+  - le-zuḫ
+  region: central_anatolia
+  citation: Corpus record(s) 53 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+  notes: confidence tier A
+  provenance: real
+- surface: lihzina
+  phonemes:
+  - l
+  - i
+  - h
+  - z
+  - i
+  - n
+  - a
+  gloss: cult town
+  semantic_field: hattic_toponym
+  attestations:
+  - Liḫzina
+  region: central_anatolia
+  citation: 'Corpus record(s) 76 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: mezulla
+  phonemes:
+  - m
+  - e
+  - z
+  - u
+  - l
+  - l
+  - a
+  gloss: daughter of the sun goddess
+  semantic_field: hattic_theonym
+  attestations:
+  - Mezulla
+  region: central_anatolia
+  citation: 'Corpus record(s) 14 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: nerik
+  phonemes:
+  - n
+  - e
+  - r
+  - i
+  - k
+  gloss: cult city of the storm god
+  semantic_field: hattic_toponym
+  attestations:
+  - Nerik
+  region: central_anatolia
+  citation: 'Corpus record(s) 71 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: nuwa
+  phonemes:
+  - n
+  - u
+  - w
+  - a
+  gloss: come (verb stem)
+  semantic_field: hattic_lexeme
+  attestations:
+  - nuwa
+  region: central_anatolia
+  citation: Corpus record(s) 55 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+  notes: confidence tier A
+  provenance: real
+- surface: pampa
+  phonemes:
+  - p
+  - a
+  - m
+  - p
+  - a
+  gloss: king of Ḫatti in the Narām-Sîn tradition
+  semantic_field: hattic_personal_name
+  attestations:
+  - Pamba
+  region: central_anatolia
+  citation: 'Corpus record(s) 84 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+  notes: confidence tier B
+  provenance: real
+- surface: papaya
+  phonemes:
+  - p
+  - a
+  - p
+  - a
+  - y
+  - a
+  gloss: fate goddess
+  semantic_field: hattic_theonym
+  attestations:
+  - Papaya
+  region: central_anatolia
+  citation: 'Corpus record(s) 23 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier B
+  provenance: real
+- surface: pinu
+  phonemes:
+  - p
+  - i
+  - n
+  - u
+  gloss: child
+  semantic_field: hattic_lexeme
+  attestations:
+  - pinu
+  region: central_anatolia
+  citation: 'Corpus record(s) 32 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: sul
+  phonemes:
+  - s
+  - u
+  - l
+  gloss: let, leave (verb stem)
+  semantic_field: hattic_lexeme
+  attestations:
+  - šul
+  region: central_anatolia
+  citation: Corpus record(s) 57 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+  notes: confidence tier A
+  provenance: real
+- surface: sulinkatte
+  phonemes:
+  - s
+  - u
+  - l
+  - i
+  - n
+  - k
+  - a
+  - t
+  - t
+  - e
+  gloss: war god
+  semantic_field: hattic_theonym
+  attestations:
+  - Šulinkatte
+  region: central_anatolia
+  citation: 'Corpus record(s) 11 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: tahurpa
+  phonemes:
+  - t
+  - a
+  - h
+  - u
+  - r
+  - p
+  - a
+  gloss: cult town
+  semantic_field: hattic_toponym
+  attestations:
+  - Taḫurpa
+  region: central_anatolia
+  citation: 'Corpus record(s) 81 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: taparna
+  phonemes:
+  - t
+  - a
+  - p
+  - a
+  - r
+  - n
+  - a
+  gloss: king (title)
+  semantic_field: hattic_lexeme
+  attestations:
+  - tabarna
+  region: central_anatolia
+  citation: 'Corpus record(s) 47 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+  notes: confidence tier B
+  provenance: real
+- surface: taru
+  phonemes:
+  - t
+  - a
+  - r
+  - u
+  gloss: storm god
+  semantic_field: hattic_theonym
+  attestations:
+  - Taru
+  region: central_anatolia
+  citation: 'Corpus record(s) 3 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: tastenuwa
+  phonemes:
+  - t
+  - a
+  - s
+  - t
+  - e
+  - n
+  - u
+  - w
+  - a
+  gloss: he should not come
+  semantic_field: hattic_lexeme
+  attestations:
+  - taš-te-nuwa
+  region: central_anatolia
+  citation: Corpus record(s) 56 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+  notes: confidence tier A
+  provenance: real
+- surface: tawananna
+  phonemes:
+  - t
+  - a
+  - w
+  - a
+  - n
+  - a
+  - n
+  - n
+  - a
+  gloss: queen (title)
+  semantic_field: hattic_lexeme
+  attestations:
+  - tawananna
+  region: central_anatolia
+  citation: 'Corpus record(s) 46 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+  notes: confidence tier B
+  provenance: real
+- surface: tawiniya
+  phonemes:
+  - t
+  - a
+  - w
+  - i
+  - n
+  - i
+  - y
+  - a
+  gloss: town
+  semantic_field: hattic_toponym
+  attestations:
+  - Tawiniya
+  region: central_anatolia
+  citation: 'Corpus record(s) 74 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: telipinu
+  phonemes:
+  - t
+  - e
+  - l
+  - i
+  - p
+  - i
+  - n
+  - u
+  gloss: vegetation / fertility god
+  semantic_field: hattic_theonym
+  attestations:
+  - Telipinu
+  region: central_anatolia
+  citation: 'Corpus record(s) 12 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: tete
+  phonemes:
+  - t
+  - e
+  - t
+  - e
+  gloss: great
+  semantic_field: hattic_lexeme
+  attestations:
+  - tete
+  region: central_anatolia
+  citation: 'Corpus record(s) 43 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: teteshapi
+  phonemes:
+  - t
+  - e
+  - t
+  - e
+  - s
+  - h
+  - a
+  - p
+  - i
+  gloss: '''great goddess'''
+  semantic_field: hattic_theonym
+  attestations:
+  - Tetešḫapi
+  region: central_anatolia
+  citation: 'Corpus record(s) 10 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.'
+  notes: confidence tier A
+  provenance: real
+- surface: tuhkanti
+  phonemes:
+  - t
+  - u
+  - h
+  - k
+  - a
+  - n
+  - t
+  - i
+  gloss: crown prince (title)
+  semantic_field: hattic_lexeme
+  attestations:
+  - tuḫkanti
+  region: central_anatolia
+  citation: 'Corpus record(s) 45 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+  notes: confidence tier B
+  provenance: real
+- surface: tuhtasul
+  phonemes:
+  - t
+  - u
+  - h
+  - t
+  - a
+  - s
+  - u
+  - l
+  gloss: he let (it) go after him
+  semantic_field: hattic_lexeme
+  attestations:
+  - tu-ḫ-ta-šul
+  region: central_anatolia
+  citation: Corpus record(s) 58 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+  notes: confidence tier A
+  provenance: real
+- surface: wasezzili
+  phonemes:
+  - w
+  - a
+  - s
+  - e
+  - z
+  - z
+  - i
+  - l
+  - i
+  gloss: god
+  semantic_field: hattic_theonym
+  attestations:
+  - Wašezzili
+  region: central_anatolia
+  citation: 'Corpus record(s) 18 (corpora/hattic/inscriptions/). Klinger, J. (1996).
+    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
+    Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: washap
+  phonemes:
+  - w
+  - a
+  - s
+  - h
+  - a
+  - p
+  gloss: gods (collective wa- + šḫap)
+  semantic_field: hattic_lexeme
+  attestations:
+  - wa-šḫap
+  region: central_anatolia
+  citation: 'Corpus record(s) 34 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: wazari
+  phonemes:
+  - w
+  - a
+  - z
+  - a
+  - r
+  - i
+  gloss: humankind (collective)
+  semantic_field: hattic_lexeme
+  attestations:
+  - wa-zari
+  region: central_anatolia
+  citation: 'Corpus record(s) 41 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: wel
+  phonemes:
+  - w
+  - e
+  - l
+  gloss: house
+  semantic_field: hattic_lexeme
+  attestations:
+  - wel
+  region: central_anatolia
+  citation: 'Corpus record(s) 37 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: wintu
+  phonemes:
+  - w
+  - i
+  - n
+  - t
+  - u
+  gloss: wine
+  semantic_field: hattic_lexeme
+  attestations:
+  - windu
+  region: central_anatolia
+  citation: 'Corpus record(s) 38 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: wur
+  phonemes:
+  - w
+  - u
+  - r
+  gloss: land
+  semantic_field: hattic_lexeme
+  attestations:
+  - wur
+  region: central_anatolia
+  citation: 'Corpus record(s) 35 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: wurun
+  phonemes:
+  - w
+  - u
+  - r
+  - u
+  - n
+  gloss: of the land (genitive -un)
+  semantic_field: hattic_lexeme
+  attestations:
+  - wur-un
+  region: central_anatolia
+  citation: 'Corpus record(s) 36 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: wurunkatte
+  phonemes:
+  - w
+  - u
+  - r
+  - u
+  - n
+  - k
+  - a
+  - t
+  - t
+  - e
+  gloss: '''king of the land'', war god'
+  semantic_field: hattic_theonym
+  attestations:
+  - Wurunkatte
+  region: central_anatolia
+  citation: 'Corpus record(s) 5 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: wurunsemu
+  phonemes:
+  - w
+  - u
+  - r
+  - u
+  - n
+  - s
+  - e
+  - m
+  - u
+  gloss: sun goddess of Arinna
+  semantic_field: hattic_theonym
+  attestations:
+  - Wurunšemu
+  region: central_anatolia
+  citation: 'Corpus record(s) 2 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: zahpuna
+  phonemes:
+  - z
+  - a
+  - h
+  - p
+  - u
+  - n
+  - a
+  gloss: goddess
+  semantic_field: hattic_theonym
+  attestations:
+  - Zaḫpuna
+  region: central_anatolia
+  citation: 'Corpus record(s) 20 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier B
+  provenance: real
+- surface: zalpa
+  phonemes:
+  - z
+  - a
+  - l
+  - p
+  - a
+  gloss: town on the Black Sea coast
+  semantic_field: hattic_toponym
+  attestations:
+  - Zalpa
+  region: central_anatolia
+  citation: 'Corpus record(s) 75 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real
+- surface: zari
+  phonemes:
+  - z
+  - a
+  - r
+  - i
+  gloss: mortal, man
+  semantic_field: hattic_lexeme
+  attestations:
+  - zari
+  region: central_anatolia
+  citation: 'Corpus record(s) 40 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+  notes: confidence tier A
+  provenance: real
+- surface: zashapuna
+  phonemes:
+  - z
+  - a
+  - s
+  - h
+  - a
+  - p
+  - u
+  - n
+  - a
+  gloss: chief goddess of Kaštama
+  semantic_field: hattic_theonym
+  attestations:
+  - Zašḫapuna
+  region: central_anatolia
+  citation: 'Corpus record(s) 21 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier B
+  provenance: real
+- surface: zilipuri
+  phonemes:
+  - z
+  - i
+  - l
+  - i
+  - p
+  - u
+  - r
+  - i
+  gloss: god
+  semantic_field: hattic_theonym
+  attestations:
+  - Zilipuri
+  region: central_anatolia
+  citation: 'Corpus record(s) 17 (corpora/hattic/inscriptions/). Klinger, J. (1996).
+    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
+    Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: zintuhi
+  phonemes:
+  - z
+  - i
+  - n
+  - t
+  - u
+  - h
+  - i
+  gloss: granddaughter of the sun goddess
+  semantic_field: hattic_theonym
+  attestations:
+  - Zintuḫi
+  region: central_anatolia
+  citation: 'Corpus record(s) 15 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+  notes: confidence tier A
+  provenance: real
+- surface: zippalanta
+  phonemes:
+  - z
+  - i
+  - p
+  - p
+  - a
+  - l
+  - a
+  - n
+  - t
+  - a
+  gloss: cult city
+  semantic_field: hattic_toponym
+  attestations:
+  - Zippalanda
+  region: central_anatolia
+  citation: 'Corpus record(s) 72 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+  notes: confidence tier B
+  provenance: real

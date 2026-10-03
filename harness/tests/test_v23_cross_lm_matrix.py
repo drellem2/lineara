@@ -41,12 +41,14 @@ class V23MatrixSpecTest(unittest.TestCase):
             _REPO_ROOT / "scripts" / "v23_cross_lm_matrix.py",
         )
 
-    def test_substrate_spec_covers_4_pools(self) -> None:
-        # The cross-LM matrix is over the 4 validated substrate pools:
-        # aquitanian, etruscan, toponym, eteocretan.
+    def test_substrate_spec_covers_5_pools(self) -> None:
+        # The cross-LM matrix is over the 4 validated substrate pools
+        # (aquitanian, etruscan, toponym, eteocretan) plus the mg-7e7d6
+        # Hattic specificity probe.
         names = [s["substrate"] for s in self.matrix._SUBSTRATE_SPEC]
         self.assertEqual(
-            sorted(names), ["aquitanian", "eteocretan", "etruscan", "toponym"]
+            sorted(names),
+            ["aquitanian", "eteocretan", "etruscan", "hattic", "toponym"],
         )
 
     def test_substrate_spec_uses_bigram_control_for_post_v18_pools(self) -> None:
@@ -58,11 +60,12 @@ class V23MatrixSpecTest(unittest.TestCase):
         self.assertEqual(ctrls["etruscan"], "control_etruscan")
         self.assertEqual(ctrls["toponym"], "control_toponym_bigram")
         self.assertEqual(ctrls["eteocretan"], "control_eteocretan_bigram")
+        self.assertEqual(ctrls["hattic"], "control_hattic_bigram")
 
-    def test_lm_columns_cover_all_4_lms(self) -> None:
+    def test_lm_columns_cover_all_5_lms(self) -> None:
         self.assertEqual(
             sorted(self.matrix._LM_COLUMNS),
-            ["basque", "eteocretan", "etruscan", "mycenaean_greek"],
+            ["basque", "eteocretan", "etruscan", "hattic", "mycenaean_greek"],
         )
 
     def test_own_lm_dispatch_matches_run_sweep(self) -> None:

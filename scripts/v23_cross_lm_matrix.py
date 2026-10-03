@@ -21,6 +21,9 @@ The 11 cells filled by v23 are:
   * Toponym    × {basque own (bigram-preserving control), eteocretan}
   * Eteocretan × {eteocretan own, basque, mycenaean_greek, etruscan}
 
+mg-7e7d6 registers a Hattic row + ``hattic`` LM column (specificity
+probe); those cells stay empty until the Hattic sweep is run.
+
 Toponym pairs against ``control_toponym_bigram`` (the v18-resolved
 production default for new pools); the older ``control_toponym``
 unigram pool is intentionally excluded.
@@ -62,12 +65,15 @@ _DEFAULT_POOLS = _REPO_ROOT / "pools"
 _DEFAULT_NMIN = 10
 _DEFAULT_TOP_K_GATE = 20
 
-_LM_COLUMNS: tuple[str, ...] = ("basque", "etruscan", "mycenaean_greek", "eteocretan")
+_LM_COLUMNS: tuple[str, ...] = (
+    "basque", "etruscan", "mycenaean_greek", "eteocretan", "hattic",
+)
 _LM_LABELS: dict[str, str] = {
     "basque": "Basque",
     "etruscan": "Etruscan",
     "mycenaean_greek": "Mycenaean Greek",
     "eteocretan": "Eteocretan",
+    "hattic": "Hattic",
 }
 
 # Substrate-pool → (control_pool, own_LM, lineage). The control is
@@ -97,6 +103,13 @@ _SUBSTRATE_SPEC: list[dict] = [
         "control": "control_eteocretan_bigram",
         "own_lm": "eteocretan",
         "lineage": "Eteocretan (presumed Linear-A continuation, ~7th-3rd c. BCE)",
+    },
+    # mg-7e7d6: specificity probe — an unrelated Anatolian isolate.
+    {
+        "substrate": "hattic",
+        "control": "control_hattic_bigram",
+        "own_lm": "hattic",
+        "lineage": "Hattic (Anatolian isolate, specificity probe, ~2nd mill. BCE)",
     },
 ]
 

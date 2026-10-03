@@ -386,6 +386,56 @@ class CommittedBigramToponymControlTest(unittest.TestCase):
         self.assertEqual(len(surfaces), len(set(surfaces)))
 
 
+class CommittedBigramHatticControlTest(unittest.TestCase):
+    """Sanity check on the committed pools/control_hattic_bigram.yaml
+    (mg-7e7d6, Hattic specificity probe)."""
+
+    def setUp(self) -> None:
+        self.ctrl_path = _REPO_ROOT / "pools" / "control_hattic_bigram.yaml"
+        self.sub_path = _REPO_ROOT / "pools" / "hattic.yaml"
+
+    def test_committed_bigram_hattic_pool(self) -> None:
+        ctrl = yaml.safe_load(self.ctrl_path.read_text(encoding="utf-8"))
+        substrate = yaml.safe_load(self.sub_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(ctrl["pool"], "control_hattic_bigram")
+        self.assertEqual(len(ctrl["entries"]), len(substrate["entries"]))
+        self.assertEqual(
+            length_distribution(ctrl), length_distribution(substrate)
+        )
+        self.assertTrue(
+            set(phoneme_histogram(ctrl)) <= set(phoneme_histogram(substrate))
+        )
+        for entry in ctrl["entries"]:
+            self.assertEqual(
+                entry["region"], "phonotactic_control_hattic_bigram"
+            )
+            self.assertNotIn("semantic_field", entry)
+
+        schema = json.loads(_POOL_SCHEMA_PATH.read_text(encoding="utf-8"))
+        Draft202012Validator(schema).validate(ctrl)
+        Draft202012Validator(schema).validate(substrate)
+
+        surfaces = [e["surface"] for e in ctrl["entries"]]
+        self.assertEqual(len(surfaces), len(set(surfaces)))
+
+    def test_rebuild_is_byte_identical_to_committed(self) -> None:
+        # Rebuilding from the committed substrate in a scratch pools dir
+        # must reproduce the committed control byte-for-byte.
+        tmp = Path(tempfile.mkdtemp(prefix="mg_7e7d6_"))
+        try:
+            (tmp / "schemas").mkdir()
+            shutil.copy(_POOL_SCHEMA_PATH, tmp / "schemas" / "pool.v1.schema.json")
+            shutil.copy(self.sub_path, tmp / "hattic.yaml")
+            build_one("hattic", tmp, sampler="bigram", suffix="_bigram")
+            self.assertEqual(
+                (tmp / "control_hattic_bigram.yaml").read_bytes(),
+                self.ctrl_path.read_bytes(),
+            )
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
+
 class CommittedControlPoolsTest(unittest.TestCase):
     """Sanity check on the committed control_*.yaml pools (Aquitanian,
     Etruscan, toponym). These should already exist on disk after running

@@ -10766,3 +10766,31 @@ by pm-lineara with a "Paused" notation in the sweep that closes this
 ticket.
 
 See `docs/handoff_2026-05-06.md` for the full state-of-things log.
+
+## Findings from mg-7e7d6 (Hattic substrate pool + bigram control + phoneme LM, built as a specificity probe, 2026-10-03)
+
+This is a temporary, Hattic-only revival of the paused line (Daniel via
+mayor, 2026-10-03). It builds the pool only. The sweep and gate are the
+next ticket. Hattic is a Bronze Age Anatolian isolate unrelated to the
+Aegean pools. It is a **specificity probe** (handoff §D.3): a PASS as
+ready as the Aegean pools' would point to generic structure, not
+substrate affinity.
+
+* **Corpus shape.** The corpus is lexical, not running text: 72
+  hand-keyed records (42 tier A, 30 tier B), giving 72 normalised forms.
+  The ticket asked for running text from CTH 725-745, but that could not
+  be keyed without collating the printed editions, so it was not done.
+  The forms are standard citation forms and are **not collated** against
+  Soysal 2004. See `corpora/hattic.README.md`.
+* **Pool: 72 entries, below the ≥80 v21 bar.** It was not padded, and
+  every entry has `provenance: real`. 41 of the 72 are names (theonyms,
+  toponyms, personal names), so the char-bigram statistics lean toward
+  onomastic compounds.
+* **Normalisation compresses the inventory to 16 letters**
+  (`a e h i k l m n p r s t u w y z`): š/s merged, ḫ→h, stop voicing
+  merged, f→w. That is the smallest pool inventory here: Eteocretan and
+  toponym have 19, Etruscan 21, Aquitanian 24. Shared character pairs are what drives the v15 permissive-PASS
+  limit, so the sweep ticket should read any Hattic PASS against that
+  limit and not as affinity.
+* **LM.** `harness/external_phoneme_models/hattic.json`: α = 1.0, 614
+  tokens, 470 characters. It is the smallest external LM in the repo.

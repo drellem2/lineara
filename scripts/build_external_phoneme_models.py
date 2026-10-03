@@ -46,6 +46,7 @@ _DEFAULT_BASQUE_TEXT = _REPO_ROOT / "corpora" / "basque" / "text.txt"
 _DEFAULT_ETRUSCAN_WORDS = _REPO_ROOT / "corpora" / "etruscan" / "words.txt"
 _DEFAULT_MYC_WORDS = _REPO_ROOT / "corpora" / "linear_b" / "words.txt"
 _DEFAULT_ETEOCRETAN_WORDS = _REPO_ROOT / "corpora" / "eteocretan" / "words.txt"
+_DEFAULT_HATTIC_WORDS = _REPO_ROOT / "corpora" / "hattic" / "words.txt"
 _OUT_DIR = _REPO_ROOT / "harness" / "external_phoneme_models"
 
 _BASQUE_ALPHA = 0.1
@@ -62,6 +63,11 @@ _MYCENAEAN_GREEK_ALPHA = 0.1
 # unobserved bigrams bounded away from -inf. The brief explicitly asked
 # for α=1.0 (matches the Etruscan setting).
 _ETEOCRETAN_ALPHA = 1.0
+# mg-7e7d6. Hattic LM (specificity probe) is built from the hand-keyed
+# lexical-attestation corpus (~72 normalised word forms; no connected
+# running text). Smallest external corpus in the repo; α=1.0 matches
+# the Eteocretan / Etruscan small-corpus setting.
+_HATTIC_ALPHA = 1.0
 
 
 def build_basque(text_path: Path) -> tuple[str, dict]:
@@ -193,11 +199,52 @@ def build_eteocretan(words_path: Path) -> tuple[str, dict]:
     return model.to_json(), model.meta
 
 
+def build_hattic(words_path: Path) -> tuple[str, dict]:
+    """Build the Hattic char-bigram model from the hand-keyed lexical
+    corpus (``corpora/hattic/words.txt``). One normalised word per line
+    (š→s, ḫ→h, b/d/g→p/t/k, plene collapsed), produced by
+    ``scripts/build_hattic_corpus.py``."""
+    words = [
+        line.strip()
+        for line in words_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    tokens = tokenize_word_list(words)
+    model = build_model(
+        name="hattic",
+        tokens=tokens,
+        alpha=_HATTIC_ALPHA,
+        meta_extra={
+            "source": (
+                "corpora/hattic/words.txt (Soysal 2004, Klinger 1996, "
+                "Kammenhuber 1969, Taracha 2009, RGTC 6, Bischoff 2023; "
+                "manual lexical transcription via "
+                "scripts/build_hattic_corpus.py)."
+            ),
+            "license": (
+                "Cited fair-use of secondary sources for the lexical "
+                "forms; underlying Hittite-archive tablets PD (Bronze "
+                "Age). The committed model JSON is a statistical "
+                "derivative."
+            ),
+            "n_words": len(words),
+            "n_chars": sum(len(w) for w in words),
+            "alpha_rationale": (
+                "1.0 — very small lexical corpus (~72 word forms, no "
+                "running text); matches the Eteocretan / Etruscan "
+                "small-corpus setting. Specificity-probe LM, not a "
+                "claim about Hattic phonology."
+            ),
+        },
+    )
+    return model.to_json(), model.meta
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument(
         "--only",
-        choices=("basque", "etruscan", "mycenaean_greek", "eteocretan"),
+        choices=("basque", "etruscan", "mycenaean_greek", "eteocretan", "hattic"),
         default=None,
         help="Build only one model (default: all).",
     )
@@ -212,6 +259,9 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--eteocretan-words", type=Path, default=_DEFAULT_ETEOCRETAN_WORDS
+    )
+    parser.add_argument(
+        "--hattic-words", type=Path, default=_DEFAULT_HATTIC_WORDS
     )
     parser.add_argument("--out-dir", type=Path, default=_OUT_DIR)
     args = parser.parse_args(argv)
@@ -267,6 +317,19 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         text, meta = build_eteocretan(args.eteocretan_words)
         out = args.out_dir / "eteocretan.json"
+        out.write_text(text + "\n", encoding="utf-8")
+        print(f"wrote {out}  meta={meta}", file=sys.stderr)
+
+    if args.only in (None, "hattic"):
+        if not args.hattic_words.exists():
+            print(
+                f"missing Hattic corpus: {args.hattic_words}\n"
+                "run scripts/build_hattic_corpus.py first.",
+                file=sys.stderr,
+            )
+            return 2
+        text, meta = build_hattic(args.hattic_words)
+        out = args.out_dir / "hattic.json"
         out.write_text(text + "\n", encoding="utf-8")
         print(f"wrote {out}  meta={meta}", file=sys.stderr)
 
