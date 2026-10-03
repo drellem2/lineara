@@ -10866,6 +10866,8 @@ same docstring before the run.
 
 ## Findings from mg-7e966 (v32 — Hattic specificity probe: write-up and interpretation against v15 and handoff §D.3, 2026-10-03)
 
+*(Forward pointer, 2026-10-03: superseded. v32's data was memory-keyed; the edition-sourced re-run PASSes. See "Findings from mg-bc9b8 (v33 …)" below.)*
+
 Final slice of the temporary Hattic-only revival (Daniel via mayor,
 2026-10-03). This entry adds no new runs. It reads the two previous
 slices together and answers the question they were built for:
@@ -11205,3 +11207,193 @@ reported, not leaned on.
   regenerated in place; v32's copy is at `91bd0f13e`.
   `hypotheses/auto/{hattic,control_hattic_bigram}` were regenerated:
   3,944 candidates each, cap 50/entry.
+
+## Findings from mg-bc9b8 (v33 — Hattic specificity probe, edition-sourced re-run, 2026-10-03)
+
+Write-up of the Hattic re-run. Like v32, it adds no new runs. It reads
+the two slices that replaced v32's data together: **data** mg-7f4db
+(merged 9e0c095f0) and **run** mg-a38bf (merged a12c2f1ae). The facts
+are in those two entries above. This entry interprets them and does
+not repeat their tables. **It supersedes v32 (mg-7e966).** v32's
+Hattic pool and LM were 72 citation forms keyed from memory, not read
+off an edition. Its "inconclusive" verdict was a property of that data.
+
+### Headline
+
+**Hattic passes the pre-registered gate about as strongly as the real
+substrate candidates, and it passes under every LM. This is the
+clearest evidence so far for the v15 reading: the gate detects generic
+phonotactic structure, not affinity with a substrate.**
+
+* Hattic is an Anatolian isolate. Nobody proposes it as Linear A's
+  substrate. It was added only as a specificity probe (handoff §D.3).
+* The pre-registered own-LM gate **PASSes**: p = 4.22e-04
+  (U = 321.0), median top-20 posterior 0.9808 vs 0.9083 (gap +0.072),
+  **n = 124** pool entries. That is above the v21 bar of 80, and larger
+  than the Eteocretan pool (84).
+* The Hattic row of the cross-LM matrix is **5/5 PASS**: under the
+  Basque, Etruscan, Mycenaean Greek and Eteocretan LMs and its own. It
+  is the only pool that passes under every LM.
+* This **strengthens a negative methodological claim the project
+  already holds** (v14/v15: the gate is permissive toward any
+  natural-language pool with enough bigram overlap with the LM). **It
+  is not a new finding about Linear A.**
+
+### v32 vs v33
+
+| | v32 (mg-7b882, memory-keyed) | v33 (mg-a38bf, edition-sourced) |
+|:--|:--|:--|
+| Pool | 72 citation forms, keyed from memory | 124 forms from viewed scans of Kammenhuber 1969 / Schuster 1974, each with URL + page + OCR quote |
+| LM corpus | the same 72 forms (LM = pool) | TLHdig running text, 3,213 tokens / 1,940 types |
+| LM/pool overlap | 72 / 72 | 56 / 124 pool surfaces (9.1% of LM tokens) |
+| Own-LM gate | **FAIL**, p = 0.393, gap +0.005 | **PASS**, p = 4.22e-04, gap +0.072 |
+| Hattic row (5 LMs) | 1/5 PASS (Mycenaean Greek only) | **5/5 PASS** |
+| Hattic column (4 other pools under the Hattic LM) | 0/4 PASS | 2/4 PASS (Aquitanian, toponym) |
+| Verdict under the pre-registered rules | inconclusive on data quality | supports the v15 generic-structure reading |
+
+The v32 FAIL came from the memory-keyed data, as suspected when Daniel
+asked for the rebuild ("use published editions not memory please").
+The three v32 negative gaps (Hattic under the Basque / Etruscan /
+Eteocretan LMs: −0.122 / −0.100 / −0.037) are now +0.082 / +0.072 /
++0.106. v32's point 3, which looked like specificity and was not
+relied on, is therefore withdrawn together with the data it came from.
+The only v32 PASS, Hattic × Mycenaean Greek, still PASSes (p = 0.004 →
+0.002) and is now one of five. The 16 cells that involve neither the
+Hattic pool nor the Hattic LM are identical in both runs.
+
+### Interpretive read
+
+**Against v15 (mg-7ecb).** v15 found that the gate PASSes for a pool
+with enough character-bigram overlap with the LM even when the pool is
+not drawn from the substrate (Greek-shape conjecturals under the Basque
+LM, p = 2.0e-03). Discrimination between real and conjectural forms
+showed up only *within* the right tail. v33 is the same result for a
+real, unrelated natural language rather than a synthetic pollutant:
+
+1. **Own-LM gate (pre-registered): PASS.** Under the v2 rules fixed in
+   `0b287263b` before any v2 output, a PASS supports the v15
+   generic-structure reading. Read across the own-LM cells, Hattic
+   (p = 4.2e-04, gap +0.072) sits between Etruscan (5.2e-04 / +0.059)
+   and Aquitanian (3.2e-05 / +0.030). Its gap is larger than both.
+   Only Eteocretan (4.1e-06 / +0.201) stands clearly above it.
+2. **Row 5/5 PASS, none circular except own.** The four non-own cells
+   score Hattic forms under LMs trained on unrelated languages, so
+   they carry no LM/pool circularity. Each passes at α = 0.05, and
+   about 0.25 PASSes would be expected by chance. Hattic does not even
+   score best under its own LM. The gap is larger under Eteocretan
+   (+0.106, p = 9.2e-06) and Basque (+0.082). This is the gate
+   rewarding a well-formed natural-language lexicon against its bigram
+   scramble, whatever the LM.
+3. **Column: the Hattic LM also behaves like the other broad LMs.**
+   Aquitanian (p = 0.038) and toponym (p = 0.031) now PASS under it.
+   Etruscan (0.420) and Eteocretan (0.991, gap −0.061) FAIL. Eteocretan
+   under the Hattic LM is the one strongly inverted cell in the matrix.
+   It was also inverted in v32 (−0.071). It is reported, not
+   interpreted. A single LM cell cannot tell a genuine phonotactic
+   mismatch from a transliteration-convention artefact (Hattic's
+   15-letter normalised inventory, ḫ → h).
+4. **What this leaves for Eteocretan.** Eteocretan's own-LM gap is
+   still about 3× Hattic's. This probe gives no grounds to call that
+   excess generic, and none to call it specific. A gap size is not a
+   pre-registered test. The defensible statement is that *passing* the
+   gate does not separate a candidate substrate from an unrelated
+   isolate.
+
+**Own-LM circularity.** The own-LM cell is partly circular. 56 of the
+124 pool surfaces also occur as LM word types, and 10 of the top-20
+`hattic` surfaces are among those 56 (50%, against a 45% base rate in
+the pool, so the top of the ranking is not enriched for them). The
+headline does not depend on this cell. Drop it and the Hattic row is
+still 4/4 PASS under LMs that share no data with the pool.
+
+**Against handoff §D.3.** §D.3 asked whether the population-level
+signal is "Old-European-specific or a generic Bronze-Age-writing-system
+property", and said: "If the framework PASSes on Hurrian too, we are
+picking up generic structure rather than substrate-specific signal —
+that would weaken the manuscript's positive claim." Hattic stands in
+for Hurrian here, and **it PASSes**. By §D.3's own criterion the gate
+picks up generic structure. Whether this weakens the manuscript
+depends on the claim. It weakens any reading of a gate PASS as
+evidence *for* a particular substrate. It does not touch the claim as
+v15 left it: the gate detects LM-phonotactic kinship at the population
+level, it is permissive toward any pool with enough bigram overlap, and
+it does not support per-sign reading claims. v33 confirms that
+permissiveness on an independent, real language.
+
+**Net verdict: supports the v15 generic-structure reading.** v32's
+"inconclusive" is superseded. Specificity is not shown. Within
+pre-registered tests the probe gives no evidence that the gate
+separates Old-European substrate candidates from an unrelated
+Anatolian isolate.
+
+### Pre-registered acceptance gate
+
+Restated for the audit trail. The criterion is unchanged since
+`00e7eea03`. `380f93540` changed only the n pin (72 → 124).
+`0b287263b` fixed the v2 interpretation rules before any v2 output.
+
+* Top-20 `hattic` vs top-20 `control_hattic_bigram` per-surface
+  posterior means under the `hattic` LM. One-tailed Mann-Whitney U
+  (substrate > control). **PASS iff p < 0.05 and median(substrate) >
+  median(control).**
+* **Result: PASS**, U = 321.0, p = 4.220e-04, medians 0.9808 vs 0.9083
+  (gap +0.0724), n = 124 pool entries. The mean-of-means gap (+0.054)
+  is informational.
+* v2 rules: (1) n = 124 ≥ 80, so the v32 data-quality excuse no longer
+  applies; (2) a FAIL would be weak evidence *for* specificity, and a
+  PASS supports the v15 generic-structure reading; (3) the own-LM cell
+  is partly circular (56/124 overlap), to be reported, not leaned on.
+  All three are applied above.
+
+### Reproducibility
+
+`python3 scripts/hattic_gate.py --out-name
+rollup.bayesian_posterior.hattic.v2.md --summary-json <path>` was
+re-run on this branch from the committed sidecars. It reproduces
+mg-a38bf exactly (U = 321.0, p = 4.2198e-04, median gap +0.07244,
+PASS), and the regenerated `results/rollup.bayesian_posterior.hattic.v2.md`
+is byte-identical to the committed one (`git status` clean afterwards).
+The cross-LM figures above are read from
+`results/rollup.cross_lm_matrix.md` as committed by mg-a38bf. They
+were not recomputed here. The Eteocretan pool size (84) was counted
+from `pools/eteocretan.yaml` on this branch.
+
+### Limitations
+
+* **One probe language.** §D.3 named Hurrian, Hittite and Phoenician.
+  One isolate passing is enough to show the gate is permissive. It
+  does not measure how permissive across language families.
+* **Glosses and editions are 1969/1974.** Soysal 2004 and Klinger 1996
+  are still unreachable (mg-7f4db). The gate does not use glosses, so
+  this affects the pool's documentation, not the result.
+* **Small LM.** 1,940 types, because only about 1 in 5 TLHdig Hattic
+  words is intact and restorations were excluded on purpose.
+* **Normalisation** to a shared 15-letter inventory confounds the
+  cross-LM cells with transliteration convention. This matters for
+  reading the inverted Eteocretan × Hattic cell. It does not matter for
+  the 5/5 row, where every cell is positive.
+* **Sidecar size.** `results/experiments.external_phoneme_perplexity_v0.under_hattic_lm.jsonl`
+  is 80.2 MB. One more full Hattic-LM re-run appended there would push
+  it past GitHub's 100 MB cap. Any future Hattic-LM rescore must write
+  to a new sidecar tag.
+
+### Artifacts shipped
+
+* This section, plus a one-line forward pointer at the top of the v32
+  section (mg-7e966). v32's text is not rewritten, because findings.md
+  is append-only. The six earlier "Hattic deferred" pointers still
+  lead to v32, and v32's pointer leads here.
+* No code, results or pool changes.
+* `docs/findings_summary.md` (the paused manuscript) is **not**
+  edited. Whether this result changes the paused manuscript is
+  Daniel's call on revival.
+
+### Out of scope
+
+* The manuscript and the deferred v31 polish (Daniel's 2026-05-06
+  pause directive).
+* Further §D.3 control languages (Hurrian, Hittite, Phoenician).
+  These would measure how broad the permissiveness is. Daniel's call.
+* A within-right-tail discrimination test for Hattic, analogous to
+  v15's real-vs-conjectural split. No such test was pre-registered for
+  this probe.
