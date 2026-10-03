@@ -1,0 +1,46 @@
+{
+  "cth": "745",
+  "id": 531,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]-nu [",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-ak-ši"
+      ],
+      "line": "2′",
+      "raw": "[ -x wa-ak-ši [",
+      "words": [
+        "waksi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ [-a]l-lu [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ -ip [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ x [",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 56.182",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "waksi"
+  ]
+}

@@ -1,15 +1,80 @@
 {
-  "category": "personal_name",
-  "gloss": "Old Hittite royal name",
+  "cth": "627",
   "id": 85,
-  "is_bilingual": false,
-  "name": "Ḫuzziya",
-  "provenance": "Hattic origin of the name is argued, not secure.",
-  "source_citation": "Kammenhuber, A. (1969). 'Hattisch.' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden: Brill.",
-  "text": "Ḫuzziya",
-  "tier": "B",
-  "transliteration": "huzziya",
+  "lines": [
+    {
+      "intact": [
+        "ḫa-maš-ši-un",
+        "ták-ki-ḫa-ú-un"
+      ],
+      "line": "rev. V 17′",
+      "raw": "ḫa-maš-ši-un ták-ki-ḫa-ú-un",
+      "words": [
+        "hamassiun",
+        "takkihaun"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-i-ú-un"
+      ],
+      "line": "rev. V 18′",
+      "raw": "ta-a-i-ú-un",
+      "words": [
+        "taiun"
+      ]
+    },
+    {
+      "intact": [
+        "iš-ta-ri-pu-un"
+      ],
+      "line": "rev. V 19′",
+      "raw": "iš-ta-ri-pu-un",
+      "words": [
+        "istaripun"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-i-ši-un"
+      ],
+      "line": "rev. V 20′",
+      "raw": "ka-a-i-ši-un",
+      "words": [
+        "kaisiun"
+      ]
+    },
+    {
+      "intact": [
+        "du-un-tap-la-du-un"
+      ],
+      "line": "rev. V 21′",
+      "raw": "du-un-tap-la-du-un",
+      "words": [
+        "tuntaplatun"
+      ]
+    },
+    {
+      "intact": [
+        "ták-ši-ú"
+      ],
+      "line": "rev. V 22′",
+      "raw": "ták-ši-ú",
+      "words": [
+        "taksiu"
+      ]
+    }
+  ],
+  "manuscript": "KBo 71.192",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "huzziya"
+    "hamassiun",
+    "takkihaun",
+    "taiun",
+    "istaripun",
+    "kaisiun",
+    "tuntaplatun",
+    "taksiu"
   ]
 }

@@ -1,0 +1,132 @@
+{
+  "cth": "734",
+  "id": 252,
+  "lines": [
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[i-ma-a-al-l]i-in [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[wa-ak-ka]-pu-u-ut-t[u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ [-n]a e-wa-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ wa-ak-k[a-pu-u-ut-tu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[wa-zi-ze]-en-tu x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ [-k]i-ip ta-k[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ URUḫa-at-t[u-",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e"
+      ],
+      "line": "9′",
+      "raw": "[ x le-e a-[",
+      "words": [
+        "le"
+      ]
+    },
+    {
+      "intact": [
+        "le-e"
+      ],
+      "line": "10′",
+      "raw": "[ x le-e ka-x[",
+      "words": [
+        "le"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la-a"
+      ],
+      "line": "11′",
+      "raw": "[ pa-la-a [",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "a-ša-aḫ"
+      ],
+      "line": "12′",
+      "raw": "[ [-e]n a-ša-aḫ ki-[",
+      "words": [
+        "asah"
+      ]
+    },
+    {
+      "intact": [
+        "le-e"
+      ],
+      "line": "13′",
+      "raw": "[ -aš le-e i-p[í-i-nu",
+      "words": [
+        "le"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "14′",
+      "raw": "[ x wa-zi-ze-e[n-tu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "15′",
+      "raw": "[ -ú ki-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "16′",
+      "raw": "[ x-la URU[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "17′",
+      "raw": "[ x [",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.120",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "le",
+    "le",
+    "pala",
+    "asah",
+    "le"
+  ]
+}

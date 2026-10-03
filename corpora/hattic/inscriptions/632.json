@@ -1,0 +1,112 @@
+{
+  "cth": "746",
+  "id": 632,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 1′",
+      "raw": "[ [ -x-ú-e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 2′",
+      "raw": "[ [ x-li-ka-ra-mu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 3′",
+      "raw": "[ [ -nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 4′",
+      "raw": "[ [ -li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 5′",
+      "raw": "[ [ x-li ma-a(-)eš-te-ep-ta-nu-ia-at-t[e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 6′",
+      "raw": "[[ [ -u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 7′",
+      "raw": "[ [ -a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 8′",
+      "raw": "[ [ -li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 1",
+      "raw": "[ [ -x-zi-nu-ni-iš-ḫa-wu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 2",
+      "raw": "[ [ x-al-ma-ia-li-i-zi-nu",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e-a-li-wu"
+      ],
+      "line": "Rs. r. Kol. 3",
+      "raw": "[ [ -ma le-e-a-li-wu",
+      "words": [
+        "lealiwu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 4",
+      "raw": "[ [ x-e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 5",
+      "raw": "[ [ -nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 6",
+      "raw": "[ [ -x-at-ta-a-pu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 10′",
+      "raw": "[ [ x-kán-ti",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 11′",
+      "raw": "[ [ x",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.49",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lealiwu"
+  ]
+}

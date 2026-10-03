@@ -1,0 +1,48 @@
+{
+  "cth": "627",
+  "id": 87,
+  "lines": [
+    {
+      "intact": [
+        "ta-a-ni",
+        "ul-la",
+        "pu-ul-la"
+      ],
+      "line": "{€2+1} Vs. II 10/r. Kol. 7′",
+      "raw": "ta-a-ni ul-la pu-ul-la",
+      "words": [
+        "tani",
+        "ulla",
+        "pulla"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ni",
+        "ze-el-la"
+      ],
+      "line": "{€2+1} Vs. II 11/r. Kol. 8′",
+      "raw": "ta-a-ni [ze-e]l-la ze-el-la",
+      "words": [
+        "tani",
+        "zella"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€2+1} Vs. II 12/r. Kol. 9′",
+      "raw": "ta-ši-i[m-ma-a]z",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 10.100+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tani",
+    "ulla",
+    "pulla",
+    "tani",
+    "zella"
+  ]
+}

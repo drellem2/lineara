@@ -1,0 +1,138 @@
+{
+  "cth": "745",
+  "id": 552,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 1′",
+      "raw": "] [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 2′",
+      "raw": "[ x [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 3′",
+      "raw": "[ x-ip-pí-i-[in",
+      "words": []
+    },
+    {
+      "intact": [
+        "e-eš-ša-ki-il"
+      ],
+      "line": "Rs.? (Kol.?) 4′",
+      "raw": "[ x e-eš-ša-ki-il [",
+      "words": [
+        "essakil"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 5′",
+      "raw": "[ki-i-ša-an-d]u-ú-mu-li [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 6′",
+      "raw": "[ [-i]a-mi-ni [",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e-li-ni"
+      ],
+      "line": "Rs.? (Kol.?) 7′",
+      "raw": "[ le-e-li-ni [",
+      "words": [
+        "lelini"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 8′",
+      "raw": "[ x-mu-un-ni [",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e-li-ni"
+      ],
+      "line": "Rs.? (Kol.?) 9′",
+      "raw": "[ le-e-li-ni [",
+      "words": [
+        "lelini"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 10′",
+      "raw": "[ x[ x-la-mu-un [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 11′",
+      "raw": "[ x-ip-pí-i-in [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-a-pa-aš-ḫu-u"
+      ],
+      "line": "Rs.? (Kol.?) 12′",
+      "raw": "[ x ḫa-a-pa-aš-ḫu-u [",
+      "words": [
+        "hapashu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 13′",
+      "raw": "[ [t]a-a-ra-ú-i [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 14′",
+      "raw": "[ x(-)un(-)ta-pé-e-eš-ḫu-u[n",
+      "words": []
+    },
+    {
+      "intact": [
+        "me-e-na-ag-ga"
+      ],
+      "line": "Rs.? (Kol.?) 15′",
+      "raw": "[ x me-e-na-ag-ga [",
+      "words": [
+        "menakka"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 16′",
+      "raw": "[ x ti-i-tu-ut-ḫu-r[u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? (Kol.?) 17′",
+      "raw": "[ [z]a-al-le-e [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.30",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "essakil",
+    "lelini",
+    "lelini",
+    "hapashu",
+    "menakka"
+  ]
+}

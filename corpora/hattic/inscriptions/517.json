@@ -1,0 +1,93 @@
+{
+  "cth": "745",
+  "id": 517,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ (-)i-wa-aš-ma ḫa-aš-x x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "an-za-an-nu"
+      ],
+      "line": "3′",
+      "raw": "[ [-n]i-i an-za-an-nu [",
+      "words": [
+        "anzannu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ [ši-i]p-zi-i-il te-i-zi(-)[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-ši-i-mi-il"
+      ],
+      "line": "5′",
+      "raw": "[ ḫa-ši-i-mi-il a-an-ne-[eš",
+      "words": [
+        "hasimil"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[ x-i-wa-aš-ma ta-an-zi-i[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ (-)a-ne-e ma-a-ru-u-wa(-)a-aš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ x-a-ú-i-ma-a tap-we-eš-ḫu-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[ x-ne-i ta-an-za-an-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "[i-t]a-a te-e-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "11′",
+      "raw": "[-w]a-aḫ x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "12′",
+      "raw": "[ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 43.225",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "anzannu",
+    "hasimil"
+  ]
+}

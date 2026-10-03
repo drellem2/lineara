@@ -1,0 +1,175 @@
+{
+  "cth": "725",
+  "id": 191,
+  "lines": [
+    {
+      "intact": [
+        "eš-wu-ur"
+      ],
+      "line": " {€1} Vs. 4a",
+      "raw": "wa-aš-ḫ[a]-ap-ma eš-wu-ur a-aš-k[a-",
+      "words": [
+        "eswur"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. 5a",
+      "raw": "[šu-ú-wa [URUḫa-at-tu-uš [te-et-t[aḫ-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. 6a",
+      "raw": "[áz-zi-la-a-at [šu-ú-wa [ta-ba-a[r-na]",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a-at-te",
+        "a-an-ni-wa-aš"
+      ],
+      "line": " {€1} Vs. 7a",
+      "raw": "ka-a-at-te a-an-ni-wa-aš",
+      "words": [
+        "katte",
+        "anniwas"
+      ]
+    },
+    {
+      "intact": [
+        "an-na",
+        "eš-ka-a-ḫé-er-pí"
+      ],
+      "line": " {€1} Vs. 8a",
+      "raw": "an-na eš-ka-a-ḫé-er-pí da-ba-ar-n[a-an]",
+      "words": [
+        "anna",
+        "eskaherpi"
+      ]
+    },
+    {
+      "intact": [
+        "kat-te-e",
+        "le-e-we-e-el",
+        "ni-i-pu-pé-e"
+      ],
+      "line": " {€1} Vs. 9a",
+      "raw": "kat-te-e le-e-we-e-el ni-i-pu-pé-e",
+      "words": [
+        "katte",
+        "lewel",
+        "nipupe"
+      ]
+    },
+    {
+      "intact": [
+        "zi-i-iš",
+        "pa-la",
+        "ia-a-ia"
+      ],
+      "line": " {€1} Vs. 10a",
+      "raw": "zi-i-iš pa-la ia-a-ia i-ma-al-ḫi-i[p]",
+      "words": [
+        "zis",
+        "pala",
+        "iaia"
+      ]
+    },
+    {
+      "intact": [
+        "pí-i-ip",
+        "a-ša-aḫ"
+      ],
+      "line": " {€1} Vs. 11a",
+      "raw": "pí-i-ip a-ša-aḫ ta-aš-te-eḫ(-)ka-zi-i[a]",
+      "words": [
+        "pip",
+        "asah"
+      ]
+    },
+    {
+      "intact": [
+        "ú-ra-na",
+        "te-a-ta-an-na",
+        "pa-la"
+      ],
+      "line": " {€1} Vs. 12a",
+      "raw": "ú-ra-na te-a-ta-an-na pa-la",
+      "words": [
+        "urana",
+        "teatanna",
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "pa-še-ez-zi-i-it"
+      ],
+      "line": " {€1} Vs. 13a",
+      "raw": "pa-še-ez-zi-i-it ta-aš-te-eḫ(-)ka-zi-i[a]",
+      "words": [
+        "pasezzit"
+      ]
+    },
+    {
+      "intact": [
+        "ša-ak-tu-nu-ú-wa"
+      ],
+      "line": " {€1} Vs. 14a",
+      "raw": "[z]i-i-iš-pa ša-ak-tu-nu-ú-wa",
+      "words": [
+        "saktunuwa"
+      ]
+    },
+    {
+      "intact": [
+        "ze-e-ḫar",
+        "wa-ša-aḫ"
+      ],
+      "line": " {€1} Vs. 15a",
+      "raw": "[wa-š]a-aḫ ze-e-ḫar wa-ša-aḫ",
+      "words": [
+        "zehar",
+        "wasah"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. 16a",
+      "raw": "[ḫa-mu-ru]-ú-wa wa-a-ša-a[ḫ] zu-⌊wa-aš-š⌋[i-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. 17a",
+      "raw": "[[ [ x-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 51.216+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "eswur",
+    "katte",
+    "anniwas",
+    "anna",
+    "eskaherpi",
+    "katte",
+    "lewel",
+    "nipupe",
+    "zis",
+    "pala",
+    "iaia",
+    "pip",
+    "asah",
+    "urana",
+    "teatanna",
+    "pala",
+    "pasezzit",
+    "saktunuwa",
+    "zehar",
+    "wasah"
+  ]
+}

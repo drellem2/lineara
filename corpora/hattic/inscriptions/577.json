@@ -1,0 +1,81 @@
+{
+  "cth": "745",
+  "id": 577,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ (-)en-za-a-ar(-)x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ x za-aš-x-ú-un ta-a-t[a-e-et",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-a-i-šu-ḫe-el-lu"
+      ],
+      "line": "6′",
+      "raw": "[ta-a-ta]-e-et wa-a-i-šu-ḫe-el-lu t[a-",
+      "words": [
+        "waisuhellu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ta-e-et"
+      ],
+      "line": "7′",
+      "raw": "[ x-ḫu-un-na ta-a-ta-e-et x[",
+      "words": [
+        "tataet"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[ x-zi-pí-i-na te-e-t[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "[ x-tu-u [ [ (-)eš-x-na-aš [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.42",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "waisuhellu",
+    "tataet"
+  ]
+}

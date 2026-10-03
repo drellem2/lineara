@@ -1,15 +1,22 @@
 {
-  "category": "theonym",
-  "gloss": "moon god",
+  "cth": "263",
   "id": 4,
-  "is_bilingual": true,
-  "name": "Kašku",
-  "provenance": "Protagonist of the bilingual 'Moon that fell from heaven' (CTH 727).",
-  "source_citation": "Klinger, J. (1996). Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden: Harrassowitz.",
-  "text": "Kašku",
-  "tier": "A",
-  "transliteration": "kasku",
+  "lines": [
+    {
+      "intact": [
+        "ta-a-ni-ša-ú-e"
+      ],
+      "line": " {€1} Vs. I 17",
+      "raw": "ta-a-ni-ša-ú-e",
+      "words": [
+        "tanisaue"
+      ]
+    }
+  ],
+  "manuscript": "KBo 50.275+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "kasku"
+    "tanisaue"
   ]
 }

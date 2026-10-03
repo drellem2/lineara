@@ -1,0 +1,175 @@
+{
+  "cth": "744",
+  "id": 412,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€1} 1′",
+      "raw": "[ [ x x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} 2′",
+      "raw": "[ [ [(-)l]e-e[(-) [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} 3′/Vs. III 2′",
+      "raw": "[ [ [-w]a-ša-[ [ x",
+      "words": []
+    },
+    {
+      "intact": [
+        "ki-i-ip"
+      ],
+      "line": " {€1+2} 4′/Vs. III 3′",
+      "raw": "[ [ (-)ša-i-i[l [ [-u]š ki-i-ip",
+      "words": [
+        "kip"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} 5′/Vs. III 4′",
+      "raw": "[ [ (-)zu-ur-na-a-[an [ -u-i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} 6′/Vs. III 5′",
+      "raw": "[ [ [ta-ni]-i-wa-aš-ma ḫ[a-l]e-e-šu-u-ni-ip",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} 7′/Vs. III 6′",
+      "raw": "[ [ [eš-w]i-e-el(-)še-e x[ [ x-a-al",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} 8′/Vs. III 7′",
+      "raw": "[ [ [ša]-i-il ki-i-[i]p-pa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} 9′/Vs. III 8′",
+      "raw": "[ [ x x[ [ x-ak-ku-mi",
+      "words": []
+    },
+    {
+      "intact": [
+        "wu-ru-un-ši-mu"
+      ],
+      "line": " {€2} Vs. III 9′",
+      "raw": "[ [ x wu-ru-un-ši-mu",
+      "words": [
+        "wurunsimu"
+      ]
+    },
+    {
+      "intact": [
+        "ka-tu-u-ur"
+      ],
+      "line": " {€2} Vs. III 10′",
+      "raw": "[ [ [-w]e-en-na ka-tu-u-ur",
+      "words": [
+        "katur"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. III 11′",
+      "raw": "[ [ -a-wa-ak-ka-tu-úr",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-a-tu-ú-ḫa-nu",
+        "ḫa-le-e-ḫé-er"
+      ],
+      "line": " {€2} Vs. III 12′",
+      "raw": "wa-a-tu-ú-ḫa-nu ḫa-le-e-ḫé-er",
+      "words": [
+        "watuhanu",
+        "haleher"
+      ]
+    },
+    {
+      "intact": [
+        "ez-zi-i-le-eš-šu-ú",
+        "wa-aš-ti-ke-e-na-aš"
+      ],
+      "line": " {€2} Vs. III 13′",
+      "raw": "ez-zi-i-le-eš-šu-ú wa-aš-ti-ke-e-na-aš",
+      "words": [
+        "ezzilessu",
+        "wastikenas"
+      ]
+    },
+    {
+      "intact": [
+        "ta-le-e-te-mu-ur-mu-ur-nu-ú"
+      ],
+      "line": " {€2} Vs. III 14′",
+      "raw": "ta-le-e-te-mu-ur-mu-ur-nu-ú",
+      "words": [
+        "taletemurmurnu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. III 15′",
+      "raw": "[w]a-tu-ú-uk-šu-u-ul-pa",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a",
+        "ḫu-uz-zi-ia-a"
+      ],
+      "line": " {€2} Vs. III 16′",
+      "raw": "[ x-wa-ra-a-i-u-šu ka-a ḫu-uz-zi-ia-a",
+      "words": [
+        "ka",
+        "huzzia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. III 17′",
+      "raw": "[UR]Uzi-ip-la-an-di-i-el [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. III 18′",
+      "raw": "[ [ x-na [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. III 19′",
+      "raw": "[ [ x[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 57.214+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kip",
+    "wurunsimu",
+    "katur",
+    "watuhanu",
+    "haleher",
+    "ezzilessu",
+    "wastikenas",
+    "taletemurmurnu",
+    "ka",
+    "huzzia"
+  ]
+}

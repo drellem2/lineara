@@ -1,0 +1,157 @@
+{
+  "cth": "735",
+  "id": 266,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs.? 1′",
+      "raw": "]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 2′",
+      "raw": "]x-pí-iz-za-x[ [ x-e",
+      "words": []
+    },
+    {
+      "intact": [
+        "ki-i-ša-an-du-ú-mu-li"
+      ],
+      "line": "Vs.? 3′",
+      "raw": "k]i-i-ša-an-du-ú-mu-li",
+      "words": [
+        "kisantumuli"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ḫa-wa-i-u-uš-ni"
+      ],
+      "line": "Vs.? 4′",
+      "raw": "]x x ta-ḫa-wa-i-u-uš-ni",
+      "words": [
+        "tahawaiusni"
+      ]
+    },
+    {
+      "intact": [
+        "ú-un",
+        "eš-te-pu-u-uš-ne-e"
+      ],
+      "line": "Vs.? 5′",
+      "raw": "]ú-un eš-te-pu-u-uš-ne-e",
+      "words": [
+        "un",
+        "estepusne"
+      ]
+    },
+    {
+      "intact": [
+        "a-ši-i-ia-ú-i"
+      ],
+      "line": "Vs.? 6′",
+      "raw": "]a-ši-i-ia-ú-i",
+      "words": [
+        "asiaui"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 7′",
+      "raw": "]-nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 8′",
+      "raw": "-n]u 〈〈x〉〉",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 1′",
+      "raw": "]x x[ [ x-uš-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 2′",
+      "raw": "]x-ú-pa-a-ga-aš-ta-nu-ú-ia",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-ša-ki-il"
+      ],
+      "line": "Rs.? 3′",
+      "raw": "]-li li-ša-ki-il",
+      "words": [
+        "lisakil"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 4′",
+      "raw": "]x-ri-li-za-aš-li",
+      "words": []
+    },
+    {
+      "intact": [
+        "ti-e-u-ul"
+      ],
+      "line": "Rs.? 5′",
+      "raw": "-i]š ti-e-u-ul",
+      "words": [
+        "tieul"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 6′",
+      "raw": "-m]u",
+      "words": []
+    },
+    {
+      "intact": [
+        "aš"
+      ],
+      "line": "Rs.? 7′",
+      "raw": "] aš",
+      "words": [
+        "as"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 8′",
+      "raw": "]-ú",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 9′",
+      "raw": "]-aš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 10′",
+      "raw": "]-li",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.33",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kisantumuli",
+    "tahawaiusni",
+    "un",
+    "estepusne",
+    "asiaui",
+    "lisakil",
+    "tieul",
+    "as"
+  ]
+}

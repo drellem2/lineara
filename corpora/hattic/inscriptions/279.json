@@ -1,0 +1,101 @@
+{
+  "cth": "735",
+  "id": 279,
+  "lines": [
+    {
+      "intact": [],
+      "line": "(Vs.?) lk. Kol. 1′",
+      "raw": "]-na-ḫu-x[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫu-un-zi-ia-ar"
+      ],
+      "line": "(Vs.?) lk. Kol. 2′",
+      "raw": "ḫu]-un-zi-ia-ar",
+      "words": [
+        "hunziar"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "(Vs.?) lk. Kol. 3′",
+      "raw": "]x-ta-na",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "(Vs.?) lk. Kol. 4′",
+      "raw": "-n]u-i-〈〈x〉〉-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "(Vs.?) lk. Kol. 5′",
+      "raw": "-ḫ]a-na-at-na-a-ḫu",
+      "words": []
+    },
+    {
+      "intact": [
+        "it-wa-ḫa-ḫa-az-ze-el"
+      ],
+      "line": "(Vs.?) lk. Kol. 6′",
+      "raw": "i]t-wa-ḫa-ḫa-az-ze-el",
+      "words": [
+        "itwahahazzel"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-an-na-at-na-ḫu"
+      ],
+      "line": "(Vs.?) lk. Kol. 7′",
+      "raw": "ḫ]a-an-na-at-na-ḫu",
+      "words": [
+        "hannatnahu"
+      ]
+    },
+    {
+      "intact": [
+        "it-wa-ḫa-ḫa-az-ze-el"
+      ],
+      "line": "(Vs.?) lk. Kol. 8′",
+      "raw": "i]t-wa-ḫa-ḫa-az-ze-el",
+      "words": [
+        "itwahahazzel"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-na-at-na-ḫu"
+      ],
+      "line": "(Vs.?) lk. Kol. 9′",
+      "raw": "ḫa-n]a-at-na-ḫu",
+      "words": [
+        "hanatnahu"
+      ]
+    },
+    {
+      "intact": [
+        "it-wa-ḫa-ḫa-az-ze-el"
+      ],
+      "line": "(Vs.?) lk. Kol. 10′",
+      "raw": "it-wa-ḫa-ḫa-az-z]e-el",
+      "words": [
+        "itwahahazzel"
+      ]
+    }
+  ],
+  "manuscript": "KUB 28.22",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "hunziar",
+    "itwahahazzel",
+    "hannatnahu",
+    "itwahahazzel",
+    "hanatnahu",
+    "itwahahazzel"
+  ]
+}

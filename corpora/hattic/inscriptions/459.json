@@ -1,0 +1,78 @@
+{
+  "cth": "744",
+  "id": 459,
+  "lines": [
+    {
+      "intact": [
+        "ḫa-a-i-wa-ep",
+        "aḫ-ḫa-nu"
+      ],
+      "line": "{€1} Vs. II? 3′",
+      "raw": "]x ḫa-a-i-wa-ep aḫ-ḫa-nu šu-up-ga-[",
+      "words": [
+        "haiwaep",
+        "ahhanu"
+      ]
+    },
+    {
+      "intact": [
+        "šu-up-ga-ḫe-el"
+      ],
+      "line": "{€1} Vs. II? 4′",
+      "raw": "[ [-w]a-a-pí-iḫ šu-up-ga-ḫe-el",
+      "words": [
+        "supkahel"
+      ]
+    },
+    {
+      "intact": [
+        "zu-ir-ma-aḫ",
+        "šu-uk-ka-ti"
+      ],
+      "line": "{€1} Vs. II? 5′",
+      "raw": "-i]k-ka₄ zu-ir-ma-aḫ šu-uk-ka₄-ti",
+      "words": [
+        "zuirmah",
+        "sukkati"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-ḫa-aḫ-ši-im"
+      ],
+      "line": "{€1} Vs. II? 6′",
+      "raw": "]x-ku-ut le-e-ḫa-aḫ-ši-im x me-[",
+      "words": [
+        "lehahsim"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€1} Vs. II? 7′",
+      "raw": "[ na-aš le-e-ták-ki-ḫa-ú-un[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-wa-aš-ḫa-an"
+      ],
+      "line": "{€1} Vs. II? 8′",
+      "raw": "[ x ḫa-wa-aš-ḫa-an",
+      "words": [
+        "hawashan"
+      ]
+    }
+  ],
+  "manuscript": "VBoT 126+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "haiwaep",
+    "ahhanu",
+    "supkahel",
+    "zuirmah",
+    "sukkati",
+    "lehahsim",
+    "hawashan"
+  ]
+}

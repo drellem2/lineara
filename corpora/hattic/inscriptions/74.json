@@ -1,15 +1,131 @@
 {
-  "category": "toponym",
-  "gloss": "town",
+  "cth": "627",
   "id": 74,
-  "is_bilingual": false,
-  "name": "Tawiniya",
-  "provenance": "Hattic toponym; see citation.",
-  "source_citation": "del Monte, G. F. & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC 6. Wiesbaden: Reichert.",
-  "text": "Tawiniya",
-  "tier": "B",
-  "transliteration": "tawiniya",
+  "lines": [
+    {
+      "intact": [],
+      "line": "lk. Kol. 4′",
+      "raw": "[ [ -pí",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 5′",
+      "raw": "[ [ [t]a-ba-ar-na li-i[p-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 7′",
+      "raw": "[[ [ -eš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 8′",
+      "raw": "[ [ -ú-un",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-ti-mu-u-un",
+        "túḫ-ke-eš",
+        "túḫ-ke-eš"
+      ],
+      "line": "lk. Kol./r. Kol. 9′",
+      "raw": "[túḫ-k]e-eš te-ti-mu-u-un túḫ-ke-eš túḫ-ke-eš x[",
+      "words": [
+        "tetimun",
+        "tuhkes",
+        "tuhkes"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 1′",
+      "raw": "[ [ x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 2′",
+      "raw": "[wa-du-e-[et [eš-ki-wu-ur-nu-ú]",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-du-e-et"
+      ],
+      "line": "r. Kol. 4′",
+      "raw": "wa-du-e-et eš-ki-w[u-ur-nu]",
+      "words": [
+        "watuet"
+      ]
+    },
+    {
+      "intact": [
+        "wa-du-e-et",
+        "eš-ki-wu-ur-nu"
+      ],
+      "line": "r. Kol. 6′",
+      "raw": "wa-du-e-et eš-ki-wu-ur-nu l[i",
+      "words": [
+        "watuet",
+        "eskiwurnu"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-i-na-ša-an",
+        "pa-i"
+      ],
+      "line": "r. Kol. 13′",
+      "raw": "pa-a-i-na-ša-an pa-i",
+      "words": [
+        "painasan",
+        "pai"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 13′",
+      "raw": "[[le-e-lu-wa-a]",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a-li-lu-wa-a"
+      ],
+      "line": "r. Kol. 14′",
+      "raw": "ma-a-li-lu-wa-a",
+      "words": [
+        "maliluwa"
+      ]
+    },
+    {
+      "intact": [
+        "am-pu-u-pí-li-i"
+      ],
+      "line": "r. Kol. 15′",
+      "raw": "am-pu-u-pí-li-i am-[pu-u-pí-li]",
+      "words": [
+        "ampupili"
+      ]
+    }
+  ],
+  "manuscript": "KBo 30.17",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "tawiniya"
+    "tetimun",
+    "tuhkes",
+    "tuhkes",
+    "watuet",
+    "watuet",
+    "eskiwurnu",
+    "painasan",
+    "pai",
+    "maliluwa",
+    "ampupili"
   ]
 }

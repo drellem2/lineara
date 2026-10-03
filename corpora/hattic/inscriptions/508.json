@@ -1,0 +1,76 @@
+{
+  "cth": "745",
+  "id": 508,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ [(-)p]í-il-lu-u(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ [-p]í-uš-ma-aš-t[u(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ (-)ḫe-el-lu-u la-a-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ x-ma šu-up-ḫa-ba-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[ x-u-wa-šu-up ar-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ [l]i-pí-nu-i-nu ká[n-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ -ú-na za-at-wu-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e"
+      ],
+      "line": "9′",
+      "raw": "[ le-e zu-ú-[",
+      "words": [
+        "le"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "[ [-a]m x x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.147",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "le"
+  ]
+}

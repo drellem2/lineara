@@ -1,15 +1,245 @@
 {
-  "category": "theonym",
-  "gloss": "sun god",
+  "cth": "231",
   "id": 1,
-  "is_bilingual": true,
-  "name": "Eštan",
-  "provenance": "Hattic sun deity; Hittite Ištanu is the loan.",
-  "source_citation": "Soysal, O. (2004). Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.",
-  "text": "Eštan",
-  "tier": "A",
-  "transliteration": "estan",
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. II 2′",
+      "raw": "[ [ x-ki-ia-il [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 3′",
+      "raw": "[ [ [-k]u-li-ia-il URU[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 4′",
+      "raw": "[ [ [ (-)ḫa-aš-pu-na-il URUx[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 5′",
+      "raw": "[UR]Uta-aš-ku-ri-ia-il URU gi-x-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 6′",
+      "raw": "[UR]Uḫi-ip-pu-ri-ia-il URUtág-ga-pu-[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ki-iš-mi-it-ta-il"
+      ],
+      "line": "Vs. II 7′",
+      "raw": "URUki-iš-mi-it-ta-il URUḫa-az-zu-mi-[ [",
+      "words": [
+        "kismittail"
+      ]
+    },
+    {
+      "intact": [
+        "ku-ru-uš-ta-ma-a-il",
+        "ḫar-aš-ta-a-il"
+      ],
+      "line": "Vs. II 8′",
+      "raw": "URUku-ru-uš-ta-ma-a-il URUḫar-aš-ta-a-il [",
+      "words": [
+        "kurustamail",
+        "harastail"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 9′",
+      "raw": "URUḫu-[ul]-la-ra-il URUma-ti-il-la-i[l]",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-ti-ik-ša-il",
+        "ḫal-la-pí-ia-il"
+      ],
+      "line": "Vs. II 10′",
+      "raw": "URUma-ti-ik-ša-il URUḫal-la-pí-ia-il [",
+      "words": [
+        "matiksail",
+        "hallapiail"
+      ]
+    },
+    {
+      "intact": [
+        "ti-in-tu-u-ni-ia-il"
+      ],
+      "line": "Vs. II 11′",
+      "raw": "URUti-in-tu-u-ni-ia-il URUza-ra-aš-ša-ni-ia-[il]",
+      "words": [
+        "tintuniail"
+      ]
+    },
+    {
+      "intact": [
+        "za-ar-kap-du-na-il",
+        "ḫa-am-mu-ḫi-ia-il"
+      ],
+      "line": "Vs. II 12′",
+      "raw": "URUza-ar-kap-du-na-il URUḫa-am-mu-ḫi-ia-il [",
+      "words": [
+        "zarkaptunail",
+        "hammuhiail"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ta-ak-pí-iš-ši-ia-il"
+      ],
+      "line": "Vs. II 13′",
+      "raw": "URUzi-ta-ak-pí-iš-ši-ia-il URUta-al-ga-mu-uš-š[i-ia-il]",
+      "words": [
+        "zitakpissiail"
+      ]
+    },
+    {
+      "intact": [
+        "ga-it-ḫar-za-i-il"
+      ],
+      "line": "Vs. II 14′",
+      "raw": "URUga-it-ḫar-za-i-il QA-TI",
+      "words": [
+        "kaitharzail"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ú-ni-ia-il",
+        "tu-u-ḫu-up-pí-ia-il"
+      ],
+      "line": "Vs. II 17′",
+      "raw": "URUta-ú-ni-ia-il URUtu-u-ḫu-up-pí-ia-il",
+      "words": [
+        "tauniail",
+        "tuhuppiail"
+      ]
+    },
+    {
+      "intact": [
+        "a-li-ša-il",
+        "zi-pí-iš-ḫu-na-il"
+      ],
+      "line": "Vs. II 18′",
+      "raw": "URUa-li-ša-il URUzi-pí-iš-ḫu-na-il",
+      "words": [
+        "alisail",
+        "zipishunail"
+      ]
+    },
+    {
+      "intact": [
+        "am-mu-na-a-il",
+        "ḫa-at-te-na-a-il"
+      ],
+      "line": "Vs. II 19′",
+      "raw": "URUam-mu-na-a-il URUḫa-at-te-na-a-il",
+      "words": [
+        "ammunail",
+        "hattenail"
+      ]
+    },
+    {
+      "intact": [
+        "za-al-pu-ú-i-il",
+        "tu-u-ḫu-up-pí-ia-il"
+      ],
+      "line": "Rs. III 4",
+      "raw": "URUza-al-pu-ú-i-il URUtu-u-ḫu-up-pí-ia-il",
+      "words": [
+        "zalpuil",
+        "tuhuppiail"
+      ]
+    },
+    {
+      "intact": [
+        "zi-iš-za-na-il",
+        "ga-aš-ta-mu-il"
+      ],
+      "line": "Rs. III 5",
+      "raw": "URUzi-iš-za-na-il URUga-aš-ta-mu-il",
+      "words": [
+        "ziszanail",
+        "kastamuil"
+      ]
+    },
+    {
+      "intact": [
+        "a-li-ša-a-il",
+        "ša-ku-uk-ki-ti-ia-al"
+      ],
+      "line": "Rs. III 6",
+      "raw": "URUa-li-ša-a-il URUša-ku-uk-ki-ti-ia-al",
+      "words": [
+        "alisail",
+        "sakukkitial"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-ag-ga-mi-iš-ši-ia-il"
+      ],
+      "line": "Rs. III 7",
+      "raw": "URUḫa-ag-ga-mi-iš-ši-ia-il URUta-pí-ik-ki-ia-a[l",
+      "words": [
+        "hakkamissiail"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 8",
+      "raw": "[URUiš-ta-ḫa-ra-al [URUma-la-az-zi-ia-il [[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-ra-aš-mi-it-ti-ia-il"
+      ],
+      "line": "Rs. III 9",
+      "raw": "URUka-ra-aš-mi-it-ti-ia-il URUuḫ-ḫi-wa-a-a[l [",
+      "words": [
+        "karasmittiail"
+      ]
+    }
+  ],
+  "manuscript": "VBoT 68",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "estan"
+    "kismittail",
+    "kurustamail",
+    "harastail",
+    "matiksail",
+    "hallapiail",
+    "tintuniail",
+    "zarkaptunail",
+    "hammuhiail",
+    "zitakpissiail",
+    "kaitharzail",
+    "tauniail",
+    "tuhuppiail",
+    "alisail",
+    "zipishunail",
+    "ammunail",
+    "hattenail",
+    "zalpuil",
+    "tuhuppiail",
+    "ziszanail",
+    "kastamuil",
+    "alisail",
+    "sakukkitial",
+    "hakkamissiail",
+    "karasmittiail"
   ]
 }

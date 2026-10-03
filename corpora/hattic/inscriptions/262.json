@@ -1,0 +1,363 @@
+{
+  "cth": "734",
+  "id": 262,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 1′",
+      "raw": "]x-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 5″",
+      "raw": "]-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 6″",
+      "raw": "]-ta",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 7″",
+      "raw": "-p]u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 1′",
+      "raw": "x-ša-aḫ ta-m[u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 2′",
+      "raw": "[ša-i-il-pí [URUḫa-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 3′",
+      "raw": "[u-pu-la-aš-ne-en [pa-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 4′",
+      "raw": "[ka-at-te [še-ku-ur-ku-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 5′",
+      "raw": "[li-pé-en(-)še-wa-ku-u-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 6′",
+      "raw": "[ta-ti-wa-an [an-nu-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 7′",
+      "raw": "[ÍDzu-li-ia-an [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 8′",
+      "raw": "[ta-re-e-a [ak-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 9′",
+      "raw": "[li-še-wa-al [ta-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 10′",
+      "raw": "[te-wa-pu-le-e-a(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 11′/Vs. 1′",
+      "raw": "[i-mi-e-še-pu(-)ú(-)[ [ x-i [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 12′/Vs. 2′",
+      "raw": "[še-pu-ú-le-e-a(-)[ [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 14′/Vs. 4′",
+      "raw": "[Dšu-li-in-kat-t[e-ri [UR]Uḫa-[at]-tu-ša-an-ni pí-i[n-nu]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 15′/Vs. 5′",
+      "raw": "Dwu-ru-un-kat-t[e [we]-e-re-e-ta-an-ni pí-in-[nu]",
+      "words": []
+    },
+    {
+      "intact": [
+        "wi-wu-ru-ú-un",
+        "zi-ku-ru-un"
+      ],
+      "line": " {€1+2} Vs. II 16′/Vs. 6′",
+      "raw": "wi-wu-ru-ú-un [ [ x zi-ku-ru-un l[e-e(-)a-an-pa-aš-še]",
+      "words": [
+        "wiwurun",
+        "zikurun"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "a-aš-ga-ḫa-al",
+        "še-i-in"
+      ],
+      "line": " {€1+2} Rs. III 1/Rs. 1",
+      "raw": "[ [ [le-e-a]n-pa-aš-še pa-la a-aš-ga-ḫa-al še-i-in",
+      "words": [
+        "pala",
+        "askahal",
+        "sein"
+      ]
+    },
+    {
+      "intact": [
+        "ú-ri-i-il",
+        "pa-la",
+        "ši-i-in",
+        "i-ia-ru-ul"
+      ],
+      "line": " {€1+2} Rs. III 2/Rs. 2",
+      "raw": "ú-ri-i-il pa-la ši-i-in i-ia-ru-ul",
+      "words": [
+        "uril",
+        "pala",
+        "sin",
+        "iarul"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "ši-in"
+      ],
+      "line": " {€1+2} Rs. III 4/Rs. 3",
+      "raw": "pa-la ši-in ka[m]-zi-il",
+      "words": [
+        "pala",
+        "sin"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-túḫ-ḫu-ku-ru",
+        "ka-taḫ-zi-pu-u-ri"
+      ],
+      "line": " {€1+2} Rs. III 5/Rs. 4",
+      "raw": "a-an-túḫ-ḫu-ku-ru Dka-taḫ-zi-pu-u-ri zi-ia-aḫ-š[u]",
+      "words": [
+        "antuhhukuru",
+        "katahzipuri"
+      ]
+    },
+    {
+      "intact": [
+        "i-ta-a-ḫu-pí",
+        "ú-uk",
+        "šu-li-in-kat-te-ri"
+      ],
+      "line": " {€1+2} Rs. III 6/Rs. 5",
+      "raw": "i-ta-a-ḫu-pí ú-uk Dšu-li-in-kat-te-ri",
+      "words": [
+        "itahupi",
+        "uk",
+        "sulinkatteri"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-at-tu-ša-an-ni",
+        "pí-i-in-nu"
+      ],
+      "line": " {€1+2} Rs. III 7/Rs. 6",
+      "raw": "URUḫa-at-tu-ša-an-ni pí-i-in-nu Dwu-ru-un-kat-te-x[",
+      "words": [
+        "hattusanni",
+        "pinnu"
+      ]
+    },
+    {
+      "intact": [
+        "wa-ar-ta-an-ni",
+        "pí-in-nu",
+        "le-e-ḫu"
+      ],
+      "line": " {€1+2} Rs. III 8/Rs. 7",
+      "raw": "wa-ar-ta-an-ni pí-in-nu le-e-ḫu GÍR iš-ši-i-i[p]",
+      "words": [
+        "wartanni",
+        "pinnu",
+        "lehu"
+      ]
+    },
+    {
+      "intact": [
+        "ša-a-u",
+        "pa-la",
+        "li-i-ḫu",
+        "iš-ši-i-ip"
+      ],
+      "line": " {€1+2} Rs. III 9/Rs. 8",
+      "raw": "ša-a-u pa-la li-i-ḫu GÍR iš-ši-i-ip",
+      "words": [
+        "sau",
+        "pala",
+        "lihu",
+        "issip"
+      ]
+    },
+    {
+      "intact": [
+        "ša-a-u",
+        "a-aš-zi-pa-ri",
+        "te-pí-i-nu"
+      ],
+      "line": " {€1+2} Rs. III 10/Rs. 9",
+      "raw": "ša-a-u a-aš-zi-pa-ri [ x-wu-ú-un te-pí-i-nu",
+      "words": [
+        "sau",
+        "aszipari",
+        "tepinu"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ku-ru-un",
+        "le-ea-an-pa-aš-še",
+        "pa-la"
+      ],
+      "line": " {€1+2} Rs. III 11!/Rs. 10",
+      "raw": "zi-ku-ru-un le-e(-)a-an-pa-aš-še pa-la x[",
+      "words": [
+        "zikurun",
+        "leanpasse",
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Rs. III 12/Rs. 11",
+      "raw": "[a-aš-ta-al-ḫa-ma [x[ [š]i-i-in ú-ri-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Rs. III 13/Rs. 12",
+      "raw": "[ú-wa-a-ru-ú-ul [[ [ -in ga-am-zi-[il]",
+      "words": []
+    },
+    {
+      "intact": [
+        "ku-i-iš"
+      ],
+      "line": " {€1+2} Rs. III 14/Rs. 13",
+      "raw": "ku-i-iš i-mi-[ [ x tu-ḫa-wu-u[r",
+      "words": [
+        "kuis"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": " {€1+2} Rs. III 15/Rs. 14",
+      "raw": "[iš-te-ša-aḫ [wa-[ [-i]p pa-la a-x[",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "ki-ia-du"
+      ],
+      "line": " {€1+2} Rs. III 16/Rs. 15",
+      "raw": "[te-e-ep [ip-x[ [ [-i]n ki-ia-du [",
+      "words": [
+        "kiatu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Rs. III 17/Rs. 16",
+      "raw": "[x-x-x-x-x[ [ -ú-un za-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. 17",
+      "raw": "[ [ x-aḫ pa-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. 18",
+      "raw": "[ [ x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.86",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wiwurun",
+    "zikurun",
+    "pala",
+    "askahal",
+    "sein",
+    "uril",
+    "pala",
+    "sin",
+    "iarul",
+    "pala",
+    "sin",
+    "antuhhukuru",
+    "katahzipuri",
+    "itahupi",
+    "uk",
+    "sulinkatteri",
+    "hattusanni",
+    "pinnu",
+    "wartanni",
+    "pinnu",
+    "lehu",
+    "sau",
+    "pala",
+    "lihu",
+    "issip",
+    "sau",
+    "aszipari",
+    "tepinu",
+    "zikurun",
+    "leanpasse",
+    "pala",
+    "kuis",
+    "pala",
+    "kiatu"
+  ]
+}

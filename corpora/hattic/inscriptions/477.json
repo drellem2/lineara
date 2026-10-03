@@ -1,0 +1,75 @@
+{
+  "cth": "745",
+  "id": 477,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x-l[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "]x [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ša-a-i"
+      ],
+      "line": "3′",
+      "raw": "]-i-li ša-a-i",
+      "words": [
+        "sai"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "]x-le-el 〈〈x〉〉",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "]-ta-aḫ-zi",
+      "words": []
+    },
+    {
+      "intact": [
+        "ú-un-du-pí"
+      ],
+      "line": "6′",
+      "raw": "](-)ú-un-du-pí",
+      "words": [
+        "untupi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "](-)ki-ḫé-er-ma-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "]x-ú-i[n [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "]x[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 33.141",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "sai",
+    "untupi"
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "cth": "746",
+  "id": 609,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs.? 1′",
+      "raw": "-z]i-ip-t[e-pé-el]",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta"
+      ],
+      "line": "Vs.? 2′",
+      "raw": "(-)t]a ki-ša-at-t[u [",
+      "words": [
+        "ta"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 3′",
+      "raw": "]-ḫa-a-wu-un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 4′",
+      "raw": "]-tu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 5′",
+      "raw": "]-wa-lu-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-a-ma",
+        "eš-zi-la-a-si"
+      ],
+      "line": "Vs.? 6′",
+      "raw": "pa-a]-ma eš-zi-la-a-si",
+      "words": [
+        "pama",
+        "eszilasi"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-ma",
+        "eš-zi-ia-ú-e"
+      ],
+      "line": "Vs.? 7′",
+      "raw": "pa-a]-ma eš-zi-ia-ú-e",
+      "words": [
+        "pama",
+        "esziaue"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-ma",
+        "eš-ka-a-ra-mu"
+      ],
+      "line": "Vs.? 8′",
+      "raw": "pa]-a-ma eš-ka-a-ra-mu",
+      "words": [
+        "pama",
+        "eskaramu"
+      ]
+    },
+    {
+      "intact": [
+        "le-zi-ip-te-pé-el"
+      ],
+      "line": "Vs.? 9′",
+      "raw": "] le-zi-ip-te-pé-el",
+      "words": [
+        "leziptepel"
+      ]
+    },
+    {
+      "intact": [
+        "le-zi-ip-te-pé-el"
+      ],
+      "line": "Vs.? 10′",
+      "raw": "] le-zi-ip-te-pé-el",
+      "words": [
+        "leziptepel"
+      ]
+    },
+    {
+      "intact": [
+        "te-zi-ip-te-pé-el"
+      ],
+      "line": "Vs.? 11′",
+      "raw": "t]e-zi-ip-te-pé-el",
+      "words": [
+        "teziptepel"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 12′",
+      "raw": "] te-zi-ip-te-pé-e[l]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 1′",
+      "raw": "te-z]i-i[p-te-pé-el]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 2′",
+      "raw": "] te-zi-ip-te-pé-e[l]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 3′",
+      "raw": "] te-zi-ip-te-pé-e[l]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 4′",
+      "raw": "-z]i-ip-te-pé-el",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 5′",
+      "raw": "-z]i-ip-te-pé-el",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 6′",
+      "raw": "-zi]-ip-te-pé-el",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 7′",
+      "raw": "-zi-i]p-te-pé-el",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 8′",
+      "raw": "-zi-ip]-te-pé-el",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 9′",
+      "raw": "]x-ša-[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.103",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ta",
+    "pama",
+    "eszilasi",
+    "pama",
+    "esziaue",
+    "pama",
+    "eskaramu",
+    "leziptepel",
+    "leziptepel",
+    "teziptepel"
+  ]
+}

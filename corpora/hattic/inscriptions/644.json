@@ -1,0 +1,28 @@
+{
+  "cth": "820",
+  "id": 644,
+  "lines": [
+    {
+      "intact": [
+        "le-eš-te-eš"
+      ],
+      "line": "14′",
+      "raw": "[[ [ -i-in le-eš-te-eš DUTU-an a-an-ta-[ti-ul",
+      "words": [
+        "lestes"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "15′",
+      "raw": "[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "VSNF 12.17",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lestes"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "cth": "744",
+  "id": 450,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 10′",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 11′",
+      "raw": "]x-ša-a-ḫi-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 12′",
+      "raw": "]x-en-ti-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 13′",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 14′",
+      "raw": "-t]a-šu-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e"
+      ],
+      "line": "Vs. I 15′",
+      "raw": "](-)le-e",
+      "words": [
+        "le"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. V 1",
+      "raw": "[x x [x [(x) [ta-a-li-ki-iš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. V 2",
+      "raw": "[eš-šu-ú-ut [ḫa-lu-ú-iz-zi-in-m[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. V 3",
+      "raw": "[wa-aš-ḫa-wu-un [tu-e-tu-ḫa(-)wu-u-r[u",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.19",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "le"
+  ]
+}

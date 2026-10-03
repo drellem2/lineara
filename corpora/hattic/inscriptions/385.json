@@ -1,0 +1,48 @@
+{
+  "cth": "744",
+  "id": 385,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "(-)a-ma-a-ta-še-e-na ša-a-le-e-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "aš-ši",
+        "ka-aḫ-tu-ut-tu"
+      ],
+      "line": "3′",
+      "raw": "[ (-)a-ma aš-ši ka-aḫ-tu-ut-tu wa-a-x[",
+      "words": [
+        "assi",
+        "kahtuttu"
+      ]
+    },
+    {
+      "intact": [
+        "še-le-e-ep"
+      ],
+      "line": "4′",
+      "raw": "[ -ia-še-na še-le-e-ep wa-a-ap-[",
+      "words": [
+        "selep"
+      ]
+    }
+  ],
+  "manuscript": "KBo 37.145",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "assi",
+    "kahtuttu",
+    "selep"
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "cth": "745",
+  "id": 481,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 1′",
+      "raw": "(-)a]n-ti-ú-li-li-u[n",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2′",
+      "raw": "[ x-ma-a iš-zi-i-ú-e-u[n",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-a-ma",
+        "eš-ga-a-ra-mu"
+      ],
+      "line": "Vs. 3′",
+      "raw": "[ x pa-a-ma eš-ga-a-ra-mu",
+      "words": [
+        "pama",
+        "eskaramu"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-ne-eš",
+        "ka-a-ra-mu"
+      ],
+      "line": "Vs. 4′",
+      "raw": "]a-an-ne-eš ka-a-ra-mu",
+      "words": [
+        "annes",
+        "karamu"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-an-wa-a-šu-i-ši-i-in"
+      ],
+      "line": "Vs. 5′",
+      "raw": "]x-me-e-eš ḫa-an-wa-a-šu-i-ši-i-in",
+      "words": [
+        "hanwasuisin"
+      ]
+    },
+    {
+      "intact": [
+        "te-e-ni-tu-u-ḫi-li"
+      ],
+      "line": "Vs. 6′",
+      "raw": "] te-e-ni-tu-u-ḫi-li",
+      "words": [
+        "tenituhili"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-ma",
+        "wa-a-aš-ḫa-wu-ú"
+      ],
+      "line": "Vs. 7′",
+      "raw": "] pa-a-ma wa-a-aš-ḫa-wu-ú",
+      "words": [
+        "pama",
+        "washawu"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a"
+      ],
+      "line": "Vs. 8′",
+      "raw": "] ma-a ta-ši-e-mi-it-t[u]",
+      "words": [
+        "ma"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-ma",
+        "at-pí-ir-pí"
+      ],
+      "line": "Vs. 9′",
+      "raw": "p]a-a-ma at-pí-ir-pí [ [",
+      "words": [
+        "pama",
+        "atpirpi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10′",
+      "raw": "] at-pí-ir-p[í [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 11′",
+      "raw": "-a]š-ni [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 1′",
+      "raw": "[ [l]a-[m]a-a [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 2′",
+      "raw": "[ [l]a-ma-a eš-t[a-",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a"
+      ],
+      "line": "Rs. 3′",
+      "raw": "[ [-u]n ma-a eš-zi-i-[",
+      "words": [
+        "ma"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a"
+      ],
+      "line": "Rs. 4′",
+      "raw": "[ [-u]n ma-a eš-ma-a-i-x[",
+      "words": [
+        "ma"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 5′",
+      "raw": "[ x(-)li-ma e-eš-ša-ki-[il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 6′",
+      "raw": "[ [-m]a-a ta-zi-zi-i(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 7′",
+      "raw": "[ x[ [ x x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.104",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "pama",
+    "eskaramu",
+    "annes",
+    "karamu",
+    "hanwasuisin",
+    "tenituhili",
+    "pama",
+    "washawu",
+    "ma",
+    "pama",
+    "atpirpi",
+    "ma",
+    "ma"
+  ]
+}

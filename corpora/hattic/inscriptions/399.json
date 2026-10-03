@@ -1,0 +1,46 @@
+{
+  "cth": "744",
+  "id": 399,
+  "lines": [
+    {
+      "intact": [
+        "ka-a-at-te"
+      ],
+      "line": "4′",
+      "raw": "[ [ta-w]a-a-ar-na ka-a-at-te [",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[kur-ku-w]e-e-en-na 〈〈ḫa〉〉 [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[ -ru-u-a-ap-pa(-)pa-la [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ [-a]m-pu-le-e ḫa-ap-zu-a[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ -a-an-u-[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.92",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "katte"
+  ]
+}

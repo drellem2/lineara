@@ -1,0 +1,93 @@
+{
+  "cth": "745",
+  "id": 563,
+  "lines": [
+    {
+      "intact": [],
+      "line": "r. Kol. 1′",
+      "raw": "]-te",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 2′",
+      "raw": "-š]a-aḫ-zi-in-ti",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 3′",
+      "raw": "-w]i-wu-ú-un te-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 4′",
+      "raw": "-w]a-pu-le-e-ia [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 5′",
+      "raw": "]x-wa-aš-nu-wa-aš-nu [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 6′",
+      "raw": "]x ḫa-li-wa-aš-nu-w[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 7′",
+      "raw": "]x(-)ak-ḫa-al-ši [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 8′",
+      "raw": "-i]n li-ú-wa-x[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-ik-ma"
+      ],
+      "line": "r. Kol. 9′",
+      "raw": "-i]n li-ik-ma [ [",
+      "words": [
+        "likma"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": "r. Kol. 10′",
+      "raw": "-i]n pa-la ni-p[u",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 11′",
+      "raw": "-i]n li-ú-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 12′",
+      "raw": "]x[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.68",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "likma",
+    "pala"
+  ]
+}

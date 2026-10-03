@@ -1,0 +1,101 @@
+{
+  "cth": "744",
+  "id": 393,
+  "lines": [
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "]x-ut [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "]x [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "]x-wu-m[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "-w]a-aḫ-d[u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "]x-ḫe-el [ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-šu-ú-ul"
+      ],
+      "line": "8′",
+      "raw": "w]a-šu-ú-ul [ [",
+      "words": [
+        "wasul"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "]x-wu-ut-ma",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "]x-pi-x-[ -ut",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-ši-ú-un"
+      ],
+      "line": "11′",
+      "raw": "]-an wa-ši-ú-un",
+      "words": [
+        "wasiun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "12′",
+      "raw": "]x(-)ḫa-an-wa",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-la",
+        "im-ma"
+      ],
+      "line": "13′",
+      "raw": "p]a-la im-ma ḫa-a[n-",
+      "words": [
+        "pala",
+        "imma"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "14′",
+      "raw": "[ -la",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.84",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wasul",
+    "wasiun",
+    "pala",
+    "imma"
+  ]
+}

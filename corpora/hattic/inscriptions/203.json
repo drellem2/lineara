@@ -1,0 +1,81 @@
+{
+  "cth": "726",
+  "id": 203,
+  "lines": [
+    {
+      "intact": [
+        "eš-ta-a-an"
+      ],
+      "line": " {€2} Vs. I 1′",
+      "raw": "eš-ta-a-an U[RUla-aḫ-za-an",
+      "words": [
+        "estan"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. I 2′",
+      "raw": "[pa-la [a-aš-taḫ-ḫi-i[l-ma",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2+1} Vs. I 3′",
+      "raw": "[ka-a-at-ti [Dle-e-[lu-wa-ni",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2+1} Vs. I 4′",
+      "raw": "[eš-ta-a-an-ḫu [le-e-w[e-e-el",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2+1} Vs. I 5′",
+      "raw": "[a-an-za-ar-aš-ma [Dk[a-taḫ-zi-wu-re-e-šu]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2+1} Vs. I 6′",
+      "raw": "[w]e-e-el-ḫu tu-ú-lu-m[a",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-a-lu-ma"
+      ],
+      "line": " {€1} Vs. I 7′",
+      "raw": "[[ú]-uk-šu-pa ta-a-lu-ma w[a-a-mar-ku-up",
+      "words": [
+        "taluma"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 8′",
+      "raw": "[[u-re]-e-eš ḫu-uz-za-aš-ša-a-[i-šu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 9′",
+      "raw": "[[kur-ku-u-pa]-al ši-ni-i(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 10′",
+      "raw": "[[ [ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "Or. 90_1470+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "estan",
+    "taluma"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "cth": "671",
+  "id": 176,
+  "lines": [
+    {
+      "intact": [
+        "ú-i",
+        "ú-i",
+        "pu-ru-ša-el",
+        "pu-ru-ša-el"
+      ],
+      "line": "Vs. 10",
+      "raw": "ú-i ú-i pu-ru-ša-el pu-ru-ša-el",
+      "words": [
+        "ui",
+        "ui",
+        "purusael",
+        "purusael"
+      ]
+    }
+  ],
+  "manuscript": "KUB 36.89",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ui",
+    "ui",
+    "purusael",
+    "purusael"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "cth": "736",
+  "id": 287,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Rs.? 9′",
+      "raw": "[k]a-a-ta-ru-[u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 10′",
+      "raw": "[[t]e-wu-ú-uš [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 11′",
+      "raw": "[[l]e-e-wu-u-ur m[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 12″",
+      "raw": "[[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 13″!",
+      "raw": "[[ [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 1′",
+      "raw": "[[zi-l]u-u-wa-[lu-wa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 2′",
+      "raw": "[[t]a-ba-ar-n[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 3′",
+      "raw": "[[wu]-u-ru-un te-eš-t[e-eš",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-ḫa-lu-uḫ-ḫa"
+      ],
+      "line": "Vs.? 4′",
+      "raw": "[[KI].3 te-ḫa-lu-uḫ-ḫa [",
+      "words": [
+        "tehaluhha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 5′",
+      "raw": "[[eš-t]a-an ka-a-a[t-taḫ",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "u. Rd. 6′",
+      "raw": "[[ta]-ba-ar-na k[a-at-ti",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "u. Rd. 7′",
+      "raw": "[[pa]-la DIŠKUR-u[n",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 25.131",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tehaluhha"
+  ]
+}

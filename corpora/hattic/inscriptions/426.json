@@ -1,0 +1,107 @@
+{
+  "cth": "744",
+  "id": 426,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. II 3′",
+      "raw": "a[r-l]u-ú-ia",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-ú-ia"
+      ],
+      "line": "Vs. II 4′",
+      "raw": "wa-ú-ia",
+      "words": [
+        "wauia"
+      ]
+    },
+    {
+      "intact": [
+        "ka-at-ti"
+      ],
+      "line": "Vs. II 15′",
+      "raw": "[t]a-ba-ar-na ka-at-ti",
+      "words": [
+        "katti"
+      ]
+    },
+    {
+      "intact": [
+        "zi-li-pu-ri"
+      ],
+      "line": "Vs. II 16′",
+      "raw": "[kur-k]u-ui-i-na Dzi-li-pu-ri",
+      "words": [
+        "zilipuri"
+      ]
+    },
+    {
+      "intact": [
+        "an-ta-ka-šu-uḫ"
+      ],
+      "line": "Vs. II 17′",
+      "raw": "[l]i-ik-ku-ru an-ta-ka-šu-uḫ",
+      "words": [
+        "antakasuh"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 18′",
+      "raw": "[ta]-ḫi-il(-)pa-a-ú-un",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫu-up-pí-iš"
+      ],
+      "line": "Vs. II 19′",
+      "raw": "[p]í-ú-ku ḫu-up-pí-iš",
+      "words": [
+        "huppis"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 20′",
+      "raw": "[t]i-šu-uk(-)ki-iš-ta-a-an",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-ri-ia-an"
+      ],
+      "line": "Vs. II 21′",
+      "raw": "[ḫ]a-ti-i-la-a-at te-ri-ia-an",
+      "words": [
+        "terian"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 22′",
+      "raw": "[UR]Uḫa-at-tu-uš ḫa-az-zi-in-gu[l- [ [-z]i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 23′",
+      "raw": "[ [ -x-[n]i",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 1.14",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wauia",
+    "katti",
+    "zilipuri",
+    "antakasuh",
+    "huppis",
+    "terian"
+  ]
+}

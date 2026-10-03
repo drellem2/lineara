@@ -11045,3 +11045,73 @@ committed by mg-7b882. They were not recomputed here.
   FAIL could count as evidence of specificity.
 * Further §D.3 control languages (Hurrian, Hittite, Phoenician) and
   the other handoff §D directions. These are Daniel's call on revival.
+
+## Findings from mg-7f4db (Hattic pool + LM corpus rebuilt from published editions, 2026-10-03)
+
+Daniel, 2026-10-03, on the inconclusive v32 probe: "use published
+editions not memory please". This ticket replaces the v32 Hattic data.
+It does **not** run the gate, so there is no new gate result. That is
+the next ticket.
+
+### What was built
+
+* **Pool** (`pools/hattic.yaml`): **124 entries** (125 lexemes; `aia`
+  „geben“ fails the two-class filter). Every entry is a form read off a
+  viewed page of Kammenhuber 1969 (HdO "Hattisch", Internet Archive
+  scan; 121 lexicon rows, pp. 432–535) or Schuster 1974 (*Bilinguen*,
+  IA scan; 13 rows, reused from mg-78856 and spot-checked). Each carries
+  scan URL + page and a verbatim OCR quote.
+  `scripts/verify_hattic_sources.py` checked all 134 lexicon rows
+  against the IA OCR and page-number maps: 0 problems. It reported both
+  errors planted in a negative control (an altered quote, a page off by
+  one). No v32 form was carried over.
+  The ≥ 80 bar is met without padding. Mix: 53 nouns, 30 verb stems,
+  18 theonyms, 10 titles, 6 toponyms, 4 adjectives, 2 particles, 1
+  personal name. Confidence: 99 secure / 14 doubtful / 11 of unknown
+  meaning.
+* **LM corpus** (`corpora/hattic/`): running text from TLHdig (Thesaurus
+  Linguarum Hethaeorum digitalis Beta 0.2, Zenodo
+  doi:10.5281/zenodo.15459134, CC BY 4.0). It keeps the intact Hattic
+  words of 647 manuscripts (73 CTH numbers) and excludes every word
+  that touches a break or editorial restoration. Result: 3,213 tokens /
+  **1,940 types** from 397 manuscripts, with line references. The v32
+  corpus had 72 forms. 2,700 tokens are from CTH 725–746.
+* **LM** `harness/external_phoneme_models/hattic.json` rebuilt
+  (α = 1.0 unchanged; 1,940 word types, 14,247 characters).
+  **Control** `pools/control_hattic_bigram.yaml` rebuilt (124 entries).
+
+### Observations
+
+* **Circularity removed, with overlap measured.** v32: LM corpus = pool
+  (72/72). Now 56 of 124 pool surfaces (45%) also occur as an LM corpus
+  word type. That is 2.9% of the corpus types and 9.1% of its tokens,
+  the expected overlap between a lexicon and text in the same language.
+  All 123 character bigrams of the pool occur somewhere in the corpus.
+* **Only 1 in 5 TLHdig Hattic words is intact** (3,214 of 17,043). The
+  running-text LM is small because restorations were excluded on
+  purpose.
+* **Normalisation**: v32 rules unchanged. Three rules were added
+  because the editions' bound transcription forces them: u̯ → w, i̯ → i,
+  Schuster's v → w. Pool and corpus now share one 15-letter inventory
+  (`a e h i k l m n p r s t u w z`). v32 also had `y`.
+* **Names are a smaller share**: 25 of 124 entries, against v32's 41
+  of 72.
+
+### Limitations
+
+* Soysal 2004 and Klinger 1996 are still unreachable (as mg-78856
+  reported). The glosses are 1969/1974 glosses, and some may since have
+  been revised.
+* Two forms carry conflicting glosses between the sources (`wae`:
+  Kammenhuber „Werkzeug“ vs Schuster „Haus“; `alep`: „Wort, Sache“ vs
+  „Zunge“). Both glosses are recorded. The gate does not use glosses.
+* `scripts/hattic_gate.py` still pins the v32 pool size (72) as the
+  pre-registration record. A gate run on the rebuilt pool needs its own
+  pre-registration.
+
+### Artifacts
+
+`corpora/hattic/sources/{lexicon.tsv,tlhdig_hattic_lines.tsv}`,
+`scripts/{extract_tlhdig_hattic,build_hattic_corpus,build_hattic_pool,verify_hattic_sources}.py`,
+`corpora/hattic.README.md`, `pools/hattic.README.md`; tests in
+`harness/tests/test_build_hattic.py`.

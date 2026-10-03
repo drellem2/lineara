@@ -1,0 +1,34 @@
+{
+  "cth": "738",
+  "id": 316,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Rs. 4′",
+      "raw": "[ [ [i]-ia-ip-ti-pé-eš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 5′",
+      "raw": "[ x-wa-zi-iš-ta",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-la-an-ti-u"
+      ],
+      "line": "Rs. 6′",
+      "raw": "[ [-z]i ḫa-la-an-ti-u",
+      "words": [
+        "halantiu"
+      ]
+    }
+  ],
+  "manuscript": "KBo 39.171",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "halantiu"
+  ]
+}

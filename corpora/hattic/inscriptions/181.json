@@ -1,0 +1,50 @@
+{
+  "cth": "678",
+  "id": 181,
+  "lines": [
+    {
+      "intact": [
+        "a-wa-an",
+        "ka-it-ga-ḫi-il-lu-u"
+      ],
+      "line": "Rs. IV 11′",
+      "raw": "a-wa-an ka-it-ga-ḫi-il-lu-u",
+      "words": [
+        "awan",
+        "kaitkahillu"
+      ]
+    },
+    {
+      "intact": [
+        "da-a-ru",
+        "le-el-li"
+      ],
+      "line": "Rs. IV 12′",
+      "raw": "Dda-a-ru le-el-li",
+      "words": [
+        "taru",
+        "lelli"
+      ]
+    },
+    {
+      "intact": [
+        "li-ip-ḫa-ip-pí-in"
+      ],
+      "line": "Rs. IV 13′",
+      "raw": "li-ip-ḫa-ip-pí-in",
+      "words": [
+        "liphaippin"
+      ]
+    }
+  ],
+  "manuscript": "KUB 20.10",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "awan",
+    "kaitkahillu",
+    "taru",
+    "lelli",
+    "liphaippin"
+  ]
+}

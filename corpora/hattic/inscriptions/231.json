@@ -1,0 +1,85 @@
+{
+  "cth": "732",
+  "id": 231,
+  "lines": [
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "]x-a ti-ia-iš(-)[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-an-wa"
+      ],
+      "line": "6′",
+      "raw": "-pí-nu ḫa-an-wa da-x[",
+      "words": [
+        "hanwa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ḫa]-li-ik-ka₄-aš ku-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e-a-ša-aḫ"
+      ],
+      "line": "8′",
+      "raw": "[-el-ma-a]ḫ le-e-a-ša-aḫ t[e-kat-ti-ia",
+      "words": [
+        "leasah"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[-ḫ]u-ur-ḫu-ur le-e-a-š[a-aḫ",
+      "words": []
+    },
+    {
+      "intact": [
+        "ti-an-ti-ia"
+      ],
+      "line": "10′",
+      "raw": "-ta-aḫ ti-an-ti-ia ḫa-a-[",
+      "words": [
+        "tiantia"
+      ]
+    },
+    {
+      "intact": [
+        "te-kat-ti-ia"
+      ],
+      "line": "11′",
+      "raw": "[le-e-a-ša-a]ḫ te-kat-ti-ia ḫa-[",
+      "words": [
+        "tekattia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "12′",
+      "raw": "[le-e]-a-ša-aḫ te-kat-t[i-ia",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "13′",
+      "raw": "x-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.16",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "hanwa",
+    "leasah",
+    "tiantia",
+    "tekattia"
+  ]
+}

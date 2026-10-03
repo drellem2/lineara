@@ -1,0 +1,766 @@
+{
+  "cth": "733",
+  "id": 249,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 6‴",
+      "raw": "]x KI.3",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ia-a-an"
+      ],
+      "line": "Vs. I 7‴",
+      "raw": "ta-i]a-a-an",
+      "words": [
+        "taian"
+      ]
+    },
+    {
+      "intact": [
+        "ta-i-ma-a-an"
+      ],
+      "line": "Vs. I 8‴",
+      "raw": "ta-i-m]a-a-an KI.[MIN]",
+      "words": [
+        "taiman"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 9‴",
+      "raw": "]x-un-pí",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 10‴",
+      "raw": "GIŠK]IRI₆.GEŠTIN",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-wu-uš-ne"
+      ],
+      "line": "Vs. I 11‴",
+      "raw": "t]e-wu-uš-ne",
+      "words": [
+        "tewusne"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 12‴",
+      "raw": "-a]r-zi-in",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 13‴",
+      "raw": "-l]e-en",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 15‴",
+      "raw": "]x pu-na-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 16‴",
+      "raw": "]x-ma-an-x x[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "u-uḫ-kán-ti-i-u"
+      ],
+      "line": "Vs. I 17‴",
+      "raw": "u-uḫ-kán-t]i-i-u",
+      "words": [
+        "uhkantiu"
+      ]
+    },
+    {
+      "intact": [
+        "za-a-ak-zu-en-tu"
+      ],
+      "line": "Vs. I 18‴",
+      "raw": "](-)za-a-ak-zu-en-tu",
+      "words": [
+        "zakzuentu"
+      ]
+    },
+    {
+      "intact": [
+        "ka-ḫal-wu-uz-ze-el"
+      ],
+      "line": "Vs. II 3",
+      "raw": "[u]t-ḫu-ru-u ka-ḫal-wu-uz-ze-el ḫa-wi-wu-n[a-a-an]",
+      "words": [
+        "kahalwuzzel"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-wa-aš-ḫa-wi-pí"
+      ],
+      "line": "Vs. II 4",
+      "raw": "[k]a-ḫal-wu-uz-ze-el ḫa-wa-aš-ḫa-wi-pí ka-aš-tu-w[a [DINGIR-a]p",
+      "words": [
+        "hawashawipi"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-li-ia-a-an-na",
+        "ka-a-at-te"
+      ],
+      "line": "Vs. II 5",
+      "raw": "ḫa-li-ia-a-an-na DINGIR-ap ka-a-at-te",
+      "words": [
+        "halianna",
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-at-te",
+        "eš-tu-u-pu-un-tuu-uḫ-kán-ti-i-u"
+      ],
+      "line": "Vs. II 6",
+      "raw": "ka-a-at-te eš-tu-u-pu-un-tu(-)u-uḫ-kán-ti-i-u",
+      "words": [
+        "katte",
+        "estupuntuhkantiu"
+      ]
+    },
+    {
+      "intact": [
+        "wa-la-a-aḫ",
+        "le-e-ḫa-zu-wa-a-aḫ",
+        "am-mi-i-šu-u",
+        "ḫa-zu-wa-ḫé-en-tu"
+      ],
+      "line": "Vs. II 7",
+      "raw": "wa-la-a-aḫ le-e-ḫa-zu-wa-a-aḫ am-mi-i-šu-u ḫa-zu-wa-ḫé-en-tu",
+      "words": [
+        "walah",
+        "lehazuwah",
+        "ammisu",
+        "hazuwahentu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ḫa-a-ak-pí",
+        "am-pu-ú-ut-tu",
+        "ḫa-pal-ki-an"
+      ],
+      "line": "Vs. II 8",
+      "raw": "ta-ḫa-a-ak-pí 8-in am-pu-ú-ut-tu ḫa-pal-ki-an",
+      "words": [
+        "tahakpi",
+        "amputtu",
+        "hapalkian"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-ki-i-wu-un",
+        "an-ka-zi-ip-ḫé-en-tu"
+      ],
+      "line": "Vs. II 9",
+      "raw": "le-e-ki-i-wu-un an-ka-zi-ip-ḫé-en-tu",
+      "words": [
+        "lekiwun",
+        "ankaziphentu"
+      ]
+    },
+    {
+      "intact": [
+        "a-re-e-u",
+        "u-ka-li-i-iš",
+        "ka-te-e",
+        "ḫa-ma-zu"
+      ],
+      "line": "Vs. II 10",
+      "raw": "a-re-e-u u-ka-li-i-iš ka-te-e ḫa-ma-zu",
+      "words": [
+        "areu",
+        "ukalis",
+        "kate",
+        "hamazu"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "u-ta-we-eš",
+        "uš-šu-uk-ki-we-e",
+        "uš-šu-uk-ki-wi-iš"
+      ],
+      "line": "Vs. II 11",
+      "raw": "pa-la u-ta-we-eš uš-šu-uk-ki-we-e uš-šu-uk-ki-wi-iš",
+      "words": [
+        "pala",
+        "utawes",
+        "ussukkiwe",
+        "ussukkiwis"
+      ]
+    },
+    {
+      "intact": [
+        "uš-šu-up-ka-wa-al-wa-la-at",
+        "uš-šu-ú-up-pu",
+        "te-pu-u-ut"
+      ],
+      "line": "Vs. II 12",
+      "raw": "uš-šu-up-ka-wa-al-wa-la-at uš-šu-ú-up-pu KUR-tu te-pu-u-ut",
+      "words": [
+        "ussupkawalwalat",
+        "ussuppu",
+        "teput"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "kat-te-e"
+      ],
+      "line": "Vs. II 13",
+      "raw": "pa-la kat-te-e",
+      "words": [
+        "pala",
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-at-te",
+        "te-ku-un-ku-uḫ-ḫu-u-a"
+      ],
+      "line": "Vs. II 14",
+      "raw": "ka-a-at-te te-ku-un-ku-uḫ-ḫu-u-a MUNUS.LUGAL KI.MIN DINGIRMEŠ-ŠU KI.3",
+      "words": [
+        "katte",
+        "tekunkuhhua"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ia-a-an"
+      ],
+      "line": "Vs. II 15",
+      "raw": "DUMU.DUMUM[EŠ-Š]U KI.4 ÉRINMEŠ-ŠU KI.5 KUR-SÚ ta-ia-a-an",
+      "words": [
+        "taian"
+      ]
+    },
+    {
+      "intact": [
+        "te-ek-za-šu-u-la",
+        "pa-la",
+        "ta-i-ma-a-an"
+      ],
+      "line": "Vs. II 16",
+      "raw": "k[a-zi-in [ x te-ek-za-šu-u-la pa-la ta-i-ma-a-an KI.MIN",
+      "words": [
+        "tekzasula",
+        "pala",
+        "taiman"
+      ]
+    },
+    {
+      "intact": [
+        "up-ḫa-a-pu-lu-up-ta-a"
+      ],
+      "line": "Vs. II 17",
+      "raw": "x x[ [ [te-ep-ka-aḫ-ḫi]-il-la DINGIRMEŠ-pí up-ḫa-a-pu-lu-up-ta-a",
+      "words": [
+        "uphapulupta"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 18",
+      "raw": "[ [ [t]e-ep-ka-aḫ-ḫi-la DINGIRMEŠ-pí",
+      "words": []
+    },
+    {
+      "intact": [
+        "ut-ḫu-ru-u",
+        "tap-pé-e-er"
+      ],
+      "line": "Vs. II 19",
+      "raw": "[ [ [up-ḫa-a(-)te-wu-uš-n]e-en ut-ḫu-ru-u tap-pé-e-er",
+      "words": [
+        "uthuru",
+        "tapper"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-wa-aš-ḫa-wi-i",
+        "ka-aš-ba-ru-u-ia-aḫ",
+        "ka-a-at-taḫ"
+      ],
+      "line": "Vs. II 22",
+      "raw": "ḫa-wa-aš-ḫa-wi-i ka-aš-ba-ru-u-ia-aḫ DINGIR-ap ka-a-at-taḫ",
+      "words": [
+        "hawashawi",
+        "kasparuiah",
+        "kattah"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-at-te",
+        "eš-tu-u-pé-en-tu-uu-uḫ-kán-ti-i-u"
+      ],
+      "line": "Vs. II 23",
+      "raw": "ka-a-at-te eš-tu-u-pé-en-tu-u(-)u-uḫ-kán-ti-i-u",
+      "words": [
+        "katte",
+        "estupentuhkantiu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 2′",
+      "raw": "ḫa-pí-p[u-na-a-an [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 3′",
+      "raw": "ta-am-me-x[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ut-ḫu-ru-u"
+      ],
+      "line": "Rs. III 5′",
+      "raw": "ut-ḫu-ru-u ta-ḫa-at-te-nu-i-[it [",
+      "words": [
+        "uthuru"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ḫa-at-te-nu-i-it"
+      ],
+      "line": "Rs. III 6′",
+      "raw": "ta-ḫa-at-te-nu-i-it ḫa-wa-aš-ḫa-w[i-pí [",
+      "words": [
+        "tahattenuit"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-pí-pu-na-a-an",
+        "ta-ši-im-me-et",
+        "ḫa-wa-aš-ḫa-wi-pí"
+      ],
+      "line": "Rs. III 9′",
+      "raw": "ḫa-pí-pu-na-a-an Dta-ši-im-me-et ḫa-wa-aš-ḫa-wi-pí",
+      "words": [
+        "hapipunan",
+        "tasimmet",
+        "hawashawipi"
+      ]
+    },
+    {
+      "intact": [
+        "ti-im-me-e-et",
+        "ka-a-at-taḫ",
+        "me-e-ma-i"
+      ],
+      "line": "Rs. III 10′",
+      "raw": "Dti-im-me-e-et DINGIR-ap ka-a-at-taḫ QA-TAM-MA me-e-ma-i",
+      "words": [
+        "timmet",
+        "kattah",
+        "memai"
+      ]
+    },
+    {
+      "intact": [
+        "wa-še-ez-zi-il",
+        "ḫa-wa-aš-ḫa-wi-pí",
+        "ták-ke-e-ḫal"
+      ],
+      "line": "Rs. III 13′",
+      "raw": "Dwa-še-ez-zi-il ḫa-wa-aš-ḫa-wi-pí ták-ke-e-ḫal",
+      "words": [
+        "wasezzil",
+        "hawashawipi",
+        "takkehal"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-at-te",
+        "nam-ma",
+        "me-ma-i"
+      ],
+      "line": "Rs. III 14′",
+      "raw": "DINGIR-ap ka-a-at-te nam-ma QA-TAM-MA me-ma-i",
+      "words": [
+        "katte",
+        "namma",
+        "memai"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-pí-pu-na-a-an",
+        "mi-it-tu-ú-nu-un",
+        "ḫa-wa-aš-ḫa-wi-pí"
+      ],
+      "line": "Rs. III 17′",
+      "raw": "ḫa-pí-pu-na-a-an mi-it-tu-ú-nu-un ḫa-wa-aš-ḫa-wi-pí",
+      "words": [
+        "hapipunan",
+        "mittunun",
+        "hawashawipi"
+      ]
+    },
+    {
+      "intact": [
+        "a-a-ri-ša",
+        "ka-a-at-te"
+      ],
+      "line": "Rs. III 18′",
+      "raw": "a-a-ri-ša DINGIR-ap ka-a-at-te QA-TAM-MA",
+      "words": [
+        "arisa",
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "ut-ḫu-ru-u",
+        "ka-ak-ša-ze-e-et",
+        "ḫa-pí-pu-na-a-an"
+      ],
+      "line": "Rs. III 21′",
+      "raw": "ut-ḫu-ru-u DUTU URUka-ak-ša-ze-e-et ḫa-pí-pu-na-a-an",
+      "words": [
+        "uthuru",
+        "kaksazet",
+        "hapipunan"
+      ]
+    },
+    {
+      "intact": [
+        "ka-ak-ša-ze-e-et",
+        "ḫa-wa-aš-ḫa-wi-pí"
+      ],
+      "line": "Rs. III 22′",
+      "raw": "DUTU URUka-ak-ša-ze-e-et ḫa-wa-aš-ḫa-wi-pí",
+      "words": [
+        "kaksazet",
+        "hawashawipi"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-le-ia-ḫu",
+        "ka-a-at-taḫ"
+      ],
+      "line": "Rs. III 23′",
+      "raw": "le-e-le-ia-ḫu DINGIR-ap ka-a-at-taḫ",
+      "words": [
+        "leleiahu",
+        "kattah"
+      ]
+    },
+    {
+      "intact": [
+        "ka-i-it",
+        "ḫa-pí-pu-na-a-an",
+        "ka-i-it"
+      ],
+      "line": "Rs. III 26′",
+      "raw": "[u]t-ḫu-ru-u ka-i-it ḫa-pí-pu-na-a-an ka-i-it",
+      "words": [
+        "kait",
+        "hapipunan",
+        "kait"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-wa-aš-ḫa-wi-pí",
+        "ḫa-a-ia-am-ma",
+        "ka-a-at-taḫ"
+      ],
+      "line": "Rs. III 27′",
+      "raw": "ḫa-wa-aš-ḫa-wi-pí ḫa-a-ia-am-ma DINGIR-ap ka-a-at-taḫ",
+      "words": [
+        "hawashawipi",
+        "haiamma",
+        "kattah"
+      ]
+    },
+    {
+      "intact": [
+        "tu-ḫu-le-e-li",
+        "ḫa-pí-pu-na-a-an"
+      ],
+      "line": "Rs. III 30′",
+      "raw": "[u]t-ḫu-ru-u tu-ḫu-le-e-li ḫa-pí-pu-na-a-an tu-ḫu-le-e-[li [",
+      "words": [
+        "tuhuleli",
+        "hapipunan"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 31′",
+      "raw": "[ [ x x x x[ [ [k]a-[a]-at-te",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-pa"
+      ],
+      "line": "Rs. IV 1′",
+      "raw": "-w]a KI a-pa KUR",
+      "words": [
+        "apa"
+      ]
+    },
+    {
+      "intact": [
+        "ma-re-e-et"
+      ],
+      "line": "Rs. IV 2′",
+      "raw": "](-)ma-re-e-et",
+      "words": [
+        "maret"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 3′",
+      "raw": "KI].MIN DUMUMEŠ-ŠU DUMU.DUMUMEŠ-ŠU",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-pa",
+        "ta-ia-an"
+      ],
+      "line": "Rs. IV 4′",
+      "raw": "]x KI a-pa KUR ta-ia-an",
+      "words": [
+        "apa",
+        "taian"
+      ]
+    },
+    {
+      "intact": [
+        "ta-i-ma-a-an"
+      ],
+      "line": "Rs. IV 5′",
+      "raw": "] ta-i-ma-a-an KI.MIN",
+      "words": [
+        "taiman"
+      ]
+    },
+    {
+      "intact": [
+        "u-up-pu-lu-up-ta-a-an"
+      ],
+      "line": "Rs. IV 6′",
+      "raw": "]x u-up-pu-lu-up-ta-a-an",
+      "words": [
+        "uppuluptan"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 7′",
+      "raw": "] DINGIRMEŠ-pí",
+      "words": []
+    },
+    {
+      "intact": [
+        "tap-pé-e-er"
+      ],
+      "line": "Rs. IV 8′",
+      "raw": "tap-p]é-e-er",
+      "words": [
+        "tapper"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-pí-pu-na-a-an"
+      ],
+      "line": "Rs. IV 10′",
+      "raw": "ḫa-pí-p]u-na-a-an",
+      "words": [
+        "hapipunan"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-at-te"
+      ],
+      "line": "Rs. IV 11′",
+      "raw": "DINGIR-a]p ka-a-at-te",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 13′",
+      "raw": "-t]u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 14′",
+      "raw": "-t]u-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 15′",
+      "raw": "]-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 16′",
+      "raw": "]x-wa-a-e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 17′",
+      "raw": "]x-tap-pí-in",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a-tu-u"
+      ],
+      "line": "Rs. IV 18′",
+      "raw": "k]a-a-tu-u",
+      "words": [
+        "katu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 21″",
+      "raw": "]x-i",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.75",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "taian",
+    "taiman",
+    "tewusne",
+    "uhkantiu",
+    "zakzuentu",
+    "kahalwuzzel",
+    "hawashawipi",
+    "halianna",
+    "katte",
+    "katte",
+    "estupuntuhkantiu",
+    "walah",
+    "lehazuwah",
+    "ammisu",
+    "hazuwahentu",
+    "tahakpi",
+    "amputtu",
+    "hapalkian",
+    "lekiwun",
+    "ankaziphentu",
+    "areu",
+    "ukalis",
+    "kate",
+    "hamazu",
+    "pala",
+    "utawes",
+    "ussukkiwe",
+    "ussukkiwis",
+    "ussupkawalwalat",
+    "ussuppu",
+    "teput",
+    "pala",
+    "katte",
+    "katte",
+    "tekunkuhhua",
+    "taian",
+    "tekzasula",
+    "pala",
+    "taiman",
+    "uphapulupta",
+    "uthuru",
+    "tapper",
+    "hawashawi",
+    "kasparuiah",
+    "kattah",
+    "katte",
+    "estupentuhkantiu",
+    "uthuru",
+    "tahattenuit",
+    "hapipunan",
+    "tasimmet",
+    "hawashawipi",
+    "timmet",
+    "kattah",
+    "memai",
+    "wasezzil",
+    "hawashawipi",
+    "takkehal",
+    "katte",
+    "namma",
+    "memai",
+    "hapipunan",
+    "mittunun",
+    "hawashawipi",
+    "arisa",
+    "katte",
+    "uthuru",
+    "kaksazet",
+    "hapipunan",
+    "kaksazet",
+    "hawashawipi",
+    "leleiahu",
+    "kattah",
+    "kait",
+    "hapipunan",
+    "kait",
+    "hawashawipi",
+    "haiamma",
+    "kattah",
+    "tuhuleli",
+    "hapipunan",
+    "apa",
+    "maret",
+    "apa",
+    "taian",
+    "taiman",
+    "uppuluptan",
+    "tapper",
+    "hapipunan",
+    "katte",
+    "katu"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "cth": "731",
+  "id": 221,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 1′",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 2′",
+      "raw": "]x-x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 3′",
+      "raw": "]-nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 4′",
+      "raw": "]-ú-ut",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 5′",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 6′",
+      "raw": "-i]t",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 7′",
+      "raw": "]-ḫa-na",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 1′",
+      "raw": "[ -ḫa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 2′",
+      "raw": "]-u-up",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 3′",
+      "raw": "-u]l",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ri-ú"
+      ],
+      "line": "Rs. IV 4′",
+      "raw": "](-)a-ri-ú",
+      "words": [
+        "ariu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 5′",
+      "raw": "]-ul",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 6′",
+      "raw": "]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 7′",
+      "raw": "-p]a",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 25.122",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ariu"
+  ]
+}

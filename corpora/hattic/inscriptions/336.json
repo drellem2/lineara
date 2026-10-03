@@ -1,0 +1,231 @@
+{
+  "cth": "742",
+  "id": 336,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 1′",
+      "raw": "-k]án",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2′!",
+      "raw": "]-aš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 3′!",
+      "raw": "]GAL",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′!",
+      "raw": "]-ma",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5′!",
+      "raw": "]-uš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′!",
+      "raw": "]-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 7′!",
+      "raw": "]-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 8′!",
+      "raw": "]x x x x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 9′!",
+      "raw": "]-nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10′!",
+      "raw": "]-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 11′!",
+      "raw": "]-it",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 12′!",
+      "raw": "-i]l-lu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 13′!",
+      "raw": "]-wu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 14′!",
+      "raw": "]x-še",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 15′!",
+      "raw": "-z]i-i wa-še-ez-za-aš-x",
+      "words": []
+    },
+    {
+      "intact": [
+        "tu-u-mi-i-il-ti-tu-u"
+      ],
+      "line": "Vs. 16′!",
+      "raw": "] tu-u-mi-i-il-ti-tu-u",
+      "words": [
+        "tumiltitu"
+      ]
+    },
+    {
+      "intact": [
+        "a-ia-ru-u"
+      ],
+      "line": "Vs. 17′!",
+      "raw": "]x a-ia-ru-u",
+      "words": [
+        "aiaru"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 1",
+      "raw": "]-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 2",
+      "raw": "]x-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 3",
+      "raw": "]-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 4",
+      "raw": "]-šu-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 5",
+      "raw": "]-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 6",
+      "raw": "]x-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 7",
+      "raw": "]-e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 8",
+      "raw": "]-te",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 9",
+      "raw": "]-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 10",
+      "raw": "]-ri",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 11",
+      "raw": "]x x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 12",
+      "raw": "]-ti",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 13",
+      "raw": "]-x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 14",
+      "raw": "]-nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 15",
+      "raw": "]-at",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 16",
+      "raw": "]-ú",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 17",
+      "raw": "]-ia",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 18",
+      "raw": "-i]l",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.108",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tumiltitu",
+    "aiaru"
+  ]
+}

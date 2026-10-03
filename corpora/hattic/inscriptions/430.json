@@ -1,0 +1,58 @@
+{
+  "cth": "744",
+  "id": 430,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x(-)x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ x-la-ia-li[ [ x-la-ia[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ ta-li-ia x ta-wa-aḫ-ša[",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-pé-e-ma-aš-ši"
+      ],
+      "line": "5′",
+      "raw": "[ [-e]š-taḫ-ḫa-ar a-pé-e-ma-aš-ši [",
+      "words": [
+        "apemassi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ -taḫ-ḫa-ar ši-ip-ši-i-il[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ e-nu-ka-ra-mu [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "15′",
+      "raw": "[ [-w]u-ur-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.108",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "apemassi"
+  ]
+}

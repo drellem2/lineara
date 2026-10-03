@@ -1,0 +1,158 @@
+{
+  "cth": "746",
+  "id": 622,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 1′",
+      "raw": "]x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 2′",
+      "raw": "[ [me]-ep-ni-e[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 3′",
+      "raw": "[ me-ep-ni-e[",
+      "words": []
+    },
+    {
+      "intact": [
+        "me-ep-ni-e"
+      ],
+      "line": "Vs.(?) r. Kol. 4′",
+      "raw": "[ [-i]k-ku-ú-up me-ep-ni-e [",
+      "words": [
+        "mepnie"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 5′",
+      "raw": "[ (-)ḫa-pa-a-ti-ip um-mi-e-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 6′",
+      "raw": "[ x tág-ga-a-an-ni-iš-ti-i[t(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 7′",
+      "raw": "[ x-a-ḫe-el-ni-la(-)mu-u-wa-z[i(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 8′",
+      "raw": "[ x pa-ti-a-[a]ḫ ú-mi-ša-a-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 9′",
+      "raw": "[ [-z]i-iḫ-pa-i-iš iš-ti-i-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 10′",
+      "raw": "[ [-š]a-i-li ḫa-aš-ša-ki-i-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 11′",
+      "raw": "[ [-z]i-i-ra-a-aḫ [ [ -at-te-e-wu-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 12′",
+      "raw": "[ [-d]a-at-x[ -ša-ru-na [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 13′",
+      "raw": "[ x-ul-lu pí-in(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 14′",
+      "raw": "[ x li-iš(-)[ [ x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 1′",
+      "raw": "[ [-e]p x[ [ (-)zu-e-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ti-iš-ša-li"
+      ],
+      "line": "Rs.(?) r. Kol. 2′",
+      "raw": "[ ti-iš-ša-li le-e-x[",
+      "words": [
+        "tissali"
+      ]
+    },
+    {
+      "intact": [
+        "zi-iz-za-aš-šu-un"
+      ],
+      "line": "Rs.(?) r. Kol. 3′",
+      "raw": "[ zi-iz-za-aš-šu-un tap-ša-a-ú(-)x[",
+      "words": [
+        "zizzassun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 4′",
+      "raw": "[ -et x ga-a-mi-ša-a-ru-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 5′",
+      "raw": "[ x nu-za-a-ru-ú-zi(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 6′",
+      "raw": "[ x ti-iš-šu-ú-[w]a-ti-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 7′",
+      "raw": "[ x ti-iš-šu-ú-ta-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 8′",
+      "raw": "[ x x-ia-ap-x-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.29",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "mepnie",
+    "tissali",
+    "zizzassun"
+  ]
+}

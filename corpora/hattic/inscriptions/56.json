@@ -1,15 +1,56 @@
 {
-  "category": "lexeme",
-  "gloss": "he should not come",
+  "cth": "627",
   "id": 56,
-  "is_bilingual": false,
-  "name": "taš-te-nuwa",
-  "provenance": "Hattic lexeme; see citation.",
-  "source_citation": "'Hattische Sprache', de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.",
-  "text": "taš-te-nuwa",
-  "tier": "A",
-  "transliteration": "tastenuwa",
+  "lines": [
+    {
+      "intact": [
+        "ta-ni-wu-ul-la",
+        "wa-ul-la"
+      ],
+      "line": "{€2} Vs. II 3′",
+      "raw": "ta-ni-wu-ul-la wa-ul-la",
+      "words": [
+        "taniwulla",
+        "waulla"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ni-zi-la",
+        "zi-la"
+      ],
+      "line": "{€2} Vs. II 4′",
+      "raw": "ta-ni-zi-la zi-la",
+      "words": [
+        "tanizila",
+        "zila"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ši-ma-az"
+      ],
+      "line": "{€2} Vs. II 5′",
+      "raw": "ta-ši-ma-az",
+      "words": [
+        "tasimaz"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€3} Vs. III 18",
+      "raw": "[ku-tar-ma-a [ku-tar-ma-a [[",
+      "words": []
+    }
+  ],
+  "manuscript": "İzmir 1270+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "tastenuwa"
+    "taniwulla",
+    "waulla",
+    "tanizila",
+    "zila",
+    "tasimaz"
   ]
 }

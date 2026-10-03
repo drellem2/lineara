@@ -1,0 +1,51 @@
+{
+  "cth": "742",
+  "id": 338,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "[ [ x x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-aḫ-ku-un"
+      ],
+      "line": "2′",
+      "raw": "[[ [ -i-pí-nu pa-aḫ-ku-un x[",
+      "words": [
+        "pahkun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[a-wa-an-nu-uš [ḫa-a-aš-pí-u [l[i-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[i-ta-ap-p[a-",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a"
+      ],
+      "line": "lk. Rd.",
+      "raw": "[ x ma-a we-e-x[",
+      "words": [
+        "ma"
+      ]
+    }
+  ],
+  "manuscript": "KUB 48.47",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "pahkun",
+    "ma"
+  ]
+}

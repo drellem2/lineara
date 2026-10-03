@@ -1,0 +1,58 @@
+{
+  "cth": "745",
+  "id": 543,
+  "lines": [
+    {
+      "intact": [],
+      "line": "lk. Kol. 1′",
+      "raw": "]x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 2′",
+      "raw": "[ x-kar",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 3′",
+      "raw": "]-ar",
+      "words": []
+    },
+    {
+      "intact": [
+        "ku-in"
+      ],
+      "line": "lk. Kol. 4′",
+      "raw": "]x ku-in",
+      "words": [
+        "kuin"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 5′",
+      "raw": "-r]e-eš-ši",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 6′",
+      "raw": "-r]u-li-wa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 7′",
+      "raw": "]x(-)[n]u-d[u(-)",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 68.177",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kuin"
+  ]
+}

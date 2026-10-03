@@ -1,0 +1,83 @@
+{
+  "cth": "736",
+  "id": 292,
+  "lines": [
+    {
+      "intact": [
+        "ka-a-ta-ru-u",
+        "ḫa-at-tu-ši-in"
+      ],
+      "line": "Vs. lk. Kol. 1a",
+      "raw": "[ [ [(-)t]a-ru-u ka-a-ta-ru-u URUḫa-at-tu-ši-in",
+      "words": [
+        "kataru",
+        "hattusin"
+      ]
+    },
+    {
+      "intact": [
+        "li-wu-ur",
+        "ḫa-at-we-iš",
+        "ka-a-teta-ru-u"
+      ],
+      "line": "Vs. lk. Kol. 2a",
+      "raw": "[te-w]u-ú-uš li-wu-ur ḫa-at-we-iš ka-a-te(-)ta-ru-u",
+      "words": [
+        "liwur",
+        "hatweis",
+        "katetaru"
+      ]
+    },
+    {
+      "intact": [
+        "ma-az-zi-ip-li-li-ia-ḫu-un"
+      ],
+      "line": "Vs. lk. Kol. 3a",
+      "raw": "[le]-e-wu-ur ma-az-zi-ip-li-li-ia-ḫu-un",
+      "words": [
+        "mazzipliliahun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 4a",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 5a",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 6a",
+      "raw": "[ [ [-z]e-e la-a-i-ia(-)x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 7a",
+      "raw": "[ [ -ze-e i-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 8a",
+      "raw": "[ [ (-)zi(-)[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.7",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kataru",
+    "hattusin",
+    "liwur",
+    "hatweis",
+    "katetaru",
+    "mazzipliliahun"
+  ]
+}

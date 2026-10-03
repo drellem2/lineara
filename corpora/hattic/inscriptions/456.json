@@ -1,0 +1,107 @@
+{
+  "cth": "744",
+  "id": 456,
+  "lines": [
+    {
+      "intact": [
+        "te-wu-uš-ne"
+      ],
+      "line": "Vs. 2",
+      "raw": "[ -un-ni-ia te-wu-uš-ne a-š[a-",
+      "words": [
+        "tewusne"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 3",
+      "raw": "[ [l]e-e-ši-in le-e-wa-ši-i[n",
+      "words": []
+    },
+    {
+      "intact": [
+        "u-pu-la-aš-ne"
+      ],
+      "line": "Vs. 4",
+      "raw": "[ x u-pu-la-aš-ne le-e-ši-i[n",
+      "words": [
+        "upulasne"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5",
+      "raw": "[ [-ši]-in le-e-wa-ši-[in",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-at-te"
+      ],
+      "line": "Vs. 6",
+      "raw": "[ta-ba-ar-n]a ka-at-te ši-i-ip-zi-i[l",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "te-wa-aš-ḫa-ap",
+        "a-ši"
+      ],
+      "line": "Vs. 7",
+      "raw": "x te-wa-aš-ḫa-ap a-ši i-wa-x[",
+      "words": [
+        "tewashap",
+        "asi"
+      ]
+    },
+    {
+      "intact": [
+        "iš-ta-aḫ-ḫu-u-ḫu",
+        "ú-uk"
+      ],
+      "line": "Vs. 8",
+      "raw": "iš-ta-aḫ-ḫu-u-ḫu ú-uk ta-[",
+      "words": [
+        "istahhuhu",
+        "uk"
+      ]
+    },
+    {
+      "intact": [
+        "te-e-pu-ut"
+      ],
+      "line": "Vs. 9",
+      "raw": "[ x te-e-pu-ut te-e-x[",
+      "words": [
+        "teput"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10",
+      "raw": "[ x pa-l[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 11",
+      "raw": "[ [-a]r-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.8",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tewusne",
+    "upulasne",
+    "katte",
+    "tewashap",
+    "asi",
+    "istahhuhu",
+    "uk",
+    "teput"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "cth": "745",
+  "id": 511,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ -a-ta-e-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ ú-i-zi-i[l",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ x-ip le-e(-)za-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ [le]-e-wa-ša-ḫi-in eš-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-ku-ut-tu",
+        "pa-la-a"
+      ],
+      "line": "6′",
+      "raw": "[ li-ku-ut-tu pa-la-a [",
+      "words": [
+        "likuttu",
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ x x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.154",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "likuttu",
+    "pala"
+  ]
+}

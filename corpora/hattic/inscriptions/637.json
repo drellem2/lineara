@@ -1,0 +1,74 @@
+{
+  "cth": "746",
+  "id": 637,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "-ḫ]a-wa-[ [ x x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "la-a-ma"
+      ],
+      "line": "2′",
+      "raw": "[ x la-a-ma [",
+      "words": [
+        "lama"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ (-)ḫu-u-ri-i-iš x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ -a-ma Dwa-ši-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-ga-a-an-na-aš"
+      ],
+      "line": "5′",
+      "raw": "[ -ú ḫa-ga-a-an-na-aš [",
+      "words": [
+        "hakannas"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a"
+      ],
+      "line": "6′",
+      "raw": "[ [-z]i-il ma-a ḫa-an-x[",
+      "words": [
+        "ma"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ x(-)na-pé-e-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ (-)ma-a x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.56",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lama",
+    "hakannas",
+    "ma"
+  ]
+}

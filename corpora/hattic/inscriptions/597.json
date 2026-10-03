@@ -1,0 +1,234 @@
+{
+  "cth": "745",
+  "id": 597,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "]x-t[e- [ x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "]x ta-ze-el-wa(-)[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-a-ap-za-el"
+      ],
+      "line": "4′",
+      "raw": "]-ia-ri-iš wa-a-ap-za-el [ [",
+      "words": [
+        "wapzael"
+      ]
+    },
+    {
+      "intact": [
+        "wi-e-et-tu"
+      ],
+      "line": "5′",
+      "raw": "]x(-)tu-úr-tu-u wi-e-et-tu [ [",
+      "words": [
+        "wiettu"
+      ]
+    },
+    {
+      "intact": [
+        "iš-wi-iš-di-la"
+      ],
+      "line": "6′",
+      "raw": "]-e-u iš-wi-iš-di-la a-ta-a-ḫ[u [",
+      "words": [
+        "iswistila"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "]-šu-u Dka-taḫ-zi-pu-r[i]-šu [ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-ḫu",
+        "la-pí-i-nuwa-az-zi"
+      ],
+      "line": "8′",
+      "raw": "ta-ba]-ar-na-ḫu la-pí-i-nu(-)wa-az-zi [",
+      "words": [
+        "taparnahu",
+        "lapinuwazzi"
+      ]
+    },
+    {
+      "intact": [
+        "wa-ḫe-el-lu-u"
+      ],
+      "line": "9′",
+      "raw": "]x-wu-ur wa-ḫe-el-lu-u",
+      "words": [
+        "wahellu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "] ta-ḫa-a-la-x-na-aš-ši",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-an"
+      ],
+      "line": "11′",
+      "raw": "t]a-ba-ar-na-an an-zi-in-na-x[",
+      "words": [
+        "taparnan"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "12′",
+      "raw": "]x(-)tu-uḫ-ma wa-aḫ-šu-š[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "13′",
+      "raw": "](-)x-ta-a-az-zi-le-e-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "14′",
+      "raw": "]-pí",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "15′",
+      "raw": "-t]a-ia",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "16′",
+      "raw": "]x-aš-mi-i-šu-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-an",
+        "le-e-a-ša-aḫ"
+      ],
+      "line": "17′",
+      "raw": "ta-ba-a]r-na-an le-e-a-ša-aḫ",
+      "words": [
+        "taparnan",
+        "leasah"
+      ]
+    },
+    {
+      "intact": [
+        "pár-ni-in-ga-aš"
+      ],
+      "line": "18′",
+      "raw": "]x pár-ni-in-ga-aš",
+      "words": [
+        "parninkas"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "19′",
+      "raw": "]-ú-un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "20′",
+      "raw": "]x-a-el",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "21′",
+      "raw": "]x-aš-ki-li-in-ša-x-el",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "22′",
+      "raw": "]x-ni-maḫ",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-wa-an-na-an-na-an"
+      ],
+      "line": "23′",
+      "raw": "MUNUSta-wa-a]n-na-an-na-an",
+      "words": [
+        "tawannannan"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-a-ša-aḫ"
+      ],
+      "line": "24′",
+      "raw": "le-e-a-š]a-aḫ",
+      "words": [
+        "leasah"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "25′",
+      "raw": "]x-aḫ",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "26′",
+      "raw": "-n]a-an",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-te-ek-ka-aš"
+      ],
+      "line": "27′",
+      "raw": "ḫa-te-e]k-ka-aš",
+      "words": [
+        "hatekkas"
+      ]
+    }
+  ],
+  "manuscript": "KUB 57.57",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wapzael",
+    "wiettu",
+    "iswistila",
+    "taparnahu",
+    "lapinuwazzi",
+    "wahellu",
+    "taparnan",
+    "taparnan",
+    "leasah",
+    "parninkas",
+    "tawannannan",
+    "leasah",
+    "hatekkas"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "cth": "745",
+  "id": 589,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs.? 1′",
+      "raw": "]x[ [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 2′",
+      "raw": "]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 3′",
+      "raw": "]x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 4′",
+      "raw": "]x x x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 5′",
+      "raw": "te]-ḫi-il(-)[ [ x-wi",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e-ḫa-na-a-ú"
+      ],
+      "line": "Vs.? 6′",
+      "raw": "-š]a-aḫ le-e-ḫa-na-a-ú",
+      "words": [
+        "lehanau"
+      ]
+    },
+    {
+      "intact": [
+        "teku-úr-ku-we-in-na"
+      ],
+      "line": "Vs.? 7′",
+      "raw": "](-)te(-)ku-úr-ku-we-in-na",
+      "words": [
+        "tekurkuweinna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 2",
+      "raw": "]-a-a[ḫ(-)",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.60",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lehanau",
+    "tekurkuweinna"
+  ]
+}

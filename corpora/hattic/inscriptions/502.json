@@ -1,0 +1,161 @@
+{
+  "cth": "745",
+  "id": 502,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 1′",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2′",
+      "raw": "]x-al",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-at-ti-en"
+      ],
+      "line": "Vs. 3′",
+      "raw": "] URUḫa-at-ti-en [",
+      "words": [
+        "hattien"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′",
+      "raw": "[ x(-)zi-la-aḫ",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5′",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-a-li-ip"
+      ],
+      "line": "Vs. 6′",
+      "raw": "-p]é-en li-a-li-ip",
+      "words": [
+        "lialip"
+      ]
+    },
+    {
+      "intact": [
+        "li-a-li-ip"
+      ],
+      "line": "Vs. 7′",
+      "raw": "]-un li-a-li-ip",
+      "words": [
+        "lialip"
+      ]
+    },
+    {
+      "intact": [
+        "eš-ša-li-ip"
+      ],
+      "line": "Vs. 8′",
+      "raw": "-š]a-aḫ eš-ša-li-ip",
+      "words": [
+        "essalip"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": "Vs. 9′",
+      "raw": "]x-pu-un-ni pa-la a-aš-ga-x",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10′",
+      "raw": "]-an-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 1′",
+      "raw": "[ -iš-ga-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 2′",
+      "raw": "[ x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 3′",
+      "raw": "]-un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 4′",
+      "raw": "-a]z-ḫu ši-it-x-ḫa-ap-ti-ia",
+      "words": []
+    },
+    {
+      "intact": [
+        "eš-ḫa-nu-un"
+      ],
+      "line": "Rs. 5′",
+      "raw": "-i]š-te-ḫu eš-ḫa-nu-un",
+      "words": [
+        "eshanun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 6′",
+      "raw": "]-a-an-ta-ḫa-ḫi-il-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 7′",
+      "raw": "[ -wa-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 8′",
+      "raw": "[ -un [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 9′",
+      "raw": "[ (-)a-la-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 10′",
+      "raw": "[ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.133",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "hattien",
+    "lialip",
+    "lialip",
+    "essalip",
+    "pala",
+    "eshanun"
+  ]
+}

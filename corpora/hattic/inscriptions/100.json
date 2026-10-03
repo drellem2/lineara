@@ -1,0 +1,36 @@
+{
+  "cth": "633",
+  "id": 100,
+  "lines": [
+    {
+      "intact": [
+        "a-la-a-i-ia",
+        "a-ri-ni-id-du"
+      ],
+      "line": "Rs. 22′",
+      "raw": "a-la-a-i-ia Da-ri-ni-id-du a-la-a-i-[ia [",
+      "words": [
+        "alaia",
+        "arinittu"
+      ]
+    },
+    {
+      "intact": [
+        "a-ri-ni-id-du"
+      ],
+      "line": "Rs. 23′",
+      "raw": "Da-ri-ni-id-du",
+      "words": [
+        "arinittu"
+      ]
+    }
+  ],
+  "manuscript": "IBoT 1.29",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "alaia",
+    "arinittu",
+    "arinittu"
+  ]
+}

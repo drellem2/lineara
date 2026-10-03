@@ -1,0 +1,133 @@
+{
+  "cth": "726",
+  "id": 201,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. 1′",
+      "raw": "mu-uḫ-ḫa-x[ [ x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-wa-ap-še"
+      ],
+      "line": " {€1+2} Vs. 2′",
+      "raw": "[ḫa-pal-ki-ia-an [m[a]-x[ [ a-wa-ap-še ti-i[l-",
+      "words": [
+        "awapse"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. 3′",
+      "raw": "[a-wa-ap-še [ta-a-mu-na-a-m[u- [ [t]ap-pa-a-ša-aḫ iš-ki-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. 4′",
+      "raw": "[ki-i-ka-ta-a-ku-ši [mi-x[ [ -un-ga-se-e ḫa-pí-it-ḫu-l[i(-)",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-bar-na-an",
+        "ka-a-at-te"
+      ],
+      "line": " {€1+2} Vs. 5′",
+      "raw": "[n[a- [ [-d]u-zi-in ga-aš-za-x x-pa ta-bar-na-an ka-a-at-te [",
+      "words": [
+        "taparnan",
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "zu-ú-úr",
+        "le-e",
+        "ga-a-ta-ku-ši",
+        "tág-ga-a-am"
+      ],
+      "line": " {€1+2} Vs. 6′",
+      "raw": "[[le]-e-we-el-tu le-e-[a]-ša-aḫ zu-ú-úr le-e ga-a-ta-ku-ši tág-ga-a-am",
+      "words": [
+        "zur",
+        "le",
+        "katakusi",
+        "takkam"
+      ]
+    },
+    {
+      "intact": [
+        "wa-tu-ú-tu-uḫ",
+        "ḫa-pal-ki-ia-an"
+      ],
+      "line": " {€1+2} Vs. 7′",
+      "raw": "[ [ x x x x LÚ˽D[IŠ]KUR wa-tu-ú-tu-uḫ ḫa-pal-ki-ia-an",
+      "words": [
+        "watutuh",
+        "hapalkian"
+      ]
+    },
+    {
+      "intact": [
+        "ti-ir-ma-a-ḫi-in",
+        "at-kur-ku-u-pal"
+      ],
+      "line": " {€1+2} Vs. 8′",
+      "raw": "[ [ x ti-ir-ma-a-ḫi-in at-kur-ku-u-pal wa-tu-ta-x x x",
+      "words": [
+        "tirmahin",
+        "atkurkupal"
+      ]
+    },
+    {
+      "intact": [
+        "ga-ta-ku-mu-un"
+      ],
+      "line": " {€2} Vs. 9′",
+      "raw": "[ [ -e-ep ga-ta-ku-mu-un eš-ša-le-e-e[p",
+      "words": [
+        "katakumun"
+      ]
+    },
+    {
+      "intact": [
+        "i-pí-nu-un",
+        "ta-aš-ga-ti-in"
+      ],
+      "line": " {€2} Vs. 10′",
+      "raw": "[[ [ x x i-pí-nu-un ta-aš-ga-ti-in [",
+      "words": [
+        "ipinun",
+        "taskatin"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. 11′",
+      "raw": "[[ [ x x x[ [ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.3+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "awapse",
+    "taparnan",
+    "katte",
+    "zur",
+    "le",
+    "katakusi",
+    "takkam",
+    "watutuh",
+    "hapalkian",
+    "tirmahin",
+    "atkurkupal",
+    "katakumun",
+    "ipinun",
+    "taskatin"
+  ]
+}

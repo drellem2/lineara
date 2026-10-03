@@ -1,0 +1,93 @@
+{
+  "cth": "731",
+  "id": 224,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 1′",
+      "raw": "[ [ -ki-iš ša-aš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 2′",
+      "raw": "[[iš-t]u-ú-uḫ-ku-ḫu-šu-u-ut [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 3′",
+      "raw": "[[p]a-aḫ-ka-al-le-e wa-a-ta-a-[ri-iš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 4′",
+      "raw": "[te-u-up [lu-u-ul [iš-tu-uḫ-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 5′",
+      "raw": "[pa-aḫ-ka-al-le-e [za-a-ar [[",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-u-up"
+      ],
+      "line": "Vs. I 6′",
+      "raw": "[u-wa-za-ar [[ [ te-u-up k[at-",
+      "words": [
+        "teup"
+      ]
+    },
+    {
+      "intact": [
+        "ka-at-te"
+      ],
+      "line": "Rs. IV 1",
+      "raw": "[[ka-a]t-te-eš-ḫa-wi ka-at-te [",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 2",
+      "raw": "[ú-ri-i-il [wa-šu-u-up [a-[aḫ-ka-al-le-e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 3",
+      "raw": "[we-e-wa-ra-ak [a-aḫ-ka-al-l[e-e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 4",
+      "raw": "[[wa-a-t]a-a-ri-iš a-aḫ-ka-al-[le-e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 5",
+      "raw": "[[a-aḫ-k]a-al-le-e za-a-[ar",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 6",
+      "raw": "[[ [ [ -ú-uḫ-ku-ḫu-š[u-",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.50",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "teup",
+    "katte"
+  ]
+}

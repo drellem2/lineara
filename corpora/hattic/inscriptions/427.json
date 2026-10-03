@@ -1,0 +1,92 @@
+{
+  "cth": "744",
+  "id": 427,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs.(?) III(?) 1′",
+      "raw": "]šu-up-g[a-ḫe-el [",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-wa-a-ša-aḫ"
+      ],
+      "line": "Vs.(?) III(?) 2′",
+      "raw": "li-wa]-a-ša-aḫ šu-up-g[a-ḫe-el [",
+      "words": [
+        "liwasah"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) III(?) 3′",
+      "raw": "li-i]k-ka₄-zu-i-ma-aḫ-[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "šu-uk-ka-ti"
+      ],
+      "line": "Vs.(?) III(?) 4′",
+      "raw": "šu-u]k-ka₄-ti [ [",
+      "words": [
+        "sukkati"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-ku-ut"
+      ],
+      "line": "Vs.(?) III(?) 5′",
+      "raw": "l]e-e-ku-ut le-e-ḫa-a[ḫ-ši-im]",
+      "words": [
+        "lekut"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-ḫi-na-aš"
+      ],
+      "line": "Vs.(?) III(?) 6′",
+      "raw": "M]E-EŠ le-e-ḫi-na-aš",
+      "words": [
+        "lehinas"
+      ]
+    },
+    {
+      "intact": [
+        "le-e",
+        "ták-ki-ḫa-ú-un"
+      ],
+      "line": "Vs.(?) III(?) 7′",
+      "raw": "le]-e ták-ki-ḫa-ú-un",
+      "words": [
+        "le",
+        "takkihaun"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-wa-aš-ḫa-ap"
+      ],
+      "line": "Vs.(?) III(?) 8′",
+      "raw": "]x-ma ḫa-wa-aš-ḫa-ap",
+      "words": [
+        "hawashap"
+      ]
+    }
+  ],
+  "manuscript": "KUB 28.100",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "liwasah",
+    "sukkati",
+    "lekut",
+    "lehinas",
+    "le",
+    "takkihaun",
+    "hawashap"
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "cth": "744",
+  "id": 405,
+  "lines": [
+    {
+      "intact": [
+        "ta-ba-ar-na"
+      ],
+      "line": "Rs. 1′",
+      "raw": "ta-ba-ar-n]a ka-a[t-te",
+      "words": [
+        "taparna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 2′",
+      "raw": "[ [ta-ba-ar-n]a ka-a[t-te",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": "Rs. 3′",
+      "raw": "[ [ka-a]t-te pa-la t[e-",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 4′",
+      "raw": "[ x ka-pu-u-ti-li-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 5′",
+      "raw": "[ x[ x-wu-ru-un-ti-na [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 6′",
+      "raw": "[ x(-)ta-pu-u-ut pu-u-ru-u[š(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 7′",
+      "raw": "[ x(-)ka-at-te-e(-)ta-li-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 8′",
+      "raw": "[ -wa-x(-)ka-at-taḫ(-)da-li-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 9′",
+      "raw": "[ [t]a-ba-ar-na-an te-ep-k[u-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 10′",
+      "raw": "[ [ta]-wa-an-na-na-an te-ep-k[u-",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": "Rs. 11′",
+      "raw": "[ [l]i-pí-nu pa-la li-ip-zi-p[í-nu",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 12′",
+      "raw": "[ [te-ep-ku-u]n-ku-uḫ-ḫu-ú-a [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 13′",
+      "raw": "[ -uš te-en-te-i[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 13a′",
+      "raw": "[ 〈〈x x〉〉[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 14′",
+      "raw": "[ x x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.98",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "taparna",
+    "pala",
+    "pala"
+  ]
+}

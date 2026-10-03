@@ -1,0 +1,64 @@
+{
+  "cth": "738",
+  "id": 304,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 3′",
+      "raw": "[ x-na da-aš-ku-w[a](-)ia(-)[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a-i-ú-un"
+      ],
+      "line": "Vs. 4′",
+      "raw": "[ x-pí ma-a-i-ú-un x[",
+      "words": [
+        "maiun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5′",
+      "raw": "[ [k]a-ma-am-ma-a-an an-d[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′",
+      "raw": "[ x URUzi-in-ku-ri-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 7′",
+      "raw": "[ [i]š-ta-a-an URUúr-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 8′",
+      "raw": "[ [i]š-ta-a-an a-an-ḫu-u(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 9′",
+      "raw": "[ [-n]e-e ma-a-ši-wu-u[r",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10′",
+      "raw": "[ x-la ta-i-il-l[a",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 21.105",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "maiun"
+  ]
+}

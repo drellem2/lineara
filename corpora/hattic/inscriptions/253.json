@@ -1,0 +1,112 @@
+{
+  "cth": "734",
+  "id": 253,
+  "lines": [
+    {
+      "intact": [
+        "a-aš-za-wa"
+      ],
+      "line": "Vs.? 1′",
+      "raw": "]x-x[ [ a-aš-za-wa",
+      "words": [
+        "aszawa"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ku-ru-un"
+      ],
+      "line": "Vs.? 2′",
+      "raw": "z]i-ku-ru-un",
+      "words": [
+        "zikurun"
+      ]
+    },
+    {
+      "intact": [
+        "le-e",
+        "a-an-wa-aš-ši"
+      ],
+      "line": "Vs.? 3′",
+      "raw": "l]e-e a-an-wa-aš-ši",
+      "words": [
+        "le",
+        "anwassi"
+      ]
+    },
+    {
+      "intact": [
+        "ú-ri-i"
+      ],
+      "line": "Vs.? 4′",
+      "raw": "] ú-ri-i",
+      "words": [
+        "uri"
+      ]
+    },
+    {
+      "intact": [
+        "kam-zi"
+      ],
+      "line": "Vs.? 5′",
+      "raw": "]x kam-zi",
+      "words": [
+        "kamzi"
+      ]
+    },
+    {
+      "intact": [
+        "ka-taḫ-ri-pu-u-ri",
+        "zi-ia-aḫ-šu"
+      ],
+      "line": "Vs.? 6′",
+      "raw": "Dka-taḫ-ri-pu-u-r]i zi-ia-aḫ-šu [",
+      "words": [
+        "katahripuri",
+        "ziahsu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 7′",
+      "raw": "Dšu-li-i]n-kat-te(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 1′",
+      "raw": "-r]a",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-ar-ta-an-ni"
+      ],
+      "line": "Rs.? 2′",
+      "raw": "wa-a]r-ta-an-ni x[",
+      "words": [
+        "wartanni"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 3′",
+      "raw": "x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.125",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "aszawa",
+    "zikurun",
+    "le",
+    "anwassi",
+    "uri",
+    "kamzi",
+    "katahripuri",
+    "ziahsu",
+    "wartanni"
+  ]
+}

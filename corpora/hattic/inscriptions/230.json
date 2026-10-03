@@ -1,0 +1,109 @@
+{
+  "cth": "732",
+  "id": 230,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]-nu(-)x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a"
+      ],
+      "line": "2′",
+      "raw": "[-g]a-ri ma-a n[u-",
+      "words": [
+        "ma"
+      ]
+    },
+    {
+      "intact": [
+        "kat-te-e"
+      ],
+      "line": "3′",
+      "raw": "[ta-ba]-ar-na kat-te-e [",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "taḫ-ru-na"
+      ],
+      "line": "4′",
+      "raw": "-nu taḫ-ru-na li-ip-z[i",
+      "words": [
+        "tahruna"
+      ]
+    },
+    {
+      "intact": [
+        "mu-ru-u-wa"
+      ],
+      "line": "5′",
+      "raw": "x(-)le-e-ḫa mu-ru-u-wa taḫ-x[",
+      "words": [
+        "muruwa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "x-u-wa-ḫi-ši-ip še-x-uš x-iz(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "-aḫ-x(-)le-e-pí-x-x-x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "]x-an(-)ia-aḫ-x-za ša-a-x-e-ni",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "]x-ni x-še-x-zi-x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "11′",
+      "raw": "]x-x x x-x-x-ḫi-zi",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "12′",
+      "raw": "]x-da zi(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "13′",
+      "raw": "x-wa-iz-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "14′",
+      "raw": "x AN-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.15",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ma",
+    "katte",
+    "tahruna",
+    "muruwa"
+  ]
+}

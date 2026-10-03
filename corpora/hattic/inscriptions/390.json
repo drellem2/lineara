@@ -1,0 +1,39 @@
+{
+  "cth": "744",
+  "id": 390,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Rs. V 1′",
+      "raw": "a-a[r-ru",
+      "words": []
+    },
+    {
+      "intact": [
+        "ar-ru-u"
+      ],
+      "line": "Rs. V 3′",
+      "raw": "ar-ru-u",
+      "words": [
+        "arru"
+      ]
+    },
+    {
+      "intact": [
+        "ar-ru-u"
+      ],
+      "line": "Rs. V 4′",
+      "raw": "ar-ru-u",
+      "words": [
+        "arru"
+      ]
+    }
+  ],
+  "manuscript": "KBo 37.79",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "arru",
+    "arru"
+  ]
+}

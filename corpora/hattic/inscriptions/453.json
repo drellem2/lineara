@@ -1,0 +1,91 @@
+{
+  "cth": "744",
+  "id": 453,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 1′",
+      "raw": "](-)ú-i(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2′",
+      "raw": "[ x [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 3′",
+      "raw": "[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′",
+      "raw": "]x-nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5′",
+      "raw": "]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′",
+      "raw": "]x-ap(-)tu-mi-il-la-an-ti(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 7′",
+      "raw": "[ x",
+      "words": []
+    },
+    {
+      "intact": [
+        "la-aš-da-la-az-zu",
+        "la-aš-da-la-az-zu"
+      ],
+      "line": "Vs. 8′",
+      "raw": "la-aš-d]a-la-az-zu la-aš-da-la-az-zu",
+      "words": [
+        "lastalazzu",
+        "lastalazzu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 9′",
+      "raw": "]x-a-ši-i-ma-ši-ú-i-nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 1′",
+      "raw": "-z]u-ú-l[i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 2′",
+      "raw": "[ [(-)ḫ]a-ab-du [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 3′",
+      "raw": "[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.34",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lastalazzu",
+    "lastalazzu"
+  ]
+}

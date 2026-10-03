@@ -1,0 +1,102 @@
+{
+  "cth": "745",
+  "id": 533,
+  "lines": [
+    {
+      "intact": [
+        "da-la-pí-nu-i-nu"
+      ],
+      "line": "Vs. 1′",
+      "raw": "] Dda-la-pí-nu-i-nu [ [",
+      "words": [
+        "talapinuinu"
+      ]
+    },
+    {
+      "intact": [
+        "ma-al-la"
+      ],
+      "line": "Vs. 2′",
+      "raw": "]-mi-en-nu ma-al-la [ [",
+      "words": [
+        "malla"
+      ]
+    },
+    {
+      "intact": [
+        "šu-ún-tu-um-mi-en-nu"
+      ],
+      "line": "Vs. 3′",
+      "raw": "] šu-ún-tu-um-mi-en-nu [ [",
+      "words": [
+        "suntummiennu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′",
+      "raw": "]x-x-x-li [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5′",
+      "raw": "]x-im-mi-iz-zi(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′",
+      "raw": "]x x x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 7′",
+      "raw": "-i]a-ḫu-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "ša-i-il-la-a-ú"
+      ],
+      "line": "Vs. 8′",
+      "raw": "]x ša-i-il-la-a-ú",
+      "words": [
+        "saillau"
+      ]
+    },
+    {
+      "intact": [
+        "ša-az-za-al-li"
+      ],
+      "line": "Vs. 9′",
+      "raw": "]-i-na ša-az-za-al-li",
+      "words": [
+        "sazzalli"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10′",
+      "raw": "]-az-za-al-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 11′",
+      "raw": "]x-la-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 56.185",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "talapinuinu",
+    "malla",
+    "suntummiennu",
+    "saillau",
+    "sazzalli"
+  ]
+}

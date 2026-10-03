@@ -1,0 +1,148 @@
+{
+  "cth": "820",
+  "id": 642,
+  "lines": [
+    {
+      "intact": [
+        "ḫa-am-ma-an-ni-i",
+        "ma-am-ma"
+      ],
+      "line": "Vs., r. Kol. 5′",
+      "raw": "] Dḫa-am-ma-an-ni-i Dma-am-ma DUTU-un",
+      "words": [
+        "hammanni",
+        "mamma"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ḫa-ru-u-ul",
+        "me-ez-zu-ul-la"
+      ],
+      "line": "Vs., r. Kol. 6′",
+      "raw": "NINDA.GU]R₄.RA Dta-ḫa-ru-u-ul Dme-ez-zu-ul-la",
+      "words": [
+        "taharul",
+        "mezzulla"
+      ]
+    },
+    {
+      "intact": [
+        "te-ni-ra-i-ú",
+        "te-te-pí-ri-a-an"
+      ],
+      "line": "Vs., r. Kol. 7′",
+      "raw": "] Dte-ni-ra-i-ú Dte-te-pí-ri-a-an",
+      "words": [
+        "teniraiu",
+        "tetepirian"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-ta-ti-ul"
+      ],
+      "line": "Vs., r. Kol. 8′",
+      "raw": "-l]i-šu-me-iš DUTU-an a-an-ta-ti-ul",
+      "words": [
+        "antatiul"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na",
+        "a-an-ta-te-ul"
+      ],
+      "line": "Vs., r. Kol. 9′",
+      "raw": "t]a-ba-ar-na a-an-ta-te-ul",
+      "words": [
+        "taparna",
+        "antateul"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs., r. Kol. 10′",
+      "raw": "]x x(-)pí-ri-iš D[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-en-te-el",
+        "ta-ba-ar-na"
+      ],
+      "line": "Rs., r. Kol. 1′",
+      "raw": "] le-en-te-el ta-ba-ar-na",
+      "words": [
+        "lentel",
+        "taparna"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-a-i-pí-na-am-mu-ul"
+      ],
+      "line": "Rs., r. Kol. 2′",
+      "raw": "]-ta-e-et ḫa-a-i-pí-na-am-mu-ul",
+      "words": [
+        "haipinammul"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-pal-ki-an"
+      ],
+      "line": "Rs., r. Kol. 3′",
+      "raw": "]x-i-te-iš ḫa-pal-ki-an",
+      "words": [
+        "hapalkian"
+      ]
+    },
+    {
+      "intact": [
+        "li-ni-ma-aḫ",
+        "wa-pa-aḫ-šu-ul"
+      ],
+      "line": "Rs., r. Kol. 4′",
+      "raw": "]x-a li-ni-ma-aḫ wa-pa-aḫ-šu-ul",
+      "words": [
+        "linimah",
+        "wapahsul"
+      ]
+    },
+    {
+      "intact": [
+        "te-wu-ur",
+        "ta-ga-e-et"
+      ],
+      "line": "Rs., r. Kol. 5′",
+      "raw": "]-a te-wu-ur ta-ga-e-et",
+      "words": [
+        "tewur",
+        "takaet"
+      ]
+    }
+  ],
+  "manuscript": "KUB 28.74",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "hammanni",
+    "mamma",
+    "taharul",
+    "mezzulla",
+    "teniraiu",
+    "tetepirian",
+    "antatiul",
+    "taparna",
+    "antateul",
+    "lentel",
+    "taparna",
+    "haipinammul",
+    "hapalkian",
+    "linimah",
+    "wapahsul",
+    "tewur",
+    "takaet"
+  ]
+}

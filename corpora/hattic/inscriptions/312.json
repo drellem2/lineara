@@ -1,0 +1,87 @@
+{
+  "cth": "738",
+  "id": 312,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 2′",
+      "raw": "-e]š ta-nu-m[a [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 3′",
+      "raw": "]-tu-uk-ki-l[a [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′",
+      "raw": "-e]n",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5′",
+      "raw": "]x-aš-ta-a-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′",
+      "raw": "]x-an",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-et-tu-uḫ"
+      ],
+      "line": "Vs. 7′",
+      "raw": "]x te-et-tu-uḫ",
+      "words": [
+        "tettuh"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 8″",
+      "raw": "]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 9″",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10″",
+      "raw": "]x-tu-un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 1",
+      "raw": "-i]a-z[i [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-il-la"
+      ],
+      "line": "Rs. 2",
+      "raw": "]-la ta-il-la",
+      "words": [
+        "tailla"
+      ]
+    }
+  ],
+  "manuscript": "KBo 37.55",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tettuh",
+    "tailla"
+  ]
+}

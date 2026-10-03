@@ -1,15 +1,583 @@
 {
-  "category": "theonym",
-  "gloss": "goddess (Hittite Kamrušepa)",
+  "cth": "413",
   "id": 8,
-  "is_bilingual": false,
-  "name": "Kataḫzipuri",
-  "provenance": "Hattic theonym; see citation.",
-  "source_citation": "Taracha, P. (2009). Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27. Wiesbaden: Harrassowitz.",
-  "text": "Kataḫzipuri",
-  "tier": "A",
-  "transliteration": "katahzipuri",
+  "lines": [
+    {
+      "intact": [
+        "wa-aš-ḫa-ap-ma",
+        "eš-wu-ur",
+        "aš-ka-aḫ-ḫi-ir",
+        "šu-ú-wa"
+      ],
+      "line": " {€1} Vs. II 40",
+      "raw": "wa-aš-ḫa-ap-ma eš-wu-ur aš-ka-aḫ-ḫi-ir šu-ú-wa",
+      "words": [
+        "washapma",
+        "eswur",
+        "askahhir",
+        "suwa"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-at-tu-uš",
+        "ti-it-ta-aḫ-zi-la-at",
+        "šu-ú-wa"
+      ],
+      "line": " {€1} Vs. II 41",
+      "raw": "URUḫa-at-tu-uš ti-it-ta-aḫ-zi-la-at šu-ú-wa",
+      "words": [
+        "hattus",
+        "tittahzilat",
+        "suwa"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na",
+        "ka-a-at-ti",
+        "ta-ni-wa-aš"
+      ],
+      "line": " {€1} Vs. II 42",
+      "raw": "ta-ba-ar-na ka-a-at-ti ta-ni-wa-aš",
+      "words": [
+        "taparna",
+        "katti",
+        "taniwas"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 45",
+      "raw": "[an-na [eš-ka-a-ḫé-er-pí [ta-ba-ar-na-[an [",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e-we-e-el",
+        "ni-i-pu-pé-e"
+      ],
+      "line": " {€1} Vs. II 46",
+      "raw": "le-e-we-e-el ni-i-pu-pé-e zi-i-i[š",
+      "words": [
+        "lewel",
+        "nipupe"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 47",
+      "raw": "[ia-a-e [i-ma-al-ḫi-ip",
+      "words": []
+    },
+    {
+      "intact": [
+        "pí-i-ip",
+        "i-ša-aḫ"
+      ],
+      "line": " {€1+2} Vs. II 51",
+      "raw": "pí-i-ip i-ša-aḫ ta-aš-te-[ [ [(-)k]a-zi-ia",
+      "words": [
+        "pip",
+        "isah"
+      ]
+    },
+    {
+      "intact": [
+        "ú-ra-na",
+        "te-a-ta-an-na"
+      ],
+      "line": " {€1+2} Vs. II 52",
+      "raw": "ú-ra-na te-a-ta-an-na p[a-la [p]a-še-ez-zi-it",
+      "words": [
+        "urana",
+        "teatanna"
+      ]
+    },
+    {
+      "intact": [
+        "ta-aš-te-eḫka-az-zi-ia"
+      ],
+      "line": " {€1+2} Vs. II 53",
+      "raw": "ta-aš-te-eḫ(-)ka-az-zi-ia",
+      "words": [
+        "tastehkazzia"
+      ]
+    },
+    {
+      "intact": [
+        "zi-i-ia-pa",
+        "ša-ak-tu-nu-ú-wa",
+        "ze-e-ḫar"
+      ],
+      "line": " {€1+2} Vs. II 57",
+      "raw": "zi-i-ia-pa ša-ak-tu-nu-ú-wa wa-〈ša-aḫ〉 ze-e-ḫar",
+      "words": [
+        "ziapa",
+        "saktunuwa",
+        "zehar"
+      ]
+    },
+    {
+      "intact": [
+        "wa-ša-aḫ",
+        "ḫa-mu-ru-ú-wa",
+        "wa-a-ša-aḫ"
+      ],
+      "line": " {€1+2} Vs. II 58",
+      "raw": "wa-ša-aḫ ḫa-mu-ru-ú-wa wa-a-ša-aḫ",
+      "words": [
+        "wasah",
+        "hamuruwa",
+        "wasah"
+      ]
+    },
+    {
+      "intact": [
+        "te-wa-aš-ši-ne",
+        "wa-za-ša-aḫ",
+        "ta-al-wi-i-it"
+      ],
+      "line": " {€1+2} Vs. II 59",
+      "raw": "te-wa-aš-ši-ne wa-za-ša-aḫ ta-al-wi-i-it",
+      "words": [
+        "tewassine",
+        "wazasah",
+        "talwit"
+      ]
+    },
+    {
+      "intact": [
+        "wa-aḫ-zi-i-ḫé-er-ta"
+      ],
+      "line": " {€1+2} Vs. II 60",
+      "raw": "wa-aḫ-zi-i-ḫé-er-ta",
+      "words": [
+        "wahziherta"
+      ]
+    },
+    {
+      "intact": [
+        "i-ma-al-ḫi-ip-pí",
+        "zi-i-ḫar"
+      ],
+      "line": " {€1} Rs. III 3",
+      "raw": "i-ma-al-ḫi-ip-pí zi-i-ḫar i-ma-a[l- [",
+      "words": [
+        "imalhippi",
+        "zihar"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-a-mu-ru-u-wa",
+        "i-ma-al-ḫi-ip"
+      ],
+      "line": " {€1} Rs. III 4",
+      "raw": "ḫa-a-mu-ru-u-wa i-ma-al-ḫi-ip t[e-",
+      "words": [
+        "hamuruwa",
+        "imalhip"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Rs. III 5",
+      "raw": "[i-ma-al-ḫi-ip [ta-al-wi-i-it [[ [ -a[r- [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-at-te"
+      ],
+      "line": " {€1+2} Rs. III 6",
+      "raw": "ka-at-te 〈te〉-ia-a-[",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Rs. III 10",
+      "raw": "[i]š-tar-ra-zi-il-pí wa-a-[š]a-a[ḫ [ [-a]ḫ-zi-i-ḫé-er-ta",
+      "words": []
+    },
+    {
+      "intact": [
+        "i-ma-al-ḫi-ip-pí"
+      ],
+      "line": " {€1+2} Rs. III 11",
+      "raw": "i-ma-al-ḫi-ip-pí [ [ -a[r- [ [-i]a-a-ia",
+      "words": [
+        "imalhippi"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-ta-ḫa-an",
+        "ka-aš-ti-ip"
+      ],
+      "line": " {€1+2} Rs. III 14",
+      "raw": "a-an-ta-ḫa-an ka-aš-ti-ip D[ [ [-r]i-u",
+      "words": [
+        "antahan",
+        "kastip"
+      ]
+    },
+    {
+      "intact": [
+        "ka-at-ti",
+        "pa-la",
+        "a-am-pu"
+      ],
+      "line": " {€1+2} Rs. III 15",
+      "raw": "ka-at-ti pa-la a-am-pu le-e-u[z-zi(-) [ [-i]š",
+      "words": [
+        "katti",
+        "pala",
+        "ampu"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-ḫa-a-an-wa-šu-it-tu-un"
+      ],
+      "line": " {€1+2} Rs. III 16",
+      "raw": "ka-a-ḫa-a-an-wa-šu-it-tu-un [",
+      "words": [
+        "kahanwasuittun"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-tu-uḫ",
+        "le-e-zu-uḫ",
+        "le-eš-te-ra-aḫ",
+        "ba-la"
+      ],
+      "line": " {€1+2} Rs. III 19",
+      "raw": "a-an-tu-uḫ le-e-zu-uḫ le-eš-te-ra-aḫ ba-la le-[ [ [-š]e-ep",
+      "words": [
+        "antuh",
+        "lezuh",
+        "lesterah",
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "an-ne-eš",
+        "ka-a-ḫa-an-wa-šu-id-du-ú-un"
+      ],
+      "line": " {€1} Rs. III 20",
+      "raw": "pa-la an-ne-eš ka-a-ḫa-an-wa-šu-id-du-ú-un",
+      "words": [
+        "pala",
+        "annes",
+        "kahanwasuittun"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": " {€1} Rs. III 23",
+      "raw": "[ [ [l]e-e(-)ú-it-ta-nu pa-la le-e-ez-zi-pí-i-[na]",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-ḫa-an-wa-šu-id-du-un"
+      ],
+      "line": " {€1} Rs. III 24",
+      "raw": "[p]a-la [ [ [-e]š ka-a-ḫa-an-wa-šu-id-du-un",
+      "words": [
+        "kahanwasuittun"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "a-an-da-ap-pu"
+      ],
+      "line": " {€1} Rs. III 26",
+      "raw": "pa-la a-an-da-ap-pu pí-i[z-z]i-pa-a[š-ḫa-a]p",
+      "words": [
+        "pala",
+        "antappu"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "a-aš-ši-ia",
+        "ta-ba-ar-na",
+        "ka-at-te-e"
+      ],
+      "line": " {€1} Rs. III 27",
+      "raw": "pa-la a-aš-ši-ia Dw[a- [ [-u]l ta-ba-ar-na ka-at-te-e",
+      "words": [
+        "pala",
+        "assia",
+        "taparna",
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "ka-taḫ-aḫ",
+        "pa-la",
+        "le-e-pí-nu"
+      ],
+      "line": " {€1} Rs. III 30",
+      "raw": "pa-l[a] Fta-w[a-n]a-[ [ [-n]a-an ka-taḫ-aḫ pa-la le-e-pí-nu",
+      "words": [
+        "katahah",
+        "pala",
+        "lepinu"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": " {€1} Rs. III 31",
+      "raw": "pa-la le-e-z[i- [ -úr-tu",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "šu-li-in-kat-ti"
+      ],
+      "line": " {€1} Rs. III 34",
+      "raw": "[ [ -ka-a-wa-a-aḫ Dšu-li-in-kat-ti",
+      "words": [
+        "sulinkatti"
+      ]
+    },
+    {
+      "intact": [
+        "tu-u-ḫu-ul",
+        "tu-wa-aḫ-ši",
+        "te-ki-i-ip"
+      ],
+      "line": " {€1} Rs. III 35",
+      "raw": "[ [ [-t]e-e tu-u-ḫu-ul tu-wa-aḫ-ši te-ki-i-ip",
+      "words": [
+        "tuhul",
+        "tuwahsi",
+        "tekip"
+      ]
+    },
+    {
+      "intact": [
+        "iš-ka-a-te-eḫ"
+      ],
+      "line": " {€1} Rs. III 36",
+      "raw": "[ [ -e-ka-aš-ši-il iš-ka-a-te-eḫ",
+      "words": [
+        "iskateh"
+      ]
+    },
+    {
+      "intact": [
+        "ta-aš-te-nu-ú-wa",
+        "pé-e-wi-il"
+      ],
+      "line": " {€1} Rs. III 40",
+      "raw": "a-ša-[a]ḫ ta-aš-te-nu-ú-wa pé-e-wi-il",
+      "words": [
+        "tastenuwa",
+        "pewil"
+      ]
+    },
+    {
+      "intact": [
+        "iš-pé-e-el",
+        "ta-aš-te-e-ta-nu-u-wa"
+      ],
+      "line": " {€1} Rs. III 41",
+      "raw": "iš-pé-e-el ta-aš-te-e-ta-nu-u-wa",
+      "words": [
+        "ispel",
+        "tastetanuwa"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-tu-uḫ",
+        "šu-li-in-kat-ti",
+        "kat-te-e"
+      ],
+      "line": " {€1} Rs. III 45",
+      "raw": "a-an-tu-uḫ Dšu-li-in-kat-ti kat-te-e le-e-wa-e(-)li-a-[n]u",
+      "words": [
+        "antuh",
+        "sulinkatti",
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "a-an-da-ḫa-ak-ka-tu-uḫ",
+        "pa-la"
+      ],
+      "line": " {€1} Rs. III 46",
+      "raw": "pa-la a-an-da-ḫa-ak-ka-tu-uḫ pa-la a-an-da-ḫa(-)[",
+      "words": [
+        "pala",
+        "antahakkatuh",
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 47",
+      "raw": "[ka-a-wa-aḫ-pí [[ḫ]a-l[ú]-ḫa-lú-u-tu",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-e-ta-aḫ-šu-ú-ul",
+        "a-ša-aḫ-pí"
+      ],
+      "line": " {€1} Rs. III 51",
+      "raw": "ma-al-ḫi-ip-[ḫ]u te-e-ta-aḫ-šu-ú-ul a-ša-aḫ-pí",
+      "words": [
+        "tetahsul",
+        "asahpi"
+      ]
+    },
+    {
+      "intact": [
+        "ta-aš-tu-u-ta-šu-u-la",
+        "šu-li-in-kat-ti",
+        "ka-at-ti"
+      ],
+      "line": " {€1} Rs. III 52",
+      "raw": "ta-aš-tu-u-ta-šu-u-la Dšu-li-in-kat-ti ka-at-ti",
+      "words": [
+        "tastutasula",
+        "sulinkatti",
+        "katti"
+      ]
+    },
+    {
+      "intact": [
+        "a-ta-ni-wa-aš",
+        "ú-un-ḫu-pí"
+      ],
+      "line": " {€1} Rs. III 53",
+      "raw": "a-ta-ni-wa-aš ú-un-ḫu-pí",
+      "words": [
+        "ataniwas",
+        "unhupi"
+      ]
+    },
+    {
+      "intact": [
+        "ú-e-ut-ta-a",
+        "ú-da-nu"
+      ],
+      "line": " {€1} Rs. III 57",
+      "raw": "ú-e-ut-ta-a ú-da-nu pí-iz-z[i-i]",
+      "words": [
+        "ueutta",
+        "utanu"
+      ]
+    }
+  ],
+  "manuscript": "KUB 2.2+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "katahzipuri"
+    "washapma",
+    "eswur",
+    "askahhir",
+    "suwa",
+    "hattus",
+    "tittahzilat",
+    "suwa",
+    "taparna",
+    "katti",
+    "taniwas",
+    "lewel",
+    "nipupe",
+    "pip",
+    "isah",
+    "urana",
+    "teatanna",
+    "tastehkazzia",
+    "ziapa",
+    "saktunuwa",
+    "zehar",
+    "wasah",
+    "hamuruwa",
+    "wasah",
+    "tewassine",
+    "wazasah",
+    "talwit",
+    "wahziherta",
+    "imalhippi",
+    "zihar",
+    "hamuruwa",
+    "imalhip",
+    "katte",
+    "imalhippi",
+    "antahan",
+    "kastip",
+    "katti",
+    "pala",
+    "ampu",
+    "kahanwasuittun",
+    "antuh",
+    "lezuh",
+    "lesterah",
+    "pala",
+    "pala",
+    "annes",
+    "kahanwasuittun",
+    "pala",
+    "kahanwasuittun",
+    "pala",
+    "antappu",
+    "pala",
+    "assia",
+    "taparna",
+    "katte",
+    "katahah",
+    "pala",
+    "lepinu",
+    "pala",
+    "sulinkatti",
+    "tuhul",
+    "tuwahsi",
+    "tekip",
+    "iskateh",
+    "tastenuwa",
+    "pewil",
+    "ispel",
+    "tastetanuwa",
+    "antuh",
+    "sulinkatti",
+    "katte",
+    "pala",
+    "antahakkatuh",
+    "pala",
+    "tetahsul",
+    "asahpi",
+    "tastutasula",
+    "sulinkatti",
+    "katti",
+    "ataniwas",
+    "unhupi",
+    "ueutta",
+    "utanu"
   ]
 }

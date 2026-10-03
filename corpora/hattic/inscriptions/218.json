@@ -1,0 +1,56 @@
+{
+  "cth": "730",
+  "id": 218,
+  "lines": [
+    {
+      "intact": [
+        "eš-te-eḫ-ku-ni-il"
+      ],
+      "line": "Vs. 10′",
+      "raw": "]-mu-u-u[r úr-ḫa-n[u-u [ki-i-ip] eš-te-eḫ-ku-ni-il AN(-)za-x[",
+      "words": [
+        "estehkunil"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 11′",
+      "raw": "[eš]-te-e[ḫ-ku-ni]-il pa-l[a-a [ x-ti a-aḫ-ša-wu-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-la-a"
+      ],
+      "line": "Vs. 12′",
+      "raw": "-ni-il pa-la-a [ [ [ki]-ia-tu ki-[i-ip",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "ku-uk-ku-u"
+      ],
+      "line": "Vs. 13′",
+      "raw": "-il ku-uk-ku-u ḫa-a-pí-x[ [ x-x[",
+      "words": [
+        "kukku"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 14′",
+      "raw": "-an-x-zi-iš-tu-u UTU-i-i[k- [ x-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.10",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "estehkunil",
+    "pala",
+    "kukku"
+  ]
+}

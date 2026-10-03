@@ -1,0 +1,46 @@
+{
+  "cth": "627",
+  "id": 68,
+  "lines": [
+    {
+      "intact": [],
+      "line": "{€1} r. Kol. 2′",
+      "raw": "[[t]a-aš-te-e-mu-ú [ú-li-wa-a-li-na-a [ta-aš-te-mu-ú",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€1} r. Kol. 4′",
+      "raw": "[[la-ma-a [zi-ú-i-ia-al-li-na-a-ia]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€1} r. Kol. 8′",
+      "raw": "[a-ḫa-a",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-aḫ-a"
+      ],
+      "line": "{€1} r. Kol. 10′",
+      "raw": "a-aḫ-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€1} r. Kol. 16′",
+      "raw": "[a-ḫa-a",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 25.32+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "aha"
+  ]
+}

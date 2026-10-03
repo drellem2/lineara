@@ -1,0 +1,460 @@
+{
+  "cth": "735",
+  "id": 275,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 1",
+      "raw": "[t]u-ḫa-a-sa-ma-a at-ta-a-li-[ip]",
+      "words": []
+    },
+    {
+      "intact": [
+        "e-ip-ka-wa-ri-i-il"
+      ],
+      "line": "Vs. r. Kol. 2",
+      "raw": "[m]a-a e-ip-ka-wa-ri-i-il",
+      "words": [
+        "eipkawaril"
+      ]
+    },
+    {
+      "intact": [
+        "eš-ta-a-wa-ar-wa",
+        "si-i-ú-i-nu"
+      ],
+      "line": "Vs. r. Kol. 3",
+      "raw": "eš-ta-a-wa-ar-wa si-i-ú-i-nu",
+      "words": [
+        "estawarwa",
+        "siuinu"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-ma",
+        "ú-mi-i-il-la-wu-u"
+      ],
+      "line": "Vs. r. Kol. 4",
+      "raw": "[i]š-ti-e pa-a-ma ú-mi-i-il-la-wu-u",
+      "words": [
+        "pama",
+        "umillawu"
+      ]
+    },
+    {
+      "intact": [
+        "zi-i-in-nu-ni-iš-ḫa-wi"
+      ],
+      "line": "Vs. r. Kol. 5",
+      "raw": "[m]a-a zi-i-in-nu-ni-iš-ḫa-wi",
+      "words": [
+        "zinnunishawi"
+      ]
+    },
+    {
+      "intact": [
+        "wa-zi-i-ni-wa-aš"
+      ],
+      "line": "Vs. r. Kol. 6",
+      "raw": "[w]a-a-du-ú wa-zi-i-ni-wa-aš",
+      "words": [
+        "waziniwas"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a",
+        "ia-aḫ-šu-ú-ul-tu"
+      ],
+      "line": "Vs. r. Kol. 7",
+      "raw": "[t]a-a-ru ma-a ia-aḫ-šu-ú-ul-tu",
+      "words": [
+        "ma",
+        "iahsultu"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a",
+        "ḫa-a-ni-wa-aš"
+      ],
+      "line": "Vs. r. Kol. 8",
+      "raw": "[a]t-ku-ú-ši-im ma-a ḫa-a-ni-wa-aš",
+      "words": [
+        "ma",
+        "haniwas"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-ma",
+        "tu-u-mi-li"
+      ],
+      "line": "Vs. r. Kol. 9",
+      "raw": "[t]a-i-il pa-a-ma tu-u-mi-li",
+      "words": [
+        "pama",
+        "tumili"
+      ]
+    },
+    {
+      "intact": [
+        "pí-i-pé-e-ez-zi-li"
+      ],
+      "line": "Vs. r. Kol. 10",
+      "raw": "[p]a-a-la-ma-a pí-i-pé-e-ez-zi-li",
+      "words": [
+        "pipezzili"
+      ]
+    },
+    {
+      "intact": [
+        "du-ú-ḫa-an",
+        "te-e-wu-u-ri"
+      ],
+      "line": "Vs. r. Kol. 11",
+      "raw": "[m]a-a du-ú-ḫa-an te-e-wu-u-ri",
+      "words": [
+        "tuhan",
+        "tewuri"
+      ]
+    },
+    {
+      "intact": [
+        "za-a-ri-u-un",
+        "te-pé-e-in"
+      ],
+      "line": "Vs. r. Kol. 12",
+      "raw": "[m]a-a za-a-ri-u-un te-pé-e-in",
+      "words": [
+        "zariun",
+        "tepein"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-ma",
+        "at-te-e-eḫ-šu-li"
+      ],
+      "line": "Vs. r. Kol. 13",
+      "raw": "[t]a-a-ru-un pa-a-ma at-te-e-eḫ-šu-li",
+      "words": [
+        "pama",
+        "attehsuli"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-ma",
+        "mi-i-il-la-wu"
+      ],
+      "line": "Vs. r. Kol. 14",
+      "raw": "[i]š-ti-i pa-a-ma mi-i-il-la-wu",
+      "words": [
+        "pama",
+        "millawu"
+      ]
+    },
+    {
+      "intact": [
+        "u-ul",
+        "la-ma-a",
+        "iš-ta-na-a-ḫi-li"
+      ],
+      "line": "Vs. r. Kol. 15",
+      "raw": "u-ul la-ma-a iš-ta-na-a-ḫi-li",
+      "words": [
+        "ul",
+        "lama",
+        "istanahili"
+      ]
+    },
+    {
+      "intact": [
+        "su-ú-uk",
+        "wa-al-wa-la-at"
+      ],
+      "line": "Vs. r. Kol. 16",
+      "raw": "[m]a-te-e su-ú-uk wa-al-wa-la-at",
+      "words": [
+        "suk",
+        "walwalat"
+      ]
+    },
+    {
+      "intact": [
+        "ú-e",
+        "gi-iz-ḫa-a",
+        "en-te-e-ep",
+        "ku-a-at"
+      ],
+      "line": "Vs. r. Kol. 17",
+      "raw": "ú-e gi-iz-ḫa-a en-te-e-ep ku-a-at",
+      "words": [
+        "ue",
+        "kizha",
+        "entep",
+        "kuat"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 18",
+      "raw": "[t]u-ú-ḫa-a-sa-ma-a-an ip-wa-a-li-[p]u",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-a-ru"
+      ],
+      "line": "Vs. r. Kol. 19",
+      "raw": "[m]a-a ta-a-ru li-e-ep-šu-u-un-[n]a",
+      "words": [
+        "taru"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 20",
+      "raw": "[ma]-a ú-wa-a-ak-wa-a-ri-[il]",
+      "words": []
+    },
+    {
+      "intact": [
+        "za-a-ri-un"
+      ],
+      "line": "Vs. r. Kol. 21",
+      "raw": "[ [ za-a-ri-un te-e-pí-[in]",
+      "words": [
+        "zariun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 22",
+      "raw": "[ [ [ta-a-ru-un [p]a-a-ma wa-a-ar-wa-ri-i[l [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 23",
+      "raw": "[ [ le-e-ša-a-k[i-il(-) [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 1′",
+      "raw": "[ [ -a [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 2′",
+      "raw": "[ [ [-l]a-ma-a eš-ta-[a-wa-ar-wa(-)",
+      "words": []
+    },
+    {
+      "intact": [
+        "zi-i-in-nu"
+      ],
+      "line": "Rs. r. Kol. 3′",
+      "raw": "[ma]-a zi-i-in-nu ni-iš-ḫa-[wi [",
+      "words": [
+        "zinnu"
+      ]
+    },
+    {
+      "intact": [
+        "du-ú-wa"
+      ],
+      "line": "Rs. r. Kol. 4′",
+      "raw": "[m]a-a du-ú-wa zi-i-ni-[wa-aš [",
+      "words": [
+        "tuwa"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a"
+      ],
+      "line": "Rs. r. Kol. 5′",
+      "raw": "[t]a-a-ru ma-a i[a]-aḫ-šu-ú-u[l-tu [",
+      "words": [
+        "ma"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a",
+        "ḫa-a-ni-wa-aš"
+      ],
+      "line": "Rs. r. Kol. 6′",
+      "raw": "[l]e-e-ku-si-im ma-a ḫa-a-ni-wa-aš",
+      "words": [
+        "ma",
+        "haniwas"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a",
+        "li-tu-u-mi-li"
+      ],
+      "line": "Rs. r. Kol. 7′",
+      "raw": "[š]a-a-i-il 〈〈x x〉〉 ma-a li-tu-u-mi-li",
+      "words": [
+        "ma",
+        "litumili"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-pí-pí-iz-zi-li"
+      ],
+      "line": "Rs. r. Kol. 8′",
+      "raw": "[p]a-la-a le-e-pí-pí-iz-zi-li",
+      "words": [
+        "lepipizzili"
+      ]
+    },
+    {
+      "intact": [
+        "du-ú-ḫa-a-an",
+        "te-e-wu-u-ri"
+      ],
+      "line": "Rs. r. Kol. 9′",
+      "raw": "[m]a-a du-ú-ḫa-a-an te-e-wu-u-ri",
+      "words": [
+        "tuhan",
+        "tewuri"
+      ]
+    },
+    {
+      "intact": [
+        "wa-ip-du-ú-li-i-mu-li"
+      ],
+      "line": "Rs. r. Kol. 10′",
+      "raw": "[m]a-a wa-ip-du-ú-li-i-mu-li",
+      "words": [
+        "waiptulimuli"
+      ]
+    },
+    {
+      "intact": [
+        "la-ma-a",
+        "eš-wu-la-aš-ne"
+      ],
+      "line": "Rs. r. Kol. 11′",
+      "raw": "[ma-n]e-e la-ma-a eš-wu-la-aš-ne",
+      "words": [
+        "lama",
+        "eswulasne"
+      ]
+    },
+    {
+      "intact": [
+        "la-ma-a",
+        "eš-ka-a-ra-mu"
+      ],
+      "line": "Rs. r. Kol. 12′",
+      "raw": "[m]a-ne-e la-ma-a eš-ka-a-ra-mu",
+      "words": [
+        "lama",
+        "eskaramu"
+      ]
+    },
+    {
+      "intact": [
+        "za-a-ri-ú-un",
+        "eš-zi-ia-ú-i"
+      ],
+      "line": "Rs. r. Kol. 13′",
+      "raw": "[p]a-la-a za-a-ri-ú-un eš-zi-ia-ú-i",
+      "words": [
+        "zariun",
+        "esziaui"
+      ]
+    },
+    {
+      "intact": [
+        "eš-ta-a-wa-ar-wa",
+        "si-i-ú-i-nu"
+      ],
+      "line": "Rs. r. Kol. 14′",
+      "raw": "[k]a-at-te-e eš-ta-a-wa-ar-wa si-i-ú-i-nu",
+      "words": [
+        "estawarwa",
+        "siuinu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na"
+      ],
+      "line": "Rs. r. Kol. 15′",
+      "raw": "[š]e-el-le-e-en ta-ba-ar-na",
+      "words": [
+        "taparna"
+      ]
+    }
+  ],
+  "manuscript": "KUB 28.18",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "eipkawaril",
+    "estawarwa",
+    "siuinu",
+    "pama",
+    "umillawu",
+    "zinnunishawi",
+    "waziniwas",
+    "ma",
+    "iahsultu",
+    "ma",
+    "haniwas",
+    "pama",
+    "tumili",
+    "pipezzili",
+    "tuhan",
+    "tewuri",
+    "zariun",
+    "tepein",
+    "pama",
+    "attehsuli",
+    "pama",
+    "millawu",
+    "ul",
+    "lama",
+    "istanahili",
+    "suk",
+    "walwalat",
+    "ue",
+    "kizha",
+    "entep",
+    "kuat",
+    "taru",
+    "zariun",
+    "zinnu",
+    "tuwa",
+    "ma",
+    "ma",
+    "haniwas",
+    "ma",
+    "litumili",
+    "lepipizzili",
+    "tuhan",
+    "tewuri",
+    "waiptulimuli",
+    "lama",
+    "eswulasne",
+    "lama",
+    "eskaramu",
+    "zariun",
+    "esziaui",
+    "estawarwa",
+    "siuinu",
+    "taparna"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "cth": "634",
+  "id": 104,
+  "lines": [
+    {
+      "intact": [
+        "ú-e-il-la-i"
+      ],
+      "line": "Rs. VI? 12′",
+      "raw": "[LUGAL [ú-e-il-la-l]a-i ú-e-il-la-i",
+      "words": [
+        "ueillai"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. VI? 13′",
+      "raw": "[nu [ú-e-il-la-i [lu]-ú-i-li",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 47.247",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ueillai"
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "cth": "742",
+  "id": 337,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 1",
+      "raw": "[ [ [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2",
+      "raw": "[ [ -〈〈x x x〉〉",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 3",
+      "raw": "[ [ [ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫal-wu-ut-te",
+        "la-aš-ḫa-a-wi"
+      ],
+      "line": "Vs. 4",
+      "raw": "[ [ x-i-šu ḫal-wu-ut-te la-aš-ḫa-a-wi [ [",
+      "words": [
+        "halwutte",
+        "lashawi"
+      ]
+    },
+    {
+      "intact": [
+        "a-ša-ru-ú",
+        "i-da-al-la",
+        "ka-la-da"
+      ],
+      "line": "Vs. 5",
+      "raw": "[ [ [ḫa-pa]l-ki-ia a-ša-ru-ú i-da-al-la ka-la-da",
+      "words": [
+        "asaru",
+        "italla",
+        "kalata"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a",
+        "aš-ḫa-wu-ú-na-a-i"
+      ],
+      "line": "Vs. 6",
+      "raw": "[ [ x-ak-šu-du ma-a aš-ḫa-wu-ú-na-a-i",
+      "words": [
+        "ma",
+        "ashawunai"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na",
+        "i-wa-aḫ-ru-wa"
+      ],
+      "line": "Vs. 7",
+      "raw": "[ [ x ta-ba-ar-na i-wa-aḫ-ru-wa",
+      "words": [
+        "taparna",
+        "iwahruwa"
+      ]
+    },
+    {
+      "intact": [
+        "ta-wa-an-na-an-na"
+      ],
+      "line": "Vs. 8",
+      "raw": "[ [ x ta-wa-an-na-an-na",
+      "words": [
+        "tawannanna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 9",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-aš-du-ug-ga-aš-šu"
+      ],
+      "line": "Vs. 10′",
+      "raw": "[ [ x a-aš-du-ug-ga-aš-šu",
+      "words": [
+        "astukkassu"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-at-tu-ši-ia"
+      ],
+      "line": "Vs. 11′",
+      "raw": "[ [ x URUḫa-at-tu-ši-ia",
+      "words": [
+        "hattusia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 12′",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 13′",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 14′",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 15′",
+      "raw": "[ [ x-wa-ap-w[a(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 1′!",
+      "raw": "[[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 2′!",
+      "raw": "[ [ ===",
+      "words": []
+    },
+    {
+      "intact": [
+        "i-wa-aḫ-ru-wa",
+        "a-aš-da-ak-ši-du"
+      ],
+      "line": "Rs. 5″!",
+      "raw": "i-wa-aḫ-ru-wa a-aš-da-ak-ši-du [",
+      "words": [
+        "iwahruwa",
+        "astaksitu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 6″!",
+      "raw": "[[ [ [m]a-a-ḫa-ú-wa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 7″!",
+      "raw": "[ [ [w]a-an-mu-u",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.83",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "halwutte",
+    "lashawi",
+    "asaru",
+    "italla",
+    "kalata",
+    "ma",
+    "ashawunai",
+    "taparna",
+    "iwahruwa",
+    "tawannanna",
+    "astukkassu",
+    "hattusia",
+    "iwahruwa",
+    "astaksitu"
+  ]
+}

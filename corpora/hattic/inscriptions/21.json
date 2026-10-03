@@ -1,15 +1,22 @@
 {
-  "category": "theonym",
-  "gloss": "chief goddess of Kaštama",
+  "cth": "591",
   "id": 21,
-  "is_bilingual": false,
-  "name": "Zašḫapuna",
-  "provenance": "Hattic theonym; see citation.",
-  "source_citation": "Taracha, P. (2009). Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27. Wiesbaden: Harrassowitz.",
-  "text": "Zašḫapuna",
-  "tier": "B",
-  "transliteration": "zashapuna",
+  "lines": [
+    {
+      "intact": [
+        "ta-ku-uz-za"
+      ],
+      "line": "Vs.? (II) 6′",
+      "raw": "ta-ku-uz-za",
+      "words": [
+        "takuzza"
+      ]
+    }
+  ],
+  "manuscript": "KBo 42.102",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "zashapuna"
+    "takuzza"
   ]
 }

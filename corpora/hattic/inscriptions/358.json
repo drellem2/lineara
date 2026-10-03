@@ -1,0 +1,80 @@
+{
+  "cth": "743",
+  "id": 358,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x [pu-u]d-du-uz-z[i",
+      "words": []
+    },
+    {
+      "intact": [
+        "pu-ud-du-uz-zi"
+      ],
+      "line": "2′",
+      "raw": "[ x pu-ud-du-uz-zi [",
+      "words": [
+        "puttuzzi"
+      ]
+    },
+    {
+      "intact": [
+        "i-ta-a-la-ak-ku-u-ru"
+      ],
+      "line": "3′",
+      "raw": "[ i-ta-a-la-ak-ku-u-ru k[i-",
+      "words": [
+        "italakkuru"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ [(-)i-ta-a(-)la-ak-k]u-u-ru ki-ip-tu-uš-tu-[uḫ-ḫi-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[ [-r]u ki-ip-tu-uš-tu-u[ḫ-ḫi-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ (-)tu-uš-tu-uḫ-ḫi-il [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ (-)tu-uš-tu-uḫ-ḫi-il [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[ [t]a-ak-ke-e-ḫa-a[l",
+      "words": []
+    },
+    {
+      "intact": [
+        "an"
+      ],
+      "line": "10′",
+      "raw": "[ x x x x an x[",
+      "words": [
+        "an"
+      ]
+    }
+  ],
+  "manuscript": "KUB 28.111",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "puttuzzi",
+    "italakkuru",
+    "an"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "cth": "744",
+  "id": 397,
+  "lines": [
+    {
+      "intact": [
+        "wa-a-wa-i-il"
+      ],
+      "line": "Rs. 9′",
+      "raw": "]x wa-a-wa-i-il",
+      "words": [
+        "wawail"
+      ]
+    },
+    {
+      "intact": [
+        "ga-ra-am"
+      ],
+      "line": "Rs. 10′",
+      "raw": "g]a-ra-am",
+      "words": [
+        "karam"
+      ]
+    }
+  ],
+  "manuscript": "KBo 37.89",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wawail",
+    "karam"
+  ]
+}

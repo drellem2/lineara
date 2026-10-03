@@ -1,0 +1,58 @@
+{
+  "cth": "745",
+  "id": 516,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x-at-t[a",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-a-še"
+      ],
+      "line": "2′",
+      "raw": "[ pa-a-še [",
+      "words": [
+        "pase"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ x-a-ra(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ x-ḫi še-e-[ x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ x-e-ka-a-wa-aš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[ x-e-še-e-i[l",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ x-za-al-la-[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 43.222",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "pase"
+  ]
+}

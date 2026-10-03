@@ -1,0 +1,100 @@
+{
+  "cth": "726",
+  "id": 204,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Rs. IV 1′",
+      "raw": "[li-le]-e-li-ia-ḫu [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 2′",
+      "raw": "[[ma-n]e-e wa-a-ta-a-ak-x-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e",
+        "zu-ú-wa-ši-i-ni"
+      ],
+      "line": "Rs. IV 3′",
+      "raw": "[[i]š-taḫ-ḫi-i-el le-e zu-ú-wa-ši-i-ni x[",
+      "words": [
+        "le",
+        "zuwasini"
+      ]
+    },
+    {
+      "intact": [
+        "zi-wa-a-ra-ak"
+      ],
+      "line": "Rs. IV 4′",
+      "raw": "[[w]a-tu-ú-un-wa-at zi-wa-a-ra-ak [",
+      "words": [
+        "ziwarak"
+      ]
+    },
+    {
+      "intact": [
+        "le-e",
+        "ta-al-wi-i-it",
+        "ma-ne-e"
+      ],
+      "line": "Rs. IV 5′",
+      "raw": "[[iš-t]aḫ-ḫe-el le-e ta-al-wi-i-it ma-ne-e [",
+      "words": [
+        "le",
+        "talwit",
+        "mane"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 6′",
+      "raw": "[[z]i-wa-ra-[ak]",
+      "words": []
+    },
+    {
+      "intact": [
+        "zi-i-ia-na"
+      ],
+      "line": "Rs. IV 7′",
+      "raw": "[t]aḫ-taḫ-ḫa-a-ia zi-i-ia-na taḫ-t[aḫ-ḫa-a-ia",
+      "words": [
+        "ziana"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 8′",
+      "raw": "[[k]a-ta-ak-ku-mi taḫ-taḫ-ḫa-a-i[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 9′",
+      "raw": "[[ḫ]a-pal-ki-an ku-[u-ur-ku-u-pal",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 10′",
+      "raw": "[a-wa-ap-š[e",
+      "words": []
+    }
+  ],
+  "manuscript": "Or. 90_325",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "le",
+    "zuwasini",
+    "ziwarak",
+    "le",
+    "talwit",
+    "mane",
+    "ziana"
+  ]
+}

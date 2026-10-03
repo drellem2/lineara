@@ -1,0 +1,76 @@
+{
+  "cth": "745",
+  "id": 560,
+  "lines": [
+    {
+      "intact": [
+        "ma-za-ri-il-li"
+      ],
+      "line": "Vs. lk. Kol. 1′",
+      "raw": "ma-za-ri-il-li [",
+      "words": [
+        "mazarilli"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 2′",
+      "raw": "[ma-a [ta-ḫu-ru-m[i-it",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 3′",
+      "raw": "[ta-ḫu-ru-mi-it [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 4′",
+      "raw": "[ma-a [ga-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 5″",
+      "raw": "[ḫa-nu-un(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 6″",
+      "raw": "[ḫa-nu-u[n(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 7″",
+      "raw": "[ma [k[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 8″",
+      "raw": "[[k]a-ḫa-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 9″",
+      "raw": "[ták-k[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 10″",
+      "raw": "[x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.65",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "mazarilli"
+  ]
+}

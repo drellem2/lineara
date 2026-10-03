@@ -1,0 +1,81 @@
+{
+  "cth": "744",
+  "id": 369,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x-zu-li x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ x-ḫi-i-iš iš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ x-wa-aš-ḫa-wi-pí",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "] te-e-et(-)ḫa-wa-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ [wa]-za-aš-ḫa-wi-pí uš-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[ [te-e]k-ku-un-ku-uḫ-ḫu-wa [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ [li-ip-zi-pí]-ku-uk-ka₄ te-e[p-ku-un-ku-uḫ-ḫu-wa",
+      "words": []
+    },
+    {
+      "intact": [
+        "ti-en-ti-ia"
+      ],
+      "line": "8′",
+      "raw": "[ ti-en-ti-ia x[",
+      "words": [
+        "tientia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[ [wa-il-lu-u-m]u-ul iš-ḫa-wa-pu-[uš-ne",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ri-ia"
+      ],
+      "line": "10′",
+      "raw": "[Dšu-šu-ma-a-ḫ]i a-ri-ia a-x[",
+      "words": [
+        "aria"
+      ]
+    }
+  ],
+  "manuscript": "HFAC 92",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tientia",
+    "aria"
+  ]
+}

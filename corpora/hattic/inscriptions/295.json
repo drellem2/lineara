@@ -1,0 +1,40 @@
+{
+  "cth": "738",
+  "id": 295,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. II? 1",
+      "raw": "[ [ [a]r-lu-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "ar-lu-u"
+      ],
+      "line": "Vs. II? 2",
+      "raw": "[ [ [p]é-e-a ar-lu-u",
+      "words": [
+        "arlu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II? 5",
+      "raw": "[ [ [p]é-e-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II? 7",
+      "raw": "[ [ [p]é-e-ma",
+      "words": []
+    }
+  ],
+  "manuscript": "IBoT 2.28",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "arlu"
+  ]
+}

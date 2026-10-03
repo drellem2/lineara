@@ -36,9 +36,15 @@ class HatticGateTest(unittest.TestCase):
         self.assertEqual(self.gate._SUBSTRATE, "hattic")
         self.assertEqual(self.gate._CONTROL, "control_hattic_bigram")
 
-    def test_pool_size_matches_yaml(self) -> None:
+    def test_pool_size_is_the_v32_registration(self) -> None:
+        # The gate was pre-registered and run against the v32 pool of 72
+        # hand-keyed forms. mg-7f4db rebuilt pools/hattic.yaml from
+        # published editions (124 entries), so the registered constant no
+        # longer matches the YAML. It stays pinned as the v32 record; a
+        # re-run on the rebuilt pool needs its own pre-registration.
+        self.assertEqual(self.gate._N_POOL_ENTRIES, 72)
         text = (_REPO_ROOT / "pools" / "hattic.yaml").read_text(encoding="utf-8")
-        self.assertEqual(text.count("surface:"), self.gate._N_POOL_ENTRIES)
+        self.assertEqual(text.count("surface:"), 124)
 
     def test_gate_rule(self) -> None:
         v = self.gate.gate_verdict
@@ -97,7 +103,8 @@ class PoolLoaderSkipsNonPoolYamlTest(unittest.TestCase):
         self.assertTrue(missing)
         phonemes = rollup._load_pool_phonemes(pools_dir)
         self.assertIn("hattic", phonemes)
-        self.assertEqual(len(phonemes["hattic"]), 72)
+        n_yaml = (pools_dir / "hattic.yaml").read_text(encoding="utf-8").count("surface:")
+        self.assertEqual(len(phonemes["hattic"]), n_yaml)
         registry = sweep.build_pool_registry(pools_dir)
         self.assertIn("control_hattic_bigram", registry)
 

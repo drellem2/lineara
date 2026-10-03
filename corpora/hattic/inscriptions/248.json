@@ -1,0 +1,52 @@
+{
+  "cth": "733",
+  "id": 248,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "[ [ x-pu-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[[ [ KI.5 KU[R-SÚ",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[[ [ [t]e-ek-za-š[u-(u)-la",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[[ [ x-wa i-il-[la",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a-ma"
+      ],
+      "line": "5′",
+      "raw": "[[ [ x ka-a-ma [",
+      "words": [
+        "kama"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[[ [ x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 64.173",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kama"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "cth": "746",
+  "id": 631,
+  "lines": [
+    {
+      "intact": [
+        "a-wa-am-pí-i-nu-u"
+      ],
+      "line": "Vs. lk. Kol. 1",
+      "raw": "a-wa-am-pí-i-nu-u l[i-",
+      "words": [
+        "awampinu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 2",
+      "raw": "[ki-i-ip-wa-eš [pa-a-ma [x-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 3",
+      "raw": "[ki-i-ip-wa-eš [pa-a-ma [tu-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 4",
+      "raw": "[ki-i-ip-wa-eš [pa-a-ma [a[t-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 5",
+      "raw": "[ti-i-ma [ú-a-an [ga-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 6",
+      "raw": "[se-e-et [ku-ḫu-ú-un [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 7",
+      "raw": "[se-e-et [ku-ḫu-ú-un [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 8",
+      "raw": "[i-da-a [te-tu-ú-uk [ḫ[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 9",
+      "raw": "[i-da-a-wa [le-e-el-lu-w[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 10",
+      "raw": "[gi-iz-ḫa-a(-)ša-a-i-il [x-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 11",
+      "raw": "[ḫa-a-i-wa-pí [wa-aḫ-zé-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 12",
+      "raw": "[eš-ša-a-an-tu [un-nu-ú-ut-ḫu [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 13",
+      "raw": "[za-a-ri-i-iš [pa-an [ú-nu-u[t",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 14",
+      "raw": "[za-a-ri-i-iš [pa-a-ma [se-e-[et",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 15",
+      "raw": "[[ x-zu-e-el-la-ma-a x-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 16",
+      "raw": "[[ [ [se]-e-et gi-zé-e-eḫ-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 17",
+      "raw": "[[ [ [se]-e-et gi-zé-e-[eḫ-",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-tu-ú-uk"
+      ],
+      "line": "Vs. lk. Kol. 18",
+      "raw": "[[i-da]-a te-tu-ú-uk [",
+      "words": [
+        "tetuk"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 19",
+      "raw": "[[ [ x[ [ x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.48",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "awampinu",
+    "tetuk"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "cth": "745",
+  "id": 599,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]-x(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ -iš x-aḫ(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ (-)x-e-waₓ-iš-pí x x x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "zi-ḫa-ar-ta-a-il"
+      ],
+      "line": "4′",
+      "raw": "[ -ma zi-ḫa-ar-ta-a-il",
+      "words": [
+        "zihartail"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "]-x-zu(-)šu-un-tu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "](-)x-un-ta-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "](-)x(-)[ [ [-š]a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "]x",
+      "words": []
+    }
+  ],
+  "manuscript": "Kelly B",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "zihartail"
+  ]
+}

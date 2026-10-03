@@ -1,0 +1,58 @@
+{
+  "cth": "743",
+  "id": 344,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "-z]i-iš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ [t]a-ni-wa-[a-a(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ ta-ni-wa-[a-a-aš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ [n]u ta-ni-wa-[a-a-aš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ [t]a-ni-wa-a-a-[aš",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a-an-na-a-i"
+      ],
+      "line": "10′",
+      "raw": "[ x-i-iš ka-a-an-na-a-i(-) [",
+      "words": [
+        "kannai"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "11′",
+      "raw": "[ [ta-ni-wa-a]-a(-)[aš",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 24.104",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kannai"
+  ]
+}

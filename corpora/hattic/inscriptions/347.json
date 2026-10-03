@@ -1,0 +1,101 @@
+{
+  "cth": "743",
+  "id": 347,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€2} Vs. 2′",
+      "raw": "]-aš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. 4′",
+      "raw": "]-na",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. 6′",
+      "raw": "-i]š-ša-aš",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-li-ša"
+      ],
+      "line": " {€2} Vs. 8′",
+      "raw": "] URUa-li-ša",
+      "words": [
+        "alisa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} r. Kol. 1′/Vs. 10′",
+      "raw": "[ [ x x x-zi-wi-iš-ša-aš",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-wu-u-ur"
+      ],
+      "line": " {€1+2} r. Kol. 3′/Vs. 12′",
+      "raw": "te-wu-u-ur te-x-ḫa-a-ni-ik-ku-ú",
+      "words": [
+        "tewur"
+      ]
+    },
+    {
+      "intact": [
+        "te-pu-u-ur",
+        "ḫa-aš-wu-li-nu-ú"
+      ],
+      "line": " {€1+2} r. Kol. 6′/Vs. 15′",
+      "raw": "te-pu-u-ur ḫa-aš-wu-li-nu-ú",
+      "words": [
+        "tepur",
+        "haswulinu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. 2",
+      "raw": "]-ú",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. 5",
+      "raw": "]-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. 8",
+      "raw": "]-nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. 11",
+      "raw": "-n]a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. 14",
+      "raw": "]-nu",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.66+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "alisa",
+    "tewur",
+    "tepur",
+    "haswulinu"
+  ]
+}

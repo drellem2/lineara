@@ -1,0 +1,546 @@
+{
+  "cth": "735",
+  "id": 281,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 1",
+      "raw": "[ [ x-li-i-pí-in",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 2",
+      "raw": "[ [ [l]e-e-ša-ki-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 3",
+      "raw": "[ [ x-ki-i-ip",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a",
+        "tu-ḫa-wu-u-ur"
+      ],
+      "line": "Vs. I 4",
+      "raw": "[ [ x-tu ma-a tu-ḫa-wu-u-ur",
+      "words": [
+        "ma",
+        "tuhawur"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 5",
+      "raw": "[ [ -tu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 6",
+      "raw": "[ [ [t]a-a-aš-wu-ú-ul",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 7",
+      "raw": "[ [ -ši",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 8",
+      "raw": "[ [ [l]e-e-ša-ak-ki-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 9",
+      "raw": "[ [ x-ta-i-ia",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 10",
+      "raw": "[ [ [m]a-an-na-ša-ak-ki-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 11",
+      "raw": "[ [ [w]u-un",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a",
+        "li-ip-šu-un-na-a-an"
+      ],
+      "line": "Vs. I 12",
+      "raw": "[ [ -aš ma-a li-ip-šu-un-na-a-an",
+      "words": [
+        "ma",
+        "lipsunnan"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 13",
+      "raw": "[ [ -ú",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-tu-ut-ḫu-ru-up"
+      ],
+      "line": "Vs. I 14",
+      "raw": "[ [ x-ma te-tu-ut-ḫu-ru-up",
+      "words": [
+        "tetuthurup"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 15",
+      "raw": "[ [ -al-wa-la-[at]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 1",
+      "raw": "tu-u[p-ḫa-zi-il [DINGIRMEŠ-un [ x-zi-it",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 2",
+      "raw": "tu-up-ḫa-z[i-il [DINGIRMEŠ-un [ip-pu-l]a-aš-ni",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 3",
+      "raw": "tu-up-ḫa-zi-i[l [DINGIRMEŠ-un [i]p-te-wu-u-uš-ni",
+      "words": []
+    },
+    {
+      "intact": [
+        "tu-up-ḫa-zi-il",
+        "ip-pa-ra-a-aš-ni"
+      ],
+      "line": "Vs. II 4",
+      "raw": "tu-up-ḫa-zi-il [DINGIRMEŠ-un] ip-pa-ra-a-aš-ni",
+      "words": [
+        "tuphazil",
+        "ipparasni"
+      ]
+    },
+    {
+      "intact": [
+        "tu-up-ḫa-zi-il",
+        "ip-wa-ḫa-ti"
+      ],
+      "line": "Vs. II 5",
+      "raw": "tu-up-ḫa-zi-il [DINGIRME]Š-un ip-wa-ḫa-ti",
+      "words": [
+        "tuphazil",
+        "ipwahati"
+      ]
+    },
+    {
+      "intact": [
+        "tu-up-ḫa-zi-il",
+        "ip-wi-wa-ra-ak"
+      ],
+      "line": "Vs. II 6",
+      "raw": "tu-up-ḫa-zi-il DINGIRMEŠ-un ip-wi-wa-ra-ak",
+      "words": [
+        "tuphazil",
+        "ipwiwarak"
+      ]
+    },
+    {
+      "intact": [
+        "za-aš-ša-a-ru-ú-un",
+        "a-aš-ma-a-i-ú"
+      ],
+      "line": "Vs. II 7",
+      "raw": "tu-up-ka-a-tu-u[ḫ] za-aš-ša-a-ru-ú-un a-aš-ma-a-i-ú",
+      "words": [
+        "zassarun",
+        "asmaiu"
+      ]
+    },
+    {
+      "intact": [
+        "tu-up-ka-a-tu-uḫ",
+        "wa-šu-wu-ú-un",
+        "a-aš-ma-a-i-ú"
+      ],
+      "line": "Vs. II 8",
+      "raw": "tu-up-ka-a-tu-uḫ wa-šu-wu-ú-un a-aš-ma-a-i-ú",
+      "words": [
+        "tupkatuh",
+        "wasuwun",
+        "asmaiu"
+      ]
+    },
+    {
+      "intact": [
+        "ga-am-ma-am-ma-a-an",
+        "te-wa-aš-ta-wa-ar",
+        "a-aš-ma-a-i-ú"
+      ],
+      "line": "Vs. II 9",
+      "raw": "tu-up-ka-a-tu-u[ḫ] ga-am-ma-am-ma-a-an te-wa-aš-ta-wa-ar a-aš-ma-a-i-ú",
+      "words": [
+        "kammamman",
+        "tewastawar",
+        "asmaiu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-we-e-eš",
+        "ma-a-ši-lu-e-lu-u"
+      ],
+      "line": "Vs. II 10",
+      "raw": "ta-we-e-eš t[u]-up-ka-a-tu-uḫ ma-a-ši-lu-e-lu-u",
+      "words": [
+        "tawes",
+        "masiluelu"
+      ]
+    },
+    {
+      "intact": [
+        "ti-i-li-ma",
+        "wu-u-ur"
+      ],
+      "line": "Vs. II 11",
+      "raw": "ti-i-li-ma wu-u-ur ma-a-x [ [ x-ap-tu-u-ni-ip",
+      "words": [
+        "tilima",
+        "wur"
+      ]
+    },
+    {
+      "intact": [
+        "tu-up-pu",
+        "tu-ú-ḫa-ap-ga-an"
+      ],
+      "line": "Vs. II 12",
+      "raw": "tu-up-pu tu-ú-ḫa-ap-ga-an [ [ x-eš-tu",
+      "words": [
+        "tuppu",
+        "tuhapkan"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 13",
+      "raw": "zi-lu-ú-mu-u[l] a-an-t[u [",
+      "words": []
+    },
+    {
+      "intact": [
+        "tu-up-pu"
+      ],
+      "line": "Vs. II 14",
+      "raw": "tu-up-pu un-t[u-ḫa]-a-a[p- [",
+      "words": [
+        "tuppu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 15",
+      "raw": "wa-ra-a-e-t[u- [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 16",
+      "raw": "x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 1′",
+      "raw": "[[t]aḫ-ku-un-pa-[li(-) [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 2′",
+      "raw": "[t]aḫ-ku-un wa-r[a- [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 3′",
+      "raw": "[t]u-up-za-ga-šar-tu-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 4′",
+      "raw": "[w]a-at-te-wa-aš-ḫa-ap z[a- [",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-az-zi-iz-aḫ",
+        "za-we-e-nu-u"
+      ],
+      "line": "Rs. III 5′",
+      "raw": "wa-az-zi-iz-aḫ za-we-e-nu-u t[e-x [",
+      "words": [
+        "wazzizah",
+        "zawenu"
+      ]
+    },
+    {
+      "intact": [
+        "za-ni-iš-ḫa-ap",
+        "pa-la-ma"
+      ],
+      "line": "Rs. III 6′",
+      "raw": "za-ni-iš-ḫa-ap pa-la-ma a-a[p- [",
+      "words": [
+        "zanishap",
+        "palama"
+      ]
+    },
+    {
+      "intact": [
+        "lu-u-ul",
+        "wa-aš-ḫa-wi"
+      ],
+      "line": "Rs. III 7′",
+      "raw": "lu-u-ul wa-aš-ḫa-wi gi-iz-ḫi-i[p [",
+      "words": [
+        "lul",
+        "washawi"
+      ]
+    },
+    {
+      "intact": [
+        "ša-i-il"
+      ],
+      "line": "Rs. III 8′",
+      "raw": "[g]i-iz-ḫi-ip ša-i-il at-ta-[li-ip [",
+      "words": [
+        "sail"
+      ]
+    },
+    {
+      "intact": [
+        "at-ta-a-li-ip"
+      ],
+      "line": "Rs. III 9′",
+      "raw": "x x-ḫi-ip at-ta-a-li-ip [ [",
+      "words": [
+        "attalip"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 10′",
+      "raw": "[ [ x x x x x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 11′",
+      "raw": "[ [ x x[ [ x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 12′",
+      "raw": "wa-aš-ḫ[a-ap [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 13′",
+      "raw": "a-wa-a[p [ x la-ku-sa-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 14′",
+      "raw": "wa-tu-ú-[ia [ -i-il 〈〈li〉〉 at-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 15′",
+      "raw": "wa-tu-ú-i[a [wu-u-u]r-du wa-i-il-lu-mu(-)[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "i-tu-ú-ia",
+        "ta-ḫa-wa-i-u-uš-ni"
+      ],
+      "line": "Rs. III 16′",
+      "raw": "i-tu-ú-ia [wu-u-u]r-du ta-ḫa-wa-i-u-uš-ni",
+      "words": [
+        "ituia",
+        "tahawaiusni"
+      ]
+    },
+    {
+      "intact": [
+        "wa-at-túḫ",
+        "ip-pu-la-aš-ni"
+      ],
+      "line": "Rs. III 17′",
+      "raw": "wa-at-túḫ [DI]NGIR[M]EŠ-un ip-pu-la-aš-ni",
+      "words": [
+        "wattuh",
+        "ippulasni"
+      ]
+    },
+    {
+      "intact": [
+        "wa-at-túḫ",
+        "ip-te-wu-u-uš-ni"
+      ],
+      "line": "Rs. III 18′",
+      "raw": "wa-at-túḫ [DI]NGIRMEŠ-un ip-te-wu-u-uš-ni",
+      "words": [
+        "wattuh",
+        "iptewusni"
+      ]
+    },
+    {
+      "intact": [
+        "tu-ú-wa",
+        "wa-az-za-ri-un",
+        "a-aš-ši-ia-ú-i"
+      ],
+      "line": "Rs. III 19′",
+      "raw": "tu-ú-wa ku-x[ [ x-ḫu wa-az-za-ri-un a-aš-ši-ia-ú-i",
+      "words": [
+        "tuwa",
+        "wazzariun",
+        "assiaui"
+      ]
+    },
+    {
+      "intact": [
+        "wa-tu-up-pu",
+        "ki-i-ta-at"
+      ],
+      "line": "Rs. III 20′",
+      "raw": "wa-tu-up-pu [ [ x[ [ x-ḫa-ap ki-i-ta-at ga-a-pa-az-za-ri-[un]",
+      "words": [
+        "watuppu",
+        "kitat"
+      ]
+    },
+    {
+      "intact": [
+        "i-mi-iš-wa",
+        "wu-u-ur",
+        "kat-ti-wa-la-an-ni"
+      ],
+      "line": "Rs. III 21′",
+      "raw": "i-mi-iš-wa wu-u-ur kat-ti-wa-la-an-ni [ [",
+      "words": [
+        "imiswa",
+        "wur",
+        "kattiwalanni"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia",
+        "pa-la"
+      ],
+      "line": "Rs. III 22′",
+      "raw": "i-ia pa-la ma-i-ta-wa-al-li-ia-x[ [",
+      "words": [
+        "ia",
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "ma-al-ḫi-ip-ga"
+      ],
+      "line": "Rs. III 23′",
+      "raw": "ma-al-ḫi-ip-ga t[u]-u-mi-i-il wu-u-ur-du-k[a [",
+      "words": [
+        "malhipka"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 1′",
+      "raw": "[ [ x-tu [ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.40",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ma",
+    "tuhawur",
+    "ma",
+    "lipsunnan",
+    "tetuthurup",
+    "tuphazil",
+    "ipparasni",
+    "tuphazil",
+    "ipwahati",
+    "tuphazil",
+    "ipwiwarak",
+    "zassarun",
+    "asmaiu",
+    "tupkatuh",
+    "wasuwun",
+    "asmaiu",
+    "kammamman",
+    "tewastawar",
+    "asmaiu",
+    "tawes",
+    "masiluelu",
+    "tilima",
+    "wur",
+    "tuppu",
+    "tuhapkan",
+    "tuppu",
+    "wazzizah",
+    "zawenu",
+    "zanishap",
+    "palama",
+    "lul",
+    "washawi",
+    "sail",
+    "attalip",
+    "ituia",
+    "tahawaiusni",
+    "wattuh",
+    "ippulasni",
+    "wattuh",
+    "iptewusni",
+    "tuwa",
+    "wazzariun",
+    "assiaui",
+    "watuppu",
+    "kitat",
+    "imiswa",
+    "wur",
+    "kattiwalanni",
+    "ia",
+    "pala",
+    "malhipka"
+  ]
+}

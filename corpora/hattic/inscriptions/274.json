@@ -1,0 +1,113 @@
+{
+  "cth": "735",
+  "id": 274,
+  "lines": [
+    {
+      "intact": [
+        "ne-e-ru-u"
+      ],
+      "line": " {€2+1} Vs. 1/Vs. I 1",
+      "raw": "ne-e-ru-u [ [-p]a-aḫ-šu-le-e ša-x[",
+      "words": [
+        "neru"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": " {€2+1} Vs. 2/Vs. I 2",
+      "raw": "[ḫa-an-ti-i-nu-u [[ pa-la mu-uḫ-ša-i-x[",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "ma-ra-a-ra"
+      ],
+      "line": " {€2+1} Vs. 3/Vs. I 3",
+      "raw": "[du-up-ḫi-ip-x[ [ x ma-ra-a-ra zi-i[š/u[š",
+      "words": [
+        "marara"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la-ma"
+      ],
+      "line": " {€2+1} Vs. 4/Vs. I 4",
+      "raw": "[x x [x[ [ x pa-la-ma eš-ta-a-a[n-",
+      "words": [
+        "palama"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 5",
+      "raw": "[ -ma-a ga-ma-am-m[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 6",
+      "raw": "[ [-u]n ši-in-du-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 6",
+      "raw": "[ x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 1′",
+      "raw": "[ -ig-ga-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 2′",
+      "raw": "[ [š]a-i-il li-i[a-",
+      "words": []
+    },
+    {
+      "intact": [
+        "gi-iz-ḫa"
+      ],
+      "line": " {€2+1} Rs. 1′/Rs. IV 3′",
+      "raw": "[x x [x[ [ gi-iz-ḫa [",
+      "words": [
+        "kizha"
+      ]
+    },
+    {
+      "intact": [
+        "du-ú-ḫa"
+      ],
+      "line": " {€2+1} Rs. 2′/Rs. IV 4′",
+      "raw": "[a-re-e [[ [ du-ú-ḫa [",
+      "words": [
+        "tuha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2+1} Rs. 3′/Rs. IV 5′",
+      "raw": "[at-ta-li-i[p [ ip-ga-az-zu-e-[ma-aḫ",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 43.216+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "neru",
+    "pala",
+    "marara",
+    "palama",
+    "kizha",
+    "tuha"
+  ]
+}

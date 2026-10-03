@@ -1,0 +1,93 @@
+{
+  "cth": "745",
+  "id": 566,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "[ [ x x x ša-aḫ-[mu-lu-up",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ri-in-na"
+      ],
+      "line": "2′",
+      "raw": "[[ [ x URUa-ri-in-na š[a-aḫ-mu-lu-up",
+      "words": [
+        "arinna"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-at-tu-uš"
+      ],
+      "line": "3′",
+      "raw": "[[ [ x URUḫa-at-tu-uš ša-aḫ-mu-[lu-up",
+      "words": [
+        "hattus"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[[URUz]i-ip-pa-la-an-ta ša-aḫ-mu-lu-[up",
+      "words": []
+    },
+    {
+      "intact": [
+        "na-ra-ak",
+        "ša-aḫ-mu-lu-up"
+      ],
+      "line": "5′",
+      "raw": "[[ [ x URUna-ra-ak ša-aḫ-mu-lu-up [",
+      "words": [
+        "narak",
+        "sahmulup"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": "6′",
+      "raw": "[[ [ x x-na pa-la ti-ku-un-ku-u[ḫ-ḫu-wa",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": "7′",
+      "raw": "[[ [ x-na pa-la ti-ku-un-ku-uḫ-[ḫu-wa",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[[ [ x URUzi-ip-pa-la-an-[ta",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[[ [ x x x x x x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.73",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "arinna",
+    "hattus",
+    "narak",
+    "sahmulup",
+    "pala",
+    "pala"
+  ]
+}

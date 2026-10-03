@@ -1,0 +1,22 @@
+{
+  "cth": "594",
+  "id": 28,
+  "lines": [
+    {
+      "intact": [
+        "ka-a-aš-mi-iš-ša"
+      ],
+      "line": "Vs. I 5′",
+      "raw": "ka-a-aš-mi-iš-ša",
+      "words": [
+        "kasmissa"
+      ]
+    }
+  ],
+  "manuscript": "KBo 38.6",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kasmissa"
+  ]
+}

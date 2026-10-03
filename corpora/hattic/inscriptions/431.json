@@ -1,0 +1,194 @@
+{
+  "cth": "744",
+  "id": 431,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 1′",
+      "raw": "a-n[a [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 2′",
+      "raw": "le-e[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-at"
+      ],
+      "line": "Vs. I 3′",
+      "raw": "pa-at x[ [",
+      "words": [
+        "pat"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 4′",
+      "raw": "ka-le-e[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 5′",
+      "raw": "wa-la-at[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 6′",
+      "raw": "te-eš-šu-ka-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 7′",
+      "raw": "wa-zi-i-wi-i[n [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 8′",
+      "raw": "šu-li-i-in-ka-t[e [",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-tu-ú-up"
+      ],
+      "line": "Vs. I 9′",
+      "raw": "te-tu-ú-up ḫa-wa-a-[ [",
+      "words": [
+        "tetup"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 10′",
+      "raw": "a-ni-i(-)ip-za-ar-ši-i(-)x[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "kap-pa-a-ri"
+      ],
+      "line": "Vs. I 11′",
+      "raw": "kap-pa-a-ri le-e-le-[ [",
+      "words": [
+        "kappari"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 12′",
+      "raw": "wa-tu-ú-ia(-)ma-at-ta-x[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-a-ḫa-at-ku-u-uz"
+      ],
+      "line": "Vs. I 13′",
+      "raw": "ta-a-ḫa-at-ku-u-uz li-i-[ [",
+      "words": [
+        "tahatkuz"
+      ]
+    },
+    {
+      "intact": [
+        "pí-in-na-a-an"
+      ],
+      "line": "Vs. I 14′",
+      "raw": "pí-in-na-a-an un-tu-ú-t[a- [",
+      "words": [
+        "pinnan"
+      ]
+    },
+    {
+      "intact": [
+        "ta-i-ma-a-an",
+        "ta-na-a-ia"
+      ],
+      "line": "Vs. I 15′",
+      "raw": "ta-i-ma-a-an ta-na-a-ia x-[ [",
+      "words": [
+        "taiman",
+        "tanaia"
+      ]
+    },
+    {
+      "intact": [
+        "ú-ut-wa"
+      ],
+      "line": "Vs. I 16′",
+      "raw": "un-tu-ú-[u]ḫ-ši-in ú-ut-wa [ [",
+      "words": [
+        "utwa"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-wu-ru-na-a-iš",
+        "aḫ-zi-il"
+      ],
+      "line": "Vs. I 17′",
+      "raw": "ḫa-wu-ru-na-a-iš aḫ-zi-il",
+      "words": [
+        "hawurunais",
+        "ahzil"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-za-ú-e",
+        "taḫ-ku-ú",
+        "ap-pa-li-i"
+      ],
+      "line": "Vs. I 18′",
+      "raw": "le-e-za-ú-e taḫ-ku-ú ap-pa-li-i",
+      "words": [
+        "lezaue",
+        "tahku",
+        "appali"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 19′",
+      "raw": "[ [ [k]a-at-te-e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 20′",
+      "raw": "[ [ [-u]z-zu-u-ul",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 21′",
+      "raw": "[ [ x-eš-ti-pu-še",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.45",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "pat",
+    "tetup",
+    "kappari",
+    "tahatkuz",
+    "pinnan",
+    "taiman",
+    "tanaia",
+    "utwa",
+    "hawurunais",
+    "ahzil",
+    "lezaue",
+    "tahku",
+    "appali"
+  ]
+}

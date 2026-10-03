@@ -1,0 +1,200 @@
+{
+  "cth": "745",
+  "id": 487,
+  "lines": [
+    {
+      "intact": [],
+      "line": "lk. Kol. 1′",
+      "raw": "]x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 2′",
+      "raw": "](-)lu(-)[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 3′",
+      "raw": "-a]m iš-tu-x-nu-x-ša-il",
+      "words": []
+    },
+    {
+      "intact": [
+        "ši-ip-ši-i-il"
+      ],
+      "line": "lk. Kol. 4′",
+      "raw": "]x ši-ip-ši-i-il",
+      "words": [
+        "sipsil"
+      ]
+    },
+    {
+      "intact": [
+        "ma-aḫ-du-ni-eš"
+      ],
+      "line": "lk. Kol. 5′",
+      "raw": "]-šu-wa ma-aḫ-du-ni-eš",
+      "words": [
+        "mahtunies"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 6′",
+      "raw": "]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 7′",
+      "raw": "]-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 8′",
+      "raw": "]x-mi-li",
+      "words": []
+    },
+    {
+      "intact": [
+        "ti-tu-uḫ"
+      ],
+      "line": "lk. Kol. 9′",
+      "raw": "-l]i-aš-ti ti-tu-uḫ",
+      "words": [
+        "tituh"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 10′",
+      "raw": "] wu-ur-[ [ x x(-)du-wa-ru-nu-ú 𒀹",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 11′",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 12′",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 13′",
+      "raw": "]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 14′",
+      "raw": "-ḫ]a-ni-tu-ru-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 1′",
+      "raw": "x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 2′",
+      "raw": "[li-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 4′",
+      "raw": "[taḫ-zi-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 4′",
+      "raw": "[we-in-nu-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 5′",
+      "raw": "[wi-lu-uš-ta-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 6′",
+      "raw": "[ḫu-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 7′",
+      "raw": "[tu-up-ka-am-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 8′",
+      "raw": "[mu-ú-ḫa-az-zi-i [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 9′",
+      "raw": "[ú-ni-im-ḫu-uš-du-r[u(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 10′",
+      "raw": "[ni-wa-mu-u-[u]š-mu x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 11′",
+      "raw": "[na-a-ú-uš(-)mu-uk-ku-i-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 12′",
+      "raw": "[wa-še-zi-il(-)nu(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 13′",
+      "raw": "[ti-iš-šu-te-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 14′",
+      "raw": "[ta-aš-ka-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 15′",
+      "raw": "[ma-n[e(-)",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.113",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "sipsil",
+    "mahtunies",
+    "tituh"
+  ]
+}

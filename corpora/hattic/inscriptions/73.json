@@ -1,15 +1,63 @@
 {
-  "category": "toponym",
-  "gloss": "cult city of the sun goddess",
+  "cth": "627",
   "id": 73,
-  "is_bilingual": false,
-  "name": "Arinna",
-  "provenance": "Hattic toponym; see citation.",
-  "source_citation": "del Monte, G. F. & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC 6. Wiesbaden: Reichert.",
-  "text": "Arinna",
-  "tier": "B",
-  "transliteration": "arinna",
+  "lines": [
+    {
+      "intact": [],
+      "line": "Rs.? 1′",
+      "raw": "[ [ [t]e-e-wu-u te-e-wu(-)x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "i-ia-a"
+      ],
+      "line": "Rs.? 2′",
+      "raw": "i-ia-a w[u-u-ur-li",
+      "words": [
+        "ia"
+      ]
+    },
+    {
+      "intact": [
+        "za-a-i-u"
+      ],
+      "line": "Rs.? 3′",
+      "raw": "za-a-i-u za-a-i-[u",
+      "words": [
+        "zaiu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 4′",
+      "raw": "[i-ia-a [wu-u-ur-li(-)x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 9′",
+      "raw": "[i-li-li-ia-x-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 11′",
+      "raw": "[i-li-li-u-un-na [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 12′",
+      "raw": "[i-li-li-u [i-li-li-u-un [[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 30.16",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "arinna"
+    "ia",
+    "zaiu"
   ]
 }

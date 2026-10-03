@@ -1,0 +1,176 @@
+{
+  "cth": "744",
+  "id": 377,
+  "lines": [
+    {
+      "intact": [
+        "ku-u-uḫ-tum-ma",
+        "ta-ru-uḫ-tu"
+      ],
+      "line": "{€7} Vs.? 3′",
+      "raw": "[ ku-u-uḫ-tum-ma ta-ru-uḫ-tu [",
+      "words": [
+        "kuhtumma",
+        "taruhtu"
+      ]
+    },
+    {
+      "intact": [
+        "ku-uḫ-tu-un"
+      ],
+      "line": "{€7} Vs.? 4′",
+      "raw": "[ -un-wa-a-al ku-uḫ-tu-un LÚGUD[U₁₂",
+      "words": [
+        "kuhtun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€7+6} Vs.? 6′/6′",
+      "raw": "[ [-g]i-it-ta ki-iš-ge-e-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "in-ta-a"
+      ],
+      "line": "{€7+6} Vs.? 7′/7′",
+      "raw": "[ in-ta-a ta-ba-ar-n[a",
+      "words": [
+        "inta"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€7+4+6} Vs.? 8′/Rs.? III 8′/8′",
+      "raw": "[ [-e]k-zu-u-li-il [",
+      "words": []
+    },
+    {
+      "intact": [
+        "e-ek-zu-u-li-il"
+      ],
+      "line": "{€4+6} Rs.? III 9′/9′",
+      "raw": "[ e-ek-zu-u-li-il [",
+      "words": [
+        "ekzulil"
+      ]
+    },
+    {
+      "intact": [
+        "tu-u-ḫu"
+      ],
+      "line": "{€4} Rs.? III 10′",
+      "raw": "[ x-ḫi-in tu-u-ḫu le-e-pu-lu(-)[",
+      "words": [
+        "tuhu"
+      ]
+    },
+    {
+      "intact": [
+        "ku-li-i-ip",
+        "ta-nu-u-us-tu-uš"
+      ],
+      "line": "{€4} Rs.? III 11",
+      "raw": "[ x ku-li-i-ip ta-nu-u-us-tu-uš x[",
+      "words": [
+        "kulip",
+        "tanustus"
+      ]
+    },
+    {
+      "intact": [
+        "wa-zu-ú-ul-la"
+      ],
+      "line": "{€4} Rs.? III 12′",
+      "raw": "[ x-ta-a-aš-ki-nu-u Dwa-zu-ú-ul-la x[",
+      "words": [
+        "wazulla"
+      ]
+    },
+    {
+      "intact": [
+        "ga-wu-u-ti-li-i-iš"
+      ],
+      "line": "{€4} Rs.? III 13′",
+      "raw": "[ -x-ia ga-wu-u-ti-li-i-iš ia-a-ia-w[a-",
+      "words": [
+        "kawutilis"
+      ]
+    },
+    {
+      "intact": [
+        "ma-al-ḫi-ip-wa"
+      ],
+      "line": "{€4+2} Rs.? III 14′/Rs. (III) 1′",
+      "raw": "[ x(-)te-e ma-al-ḫi-ip-wa AḪ-ga-al-li-e-en(-)[ [ x x",
+      "words": [
+        "malhipwa"
+      ]
+    },
+    {
+      "intact": [
+        "te-ku-u-un-ku-ḫu-a"
+      ],
+      "line": "{€3+4+2} Rs.? 1′/Rs.? III 15′/Rs. (III) 2′",
+      "raw": "]x te-ku-u-un-ku-ḫu-a te-ga-wu-u-ti-li-iš-x",
+      "words": [
+        "tekunkuhua"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-te-pí-nu-ú-un"
+      ],
+      "line": "{€3+4+2} Rs.? 2′/Rs.? III 16′/Rs. (III) 3′",
+      "raw": "] te-zi-i-ta-ḫi-il-x Dḫa-te-pí-nu-ú-un",
+      "words": [
+        "hatepinun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€2} Rs. (III) 4′",
+      "raw": "up-x-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€1+3} Rs.? III 1′/Vs.? 2′",
+      "raw": "[ [te-w]a-a-aš-ḫa-am ti-i[a-a-at",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-wa-a-aš-ḫa-am",
+        "ti-ia-a-at"
+      ],
+      "line": "{€1+3+2} Rs.? III 6′/Vs.? 7′/Vs. (II) 1′",
+      "raw": "[ te-wa-a-aš-ḫa-am ti-ia-a-at LUGAL-u[š [ x-e[",
+      "words": [
+        "tewasham",
+        "tiat"
+      ]
+    }
+  ],
+  "manuscript": "KBo 25.127+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kuhtumma",
+    "taruhtu",
+    "kuhtun",
+    "inta",
+    "ekzulil",
+    "tuhu",
+    "kulip",
+    "tanustus",
+    "wazulla",
+    "kawutilis",
+    "malhipwa",
+    "tekunkuhua",
+    "hatepinun",
+    "tewasham",
+    "tiat"
+  ]
+}

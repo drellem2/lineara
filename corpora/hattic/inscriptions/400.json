@@ -1,0 +1,125 @@
+{
+  "cth": "744",
+  "id": 400,
+  "lines": [
+    {
+      "intact": [
+        "pí-i-in"
+      ],
+      "line": "1′",
+      "raw": "(-)p]í-i-in KI.MIN x[",
+      "words": [
+        "pin"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ta-ia-a-a]n ka-zi-in-w[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ [t]a-i-ma-a-an ka-zi-i[n-wa(-)",
+      "words": []
+    },
+    {
+      "intact": [
+        "eš-ḫa-wú-ú-un"
+      ],
+      "line": "4′",
+      "raw": "[ x x eš-ḫa-wú-ú-un l[i-",
+      "words": [
+        "eshawun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ [-i]p-ḫu iš-te-e-ḫa-zi(-)[",
+      "words": []
+    },
+    {
+      "intact": [
+        "i-me-el-li"
+      ],
+      "line": "6′",
+      "raw": "[ -a-pí i-me-el-li un-x[",
+      "words": [
+        "imelli"
+      ]
+    },
+    {
+      "intact": [
+        "ku-li-i-ip"
+      ],
+      "line": "7′",
+      "raw": "[ -we-e-el ku-li-i-ip [",
+      "words": [
+        "kulip"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ x-wa-az-zi-in ta-nu-u(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[ [w]a-aḫ-tu-ú-il ka-a-at-[te",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "[ (-)ú-wa-il i-tu-ú-up-ḫi-i[l",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "11′",
+      "raw": "[up-ḫ]a-a-pu-lu-up-ta-a-an eš-z[i-",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-a-ru"
+      ],
+      "line": "14′",
+      "raw": "[ut-ḫ]u-ru-u ta-a-ru ka-a-at-[te",
+      "words": [
+        "taru"
+      ]
+    },
+    {
+      "intact": [
+        "lu-u-la-ap-tu"
+      ],
+      "line": "15′",
+      "raw": "[ x-u-up lu-u-la-ap-tu [",
+      "words": [
+        "lulaptu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "16′",
+      "raw": "[ku-l]i-i-ip x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.93",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "pin",
+    "eshawun",
+    "imelli",
+    "kulip",
+    "taru",
+    "lulaptu"
+  ]
+}

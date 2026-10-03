@@ -1,0 +1,51 @@
+{
+  "cth": "666",
+  "id": 144,
+  "lines": [
+    {
+      "intact": [
+        "te-wa-il-la"
+      ],
+      "line": "Vs.(?) II 5′",
+      "raw": "-i]a te-wa-il-la",
+      "words": [
+        "tewailla"
+      ]
+    },
+    {
+      "intact": [
+        "te-ku-un-ku-uḫ-ḫu-a"
+      ],
+      "line": "Vs.(?) II 6′",
+      "raw": "]x te-ku-un-ku-uḫ-ḫu-a",
+      "words": [
+        "tekunkuhhua"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) II 7′",
+      "raw": "-p]é-ku-uk-ka",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) II 8′",
+      "raw": "]-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) II 9′",
+      "raw": "-z]i-ip-wu-li-ia",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.101",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tewailla",
+    "tekunkuhhua"
+  ]
+}

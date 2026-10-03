@@ -1,0 +1,34 @@
+{
+  "cth": "744",
+  "id": 414,
+  "lines": [
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ x-a-x-ki x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ga-ši-túḫ-ḫa"
+      ],
+      "line": "3′",
+      "raw": "[ x ga-ši-túḫ-ḫa [",
+      "words": [
+        "kasituhha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "x te-ep-ḫa-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 58.322",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kasituhha"
+  ]
+}

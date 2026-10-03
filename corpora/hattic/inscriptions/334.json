@@ -1,0 +1,87 @@
+{
+  "cth": "742",
+  "id": 334,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 1′",
+      "raw": "[ [ x d[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 2′",
+      "raw": "[[ [ [-a]ḫ a-aš-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 3′",
+      "raw": "[[ [ x-aḫ ma-aš-ḫu-l[i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 3′",
+      "raw": "[[ [ ma-aš-ḫé-e[p-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 4′",
+      "raw": "[[ [ ma-aš-ḫa-a-p[í",
+      "words": []
+    },
+    {
+      "intact": [
+        "kat-te"
+      ],
+      "line": "Vs. I 5′",
+      "raw": "[[ [ kat-te [",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 6′",
+      "raw": "[[ [ -a-aḫ ḫu-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 7′",
+      "raw": "[[ [ [p]é-e-ne-e(-)[",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-aš-ta"
+      ],
+      "line": "Vs. I 8′",
+      "raw": "[[ [ x a-aš-ta [",
+      "words": [
+        "asta"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 9′",
+      "raw": "[[ [ [w]a-te-iš [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 10′",
+      "raw": "[[ [ [-p]a",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 14.118",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "katte",
+    "asta"
+  ]
+}

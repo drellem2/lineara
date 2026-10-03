@@ -1,0 +1,207 @@
+{
+  "cth": "744",
+  "id": 446,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 1′",
+      "raw": "[ [ x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2′",
+      "raw": "[[ [ te-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 3′",
+      "raw": "[[ [ x-aš-ka [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′",
+      "raw": "[[ [ -up 9-in [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5′",
+      "raw": "[[ [ te-n[i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′",
+      "raw": "[[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫu-pí"
+      ],
+      "line": "Vs. 7′",
+      "raw": "[ [ x ḫu-pí me-[",
+      "words": [
+        "hupi"
+      ]
+    },
+    {
+      "intact": [
+        "pí-lu-u"
+      ],
+      "line": "Vs. 8′",
+      "raw": "[[ [ [-e]š pí-lu-u x[",
+      "words": [
+        "pilu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 9′",
+      "raw": "[[ [ [(-)i]a-aḫ-šu-š[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10′",
+      "raw": "[[ [ -ia-aḫ-tu-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 11′",
+      "raw": "[[ [ -da-ma t[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 12′",
+      "raw": "[[ [ -ru-u-tu [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 13′",
+      "raw": "[[ [ [t]e-ta x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 14′",
+      "raw": "[[ [ [p]a-aš-d[u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 15′",
+      "raw": "[[ [ x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 4′",
+      "raw": "[ḫa-ša-a [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 5′",
+      "raw": "[túḫ-ku-úr [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 6′",
+      "raw": "[pa-la [t[e-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 7′",
+      "raw": "[te-ep-ku-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 8′",
+      "raw": "[li-ip-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 9′",
+      "raw": "[ḫa-we-ru-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 10′",
+      "raw": "[pa-la [li-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 11′",
+      "raw": "[x-ap-tú[ḫ-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 12′",
+      "raw": "[DINGIRMEŠ-ap [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 13′",
+      "raw": "[a-ni-ip [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 14′",
+      "raw": "[[w]a-t[u-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 15′",
+      "raw": "[un-d[u-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 16′",
+      "raw": "[ḫa-a-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 17′",
+      "raw": "[ka-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 18′",
+      "raw": "[[ [ -za-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 19′",
+      "raw": "[[ [ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.11",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "hupi",
+    "pilu"
+  ]
+}

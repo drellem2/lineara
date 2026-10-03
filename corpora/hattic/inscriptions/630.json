@@ -1,0 +1,111 @@
+{
+  "cth": "746",
+  "id": 630,
+  "lines": [
+    {
+      "intact": [],
+      "line": "r. Kol. 1′",
+      "raw": "]-a-ru",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-ar"
+      ],
+      "line": "r. Kol. 2′",
+      "raw": "w]a-ar",
+      "words": [
+        "war"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 3′",
+      "raw": "]-wa",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-a-li-wu"
+      ],
+      "line": "r. Kol. 4′",
+      "raw": "]x li-a-li-wu",
+      "words": [
+        "lialiwu"
+      ]
+    },
+    {
+      "intact": [
+        "za-an-na-ar-pa-al"
+      ],
+      "line": "r. Kol. 5′",
+      "raw": "]x-a-pí-še-el za-an-na-ar-pa-al",
+      "words": [
+        "zannarpal"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 6′",
+      "raw": "]-at",
+      "words": []
+    },
+    {
+      "intact": [
+        "ša-ap-we"
+      ],
+      "line": "r. Kol. 7′",
+      "raw": "]x-ru ša-ap-we",
+      "words": [
+        "sapwe"
+      ]
+    },
+    {
+      "intact": [
+        "wa-aš-ḫa-wu-un",
+        "a-aš-ka-i-e-li"
+      ],
+      "line": "r. Kol. 8′",
+      "raw": "wa-aš-ḫa-w]u-un a-aš-ka-i-e-li",
+      "words": [
+        "washawun",
+        "askaieli"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 9′",
+      "raw": "]-aš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 10′",
+      "raw": "]x[ [ x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Rd. 1′",
+      "raw": "[ x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Rd. 2″",
+      "raw": "]x",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.47",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "war",
+    "lialiwu",
+    "zannarpal",
+    "sapwe",
+    "washawun",
+    "askaieli"
+  ]
+}

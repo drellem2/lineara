@@ -1,0 +1,102 @@
+{
+  "cth": "744",
+  "id": 444,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 8′",
+      "raw": "]x-un(-)ki-in-na-wa-ri-in ku-wa-x[ [ x-aš",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-ta-ak-ku-mu-un"
+      ],
+      "line": "Vs. 9′",
+      "raw": "]x-na-a ka-ta-ak-ku-mu-un",
+      "words": [
+        "katakkumun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10′",
+      "raw": "-i]n(-)eš-ša-li-ip",
+      "words": []
+    },
+    {
+      "intact": [
+        "túḫ-ḫu-uš",
+        "ša-ru-ú-ia",
+        "a-ša-ḫua-ša-aḫ"
+      ],
+      "line": "Vs. 14′",
+      "raw": "túḫ-ḫu-u]š ša-ru-ú-ia a-ša-ḫu(-)a-ša-aḫ",
+      "words": [
+        "tuhhus",
+        "saruia",
+        "asahuasah"
+      ]
+    },
+    {
+      "intact": [
+        "túḫ-ḫu-uš"
+      ],
+      "line": "Vs. 15′",
+      "raw": "]-ti-e túḫ-ḫu-uš te-x-x",
+      "words": [
+        "tuhhus"
+      ]
+    },
+    {
+      "intact": [
+        "túḫ-ḫu-uš"
+      ],
+      "line": "Vs. 16′",
+      "raw": "]-pí-ka túḫ-ḫu-uš te-ma-x-zi-ma",
+      "words": [
+        "tuhhus"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 17′",
+      "raw": "]x-wa-ši-ni",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 18′",
+      "raw": "]-ez-ú-ma",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-mi-šu"
+      ],
+      "line": "Vs. 19′",
+      "raw": "-i]p wa-mi-šu",
+      "words": [
+        "wamisu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 20′",
+      "raw": "]",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 44.26",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "katakkumun",
+    "tuhhus",
+    "saruia",
+    "asahuasah",
+    "tuhhus",
+    "tuhhus",
+    "wamisu"
+  ]
+}

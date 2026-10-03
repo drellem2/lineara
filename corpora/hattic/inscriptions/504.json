@@ -1,0 +1,45 @@
+{
+  "cth": "745",
+  "id": 504,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x-e-ep ax[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-a-ša-aḫ"
+      ],
+      "line": "2′",
+      "raw": "]-a wa-a-ša-aḫ",
+      "words": [
+        "wasah"
+      ]
+    },
+    {
+      "intact": [
+        "tu-na-a-ḫi-in"
+      ],
+      "line": "3′",
+      "raw": "-i]l tu-na-a-ḫi-in",
+      "words": [
+        "tunahin"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "]x-un",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.137",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wasah",
+    "tunahin"
+  ]
+}

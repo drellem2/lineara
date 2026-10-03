@@ -1,0 +1,89 @@
+{
+  "cth": "745",
+  "id": 598,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "[ [ [-i]t x [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[[ [ [-i]l t[e-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[[ [ -x-ḫu-kań-ta ḫu-u[r-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[[ [ -i-it",
+      "words": []
+    },
+    {
+      "intact": [
+        "lu-ú-wa-a",
+        "lu-ú-wa-i-ia"
+      ],
+      "line": "5′",
+      "raw": "[lu-ú-wa]-i-ia lu-ú-wa-a lu-ú-wa-i-ia [",
+      "words": [
+        "luwa",
+        "luwaia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[[ [ [lu]-ú-wa-ma [",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-at-ta-aš"
+      ],
+      "line": "7′",
+      "raw": "[[ [ -x-wa-e wa-at-ta-aš [",
+      "words": [
+        "wattas"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-ḫu-la-a-la"
+      ],
+      "line": "8′",
+      "raw": "[[ [ ka-a-ḫu-la-a-la [",
+      "words": [
+        "kahulala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[[ [ [-i]k-ta-a(-)x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "[[ [ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 60.133",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "luwa",
+    "luwaia",
+    "wattas",
+    "kahulala"
+  ]
+}

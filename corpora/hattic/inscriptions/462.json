@@ -1,0 +1,57 @@
+{
+  "cth": "745",
+  "id": 462,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 1′",
+      "raw": "-w]a-a-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2′",
+      "raw": "]x x-up-[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "zi-i-la-a-at"
+      ],
+      "line": "Vs. 3′",
+      "raw": "z]i-i-la-a-at [ [",
+      "words": [
+        "zilat"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′",
+      "raw": "]x-zu-ú",
+      "words": []
+    },
+    {
+      "intact": [
+        "mu-u-wa-ti-šu-u-up"
+      ],
+      "line": "Vs. 5′",
+      "raw": "-l]i mu-u-wa-ti-šu-u-up",
+      "words": [
+        "muwatisup"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′",
+      "raw": "-z]i",
+      "words": []
+    }
+  ],
+  "manuscript": "ABoT 2.236",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "zilat",
+    "muwatisup"
+  ]
+}

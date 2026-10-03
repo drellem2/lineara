@@ -1,0 +1,52 @@
+{
+  "cth": "738",
+  "id": 309,
+  "lines": [
+    {
+      "intact": [
+        "te-te-eš-ḫa-wi"
+      ],
+      "line": " {€2} Vs.? II 12′",
+      "raw": "[ Dte-te-eš-ḫa-wi i-[i]a-i-i[p",
+      "words": [
+        "teteshawi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs.? II 13′",
+      "raw": "[ x tu-ú-wa-zi-i[k] [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs.? II 14′",
+      "raw": "[ x-iš-ta-li tu-ul-la-al-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs.? II 15′",
+      "raw": "[ -x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs.? II 21′",
+      "raw": "[ x-ru wa-a-da-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs.? II 22′",
+      "raw": "[ la-ma-ia-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 21.99+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "teteshawi"
+  ]
+}

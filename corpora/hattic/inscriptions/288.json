@@ -1,0 +1,162 @@
+{
+  "cth": "736",
+  "id": 288,
+  "lines": [
+    {
+      "intact": [],
+      "line": "{€2} Vs. lk. Kol. 1′a",
+      "raw": "[ [ [zi-i]z-za-aš-du",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Vs. lk. Kol. 2′a",
+      "raw": "[ [ x-ti-i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Vs. lk. Kol. 3′a",
+      "raw": "[ [ -ḫu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Vs. lk. Kol. 6′a",
+      "raw": "[ [ -pé-en",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Vs. lk. Kol. 7′a",
+      "raw": "[ [ x-ne",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Vs. lk. Kol. 8′a",
+      "raw": "[ [ x-ḫa-ag-ga-wa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Vs. lk. Kol. 9′a",
+      "raw": "[ [ [ta-b]a-ar-na",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Vs. lk. Kol. 10′a",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Rs. lk. Kol. 2′a",
+      "raw": "[ [ x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Rs. lk. Kol. 3′a",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Rs. lk. Kol. 4′a",
+      "raw": "[ [ [te-e-ḫa-a-ar]-ki-ma-a-aḫ-ḫa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Rs. lk. Kol. 5′a",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Rs. lk. Kol. 6′a",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "pu-lu-u-ku-up-e"
+      ],
+      "line": "{€2} Rs. lk. Kol. 7′a",
+      "raw": "[ [ [ḫ]a-ša-a-aḫ-ḫu pu-lu-u-ku-up-e",
+      "words": [
+        "pulukupe"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€2} Rs. lk. Kol. 8′a",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Rs. lk. Kol. 9′a",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-eš-te-eš"
+      ],
+      "line": "{€2} Rs. lk. Kol. 10′a",
+      "raw": "[ [ [w]u-u-ru-un te-eš-te-eš KI.MIN",
+      "words": [
+        "testes"
+      ]
+    },
+    {
+      "intact": [
+        "eš-ta-a-an"
+      ],
+      "line": "{€2} Rs. lk. Kol. 11′a",
+      "raw": "[ [ x-ri-a eš-ta-a-an",
+      "words": [
+        "estan"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-at-ti"
+      ],
+      "line": "{€2} Rs. lk. Kol. 12′a",
+      "raw": "[ [ [ta-b]a-ar-na ka-a-at-ti",
+      "words": [
+        "katti"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-a-li-tu-ni-ib"
+      ],
+      "line": "{€2} Rs. lk. Kol. 13′a",
+      "raw": "[ [ ḫa-a-li-tu-ni-ib",
+      "words": [
+        "halitunip"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€2} Rs. lk. Kol. 14′a",
+      "raw": "[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.48+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "pulukupe",
+    "testes",
+    "estan",
+    "katti",
+    "halitunip"
+  ]
+}

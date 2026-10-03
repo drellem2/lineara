@@ -1,0 +1,39 @@
+{
+  "cth": "744",
+  "id": 398,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs.? 11″",
+      "raw": "-a]n-za šu-up-ti-ma-a-w[a",
+      "words": []
+    },
+    {
+      "intact": [
+        "uš-šu-uḫ-ti"
+      ],
+      "line": "Vs.? 12″",
+      "raw": "[ [t]a-a-ru uš-šu-uḫ-ti",
+      "words": [
+        "ussuhti"
+      ]
+    },
+    {
+      "intact": [
+        "iš-ša-an-ke-e"
+      ],
+      "line": "Vs.? 13″",
+      "raw": "]x iš-ša-an-ke-e",
+      "words": [
+        "issanke"
+      ]
+    }
+  ],
+  "manuscript": "KBo 37.90",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ussuhti",
+    "issanke"
+  ]
+}

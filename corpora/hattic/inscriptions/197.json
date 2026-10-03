@@ -1,0 +1,168 @@
+{
+  "cth": "725",
+  "id": 197,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 1′",
+      "raw": "[z]i-i-iš-pa ša-ak-t[u-nu-ú-wa",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-mu-ru-ú-wa"
+      ],
+      "line": "Vs. I 2′",
+      "raw": "[w[a]-a-ša-aḫ ḫa-mu-ru-ú-wa [",
+      "words": [
+        "hamuruwa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 3′",
+      "raw": "[[w]a-a-ša-aḫ ta-al-wi-i-i[t",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 4′",
+      "raw": "[[i]-ma-a-al-ḫi-ip-pí ze-e-[ḫar",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 5′",
+      "raw": "[[i]-ma-a-al-ḫi-ip zu-ú-wa-š[i-ne",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na"
+      ],
+      "line": "Vs. I 6′",
+      "raw": "[[t]a-al-wi-it ta-ba-ar-na kat-te-e-i[a-a-ia]",
+      "words": [
+        "taparna"
+      ]
+    },
+    {
+      "intact": [
+        "iš-tar-ra-a-az-zi-il-pí",
+        "wa-a-ša-aḫ"
+      ],
+      "line": "Vs. I 7′",
+      "raw": "iš-tar-ra-a-az-zi-il-pí wa-a-ša-aḫ ku-u[ḫ-zi-i-ḫé-er-",
+      "words": [
+        "istarrazzilpi",
+        "wasah"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 8′",
+      "raw": "[i-ma-al-ḫi-i[p-pí [t]a-ba-ar-na-an kat-te-e-[ia-a-ia]",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-an-ta-ḫa-an"
+      ],
+      "line": "Vs. I 9′",
+      "raw": "a-an-ta-ḫa-an k[a-aš-t]i-ip Dšu-li-i-in-k[at-",
+      "words": [
+        "antahan"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 10′",
+      "raw": "[ka-a-at-te [pa-l[a [a]-am-pu le-e-uz-zi(-)x(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 11′",
+      "raw": "[ [ka-a-ḫa-an-wa-šu-it-tu-u[n]",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-an-tu-uḫ",
+        "le-e-zu-uḫ"
+      ],
+      "line": "Vs. I 12′",
+      "raw": "a-an-tu-uḫ le-e-zu-uḫ le-eš-te-e-r[a-aḫ]",
+      "words": [
+        "antuh",
+        "lezuh"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-še-ep-še-ep",
+        "pa-la"
+      ],
+      "line": "Vs. I 13′",
+      "raw": "[p]a-la le-e-še-ep-še-ep pa-la a-an-n[e-eš]",
+      "words": [
+        "lesepsep",
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 14′",
+      "raw": "[k]a-a-ḫa-an-wa-šu-it-tu-ú-un a-am-mi-i[š]",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": "Vs. I 15′",
+      "raw": "[le]-e(-)ú-it-ta-a-nu pa-la le-e-zi-p[í-i-na]",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-ne-eš"
+      ],
+      "line": "Vs. I 16′",
+      "raw": "[pa-l]a a-an-ne-eš ka-a-ḫa-an-wa-šu-it-t[u-ú-un]",
+      "words": [
+        "annes"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 17′",
+      "raw": "pí-iz-z]i-i-wa[-aš-ḫa-ap",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 18′",
+      "raw": "[ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "Or. 90_1839+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "hamuruwa",
+    "taparna",
+    "istarrazzilpi",
+    "wasah",
+    "antahan",
+    "antuh",
+    "lezuh",
+    "lesepsep",
+    "pala",
+    "pala",
+    "annes"
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "cth": "742",
+  "id": 335,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€2} Vs. lk. Kol. 1",
+      "raw": "[ [ x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. lk. Kol. 2",
+      "raw": "[ [ x-le-en",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. lk. Kol. 3",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. lk. Kol. 4",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. lk. Kol. 5",
+      "raw": "xMEŠ x x[ [ x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. lk. Kol. 6",
+      "raw": "te-et-te-e[n [ x-a-na-an",
+      "words": []
+    },
+    {
+      "intact": [
+        "ú-uk-šu-lu-ma-pa",
+        "an-nu-uḫ"
+      ],
+      "line": " {€2} Vs. lk. Kol. 7",
+      "raw": "ú-uk-šu-lu-ma-pa an-nu-uḫ a-re-e(-)ḫi-ip-pu-li-a-m[a]",
+      "words": [
+        "uksulumapa",
+        "annuh"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-en",
+        "ma-a-nu",
+        "ḫa-i-ip-pu-li-e"
+      ],
+      "line": " {€2+1} Vs. lk. Kol. 8/Vs. I 8",
+      "raw": "le-e-en ma-a-nu ḫa-i-ip-pu-li-e",
+      "words": [
+        "len",
+        "manu",
+        "haippulie"
+      ]
+    },
+    {
+      "intact": [
+        "ta-wa-a-aš-tu",
+        "ki-ri-u-wa-aš-tu"
+      ],
+      "line": " {€2+1} Vs. lk. Kol. 9/Vs. I 9",
+      "raw": "ta-wa-a-aš-tu ki-ri-u-wa-aš-tu",
+      "words": [
+        "tawastu",
+        "kiriuwastu"
+      ]
+    },
+    {
+      "intact": [
+        "ki-ri-u-wa-aš-tu"
+      ],
+      "line": " {€2+1} Vs. lk. Kol. 10/Vs. I 10",
+      "raw": "x x x x x x ki-ri-u-wa-aš-tu",
+      "words": [
+        "kiriuwastu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na"
+      ],
+      "line": " {€1} Vs. I 11",
+      "raw": "[ [ -e-en ta-ba-ar-na",
+      "words": [
+        "taparna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 12",
+      "raw": "[ [ x-le-e DINGIRMEŠ-ap-ma-ma",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 13",
+      "raw": "[ [ x-te-eš-šu-ḫa-i-ip-li-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 14",
+      "raw": "[ [ [-i]p-šu-un-na-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 15",
+      "raw": "[ [ eš-ta-a-a[n",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 16",
+      "raw": "[[ [ -mi-il eš-t[a-a-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 17",
+      "raw": "[[ [ x x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 25.125+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "uksulumapa",
+    "annuh",
+    "len",
+    "manu",
+    "haippulie",
+    "tawastu",
+    "kiriuwastu",
+    "kiriuwastu",
+    "taparna"
+  ]
+}

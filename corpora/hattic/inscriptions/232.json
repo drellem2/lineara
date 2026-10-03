@@ -1,0 +1,196 @@
+{
+  "cth": "732",
+  "id": 232,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "] ḫa-li-ku-u[n]",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-le-eš-ki--il",
+        "ḫa-li-ku-un"
+      ],
+      "line": "2′",
+      "raw": "ḫa-le-eš-ki]--il ḫa-li-ku-un",
+      "words": [
+        "haleskil",
+        "halikun"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-li-nu-uḫ"
+      ],
+      "line": "3′",
+      "raw": "]x-zi ḫa-li-nu-uḫ",
+      "words": [
+        "halinuh"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-le-e-ku-ra-i-ti",
+        "ta-li-še-ri-ip"
+      ],
+      "line": "4′",
+      "raw": "ḫa-le]-e-ku-ra-i-ti ta-li-še-ri-ip",
+      "words": [
+        "halekuraiti",
+        "taliserip"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "]x-ú-ḫa-ag-ga-šu-ul",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫu-ú-ši",
+        "ka-zi-iš-ki-li"
+      ],
+      "line": "6′",
+      "raw": "(-)ḫ]u-ú-ši ka-zi-iš-ki-li",
+      "words": [
+        "husi",
+        "kaziskili"
+      ]
+    },
+    {
+      "intact": [
+        "pa-aš-ta-e-a"
+      ],
+      "line": "7′",
+      "raw": "]x-ap-ga-tu-ur pa-aš-ta-e-a",
+      "words": [
+        "pastaea"
+      ]
+    },
+    {
+      "intact": [
+        "wa-aš-ḫa-wa-ú-un"
+      ],
+      "line": "8′",
+      "raw": "-p]a-šu-ul wa-aš-ḫa-wa-ú-un",
+      "words": [
+        "washawaun"
+      ]
+    },
+    {
+      "intact": [
+        "wa-ša-aḫ",
+        "a-le-e-ep"
+      ],
+      "line": "9′",
+      "raw": "]x-ú-un wa-ša-aḫ a-le-e-ep",
+      "words": [
+        "wasah",
+        "alep"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "]x-tu-ḫa-aš-šu-ú-un",
+      "words": []
+    },
+    {
+      "intact": [
+        "zi-a-na-a-an"
+      ],
+      "line": "11′",
+      "raw": "]-un zi-a-na-a-an",
+      "words": [
+        "zianan"
+      ]
+    },
+    {
+      "intact": [
+        "wa-ša-a-ḫi-in"
+      ],
+      "line": "12′",
+      "raw": "]x-aḫ-aš-ki-in wa-ša-a-ḫi-in",
+      "words": [
+        "wasahin"
+      ]
+    },
+    {
+      "intact": [
+        "a-aš-ši-taḫ"
+      ],
+      "line": "13′",
+      "raw": "]-šu a-aš-ši-taḫ",
+      "words": [
+        "assitah"
+      ]
+    },
+    {
+      "intact": [
+        "ta-mu-u-zi-aḫ-šu"
+      ],
+      "line": "14′",
+      "raw": "]x-pí ta-mu-u-zi-aḫ-šu",
+      "words": [
+        "tamuziahsu"
+      ]
+    },
+    {
+      "intact": [
+        "li-ip-šu-un-na"
+      ],
+      "line": "15′",
+      "raw": "l]i-ip-šu-un-na",
+      "words": [
+        "lipsunna"
+      ]
+    },
+    {
+      "intact": [
+        "a-ta-an-nu"
+      ],
+      "line": "16′",
+      "raw": "] a-ta-an-nu",
+      "words": [
+        "atannu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "17′",
+      "raw": "]x-ar-wa-aš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "18′",
+      "raw": "]x-x-x",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.17",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "haleskil",
+    "halikun",
+    "halinuh",
+    "halekuraiti",
+    "taliserip",
+    "husi",
+    "kaziskili",
+    "pastaea",
+    "washawaun",
+    "wasah",
+    "alep",
+    "zianan",
+    "wasahin",
+    "assitah",
+    "tamuziahsu",
+    "lipsunna",
+    "atannu"
+  ]
+}

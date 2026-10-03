@@ -1,0 +1,702 @@
+{
+  "cth": "737",
+  "id": 294,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 1′",
+      "raw": "[ [ x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 2′",
+      "raw": "[ [ [wa]-tu-u[ḫ-ka-a]n-te-e[n [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 3′",
+      "raw": "[ [ [li]-te-we-e [ [ [l]i-e-ui-eš-n[u-ui-iš-nu]",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-ip-ša-at-ta-i"
+      ],
+      "line": "Vs. I 4′",
+      "raw": "[ [ li-ip-ša-at-ta-i li-iḫ-z[a-ka-il [",
+      "words": [
+        "lipsattai"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-an-wa-a-aš",
+        "ḫa-zu-li-ia-an"
+      ],
+      "line": "Vs. I 5′",
+      "raw": "[ [ ḫa-an-wa-a-aš ḫa-zu-li-ia-an wa-a-[aḫ-ui-eš]",
+      "words": [
+        "hanwas",
+        "hazulian"
+      ]
+    },
+    {
+      "intact": [
+        "ka-at-ti",
+        "a-na-a",
+        "mu-uš-tu-up",
+        "pa-a-i"
+      ],
+      "line": "Vs. I 7′",
+      "raw": "[ú-ri-i]l ka-at-ti a-na-a mu-uš-tu-up pa-a-i",
+      "words": [
+        "katti",
+        "ana",
+        "mustup",
+        "pai"
+      ]
+    },
+    {
+      "intact": [
+        "zi-iš-ši-wa-ili-iš-ta-a-an"
+      ],
+      "line": "Vs. I 8′",
+      "raw": "[ta]-aš-te-e-ia-ia zi-iš-ši-wa-i(-)li-iš-ta-a-an",
+      "words": [
+        "zissiwailistan"
+      ]
+    },
+    {
+      "intact": [
+        "ta-aš-te-e-ia-ia",
+        "ḫa-wa-ni-iš"
+      ],
+      "line": "Vs. I 9′",
+      "raw": "[ -x-ka-wa-ru-up ta-aš-te-e-ia-ia ḫa-wa-ni-iš",
+      "words": [
+        "tasteiaia",
+        "hawanis"
+      ]
+    },
+    {
+      "intact": [
+        "še-eš-ḫa-ap-ḫe-en",
+        "ta-aš-te-ia-ia",
+        "zi-na-i-ú"
+      ],
+      "line": "Vs. I 10′",
+      "raw": "[t]u-ú-ti še-eš-ḫa-ap-ḫe-en ta-aš-te-ia-ia zi-na-i-ú",
+      "words": [
+        "seshaphen",
+        "tasteiaia",
+        "zinaiu"
+      ]
+    },
+    {
+      "intact": [
+        "še-eš-ḫa-lu-u-it",
+        "a-ku-u"
+      ],
+      "line": "Vs. I 11′",
+      "raw": "[š]e-e-wa-al še-eš-ḫa-lu-u-it a-ku-u ḫa-a-x-nu",
+      "words": [
+        "seshaluit",
+        "aku"
+      ]
+    },
+    {
+      "intact": [
+        "i-me-et-te-en",
+        "ta-ia-ia",
+        "a-ku-u",
+        "še-e-wu-u-ia",
+        "i-me-et-te-en"
+      ],
+      "line": "Vs. I 12′",
+      "raw": "i-me-et-te-en ta-ia-ia a-ku-u še-e-wu-u-ia i-me-et-te-en",
+      "words": [
+        "imetten",
+        "taiaia",
+        "aku",
+        "sewuia",
+        "imetten"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ia-ia",
+        "a-ku-u",
+        "ša-a-i-il",
+        "i-me-et-te-en",
+        "ta-ia-ia"
+      ],
+      "line": "Vs. I 13′",
+      "raw": "ta-ia-ia a-ku-u ša-a-i-il i-me-et-te-en ta-ia-ia",
+      "words": [
+        "taiaia",
+        "aku",
+        "sail",
+        "imetten",
+        "taiaia"
+      ]
+    },
+    {
+      "intact": [
+        "a-ku-u",
+        "eš-ku-uk-ki-iš",
+        "še-ep-taḫ-ḫu-ta-ši"
+      ],
+      "line": "Vs. I 14′",
+      "raw": "a-ku-u DINGIRMEŠ-ap eš-ku-uk-ki-iš še-ep-taḫ-ḫu-ta-ši",
+      "words": [
+        "aku",
+        "eskukkis",
+        "septahhutasi"
+      ]
+    },
+    {
+      "intact": [
+        "i-me-et-te-en",
+        "ta-ia-ia",
+        "wa-tu-uḫ-ši-in",
+        "wa-tu-uḫ-ka-an-te-en"
+      ],
+      "line": "Vs. I 15′",
+      "raw": "i-me-et-te-en ta-ia-ia wa-tu-uḫ-ši-in wa-tu-uḫ-ka-an-te-en",
+      "words": [
+        "imetten",
+        "taiaia",
+        "watuhsin",
+        "watuhkanten"
+      ]
+    },
+    {
+      "intact": [
+        "ka-te-e",
+        "wa-tu-uk-ka-am",
+        "li-te-we-e"
+      ],
+      "line": "Vs. I 16′",
+      "raw": "[t]a-ba-ar-na-an ka-te-e wa-tu-uk-ka₄-am li-te-we-e",
+      "words": [
+        "kate",
+        "watukkam",
+        "litewe"
+      ]
+    },
+    {
+      "intact": [
+        "wa-tu-uk-ka-am",
+        "le-e-we-iš-nu-ui-iš-nu",
+        "wa-tu-uk-ka-am"
+      ],
+      "line": "Vs. I 17′",
+      "raw": "wa-tu-uk-ka-am le-e-we-iš-nu-ui-iš-nu wa-tu-uk-ka-am",
+      "words": [
+        "watukkam",
+        "leweisnuisnu",
+        "watukkam"
+      ]
+    },
+    {
+      "intact": [
+        "li-ip-ša-at-ta-i",
+        "wa-tu-uk-kam",
+        "li-iḫ-za-ka-il"
+      ],
+      "line": "Vs. I 18′",
+      "raw": "li-ip-ša-at-ta-i wa-tu-uk-kam li-iḫ-za-ka-il",
+      "words": [
+        "lipsattai",
+        "watukkam",
+        "lihzakail"
+      ]
+    },
+    {
+      "intact": [
+        "li-ḫa-an-ta-aš-ki-il",
+        "wa-tu-uḫ-ši-in"
+      ],
+      "line": "Vs. I 19′",
+      "raw": "[w]a-tu-uk-kam li-ḫa-an-ta-aš-ki-il wa-tu-uḫ-ši-in",
+      "words": [
+        "lihantaskil",
+        "watuhsin"
+      ]
+    },
+    {
+      "intact": [
+        "wa-aḫ-ui-eš"
+      ],
+      "line": "Vs. I 20′",
+      "raw": "[ḫa]-an-wa-aš ḫa-zu-[l]i-ia wa-aḫ-ui-eš",
+      "words": [
+        "wahuies"
+      ]
+    },
+    {
+      "intact": [
+        "ú-re-e-et",
+        "a-na-a",
+        "ta-aš-te-ia-ia"
+      ],
+      "line": "Vs. I 22′",
+      "raw": "ú-re-e-et ka-a[t-t]aḫ a-na-a ú-i-pí-n[u]-ú ta-aš-te-ia-ia",
+      "words": [
+        "uret",
+        "ana",
+        "tasteiaia"
+      ]
+    },
+    {
+      "intact": [
+        "ta-aš-te-ia-ia"
+      ],
+      "line": "Vs. I 23′",
+      "raw": "wa-aš-du-uš-ta-x[ [ -ip-pí-i-nu ta-aš-te-ia-ia",
+      "words": [
+        "tasteiaia"
+      ]
+    },
+    {
+      "intact": [
+        "ta-aš-te-e-ia-ia"
+      ],
+      "line": "Vs. I 24′",
+      "raw": "wa-ak-ku-ka-x x [ [ [-i]p-pí-i-nu ta-aš-te-e-ia-ia",
+      "words": [
+        "tasteiaia"
+      ]
+    },
+    {
+      "intact": [
+        "wa-ak-ka-li-iš-ša",
+        "ta-a-ḫa-ia-ia"
+      ],
+      "line": "Vs. I 25′",
+      "raw": "wa-ak-ka-li-iš-ša x-pí-i-nu ta-a-ḫa-ia-ia",
+      "words": [
+        "wakkalissa",
+        "tahaiaia"
+      ]
+    },
+    {
+      "intact": [
+        "ú-ta-wu-ú-e",
+        "a-ku-u",
+        "ḫa-ni-nu-uḫ"
+      ],
+      "line": "Vs. I 26′",
+      "raw": "ú-ta-wuₓ-ú-e [x [x]-ta-pí-i-nu a-ku-u ḫa-ni-nu-uḫ",
+      "words": [
+        "utawue",
+        "aku",
+        "haninuh"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-ap-tu-li-ú",
+        "ta-ia-ia"
+      ],
+      "line": "Vs. I 27′",
+      "raw": "ḫa-ap-tu-li-ú x-x-x-en ta-ia-ia",
+      "words": [
+        "haptuliu",
+        "taiaia"
+      ]
+    },
+    {
+      "intact": [
+        "wa-tu-uḫ-ši-in",
+        "wa-tu-uḫ-ka-an-te-en",
+        "ta-ba-ar-na-an",
+        "ka-te-e"
+      ],
+      "line": "Vs. I 28′",
+      "raw": "wa-tu-uḫ-ši-in wa-tu-uḫ-ka-an-te-en ta-ba-ar-na-an ka-te-e",
+      "words": [
+        "watuhsin",
+        "watuhkanten",
+        "taparnan",
+        "kate"
+      ]
+    },
+    {
+      "intact": [
+        "le-we-iš-nu-wi-iš-nu"
+      ],
+      "line": "Vs. I 29′",
+      "raw": "wa-tu-uk-ka-a[m [ x x[ [ [wa-tu]-uk-kam le-we-iš-nu-wi-iš-nu",
+      "words": [
+        "leweisnuwisnu"
+      ]
+    },
+    {
+      "intact": [
+        "wa-tu-uk-kam",
+        "wa-tu-uk-kam",
+        "le-eḫ-za-ka-il"
+      ],
+      "line": "Vs. I 30′",
+      "raw": "wa-tu-uk-kam li-[ip-ša-t]a-e wa-tu-uk-kam le-eḫ-za-ka-il",
+      "words": [
+        "watukkam",
+        "watukkam",
+        "lehzakail"
+      ]
+    },
+    {
+      "intact": [
+        "wa-tu-uk-kam",
+        "wa-tu-uḫ-ši-in"
+      ],
+      "line": "Vs. I 31′",
+      "raw": "wa-tu-uk-kam [li-ḫa-an-t]a-aš-k[i-i]l wa-tu-uḫ-ši-in",
+      "words": [
+        "watukkam",
+        "watuhsin"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-an-wa-aš"
+      ],
+      "line": "Vs. I 32′",
+      "raw": "ḫa-an-wa-aš ḫa-zu-[li-ia] x x[ [ wa-[a-aḫ-wi]-eš",
+      "words": [
+        "hanwas"
+      ]
+    },
+    {
+      "intact": [
+        "li-wa-ša-aḫ"
+      ],
+      "line": "Vs. I 35′",
+      "raw": "ta-x x ḫa-i-x[ [ x x-pí-ši li-wa-ša-aḫ",
+      "words": [
+        "liwasah"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 36′",
+      "raw": "[ [ x x[ [ x[ x[ [ [š]u-uk-ka₄-ti",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-ḫi-na-aš"
+      ],
+      "line": "Vs. I 37′",
+      "raw": "[ [ li-[ [ x x x[ [ x li-ḫi-na-aš",
+      "words": [
+        "lihinas"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 38′",
+      "raw": "[ [ x[ x[ [ -wa-aš-ḫa-ap ta-aš-te-[ -x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 39′",
+      "raw": "[ [ x x x[ x x[ x x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 40′",
+      "raw": "[ [ [-r]u/-r]i-un [ x-ri-ú-un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 41′",
+      "raw": "[ [ x[ x-iš-ta",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 42′",
+      "raw": "[ [ [l]i-ḫa-na-a-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 43′",
+      "raw": "[ [ -ḫa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 44′",
+      "raw": "[ [ -it",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 45′",
+      "raw": "[ [ x-ši-in [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 46′",
+      "raw": "[ [ x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 1′",
+      "raw": "[ x-ḫa-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 2′",
+      "raw": "[pa-la [i-d[u-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 5′",
+      "raw": "[MUNUSka-ú-wa-ti-i[n",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 6′",
+      "raw": "[ta-aš-te-ta-li-P[I-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 7′",
+      "raw": "[ka-wa-ti-in [x x [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 8′",
+      "raw": "[zi-in-ti-ú(-)n[e-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 9′",
+      "raw": "[ta-a-ru [pa-la [ni-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 12′",
+      "raw": "[a-ak-ki-in-nu [uš-pí-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 13′",
+      "raw": "[ka-a-aš-du-wa-ar-wa-wa-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 14′",
+      "raw": "[ta-ap-ḫa-at-te-en [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 15′",
+      "raw": "[wa-ap-ḫa-tu-un-tu [l[i-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 18′",
+      "raw": "[ta-a-ru [zi-in-ti-iš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 19′",
+      "raw": "[wa-tu-up-ḫi-il [wa-wa-aḫ-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 20′",
+      "raw": "[wa-tu-up-taḫ-ḫi-il [ḫa-aš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 21′",
+      "raw": "[t[u]-uḫ-ḫa-ia-ma ta-a[z",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 22′",
+      "raw": "[x [x-li-ia-ma [te-ši-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 23′",
+      "raw": "[Dwa-ši-ú-un [te-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 24′",
+      "raw": "[te-ek-za-šu-u-la [pa-l[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 27′",
+      "raw": "[ta-a-ru [ka-a-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 28′",
+      "raw": "[wa-a-ḫu [eš-te-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 29′",
+      "raw": "[eš-te-ek-uk-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 30′",
+      "raw": "[te-wu-u-uš-n[e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 31′",
+      "raw": "[pa-la [ka-at-[te",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 32′",
+      "raw": "[li-ša-ḫa-i[p",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 33′",
+      "raw": "[pa-la [we-e-tu-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 34′",
+      "raw": "[nu [wa-x [ti-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 35′",
+      "raw": "[x x [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 36′",
+      "raw": "[[ -waₓ-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 37′",
+      "raw": "[[ -a-[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.80",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lipsattai",
+    "hanwas",
+    "hazulian",
+    "katti",
+    "ana",
+    "mustup",
+    "pai",
+    "zissiwailistan",
+    "tasteiaia",
+    "hawanis",
+    "seshaphen",
+    "tasteiaia",
+    "zinaiu",
+    "seshaluit",
+    "aku",
+    "imetten",
+    "taiaia",
+    "aku",
+    "sewuia",
+    "imetten",
+    "taiaia",
+    "aku",
+    "sail",
+    "imetten",
+    "taiaia",
+    "aku",
+    "eskukkis",
+    "septahhutasi",
+    "imetten",
+    "taiaia",
+    "watuhsin",
+    "watuhkanten",
+    "kate",
+    "watukkam",
+    "litewe",
+    "watukkam",
+    "leweisnuisnu",
+    "watukkam",
+    "lipsattai",
+    "watukkam",
+    "lihzakail",
+    "lihantaskil",
+    "watuhsin",
+    "wahuies",
+    "uret",
+    "ana",
+    "tasteiaia",
+    "tasteiaia",
+    "tasteiaia",
+    "wakkalissa",
+    "tahaiaia",
+    "utawue",
+    "aku",
+    "haninuh",
+    "haptuliu",
+    "taiaia",
+    "watuhsin",
+    "watuhkanten",
+    "taparnan",
+    "kate",
+    "leweisnuwisnu",
+    "watukkam",
+    "watukkam",
+    "lehzakail",
+    "watukkam",
+    "watuhsin",
+    "hanwas",
+    "liwasah",
+    "lihinas"
+  ]
+}

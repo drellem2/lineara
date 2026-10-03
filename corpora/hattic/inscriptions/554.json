@@ -1,0 +1,70 @@
+{
+  "cth": "745",
+  "id": 554,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 1′",
+      "raw": "[ [ x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 2′",
+      "raw": "[[ [ -l[a-ma-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 3′",
+      "raw": "[[ [ [-š]u-ú-uš l[a-ma-a",
+      "words": []
+    },
+    {
+      "intact": [
+        "la-ma-a"
+      ],
+      "line": "Vs.(?) lk. Kol. 4′",
+      "raw": "[[k]a-mu-u la-ma-a [",
+      "words": [
+        "lama"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 5′",
+      "raw": "[x-ka-pí [pa-a-m[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 6′",
+      "raw": "[wu-ru-ú-un [l[a-ma-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 7′",
+      "raw": "[wu-ru-ú-un [l[a-ma-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 8′",
+      "raw": "[wu-ru-ú-un [l[a-ma-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 9′",
+      "raw": "[še-er-pa-a-[d]u l[a-ma-a",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.35",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lama"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "cth": "745",
+  "id": 501,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "-z]i-ia",
+      "words": []
+    },
+    {
+      "intact": [
+        "la-aḫ-za-an",
+        "ka-a-aš-šu"
+      ],
+      "line": "2′",
+      "raw": "UR]Ula-aḫ-za-an ka-a-aš-šu [",
+      "words": [
+        "lahzan",
+        "kassu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ [-i]a-an le-eš-wi-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ iš-tar-ra-zi-[il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ (-)i-it-ta-le-e-pu(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[ tu-uk-zi-wi-na-i[l",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": "7′",
+      "raw": "[ x-ra-il pa-la x[",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ [ta-ba-a]r-na ka[t-te",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[ x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.132",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lahzan",
+    "kassu",
+    "pala"
+  ]
+}

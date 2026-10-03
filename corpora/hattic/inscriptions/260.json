@@ -1,0 +1,297 @@
+{
+  "cth": "734",
+  "id": 260,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 1′",
+      "raw": "[x]-x-ga-m[e-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 2′",
+      "raw": "[ḫa-a-tu-u-x-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 3′",
+      "raw": "[ḫa-a-ru-x-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 4′",
+      "raw": "[zi-ma-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 5′",
+      "raw": "[li-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 6′",
+      "raw": "[nu(-)ša-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 7′",
+      "raw": "[x-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 1′",
+      "raw": "[x-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 2′",
+      "raw": "[[ḫ]a-a-ša-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 3′",
+      "raw": "[te-ka-ti-ia [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 4′",
+      "raw": "[te-ka-ti-ia [tu-u-ḫ[u-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 5′",
+      "raw": "[KI.3 [ka-ú-pí-in-na [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Rs. IV 6′/1′",
+      "raw": "[li-ik-li-ik [KI.4 [ku-[ [ x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Rs. IV 7′/2′",
+      "raw": "[ka-uk-pu-uš-ḫi [KI.3 [x[ [ x ka-ú-pí-in-na(-)x-x",
+      "words": []
+    },
+    {
+      "intact": [
+        "ša-ḫa-aš"
+      ],
+      "line": " {€1+2} Rs. IV 8′/3′",
+      "raw": "KI.5 ša-ḫa-aš ⟨⟨ki⟩⟩ li-x[ [ KI.6",
+      "words": [
+        "sahas"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ú-e",
+        "ta-ú-e",
+        "te-eš-ḫu-li-ia"
+      ],
+      "line": " {€1+2} Rs. IV 9′/4′",
+      "raw": "nu-x-x-ú ta-ú-e x[ x[ -wa ta-ú-e te-eš-ḫu-li-ia",
+      "words": [
+        "taue",
+        "taue",
+        "teshulia"
+      ]
+    },
+    {
+      "intact": [
+        "te-ep-ḫa-taḫ-ḫu",
+        "we-el-ka-ma-ma"
+      ],
+      "line": " {€1+2} Rs. IV 10′/5′",
+      "raw": "te-e-ep-ḫa-a-taḫ-ḫu-x[ [ -ta te-ep-ḫa-taḫ-ḫu we-el-ka-ma-ma",
+      "words": [
+        "tephatahhu",
+        "welkamama"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Rs. IV 11′/6′",
+      "raw": "[ [l]e-e-nu",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-a-li",
+        "še-eš-ták-ku-úr",
+        "wa-za-re-el"
+      ],
+      "line": " {€1+2} Rs. IV 13′/8′",
+      "raw": "[t]a-we-el ḫa-a-li [za-a]-ar še-eš-ták-ku-úr GU₄-up KI.MIN wa-za-re-el",
+      "words": [
+        "hali",
+        "sestakkur",
+        "wazarel"
+      ]
+    },
+    {
+      "intact": [
+        "za-a-ar",
+        "še-eš-taḫ-ḫu-mu-mu-un"
+      ],
+      "line": " {€1+2} Rs. IV 14′/9′",
+      "raw": "[š]e-eš-tap-pí-in za-a-ar [š]e-eš-taḫ-ḫu-me-me-en [G]U₄-up še-eš-taḫ-ḫu-mu-mu-un",
+      "words": [
+        "zar",
+        "sestahhumumun"
+      ]
+    },
+    {
+      "intact": [
+        "ka-taḫ-zi-wu-u-ri"
+      ],
+      "line": " {€1+2} Rs. IV 15′/10′",
+      "raw": "[w]a⟨⟨za⟩⟩-za-re-el še-eš-ta[ḫ-ḫu]-pí-uḫ taḫ-ḫu-u-k[u-r]u-pí Dka-taḫ-zi-wu-u-ri",
+      "words": [
+        "katahziwuri"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ia-aḫ-tu-u",
+        "ḫu-u-i-ta-a"
+      ],
+      "line": " {€1+2} Rs. IV 16′/11′",
+      "raw": "zi-ia-aḫ-tu-u pa-l[a [a]ḫ-ku-un-nu-u ú-u[k] ḫu-u-i-ta-a",
+      "words": [
+        "ziahtu",
+        "huita"
+      ]
+    },
+    {
+      "intact": [
+        "ta-wa-aḫ-ḫa-li",
+        "še-eš-ták-ku-úr"
+      ],
+      "line": " {€1+2} Rs. IV 17′/12′",
+      "raw": "ta-wa-aḫ-ḫa-li z[a]-a-ar še-eš-ták-ku-úr GU₄-up KI.MIN",
+      "words": [
+        "tawahhali",
+        "sestakkur"
+      ]
+    },
+    {
+      "intact": [
+        "wa-a-za-ri-il",
+        "za-a-ar",
+        "še-eš-taḫ-ḫu-me-me"
+      ],
+      "line": " {€1+2} Rs. IV 18′/13′",
+      "raw": "wa-a-za-ri-il [ [ -in za-a-ar še-eš-taḫ-ḫu-me-me GU₄-up",
+      "words": [
+        "wazaril",
+        "zar",
+        "sestahhumeme"
+      ]
+    },
+    {
+      "intact": [
+        "wa-a-za-ri-il",
+        "še-eš-taḫ-ḫu-wi-u-uḫ"
+      ],
+      "line": " {€1+2} Rs. IV 19′/14′",
+      "raw": "še-eš-taḫ-[ḫu-mu-mu-un] wa-a-za-ri-il še-eš-taḫ-ḫu-wi-u-uḫ",
+      "words": [
+        "wazaril",
+        "sestahhuwiuh"
+      ]
+    },
+    {
+      "intact": [
+        "a-ap-za-aš",
+        "šu-ú-le-e-te-tup"
+      ],
+      "line": " {€2} Rs. IV 15′",
+      "raw": "[ [ [-a]ḫ a-ap-za-aš šu-ú-le-e-te-tup",
+      "words": [
+        "apzas",
+        "suletetup"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-eš-pa-ar-ḫu"
+      ],
+      "line": " {€2} Rs. IV 16′",
+      "raw": "[ [ x le-e-eš-pa-ar-ḫu",
+      "words": [
+        "lesparhu"
+      ]
+    },
+    {
+      "intact": [
+        "a-ša-aḫ-a"
+      ],
+      "line": " {€2} Rs. IV 17′",
+      "raw": "[ [ x-mi-el a-ša-aḫ-a",
+      "words": [
+        "asaha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ša-aḫ-a"
+      ],
+      "line": " {€2} Rs. IV 18′",
+      "raw": "[ [ [-z]i-il a-ša-aḫ-a a-x-x[",
+      "words": [
+        "asaha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. IV 19′",
+      "raw": "[[ [ x[ [ x-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 64.357+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "sahas",
+    "taue",
+    "taue",
+    "teshulia",
+    "tephatahhu",
+    "welkamama",
+    "hali",
+    "sestakkur",
+    "wazarel",
+    "zar",
+    "sestahhumumun",
+    "katahziwuri",
+    "ziahtu",
+    "huita",
+    "tawahhali",
+    "sestakkur",
+    "wazaril",
+    "zar",
+    "sestahhumeme",
+    "wazaril",
+    "sestahhuwiuh",
+    "apzas",
+    "suletetup",
+    "lesparhu",
+    "asaha",
+    "asaha"
+  ]
+}

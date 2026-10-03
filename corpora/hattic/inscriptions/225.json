@@ -1,0 +1,305 @@
+{
+  "cth": "731",
+  "id": 225,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 3a′",
+      "raw": "[ [ -ú",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 4a′",
+      "raw": "[ [ x-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 5a′",
+      "raw": "[ [ x-ki-ú",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 6a′",
+      "raw": "[ [ x-ti-i-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 7a′",
+      "raw": "[ [ [-z]i-ig-ga",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 8a′",
+      "raw": "[ [ (-)x-na-an-ti-i-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "ú-za-az-za"
+      ],
+      "line": "Vs. lk. Kol. 9a′",
+      "raw": "[ [ x ú-za-az-za",
+      "words": [
+        "uzazza"
+      ]
+    },
+    {
+      "intact": [
+        "ša-a-wa-at-ma",
+        "ga-ú-ra-an-ti-i-u"
+      ],
+      "line": "Vs. lk. Kol. 10a′",
+      "raw": "ša-a-wa-at-ma ga-ú-ra-an-ti-i-u",
+      "words": [
+        "sawatma",
+        "kaurantiu"
+      ]
+    },
+    {
+      "intact": [
+        "ka-az-za",
+        "li-im-mu-ša"
+      ],
+      "line": "Vs. lk. Kol. 11a′",
+      "raw": "ka-az-za li-im-mu-ša",
+      "words": [
+        "kazza",
+        "limmusa"
+      ]
+    },
+    {
+      "intact": [
+        "wu-ru-še-mu"
+      ],
+      "line": "Vs. lk. Kol. 12a′",
+      "raw": "[w]a-aḫ-ku-un wu-ru-še-mu",
+      "words": [
+        "wurusemu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-az-zi-ia-aḫ-du",
+        "ta-zu-u-ḫa-aš-ti"
+      ],
+      "line": "Vs. lk. Kol. 13a′",
+      "raw": "ta-az-zi-ia-aḫ-du ta-zu-u-ḫa-aš-ti",
+      "words": [
+        "tazziahtu",
+        "tazuhasti"
+      ]
+    },
+    {
+      "intact": [
+        "an-da-iša-ma-an-wa",
+        "pé-en-nu-ú"
+      ],
+      "line": "Vs. lk. Kol. 14a′",
+      "raw": "an-da-i(-)ša-ma-an-wa pé-en-nu-ú",
+      "words": [
+        "antaisamanwa",
+        "pennu"
+      ]
+    },
+    {
+      "intact": [
+        "a-i-da-a-ma",
+        "pa-zi-ip-tu",
+        "a-li-nu-en"
+      ],
+      "line": "Vs. lk. Kol. 15a′",
+      "raw": "a-i-da-a-ma pa-zi-ip-tu a-li-nu-en",
+      "words": [
+        "aitama",
+        "paziptu",
+        "alinuen"
+      ]
+    },
+    {
+      "intact": [
+        "aš-ta-ze-el",
+        "zi-pí-iš",
+        "li-pí-nu"
+      ],
+      "line": "Vs. lk. Kol. 16a′",
+      "raw": "aš-ta-ze-el zi-pí-iš li-pí-nu",
+      "words": [
+        "astazel",
+        "zipis",
+        "lipinu"
+      ]
+    },
+    {
+      "intact": [
+        "ú-wa-at"
+      ],
+      "line": "Vs. lk. Kol. 17a′",
+      "raw": "[ [ x-i-lu-wa-a-ia ú-wa-at",
+      "words": [
+        "uwat"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 18a′",
+      "raw": "[ [ [-w]a-ia",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 19a′",
+      "raw": "[ [ [tá]k-ki-ḫa-šu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 20a′",
+      "raw": "[ [ [Dwu-ru-kat-t]a-i-nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 1a",
+      "raw": "[[ [ x[ [ x-ta-i-nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 2a",
+      "raw": "[ [ [-l]a-a-ú [ḫ]a-an-wa-aš-ú-si-nu",
+      "words": []
+    },
+    {
+      "intact": [
+        "wu-ru-kat-ta-i-nu"
+      ],
+      "line": "Rs. lk. Kol. 3a",
+      "raw": "[ [ Dwu-ru-kat-ta-i-nu",
+      "words": [
+        "wurukattainu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 4a",
+      "raw": "[ [ x-el-la-aš-ḫa",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-ap-pa-ia-aš"
+      ],
+      "line": "Rs. lk. Kol. 5a",
+      "raw": "[ [ [ta-b]a-ar-na wa-ap-pa-ia-aš",
+      "words": [
+        "wappaias"
+      ]
+    },
+    {
+      "intact": [
+        "né-eš-ḫa-wu"
+      ],
+      "line": "Rs. lk. Kol. 6a",
+      "raw": "[ [ -a-nu né-eš-ḫa-wu",
+      "words": [
+        "neshawu"
+      ]
+    },
+    {
+      "intact": [
+        "zi-it-ḫar",
+        "ḫa-a-ša-ma-an-na-ta"
+      ],
+      "line": "Rs. lk. Kol. 7a",
+      "raw": "[ [ [-w]a-ma zi-it-ḫar ḫa-a-ša-ma-an-na-ta",
+      "words": [
+        "zithar",
+        "hasamannata"
+      ]
+    },
+    {
+      "intact": [
+        "zi-it-ḫar",
+        "ḫa-a-ša-ma-an-na-ta"
+      ],
+      "line": "Rs. lk. Kol. 8a",
+      "raw": "[ [ -ma zi-it-ḫar ḫa-a-ša-ma-an-na-ta",
+      "words": [
+        "zithar",
+        "hasamannata"
+      ]
+    },
+    {
+      "intact": [
+        "ašte-ez-zu-mu",
+        "ša-ri-iš-du"
+      ],
+      "line": "Rs. lk. Kol. 9a",
+      "raw": "[ [ x aš(-)te-ez-zu-mu ša-ri-iš-du",
+      "words": [
+        "astezzumu",
+        "saristu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 10a",
+      "raw": "da-ḫa-ip(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 11a",
+      "raw": "[ma-a-tu [da-a-ḫa(-)ip-tu [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 12a",
+      "raw": "[ták-ki-ḫa-a-ši [pí-i[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 13a",
+      "raw": "[[ká]n-tu-ḫa(-)li-[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.6",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "uzazza",
+    "sawatma",
+    "kaurantiu",
+    "kazza",
+    "limmusa",
+    "wurusemu",
+    "tazziahtu",
+    "tazuhasti",
+    "antaisamanwa",
+    "pennu",
+    "aitama",
+    "paziptu",
+    "alinuen",
+    "astazel",
+    "zipis",
+    "lipinu",
+    "uwat",
+    "wurukattainu",
+    "wappaias",
+    "neshawu",
+    "zithar",
+    "hasamannata",
+    "zithar",
+    "hasamannata",
+    "astezzumu",
+    "saristu"
+  ]
+}

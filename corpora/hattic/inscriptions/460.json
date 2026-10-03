@@ -1,0 +1,50 @@
+{
+  "cth": "744",
+  "id": 460,
+  "lines": [
+    {
+      "intact": [
+        "tu-uš-ta-le-el"
+      ],
+      "line": "2′",
+      "raw": "[ x-wi-iš tu-uš-ta-le-el tu-ul-[li",
+      "words": [
+        "tustalel"
+      ]
+    },
+    {
+      "intact": [
+        "tu-ul-li",
+        "tu-ul-li"
+      ],
+      "line": "3′",
+      "raw": "[ [-l]e-el tu-ul-li tu-ul-li [",
+      "words": [
+        "tulli",
+        "tulli"
+      ]
+    },
+    {
+      "intact": [
+        "tu-ul-li",
+        "tu-ul-li"
+      ],
+      "line": "4′",
+      "raw": "[ -le-el tu-ul-li tu-ul-li tu-x[",
+      "words": [
+        "tulli",
+        "tulli"
+      ]
+    }
+  ],
+  "manuscript": "VBoT 31",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tustalel",
+    "tulli",
+    "tulli",
+    "tulli",
+    "tulli"
+  ]
+}

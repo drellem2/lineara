@@ -1,0 +1,138 @@
+{
+  "cth": "744",
+  "id": 374,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. (I) 1′",
+      "raw": "]x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 2′",
+      "raw": "[ x-uk-x[ x-ta-a x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 3′",
+      "raw": "[-t]i-ip ni-im-ḫu-tu-u-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 4′",
+      "raw": "[ (-)ki-na-re-e-et-pa le-e-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e-eš-di-it"
+      ],
+      "line": "Vs. (I) 5′",
+      "raw": "[ [-A]Ḫ le-e-eš-di-it a-aḫ-k[u-",
+      "words": [
+        "lestit"
+      ]
+    },
+    {
+      "intact": [
+        "a-ap-ta-aš"
+      ],
+      "line": "Vs. (I) 6′",
+      "raw": "[ -eš-di-it a-ap-ta-aš te-[",
+      "words": [
+        "aptas"
+      ]
+    },
+    {
+      "intact": [
+        "a-am-mi-iš"
+      ],
+      "line": "Vs. (I) 7′",
+      "raw": "[ x-it a-am-mi-iš te-x[",
+      "words": [
+        "ammis"
+      ]
+    },
+    {
+      "intact": [
+        "aḫ-ka-a-nu-u"
+      ],
+      "line": "Vs. (I) 8′",
+      "raw": "[ x aḫ-ka-a-nu-u nu-x[",
+      "words": [
+        "ahkanu"
+      ]
+    },
+    {
+      "intact": [
+        "pa-aš-šu"
+      ],
+      "line": "Vs. (I) 9′",
+      "raw": "[ x-in pa-aš-šu ip-x[",
+      "words": [
+        "passu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 10′",
+      "raw": "[ -nu-un-nu-ú-un ḫ[ar-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 11′",
+      "raw": "[ (-)i-tu-ú-uk-ka(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 12′",
+      "raw": "[ [p]a-wa-ra-ak x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 13′",
+      "raw": "[ [p]a-ma-ak-ku [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 14′",
+      "raw": "[ [p]a-ma-ak-k[u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 15′",
+      "raw": "[ x pa-li-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 16′",
+      "raw": "[ [-ma-a]k-ku gam-k[u-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. (I) 17′",
+      "raw": "[ x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 23.98",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lestit",
+    "aptas",
+    "ammis",
+    "ahkanu",
+    "passu"
+  ]
+}

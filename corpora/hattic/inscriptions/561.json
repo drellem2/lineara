@@ -1,0 +1,102 @@
+{
+  "cth": "745",
+  "id": 561,
+  "lines": [
+    {
+      "intact": [],
+      "line": "lk. Kol. 1′",
+      "raw": "-n]u",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa"
+      ],
+      "line": "mit. Kol. 1′",
+      "raw": "[t]e-tu-u-u[p] x ḫa x x[ [",
+      "words": [
+        "ha"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-aš-ta-aš-ta"
+      ],
+      "line": "mit. Kol. 2′",
+      "raw": "le-e-aš-ta-aš-ta wa-wa-a[r- [",
+      "words": [
+        "leastasta"
+      ]
+    },
+    {
+      "intact": [
+        "te-tu-mi-iš",
+        "le-e-wu-u-ur"
+      ],
+      "line": "mit. Kol. 3′",
+      "raw": "te-tu-mi-iš le-e-wu-u-ur",
+      "words": [
+        "tetumis",
+        "lewur"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-aš-ta-aš-ta-ar"
+      ],
+      "line": "mit. Kol. 4′",
+      "raw": "le-e-aš-ta-aš-ta-ar",
+      "words": [
+        "leastastar"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ša-šu-u-it",
+        "wu-u-ur-ti-wu-uš"
+      ],
+      "line": "mit. Kol. 5′",
+      "raw": "ta-a-ša-šu-u-it wu-u-ur-ti-wu-uš",
+      "words": [
+        "tasasuit",
+        "wurtiwus"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "mit. Kol. 6′",
+      "raw": "[x]-a-li-iš-tu-u-uš an-ta-ḫe-el-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "mit. Kol. 7′",
+      "raw": "[ [ x-ta-wu-u(-)x[ x x x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "mit. Kol. 8′",
+      "raw": "[ [ x-zi-n[e [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "mit. Kol. 9′",
+      "raw": "[ [ -za(-)te-x[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.66",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ha",
+    "leastasta",
+    "tetumis",
+    "lewur",
+    "leastastar",
+    "tasasuit",
+    "wurtiwus"
+  ]
+}

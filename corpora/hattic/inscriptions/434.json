@@ -1,0 +1,210 @@
+{
+  "cth": "744",
+  "id": 434,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 1′",
+      "raw": "-m]a-aḫ(-)x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 2′",
+      "raw": "[ [l]i-ia-li-ip [ [¬¬¬",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 3′",
+      "raw": "[ [t]a-le-e-eš-du-uš [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 4′",
+      "raw": "[ [-u]š-pí-it ta-ḫa-ak-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-la-a"
+      ],
+      "line": "Vs. lk. Kol. 5′",
+      "raw": "[ x-li-ni-tu-ur pa-la-a [",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "kat-te-e"
+      ],
+      "line": "Vs. lk. Kol. 6′",
+      "raw": "[ta-ba-a]r-na-an kat-te-e ḫe-e-n[a",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 7′",
+      "raw": "[ x-ur-ta-a-al-pí-le-e [ [===",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 8′",
+      "raw": "[ -li-ma-wa-at-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 9′",
+      "raw": "[ x x a-aḫ-ša-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 10′",
+      "raw": "[ x x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 1′",
+      "raw": "[ x-wa-u-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-an-wa-aš",
+        "zi-ip-pa-aš-ku-u"
+      ],
+      "line": "Rs. lk. Kol. 2′",
+      "raw": "[ [-i]n ḫa-an-wa-aš zi-ip-pa-aš-ku-u [",
+      "words": [
+        "hanwas",
+        "zippasku"
+      ]
+    },
+    {
+      "intact": [
+        "zi-i-u",
+        "a-an-te-ma"
+      ],
+      "line": "Rs. lk. Kol. 3′",
+      "raw": "[ x-e-et zi-i-u a-an-te-ma [",
+      "words": [
+        "ziu",
+        "antema"
+      ]
+    },
+    {
+      "intact": [
+        "ka-la-ba-e"
+      ],
+      "line": "Rs. lk. Kol. 4′",
+      "raw": "[ [-t]i ka-la-ba-e ú-i-zi-i[l",
+      "words": [
+        "kalapae"
+      ]
+    },
+    {
+      "intact": [
+        "a-am-pí-iš"
+      ],
+      "line": "Rs. lk. Kol. 5′",
+      "raw": "[ [p]a-la-a a-am-pí-iš [",
+      "words": [
+        "ampis"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-pal-ki-ia-an"
+      ],
+      "line": "Rs. lk. Kol. 6′",
+      "raw": "[ [l]e-e ḫa-pal-ki-ia-an [",
+      "words": [
+        "hapalkian"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-taḫ-ḫi-il"
+      ],
+      "line": "Rs. lk. Kol. 7′",
+      "raw": "[ x-x-a a-an-taḫ-ḫi-il [",
+      "words": [
+        "antahhil"
+      ]
+    },
+    {
+      "intact": [
+        "še-er",
+        "te-et-ka-pu-ut-ta"
+      ],
+      "line": "Rs. lk. Kol. 8′",
+      "raw": "[ x še-er te-et-ka-pu-ut-ta [",
+      "words": [
+        "ser",
+        "tetkaputta"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la-a",
+        "te-ḫa-wa-wa-ia"
+      ],
+      "line": "Rs. lk. Kol. 9′",
+      "raw": "[ pa-la-a te-ḫa-wa-wa-ia [",
+      "words": [
+        "pala",
+        "tehawawaia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 10′",
+      "raw": "[ -iš-ša-li-ip [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-at-ti"
+      ],
+      "line": "Rs. lk. Kol. 11′",
+      "raw": "[ [ta-ba-ar-n]a ka-at-ti [",
+      "words": [
+        "katti"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 12′",
+      "raw": "[ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.71",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "pala",
+    "katte",
+    "hanwas",
+    "zippasku",
+    "ziu",
+    "antema",
+    "kalapae",
+    "ampis",
+    "hapalkian",
+    "antahhil",
+    "ser",
+    "tetkaputta",
+    "pala",
+    "tehawawaia",
+    "katti"
+  ]
+}

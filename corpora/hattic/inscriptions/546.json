@@ -1,0 +1,92 @@
+{
+  "cth": "745",
+  "id": 546,
+  "lines": [
+    {
+      "intact": [
+        "le-e-ia-li"
+      ],
+      "line": "Vs. r. Kol. 1′",
+      "raw": "] le-e-ia-li [ [",
+      "words": [
+        "leiali"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ru"
+      ],
+      "line": "Vs. r. Kol. 2′",
+      "raw": "]x-ḫa ta-a-ru [ [",
+      "words": [
+        "taru"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 3′",
+      "raw": "]-i-nu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 4′",
+      "raw": "]x-zi-i-pí-in",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-ak-ku-ú-wa"
+      ],
+      "line": "Vs. r. Kol. 5′",
+      "raw": "]-e ma-ak-ku-ú-wa",
+      "words": [
+        "makkuwa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 6′",
+      "raw": "]x(-)a-aḫ-zu-la-a-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 7′",
+      "raw": "]x-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 8′",
+      "raw": "]-am",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 9′",
+      "raw": "]-du",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 1′",
+      "raw": "]-ú-wa-at",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 2′",
+      "raw": "-a]ḫ",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.17",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "leiali",
+    "taru",
+    "makkuwa"
+  ]
+}

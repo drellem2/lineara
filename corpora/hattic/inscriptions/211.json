@@ -1,0 +1,173 @@
+{
+  "cth": "727",
+  "id": 211,
+  "lines": [
+    {
+      "intact": [
+        "ka-a-ap",
+        "ka-a-ia-aḫ-du"
+      ],
+      "line": " {€1} Vs. lk. Kol. 9a",
+      "raw": "ka-a-ap ka-a-ia-aḫ-du ka-a-aš-k[u",
+      "words": [
+        "kap",
+        "kaiahtu"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ši-im"
+      ],
+      "line": " {€2+1} Vs. lk. Kol. 1′/10a",
+      "raw": "[[URU]la-aḫ-za-an zi-ši-im a-aḫ-ku-un-w[a",
+      "words": [
+        "zisim"
+      ]
+    },
+    {
+      "intact": [
+        "tu-uḫ-ta-šu-ul",
+        "tu-mi-in"
+      ],
+      "line": " {€2+1} Vs. lk. Kol. 2′/11a",
+      "raw": "[[ta]-a-ru tu-uḫ-ta-šu-ul tu-mi-in [",
+      "words": [
+        "tuhtasul",
+        "tumin"
+      ]
+    },
+    {
+      "intact": [
+        "wa-pí-ze-el"
+      ],
+      "line": " {€2+1} Vs. lk. Kol. 3′/12a",
+      "raw": "[[t]u-uḫ-ta-šu-ul wa-pí-ze-el [",
+      "words": [
+        "wapizel"
+      ]
+    },
+    {
+      "intact": [
+        "ta-aḫ-ku-wa-at"
+      ],
+      "line": " {€2+1} Vs. lk. Kol. 4′/13a",
+      "raw": "[tu-u-w]i t[a]-wa-tu-pí ta-aḫ-ku-wa-at",
+      "words": [
+        "tahkuwat"
+      ]
+    },
+    {
+      "intact": [
+        "še-et-tu-uk-ka-aš"
+      ],
+      "line": " {€2+1} Vs. lk. Kol. 5′/14a",
+      "raw": "[wa-nu-up]-pa [Dḫ]a-ba-an-ta-li še-et-tu-uk-ka₄-aš [",
+      "words": [
+        "settukkas"
+      ]
+    },
+    {
+      "intact": [
+        "te-du-ka",
+        "pí-i-iḫ-a-an"
+      ],
+      "line": " {€1} Vs. lk. Kol. 15a",
+      "raw": "[[ [ [-d]u te-du-ka pí-i-iḫ-a-an",
+      "words": [
+        "tetuka",
+        "pihan"
+      ]
+    },
+    {
+      "intact": [
+        "ka-taḫ-zi-pí-ri",
+        "zi-ia-aḫ-šu"
+      ],
+      "line": " {€1} Vs. lk. Kol. 16a",
+      "raw": "[ [ [-r]u ka-taḫ-zi-pí-ri zi-ia-aḫ-šu",
+      "words": [
+        "katahzipiri",
+        "ziahsu"
+      ]
+    },
+    {
+      "intact": [
+        "i-ta-a"
+      ],
+      "line": " {€1} Vs. lk. Kol. 17a",
+      "raw": "[ [ [ú-u]k-ḫu-u-ma i-ta-a",
+      "words": [
+        "ita"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-aš-ma",
+        "tu-uk-zi-ik"
+      ],
+      "line": " {€1} Vs. lk. Kol. 18a",
+      "raw": "[ [ [-d]u Dka-a-aš-ma tu-uk-zi-ik",
+      "words": [
+        "kasma",
+        "tukzik"
+      ]
+    },
+    {
+      "intact": [
+        "a-aḫ-ku-nu-wa",
+        "ta-a-ru"
+      ],
+      "line": " {€1} Vs. lk. Kol. 19a",
+      "raw": "[ [ [-a]n a-aḫ-ku-nu-wa ta-a-ru",
+      "words": [
+        "ahkunuwa",
+        "taru"
+      ]
+    },
+    {
+      "intact": [
+        "tu-ú-wi"
+      ],
+      "line": " {€1} Vs. lk. Kol. 20a",
+      "raw": "[ [ [-z]e-el tu-ú-wi ta-a-ú-w[a",
+      "words": [
+        "tuwi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. lk. Kol. 21a",
+      "raw": "[[ [ -at [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. lk. Kol. 22a",
+      "raw": "[ [ [-t]a-l[i",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.3+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kap",
+    "kaiahtu",
+    "zisim",
+    "tuhtasul",
+    "tumin",
+    "wapizel",
+    "tahkuwat",
+    "settukkas",
+    "tetuka",
+    "pihan",
+    "katahzipiri",
+    "ziahsu",
+    "ita",
+    "kasma",
+    "tukzik",
+    "ahkunuwa",
+    "taru",
+    "tuwi"
+  ]
+}

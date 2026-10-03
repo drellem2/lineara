@@ -1,15 +1,22 @@
 {
-  "category": "toponym",
-  "gloss": "town (also Ḫakpiš)",
+  "cth": "627",
   "id": 77,
-  "is_bilingual": false,
-  "name": "Ḫakmiš",
-  "provenance": "Hattic toponym; see citation.",
-  "source_citation": "del Monte, G. F. & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC 6. Wiesbaden: Reichert.",
-  "text": "Ḫakmiš",
-  "tier": "B",
-  "transliteration": "hakmis",
+  "lines": [
+    {
+      "intact": [
+        "im-pu-u"
+      ],
+      "line": "3′",
+      "raw": "[ḫ]u-u im-pu-u",
+      "words": [
+        "impu"
+      ]
+    }
+  ],
+  "manuscript": "KBo 37.6",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "hakmis"
+    "impu"
   ]
 }

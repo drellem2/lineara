@@ -1,0 +1,134 @@
+{
+  "cth": "741",
+  "id": 333,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ [pár-ku-li-ia]-ma ḫal-ḫa-lu-ma-aš-t[a",
+      "words": []
+    },
+    {
+      "intact": [
+        "du-up-pa-li"
+      ],
+      "line": "3′",
+      "raw": "[ [du-ud-du-z]i du-up-pa-li du-up-p[a-li-an-ta",
+      "words": [
+        "tuppali"
+      ]
+    },
+    {
+      "intact": [
+        "i-pa-at-ti"
+      ],
+      "line": "4′",
+      "raw": "[ [ru-ma]-a-ma-at-ti i-pa-at-ti pa-a-p[a-",
+      "words": [
+        "ipatti"
+      ]
+    },
+    {
+      "intact": [
+        "me-i-li",
+        "me-i-li"
+      ],
+      "line": "5′",
+      "raw": "[ me-i-li me-i-li ta-wa-a[n-na-an-na",
+      "words": [
+        "meili",
+        "meili"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-et-ti",
+        "me-i-li-i"
+      ],
+      "line": "10′",
+      "raw": "(-)t]e-et-ti me-i-li-i KI.MIN",
+      "words": [
+        "tetti",
+        "meili"
+      ]
+    },
+    {
+      "intact": [
+        "i-la-al-lu-wa-i-ia",
+        "me-i-li"
+      ],
+      "line": "11′",
+      "raw": "i-l]a-al-lu-wa-i-ia me-i-li ta-b[a-ar-na(-)",
+      "words": [
+        "ilalluwaia",
+        "meili"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "12′",
+      "raw": "[ [-t]a-i-u KI.3",
+      "words": []
+    },
+    {
+      "intact": [
+        "me-i-li"
+      ],
+      "line": "13′",
+      "raw": "me]-i-li a-zi-ma-al-ga-x-x[",
+      "words": [
+        "meili"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "14′",
+      "raw": "[ [K]I.3 [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "15′",
+      "raw": "[ [m]e-i-li [ x [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "16′",
+      "raw": "[ [K]I.3 [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.30+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tuppali",
+    "ipatti",
+    "meili",
+    "meili",
+    "tetti",
+    "meili",
+    "ilalluwaia",
+    "meili",
+    "meili"
+  ]
+}

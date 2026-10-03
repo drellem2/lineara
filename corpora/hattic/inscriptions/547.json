@@ -1,0 +1,109 @@
+{
+  "cth": "745",
+  "id": 547,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 1′",
+      "raw": "]x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 2′",
+      "raw": "[ (-)mi-ša-a-wa-š[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 3′",
+      "raw": "[-ri-i]l ti-iš-ti-i[t-g]a-a-nu-wa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 4′",
+      "raw": "-r]i-il ti-iš-ti-it-ga-a-nu-[w]a",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-a-ši-i-il"
+      ],
+      "line": "Vs. r. Kol. 5′",
+      "raw": "] Dwa-a-ši-i-il",
+      "words": [
+        "wasil"
+      ]
+    },
+    {
+      "intact": [
+        "ti-iš-ti-it-ga-a-nu-ú-wa"
+      ],
+      "line": "Vs. r. Kol. 6′",
+      "raw": "] ti-iš-ti-it-ga-a-nu-ú-wa",
+      "words": [
+        "tistitkanuwa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 7′",
+      "raw": "]x(-)i[l]-x-[ [ x[ [ [-z]i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 1′",
+      "raw": "]x-e-wa-a-i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 2′",
+      "raw": "-i]r la-ma-at-ga-aš-ši-ia(-)[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-a-nu-uš-du-uš"
+      ],
+      "line": "Rs. r. Kol. 3′",
+      "raw": "]x-ku ta-a-nu-uš-du-uš",
+      "words": [
+        "tanustus"
+      ]
+    },
+    {
+      "intact": [
+        "ga-an-nu-pí-i-ri-ia"
+      ],
+      "line": "Rs. r. Kol. 4′",
+      "raw": "](-)ga-an-nu-pí-i-ri-ia",
+      "words": [
+        "kannupiria"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 5′",
+      "raw": "]-e-pí-na-a-mu-ul",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. r. Kol. 6′",
+      "raw": "]x x[ [ x x[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.2",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wasil",
+    "tistitkanuwa",
+    "tanustus",
+    "kannupiria"
+  ]
+}

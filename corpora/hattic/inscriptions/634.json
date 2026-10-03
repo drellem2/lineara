@@ -1,0 +1,74 @@
+{
+  "cth": "746",
+  "id": 634,
+  "lines": [
+    {
+      "intact": [],
+      "line": "r. Kol. 1′",
+      "raw": "[ [ -x z[i- [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 2′",
+      "raw": "[ [ [k]a-an te-du-ú-ut-ḫu-[ru-up]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 3′",
+      "raw": "[ [ (-)ḫa-du-up li-ia-li-i[p",
+      "words": []
+    },
+    {
+      "intact": [
+        "la-ma-aat-ta-na-a"
+      ],
+      "line": "r. Kol. 4′",
+      "raw": "[ [ [g]a-ni-u la-ma-a(-)at-ta-na-a",
+      "words": [
+        "lamattana"
+      ]
+    },
+    {
+      "intact": [
+        "la-ma-a"
+      ],
+      "line": "r. Kol. 5′",
+      "raw": "[ [ x la-ma-a ta-a-aš-ti-pu-zi-il-x",
+      "words": [
+        "lama"
+      ]
+    },
+    {
+      "intact": [
+        "a-aš-ḫa-an-tu-wa-at-ta-pí"
+      ],
+      "line": "r. Kol. 6′",
+      "raw": "[ [ [w]a a-aš-ḫa-an-tu-wa-at-ta-pí",
+      "words": [
+        "ashantuwattapi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 7′",
+      "raw": "[ [ [ḫ]a ka-an(-)x x x x [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 8′",
+      "raw": "[ [ x [ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.51",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lamattana",
+    "lama",
+    "ashantuwattapi"
+  ]
+}

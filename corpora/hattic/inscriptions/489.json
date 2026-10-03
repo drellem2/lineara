@@ -1,0 +1,96 @@
+{
+  "cth": "745",
+  "id": 489,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x ma-x-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ [-t]a-ma-a-ni t[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ x-zi-iz-zi-i-maḫ[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-tu-u"
+      ],
+      "line": "4′",
+      "raw": "[-ḫ]a-la-iš ta-tu-u [",
+      "words": [
+        "tatu"
+      ]
+    },
+    {
+      "intact": [
+        "pár-ga"
+      ],
+      "line": "5′",
+      "raw": "[ x-ma Dpár-ga [",
+      "words": [
+        "parka"
+      ]
+    },
+    {
+      "intact": [
+        "ú-uk-ki-iš"
+      ],
+      "line": "6′",
+      "raw": "[ [t]a-tu-u ú-uk-ki-iš ka-w[u-",
+      "words": [
+        "ukkis"
+      ]
+    },
+    {
+      "intact": [
+        "ú-uk-ki-iš"
+      ],
+      "line": "7′",
+      "raw": "[t]a-tu-u ú-uk-ki-iš ka-wu-[",
+      "words": [
+        "ukkis"
+      ]
+    },
+    {
+      "intact": [
+        "ta-tu-u"
+      ],
+      "line": "8′",
+      "raw": "ta-tu-u [",
+      "words": [
+        "tatu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "x-a-i-li-wa-a te-e-ḫa-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "[ x x x x an-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.116",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tatu",
+    "parka",
+    "ukkis",
+    "ukkis",
+    "tatu"
+  ]
+}

@@ -1,17 +1,19 @@
 pool: hattic
-source_citation: "Soysal, O. (2004). Hattischer Wortschatz in hethitischer\n  Textüberlieferung.\
-  \ HdO I/74. Leiden: Brill. — the standard Hattic\n  lexicon; primary reference for\
-  \ the lexemes.\nKlinger, J. (1996). Untersuchungen zur Rekonstruktion der hattischen\n\
-  \  Kultschicht. StBoT 37. Wiesbaden: Harrassowitz.\nKammenhuber, A. (1969). 'Hattisch.'\
-  \ HdO I/2.1-2/2: 428-546.\nTaracha, P. (2009). Religions of Second Millennium Anatolia.\
-  \ DBH 27.\ndel Monte, G. F. & Tischler, J. (1978). RGTC 6 (toponyms).\nBischoff,\
-  \ A. M. (2023). Hungarian Assyriological Review 4: 95-109.\nUnderlying Hittite-archive\
-  \ tablets (CTH 725-745 and Hattic passages in\n  Hittite ritual / festival texts)\
-  \ are Bronze Age, public domain. Manual\n  lexical transcription via scripts/build_hattic_corpus.py;\
-  \ forms not\n  collated against the printed editions (see corpora/hattic.README.md).\n"
+source_citation: "Kammenhuber, A. (1969). 'Hattisch.' In Altkleinasiatische Sprachen,\n\
+  \  HdO I/2.1-2/2: 428-546. Leiden: Brill. Viewed as the Internet Archive\n  scan\
+  \ friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969\n\
+  \  (page images + OCR), pp. 432-530.\nSchuster, H.-S. (1974). Die hattisch-hethitischen\
+  \ Bilinguen I.\n  Einleitung, Texte und Kommentar, Teil 1. Leiden: Brill. Viewed\
+  \ as the\n  Internet Archive scan die-hattisch-hethitischen-bilinguen (forms\n \
+  \ sourced by mg-78856 in ~/research/hattic-semitic; spot-checked).\nEvery entry\
+  \ cites the page and scan leaf it was read from, and carries a\nverbatim OCR quote\
+  \ checked by scripts/verify_hattic_sources.py. Nothing\nis keyed from memory. Built\
+  \ from corpora/hattic/sources/lexicon.tsv by\nscripts/build_hattic_pool.py. The\
+  \ hattic LM is trained on a separate\nrunning-text corpus (TLHdig), not on this\
+  \ pool; see pools/hattic.README.md.\n"
 license: 'Cited fair-use of the scholarly literature for the lexical forms and
 
-  glosses. Underlying tablets PD.
+  glosses (short quotations, page-referenced). Underlying tablets PD.
 
   '
 fetched_at: '2026-10-03T00:00:00Z'
@@ -22,48 +24,49 @@ entries:
   - l
   - e
   - p
-  gloss: tongue, word
-  semantic_field: hattic_lexeme
+  gloss: word, thing
+  semantic_field: hattic_noun
   attestations:
-  - alep
+  - aleb
+  - alip/u, alep/u [alef]
   region: central_anatolia
-  citation: 'Corpus record(s) 39 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461;
+    Schuster 1974, p. 96, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n113
+  notes: 'lexicon n01. Kammenhuber 1969 p. 446: „Wort, Sache“ [secure; OCR quote:
+    "„Wort, Sache”"] Word list § 9 (all words collected in RHA 70). | Schuster 1974
+    p. 96: „Zunge“ [secure; OCR quote: "aleb „Zunge“"] mg-78856 row slot 6. Same word
+    as Kammenhuber''s alep (b/p merged).'
   provenance: real
-- surface: an
+- surface: anna
   phonemes:
   - a
   - n
-  gloss: sea
-  semantic_field: hattic_lexeme
+  - n
+  - a
+  gloss: this
+  semantic_field: hattic_particle
   attestations:
-  - an
+  - an-na, a-na-a
   region: central_anatolia
-  citation: 'Corpus record(s) 59 (corpora/hattic/inscriptions/). Bischoff, A. M. (2023).
-    ''Some new Hattian-Hittite correspondences from the quasi-bilingual text of CTH
-    733.'' Hungarian Assyriological Review 4: 95-109 (CC BY-NC 4.0). Gloss rests on
-    a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 535, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n550
+  notes: 'lexicon n94. Kammenhuber 1969 p. 535: „dies(er)“; „dies(?)“ [doubtful; OCR
+    quote: "an-na, a-na-a ,,dies(er)”’"] mg-78856 row slot 39.'
   provenance: real
-- surface: ankuwa
+- surface: antiu
   phonemes:
   - a
   - n
-  - k
+  - t
+  - i
   - u
-  - w
-  - a
-  gloss: town
-  semantic_field: hattic_toponym
+  gloss: to stand
+  semantic_field: hattic_verb
   attestations:
-  - Ankuwa
+  - antiu
   region: central_anatolia
-  citation: 'Corpus record(s) 78 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+  notes: 'lexicon v02. Kammenhuber 1969 p. 526: „stehen, sich stellen“ [secure; OCR
+    quote: "sich stellen”, intransitiv. Nur Stammform"] § 26a no. 2.'
   provenance: real
 - surface: arinna
   phonemes:
@@ -73,32 +76,29 @@ entries:
   - n
   - n
   - a
-  gloss: cult city of the sun goddess
+  gloss: place name
   semantic_field: hattic_toponym
   attestations:
   - Arinna
   region: central_anatolia
-  citation: 'Corpus record(s) 73 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 461, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n476
+  notes: 'lexicon n72. Kammenhuber 1969 p. 461: Hatt. Arinna (ON) [secure; OCR quote:
+    "Hatt. Arinna (ON)"]'
   provenance: real
-- surface: ashap
+- surface: asah
   phonemes:
   - a
   - s
-  - h
   - a
-  - p
-  gloss: god
-  semantic_field: hattic_lexeme
+  - h
+  gloss: bad, evil
+  semantic_field: hattic_adjective
   attestations:
-  - ašḫap
+  - šaḫ, genauer ašaḫ
   region: central_anatolia
-  citation: 'Corpus record(s) 33 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n33. Kammenhuber 1969 p. 447: „böse“ (bzw. „Subst.“) [secure; OCR
+    quote: "Genauer aSah;s. § II."] Footnote 2 to šaḫ in the word list.'
   provenance: real
 - surface: estan
   phonemes:
@@ -107,92 +107,109 @@ entries:
   - t
   - a
   - n
-  gloss: sun god
+  gloss: sun god; day
   semantic_field: hattic_theonym
   attestations:
-  - Eštan
+  - eštan (aštan)
   region: central_anatolia
-  citation: 'Corpus record(s) 1 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+  notes: 'lexicon n02. Kammenhuber 1969 p. 446: „Sonnengott, Tag“ [secure; OCR quote:
+    "„Sonnengott, Tag”"]'
   provenance: real
-- surface: hakmis
+- surface: haippin
+  phonemes:
+  - h
+  - a
+  - i
+  - p
+  - p
+  - i
+  - n
+  gloss: noun of unknown meaning
+  semantic_field: hattic_noun
+  attestations:
+  - ḫaippin, mu-ḫaippin
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+  notes: 'lexicon n03. Kammenhuber 1969 p. 446: (Nomen) [unknown_meaning; OCR quote:
+    "(Nomen); hanuagSuit"]'
+  provenance: real
+- surface: hakkazuel
   phonemes:
   - h
   - a
   - k
-  - m
-  - i
-  - s
-  gloss: town (also Ḫakpiš)
-  semantic_field: hattic_toponym
-  attestations:
-  - Ḫakmiš
-  region: central_anatolia
-  citation: 'Corpus record(s) 77 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
-  provenance: real
-- surface: halentu
-  phonemes:
-  - h
+  - k
   - a
-  - l
+  - z
+  - u
   - e
-  - n
-  - t
-  - u
-  gloss: palace
-  semantic_field: hattic_lexeme
+  - l
+  gloss: cupbearer (cult functionary)
+  semantic_field: hattic_title
   attestations:
-  - ḫalentu
+  - ḫaggazuel
   region: central_anatolia
-  citation: 'Corpus record(s) 48 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
-    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
-    Brill.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 435, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n450
+  notes: 'lexicon n65. Kammenhuber 1969 p. 435: „Tränker“ (heth. e/akuttara-) [secure;
+    OCR quote: "hatt. haggazuel"]'
   provenance: real
-- surface: halmasuit
+- surface: halawes
   phonemes:
   - h
   - a
   - l
-  - m
   - a
+  - w
+  - e
   - s
-  - u
-  - i
-  - t
-  gloss: throne goddess
-  semantic_field: hattic_theonym
+  gloss: a cult functionary
+  semantic_field: hattic_title
   attestations:
-  - Ḫalmašuit
+  - ḫalau̯eₑš
   region: central_anatolia
-  citation: 'Corpus record(s) 6 (corpora/hattic/inscriptions/). Klinger, J. (1996).
-    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
-    Harrassowitz. Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n53. Kammenhuber 1969 p. 447: (heth. ḫalau̯aₐi̯a-, Kultfunktionär)
+    [secure; OCR quote: "(Holzart) und halaue.s"] Anm. 3; p. 435 ḫa-la-u̯eₑ-iš.'
   provenance: real
-- surface: hanhana
+- surface: hanniku
   phonemes:
   - h
   - a
   - n
+  - n
+  - i
+  - k
+  - u
+  gloss: place name
+  semantic_field: hattic_toponym
+  attestations:
+  - Ḫanniku
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 461, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n476
+  notes: 'lexicon n75. Kammenhuber 1969 p. 461: Ortsname Ḫanniku (heth. Ankuu̯a) [secure;
+    OCR quote: "zum Ortsnamen Hanniku"]'
+  provenance: real
+- surface: hantipsuwa
+  phonemes:
   - h
   - a
   - n
+  - t
+  - i
+  - p
+  - s
+  - u
+  - w
   - a
-  gloss: cult town
-  semantic_field: hattic_toponym
+  gloss: cook (title)
+  semantic_field: hattic_title
   attestations:
-  - Ḫanḫana
+  - LÚḫantip-šuu̯aₐ
   region: central_anatolia
-  citation: 'Corpus record(s) 80 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 496, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n511
+  notes: 'lexicon n89. Kammenhuber 1969 p. 496: hatt. Name des „Kochs“ [secure; OCR
+    quote: "Im hatt. Namen des „Kochs”"]'
   provenance: real
 - surface: hanwasuit
   phonemes:
@@ -205,15 +222,14 @@ entries:
   - u
   - i
   - t
-  gloss: throne
-  semantic_field: hattic_lexeme
+  gloss: throne (goddess)
+  semantic_field: hattic_noun
   attestations:
-  - ḫanwašuit
+  - ḫanu̯aₐšuit
   region: central_anatolia
-  citation: 'Corpus record(s) 44 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+  notes: 'lexicon n04. Kammenhuber 1969 p. 446: „Thron(göttin)“ [secure; OCR quote:
+    "„Ihron(göttin)"]'
   provenance: real
 - surface: hapalki
   phonemes:
@@ -225,37 +241,32 @@ entries:
   - k
   - i
   gloss: iron
-  semantic_field: hattic_lexeme
+  semantic_field: hattic_noun
   attestations:
   - ḫapalki
   region: central_anatolia
-  citation: 'Corpus record(s) 49 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
-    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
-    Brill.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 436, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n451
+  notes: 'lexicon n68. Kammenhuber 1969 p. 436: „Eisen“ [secure; OCR quote: "hatt.
+    hapalkı ,,Eisen’”’"]'
   provenance: real
-- surface: hapantali
+- surface: hapras
   phonemes:
   - h
   - a
   - p
+  - r
   - a
-  - n
-  - t
-  - a
-  - l
-  - i
-  gloss: tutelary goddess
-  semantic_field: hattic_theonym
+  - s
+  gloss: panther
+  semantic_field: hattic_noun
   attestations:
-  - Ḫapantali
+  - ḫapraš(-un)
   region: central_anatolia
-  citation: 'Corpus record(s) 7 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 479, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n494
+  notes: 'lexicon n85. Kammenhuber 1969 p. 479: = heth. UR.TUG „Panther“ (Gen.) [secure;
+    OCR quote: "dem Panther).”’"] hatt. ḫapraš-un = ŠA UR.TUG.'
   provenance: real
-- surface: hasammili
+- surface: hasammil
   phonemes:
   - h
   - a
@@ -265,36 +276,14 @@ entries:
   - m
   - i
   - l
-  - i
-  gloss: god
+  gloss: deity name (divine smith)
   semantic_field: hattic_theonym
   attestations:
-  - Ḫašammili
+  - Ḫašammil
   region: central_anatolia
-  citation: 'Corpus record(s) 16 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier A
-  provenance: real
-- surface: hatepinu
-  phonemes:
-  - h
-  - a
-  - t
-  - e
-  - p
-  - i
-  - n
-  - u
-  gloss: goddess, consort of Telipinu
-  semantic_field: hattic_theonym
-  attestations:
-  - Ḫatepinu
-  region: central_anatolia
-  citation: 'Corpus record(s) 25 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+  notes: 'lexicon n05. Kammenhuber 1969 p. 446: (GN) [secure; OCR quote: "Hasammil
+    (GN)"] p. 436: hatt. Gott Ḫašammil … als göttlicher Schmied.'
   provenance: real
 - surface: hattus
   phonemes:
@@ -304,198 +293,362 @@ entries:
   - t
   - u
   - s
-  gloss: Ḫattuša (pre-Hittite name)
+  gloss: place name (Ḫattuša)
   semantic_field: hattic_toponym
   attestations:
   - Ḫattuš
   region: central_anatolia
-  citation: 'Corpus record(s) 70 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+  notes: 'lexicon n06. Kammenhuber 1969 p. 446: (ON) [secure; OCR quote: "Hattu$ (ON)"]'
   provenance: real
-- surface: hilamar
+- surface: hawet
   phonemes:
   - h
-  - i
-  - l
   - a
-  - m
-  - a
-  - r
-  gloss: temple gate-house
-  semantic_field: hattic_lexeme
+  - w
+  - e
+  - t
+  gloss: verb of unknown meaning
+  semantic_field: hattic_verb
   attestations:
-  - ḫilamar
+  - ḫau̯et
   region: central_anatolia
-  citation: 'Corpus record(s) 42 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+  notes: 'lexicon v03. Kammenhuber 1969 p. 526: u.B. (= heth. šammallii̯a-, u.B.)
+    [unknown_meaning; OCR quote: "transitiv, u.B. = heth."] § 26a no. 3.'
   provenance: real
-- surface: huzziya
+- surface: her
+  phonemes:
+  - h
+  - e
+  - r
+  gloss: noun of unknown meaning
+  semantic_field: hattic_noun
+  attestations:
+  - ḫer
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+  notes: 'lexicon n07. Kammenhuber 1969 p. 446: (Nomen) [unknown_meaning; OCR quote:
+    "her (Nomen)"]'
+  provenance: real
+- surface: huru
+  phonemes:
+  - h
+  - u
+  - r
+  - u
+  gloss: to be gracious(?)
+  semantic_field: hattic_verb
+  attestations:
+  - ḫuru
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+  notes: 'lexicon v04. Kammenhuber 1969 p. 526: „gnädig/wohlgesinnt sein(?)“ [doubtful;
+    OCR quote: "„gnädig/wohlgesinnt sein(?)”"] § 26a no. 4.'
+  provenance: real
+- surface: hutu
+  phonemes:
+  - h
+  - u
+  - t
+  - u
+  gloss: to rise
+  semantic_field: hattic_verb
+  attestations:
+  - ḫudu
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+  notes: 'lexicon v05. Kammenhuber 1969 p. 526: „sich heben (o.ä.)“ [secure; OCR quote:
+    "„sich heben (0.4.)”, intransitiv"] § 26a no. 5.'
+  provenance: real
+- surface: huzzassai
+  phonemes:
+  - h
+  - u
+  - z
+  - z
+  - a
+  - s
+  - s
+  - a
+  - i
+  gloss: mighty (?) smith
+  semantic_field: hattic_noun
+  attestations:
+  - ḫuzzaššai
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 436, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n451
+  notes: 'lexicon n67. Kammenhuber 1969 p. 436: (hatt. ureš ḫuzzaššai-šu = „Schmied,
+    hoheitsmächtiger“) [doubtful; OCR quote: "„Schmied, hoheitsmächtiger””"] Which
+    Hattic word carries which part of the gloss is not stated.'
+  provenance: real
+- surface: huzzia
   phonemes:
   - h
   - u
   - z
   - z
   - i
-  - y
   - a
   gloss: Old Hittite royal name
   semantic_field: hattic_personal_name
   attestations:
-  - Ḫuzziya
+  - Ḫuzzii̯a
   region: central_anatolia
-  citation: 'Corpus record(s) 85 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
-    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
-    Brill.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 432, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n447
+  notes: 'lexicon n58. Kammenhuber 1969 p. 432: (hatt. Name bzw. mit hatt. Sprachmaterial
+    gebildet) [doubtful; OCR quote: "Huzziia usw."] Kammenhuber: ''hatt. Namen bzw.
+    Namen, die mit hatt. Sprachmaterial gebildet sind''.'
   provenance: real
-- surface: il
+- surface: iah
   phonemes:
   - i
-  - l
-  gloss: to prosper
-  semantic_field: hattic_lexeme
+  - a
+  - h
+  gloss: sky
+  semantic_field: hattic_noun
   attestations:
-  - il
+  - (i)i̯aḫ
   region: central_anatolia
-  citation: 'Corpus record(s) 60 (corpora/hattic/inscriptions/). Bischoff, A. M. (2023).
-    ''Some new Hattian-Hittite correspondences from the quasi-bilingual text of CTH
-    733.'' Hungarian Assyriological Review 4: 95-109 (CC BY-NC 4.0). Gloss rests on
-    a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+  notes: 'lexicon n08. Kammenhuber 1969 p. 446: „Himmel“ [secure; OCR quote: "‚„Himmel’;
+    tppulasne"]'
   provenance: real
-- surface: inar
+- surface: ippi
   phonemes:
+  - i
+  - p
+  - p
+  - i
+  gloss: small
+  semantic_field: hattic_adjective
+  attestations:
+  - ippi(-zinar)
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 437, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n452
+  notes: 'lexicon n70. Kammenhuber 1969 p. 437: ippi-zinar „Klein-Musik“ [doubtful;
+    OCR quote: "„Klein-Musik’”"] mg-78856 row slot 95 (p. 452). Gloss of ippi alone
+    inferred from the compound.'
+  provenance: real
+- surface: ippulasne
+  phonemes:
+  - i
+  - p
+  - p
+  - u
+  - l
+  - a
+  - s
+  - n
+  - e
+  gloss: a kind of bread
+  semantic_field: hattic_noun
+  attestations:
+  - ippulašne
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+  notes: 'lexicon n09. Kammenhuber 1969 p. 446: „x-Brot“ [secure; OCR quote: "tppulasne
+    ,,x-Brot’’"]'
+  provenance: real
+- surface: iskinawar
+  phonemes:
+  - i
+  - s
+  - k
   - i
   - n
   - a
+  - w
+  - a
   - r
-  gloss: tutelary goddess
-  semantic_field: hattic_theonym
+  gloss: hammer (or similar)
+  semantic_field: hattic_noun
   attestations:
-  - Inar
+  - iškinau̯ar
   region: central_anatolia
-  citation: 'Corpus record(s) 13 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+  notes: 'lexicon n10. Kammenhuber 1969 p. 446: „Hammer(o.ä.)“ [doubtful; OCR quote:
+    "iSkinauar"]'
   provenance: real
-- surface: istarazzil
+- surface: istarrazil
   phonemes:
   - i
   - s
   - t
   - a
   - r
+  - r
   - a
-  - z
   - z
   - i
   - l
   gloss: earth
-  semantic_field: hattic_lexeme
+  semantic_field: hattic_noun
   attestations:
-  - ištarazzil
+  - '*štarrazil'
+  - ištarrazil
   region: central_anatolia
-  citation: 'Corpus record(s) 50 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462;
+    Schuster 1974, p. 107, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n124
+  notes: 'lexicon n11. Kammenhuber 1969 p. 447: „Erde“ [secure; OCR quote: "iStarrazıl
+    Erde”"] | Schuster 1974 p. 107: Wort für „Erde“ [secure; OCR quote: "als Wort
+    für „Erde”"] mg-78856 row slot 63 (Schuster''s stem *štarrazil, i- analysed as
+    a prefix).'
   provenance: real
-- surface: istustaya
+- surface: kahhir
   phonemes:
+  - k
+  - a
+  - h
+  - h
+  - i
+  - r
+  gloss: to administer
+  semantic_field: hattic_verb
+  attestations:
+  - kaḫḫir/kāḫer
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+  notes: 'lexicon v06. Kammenhuber 1969 p. 526: „verwalten“ [secure; OCR quote: "kahhir/käher
+    „verwalten”, transitiv"] § 26a no. 6.'
+  provenance: real
+- surface: kaksazet
+  phonemes:
+  - k
+  - a
+  - k
+  - s
+  - a
+  - z
+  - e
+  - t
+  gloss: deity name (the goddess of Kakšat)
+  semantic_field: hattic_theonym
+  attestations:
+  - Kakšaz-et
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n12. Kammenhuber 1969 p. 447: (GN) [secure; OCR quote: "Kaksaz-et
+    (GN)"] p. 461: Lokalgöttin Kakšaz-et „Kakšaz-erin“.'
+  provenance: real
+- surface: kamar
+  phonemes:
+  - k
+  - a
+  - m
+  - a
+  - r
+  gloss: to slit open
+  semantic_field: hattic_verb
+  attestations:
+  - kamar
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+  notes: 'lexicon v07. Kammenhuber 1969 p. 526: = heth. iškalli „er schlitzte auf“
+    [secure; OCR quote: "kamar = heth. iSkalli"] § 26a no. 7.'
+  provenance: real
+- surface: kantis
+  phonemes:
+  - k
+  - a
+  - n
+  - t
   - i
   - s
-  - t
-  - u
-  - s
-  - t
-  - a
-  - y
-  - a
-  gloss: fate goddess
-  semantic_field: hattic_theonym
+  gloss: noun of unknown meaning
+  semantic_field: hattic_noun
   attestations:
-  - Ištuštaya
+  - kantiš
   region: central_anatolia
-  citation: 'Corpus record(s) 22 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n13. Kammenhuber 1969 p. 447: (Nomen) [unknown_meaning; OCR quote:
+    "kantiš (Nomen)"]'
   provenance: real
-- surface: kait
+- surface: kapnu
   phonemes:
   - k
   - a
+  - p
+  - n
+  - u
+  gloss: verb of unknown meaning
+  semantic_field: hattic_verb
+  attestations:
+  - gapnu
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+  notes: 'lexicon v08. Kammenhuber 1969 p. 526: u.B. [unknown_meaning; OCR quote:
+    "8) gapnu, u.B."] § 26a no. 8.'
+  provenance: real
+- surface: karam
+  phonemes:
+  - k
+  - a
+  - r
+  - a
+  - m
+  gloss: libation vessel / drink
+  semantic_field: hattic_noun
+  attestations:
+  - karam
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n14. Kammenhuber 1969 p. 447: „Libationsgefäß bzw. -getränk“ [secure;
+    OCR quote: "karam ,,LibationsgefaB bzw. -getränk’”"]'
+  provenance: real
+- surface: kasparuiah
+  phonemes:
+  - k
+  - a
+  - s
+  - p
+  - a
+  - r
+  - u
   - i
-  - t
-  gloss: grain goddess
+  - a
+  - h
+  gloss: deity name
   semantic_field: hattic_theonym
   attestations:
-  - Kait
+  - Kašbaruịaḫ
   region: central_anatolia
-  citation: 'Corpus record(s) 9 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n15. Kammenhuber 1969 p. 447: (GN, Wortende an (i)i̯aḫ „Himmel“
+    erinnernd) [secure; OCR quote: "KaSbaruiah"]'
   provenance: real
-- surface: kammama
-  phonemes:
-  - k
-  - a
-  - m
-  - m
-  - a
-  - m
-  - a
-  gloss: town
-  semantic_field: hattic_toponym
-  attestations:
-  - Kammama
-  region: central_anatolia
-  citation: 'Corpus record(s) 82 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
-  provenance: real
-- surface: kasku
+- surface: kastip
   phonemes:
   - k
   - a
   - s
+  - t
+  - i
+  - p
+  gloss: gate
+  semantic_field: hattic_noun
+  attestations:
+  - kaštip(-an)
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 480, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n495
+  notes: 'lexicon n86. Kammenhuber 1969 p. 480: „Gen.“ kaštip-an = heth. KÁ-aš „des
+    Tores“ [secure; OCR quote: "KA-as des Tores” jetzt sicher"]'
+  provenance: real
+- surface: kasuh
+  phonemes:
   - k
+  - a
+  - s
   - u
-  gloss: moon god
-  semantic_field: hattic_theonym
+  - h
+  gloss: to protect
+  semantic_field: hattic_verb
   attestations:
-  - Kašku
+  - šuḫ oder eher kašuḫ
   region: central_anatolia
-  citation: 'Corpus record(s) 4 (corpora/hattic/inscriptions/). Klinger, J. (1996).
-    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
-    Harrassowitz. Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
-  provenance: real
-- surface: kastama
-  phonemes:
-  - k
-  - a
-  - s
-  - t
-  - a
-  - m
-  - a
-  gloss: cult town
-  semantic_field: hattic_toponym
-  attestations:
-  - Kaštama
-  region: central_anatolia
-  citation: 'Corpus record(s) 79 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 528, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n543
+  notes: 'lexicon v20. Kammenhuber 1969 p. 528: „schützen“ [secure; OCR quote: "schützen",
+    trans. = heth."] § 26a no. 20 (Kammenhuber prefers kašuḫ).'
   provenance: real
 - surface: katah
   phonemes:
@@ -505,35 +658,14 @@ entries:
   - a
   - h
   gloss: queen
-  semantic_field: hattic_lexeme
+  semantic_field: hattic_noun
   attestations:
-  - kataḫ
+  - kat(t)aḫ
   region: central_anatolia
-  citation: 'Corpus record(s) 31 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n16. Kammenhuber 1969 p. 447: „Königin“ [secure; OCR quote: "‚Königin”"]'
   provenance: real
-- surface: katahha
-  phonemes:
-  - k
-  - a
-  - t
-  - a
-  - h
-  - h
-  - a
-  gloss: goddess 'the queen'
-  semantic_field: hattic_theonym
-  attestations:
-  - Kataḫḫa
-  region: central_anatolia
-  citation: 'Corpus record(s) 19 (corpora/hattic/inscriptions/). Klinger, J. (1996).
-    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
-    Harrassowitz.'
-  notes: confidence tier A
-  provenance: real
-- surface: katahzipuri
+- surface: katahziwuri
   phonemes:
   - k
   - a
@@ -542,37 +674,18 @@ entries:
   - h
   - z
   - i
-  - p
+  - w
   - u
   - r
   - i
-  gloss: goddess (Hittite Kamrušepa)
+  gloss: deity name
   semantic_field: hattic_theonym
   attestations:
-  - Kataḫzipuri
+  - Kataḫzip/u̯uᵤri
   region: central_anatolia
-  citation: 'Corpus record(s) 8 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier A
-  provenance: real
-- surface: katapa
-  phonemes:
-  - k
-  - a
-  - t
-  - a
-  - p
-  - a
-  gloss: town
-  semantic_field: hattic_toponym
-  attestations:
-  - Katapa
-  region: central_anatolia
-  citation: 'Corpus record(s) 83 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 433, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n448
+  notes: 'lexicon n59. Kammenhuber 1969 p. 433: (heth., luw. Kamrušepa) [secure; OCR
+    quote: "Katahzi-"] Palaic goddess ''mit Sicherheit aus dem Hatt. entlehnt''.'
   provenance: real
 - surface: katte
   phonemes:
@@ -582,160 +695,276 @@ entries:
   - t
   - e
   gloss: king
-  semantic_field: hattic_lexeme
+  semantic_field: hattic_noun
   attestations:
   - katte
   region: central_anatolia
-  citation: 'Corpus record(s) 30 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n17. Kammenhuber 1969 p. 447: „König“ [secure; OCR quote: "katte
+    ‚König;"]'
   provenance: real
-- surface: kuzanisu
+- surface: katteshapi
+  phonemes:
+  - k
+  - a
+  - t
+  - t
+  - e
+  - s
+  - h
+  - a
+  - p
+  - i
+  gloss: deity name ('king-god')
+  semantic_field: hattic_theonym
+  attestations:
+  - katte-šḫapi
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 495, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n510
+  notes: 'lexicon n88. Kammenhuber 1969 p. 495: hatt. Göttername „König + Gott“ [secure;
+    OCR quote: "Es gibt einen hatt. Götternamen katte-Shapt"]'
+  provenance: real
+- surface: kun
   phonemes:
   - k
   - u
-  - z
+  - n
+  gloss: to see
+  semantic_field: hattic_verb
+  attestations:
+  - kun(nu)
+  - u̯aₐ-aḫ-ku-un
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541;
+    Schuster 1974, p. 105, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n122
+  notes: 'lexicon v09. Kammenhuber 1969 p. 526: „sehen“ [secure; OCR quote: "kun(nu)
+    sehen", trans. = heth."] § 26a no. 9. | Schuster 1974 p. 105: „sie sah es“ [secure;
+    OCR quote: "„sie sah es""] Stem kun per mg-78856 row slot 89.'
+  provenance: real
+- surface: kurkupal
+  phonemes:
+  - k
+  - u
+  - r
+  - k
+  - u
+  - p
   - a
-  - n
-  - i
-  - s
-  - u
-  gloss: goddess
-  semantic_field: hattic_theonym
-  attestations:
-  - Kuzanišu
-  region: central_anatolia
-  citation: 'Corpus record(s) 24 (corpora/hattic/inscriptions/). Klinger, J. (1996).
-    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
-    Harrassowitz.'
-  notes: confidence tier B
-  provenance: real
-- surface: leipinu
-  phonemes:
   - l
-  - e
-  - i
-  - p
-  - i
-  - n
-  - u
-  gloss: his children
-  semantic_field: hattic_lexeme
+  gloss: nail
+  semantic_field: hattic_noun
   attestations:
-  - le-i-binu
+  - kurkupal
   region: central_anatolia
-  citation: Corpus record(s) 52 (corpora/hattic/inscriptions/). 'Hattische Sprache',
-    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
-    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 479, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n494
+  notes: 'lexicon n83. Kammenhuber 1969 p. 479: „Nagel“ [secure; OCR quote: "kurkupal
+    ,,Nagel’’ (Einzahl!)"]'
   provenance: real
-- surface: lepinu
+- surface: kuru
   phonemes:
-  - l
-  - e
-  - p
-  - i
-  - n
+  - k
   - u
-  gloss: children (le- plural)
-  semantic_field: hattic_lexeme
+  - r
+  - u
+  gloss: to see
+  semantic_field: hattic_verb
   attestations:
-  - le-binu
+  - kuru
   region: central_anatolia
-  citation: Corpus record(s) 51 (corpora/hattic/inscriptions/). 'Hattische Sprache',
-    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
-    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542
+  notes: 'lexicon v10. Kammenhuber 1969 p. 527: „sehen“ [secure; OCR quote: "10) kuru
+    „sehen’’, trans."] § 26a no. 10.'
   provenance: real
-- surface: lewae
+- surface: kut
   phonemes:
-  - l
-  - e
+  - k
+  - u
+  - t
+  gloss: soul
+  semantic_field: hattic_noun
+  attestations:
+  - kud(u)
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 462, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n477
+  notes: 'lexicon n77. Kammenhuber 1969 p. 462: „Seele“ [secure; OCR quote: "kud(u)
+    ,,Seele’’"] p. 466: kud(u) „Seele“.'
+  provenance: real
+- surface: kuwa
+  phonemes:
+  - k
+  - u
   - w
   - a
-  - e
-  gloss: implements
-  semantic_field: hattic_lexeme
+  gloss: to seize
+  semantic_field: hattic_verb
   attestations:
-  - le-wae
+  - kuu̯a
   region: central_anatolia
-  citation: Corpus record(s) 54 (corpora/hattic/inscriptions/). 'Hattische Sprache',
-    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
-    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542
+  notes: 'lexicon v11. Kammenhuber 1969 p. 527: „packen, ergreifen“ [secure; OCR quote:
+    "„packen, ergreifen”, trans. = heth. ep(p)-/ap(p)-"] § 26a no. 11; page image
+    checked at 250 dpi (kuu̯a, not ku̯a).'
   provenance: real
-- surface: lezuh
+- surface: lahzan
   phonemes:
   - l
-  - e
-  - z
-  - u
-  - h
-  gloss: cloths
-  semantic_field: hattic_lexeme
-  attestations:
-  - le-zuḫ
-  region: central_anatolia
-  citation: Corpus record(s) 53 (corpora/hattic/inscriptions/). 'Hattische Sprache',
-    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
-    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
-  notes: confidence tier A
-  provenance: real
-- surface: lihzina
-  phonemes:
-  - l
-  - i
-  - h
-  - z
-  - i
-  - n
   - a
-  gloss: cult town
+  - h
+  - z
+  - a
+  - n
+  gloss: place name
   semantic_field: hattic_toponym
   attestations:
-  - Liḫzina
+  - Laḫzan
   region: central_anatolia
-  citation: 'Corpus record(s) 76 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n18. Kammenhuber 1969 p. 447: (ON) [secure; OCR quote: "Lahzan (ON)"]'
   provenance: real
-- surface: mezulla
+- surface: leluwani
   phonemes:
-  - m
+  - l
   - e
-  - z
+  - l
   - u
-  - l
-  - l
+  - w
   - a
-  gloss: daughter of the sun goddess
+  - n
+  - i
+  gloss: deity name
   semantic_field: hattic_theonym
   attestations:
-  - Mezulla
+  - Leluu̯ani
   region: central_anatolia
-  citation: 'Corpus record(s) 14 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n19. Kammenhuber 1969 p. 447: (GN) [secure; OCR quote: "Leluuani
+    (GN)"]'
   provenance: real
-- surface: nerik
+- surface: malhip
+  phonemes:
+  - m
+  - a
+  - l
+  - h
+  - i
+  - p
+  gloss: good
+  semantic_field: hattic_adjective
+  attestations:
+  - malḫib
+  - malḫip
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462;
+    Schuster 1974, p. 101, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n118
+  notes: 'lexicon n20. Kammenhuber 1969 p. 447: „gut“ (bzw. „Subst.“) [secure; OCR
+    quote: "malhıp eut (bzw. ,,subst.”)"] | Schuster 1974 p. 101: „gut“ [secure; OCR
+    quote: "malhib = „gut''"] mg-78856 row slot 57.'
+  provenance: real
+- surface: mis
+  phonemes:
+  - m
+  - i
+  - s
+  gloss: to take
+  semantic_field: hattic_verb
+  attestations:
+  - miš
+  - miš(a)
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542;
+    Schuster 1974, p. 116, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n133
+  notes: 'lexicon v12. Kammenhuber 1969 p. 527: „nehmen“ [secure; OCR quote: "„nehmen’”,
+    trans. = heth."] § 26a no. 12. | Schuster 1974 p. 116: „nimm !“; miš als Stamm
+    des Verbums „nehmen“ [secure; OCR quote: "als Stamm des Verbums „nehmen"] mg-78856
+    row slot 73.'
+  provenance: real
+- surface: munamuna
+  phonemes:
+  - m
+  - u
+  - n
+  - a
+  - m
+  - u
+  - n
+  - a
+  gloss: foundation stone
+  semantic_field: hattic_noun
+  attestations:
+  - munamuna
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n21. Kammenhuber 1969 p. 447: „Grundstein“ [secure; OCR quote: "munamuna
+    ,,Grund-"]'
+  provenance: real
+- surface: muwakkupakku
+  phonemes:
+  - m
+  - u
+  - w
+  - a
+  - k
+  - k
+  - u
+  - p
+  - a
+  - k
+  - k
+  - u
+  gloss: hammer (or similar)
+  semantic_field: hattic_noun
+  attestations:
+  - muu̯akkupakku
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n22. Kammenhuber 1969 p. 447: „Hammer(o.ä.)“ [doubtful; OCR quote:
+    "muuakkupakku ,,Hammer(o.a.)”"]'
+  provenance: real
+- surface: narak
+  phonemes:
+  - n
+  - a
+  - r
+  - a
+  - k
+  gloss: place name (Nerik)
+  semantic_field: hattic_toponym
+  attestations:
+  - Narak
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 461, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n476
+  notes: 'lexicon n73. Kammenhuber 1969 p. 461: hatt. Narak (Nerik) [secure; OCR quote:
+    "(hatt. Narak)"]'
+  provenance: real
+- surface: nes
   phonemes:
   - n
   - e
-  - r
-  - i
-  - k
-  gloss: cult city of the storm god
-  semantic_field: hattic_toponym
+  - s
+  gloss: to lay
+  semantic_field: hattic_verb
   attestations:
-  - Nerik
+  - neš
   region: central_anatolia
-  citation: 'Corpus record(s) 71 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542
+  notes: 'lexicon v13. Kammenhuber 1969 p. 527: „legen“ [secure; OCR quote: "„legen’”,
+    trans. = heth."] § 26a no. 13.'
+  provenance: real
+- surface: niwas
+  phonemes:
+  - n
+  - i
+  - w
+  - a
+  - s
+  gloss: to sit
+  semantic_field: hattic_verb
+  attestations:
+  - niu̯aₐš (nu̯aₐš)
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542
+  notes: 'lexicon v14. Kammenhuber 1969 p. 527: „sitzen (sich setzen?)“ [secure; OCR
+    quote: "„sitzen (sich setzen ?)”, intrans."] § 26a no. 14.'
   provenance: real
 - surface: nuwa
   phonemes:
@@ -743,50 +972,65 @@ entries:
   - u
   - w
   - a
-  gloss: come (verb stem)
-  semantic_field: hattic_lexeme
+  gloss: to come, go
+  semantic_field: hattic_verb
   attestations:
-  - nuwa
+  - nu
+  - nuu̯a [nuu̯]
   region: central_anatolia
-  citation: Corpus record(s) 55 (corpora/hattic/inscriptions/). 'Hattische Sprache',
-    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
-    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542;
+    Schuster 1974, p. 146, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n163
+  notes: 'lexicon v15. Kammenhuber 1969 p. 527: „kommen, gehen“ [secure; OCR quote:
+    "„kommen, gehen”, intrans."] § 26a no. 15. | Schuster 1974 p. 146: „gehen“ (Wortstamm)
+    [secure; OCR quote: "Wortstamm nu „gehen“"] Schuster''s stem nu; mg-78856 row
+    slot 3. Same verb as Kammenhuber''s nuu̯a, so it is listed under that entry.'
   provenance: real
-- surface: pampa
+- surface: pala
   phonemes:
   - p
   - a
-  - m
-  - p
+  - l
   - a
-  gloss: king of Ḫatti in the Narām-Sîn tradition
-  semantic_field: hattic_personal_name
+  gloss: and, then
+  semantic_field: hattic_particle
   attestations:
-  - Pamba
+  - pala, bala (u̯ala vielleicht fehlerhaft)
   region: central_anatolia
-  citation: 'Corpus record(s) 84 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
-    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
-    Brill.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n23. Kammenhuber 1969 p. 447: „und“ („dann“, Wort- und Satzanschluß)
+    [secure; OCR quote: "pala, bala (wala viel-"]'
   provenance: real
-- surface: papaya
+- surface: parsiel
   phonemes:
   - p
   - a
-  - p
-  - a
-  - y
-  - a
-  gloss: fate goddess
-  semantic_field: hattic_theonym
+  - r
+  - s
+  - i
+  - e
+  - l
+  gloss: statue-worshipper (cult functionary)
+  semantic_field: hattic_title
   attestations:
-  - Papaya
+  - pár-ši-e-el
   region: central_anatolia
-  citation: 'Corpus record(s) 23 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 435, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n450
+  notes: 'lexicon n64. Kammenhuber 1969 p. 435: „Statuenanbeter“ [secure; OCR quote:
+    ",,Statuenanbeter’”"]'
+  provenance: real
+- surface: pin
+  phonemes:
+  - p
+  - i
+  - n
+  gloss: noun of unknown meaning
+  semantic_field: hattic_noun
+  attestations:
+  - pin
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n24. Kammenhuber 1969 p. 447: (Nomen) [unknown_meaning; OCR quote:
+    "pin (Nomen)"]'
   provenance: real
 - surface: pinu
   phonemes:
@@ -795,29 +1039,221 @@ entries:
   - n
   - u
   gloss: child
-  semantic_field: hattic_lexeme
+  semantic_field: hattic_noun
   attestations:
   - pinu
   region: central_anatolia
-  citation: 'Corpus record(s) 32 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n25. Kammenhuber 1969 p. 447: „Kind“ [secure; OCR quote: "pinu ,,Kind”"]'
+  provenance: real
+- surface: pipizil
+  phonemes:
+  - p
+  - i
+  - p
+  - i
+  - z
+  - i
+  - l
+  gloss: wind
+  semantic_field: hattic_noun
+  attestations:
+  - pipiz(z)il
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 466, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n481
+  notes: 'lexicon n80. Kammenhuber 1969 p. 466: „Wind“ [secure; OCR quote: "pipiz(z)il
+    Wind”"] mg-78856 row slot 48.'
+  provenance: real
+- surface: pirpir
+  phonemes:
+  - p
+  - i
+  - r
+  - p
+  - i
+  - r
+  gloss: noun of unknown meaning
+  semantic_field: hattic_noun
+  attestations:
+  - pirpir
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n26. Kammenhuber 1969 p. 447: (Nomen) [unknown_meaning; OCR quote:
+    "pirpir (No-"]'
+  provenance: real
+- surface: pu
+  phonemes:
+  - p
+  - u
+  gloss: to make
+  semantic_field: hattic_verb
+  attestations:
+  - bu
+  - pu(?)
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 528, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n543;
+    Schuster 1974, p. 89, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n106
+  notes: 'lexicon v16. Kammenhuber 1969 p. 528: „machen“ [doubtful; OCR quote: "machen",
+    trans. = heth."] § 26a no. 16. | Schuster 1974 p. 89: „machen“ (Verbalstamm) [secure;
+    OCR quote: "zu bu „machen"] mg-78856 row slot 25.'
+  provenance: real
+- surface: put
+  phonemes:
+  - p
+  - u
+  - t
+  gloss: to be
+  semantic_field: hattic_verb
+  attestations:
+  - put
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 528, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n543
+  notes: 'lexicon v17. Kammenhuber 1969 p. 528: „sein, existieren“ [secure; OCR quote:
+    "17) put „sein, existieren”, intrans."] § 26a no. 17.'
+  provenance: real
+- surface: sa
+  phonemes:
+  - s
+  - a
+  gloss: to favour(?)
+  semantic_field: hattic_verb
+  attestations:
+  - ša(?)
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 528, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n543
+  notes: 'lexicon v19. Kammenhuber 1969 p. 528: = heth. SIG₅-aḫḫ-, ungefähr „begünstigen,
+    gesund machen“ [doubtful; OCR quote: "ungefähr „begünstigen, gesund ma-"] § 26a
+    no. 19.'
+  provenance: real
+- surface: sahis
+  phonemes:
+  - s
+  - a
+  - h
+  - i
+  - s
+  gloss: a kind of wood
+  semantic_field: hattic_noun
+  attestations:
+  - šaḫiš
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n52. Kammenhuber 1969 p. 447: (Holzart) [secure; OCR quote: "(Holzart)"]
+    Anm. 3; p. 437.'
+  provenance: real
+- surface: sahtaril
+  phonemes:
+  - s
+  - a
+  - h
+  - t
+  - a
+  - r
+  - i
+  - l
+  gloss: a cult functionary
+  semantic_field: hattic_title
+  attestations:
+  - šaḫtaril
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n50. Kammenhuber 1969 p. 447: hatt. šaḫtaril (heth. šaḫtarili-,
+    Kultfunktionär) [secure; OCR quote: "hatt. Saktaril"] Anm. 3; p. 435.'
+  provenance: real
+- surface: sakil
+  phonemes:
+  - s
+  - a
+  - k
+  - i
+  - l
+  gloss: noun of unknown meaning
+  semantic_field: hattic_noun
+  attestations:
+  - šak(k)il
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 466, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n481
+  notes: 'lexicon n81. Kammenhuber 1969 p. 466: Nomen u.B. [unknown_meaning; OCR quote:
+    "Nomen u.B. mit Sakkil(z)"]'
+  provenance: real
+- surface: sepsep
+  phonemes:
+  - s
+  - e
+  - p
+  - s
+  - e
+  - p
+  gloss: shoe, sandal
+  semantic_field: hattic_noun
+  attestations:
+  - šepšep
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n34. Kammenhuber 1969 p. 447: „Schuh, Sandale“ [secure; OCR quote:
+    "Sepsep „Schuh,"]'
+  provenance: real
+- surface: shap
+  phonemes:
+  - s
+  - h
+  - a
+  - p
+  gloss: god
+  semantic_field: hattic_noun
+  attestations:
+  - (a)šḫap/u [šḫaf]
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n35. Kammenhuber 1969 p. 447: „Gott“ [secure; OCR quote: "(a)shap/u
+    [Skaf] „Gott?"]'
+  provenance: real
+- surface: sinit
+  phonemes:
+  - s
+  - i
+  - n
+  - i
+  - t
+  gloss: copper
+  semantic_field: hattic_noun
+  attestations:
+  - šinit(i)
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n36. Kammenhuber 1969 p. 447: „Kupfer“ [secure; OCR quote: "šinit(i)
+    „Kupfer”"]'
+  provenance: real
+- surface: sterah
+  phonemes:
+  - s
+  - t
+  - e
+  - r
+  - a
+  - h
+  gloss: noun of unknown meaning (le-šteraḫ glossed 'his hide(s)' on p. 481 per mg-78856)
+  semantic_field: hattic_noun
+  attestations:
+  - šteraḫ
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n37. Kammenhuber 1969 p. 447: (Nomen) [unknown_meaning; OCR quote:
+    "Sterah"]'
   provenance: real
 - surface: sul
   phonemes:
   - s
   - u
   - l
-  gloss: let, leave (verb stem)
-  semantic_field: hattic_lexeme
+  gloss: to let go
+  semantic_field: hattic_verb
   attestations:
-  - šul
+  - šul(a)
   region: central_anatolia
-  citation: Corpus record(s) 57 (corpora/hattic/inscriptions/). 'Hattische Sprache',
-    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
-    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 528, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n543
+  notes: 'lexicon v21. Kammenhuber 1969 p. 528: „(los)lassen“ [secure; OCR quote:
+    "„(los)lassen’, trans. = heth. tarna-"] § 26a no. 21.'
   provenance: real
 - surface: sulinkatte
   phonemes:
@@ -831,34 +1267,98 @@ entries:
   - t
   - t
   - e
-  gloss: war god
+  gloss: deity name
   semantic_field: hattic_theonym
   attestations:
-  - Šulinkatte
+  - Šulin-katte
   region: central_anatolia
-  citation: 'Corpus record(s) 11 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 497, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n512
+  notes: 'lexicon n90. Kammenhuber 1969 p. 497: „des š. König = König über das š.“
+    [secure; OCR quote: "Sulin-katte „des š. König"]'
   provenance: real
-- surface: tahurpa
+- surface: suwa
+  phonemes:
+  - s
+  - u
+  - w
+  - a
+  gloss: to set, place
+  semantic_field: hattic_verb
+  attestations:
+  - šuu̯aₐ [šuf]
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+  notes: 'lexicon v22. Kammenhuber 1969 p. 529: „setzen, stellen“ [secure; OCR quote:
+    "stellen”, trans. = heth. däi-"] § 26a no. 22.'
+  provenance: real
+- surface: tahaia
   phonemes:
   - t
   - a
   - h
-  - u
-  - r
-  - p
   - a
-  gloss: cult town
-  semantic_field: hattic_toponym
+  - i
+  - a
+  gloss: barber
+  semantic_field: hattic_title
   attestations:
-  - Taḫurpa
+  - taḫai̯a
   region: central_anatolia
-  citation: 'Corpus record(s) 81 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 435, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n450
+  notes: 'lexicon n63. Kammenhuber 1969 p. 435: „Barbier“ [secure; OCR quote: "Barbier”
+    (< hatt."]'
+  provenance: real
+- surface: tahil
+  phonemes:
+  - t
+  - a
+  - h
+  - i
+  - l
+  gloss: to pour
+  semantic_field: hattic_verb
+  attestations:
+  - taḫ(ḫ)il
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+  notes: 'lexicon v23. Kammenhuber 1969 p. 529: „schütten“ [secure; OCR quote: "23)
+    tah(h)il ,,schitten”, trans."] § 26a no. 23.'
+  provenance: real
+- surface: takeha
+  phonemes:
+  - t
+  - a
+  - k
+  - e
+  - h
+  - a
+  gloss: lion
+  semantic_field: hattic_noun
+  attestations:
+  - takeḫa
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n38. Kammenhuber 1969 p. 447: „Löwe“ [secure; OCR quote: "takeha
+    ,,L6we’"]'
+  provenance: real
+- surface: takkehal
+  phonemes:
+  - t
+  - a
+  - k
+  - k
+  - e
+  - h
+  - a
+  - l
+  gloss: hero
+  semantic_field: hattic_noun
+  attestations:
+  - takkeḫal
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n39. Kammenhuber 1969 p. 447: „Held“ [secure; OCR quote: "takkehal
+    ,,Held’’"]'
   provenance: real
 - surface: taparna
   phonemes:
@@ -869,15 +1369,14 @@ entries:
   - r
   - n
   - a
-  gloss: king (title)
-  semantic_field: hattic_lexeme
+  gloss: ruler
+  semantic_field: hattic_title
   attestations:
   - tabarna
   region: central_anatolia
-  citation: 'Corpus record(s) 47 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
-    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
-    Brill.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n40. Kammenhuber 1969 p. 447: „Herrscher“ [secure; OCR quote: "tabarna
+    Herrscher""] p. 432: hatt. Appellativum „Herrscher“, also Hittite title.'
   provenance: real
 - surface: taru
   phonemes:
@@ -888,33 +1387,31 @@ entries:
   gloss: storm god
   semantic_field: hattic_theonym
   attestations:
-  - Taru
+  - Taru, oft Šaru
   region: central_anatolia
-  citation: 'Corpus record(s) 3 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n41. Kammenhuber 1969 p. 447: „Wettergott“ [secure; OCR quote: "Taru,
+    oft Saru ‚‚Wettergott’’"]'
   provenance: real
-- surface: tastenuwa
+- surface: tashapuna
   phonemes:
   - t
   - a
   - s
-  - t
-  - e
-  - n
-  - u
-  - w
+  - h
   - a
-  gloss: he should not come
-  semantic_field: hattic_lexeme
+  - p
+  - u
+  - n
+  - a
+  gloss: deity name
+  semantic_field: hattic_theonym
   attestations:
-  - taš-te-nuwa
+  - Tašḫapuna
   region: central_anatolia
-  citation: Corpus record(s) 56 (corpora/hattic/inscriptions/). 'Hattische Sprache',
-    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
-    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 435, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n450
+  notes: 'lexicon n61. Kammenhuber 1969 p. 435: (hatt. Gott; heth. Zašḫapuna) [secure;
+    OCR quote: "EZEN dashapuna für den hatt. Gott"]'
   provenance: real
 - surface: tawananna
   phonemes:
@@ -928,34 +1425,27 @@ entries:
   - n
   - a
   gloss: queen (title)
-  semantic_field: hattic_lexeme
+  semantic_field: hattic_title
   attestations:
-  - tawananna
+  - tau̯ananna
   region: central_anatolia
-  citation: 'Corpus record(s) 46 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
-    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
-    Brill.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 432, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n447
+  notes: 'lexicon n55. Kammenhuber 1969 p. 432: „Herrscherin“ [secure; OCR quote:
+    "für die regierende ,,Herr-"] Hattic appellative ''Herrscherin''.'
   provenance: real
-- surface: tawiniya
+- surface: teh
   phonemes:
   - t
-  - a
-  - w
-  - i
-  - n
-  - i
-  - y
-  - a
-  gloss: town
-  semantic_field: hattic_toponym
+  - e
+  - h
+  gloss: to build
+  semantic_field: hattic_verb
   attestations:
-  - Tawiniya
+  - teḫ
   region: central_anatolia
-  citation: 'Corpus record(s) 74 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+  notes: 'lexicon v24. Kammenhuber 1969 p. 529: „bauen“ [secure; OCR quote: "24) teh
+    „bauen’, trans."] § 26a no. 24.'
   provenance: real
 - surface: telipinu
   phonemes:
@@ -967,53 +1457,139 @@ entries:
   - i
   - n
   - u
-  gloss: vegetation / fertility god
+  gloss: deity name
   semantic_field: hattic_theonym
   attestations:
   - Telipinu
   region: central_anatolia
-  citation: 'Corpus record(s) 12 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 432, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n447
+  notes: 'lexicon n57. Kammenhuber 1969 p. 432: (= Göttername) [secure; OCR quote:
+    "(= Göttername)"] Royal name formed with Hattic material.'
   provenance: real
-- surface: tete
+- surface: tetekuzzan
   phonemes:
   - t
   - e
   - t
   - e
-  gloss: great
-  semantic_field: hattic_lexeme
+  - k
+  - u
+  - z
+  - z
+  - a
+  - n
+  gloss: hearth
+  semantic_field: hattic_noun
   attestations:
-  - tete
+  - tetekuzzan
   region: central_anatolia
-  citation: 'Corpus record(s) 43 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 479, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n494
+  notes: 'lexicon n84. Kammenhuber 1969 p. 479: = heth. GUNNI „Herd“ [secure; OCR
+    quote: "GUNNI „Herd von Eisen”"] ḫapalkii̯-an tetekuzzan = heth. AN.BAR-aš GUNNI.'
   provenance: real
-- surface: teteshapi
+- surface: tewashapi
   phonemes:
   - t
   - e
-  - t
-  - e
+  - w
+  - a
   - s
   - h
   - a
   - p
   - i
-  gloss: '''great goddess'''
+  gloss: deity name (compound with 'god')
   semantic_field: hattic_theonym
   attestations:
-  - Tetešḫapi
+  - teu̯aₐ-šḫapi
   region: central_anatolia
-  citation: 'Corpus record(s) 10 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n43. Kammenhuber 1969 p. 447: (Kompositum mit „Gott“) [secure; OCR
+    quote: "teuag-Shapt (Kompositum mit Gott""]'
   provenance: real
-- surface: tuhkanti
+- surface: tittah
+  phonemes:
+  - t
+  - i
+  - t
+  - t
+  - a
+  - h
+  gloss: great, exalted
+  semantic_field: hattic_adjective
+  attestations:
+  - tittaḫ
+  region: central_anatolia
+  citation: Schuster 1974, p. 126, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n143
+  notes: 'lexicon n92. Schuster 1974 p. 126: „gross“, „erhaben“ [secure; OCR quote:
+    "„erhaben” [1.1.7]"] mg-78856 row slot 32; page image checked.'
+  provenance: real
+- surface: tittahzilat
+  phonemes:
+  - t
+  - i
+  - t
+  - t
+  - a
+  - h
+  - z
+  - i
+  - l
+  - a
+  - t
+  gloss: throne
+  semantic_field: hattic_noun
+  attestations:
+  - tittaḫzilat
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n42. Kammenhuber 1969 p. 447: „Thron, Herrschersitz (o.ä.)“ [secure;
+    OCR quote: "tittahzilat „Thron, Herrscher-"]'
+  provenance: real
+- surface: tiuz
+  phonemes:
+  - t
+  - i
+  - u
+  - z
+  gloss: rock
+  semantic_field: hattic_noun
+  attestations:
+  - tiuz (Dupl. ziuz)
+  region: central_anatolia
+  citation: Schuster 1974, p. 93, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n110
+  notes: 'lexicon n91. Schuster 1974 p. 93: „Felsen“ (= NA₄peruna-) [secure; OCR quote:
+    "„Felsen” isolieren"] mg-78856 row slot 27; page image checked.'
+  provenance: real
+- surface: tu
+  phonemes:
+  - t
+  - u
+  gloss: to eat
+  semantic_field: hattic_verb
+  attestations:
+  - tu
+  region: central_anatolia
+  citation: Schuster 1974, p. 93, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n110
+  notes: 'lexicon v31. Schuster 1974 p. 93: „essen“ (Verbalstamm, = heth. ed-) [secure;
+    OCR quote: "analog tu ‚essen”"] mg-78856 row slot 75. Schuster''s stem; distinct
+    from Kammenhuber''s u̯aₐu.'
+  provenance: real
+- surface: tuh
+  phonemes:
+  - t
+  - u
+  - h
+  gloss: to take
+  semantic_field: hattic_verb
+  attestations:
+  - tuḫ
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+  notes: 'lexicon v25. Kammenhuber 1969 p. 529: „nehmen“ [secure; OCR quote: "25)
+    tuh nehmen", trans."] § 26a no. 25.'
+  provenance: real
+- surface: tuhkante
   phonemes:
   - t
   - u
@@ -1022,93 +1598,169 @@ entries:
   - a
   - n
   - t
-  - i
-  gloss: crown prince (title)
-  semantic_field: hattic_lexeme
-  attestations:
-  - tuḫkanti
-  region: central_anatolia
-  citation: 'Corpus record(s) 45 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
-    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
-    Brill.'
-  notes: confidence tier B
-  provenance: real
-- surface: tuhtasul
-  phonemes:
-  - t
-  - u
-  - h
-  - t
-  - a
-  - s
-  - u
-  - l
-  gloss: he let (it) go after him
-  semantic_field: hattic_lexeme
-  attestations:
-  - tu-ḫ-ta-šul
-  region: central_anatolia
-  citation: Corpus record(s) 58 (corpora/hattic/inscriptions/). 'Hattische Sprache',
-    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
-    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
-  notes: confidence tier A
-  provenance: real
-- surface: wasezzili
-  phonemes:
-  - w
-  - a
-  - s
   - e
-  - z
-  - z
+  gloss: high dignitary, always a king's son
+  semantic_field: hattic_title
+  attestations:
+  - u̯aₐ-tuḫkante-n
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 433, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n448
+  notes: 'lexicon n56. Kammenhuber 1969 p. 433: hatt. u̯aₐ-tuḫkante-n (Kollektiv);
+    heth. tuḫkanti-, „Bezeichnung eines der höchsten heth. Würdenträger, der immer
+    ein Königssohn ist“ [secure; OCR quote: "Hatt. in waq-tuhkante-n"] p. 432: tuḫkanti-
+    „hattischer Herkunft“.'
+  provenance: real
+- surface: tumil
+  phonemes:
+  - t
+  - u
+  - m
   - i
   - l
-  - i
-  gloss: god
-  semantic_field: hattic_theonym
+  gloss: rain
+  semantic_field: hattic_noun
   attestations:
-  - Wašezzili
+  - tumil
   region: central_anatolia
-  citation: 'Corpus record(s) 18 (corpora/hattic/inscriptions/). Klinger, J. (1996).
-    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
-    Harrassowitz.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n54. Kammenhuber 1969 p. 447: „Regen“ [secure; OCR quote: "Zumil
+    „Regen’"] Anm. 3; p. 466; mg-78856 row slot 13 (p. 444).'
   provenance: real
-- surface: washap
+- surface: tuntu
+  phonemes:
+  - t
+  - u
+  - n
+  - t
+  - u
+  gloss: verb of unknown meaning
+  semantic_field: hattic_verb
+  attestations:
+  - '*dundu'
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+  notes: 'lexicon v26. Kammenhuber 1969 p. 529: u.B. [unknown_meaning; OCR quote:
+    "26) *dundu, u.B., trans."] § 26a no. 26; starred: stem known only from prefixed
+    forms.'
+  provenance: real
+- surface: tuttushial
+  phonemes:
+  - t
+  - u
+  - t
+  - t
+  - u
+  - s
+  - h
+  - i
+  - a
+  - l
+  gloss: a court official
+  semantic_field: hattic_title
+  attestations:
+  - duddušḫii̯al
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n51. Kammenhuber 1969 p. 447: (heth. duddušḫii̯alla-, Hofangestellter)
+    [secure; OCR quote: "dudduShiial als duddushiialla-"] Anm. 3; p. 435.'
+  provenance: real
+- surface: ur
+  phonemes:
+  - u
+  - r
+  gloss: well, spring
+  semantic_field: hattic_noun
+  attestations:
+  - ur(a/i)
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 462, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n477
+  notes: 'lexicon n76. Kammenhuber 1969 p. 462: „Brunnen; Quelle(?)“ [doubtful; OCR
+    quote: "„Brunnen; Ouelle(?)”"]'
+  provenance: real
+- surface: ures
+  phonemes:
+  - u
+  - r
+  - e
+  - s
+  gloss: smith
+  semantic_field: hattic_noun
+  attestations:
+  - ureš
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 436, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n451
+  notes: 'lexicon n66. Kammenhuber 1969 p. 436: „Schmied“ [secure; OCR quote: "hatt.
+    ures huzzaSSar-Su"] = heth. LÚE.DÉ.A innarau̯andan „Schmied, hoheitsmächtiger“.'
+  provenance: real
+- surface: wae
   phonemes:
   - w
   - a
-  - s
-  - h
-  - a
-  - p
-  gloss: gods (collective wa- + šḫap)
-  semantic_field: hattic_lexeme
+  - e
+  gloss: tool(s)
+  semantic_field: hattic_noun
   attestations:
-  - wa-šḫap
+  - u̯aₐe (le-u̯aₐe)
+  - vae-
   region: central_anatolia
-  citation: 'Corpus record(s) 34 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 480, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n495;
+    Schuster 1974, p. 97, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n114
+  notes: 'lexicon n87. Kammenhuber 1969 p. 480: le-u̯aₐe „seine-Werkzeug(e), Gerät(e)“
+    [doubtful; OCR quote: "seine-Werkzeug(e), Gerät(e)’"] Footnote c; same form as
+    Schuster''s vae- „Haus“ (next row). | Schuster 1974 p. 97: „Haus“ (Wortstamm)
+    [secure; OCR quote: "den Wortstamm vae- „Haus”"] mg-78856 row slot 26. Schuster''s
+    reading of the same ua-e form.'
   provenance: real
-- surface: wazari
+- surface: wakku
+  phonemes:
+  - w
+  - a
+  - k
+  - k
+  - u
+  gloss: troop(s)
+  semantic_field: hattic_noun
+  attestations:
+  - p/u̯aₐkku
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n27. Kammenhuber 1969 p. 447: „Truppe(n)“ [secure; OCR quote: "‚Truppe(n)”"]
+    Listed under ''mit [f]''.'
+  provenance: real
+- surface: wau
+  phonemes:
+  - w
+  - a
+  - u
+  gloss: to eat
+  semantic_field: hattic_verb
+  attestations:
+  - pu/u̯aₐu [f(a)u]
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 528, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n543
+  notes: 'lexicon v18. Kammenhuber 1969 p. 528: „(fr)essen“ [secure; OCR quote: "trans.
+    = heth. ed-/ad-"] § 26a no. 18; the p/u̯ ([f]) alternation is keyed with u̯ (see
+    README).'
+  provenance: real
+- surface: wazizintu
   phonemes:
   - w
   - a
   - z
-  - a
-  - r
   - i
-  gloss: humankind (collective)
-  semantic_field: hattic_lexeme
+  - z
+  - i
+  - n
+  - t
+  - u
+  gloss: grandson
+  semantic_field: hattic_noun
   attestations:
-  - wa-zari
+  - p/u̯aₐzizintu
   region: central_anatolia
-  citation: 'Corpus record(s) 41 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n28. Kammenhuber 1969 p. 447: „Enkel“ [secure; OCR quote: "p/vagztzintu
+    Enkel”"] Listed under ''mit [f]''.'
   provenance: real
 - surface: wel
   phonemes:
@@ -1116,31 +1768,81 @@ entries:
   - e
   - l
   gloss: house
-  semantic_field: hattic_lexeme
+  semantic_field: hattic_noun
   attestations:
-  - wel
+  - p/u̯eₑl
   region: central_anatolia
-  citation: 'Corpus record(s) 37 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n29. Kammenhuber 1969 p. 447: „Haus“ [secure; OCR quote: "plyveel
+    Haus"] Listed under ''mit [f]''; p. 460 p/u̯eₑl [fel] „Haus“.'
   provenance: real
-- surface: wintu
+- surface: welwahisi
+  phonemes:
+  - w
+  - e
+  - l
+  - w
+  - a
+  - h
+  - i
+  - s
+  - i
+  gloss: deity name ('U̯aₐḫiši of the house')
+  semantic_field: hattic_theonym
+  attestations:
+  - P/U̯eₑl-u̯aₐḫiši
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n30. Kammenhuber 1969 p. 447: (GN) „Haus-U̯aₐḫiši“ [secure; OCR
+    quote: "P/Ued-washisi (GN)"]'
+  provenance: real
+- surface: witu
   phonemes:
   - w
   - i
-  - n
   - t
   - u
-  gloss: wine
-  semantic_field: hattic_lexeme
+  gloss: noun of unknown meaning
+  semantic_field: hattic_noun
   attestations:
-  - windu
+  - p/u̯idu [fidu]
   region: central_anatolia
-  citation: 'Corpus record(s) 38 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 466, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n481
+  notes: 'lexicon n82. Kammenhuber 1969 p. 466: u.B. [unknown_meaning; OCR quote:
+    "pjundu | fidu], u.B."]'
+  provenance: real
+- surface: wulasne
+  phonemes:
+  - w
+  - u
+  - l
+  - a
+  - s
+  - n
+  - e
+  gloss: bread
+  semantic_field: hattic_noun
+  attestations:
+  - p/u̯uᵤlašne [fulašne]
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n31. Kammenhuber 1969 p. 447: „Brot“ [secure; OCR quote: "‚Brot
+    ;"] p. 466 also: p/u̯uᵤlašne [fulašne] „Brot“.'
+  provenance: real
+- surface: wunan
+  phonemes:
+  - w
+  - u
+  - n
+  - a
+  - n
+  gloss: mortal
+  semantic_field: hattic_noun
+  attestations:
+  - p/u̯uᵤnan
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n32. Kammenhuber 1969 p. 447: „mortalis“ [secure; OCR quote: "‚„mortalis’"]'
   provenance: real
 - surface: wur
   phonemes:
@@ -1148,31 +1850,36 @@ entries:
   - u
   - r
   gloss: land
-  semantic_field: hattic_lexeme
+  semantic_field: hattic_noun
   attestations:
-  - wur
+  - u̯uᵤr
   region: central_anatolia
-  citation: 'Corpus record(s) 35 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n44. Kammenhuber 1969 p. 447: „Land“ [secure; OCR quote: "Uuyr Land""]'
   provenance: real
-- surface: wurun
+- surface: wurunkattainu
   phonemes:
   - w
   - u
   - r
   - u
   - n
-  gloss: of the land (genitive -un)
-  semantic_field: hattic_lexeme
+  - k
+  - a
+  - t
+  - t
+  - a
+  - i
+  - n
+  - u
+  gloss: deity name ('child of the king of the land')
+  semantic_field: hattic_theonym
   attestations:
-  - wur-un
+  - U̯uᵤrun-katta-inu
   region: central_anatolia
-  citation: 'Corpus record(s) 36 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n45. Kammenhuber 1969 p. 447: (GN) „Landeskönigkind“ [secure; OCR
+    quote: "Uuyrun-katta-inu (GN)"] Gloss from Anm. 1 on the same page.'
   provenance: real
 - surface: wurunkatte
   phonemes:
@@ -1186,15 +1893,14 @@ entries:
   - t
   - t
   - e
-  gloss: '''king of the land'', war god'
+  gloss: deity name ('king of the land')
   semantic_field: hattic_theonym
   attestations:
-  - Wurunkatte
+  - U̯uᵤrunkatte
   region: central_anatolia
-  citation: 'Corpus record(s) 5 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n49. Kammenhuber 1969 p. 447: „Landeskönig“ [secure; OCR quote:
+    "Uu,runkatte Landes-"] Anm. 1.'
   provenance: real
 - surface: wurunsemu
   phonemes:
@@ -1210,48 +1916,59 @@ entries:
   gloss: sun goddess of Arinna
   semantic_field: hattic_theonym
   attestations:
-  - Wurunšemu
+  - U̯uᵤrun-šemu
   region: central_anatolia
-  citation: 'Corpus record(s) 2 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n46. Kammenhuber 1969 p. 447: (GN) „Landes-šemu“ für die Sonnengöttin
+    von Arinna [secure; OCR quote: "(GN) „Landes-šemu” für die Sonnengöttin von Arinna"]'
   provenance: real
-- surface: zahpuna
+- surface: zaparwa
   phonemes:
   - z
   - a
-  - h
   - p
-  - u
-  - n
   - a
-  gloss: goddess
+  - r
+  - w
+  - a
+  gloss: deity name
   semantic_field: hattic_theonym
   attestations:
-  - Zaḫpuna
+  - Zaparu̯aₐ
   region: central_anatolia
-  citation: 'Corpus record(s) 20 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 433, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n448
+  notes: 'lexicon n60. Kammenhuber 1969 p. 433: (Palaic god, aller Wahrscheinlichkeit
+    nach aus dem Hatt.) [doubtful; OCR quote: "aller Wahrscheinlichkeit nach"]'
   provenance: real
-- surface: zalpa
+- surface: zar
   phonemes:
   - z
   - a
-  - l
-  - p
-  - a
-  gloss: town on the Black Sea coast
-  semantic_field: hattic_toponym
+  - r
+  gloss: sheep
+  semantic_field: hattic_noun
   attestations:
-  - Zalpa
+  - zar
   region: central_anatolia
-  citation: 'Corpus record(s) 75 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 462, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n477
+  notes: 'lexicon n78. Kammenhuber 1969 p. 462: „Schaf“ (zar-du ⇒ heth. UDU) [secure;
+    OCR quote: "heth. UDU ,,Schaf’’"]'
+  provenance: real
+- surface: zaras
+  phonemes:
+  - z
+  - a
+  - r
+  - a
+  - s
+  gloss: to call
+  semantic_field: hattic_verb
+  attestations:
+  - zaraš
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+  notes: 'lexicon v27. Kammenhuber 1969 p. 529: „rufen“ [secure; OCR quote: "27) zara$
+    „rufen”, trans."] § 26a no. 27.'
   provenance: real
 - surface: zari
   phonemes:
@@ -1259,36 +1976,91 @@ entries:
   - a
   - r
   - i
-  gloss: mortal, man
-  semantic_field: hattic_lexeme
+  gloss: man, human
+  semantic_field: hattic_noun
   attestations:
   - zari
   region: central_anatolia
-  citation: 'Corpus record(s) 40 (corpora/hattic/inscriptions/). Soysal, O. (2004).
-    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
-    Gloss rests on a Hattic-Hittite bilingual correspondence.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n47. Kammenhuber 1969 p. 447: „Mensch“ [secure; OCR quote: "zari
+    Mensch""]'
   provenance: real
-- surface: zashapuna
+- surface: zia
   phonemes:
   - z
+  - i
   - a
-  - s
-  - h
+  gloss: to lie
+  semantic_field: hattic_verb
+  attestations:
+  - '*zii̯a'
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+  notes: 'lexicon v29. Kammenhuber 1969 p. 529: „liegen“ [secure; OCR quote: "„liegen’,
+    intrans."] § 26a no. 29; starred: stem known only from prefixed forms.'
+  provenance: real
+- surface: ziapa
+  phonemes:
+  - z
+  - i
   - a
   - p
-  - u
-  - n
   - a
-  gloss: chief goddess of Kaštama
-  semantic_field: hattic_theonym
+  gloss: mountains
+  semantic_field: hattic_noun
   attestations:
-  - Zašḫapuna
+  - zii̯apa
   region: central_anatolia
-  citation: 'Corpus record(s) 21 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 466, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n481
+  notes: 'lexicon n79. Kammenhuber 1969 p. 466: „Gebirge“ [secure; OCR quote: "zızapa
+    ,,Gebirge”"] Page image checked at 250 dpi.'
+  provenance: real
+- surface: zihar
+  phonemes:
+  - z
+  - i
+  - h
+  - a
+  - r
+  gloss: wood
+  semantic_field: hattic_noun
+  attestations:
+  - zi-e-ḫar / zi-i-ḫar
+  region: central_anatolia
+  citation: Schuster 1974, p. 103, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n120
+  notes: 'lexicon n93. Schuster 1974 p. 103: „Holz“ [secure; OCR quote: "„Holz” Laroche
+    87"] mg-78856 row slot 80.'
+  provenance: real
+- surface: ziher
+  phonemes:
+  - z
+  - i
+  - h
+  - e
+  - r
+  gloss: to hide
+  semantic_field: hattic_verb
+  attestations:
+  - '*ziḫer'
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+  notes: 'lexicon v28. Kammenhuber 1969 p. 529: „sich verbergen (o.ä.)“ [doubtful;
+    OCR quote: "„sich verbergen (o.ä.)”, intrans."] § 26a no. 28; starred: stem known
+    only from prefixed forms.'
+  provenance: real
+- surface: zik
+  phonemes:
+  - z
+  - i
+  - k
+  gloss: to fall
+  semantic_field: hattic_verb
+  attestations:
+  - zik
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 530, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n545
+  notes: 'lexicon v30. Kammenhuber 1969 p. 530: „von oben auf etwas herab/hinab fallen“
+    [secure; OCR quote: "„von oben auf etwas herab/hinab fallen”"] § 26a no. 30.'
   provenance: real
 - surface: zilipuri
   phonemes:
@@ -1300,15 +2072,30 @@ entries:
   - u
   - r
   - i
-  gloss: god
+  gloss: deity name
   semantic_field: hattic_theonym
   attestations:
   - Zilipuri
   region: central_anatolia
-  citation: 'Corpus record(s) 17 (corpora/hattic/inscriptions/). Klinger, J. (1996).
-    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
-    Harrassowitz.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 435, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n450
+  notes: 'lexicon n62. Kammenhuber 1969 p. 435: (hatt. Gott) [secure; OCR quote: "Priester
+    des hatt. Gottes"]'
+  provenance: real
+- surface: zinar
+  phonemes:
+  - z
+  - i
+  - n
+  - a
+  - r
+  gloss: music (instrument)
+  semantic_field: hattic_noun
+  attestations:
+  - zinar
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 437, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n452
+  notes: 'lexicon n69. Kammenhuber 1969 p. 437: „Musik“ [secure; OCR quote: "hatt.
+    zinar ,,Musik’’"]'
   provenance: real
 - surface: zintuhi
   phonemes:
@@ -1319,15 +2106,15 @@ entries:
   - u
   - h
   - i
-  gloss: granddaughter of the sun goddess
-  semantic_field: hattic_theonym
+  gloss: granddaughter; maiden(?)
+  semantic_field: hattic_noun
   attestations:
-  - Zintuḫi
+  - zintuḫi
   region: central_anatolia
-  citation: 'Corpus record(s) 15 (corpora/hattic/inscriptions/). Taracha, P. (2009).
-    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
-    Wiesbaden: Harrassowitz.'
-  notes: confidence tier A
+  citation: Kammenhuber 1969, p. 460, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n475
+  notes: 'lexicon n71. Kammenhuber 1969 p. 460: „Enkelin“, genauer(?) „Jungfrau“ [doubtful;
+    OCR quote: "Hatt. zintuhi (oder *zintuh)"] Kammenhuber: not attested in Hattic
+    texts, recovered from Hittite loans.'
   provenance: real
 - surface: zippalanta
   phonemes:
@@ -1341,13 +2128,25 @@ entries:
   - n
   - t
   - a
-  gloss: cult city
+  gloss: place name (Ziplanda)
   semantic_field: hattic_toponym
   attestations:
-  - Zippalanda
+  - URUZi-ip-pa-la-an-ta
   region: central_anatolia
-  citation: 'Corpus record(s) 72 (corpora/hattic/inscriptions/). del Monte, G. F.
-    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
-    6. Wiesbaden: Reichert.'
-  notes: confidence tier B
+  citation: Kammenhuber 1969, p. 461, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n476
+  notes: 'lexicon n74. Kammenhuber 1969 p. 461: hatt. Ziplanda [secure; OCR quote:
+    "(hatt. URUZ1-1p-pa-la-an-ta"]'
+  provenance: real
+- surface: zuh
+  phonemes:
+  - z
+  - u
+  - h
+  gloss: garment
+  semantic_field: hattic_noun
+  attestations:
+  - zuḫ
+  region: central_anatolia
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+  notes: 'lexicon n48. Kammenhuber 1969 p. 447: „Kleid“ [secure; OCR quote: "zuk ,,Kleid’’"]'
   provenance: real

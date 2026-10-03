@@ -1,0 +1,320 @@
+{
+  "cth": "727",
+  "id": 212,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 8a",
+      "raw": "[ka-a-ap [ka-ia-aḫ-du-an [ka-a-aš-ku [du-uk-zi-ik",
+      "words": []
+    },
+    {
+      "intact": [
+        "zi-ši-im",
+        "a-aḫ-ku-un-nu-wa",
+        "ta-a-ru"
+      ],
+      "line": "Vs. lk. Kol. 9a",
+      "raw": "[[UR]Ula-aḫ-za-an zi-ši-im a-aḫ-ku-un-nu-wa ta-a-ru",
+      "words": [
+        "zisim",
+        "ahkunnuwa",
+        "taru"
+      ]
+    },
+    {
+      "intact": [
+        "tu-uḫ-ta-šu-ul",
+        "tu-u-mi-in",
+        "tu-uḫ-ta-šu-ul",
+        "wi-pí-zi-il"
+      ],
+      "line": "Vs. lk. Kol. 10a",
+      "raw": "tu-uḫ-ta-šu-ul tu-u-mi-in tu-uḫ-ta-šu-ul wi-pí-zi-il",
+      "words": [
+        "tuhtasul",
+        "tumin",
+        "tuhtasul",
+        "wipizil"
+      ]
+    },
+    {
+      "intact": [
+        "tú-u-wa",
+        "ta-a-ú-wa-tu-ú-pí",
+        "ta-aḫ-ku-wa-at",
+        "wa-nu-u-up-pa"
+      ],
+      "line": "Vs. lk. Kol. 11a",
+      "raw": "tú-u-wa ta-a-ú-wa-tu-ú-pí ta-aḫ-ku-wa-at wa-nu-u-up-pa",
+      "words": [
+        "tuwa",
+        "tauwatupi",
+        "tahkuwat",
+        "wanuppa"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-pa-an-ta-li",
+        "še-et-tu-ug-ga-aš",
+        "an-tu-uḫ-du-un-du"
+      ],
+      "line": "Vs. lk. Kol. 12a",
+      "raw": "Dḫa-pa-an-ta-li še-et-tu-ug-ga-aš an-tu-uḫ-du-un-du",
+      "words": [
+        "hapantali",
+        "settukkas",
+        "antuhtuntu"
+      ]
+    },
+    {
+      "intact": [
+        "te-tu-uk-ka",
+        "pí-i-iḫ-an",
+        "an-taḫ-ḫu-ku-ru",
+        "ka-taḫ-zi-wu-ri"
+      ],
+      "line": "Vs. lk. Kol. 13a",
+      "raw": "te-tu-uk-ka pí-i-iḫ-an an-taḫ-ḫu-ku-ru ka-taḫ-zi-wu-ri",
+      "words": [
+        "tetukka",
+        "pihan",
+        "antahhukuru",
+        "katahziwuri"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ia-aḫ-šu",
+        "pa-la",
+        "i-ta-a",
+        "ú-uk-ḫu-u-ba",
+        "i-ta-a"
+      ],
+      "line": "Vs. lk. Kol. 14a",
+      "raw": "zi-ia-aḫ-šu pa-la i-ta-a ú-uk-ḫu-u-ba i-ta-a",
+      "words": [
+        "ziahsu",
+        "pala",
+        "ita",
+        "ukhupa",
+        "ita"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-ap-ḫu",
+        "zi-ia-aḫ-du",
+        "ka-a-aš-ma"
+      ],
+      "line": "Vs. lk. Kol. 15a",
+      "raw": "ka-a-ap-ḫu zi-ia-aḫ-du Dka-a-aš-ma tu-uk-z[i-i]k",
+      "words": [
+        "kaphu",
+        "ziahtu",
+        "kasma"
+      ]
+    },
+    {
+      "intact": [
+        "a-du-uḫ-a-an",
+        "zi-ši-im",
+        "a-al-ku-un-nu-wa"
+      ],
+      "line": "Vs. lk. Kol. 16a",
+      "raw": "a-du-uḫ-a-an zi-ši-im a-al-ku-un-nu-wa ta-[a-ru]",
+      "words": [
+        "atuhan",
+        "zisim",
+        "alkunnuwa"
+      ]
+    },
+    {
+      "intact": [
+        "tu-u-mi-il"
+      ],
+      "line": "Vs. lk. Kol. 17a",
+      "raw": "[t]u-uḫ-ta-šu-ul tu-u-mi-il tu-uḫ-za-šu-u[l [ -zi-il",
+      "words": [
+        "tumil"
+      ]
+    },
+    {
+      "intact": [
+        "tú-ú-pí",
+        "ta-ú-wa"
+      ],
+      "line": "Vs. lk. Kol. 18a",
+      "raw": "tú-ú-pí ta-ú-wa še-eḫ-ku-wa-a[t]",
+      "words": [
+        "tupi",
+        "tauwa"
+      ]
+    },
+    {
+      "intact": [
+        "pí-in-nu-wa-at",
+        "ḫa-pa-an-ta-li",
+        "še-et-tu-uk-ka-aš"
+      ],
+      "line": "Vs. lk. Kol. 19a",
+      "raw": "pí-in-nu-wa-at ḫa-pa-an-ta-li še-et-tu-uk-ka₄-aš",
+      "words": [
+        "pinnuwat",
+        "hapantali",
+        "settukkas"
+      ]
+    },
+    {
+      "intact": [
+        "te-du-ug-ga",
+        "pí-i-u-wa",
+        "pa-li-in-na-ḫi"
+      ],
+      "line": "Vs. lk. Kol. 20a",
+      "raw": "[a]n-du-uḫ-du-un-du te-du-ug-ga pí-i-u-wa pa-li-in-na-ḫi",
+      "words": [
+        "tetukka",
+        "piuwa",
+        "palinnahi"
+      ]
+    },
+    {
+      "intact": [
+        "pí-in-na-a",
+        "at-ḫa-ti-li-tu"
+      ],
+      "line": "Vs. lk. Kol. 21a",
+      "raw": "pí-in-na-a at-ḫa-ti-li-tu ḫa-ak-kán-ti-uz-t[u",
+      "words": [
+        "pinna",
+        "athatilitu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 22a",
+      "raw": "[ḫa-a-ša-aḫ [eš-ki-ri-ip [ḫa-a-i-šu-mi-na [ḫa-az-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 23a",
+      "raw": "[eš-ki-li-iz-zi-i [ḫi-na-še-ez-ze-el [te-ši-i-[ [ [te-ep-t]a-nu-wa",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-eḫ-zi-ik-zi-wa",
+        "iz-zi-i"
+      ],
+      "line": "Vs. lk. Kol. 24a",
+      "raw": "te-eḫ-zi-ik-zi-wa iz-zi-i te-ep-ta-ak-[nu-wa [ -ia",
+      "words": [
+        "tehzikziwa",
+        "izzi"
+      ]
+    },
+    {
+      "intact": [
+        "te-ri-ga-li-ga-iš"
+      ],
+      "line": "Vs. lk. Kol. 25a",
+      "raw": "te-ri-ga-li-ga-iš te-ep-ta-ak-n[u]-wa [",
+      "words": [
+        "terikalikais"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 26a",
+      "raw": "[ka-a-i-ia-aḫ [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 27a",
+      "raw": "[ka-ḫa-ia-an [i-ia-aḫ-tu-ul [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 28a",
+      "raw": "[iš-tar-ra-zi-il [p[u-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 29a",
+      "raw": "[pu-ud-du [an-ti-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 30a",
+      "raw": "[ú-uk-ka₄-še [in-ta-a [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 31a",
+      "raw": "[ḫa-li-ta-ḫa-a-an [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 32a",
+      "raw": "[li-ku-ú-ut [zi-i[p-",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.4",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "zisim",
+    "ahkunnuwa",
+    "taru",
+    "tuhtasul",
+    "tumin",
+    "tuhtasul",
+    "wipizil",
+    "tuwa",
+    "tauwatupi",
+    "tahkuwat",
+    "wanuppa",
+    "hapantali",
+    "settukkas",
+    "antuhtuntu",
+    "tetukka",
+    "pihan",
+    "antahhukuru",
+    "katahziwuri",
+    "ziahsu",
+    "pala",
+    "ita",
+    "ukhupa",
+    "ita",
+    "kaphu",
+    "ziahtu",
+    "kasma",
+    "atuhan",
+    "zisim",
+    "alkunnuwa",
+    "tumil",
+    "tupi",
+    "tauwa",
+    "pinnuwat",
+    "hapantali",
+    "settukkas",
+    "tetukka",
+    "piuwa",
+    "palinnahi",
+    "pinna",
+    "athatilitu",
+    "tehzikziwa",
+    "izzi",
+    "terikalikais"
+  ]
+}

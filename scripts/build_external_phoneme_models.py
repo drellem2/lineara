@@ -63,10 +63,11 @@ _MYCENAEAN_GREEK_ALPHA = 0.1
 # unobserved bigrams bounded away from -inf. The brief explicitly asked
 # for α=1.0 (matches the Etruscan setting).
 _ETEOCRETAN_ALPHA = 1.0
-# mg-7e7d6. Hattic LM (specificity probe) is built from the hand-keyed
-# lexical-attestation corpus (~72 normalised word forms; no connected
-# running text). Smallest external corpus in the repo; α=1.0 matches
-# the Eteocretan / Etruscan small-corpus setting.
+# mg-7e7d6. Hattic LM (specificity probe), α=1.0 to match the
+# Eteocretan / Etruscan small-corpus setting. mg-7f4db rebuilt the
+# corpus from TLHdig running text (~1,900 normalised word types) in
+# place of v32's 72 hand-keyed forms; α is left at 1.0 so that the
+# data, not the smoothing, is what changed.
 _HATTIC_ALPHA = 1.0
 
 
@@ -200,10 +201,10 @@ def build_eteocretan(words_path: Path) -> tuple[str, dict]:
 
 
 def build_hattic(words_path: Path) -> tuple[str, dict]:
-    """Build the Hattic char-bigram model from the hand-keyed lexical
-    corpus (``corpora/hattic/words.txt``). One normalised word per line
-    (š→s, ḫ→h, b/d/g→p/t/k, plene collapsed), produced by
-    ``scripts/build_hattic_corpus.py``."""
+    """Build the Hattic char-bigram model from the TLHdig running-text
+    corpus (``corpora/hattic/words.txt``, mg-7f4db). One normalised word
+    type per line (š→s, ḫ→h, b/d/g→p/t/k, plene collapsed), produced by
+    ``scripts/build_hattic_corpus.py``. The pool is not part of it."""
     words = [
         line.strip()
         for line in words_path.read_text(encoding="utf-8").splitlines()
@@ -216,24 +217,24 @@ def build_hattic(words_path: Path) -> tuple[str, dict]:
         alpha=_HATTIC_ALPHA,
         meta_extra={
             "source": (
-                "corpora/hattic/words.txt (Soysal 2004, Klinger 1996, "
-                "Kammenhuber 1969, Taracha 2009, RGTC 6, Bischoff 2023; "
-                "manual lexical transcription via "
-                "scripts/build_hattic_corpus.py)."
+                "corpora/hattic/words.txt: intact Hattic words of the "
+                "TLHdig transliterations (Thesaurus Linguarum Hethaeorum "
+                "digitalis Beta 0.2, doi:10.5281/zenodo.15459134), via "
+                "scripts/extract_tlhdig_hattic.py and "
+                "scripts/build_hattic_corpus.py (mg-7f4db)."
             ),
             "license": (
-                "Cited fair-use of secondary sources for the lexical "
-                "forms; underlying Hittite-archive tablets PD (Bronze "
-                "Age). The committed model JSON is a statistical "
-                "derivative."
+                "TLHdig data CC BY 4.0 (Hethitologie-Portal Mainz); "
+                "underlying Hittite-archive tablets PD (Bronze Age). The "
+                "committed model JSON is a statistical derivative."
             ),
             "n_words": len(words),
             "n_chars": sum(len(w) for w in words),
             "alpha_rationale": (
-                "1.0 — very small lexical corpus (~72 word forms, no "
-                "running text); matches the Eteocretan / Etruscan "
-                "small-corpus setting. Specificity-probe LM, not a "
-                "claim about Hattic phonology."
+                "1.0 — small corpus (~1,900 word types of Hattic running "
+                "text); kept at the v32 value and matching the "
+                "Eteocretan / Etruscan small-corpus setting. "
+                "Specificity-probe LM, not a claim about Hattic phonology."
             ),
         },
     )

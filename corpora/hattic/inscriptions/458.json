@@ -1,0 +1,93 @@
+{
+  "cth": "744",
+  "id": 458,
+  "lines": [
+    {
+      "intact": [
+        "ša-a-i-ú",
+        "li-ig-ga-ra",
+        "wa-ar-pa-an-na"
+      ],
+      "line": "2′",
+      "raw": "š]a-a-i-ú li-ig-ga-ra wa-ar-pa-an-na [ [",
+      "words": [
+        "saiu",
+        "likkara",
+        "warpanna"
+      ]
+    },
+    {
+      "intact": [
+        "la-a-šu"
+      ],
+      "line": "3′",
+      "raw": "-a]z-zi-im la-a-šu [ [",
+      "words": [
+        "lasu"
+      ]
+    },
+    {
+      "intact": [
+        "da-ba-aš-ḫa"
+      ],
+      "line": "4′",
+      "raw": "]-x URUGIDRU-an da-ba-aš-ḫa [ [",
+      "words": [
+        "tapasha"
+      ]
+    },
+    {
+      "intact": [
+        "pí-it-ḫu-ni",
+        "ta-pa-a-ša-an"
+      ],
+      "line": "5′",
+      "raw": "U]RUpí-it-ḫu-ni ta-pa-a-ša-an x[",
+      "words": [
+        "pithuni",
+        "tapasan"
+      ]
+    },
+    {
+      "intact": [
+        "a-ša-mi-iš"
+      ],
+      "line": "6′",
+      "raw": "]x-x-pí a-ša-mi-iš",
+      "words": [
+        "asamis"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "]x x-aš-ša",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "] 〈〈x〉〉",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "]x[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 60.114",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "saiu",
+    "likkara",
+    "warpanna",
+    "lasu",
+    "tapasha",
+    "pithuni",
+    "tapasan",
+    "asamis"
+  ]
+}

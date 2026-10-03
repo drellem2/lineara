@@ -1,0 +1,606 @@
+{
+  "cth": "734",
+  "id": 251,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 1′",
+      "raw": "]x-in-nu a-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 2′",
+      "raw": "[ [-n]i-u ka-a-ri-ip-na(-)[",
+      "words": []
+    },
+    {
+      "intact": [
+        "eš-ša-a-am-ma"
+      ],
+      "line": " {€1} Vs. I 3′",
+      "raw": "[ eš-ša-a-am-ma zi-ta-aš-ti-i-ku-x[ [",
+      "words": [
+        "essamma"
+      ]
+    },
+    {
+      "intact": [
+        "ti-i-it"
+      ],
+      "line": " {€1} Vs. I 4′",
+      "raw": "-i]t-ḫa-ni-i-u ti-i-it wa-ša-a-aš-pu-[",
+      "words": [
+        "tit"
+      ]
+    },
+    {
+      "intact": [
+        "ti-i-it",
+        "za-aš-ni-wa-šu-u",
+        "ti-i-it"
+      ],
+      "line": " {€1} Vs. I 5′",
+      "raw": "]x ti-i-it za-aš-ni-wa-šu-u ti-i-it te-ep-[",
+      "words": [
+        "tit",
+        "zasniwasu",
+        "tit"
+      ]
+    },
+    {
+      "intact": [
+        "ti-i-it",
+        "še-e-e-et-te",
+        "ti-i-it",
+        "še-e-et-wi"
+      ],
+      "line": " {€1} Vs. I 6′",
+      "raw": "t]i-i-it še-e-e-et-te ti-i-it še-e-et-wi",
+      "words": [
+        "tit",
+        "sette",
+        "tit",
+        "setwi"
+      ]
+    },
+    {
+      "intact": [
+        "ti-i-it"
+      ],
+      "line": " {€1} Vs. I 7′",
+      "raw": "] ti-i-it",
+      "words": [
+        "tit"
+      ]
+    },
+    {
+      "intact": [
+        "wa-a-at-ta-at"
+      ],
+      "line": " {€1} Vs. I 8′",
+      "raw": "]x-nu wa-a-at-ta-at",
+      "words": [
+        "wattat"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-pa-šu-un-na-a",
+        "an-za-nu-ú-u"
+      ],
+      "line": " {€1} Vs. I 9′",
+      "raw": "-i]n-kat-ti le-e-pa-šu-un-na-a an-za-nu-ú-u",
+      "words": [
+        "lepasunna",
+        "anzanu"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-ḫa-pal-ki-an"
+      ],
+      "line": " {€1} Vs. I 10′",
+      "raw": "]x-e-ša-ši-i-ip le-e-ḫa-pal-ki-an",
+      "words": [
+        "lehapalkian"
+      ]
+    },
+    {
+      "intact": [
+        "zu-u-ḫa-wu-un",
+        "le-eš-tu-ú-up"
+      ],
+      "line": " {€1} Vs. I 11′",
+      "raw": "]-i-ma-ri-in zu-u-ḫa-wu-un le-eš-tu-ú-up",
+      "words": [
+        "zuhawun",
+        "lestup"
+      ]
+    },
+    {
+      "intact": [
+        "pár-ni-in-ki-iš",
+        "an-ka-ti-i-u-ma"
+      ],
+      "line": " {€1} Vs. I 12′",
+      "raw": "]x-i-ma-ri-in pár-ni-in-ki-iš an-ka-ti-i-u-ma",
+      "words": [
+        "parninkis",
+        "ankatiuma"
+      ]
+    },
+    {
+      "intact": [
+        "za-le-e-šu-u-mi-in",
+        "za-le-e-ni-ma-aḫ"
+      ],
+      "line": " {€1} Vs. I 13′",
+      "raw": "]-di-iš za-le-e-šu-u-mi-in KI.MIN za-le-e-ni-ma-aḫ",
+      "words": [
+        "zalesumin",
+        "zalenimah"
+      ]
+    },
+    {
+      "intact": [
+        "zi-le-e-ek-pí-in",
+        "zi-le-e-ḫa-pár-ši-wu-ú-un"
+      ],
+      "line": " {€1} Vs. I 14′",
+      "raw": "-ḫ]u-u-ri-a KI.MIN zi-le-e-ek-pí-in zi-le-e-ḫa-pár-ši-wu-ú-un",
+      "words": [
+        "zilekpin",
+        "zilehaparsiwun"
+      ]
+    },
+    {
+      "intact": [
+        "ta-li-iš-tu-pé-ez-šu-un"
+      ],
+      "line": " {€1} Vs. I 15′",
+      "raw": "]x-e-ek-ku-up ta-li-iš-tu-pé-ez-šu-un",
+      "words": [
+        "talistupezsun"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-le-e-ú-ru-wi-iš"
+      ],
+      "line": " {€1} Vs. I 16′",
+      "raw": "]-e-nu-uḫ ḫa-le-e-ú-ru-wi-iš",
+      "words": [
+        "haleuruwis"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-a-aš-ta-ú",
+        "la-aḫ-za-am-pí"
+      ],
+      "line": " {€1} Vs. I 17′",
+      "raw": "-i]n-na-a x[ [ x-aḫ-za-nu-ú ḫa-a-aš-ta-ú URUla-aḫ-za-am-pí",
+      "words": [
+        "hastau",
+        "lahzampi"
+      ]
+    },
+    {
+      "intact": [
+        "ták-še-el",
+        "ḫa-an-ti-i-u",
+        "le-e-wa-a-ak-ka-iš"
+      ],
+      "line": " {€1} Vs. I 18′",
+      "raw": "] ták-še-el ḫa-an-ti-i-u le-e-wa-a-ak-ka-iš",
+      "words": [
+        "taksel",
+        "hantiu",
+        "lewakkais"
+      ]
+    },
+    {
+      "intact": [
+        "uš-ti-e-ep-še",
+        "uš-ti-la-aš-ša-a-ak-ka-iš"
+      ],
+      "line": " {€1} Vs. I 19′",
+      "raw": "]x-ḫa-aš-ša-aḫ uš-ti-e-ep-še uš-ti-la-aš-ša-a-ak-ka-iš",
+      "words": [
+        "ustiepse",
+        "ustilassakkais"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-le-e-et-ḫu-ri",
+        "ḫa-i-wa-e-wa"
+      ],
+      "line": " {€1} Vs. I 20′",
+      "raw": "-a]ḫ-ḫa-nu-ú-wa ḫa-le-e-et-ḫu-ri ḫa-i-wa-e-wa",
+      "words": [
+        "halethuri",
+        "haiwaewa"
+      ]
+    },
+    {
+      "intact": [
+        "aḫ-pa-a-li-ša",
+        "ḫa-tu-uḫ-zi-in-zi-il-me-et"
+      ],
+      "line": " {€1} Vs. I 21′",
+      "raw": "ḫ[a- [ x-et aḫ-pa-a-li-ša ḫa-tu-uḫ-zi-in-zi-il-me-et",
+      "words": [
+        "ahpalisa",
+        "hatuhzinzilmet"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 22′",
+      "raw": "ḫa-ma-[ [ x-ku-wa pa-la-ta-pu-ú-li-i-x(-)ta-ku-li-ip-ta-a-il",
+      "words": []
+    },
+    {
+      "intact": [
+        "ti-te-wu-iš-ne-e-il"
+      ],
+      "line": " {€1} Vs. I 23′",
+      "raw": "x-at-ta-x-ú-le-e ti-te-wu-iš-ne-e-il",
+      "words": [
+        "titewuisneil"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ru-u-un",
+        "le-e-zu-uḫ",
+        "na-aš-pu-ú-li",
+        "iš-te-e-ru"
+      ],
+      "line": " {€1} Vs. I 24′",
+      "raw": "Dta-a-ru-u-un le-e-zu-uḫ na-aš-pu-ú-li iš-te-e-ru",
+      "words": [
+        "tarun",
+        "lezuh",
+        "naspuli",
+        "isteru"
+      ]
+    },
+    {
+      "intact": [
+        "la-a-aḫ-za-an",
+        "zi-iš-ta-ú",
+        "an-za-aš-ma-uš-le-e-u"
+      ],
+      "line": " {€1} Vs. I 25′",
+      "raw": "URUla-a-aḫ-za-an zi-iš-ta-ú an-za-aš-ma-uš-le-e-u",
+      "words": [
+        "lahzan",
+        "zistau",
+        "anzasmausleu"
+      ]
+    },
+    {
+      "intact": [
+        "an-ša-a-ru-u-un-ḫu",
+        "le-e-zu-u-uḫ"
+      ],
+      "line": " {€1} Vs. I 28′",
+      "raw": "an-ša-a-ru-u-un-ḫu le-e-zu-u-uḫ iš-x[ [ x-x-x-x-x-x",
+      "words": [
+        "ansarunhu",
+        "lezuh"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 30′",
+      "raw": "[pa-la [an-zi-ma-ar-li-u [DINGIRMEŠ [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 31′",
+      "raw": "[pa-la [a-le-e-ep [te-e-ti-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 32′",
+      "raw": "[iš-te-ep-ka-ta-aš-ka-ti-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 34′",
+      "raw": "[in-ta-a-ma [ta-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 35′",
+      "raw": "[pa-še-et-ta-a-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 36′",
+      "raw": "[za-aš-šu-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 1′",
+      "raw": "[x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 2′",
+      "raw": "[eš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 3′",
+      "raw": "[ú-t[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 4′",
+      "raw": "[ḫa-l[i-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 5′",
+      "raw": "[Da-l[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 6′",
+      "raw": "[Dka-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 7′/Rs. 1′",
+      "raw": "[Dzi-[ [ [(-)n]a-a-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 8′/Rs. 2′",
+      "raw": "[te-wu-x[ [ x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 9′/Rs. 3′",
+      "raw": "aḫ-ḫi-i-ku-x[ [ (-)ḫa-aš-ta-ḫi-mu-ú-un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 10′/Rs. 4′",
+      "raw": "ma-ḫa-a-aš-x[ [ [ (-)te-eḫ-zi-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 11′/Rs. 5′",
+      "raw": "ḫé-e-er(-)[ [ x-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 12′/Rs. 6′",
+      "raw": "aḫ-ta-a-t[e- [ [ -in-ke-e-ḫu-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 13′/Rs. 7′",
+      "raw": "ták-še-el(-)[ [ [ x-al-tu-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 14′/Rs. 8′",
+      "raw": "iš-wa-a-[ [ [ x-nu-u-ma DINGIRMEŠ-ap",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 15′/Rs. 9′",
+      "raw": "iš-ši-x[ [ [ -we-šu-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 16′/Rs. 10′",
+      "raw": "ú-we-e[l- [ x-iš-te-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. II 17′/Rs. 11′",
+      "raw": "[i-ik-ki-[ [ x-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 18′",
+      "raw": "[te-er-w[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 19′",
+      "raw": "[ta-li-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 20′",
+      "raw": "[le-e-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 21′",
+      "raw": "[an-ta-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 9′",
+      "raw": "[a-ša-a [ú-ri-e-e[t",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 10′",
+      "raw": "[ḫé-e-er-maḫ [li-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 11′",
+      "raw": "[a-na-ma [u-pí-i-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 12′",
+      "raw": "[ta-ba-ar-na-aš [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 13′",
+      "raw": "[za-ri-ú-un [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 14′",
+      "raw": "[ta-aš-te-e-i[a(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 15′",
+      "raw": "[še-et-ták-ka-a(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 16′",
+      "raw": "[ḫa-wa-ne-eš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 17′",
+      "raw": "[Dša-a-ru-u(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 18′",
+      "raw": "[a-na-a [wa-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 19′",
+      "raw": "[te-tu-uk-k[u-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 20′",
+      "raw": "[te-pí-in-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 1′",
+      "raw": "[x-še-e-wa(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 2′",
+      "raw": "[uš-še-e-eš [kat-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 3′",
+      "raw": "[ú-up-we-pé-e [šu-ú-ma-en [ka-wu-up-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 4′",
+      "raw": "[li-še-e-un [ḫa-ap-zu-u[n]",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 21.82+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "essamma",
+    "tit",
+    "tit",
+    "zasniwasu",
+    "tit",
+    "tit",
+    "sette",
+    "tit",
+    "setwi",
+    "tit",
+    "wattat",
+    "lepasunna",
+    "anzanu",
+    "lehapalkian",
+    "zuhawun",
+    "lestup",
+    "parninkis",
+    "ankatiuma",
+    "zalesumin",
+    "zalenimah",
+    "zilekpin",
+    "zilehaparsiwun",
+    "talistupezsun",
+    "haleuruwis",
+    "hastau",
+    "lahzampi",
+    "taksel",
+    "hantiu",
+    "lewakkais",
+    "ustiepse",
+    "ustilassakkais",
+    "halethuri",
+    "haiwaewa",
+    "ahpalisa",
+    "hatuhzinzilmet",
+    "titewuisneil",
+    "tarun",
+    "lezuh",
+    "naspuli",
+    "isteru",
+    "lahzan",
+    "zistau",
+    "anzasmausleu",
+    "ansarunhu",
+    "lezuh"
+  ]
+}

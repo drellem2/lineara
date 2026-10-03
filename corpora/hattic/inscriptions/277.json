@@ -1,0 +1,428 @@
+{
+  "cth": "735",
+  "id": 277,
+  "lines": [
+    {
+      "intact": [
+        "ta-a-ḫa-ša-i-li-ma"
+      ],
+      "line": "Vs.(?) r. Kol. 1",
+      "raw": "ta-a-ḫa-ša-i-li-ma x[",
+      "words": [
+        "tahasailima"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 2",
+      "raw": "[wa-aḫ-zi-iš-ma [ma-[x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 3",
+      "raw": "[ta-a-ga-az-zu-i-ma [i[š-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 4",
+      "raw": "[pa-la-a-ap [mu-ú-[x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 5",
+      "raw": "[ka-at-te [ta-a-li-pí-i-[nu]",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-iš-du-uš",
+        "pa-a-ma",
+        "eš-ti-ip",
+        "ḫa-ša-a-aḫ"
+      ],
+      "line": "Vs.(?) r. Kol. 6",
+      "raw": "li-iš-du-uš pa-a-ma eš-ti-ip ḫa-ša-a-aḫ",
+      "words": [
+        "listus",
+        "pama",
+        "estip",
+        "hasah"
+      ]
+    },
+    {
+      "intact": [
+        "ka-at-te-e",
+        "ta-a-li-pí-i-nu"
+      ],
+      "line": "Vs.(?) r. Kol. 7",
+      "raw": "ka-at-te-e ta-a-li-pí-i-nu",
+      "words": [
+        "katte",
+        "talipinu"
+      ]
+    },
+    {
+      "intact": [
+        "ti-li-iš-ti-ip"
+      ],
+      "line": "Vs.(?) r. Kol. 8",
+      "raw": "ti-li-iš-ti-ip ḫa-a-i-ma-a[k-ku]-ú",
+      "words": [
+        "tilistip"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a",
+        "ḫa-a-aš-ku-ú-mi-a-aš"
+      ],
+      "line": "Vs.(?) r. Kol. 9",
+      "raw": "ma-a ḫa-a-aš-ku-ú-mi-a-aš ka-a[t-te]",
+      "words": [
+        "ma",
+        "haskumias"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-a-ši-i-mi-li-i-ú-un"
+      ],
+      "line": "Vs.(?) r. Kol. 10",
+      "raw": "ḫa-a-ši-i-mi-li-i-ú-un [ [",
+      "words": [
+        "hasimiliun"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-a-aš-ku-um-mi-ia-aš"
+      ],
+      "line": "Vs.(?) r. Kol. 11",
+      "raw": "ḫa-a-aš-ku-um-mi-ia-aš ka-a[t-te [",
+      "words": [
+        "haskummias"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-az-za-ar-zu-ma"
+      ],
+      "line": "Vs.(?) r. Kol. 12",
+      "raw": "ḫa-az-za-ar-zu-ma ga-[x [",
+      "words": [
+        "hazzarzuma"
+      ]
+    },
+    {
+      "intact": [
+        "a-aš-wu-u-ur",
+        "pa-a-ma",
+        "a-aš-ḫa-i-u"
+      ],
+      "line": "Vs.(?) r. Kol. 13",
+      "raw": "a-aš-wu-u-ur pa-a-ma a-aš-ḫa-i-u [ [",
+      "words": [
+        "aswur",
+        "pama",
+        "ashaiu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-li-i-pí-in"
+      ],
+      "line": "Vs.(?) r. Kol. 14",
+      "raw": "ta-a-li-i-pí-in a-an-ga-nu-ša-at-x[ [",
+      "words": [
+        "talipin"
+      ]
+    },
+    {
+      "intact": [
+        "zu-u-li",
+        "li-mu-na-mu-na"
+      ],
+      "line": "Vs.(?) r. Kol. 15",
+      "raw": "zu-u-li li-mu-na-mu-na [ [",
+      "words": [
+        "zuli",
+        "limunamuna"
+      ]
+    },
+    {
+      "intact": [
+        "za-a-ḫe-el",
+        "ḫa-an-ni-iš-šu-ú-i"
+      ],
+      "line": "Vs.(?) r. Kol. 16",
+      "raw": "[ [te-d]u-ú-up za-a-ḫe-el ḫa-an-ni-iš-šu-ú-i",
+      "words": [
+        "zahel",
+        "hannissui"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-le-e-wu-u-ši"
+      ],
+      "line": "Vs.(?) r. Kol. 17",
+      "raw": "[ [ x x[ [ ḫa-le-e-wu-u-ši",
+      "words": [
+        "halewusi"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ḫar-wa"
+      ],
+      "line": "Vs.(?) r. Kol. 18",
+      "raw": "[ [ x 〈〈x〉〉 ta-a-ḫar-wa",
+      "words": [
+        "taharwa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 19",
+      "raw": "[ [ [-k]u-wa-i-ú-i-eš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) r. Kol. 20",
+      "raw": "[ [ -ta-nu [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 1′",
+      "raw": "[ [ ta-a-li-pí-i-[nu",
+      "words": []
+    },
+    {
+      "intact": [
+        "iz-zi-u-ku-u-ul"
+      ],
+      "line": "Rs.(?) r. Kol. 2′",
+      "raw": "[[ [ x-ma iz-zi-u-ku-u-ul",
+      "words": [
+        "izziukul"
+      ]
+    },
+    {
+      "intact": [
+        "wa-aš-ḫa-wu-un",
+        "up-ḫu-pu-ú-ši"
+      ],
+      "line": "Rs.(?) r. Kol. 3′",
+      "raw": "[ [ wa-aš-ḫa-wu-un up-ḫu-pu-ú-ši",
+      "words": [
+        "washawun",
+        "uphupusi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 4′",
+      "raw": "[e]š-ta-pár-wa-si-i-ú-i-nu",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-aš-wu-u-ur",
+        "pa-a-ma",
+        "a-aš-ša-la-aḫ-za-a-an"
+      ],
+      "line": "Rs.(?) r. Kol. 5′",
+      "raw": "a-aš-wu-u-ur pa-a-ma a-aš-ša-la-aḫ-za-a-an",
+      "words": [
+        "aswur",
+        "pama",
+        "assalahzan"
+      ]
+    },
+    {
+      "intact": [
+        "e-re-eš-ma-ḫu-li-ia",
+        "ma-am-pí-tu-u"
+      ],
+      "line": "Rs.(?) r. Kol. 6′",
+      "raw": "e-re-eš-ma-ḫu-li-ia ma-am-pí-tu-u",
+      "words": [
+        "eresmahulia",
+        "mampitu"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a-i-tu",
+        "te-wu-u-te-wu-u-uš"
+      ],
+      "line": "Rs.(?) r. Kol. 7′",
+      "raw": "ma-a-i-tu te-wu-u-te-wu-u-uš",
+      "words": [
+        "maitu",
+        "tewutewus"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a-an-ni-i-ma",
+        "at-ḫa-wa-al-wa-la-at"
+      ],
+      "line": "Rs.(?) r. Kol. 8′",
+      "raw": "ma-a-an-ni-i-ma at-ḫa-wa-al-wa-la-at",
+      "words": [
+        "mannima",
+        "athawalwalat"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a-le-e",
+        "tu-li-ia-nu"
+      ],
+      "line": "Rs.(?) r. Kol. 9′",
+      "raw": "ma-a-le-e tu-li-ia-nu",
+      "words": [
+        "male",
+        "tulianu"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a",
+        "wu-ru-na-a-an",
+        "te-wa-a-aš-ḫa-pí"
+      ],
+      "line": "Rs.(?) r. Kol. 10′",
+      "raw": "ma-a wu-ru-na-a-an te-wa-a-aš-ḫa-pí",
+      "words": [
+        "ma",
+        "wurunan",
+        "tewashapi"
+      ]
+    },
+    {
+      "intact": [
+        "te-du-ú-uz-pí-i",
+        "ka-az-zi-ra-pu"
+      ],
+      "line": "Rs.(?) r. Kol. 11",
+      "raw": "te-du-ú-uz-pí-i ka-az-zi-ra-pu",
+      "words": [
+        "tetuzpi",
+        "kazzirapu"
+      ]
+    },
+    {
+      "intact": [
+        "te-du-ú-uz-pí-i",
+        "zu-ú-šu-un-ni-i-u"
+      ],
+      "line": "Rs.(?) r. Kol. 12′",
+      "raw": "te-du-ú-uz-pí-i zu-ú-šu-un-ni-i-u",
+      "words": [
+        "tetuzpi",
+        "zusunniu"
+      ]
+    },
+    {
+      "intact": [
+        "tu-li-ia-nu"
+      ],
+      "line": "Rs.(?) r. Kol. 13′",
+      "raw": "[m]a-a-le-e tu-li-ia-nu",
+      "words": [
+        "tulianu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 14′",
+      "raw": "[m]a-a-an-ni-i-ma at-ḫa-wa-al-wa-la-[a]t",
+      "words": []
+    },
+    {
+      "intact": [
+        "wu-u-ru-na-a-an"
+      ],
+      "line": "Rs.(?) r. Kol. 15′",
+      "raw": "[m]a-a wu-u-ru-na-a-an [te-wa-a-aš-ḫa-pí]",
+      "words": [
+        "wurunan"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 16′",
+      "raw": "[t]u-ú-ḫi-ip sa-a-x[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ku-ut-ta-ri-šu-un"
+      ],
+      "line": "Rs.(?) r. Kol. 17′",
+      "raw": "x ku-ut-ta-ri-šu-un [ [",
+      "words": [
+        "kuttarisun"
+      ]
+    }
+  ],
+  "manuscript": "KUB 28.20",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tahasailima",
+    "listus",
+    "pama",
+    "estip",
+    "hasah",
+    "katte",
+    "talipinu",
+    "tilistip",
+    "ma",
+    "haskumias",
+    "hasimiliun",
+    "haskummias",
+    "hazzarzuma",
+    "aswur",
+    "pama",
+    "ashaiu",
+    "talipin",
+    "zuli",
+    "limunamuna",
+    "zahel",
+    "hannissui",
+    "halewusi",
+    "taharwa",
+    "izziukul",
+    "washawun",
+    "uphupusi",
+    "aswur",
+    "pama",
+    "assalahzan",
+    "eresmahulia",
+    "mampitu",
+    "maitu",
+    "tewutewus",
+    "mannima",
+    "athawalwalat",
+    "male",
+    "tulianu",
+    "ma",
+    "wurunan",
+    "tewashapi",
+    "tetuzpi",
+    "kazzirapu",
+    "tetuzpi",
+    "zusunniu",
+    "tulianu",
+    "wurunan",
+    "kuttarisun"
+  ]
+}

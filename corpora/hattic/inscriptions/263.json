@@ -1,0 +1,197 @@
+{
+  "cth": "734",
+  "id": 263,
+  "lines": [
+    {
+      "intact": [
+        "te-ep-te-el",
+        "ši-we-wu-un"
+      ],
+      "line": "Vs. 4′",
+      "raw": "(-)te-ep-t]e-el LUGAL-te ḫi-na-ši-z[i-i]l ši-we-wu-un DINGIRMEŠ-ta(-)[",
+      "words": [
+        "teptel",
+        "siwewun"
+      ]
+    },
+    {
+      "intact": [
+        "iš-tu-uḫ-ḫi-il-lu"
+      ],
+      "line": "Vs. 5′",
+      "raw": "DIŠKUR-u]n DZA.BA₄.BA₄-en Dta-li-[wi]-en iš-tu-uḫ-ḫi-il-lu",
+      "words": [
+        "istuhhillu"
+      ]
+    },
+    {
+      "intact": [
+        "taḫ-ḫi-pé-el-lu",
+        "a-na-aḫ"
+      ],
+      "line": "Vs. 6′",
+      "raw": "]x taḫ-ḫi-pé-el-lu a-na-aḫ t[a-ni]-in-⟨⟨en⟩⟩-ti ḫa-a-i-we(-)na-a-mu-u[l]",
+      "words": [
+        "tahhipellu",
+        "anah"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-az-zi-na-aḫ-pa",
+        "ḫa-li-wu-en",
+        "te-ku-u-ru"
+      ],
+      "line": "Vs. 7′",
+      "raw": "t]a-a-az-zi-na-aḫ-pa ḫa-li-wu-en te-ku-u-ru",
+      "words": [
+        "tazzinahpa",
+        "haliwuen",
+        "tekuru"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ta-a-pé-el-lu-uḫ",
+        "ta-a-ku-ru"
+      ],
+      "line": "Vs. 8′",
+      "raw": "z]i-ta-a-pé-el-lu-uḫ an-ta-ḫe-e[l-l]u ta-a-ku-ru 𒀹",
+      "words": [
+        "zitapelluh",
+        "takuru"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ne-e-ri",
+        "li-ku-ut-tu",
+        "ka-lu-ka-lu-un"
+      ],
+      "line": "Vs. 9′",
+      "raw": "]x zi-ne-e-ri li-ku-ut-tu xx-aḫ-zi-ik ka-lu-ka-lu-un",
+      "words": [
+        "zineri",
+        "likuttu",
+        "kalukalun"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ni-ta-ni-in",
+        "li-ku-ut-tu",
+        "ku-u-ru-un"
+      ],
+      "line": "Vs. 10′",
+      "raw": "t]a-ni-ta-ni-in li-ku-ut-tu ki-x-[w]a-aḫ-pa ku-u-ru-un",
+      "words": [
+        "tanitanin",
+        "likuttu",
+        "kurun"
+      ]
+    },
+    {
+      "intact": [
+        "ta-le-eš-tu-uš-te"
+      ],
+      "line": "Vs. 11′",
+      "raw": "-i]l DIŠKUR-un ta-le-eš-tu-uš-te pa-[la] DZA.BA₄.BA₄-en",
+      "words": [
+        "talestuste"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-le-e-wi-en",
+        "wa-wa-a-u",
+        "pí-i-ip"
+      ],
+      "line": "Vs. 12′",
+      "raw": "ḫa-le-e-wi]-en LUGAL-te wa-wa-a-u pí-i-ip wa-[t]a-[a-ak-ki]",
+      "words": [
+        "halewien",
+        "wawau",
+        "pip"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-i-ip-pí-i-in",
+        "ta-ku-ru-ú-mi",
+        "ú-ga-ú-up-pu"
+      ],
+      "line": "Vs. 13′",
+      "raw": "ḫa-i-ip-p]í-i-in ta-ku-ru-ú-mi ú-ga-ú-up-pu te-e-ú-[un]",
+      "words": [
+        "haippin",
+        "takurumi",
+        "ukauppu"
+      ]
+    },
+    {
+      "intact": [
+        "te-ep-ti-el",
+        "ka-a-at-te"
+      ],
+      "line": "Vs. 14′",
+      "raw": "(-)te-e]p-ti-el ka-a-at-te ḫi-in-na-ši-iz-ze-e[l",
+      "words": [
+        "teptiel",
+        "katte"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 15′",
+      "raw": "[ x-ú-ta-ḫi-il D10-tu ta-l[e-eš-tu-uš(-)",
+      "words": []
+    },
+    {
+      "intact": [
+        "za-a-ap-ša-pé-el-li"
+      ],
+      "line": "Vs. 16′",
+      "raw": "[ -a za-a-ap-ša-pé-el-li ta-[",
+      "words": [
+        "zapsapelli"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 17′",
+      "raw": "[ x-te-en [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 40.85+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "teptel",
+    "siwewun",
+    "istuhhillu",
+    "tahhipellu",
+    "anah",
+    "tazzinahpa",
+    "haliwuen",
+    "tekuru",
+    "zitapelluh",
+    "takuru",
+    "zineri",
+    "likuttu",
+    "kalukalun",
+    "tanitanin",
+    "likuttu",
+    "kurun",
+    "talestuste",
+    "halewien",
+    "wawau",
+    "pip",
+    "haippin",
+    "takurumi",
+    "ukauppu",
+    "teptiel",
+    "katte",
+    "zapsapelli"
+  ]
+}

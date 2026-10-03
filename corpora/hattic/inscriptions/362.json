@@ -1,0 +1,60 @@
+{
+  "cth": "743",
+  "id": 362,
+  "lines": [
+    {
+      "intact": [
+        "te-wa-a-ti-i",
+        "te-ka-a-ra-mu-un"
+      ],
+      "line": "Vs. II 4′",
+      "raw": "te-wa-a-ti-i te-ka-a-ra-mu-un",
+      "words": [
+        "tewati",
+        "tekaramun"
+      ]
+    },
+    {
+      "intact": [
+        "te-ki-i-ru-ul"
+      ],
+      "line": "Vs. II 7′",
+      "raw": "[še-e]p-še-i-li-nu u-[ta]ḫ-ḫar-i-il te-ki-i-ru-ul",
+      "words": [
+        "tekirul"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 10′",
+      "raw": "[ [ x-a-ma a-[ x-mu-ut te-et-ḫa-wa-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 1′",
+      "raw": "[ [ x-du-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 3′",
+      "raw": "[ [ [t]e-ez-zi-ta-al-l[i [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 4′",
+      "raw": "[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.116",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tewati",
+    "tekaramun",
+    "tekirul"
+  ]
+}

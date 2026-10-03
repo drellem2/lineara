@@ -1,0 +1,96 @@
+{
+  "cth": "745",
+  "id": 549,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Rs. (Kol.?) 1′",
+      "raw": "] t[i- [¬¬¬",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. (Kol.?) 2′",
+      "raw": "[ [(-)t]i-me-et-ta-n[a-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. (Kol.?) 3′",
+      "raw": "[ [(-)t]i-me-et-ta-na-a [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. (Kol.?) 4′",
+      "raw": "[ (-)ti-me-et-ta-na-a [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. (Kol.?) 5′",
+      "raw": "[ x-ga-aš-ša-i [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. (Kol.?) 6′",
+      "raw": "[ x-i-ša-ki [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a",
+        "ta-a-ḫa-zi"
+      ],
+      "line": "Rs. (Kol.?) 7′",
+      "raw": "[ x ma-a ta-a-ḫa-zi [",
+      "words": [
+        "ma",
+        "tahazi"
+      ]
+    },
+    {
+      "intact": [
+        "li-ga-zu"
+      ],
+      "line": "Rs. (Kol.?) 8′",
+      "raw": "[ x(-)pa-la li-ga-zu [",
+      "words": [
+        "likazu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. (Kol.?) 9′",
+      "raw": "[ (-)pa-la pí-ia-l[i(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. (Kol.?) 10′",
+      "raw": "[ x-a-ma li-ik-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. (Kol.?) 11′",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. (Kol.?) 12′",
+      "raw": "[ x-un-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.25",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ma",
+    "tahazi",
+    "likazu"
+  ]
+}

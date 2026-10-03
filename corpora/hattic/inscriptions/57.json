@@ -1,15 +1,52 @@
 {
-  "category": "lexeme",
-  "gloss": "let, leave (verb stem)",
+  "cth": "627",
   "id": 57,
-  "is_bilingual": false,
-  "name": "šul",
-  "provenance": "Hattic lexeme; see citation.",
-  "source_citation": "'Hattische Sprache', de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.",
-  "text": "šul",
-  "tier": "A",
-  "transliteration": "sul",
+  "lines": [
+    {
+      "intact": [],
+      "line": "{€1} Vs. II 35′",
+      "raw": "[a]-ḫa-a",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€1} Rs. V 5′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€1} Rs. VI 4",
+      "raw": "[ [ -zu-wa-ma-an-ni-i-ia",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€1} Rs. VI 5",
+      "raw": "[ [ x-iz-zu-wa-at-tu-u-e-eš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€1} Rs. VI 6",
+      "raw": "[ [ x-ne-ma",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€1} Rs. VI 7",
+      "raw": "[ [ [-š]a-i-li-u",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 10.23+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "sul"
+    "aha"
   ]
 }

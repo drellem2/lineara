@@ -1,0 +1,28 @@
+{
+  "cth": "694",
+  "id": 187,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€4+5} Vs. II 13",
+      "raw": "[a]-ḫa-a",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": " {€1} Vs.? II 17′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    }
+  ],
+  "manuscript": "KBo 20.72+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "aha"
+  ]
+}

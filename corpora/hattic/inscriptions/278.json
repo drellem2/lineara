@@ -1,0 +1,171 @@
+{
+  "cth": "735",
+  "id": 278,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 1′",
+      "raw": "]x x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 2′",
+      "raw": "]x-na",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 3′",
+      "raw": "]x-up",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-a-i-ši-i-im"
+      ],
+      "line": "Vs. lk. Kol. 4′",
+      "raw": "]x ḫa-a-i-ši-i-im",
+      "words": [
+        "haisim"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 5′",
+      "raw": "]x-zi-iḫ-ba-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 6′",
+      "raw": "]x-zi-iḫ-ba-l[i]",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ḫa-an-ti"
+      ],
+      "line": "Vs. lk. Kol. 7′",
+      "raw": "t]a-ḫa-an-ti [",
+      "words": [
+        "tahanti"
+      ]
+    },
+    {
+      "intact": [
+        "ta-am-mi-iš"
+      ],
+      "line": "Vs. lk. Kol. 8′",
+      "raw": "] ta-am-mi-iš",
+      "words": [
+        "tammis"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-i-ši-mu"
+      ],
+      "line": "Vs. lk. Kol. 9′",
+      "raw": "](-)ḫa-i-ši-mu",
+      "words": [
+        "haisimu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 10′",
+      "raw": "-z]i-iḫ-ba-li",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫu-pa-a-aš"
+      ],
+      "line": "Vs. lk. Kol. 11′",
+      "raw": "](-)ḫu-pa-a-aš",
+      "words": [
+        "hupas"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 12′",
+      "raw": "-z]a-aš-nu [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 1′",
+      "raw": "]-ul",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 2′",
+      "raw": "]-AḪ",
+      "words": []
+    },
+    {
+      "intact": [
+        "i-šu-u-mi-in-na"
+      ],
+      "line": "Rs. lk. Kol. 3′",
+      "raw": "](-)i-šu-u-mi-in-na",
+      "words": [
+        "isuminna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 4′",
+      "raw": "]-ši-iz-li",
+      "words": []
+    },
+    {
+      "intact": [
+        "še-ez-zu-si-iz-li"
+      ],
+      "line": "Rs. lk. Kol. 5′",
+      "raw": "š]e-ez-zu-si-iz-li",
+      "words": [
+        "sezzusizli"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 6′",
+      "raw": "]x-iš-šu-i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 7′",
+      "raw": "]x-ia",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-a-ḫi"
+      ],
+      "line": "Rs. lk. Kol. 8′",
+      "raw": "t]a-a-ḫi",
+      "words": [
+        "tahi"
+      ]
+    }
+  ],
+  "manuscript": "KUB 28.21",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "haisim",
+    "tahanti",
+    "tammis",
+    "haisimu",
+    "hupas",
+    "isuminna",
+    "sezzusizli",
+    "tahi"
+  ]
+}

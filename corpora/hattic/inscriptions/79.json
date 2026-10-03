@@ -1,15 +1,39 @@
 {
-  "category": "toponym",
-  "gloss": "cult town",
+  "cth": "627",
   "id": 79,
-  "is_bilingual": false,
-  "name": "Kaštama",
-  "provenance": "Hattic toponym; see citation.",
-  "source_citation": "del Monte, G. F. & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC 6. Wiesbaden: Reichert.",
-  "text": "Kaštama",
-  "tier": "B",
-  "transliteration": "kastama",
+  "lines": [
+    {
+      "intact": [
+        "pu-ú-la"
+      ],
+      "line": "Vs. I 1′",
+      "raw": "[ [ x pu-ú-la p[u-ú-la",
+      "words": [
+        "pula"
+      ]
+    },
+    {
+      "intact": [
+        "ze-el-la"
+      ],
+      "line": "Vs. I 2′",
+      "raw": "[[ka-an]-ni ze-el-la z[e-el-la",
+      "words": [
+        "zella"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 3′",
+      "raw": "[[ [ [-i]m-ma-az",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 42.21",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "kastama"
+    "pula",
+    "zella"
   ]
 }

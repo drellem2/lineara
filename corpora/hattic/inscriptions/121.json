@@ -1,0 +1,63 @@
+{
+  "cth": "639",
+  "id": 121,
+  "lines": [
+    {
+      "intact": [
+        "wa-a",
+        "ku-un-na-li"
+      ],
+      "line": "{€1} Vs. I 17′",
+      "raw": "[[la-a-i-ia]-a wa-a ku-un-na-li wa-[a",
+      "words": [
+        "wa",
+        "kunnali"
+      ]
+    },
+    {
+      "intact": [
+        "wa-a",
+        "ku-un-na-li"
+      ],
+      "line": "{€1} Vs. I 18′",
+      "raw": "[[la-a-i-ia]-a wa-a ku-un-na-li",
+      "words": [
+        "wa",
+        "kunnali"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€1+2} Rs. IV 2′",
+      "raw": "[a-i-[ku-u-i]a a-i-ku-u-i[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€1+2} Rs. IV 3′",
+      "raw": "[pa-l[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€1+2} Rs. IV 4′",
+      "raw": "[a-i]-ku-u-ia [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€1+2} Rs. IV 5′",
+      "raw": "[pa-la [[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 7.19+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wa",
+    "kunnali",
+    "wa",
+    "kunnali"
+  ]
+}

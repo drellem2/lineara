@@ -1,0 +1,76 @@
+{
+  "cth": "736",
+  "id": 293,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Rs. IV 1′",
+      "raw": "]x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 2′",
+      "raw": "] KI.4 te-g[a-lu-uḫ-ḫa [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a-at-taḫ"
+      ],
+      "line": "Rs. IV 3′",
+      "raw": "k]a-a-at-taḫ [ [",
+      "words": [
+        "kattah"
+      ]
+    },
+    {
+      "intact": [
+        "la-ba-ar-na",
+        "ka-at-ti"
+      ],
+      "line": "Rs. IV 4′",
+      "raw": "la-ba-a]r-na ka-at-ti e[š-ta-a-nu-un [",
+      "words": [
+        "laparna",
+        "katti"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": "Rs. IV 5′",
+      "raw": "]x-ri-ri-ip pa-la DIŠKUR[ [",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-a-li-tu-u-ni-ip"
+      ],
+      "line": "Rs. IV 6′",
+      "raw": "ḫa-a-li-t]u-u-ni-ip wu-ur-ša-a-[il [",
+      "words": [
+        "halitunip"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 7′",
+      "raw": "] [ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.84",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kattah",
+    "laparna",
+    "katti",
+    "pala",
+    "halitunip"
+  ]
+}

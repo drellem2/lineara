@@ -1,0 +1,75 @@
+{
+  "cth": "738",
+  "id": 305,
+  "lines": [
+    {
+      "intact": [
+        "ma-az-za-a"
+      ],
+      "line": "Vs. 11′",
+      "raw": "[ta-aš-ša-a-ni-na [ta-aš-ša-ni-ia [ta-aš-ša-ni-i[a [t]e-ep-pí-in ma-az-za-a [",
+      "words": [
+        "mazza"
+      ]
+    },
+    {
+      "intact": [
+        "ta-aš-ša-ni-in-na"
+      ],
+      "line": "Vs. 12′",
+      "raw": "ta-aš-ša-ni-in-na Dta-te-eš-ḫa-w[a [ [ma-a]-i-ú-un ma-a-i-ú-u[n]",
+      "words": [
+        "tassaninna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 13′",
+      "raw": "[ [ [ḫ]a-an-te-eš tu-u[m- [ x-a-an Dta-te-eš-ḫ[a-wa]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 14′",
+      "raw": "[ [ x x[ [ [-r]i-ia-ni-ia x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 15′",
+      "raw": "[ [ (-)ú-i-an-ti-it [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 16′",
+      "raw": "[ [ x-an te-et-ḫa[r [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 17′",
+      "raw": "[ [ [-w]u-ur-ni-x-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 18′",
+      "raw": "[ [ x-ta-a-ḫa-i[a [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 19′",
+      "raw": "[ [ [-z]i [",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 21.106",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "mazza",
+    "tassaninna"
+  ]
+}

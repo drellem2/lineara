@@ -1,0 +1,70 @@
+{
+  "cth": "746",
+  "id": 629,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs.? r. Kol. 1′",
+      "raw": "[ [ -aḫ-za n[i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? r. Kol. 2′",
+      "raw": "[[ [ x-ia l[i-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? r. Kol. 3′",
+      "raw": "[[ [ [-ḫ]u-li tu-ú-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-aš-ku-ut-ti"
+      ],
+      "line": "Vs.? r. Kol. 4′",
+      "raw": "[[ [ [te-eš-t]e-ep-ta ta-aš-ku-ut-ti x[",
+      "words": [
+        "taskutti"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.? r. Kol. 5′",
+      "raw": "[[ [ [te-e]š-te-ep-ḫa da-a-ḫa-an-t[i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? r. Kol. 6′",
+      "raw": "[[ [ [t]e-eš-te-ep-ta da-a-ḫa-[an-ti",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? r. Kol. 1′",
+      "raw": "[[ [ (-)li-li-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? r. Kol. 2′",
+      "raw": "[[ [ [l]e-e(-)pu-ru-uš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? r. Kol. 3′",
+      "raw": "[[ [ x a-a-an-pí-l[e-",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.46",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "taskutti"
+  ]
+}

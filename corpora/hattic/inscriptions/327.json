@@ -1,0 +1,903 @@
+{
+  "cth": "741",
+  "id": 327,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 3′",
+      "raw": "[te-e]g-ga-ḫu-li te-eg-g[a-ḫu-li [",
+      "words": []
+    },
+    {
+      "intact": [
+        "an-ka-la-pa-az-zi-iz-zi"
+      ],
+      "line": " {€1} Vs. I 5′",
+      "raw": "an-ka-la-pa-az-zi-iz-zi a-l[i- [",
+      "words": [
+        "ankalapazzizzi"
+      ]
+    },
+    {
+      "intact": [
+        "a-li-na-i-u",
+        "li-i-na-i-u"
+      ],
+      "line": " {€1} Vs. I 7′",
+      "raw": "a-li-na-i-u li-i-na-i-u [ [",
+      "words": [
+        "alinaiu",
+        "linaiu"
+      ]
+    },
+    {
+      "intact": [
+        "li-na-a",
+        "mu-ú-wa-li-na-a"
+      ],
+      "line": " {€1} Vs. I 8′",
+      "raw": "li-na-a mu-ú-wa-li-na-a [ [",
+      "words": [
+        "lina",
+        "muwalina"
+      ]
+    },
+    {
+      "intact": [
+        "te-eg-ga-ḫu-li",
+        "te-eg-ga",
+        "te-eg-ga-ḫu-li"
+      ],
+      "line": " {€1} Vs. I 11′",
+      "raw": "te-eg-ga-ḫu-li te-eg-ga te-eg-ga-ḫu-li",
+      "words": [
+        "tekkahuli",
+        "tekka",
+        "tekkahuli"
+      ]
+    },
+    {
+      "intact": [
+        "la-a-la-an-ka-ša-an-du",
+        "a-i-li-na"
+      ],
+      "line": " {€1} Vs. I 13′",
+      "raw": "la-a-la-an-ka-ša-an-du a-i-li-na",
+      "words": [
+        "lalankasantu",
+        "ailina"
+      ]
+    },
+    {
+      "intact": [
+        "a-li-i-na-i-u",
+        "li-i-na-i-u"
+      ],
+      "line": " {€1} Vs. I 15′",
+      "raw": "a-li-i-na-i-u li-i-na-i-u",
+      "words": [
+        "alinaiu",
+        "linaiu"
+      ]
+    },
+    {
+      "intact": [
+        "li-na-a",
+        "mu-ú-wa-li-na"
+      ],
+      "line": " {€1} Vs. I 16′",
+      "raw": "li-na-a mu-ú-wa-li-na",
+      "words": [
+        "lina",
+        "muwalina"
+      ]
+    },
+    {
+      "intact": [
+        "te-eg-ga-ḫu-li",
+        "te-eg-ga",
+        "te-eg-ga-ḫu-li-in"
+      ],
+      "line": " {€1} Vs. I 19′",
+      "raw": "te-eg-ga-ḫu-li te-eg-ga te-eg-ga-ḫu-li-in ===",
+      "words": [
+        "tekkahuli",
+        "tekka",
+        "tekkahulin"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 1′",
+      "raw": "a-ú-il-[la",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 2′",
+      "raw": "[i-ia-a [[ [ [a-ú](-)i[l(-)la",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 3′",
+      "raw": "[i-ia-a [lu-[ [ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ú-il-la",
+        "a-ú-il-la"
+      ],
+      "line": " {€1} Vs. II 5′",
+      "raw": "a-ú-il-la a-ú-il-la [ [",
+      "words": [
+        "auilla",
+        "auilla"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia-a",
+        "a-ú-il-la",
+        "i-ia",
+        "šu-ug-ga-ú-il-la"
+      ],
+      "line": " {€1} Vs. II 6′",
+      "raw": "i-ia-a a-ú-il-la i-ia šu-ug-ga-ú-il-la",
+      "words": [
+        "ia",
+        "auilla",
+        "ia",
+        "sukkauilla"
+      ]
+    },
+    {
+      "intact": [
+        "šu-uš-ta-ku-un-na",
+        "me-mi-ga-an-ta-li-pa-ru-u"
+      ],
+      "line": " {€1} Vs. II 8′",
+      "raw": "šu-uš-ta-ku-un-na me-mi-ga-an-ta-li-pa-ru-u",
+      "words": [
+        "sustakunna",
+        "memikantaliparu"
+      ]
+    },
+    {
+      "intact": [
+        "a-ú-il-la",
+        "a-ú-il-la"
+      ],
+      "line": " {€1} Vs. II 10′",
+      "raw": "a-ú-il-la a-ú-il-la",
+      "words": [
+        "auilla",
+        "auilla"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia-a",
+        "a-ú-il-la"
+      ],
+      "line": " {€1} Vs. II 11′",
+      "raw": "i-ia-a a-ú-il-la",
+      "words": [
+        "ia",
+        "auilla"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia-a",
+        "šu-ug-ga-ú-il-la"
+      ],
+      "line": " {€1} Vs. II 12′",
+      "raw": "i-ia-a šu-ug-ga-ú-il-la",
+      "words": [
+        "ia",
+        "sukkauilla"
+      ]
+    },
+    {
+      "intact": [
+        "a-lu-ú-wa-i-u"
+      ],
+      "line": " {€1} Vs. II 19′",
+      "raw": "a-lu-ú-wa-i-u",
+      "words": [
+        "aluwaiu"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a-ia-lu-wa-i-u",
+        "ta-i",
+        "ta-ba-ar-na"
+      ],
+      "line": " {€1} Vs. II 20′",
+      "raw": "ma-a-ia-lu-wa-i-u ta-i ta-ba-ar-na",
+      "words": [
+        "maialuwaiu",
+        "tai",
+        "taparna"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-wa-na-an-na",
+        "ta-ba-ar-na"
+      ],
+      "line": " {€1} Vs. II 21′",
+      "raw": "ta-a-wa-na-an-na ta-ba-ar-na",
+      "words": [
+        "tawananna",
+        "taparna"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ip-pa-la-an-da"
+      ],
+      "line": " {€1} Vs. II 22′",
+      "raw": "URUzi-ip-pa-la-an-da",
+      "words": [
+        "zippalanta"
+      ]
+    },
+    {
+      "intact": [
+        "a-lu-ú-wa-i-u",
+        "ma-ialu-ú-wa-a-i-u"
+      ],
+      "line": " {€1} Rs. III 2",
+      "raw": "a-lu-ú-wa-i-u ma-ia(-)lu-ú-wa-a-i-u",
+      "words": [
+        "aluwaiu",
+        "maialuwaiu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-i",
+        "ta-ba-ar-na",
+        "ta-wa-a-na-an-na"
+      ],
+      "line": " {€1} Rs. III 3",
+      "raw": "ta-i ta-ba-ar-na ta-wa-a-na-an-na",
+      "words": [
+        "tai",
+        "taparna",
+        "tawananna"
+      ]
+    },
+    {
+      "intact": [
+        "a-i",
+        "ta-ba-ar-na",
+        "ta-i",
+        "ti-tu-u-ḫa-nu"
+      ],
+      "line": " {€1} Rs. III 4",
+      "raw": "a-i ta-ba-ar-na ta-i ti-tu-u-ḫa-nu",
+      "words": [
+        "ai",
+        "taparna",
+        "tai",
+        "tituhanu"
+      ]
+    },
+    {
+      "intact": [
+        "a-lu-ú-wa-i-u",
+        "ma-ia-lu-ú-wa-a-i-u"
+      ],
+      "line": " {€1} Rs. III 5",
+      "raw": "a-lu-ú-wa-i-u ma-ia-lu-ú-wa-a-i-u",
+      "words": [
+        "aluwaiu",
+        "maialuwaiu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-i",
+        "ta-ba-ar-na-an",
+        "ta-wa-an-na-an-na"
+      ],
+      "line": " {€1} Rs. III 6",
+      "raw": "ta-i ta-ba-ar-na-an ta-wa-an-na-an-na",
+      "words": [
+        "tai",
+        "taparnan",
+        "tawannanna"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-an",
+        "ta-ḫur-pa"
+      ],
+      "line": " {€1} Rs. III 7",
+      "raw": "ta-ba-ar-na-an URUta-ḫur-pa",
+      "words": [
+        "taparnan",
+        "tahurpa"
+      ]
+    },
+    {
+      "intact": [
+        "a-lu-ú-wa-i-u",
+        "ma-ia-lu-wa-i-u"
+      ],
+      "line": " {€1} Rs. III 9",
+      "raw": "a-lu-ú-wa-i-u ma-ia-lu-wa-i-u",
+      "words": [
+        "aluwaiu",
+        "maialuwaiu"
+      ]
+    },
+    {
+      "intact": [
+        "ma-ialu-ú-wa-i-u",
+        "ta-ba-ar-na-an"
+      ],
+      "line": " {€1} Rs. III 10",
+      "raw": "ma-ia(-)lu-ú-wa-i-u ta-ba-ar-na-an",
+      "words": [
+        "maialuwaiu",
+        "taparnan"
+      ]
+    },
+    {
+      "intact": [
+        "ta-wa-na-an-na",
+        "a-i",
+        "ta-ba-ar-na-an"
+      ],
+      "line": " {€1} Rs. III 11",
+      "raw": "ta-wa-na-an-na x a-i ta-ba-ar-na-an",
+      "words": [
+        "tawananna",
+        "ai",
+        "taparnan"
+      ]
+    },
+    {
+      "intact": [
+        "ta-i",
+        "ti-tu-u-ḫa-nu"
+      ],
+      "line": " {€1} Rs. III 12",
+      "raw": "ta-i ti-tu-u-ḫa-nu",
+      "words": [
+        "tai",
+        "tituhanu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-i",
+        "ta-ba-ar-na-an",
+        "ta-a-wa-na-an"
+      ],
+      "line": " {€1} Rs. III 14",
+      "raw": "ta-i ta-ba-ar-na-an ta-a-wa-na-an",
+      "words": [
+        "tai",
+        "taparnan",
+        "tawanan"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-an",
+        "a-ri-in-na"
+      ],
+      "line": " {€1} Rs. III 15",
+      "raw": "ta-ba-ar-na-an URUa-ri-in-na",
+      "words": [
+        "taparnan",
+        "arinna"
+      ]
+    },
+    {
+      "intact": [
+        "a-lu-ú-wa-i-u",
+        "ma-ia-lu-ú-wa-i-u"
+      ],
+      "line": " {€1} Rs. III 17",
+      "raw": "a-lu-ú-wa-i-u ma-ia-lu-ú-wa-i-u",
+      "words": [
+        "aluwaiu",
+        "maialuwaiu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-an",
+        "ta-a-wa-na-an-na-an"
+      ],
+      "line": " {€1} Rs. III 18",
+      "raw": "ta-ba-ar-na-an ta-a-wa-na-an-na-an",
+      "words": [
+        "taparnan",
+        "tawanannan"
+      ]
+    },
+    {
+      "intact": [
+        "a-i",
+        "ta-ba-ar-na-an",
+        "ta-i",
+        "ti-tu-u-ḫa-nu"
+      ],
+      "line": " {€1} Rs. III 19",
+      "raw": "a-i ta-ba-ar-na-an ta-i ti-tu-u-ḫa-nu",
+      "words": [
+        "ai",
+        "taparnan",
+        "tai",
+        "tituhanu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-an",
+        "ta-a-wa-na-an-na-an"
+      ],
+      "line": " {€1} Rs. III 21",
+      "raw": "ta-ba-ar-na-an ta-a-wa-na-an-na-an",
+      "words": [
+        "taparnan",
+        "tawanannan"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-an",
+        "ḫa-at-tu-ša"
+      ],
+      "line": " {€1} Rs. III 22",
+      "raw": "ta-ba-ar-na-an URUḫa-at-tu-ša",
+      "words": [
+        "taparnan",
+        "hattusa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 24",
+      "raw": "[ [ [m]a-ia-lu-wa-a-i-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2+1} Rs. 3/Rs. IV 3",
+      "raw": "[z]u-wa-al-la-an-t[i]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2+1} Rs. 4/Rs. IV 4",
+      "raw": "[z]u-wa-al-la-i[a-al-lu-u]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2+1} Rs. 6/Rs. IV 6′",
+      "raw": "[zu]-wa-al-la-[an-ti [zu-wa-al-la-ia-a]l-lu-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "zu-wa-al-la-ia-al-lu-u"
+      ],
+      "line": " {€1} Rs. IV 8′",
+      "raw": "[z]u-wa-al-la-an-ti zu-wa-al-la-ia-al-lu-u",
+      "words": [
+        "zuwallaiallu"
+      ]
+    },
+    {
+      "intact": [
+        "a-pa-aš-pa",
+        "ta-a-ḫa-ia",
+        "ma-a-ḫa-ia"
+      ],
+      "line": " {€1} Rs. IV 9′",
+      "raw": "a-pa-aš-pa ta-a-ḫa-ia ma-a-ḫa-ia KI.MIN",
+      "words": [
+        "apaspa",
+        "tahaia",
+        "mahaia"
+      ]
+    },
+    {
+      "intact": [
+        "zu-ú-wa-al-la-ia-al-lu-u"
+      ],
+      "line": " {€1} Rs. IV 11′",
+      "raw": "zu-wa-al-la-[an-t]i zu-ú-wa-al-la-ia-al-lu-u",
+      "words": [
+        "zuwallaiallu"
+      ]
+    },
+    {
+      "intact": [
+        "a-pa-aš-pa",
+        "ma-az-zi-iš-ḫa-pí"
+      ],
+      "line": " {€1} Rs. IV 12′",
+      "raw": "a-pa-aš-pa [ta]-a-ḫa-ia ma-az-zi-iš-ḫa-pí KI.MIN",
+      "words": [
+        "apaspa",
+        "mazzishapi"
+      ]
+    },
+    {
+      "intact": [
+        "zu-wa-al-la-an-ti"
+      ],
+      "line": " {€1} Rs. IV 13′",
+      "raw": "zu-i-zu-i-[i]l-la-an-ti zu-wa-al-la-an-ti",
+      "words": [
+        "zuwallanti"
+      ]
+    },
+    {
+      "intact": [
+        "a-pa-aš-pa",
+        "ta-a-ḫa-ia"
+      ],
+      "line": " {€1} Rs. IV 14′",
+      "raw": "zu-wa-al-l[a-i]a-al-la a-pa-aš-pa ta-a-ḫa-ia",
+      "words": [
+        "apaspa",
+        "tahaia"
+      ]
+    },
+    {
+      "intact": [
+        "in-ta-ma-za-aš-ku-ru"
+      ],
+      "line": " {€1} Rs. IV 15′",
+      "raw": "in-ta-ma-za-aš-ku-ru KI.MIN",
+      "words": [
+        "intamazaskuru"
+      ]
+    },
+    {
+      "intact": [
+        "tu-uz-zaa-aš-ta",
+        "lu-u-lu",
+        "ta-a-li-i"
+      ],
+      "line": " {€1} Rs. IV 17′",
+      "raw": "tu-uz-za(-)a-aš-ta lu-u-lu ta-a-li-i",
+      "words": [
+        "tuzzasta",
+        "lulu",
+        "tali"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-ak-ki-iš-ša",
+        "a-an-na",
+        "lu-wa-i-ia"
+      ],
+      "line": " {€1} Rs. IV 18′",
+      "raw": "ḫa-ak-ki-iš-ša a-an-na lu-wa-i-ia",
+      "words": [
+        "hakkissa",
+        "anna",
+        "luwaia"
+      ]
+    },
+    {
+      "intact": [
+        "a-lu-wa-i-ia",
+        "a-lu-wa-ia"
+      ],
+      "line": " {€1} Rs. IV 19′",
+      "raw": "a-lu-wa-i-ia a-lu-wa-ia",
+      "words": [
+        "aluwaia",
+        "aluwaia"
+      ]
+    },
+    {
+      "intact": [
+        "a-wa-an-ta",
+        "mu-ú-li-ia",
+        "ku-ú-ru-um",
+        "a-aš-ta-ia-aḫ-ḫa"
+      ],
+      "line": " {€1} Rs. IV 20′",
+      "raw": "a-wa-an-ta mu-ú-li-ia ku-ú-ru-um a-aš-ta-ia-aḫ-ḫa",
+      "words": [
+        "awanta",
+        "mulia",
+        "kurum",
+        "astaiahha"
+      ]
+    },
+    {
+      "intact": [
+        "in-ta",
+        "a-am-mu-ú",
+        "a-wa-li-i-ia-an-na",
+        "ḫa-a-pu-ra"
+      ],
+      "line": " {€1} Rs. IV 21′",
+      "raw": "in-ta a-am-mu-ú a-wa-li-i-ia-an-na ḫa-a-pu-ra",
+      "words": [
+        "inta",
+        "ammu",
+        "awalianna",
+        "hapura"
+      ]
+    },
+    {
+      "intact": [
+        "a-aš-ta-ma-an",
+        "pár-ku-ku-un",
+        "zi-i-la-a-li"
+      ],
+      "line": " {€1} Rs. IV 22′",
+      "raw": "a-aš-ta-ma-an pár-ku-ku-un zi-i-la-a-li",
+      "words": [
+        "astaman",
+        "parkukun",
+        "zilali"
+      ]
+    },
+    {
+      "intact": [
+        "a-aš-ta",
+        "pár-ku-ku",
+        "i-wa-i-wa",
+        "pár-ku-uk-ku",
+        "du-u-wa-a-li"
+      ],
+      "line": " {€1} Rs. IV 23′",
+      "raw": "a-aš-ta pár-ku-ku i-wa-i-wa pár-ku-uk-ku du-u-wa-a-li",
+      "words": [
+        "asta",
+        "parkuku",
+        "iwaiwa",
+        "parkukku",
+        "tuwali"
+      ]
+    },
+    {
+      "intact": [
+        "du-wa-a-li-ia-an-ta",
+        "a-ú-li",
+        "a-ú-li-ia"
+      ],
+      "line": " {€1} Rs. IV 24′",
+      "raw": "du-wa-a-li-ia-an-ta a-ú-li a-ú-li-ia",
+      "words": [
+        "tuwalianta",
+        "auli",
+        "aulia"
+      ]
+    },
+    {
+      "intact": [
+        "zu-lu-li-ia-ma",
+        "pár-ku-li-ia-ma",
+        "ḫal-ḫa-lu-ma-aš-ta"
+      ],
+      "line": " {€1} Rs. IV 25′",
+      "raw": "zu-lu-li-ia-ma pár-ku-li-ia-ma ḫal-ḫa-lu-ma-aš-ta",
+      "words": [
+        "zululiama",
+        "parkuliama",
+        "halhalumasta"
+      ]
+    },
+    {
+      "intact": [
+        "a-ba-ar-šu-wa",
+        "du-ud-du-zi",
+        "du-up-pa-li"
+      ],
+      "line": " {€1} Rs. IV 26′",
+      "raw": "a-ba-ar-šu-wa du-ud-du-zi du-up-pa-li",
+      "words": [
+        "aparsuwa",
+        "tuttuzi",
+        "tuppali"
+      ]
+    },
+    {
+      "intact": [
+        "du-up-pa-li-ia-an-ta",
+        "ma-a-ma-at-ti"
+      ],
+      "line": " {€1} Rs. IV 27′",
+      "raw": "du-up-pa-li-ia-an-ta ma-a-ma-at-ti",
+      "words": [
+        "tuppalianta",
+        "mamatti"
+      ]
+    },
+    {
+      "intact": [
+        "i-pa-at-ti"
+      ],
+      "line": " {€1} Rs. IV 28′",
+      "raw": "[x-r]u-ma-a-ma-at-ti i-pa-at-ti pa-a-pa-a[t-ti]",
+      "words": [
+        "ipatti"
+      ]
+    },
+    {
+      "intact": [
+        "me-i-li",
+        "me-i-li"
+      ],
+      "line": " {€1} Rs. IV 29′",
+      "raw": "[i-l]a-al-lu-wa-i-ia me-i-li me-i-li [ [",
+      "words": [
+        "meili",
+        "meili"
+      ]
+    },
+    {
+      "intact": [
+        "me-i-li"
+      ],
+      "line": " {€1} Rs. IV 30′",
+      "raw": "[ta]-wa-an-na-an-na me-i-li [ [",
+      "words": [
+        "meili"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. IV 32′",
+      "raw": "[i-l]a-al-lu-wa-i-ia me-i-l[i [",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 21.109+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ankalapazzizzi",
+    "alinaiu",
+    "linaiu",
+    "lina",
+    "muwalina",
+    "tekkahuli",
+    "tekka",
+    "tekkahuli",
+    "lalankasantu",
+    "ailina",
+    "alinaiu",
+    "linaiu",
+    "lina",
+    "muwalina",
+    "tekkahuli",
+    "tekka",
+    "tekkahulin",
+    "auilla",
+    "auilla",
+    "ia",
+    "auilla",
+    "ia",
+    "sukkauilla",
+    "sustakunna",
+    "memikantaliparu",
+    "auilla",
+    "auilla",
+    "ia",
+    "auilla",
+    "ia",
+    "sukkauilla",
+    "aluwaiu",
+    "maialuwaiu",
+    "tai",
+    "taparna",
+    "tawananna",
+    "taparna",
+    "zippalanta",
+    "aluwaiu",
+    "maialuwaiu",
+    "tai",
+    "taparna",
+    "tawananna",
+    "ai",
+    "taparna",
+    "tai",
+    "tituhanu",
+    "aluwaiu",
+    "maialuwaiu",
+    "tai",
+    "taparnan",
+    "tawannanna",
+    "taparnan",
+    "tahurpa",
+    "aluwaiu",
+    "maialuwaiu",
+    "maialuwaiu",
+    "taparnan",
+    "tawananna",
+    "ai",
+    "taparnan",
+    "tai",
+    "tituhanu",
+    "tai",
+    "taparnan",
+    "tawanan",
+    "taparnan",
+    "arinna",
+    "aluwaiu",
+    "maialuwaiu",
+    "taparnan",
+    "tawanannan",
+    "ai",
+    "taparnan",
+    "tai",
+    "tituhanu",
+    "taparnan",
+    "tawanannan",
+    "taparnan",
+    "hattusa",
+    "zuwallaiallu",
+    "apaspa",
+    "tahaia",
+    "mahaia",
+    "zuwallaiallu",
+    "apaspa",
+    "mazzishapi",
+    "zuwallanti",
+    "apaspa",
+    "tahaia",
+    "intamazaskuru",
+    "tuzzasta",
+    "lulu",
+    "tali",
+    "hakkissa",
+    "anna",
+    "luwaia",
+    "aluwaia",
+    "aluwaia",
+    "awanta",
+    "mulia",
+    "kurum",
+    "astaiahha",
+    "inta",
+    "ammu",
+    "awalianna",
+    "hapura",
+    "astaman",
+    "parkukun",
+    "zilali",
+    "asta",
+    "parkuku",
+    "iwaiwa",
+    "parkukku",
+    "tuwali",
+    "tuwalianta",
+    "auli",
+    "aulia",
+    "zululiama",
+    "parkuliama",
+    "halhalumasta",
+    "aparsuwa",
+    "tuttuzi",
+    "tuppali",
+    "tuppalianta",
+    "mamatti",
+    "ipatti",
+    "meili",
+    "meili",
+    "meili"
+  ]
+}

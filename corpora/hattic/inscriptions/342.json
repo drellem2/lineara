@@ -1,0 +1,57 @@
+{
+  "cth": "743",
+  "id": 342,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 1′",
+      "raw": "[ [ [z]i-ú-wa-ma-a-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ku-u-ru-un",
+        "a-pé-e-ma-aš-ši"
+      ],
+      "line": "Vs. I 3′",
+      "raw": "[ [ [UR]Uḫa-at-tu-uš ku-u-ru-un a-pé-e-ma-aš-ši",
+      "words": [
+        "kurun",
+        "apemassi"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia-lu-wa-i-u",
+        "a-pé-e-ma-aš-ši"
+      ],
+      "line": "Vs. I 5′",
+      "raw": "[ [ x[ i-ia-lu-wa-i-u a-pé-e-ma-aš-ši",
+      "words": [
+        "ialuwaiu",
+        "apemassi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 7′",
+      "raw": "[ [ x x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 8′",
+      "raw": "[ [ x-un",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 14.116",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kurun",
+    "apemassi",
+    "ialuwaiu",
+    "apemassi"
+  ]
+}

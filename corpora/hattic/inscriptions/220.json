@@ -1,0 +1,517 @@
+{
+  "cth": "730",
+  "id": 220,
+  "lines": [
+    {
+      "intact": [
+        "wa-i-it-ka-ti-u",
+        "tu-ḫu-ri-pa",
+        "wa-tu-ḫa-aš-tu-ru-u"
+      ],
+      "line": "Vs. I 20",
+      "raw": "wa-i-it-ka-ti-u tu-ḫu-ri-pa wa-tu-ḫa-aš-tu-ru-u",
+      "words": [
+        "waitkatiu",
+        "tuhuripa",
+        "watuhasturu"
+      ]
+    },
+    {
+      "intact": [
+        "úr-ḫa-nu-u",
+        "ki-i-ip"
+      ],
+      "line": "Vs. I 36",
+      "raw": "[ x úr-ḫa-nu-u ki-i-ip eš-[te-eḫ-k]u-ni-el",
+      "words": [
+        "urhanu",
+        "kip"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 37",
+      "raw": "[ [ iš-te-eḫ-ku-ni-[el [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 38",
+      "raw": "[ [ [ki-ia]-tu-u ki-i-[ip [ x-x-x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 39",
+      "raw": "[ [ -ku-ni-el",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-la-a"
+      ],
+      "line": "Vs. I 40",
+      "raw": "[ [ [i]š-te-eḫ-ku-ni-el pa-la-a",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 41",
+      "raw": "[ [ [i]š-te-eḫ-ku-ni-el",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫe-er-ma-aḫ"
+      ],
+      "line": "Vs. I 43",
+      "raw": "G]U₄-up ḫe-er-ma-aḫ",
+      "words": [
+        "hermah"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 44",
+      "raw": "[ [ -li-e-eš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 45",
+      "raw": "[ [ x-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 46",
+      "raw": "[ [ x-ku\"/>-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "ku-up"
+      ],
+      "line": "Vs. I 47",
+      "raw": "[ [ x ku-up",
+      "words": [
+        "kup"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 48",
+      "raw": "[ [ x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 49",
+      "raw": "[ [ x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 50",
+      "raw": "[ [ x-aḫ-ḫi-wa-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 52",
+      "raw": "[ [ x-na-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 53",
+      "raw": "[ [ (-)tu-uš-ḫa-pa-a-al",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 54",
+      "raw": "[ [ x-x-an-ni-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 55",
+      "raw": "[ [ x-iš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 56",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 62′",
+      "raw": "[ [ x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 4",
+      "raw": "[ka-a-ap-tu-u [an-ta-ru [pát-ta-pé-eš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 5",
+      "raw": "[tu-ut-ḫa-aš-šu-u-ul [le-e-ti-it",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 6",
+      "raw": "[le-e-tu-u-mi-el [5-ŠU [te-š[i]",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-e-pí-i-in",
+        "ḫa-a-i-pa-la-tu-u"
+      ],
+      "line": "Vs. II 9",
+      "raw": "DUTU-un te-e-pí-i-in ḫa-a-i-pa-la-tu-u",
+      "words": [
+        "tepin",
+        "haipalatu"
+      ]
+    },
+    {
+      "intact": [
+        "an-tu-u-ḫu",
+        "te-e-pa-ša-aḫ-ḫu-ul",
+        "an-tu-u-ḫu"
+      ],
+      "line": "Vs. II 10",
+      "raw": "an-tu-u-ḫu te-e-pa-ša-aḫ-ḫu-ul an-tu-u-ḫu",
+      "words": [
+        "antuhu",
+        "tepasahhul",
+        "antuhu"
+      ]
+    },
+    {
+      "intact": [
+        "te-e-ta-ap-taḫ-ḫu-ul",
+        "an-ka-ḫu-uš-šu-u"
+      ],
+      "line": "Vs. II 11",
+      "raw": "te-e-ta-ap-taḫ-ḫu-ul an-ka-ḫu-uš-šu-u",
+      "words": [
+        "tetaptahhul",
+        "ankahussu"
+      ]
+    },
+    {
+      "intact": [
+        "še-e-et-pa-a-li-iš",
+        "aḫ-ku-nu-u",
+        "ta-a-ḫu-pé-e-et"
+      ],
+      "line": "Vs. II 12",
+      "raw": "še-e-et-pa-a-li-iš aḫ-ku-nu-u ta-a-ḫu-pé-e-et",
+      "words": [
+        "setpalis",
+        "ahkunu",
+        "tahupet"
+      ]
+    },
+    {
+      "intact": [
+        "ka-az-zu-ma-a-an-ne",
+        "pa-la",
+        "an-ka-ne-u-un-ni"
+      ],
+      "line": "Vs. II 13",
+      "raw": "ka-az-zu-ma-a-an-ne pa-la an-ka-ne-u-un-ni",
+      "words": [
+        "kazzumanne",
+        "pala",
+        "ankaneunni"
+      ]
+    },
+    {
+      "intact": [
+        "pu-ú-le-e",
+        "ta-a-i-it",
+        "ni-im-ḫu-tu-un"
+      ],
+      "line": "Vs. II 14",
+      "raw": "pu-ú-le-e ta-a-i-it ni-im-ḫu-tu-un",
+      "words": [
+        "pule",
+        "tait",
+        "nimhutun"
+      ]
+    },
+    {
+      "intact": [
+        "un-tu-uk-zu",
+        "za-nu-ú",
+        "za-te-e-ka-aš"
+      ],
+      "line": "Vs. II 15",
+      "raw": "un-tu-uk-zu za-nu-ú za-te-e-ka-aš KI.MIN",
+      "words": [
+        "untukzu",
+        "zanu",
+        "zatekas"
+      ]
+    },
+    {
+      "intact": [
+        "un-tu-nu-u",
+        "tu-un-te-eš-tu-u-uš"
+      ],
+      "line": "Vs. II 16",
+      "raw": "ḫa-te-e-nu(-)[ un-tu-nu-u tu-un-te-eš-tu-u-uš",
+      "words": [
+        "untunu",
+        "tuntestus"
+      ]
+    },
+    {
+      "intact": [
+        "te-e-tu-mu-nu-uḫ-za",
+        "te-e-le-e-la-an"
+      ],
+      "line": "Vs. II 17",
+      "raw": "te-e-tu-mu-nu-uḫ-za te-e-le-e-la-an",
+      "words": [
+        "tetumunuhza",
+        "telelan"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 19",
+      "raw": "DUTU-nu-na-aḫ",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-e-pí-i-in",
+        "ḫa-a-i-pa-la-tu",
+        "an-tu-u-ḫu"
+      ],
+      "line": "Vs. II 20",
+      "raw": "te-e-pí-i-in ḫa-a-i-pa-la-tu an-tu-u-ḫu",
+      "words": [
+        "tepin",
+        "haipalatu",
+        "antuhu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 21",
+      "raw": "ki-ip-taḫ-ḫu-ul KI.MIN",
+      "words": []
+    },
+    {
+      "intact": [
+        "an-ka-aḫ-ḫu-uš-šu",
+        "še-e-et-pa-li-iš",
+        "aḫ-ku-nu-u"
+      ],
+      "line": "Vs. II 22",
+      "raw": "an-ka-aḫ-ḫu-uš-šu še-e-et-pa-li-iš aḫ-ku-nu-u",
+      "words": [
+        "ankahhussu",
+        "setpalis",
+        "ahkunu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ḫu-pí-i-it",
+        "ka-az-zu-ma-a-an-ne",
+        "pa-la"
+      ],
+      "line": "Vs. II 23",
+      "raw": "ta-ḫu-pí-i-it ka-az-zu-ma-a-an-ne pa-la",
+      "words": [
+        "tahupit",
+        "kazzumanne",
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "un-tu-uk-zu",
+        "pa-la",
+        "ḫu-nu-u-ḫa-te-ka-aš"
+      ],
+      "line": "Vs. II 25",
+      "raw": "[ ]x MUNUS-un un-tu-uk-zu pa-la ḫu-nu-u-ḫa-te-ka-aš",
+      "words": [
+        "untukzu",
+        "pala",
+        "hunuhatekas"
+      ]
+    },
+    {
+      "intact": [
+        "an-tu-nu-u",
+        "tu-un-te-eḫ-tu-uš"
+      ],
+      "line": "Vs. II 26",
+      "raw": "[ [ -e-eḫ an-tu-nu-u tu-un-te-eḫ-tu-uš",
+      "words": [
+        "antunu",
+        "tuntehtus"
+      ]
+    },
+    {
+      "intact": [
+        "te-e-tu-le-e-la-an"
+      ],
+      "line": "Vs. II 27",
+      "raw": "[ [ x-mu-mu-un te-e-tu-le-e-la-an",
+      "words": [
+        "tetulelan"
+      ]
+    },
+    {
+      "intact": [
+        "taḫ-pa",
+        "i-me-e",
+        "ḫa-ta-a",
+        "u-zu-uḫ"
+      ],
+      "line": "Vs. II 28",
+      "raw": "[ [ x-aš taḫ-pa i-me-e ḫa-ta-a u-zu-uḫ",
+      "words": [
+        "tahpa",
+        "ime",
+        "hata",
+        "uzuh"
+      ]
+    },
+    {
+      "intact": [
+        "mi-ta-a",
+        "eš-šu-um",
+        "ku-úr-ta-pí-i-en"
+      ],
+      "line": "Vs. II 29",
+      "raw": "[ [ x-un-ni mi-ta-a eš-šu-um ku-úr-ta-pí-i-en",
+      "words": [
+        "mita",
+        "essum",
+        "kurtapien"
+      ]
+    },
+    {
+      "intact": [
+        "za-a-ka-aš-ša",
+        "te-me-im-ma",
+        "za-ap-ku-tu-e-ez-za-aš-ta"
+      ],
+      "line": "Vs. II 30",
+      "raw": "[ [ x-ma za-a-ka-aš-ša te-me-im-ma za-ap-ku-tu-e-ez-za-aš-ta",
+      "words": [
+        "zakassa",
+        "temeimma",
+        "zapkutuezzasta"
+      ]
+    },
+    {
+      "intact": [
+        "uš-ka-aš-ši",
+        "ka-az-zu-za-ma-a",
+        "ta-ḫu-pí-i-it"
+      ],
+      "line": "Vs. II 31",
+      "raw": "[ [ x uš-ka-aš-ši ka-az-zu-za-ma-a ta-ḫu-pí-i-it",
+      "words": [
+        "uskassi",
+        "kazzuzama",
+        "tahupit"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-at"
+      ],
+      "line": "Vs. II 32",
+      "raw": "[ [ [-i]n-nu-u ta-a-at",
+      "words": [
+        "tat"
+      ]
+    }
+  ],
+  "manuscript": "KUB 17.28",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "waitkatiu",
+    "tuhuripa",
+    "watuhasturu",
+    "urhanu",
+    "kip",
+    "pala",
+    "hermah",
+    "kup",
+    "tepin",
+    "haipalatu",
+    "antuhu",
+    "tepasahhul",
+    "antuhu",
+    "tetaptahhul",
+    "ankahussu",
+    "setpalis",
+    "ahkunu",
+    "tahupet",
+    "kazzumanne",
+    "pala",
+    "ankaneunni",
+    "pule",
+    "tait",
+    "nimhutun",
+    "untukzu",
+    "zanu",
+    "zatekas",
+    "untunu",
+    "tuntestus",
+    "tetumunuhza",
+    "telelan",
+    "tepin",
+    "haipalatu",
+    "antuhu",
+    "ankahhussu",
+    "setpalis",
+    "ahkunu",
+    "tahupit",
+    "kazzumanne",
+    "pala",
+    "untukzu",
+    "pala",
+    "hunuhatekas",
+    "antunu",
+    "tuntehtus",
+    "tetulelan",
+    "tahpa",
+    "ime",
+    "hata",
+    "uzuh",
+    "mita",
+    "essum",
+    "kurtapien",
+    "zakassa",
+    "temeimma",
+    "zapkutuezzasta",
+    "uskassi",
+    "kazzuzama",
+    "tahupit",
+    "tat"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "cth": "735",
+  "id": 280,
+  "lines": [
+    {
+      "intact": [
+        "ka-at-taḫ"
+      ],
+      "line": "Vs.(?) lk. Kol. 1′",
+      "raw": "ka-at-taḫ a-[an-ta-ap-pu",
+      "words": [
+        "kattah"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 2′",
+      "raw": "[pé-el-wa-a-ḫi-ši [a-a[n-ta-ap-pu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 3′",
+      "raw": "[šu-ú-le-en-kat-te [a-an-t[a-ap-pu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 4′",
+      "raw": "[šu-ú-wu-u-ri-in [a-an-ta-a[p-pu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 5′",
+      "raw": "[šu-ú-wa-a-ru-un [a-an-ta-a[p-pu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 6′",
+      "raw": "[[ [ x-ka-x-i-iš a-an-t[a-ap-pu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.(?) lk. Kol. 7′",
+      "raw": "[[ [ x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 1′",
+      "raw": "[[ [ -ip [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 2′",
+      "raw": "[[ [ ka-al-pu-u-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 3′",
+      "raw": "[[ḫa-a-aš-ša-la-m]a-a a-ap-ḫa-a[š",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 4′",
+      "raw": "[[ḫa-a-aš-š]a-la-ma-a a-ap-ḫa-[aš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 5′",
+      "raw": "[ḫa-a-aš-ša-a-la-ma [a-ap-[ḫa-aš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 6′",
+      "raw": "[ḫa-a-aš-ša-a-la-[m]a a-ap-ḫ[a-aš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 7′",
+      "raw": "[ḫu-up-pu-ú-d[u] pa-a-m[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.(?) r. Kol. 8′",
+      "raw": "[x-i-id-x[ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.31",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kattah"
+  ]
+}

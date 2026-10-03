@@ -1,0 +1,105 @@
+{
+  "cth": "745",
+  "id": 559,
+  "lines": [
+    {
+      "intact": [
+        "ka-a-am-ma-ma"
+      ],
+      "line": "Vs. 1",
+      "raw": "]x-taḫ Dka-a-am-ma-ma te-w[u-u-uš-ni",
+      "words": [
+        "kammama"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2",
+      "raw": "[ (-)le-e-pí-in ka-a-at-t[e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 3",
+      "raw": "[ x-li-ik",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ḫa-a-ak-ka-nu",
+        "ta-ni-i-wa-aš"
+      ],
+      "line": "Vs. 4",
+      "raw": "]x ta-ḫa-a-ak-ka-nu ta-ni-i-wa-aš",
+      "words": [
+        "tahakkanu",
+        "taniwas"
+      ]
+    },
+    {
+      "intact": [
+        "ma-ne-ele-e-mu-u-uš"
+      ],
+      "line": "Vs. 5",
+      "raw": "]x ma-ne-e(-)le-e-mu-u-uš 〈〈x〉〉",
+      "words": [
+        "manelemus"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6",
+      "raw": "]-ul",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 7",
+      "raw": "]x-el-tu(-)up-zi-in-ti",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 8",
+      "raw": "]-tu",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-wu-u-uš-ni"
+      ],
+      "line": "Vs. 9",
+      "raw": "-i]l te-wu-u-uš-ni",
+      "words": [
+        "tewusni"
+      ]
+    },
+    {
+      "intact": [
+        "wu-ru-uš-ši-mu-ú"
+      ],
+      "line": "Vs. 10",
+      "raw": "](-)wu-ru-uš-ši-mu-ú",
+      "words": [
+        "wurussimu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 11",
+      "raw": "]x-ma",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.64",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kammama",
+    "tahakkanu",
+    "taniwas",
+    "manelemus",
+    "tewusni",
+    "wurussimu"
+  ]
+}

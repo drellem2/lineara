@@ -1,0 +1,273 @@
+{
+  "cth": "739",
+  "id": 319,
+  "lines": [
+    {
+      "intact": [
+        "ki-ru-ú-ša",
+        "ma-a-i",
+        "tu-u-ḫa-a-aš-ta"
+      ],
+      "line": " {€2} Vs. II 12′",
+      "raw": "ki-ru-ú-ša ma-a-i tu-u-ḫa-a-aš-ta",
+      "words": [
+        "kirusa",
+        "mai",
+        "tuhasta"
+      ]
+    },
+    {
+      "intact": [
+        "la-am-ma-aš-ka-a-i",
+        "wu-u-ru-un-kat-te-e"
+      ],
+      "line": " {€2} Vs. II 13′",
+      "raw": "la-am-ma-aš-ka-a-i wu-u-ru-un-kat-te-e",
+      "words": [
+        "lammaskai",
+        "wurunkatte"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na",
+        "wa-a-ra-ak"
+      ],
+      "line": " {€2} Vs. II 14′",
+      "raw": "ta-ba-ar-na wa-a-ra-ak",
+      "words": [
+        "taparna",
+        "warak"
+      ]
+    },
+    {
+      "intact": [
+        "wa-ra-a-ši-ip",
+        "zu-ú-ru-uš",
+        "ḫé-e-ra"
+      ],
+      "line": " {€2} Vs. II 15′",
+      "raw": "wa-ra-a-ši-ip zu-ú-ru-uš ḫé-e-ra",
+      "words": [
+        "warasip",
+        "zurus",
+        "hera"
+      ]
+    },
+    {
+      "intact": [
+        "ki-i-ia-ru-ú-ša"
+      ],
+      "line": " {€2} Vs. II 16′",
+      "raw": "ki-i-ia-ru-ú-ša",
+      "words": [
+        "kiarusa"
+      ]
+    },
+    {
+      "intact": [
+        "ti-il-ti-li-le-e-u"
+      ],
+      "line": " {€2} Vs. II 17′",
+      "raw": "ti-il-ti-li-le-e-u",
+      "words": [
+        "tiltilileu"
+      ]
+    },
+    {
+      "intact": [
+        "ti-il-ti-li-li-pu-u"
+      ],
+      "line": " {€2} Vs. II 18′",
+      "raw": "ti-il-ti-li-li-pu-u",
+      "words": [
+        "tiltililipu"
+      ]
+    },
+    {
+      "intact": [
+        "ki-ru-ú-ša",
+        "ma-a-i",
+        "tu-u-ḫa-aš-ta"
+      ],
+      "line": " {€2} Rs. III 5",
+      "raw": "ki-ru-ú-ša ma-a-i tu-u-ḫa-aš-ta",
+      "words": [
+        "kirusa",
+        "mai",
+        "tuhasta"
+      ]
+    },
+    {
+      "intact": [
+        "la-am-ma-aš-ka-a-i",
+        "wu-ru-un-kat-te-e"
+      ],
+      "line": " {€2} Rs. III 6",
+      "raw": "la-am-ma-aš-ka-a-i wu-ru-un-kat-te-e",
+      "words": [
+        "lammaskai",
+        "wurunkatte"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na",
+        "wa-a-ra-ak"
+      ],
+      "line": " {€2} Rs. III 7",
+      "raw": "ta-ba-ar-na wa-a-ra-ak",
+      "words": [
+        "taparna",
+        "warak"
+      ]
+    },
+    {
+      "intact": [
+        "wa-a-ra-ši-ip",
+        "zu-ú-ru-uš",
+        "ḫé-e-ra"
+      ],
+      "line": " {€2} Rs. III 8",
+      "raw": "wa-a-ra-ši-ip zu-ú-ru-uš ḫé-e-ra",
+      "words": [
+        "warasip",
+        "zurus",
+        "hera"
+      ]
+    },
+    {
+      "intact": [
+        "ki-i-ia-ru-ú-ša"
+      ],
+      "line": " {€2} Rs. III 9",
+      "raw": "ki-i-ia-ru-ú-ša ti-il-t[i-li-le]-e",
+      "words": [
+        "kiarusa"
+      ]
+    },
+    {
+      "intact": [
+        "ti-il-ti-li-li-pu-u"
+      ],
+      "line": " {€2} Rs. III 10",
+      "raw": "ti-il-ti-li-li-pu-u [ [",
+      "words": [
+        "tiltililipu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III! 2′",
+      "raw": "[ḫar-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III! 3′",
+      "raw": "[wu-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III! 4′",
+      "raw": "[x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. IV!",
+      "raw": "[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a-at-te",
+        "pu-u-la-a-ia-it"
+      ],
+      "line": " {€2} Rs. IV! 2",
+      "raw": "ka-a-at-te pu-u-la-a-ia-it",
+      "words": [
+        "katte",
+        "pulaiait"
+      ]
+    },
+    {
+      "intact": [
+        "ka-at-te",
+        "ta-ba-ar-na-ma"
+      ],
+      "line": " {€2} Rs. IV! 3",
+      "raw": "ka-at-te ta-ba-ar-na-ma",
+      "words": [
+        "katte",
+        "taparnama"
+      ]
+    },
+    {
+      "intact": [
+        "ka-at-te",
+        "ta-a-i-ia",
+        "ú-e-il"
+      ],
+      "line": " {€2} Rs. IV! 4",
+      "raw": "ka-at-te ta-a-i-ia ú-e-il",
+      "words": [
+        "katte",
+        "taia",
+        "ueil"
+      ]
+    },
+    {
+      "intact": [
+        "tu-u-ḫa-aš-ta-il",
+        "ka-at-te"
+      ],
+      "line": " {€2} Rs. IV! 5",
+      "raw": "tu-u-ḫa-aš-ta-il ka-at-te",
+      "words": [
+        "tuhastail",
+        "katte"
+      ]
+    }
+  ],
+  "manuscript": "KUB 12.8+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kirusa",
+    "mai",
+    "tuhasta",
+    "lammaskai",
+    "wurunkatte",
+    "taparna",
+    "warak",
+    "warasip",
+    "zurus",
+    "hera",
+    "kiarusa",
+    "tiltilileu",
+    "tiltililipu",
+    "kirusa",
+    "mai",
+    "tuhasta",
+    "lammaskai",
+    "wurunkatte",
+    "taparna",
+    "warak",
+    "warasip",
+    "zurus",
+    "hera",
+    "kiarusa",
+    "tiltililipu",
+    "katte",
+    "pulaiait",
+    "katte",
+    "taparnama",
+    "katte",
+    "taia",
+    "ueil",
+    "tuhastail",
+    "katte"
+  ]
+}

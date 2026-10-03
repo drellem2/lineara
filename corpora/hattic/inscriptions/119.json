@@ -1,0 +1,116 @@
+{
+  "cth": "639",
+  "id": 119,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 20",
+      "raw": "[la-a-i-ia-a [wa-a [ku-un-na-li [wa-a [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 21",
+      "raw": "[la-a-i-ia-a [wa-a [ku-un-na-li",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a-at-te"
+      ],
+      "line": "Rs. 5′",
+      "raw": "[[ [ [t]a-ba-ar-na ka-a-at-te kur-ku-pí-i[n",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "we-te-e-el"
+      ],
+      "line": "Rs. 6′",
+      "raw": "[[ [ [t]i-ti-wa-at-ti we-te-e-el ta-li-iš-d[u-uš",
+      "words": [
+        "wetel"
+      ]
+    },
+    {
+      "intact": [
+        "pu-ul-pu-ul-li"
+      ],
+      "line": "Rs. 7′",
+      "raw": "[[t]i-du-ú-i pu-ul-pu-ul-li du-wa-wu-ru-u[n",
+      "words": [
+        "pulpulli"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 8′",
+      "raw": "[da-nu-uš-du-uš [ta-ḫé-el-la [ú-un-tu-ú-i [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 9′",
+      "raw": "[ú-un-du-uk [ta-ap-wa-wi [ta-ti-wa-at-ti [ḫa-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 10′",
+      "raw": "[mu-uš-ḫu-il-ta-al [tu-un-tu-up-ti-el-la [pu-u-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 11′",
+      "raw": "[ka-at-ti [wu-u-ru [ḫu-wa-a-ši-wa [ka-at-te [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 12′",
+      "raw": "[ga-am-nu-ú [te-eš-ta [ḫu-ul-la-an [te-eš-wa-aš-ḫu-u-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 13′",
+      "raw": "[wu-u-ru-ḫu-wa-aš-ši-wa [ka-at-te [u-up-wa-ku-u-ia [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 15′",
+      "raw": "[a-i-ku-u-[ia",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 16′",
+      "raw": "[pa-la [ki-ša-az-zi-el",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 17′",
+      "raw": "[a-i-ku-u-ia [a-i-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 18′",
+      "raw": "[pa-la [iš-ki-ia-az-zi-il [===",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 23.97",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "katte",
+    "wetel",
+    "pulpulli"
+  ]
+}

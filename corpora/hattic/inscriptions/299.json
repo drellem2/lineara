@@ -1,0 +1,63 @@
+{
+  "cth": "738",
+  "id": 299,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 9′",
+      "raw": "[ta-aš-š]a-an-ni-[in-na] x [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 10′",
+      "raw": "[ta-aš-ša-a]n-ni-in-[na [ [ta-aš-ša-a]n-ni-in-na",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a-az-ḫa"
+      ],
+      "line": "Vs. I 11′",
+      "raw": "[ [ x ma-a-az-ḫa",
+      "words": [
+        "mazha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 52",
+      "raw": "ta-aš-ša-an-ni-i[n-na]",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-aš-ša-an-ni-in-na"
+      ],
+      "line": "Rs. III 53",
+      "raw": "[ [ ta-aš-ša-an-ni-in-na [ [",
+      "words": [
+        "tassanninna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 54",
+      "raw": "[ [ [t]a-aš-ša-an-ni-in-na[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 55",
+      "raw": "[ [ x [ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 19.163",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "mazha",
+    "tassanninna"
+  ]
+}

@@ -1,15 +1,50 @@
 {
-  "category": "toponym",
-  "gloss": "Ḫattuša (pre-Hittite name)",
+  "cth": "627",
   "id": 70,
-  "is_bilingual": false,
-  "name": "Ḫattuš",
-  "provenance": "Hattic toponym; see citation.",
-  "source_citation": "del Monte, G. F. & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC 6. Wiesbaden: Reichert.",
-  "text": "Ḫattuš",
-  "tier": "B",
-  "transliteration": "hattus",
+  "lines": [
+    {
+      "intact": [
+        "i-im-pu-u"
+      ],
+      "line": "2′",
+      "raw": "i-im-pu-u",
+      "words": [
+        "impu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[ḫu-u-u [i-im-pu-[u",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "12′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "14′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    }
+  ],
+  "manuscript": "KBo 25.46",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "hattus"
+    "impu",
+    "aha",
+    "aha"
   ]
 }

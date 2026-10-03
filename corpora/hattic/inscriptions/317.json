@@ -1,0 +1,157 @@
+{
+  "cth": "738",
+  "id": 317,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€1} 2′",
+      "raw": "[ -ru i-li-lu-w[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} 3′",
+      "raw": "[ [t]a-ba-ar-na [",
+      "words": []
+    },
+    {
+      "intact": [
+        "zi-iz-zi"
+      ],
+      "line": " {€1} 4′",
+      "raw": "[ x-ru-u-wa zi-iz-zi [",
+      "words": [
+        "zizzi"
+      ]
+    },
+    {
+      "intact": [
+        "ku-u-wa-in"
+      ],
+      "line": " {€1} 5′",
+      "raw": "[ [-i]t ku-u-wa-in ḫa-aš-ša-x[",
+      "words": [
+        "kuwain"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} 6′",
+      "raw": "[ x-el [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} 7′",
+      "raw": "[ (-)a-a-az-za-i-u a-a-az-i-u-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} 8′",
+      "raw": "[ [Dt]e-li-pí-nu-un ma-aš-da-ḫu-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "up-pa-te-ez-za"
+      ],
+      "line": " {€1} 9′",
+      "raw": "[ [z]i-iz-za-i-ia up-pa-te-ez-za AN[",
+      "words": [
+        "uppatezza"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} 10′",
+      "raw": "[ x-ia-ḫa-at-ti mu-ú-wa-a-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} 11′",
+      "raw": "[ [-w]a-a-la i-ia-a-aš-š[u-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} 12′",
+      "raw": "[ [d]a-wa-na-an-na i-la-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€4+1} Rs. 13′/13′",
+      "raw": "[ x[ x-i-ia [ [ x-a eš-ta-wu-úr-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "i-li-lu-wa-a-i-ia",
+        "eš-ta-wu-úr"
+      ],
+      "line": " {€4+1} Rs. 14′/14′",
+      "raw": "[ i-li-lu-wa-a-i-ia eš-ta-wu-úr ma-a-[",
+      "words": [
+        "ililuwaia",
+        "estawur"
+      ]
+    },
+    {
+      "intact": [
+        "ka-az-zu-ma"
+      ],
+      "line": " {€4} Rs. 15′",
+      "raw": "[ x-wa ka-az-zu-ma i-im-ma-ta-a-x[",
+      "words": [
+        "kazzuma"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a-ti-i-li",
+        "pa-la",
+        "mi-in-zu-u"
+      ],
+      "line": " {€4} Rs. 16′",
+      "raw": "[ ma-a-ti-i-li pa-la mi-in-zu-u mi-in-x[",
+      "words": [
+        "matili",
+        "pala",
+        "minzu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€4} Rs. 17′",
+      "raw": "[ [-t]a-aš-šu a-ḫa-al-w[a- [ x-ma-an-ta-aš-šu AN-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "an-ni-i"
+      ],
+      "line": " {€4} Rs. 18′",
+      "raw": "[ [ti-il-li-i]a an-ni-i ku-u[z]-ni [",
+      "words": [
+        "anni"
+      ]
+    }
+  ],
+  "manuscript": "KUB 32.83+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "zizzi",
+    "kuwain",
+    "uppatezza",
+    "ililuwaia",
+    "estawur",
+    "kazzuma",
+    "matili",
+    "pala",
+    "minzu",
+    "anni"
+  ]
+}

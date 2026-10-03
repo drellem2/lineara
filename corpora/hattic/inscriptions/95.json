@@ -1,0 +1,42 @@
+{
+  "cth": "627",
+  "id": 95,
+  "lines": [
+    {
+      "intact": [
+        "li-i-na-ia",
+        "li-i-na-ia"
+      ],
+      "line": "Vs. II 16",
+      "raw": "li-i-na-ia li-i-na-ia",
+      "words": [
+        "linaia",
+        "linaia"
+      ]
+    },
+    {
+      "intact": [
+        "wa-pí-iš",
+        "kur-ku-wa-na",
+        "li-ga-ra-an"
+      ],
+      "line": "Vs. II 17",
+      "raw": "wa-pí-iš kur-ku-wa-na li-ga-ra-an",
+      "words": [
+        "wapis",
+        "kurkuwana",
+        "likaran"
+      ]
+    }
+  ],
+  "manuscript": "KUB 48.9",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "linaia",
+    "linaia",
+    "wapis",
+    "kurkuwana",
+    "likaran"
+  ]
+}

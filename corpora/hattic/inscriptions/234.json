@@ -1,0 +1,40 @@
+{
+  "cth": "732",
+  "id": 234,
+  "lines": [
+    {
+      "intact": [
+        "le-e-ga-ra-a-at"
+      ],
+      "line": "Rs. (III) 14′",
+      "raw": "le-e]-ga-ra-a-at",
+      "words": [
+        "lekarat"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. (III) 15′",
+      "raw": "]x-ḫu-u-uš-pár-ta",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. (III) 16′",
+      "raw": "]x-e-wa-wa-aḫ",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. (III) 17′",
+      "raw": "]",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 42.8",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lekarat"
+  ]
+}

@@ -1,15 +1,61 @@
 {
-  "category": "theonym",
-  "gloss": "god",
+  "cth": "450",
   "id": 17,
-  "is_bilingual": false,
-  "name": "Zilipuri",
-  "provenance": "Hattic theonym; see citation.",
-  "source_citation": "Klinger, J. (1996). Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden: Harrassowitz.",
-  "text": "Zilipuri",
-  "tier": "A",
-  "transliteration": "zilipuri",
+  "lines": [
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": " {€1+2} Vs. 26",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1+2} Vs. 30",
+      "raw": "[a-ḫ]a-a",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": " {€1+2} Vs. 35",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": " {€1+2} Rs. 2",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": " {€1+2} Rs. 5",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    }
+  ],
+  "manuscript": "KUB 39.4+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "zilipuri"
+    "aha",
+    "aha",
+    "aha",
+    "aha"
   ]
 }

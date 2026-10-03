@@ -1,0 +1,104 @@
+{
+  "cth": "745",
+  "id": 553,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1",
+      "raw": "]x x x te-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2",
+      "raw": "[ x-ḫu al-sa-a(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3",
+      "raw": "[ (-)ša-a-an-zi-in(-)[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a"
+      ],
+      "line": "4",
+      "raw": "[ ma-a zi-in-ti-zi-ia-ú(-)[",
+      "words": [
+        "ma"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "5",
+      "raw": "[ x-ši-i-mi-si-i-wa [",
+      "words": []
+    },
+    {
+      "intact": [
+        "eš-wa-a-al-wa-la"
+      ],
+      "line": "6",
+      "raw": "[ eš-wa-a-al-wa-la [",
+      "words": [
+        "eswalwala"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "7",
+      "raw": "[ še-eš-wi-it-ḫa-a-i-pí-n[i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8",
+      "raw": "[ še-eš-wi-it-ḫa-a-i-pí-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ne-ep-zi-ia-ú"
+      ],
+      "line": "9",
+      "raw": "[ x ne-ep-zi-ia-ú [",
+      "words": [
+        "nepziau"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "10",
+      "raw": "[ x-ne-ep-ka-a-ra [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "11",
+      "raw": "[ [š]a-a-li-ú-un a-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "12",
+      "raw": "[ še-et-wa-a(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "13",
+      "raw": "[ x-wa-a-i-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.33",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ma",
+    "eswalwala",
+    "nepziau"
+  ]
+}

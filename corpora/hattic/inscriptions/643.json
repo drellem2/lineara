@@ -1,0 +1,91 @@
+{
+  "cth": "820",
+  "id": 643,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 7",
+      "raw": "]x up-pí-i[n(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 8",
+      "raw": "]-in-ni",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 9",
+      "raw": "]x ka-az-m[e- [ x-x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10",
+      "raw": "]x-ti-ni",
+      "words": []
+    },
+    {
+      "intact": [
+        "wu-uḫ-ne-et-ti-in-ni"
+      ],
+      "line": "Vs. 11",
+      "raw": "-a]ḫ wu-uḫ-ne-et-ti-in-ni",
+      "words": [
+        "wuhnettinni"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 12",
+      "raw": "]-un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 13",
+      "raw": "]DUTU-an",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ta-e-et"
+      ],
+      "line": "Vs. 14",
+      "raw": "-i]l ta-ta-e-et",
+      "words": [
+        "tataet"
+      ]
+    },
+    {
+      "intact": [
+        "pí-na-am-mu-ul"
+      ],
+      "line": "Vs. 15",
+      "raw": "(-)p]í-na-am-mu-ul",
+      "words": [
+        "pinammul"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-pal-ki-an"
+      ],
+      "line": "Vs. 16",
+      "raw": "] ḫa-pal-ki-an",
+      "words": [
+        "hapalkian"
+      ]
+    }
+  ],
+  "manuscript": "KUB 48.15",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wuhnettinni",
+    "tataet",
+    "pinammul",
+    "hapalkian"
+  ]
+}

@@ -1,0 +1,877 @@
+{
+  "cth": "726",
+  "id": 199,
+  "lines": [
+    {
+      "intact": [
+        "eš-ta-a-an",
+        "la-aḫ-za-an",
+        "le-e-we-e-el"
+      ],
+      "line": "Vs. 3a",
+      "raw": "eš-ta-a-an URUla-aḫ-za-an le-e-we-e-el",
+      "words": [
+        "estan",
+        "lahzan",
+        "lewel"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-te-eḫ",
+        "pa-la",
+        "a-aš-taḫ-ḫi-il-ma"
+      ],
+      "line": "Vs. 4a",
+      "raw": "a-an-te-eḫ pa-la a-aš-taḫ-ḫi-il-ma",
+      "words": [
+        "anteh",
+        "pala",
+        "astahhilma"
+      ]
+    },
+    {
+      "intact": [
+        "še-mu-na-a-mu-na",
+        "ta-a-ru",
+        "ka-a-at-te"
+      ],
+      "line": "Vs. 5a",
+      "raw": "še-mu-na-a-mu-na Dta-a-ru ka-a-at-te",
+      "words": [
+        "semunamuna",
+        "taru",
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-lu-wa-ni",
+        "ka-a-at-te",
+        "eš-ta-a-an-ḫu"
+      ],
+      "line": "Vs. 6a",
+      "raw": "Dle-e-lu-wa-ni ka-a-at-te eš-ta-a-an-ḫu",
+      "words": [
+        "leluwani",
+        "katte",
+        "estanhu"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-we-e-el",
+        "a-an-te-eḫ",
+        "pa-la",
+        "a-an-za-ar-aš-ma"
+      ],
+      "line": "Vs. 7a",
+      "raw": "le-e-we-e-el a-an-te-eḫ pa-la a-an-za-ar-aš-ma",
+      "words": [
+        "lewel",
+        "anteh",
+        "pala",
+        "anzarasma"
+      ]
+    },
+    {
+      "intact": [
+        "ka-taḫ-zi-wu-re-e-šu"
+      ],
+      "line": "Vs. 8a",
+      "raw": "Dka-taḫ-zi-wu-re-e-šu",
+      "words": [
+        "katahziwuresu"
+      ]
+    },
+    {
+      "intact": [
+        "we-e-el-ḫu",
+        "tu-ú-lu-ma",
+        "ú-mar-ku-up"
+      ],
+      "line": "Vs. 9a",
+      "raw": "we-e-el-ḫu tu-ú-lu-ma ú-mar-ku-up",
+      "words": [
+        "welhu",
+        "tuluma",
+        "umarkup"
+      ]
+    },
+    {
+      "intact": [
+        "a-aḫ-pa",
+        "ka-taḫ-zi-wu-ri",
+        "ú-uk-šu-pa"
+      ],
+      "line": "Vs. 10a",
+      "raw": "a-aḫ-pa Dka-taḫ-zi-wu-ri ú-uk-šu-pa",
+      "words": [
+        "ahpa",
+        "katahziwuri",
+        "uksupa"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-lu-ma",
+        "wa-a-mar-ku-up",
+        "pa-la",
+        "a-an-za-ar-aš-ma"
+      ],
+      "line": "Vs. 11a",
+      "raw": "ta-a-lu-ma wa-a-mar-ku-up pa-la a-an-za-ar-aš-ma",
+      "words": [
+        "taluma",
+        "wamarkup",
+        "pala",
+        "anzarasma"
+      ]
+    },
+    {
+      "intact": [
+        "u-re-e-eš",
+        "ḫu-uz-za-aš-ša-a-i-šu",
+        "a-na-a-mi-ša-a"
+      ],
+      "line": "Vs. 12a",
+      "raw": "u-re-e-eš ḫu-uz-za-aš-ša-a-i-šu a-na-a-mi-ša-a",
+      "words": [
+        "ures",
+        "huzzassaisu",
+        "anamisa"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-pal-ki-ia-an",
+        "kur-ku-u-pa-al"
+      ],
+      "line": "Vs. 13a",
+      "raw": "ḫa-pal-ki-ia-an kur-ku-u-pa-al ši-ni-i-t[e-en]",
+      "words": [
+        "hapalkian",
+        "kurkupal"
+      ]
+    },
+    {
+      "intact": [
+        "iš-ki-na-a-wa-ar",
+        "mu-wa-ak-ku-u-pa-ak-ku-u"
+      ],
+      "line": "Vs. 14a",
+      "raw": "iš-ki-na-a-wa-ar mu-wa-ak-ku-u-pa-ak-ku-u",
+      "words": [
+        "iskinawar",
+        "muwakkupakku"
+      ]
+    },
+    {
+      "intact": [
+        "mi-ša-a",
+        "ḫa-pal-ki-ia-an",
+        "ka-a-la-pu-pí-še-e-et"
+      ],
+      "line": "Vs. 15a",
+      "raw": "mi-ša-a ḫa-pal-ki-ia-an ka-a-la-pu-pí-še-e-et",
+      "words": [
+        "misa",
+        "hapalkian",
+        "kalapupiset"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-mar",
+        "iš-tar-ra-a-zi-il",
+        "ḫa-nu-ú-wa-pa"
+      ],
+      "line": "Vs. 16a",
+      "raw": "ka-a-mar iš-tar-ra-a-zi-il ḫa-nu-ú-wa-pa",
+      "words": [
+        "kamar",
+        "istarrazil",
+        "hanuwapa"
+      ]
+    },
+    {
+      "intact": [
+        "tu-ú-up-kar-ga-ra-aš"
+      ],
+      "line": "Vs. 17a",
+      "raw": "Dḫa-ša-am-mi-i-i[l] tu-ú-up-kar-ga-ra-aš",
+      "words": [
+        "tupkarkaras"
+      ]
+    },
+    {
+      "intact": [
+        "i-wa-a-wa-aš-ke-el"
+      ],
+      "line": "Vs. 18a",
+      "raw": "wa-a-aš-ḫa-p[u]-u[n [ i-wa-a-wa-aš-ke-el",
+      "words": [
+        "iwawaskel"
+      ]
+    },
+    {
+      "intact": [
+        "za-ri-ú-um-pa"
+      ],
+      "line": "Vs. 19a",
+      "raw": "te-e-[ [ -le-e za-ri-ú-um-pa",
+      "words": [
+        "zariumpa"
+      ]
+    },
+    {
+      "intact": [
+        "te-e-wa-pu-ú-le-e"
+      ],
+      "line": "Vs. 20a",
+      "raw": "t[e]-p[í]-x [ wu-ú-ru-uš te-e-wa-pu-ú-le-e",
+      "words": [
+        "tewapule"
+      ]
+    },
+    {
+      "intact": [
+        "wa-a-aš-ḫa-ap",
+        "a-aš-pu"
+      ],
+      "line": "Vs. 21a",
+      "raw": "te-e-x[ [ (-)eš-pu-ú wa-a-aš-ḫa-ap a-aš-pu",
+      "words": [
+        "washap",
+        "aspu"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "ka-taḫ-zi-i-wu-ri"
+      ],
+      "line": "Vs. 22a",
+      "raw": "pa-la [ [ -ma Dka-taḫ-zi-i-wu-ri",
+      "words": [
+        "pala",
+        "katahziwuri"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "ḫa-pal-ki-ia-an",
+        "te-te-ku-uz-za-an"
+      ],
+      "line": "Vs. 23a",
+      "raw": "pa-la [a-am-mi-i]š ḫa-pal-ki-ia-an te-te-ku-uz-za-an",
+      "words": [
+        "pala",
+        "hapalkian",
+        "tetekuzzan"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "a-am-pu-ša-an",
+        "ša-a-ḫi-iš"
+      ],
+      "line": "Vs. 24a",
+      "raw": "pa-la [ [ a-am-pu-ša-an ša-a-ḫi-iš",
+      "words": [
+        "pala",
+        "ampusan",
+        "sahis"
+      ]
+    },
+    {
+      "intact": [
+        "le-e",
+        "a-am-pu-ša-an"
+      ],
+      "line": "Vs. 25a",
+      "raw": "le-e [ [pár-nu]-u-ul-li a-am-pu-ša-an",
+      "words": [
+        "le",
+        "ampusan"
+      ]
+    },
+    {
+      "intact": [
+        "ku-úr-ta-a-pí",
+        "a-am-mi-iš"
+      ],
+      "line": "Vs. 26a",
+      "raw": "ki-i-[ [ [l]e-e ku-úr-ta-a-pí a-am-mi-iš",
+      "words": [
+        "kurtapi",
+        "ammis"
+      ]
+    },
+    {
+      "intact": [
+        "ka-taḫ-zi-i-wu-ri"
+      ],
+      "line": "Vs. 27a",
+      "raw": "zi-i-[la-a-at] Dka-taḫ-zi-i-wu-ri",
+      "words": [
+        "katahziwuri"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 28a",
+      "raw": "pa-l[a [ x-ni-wa-pa",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ke-e-ḫa-ú-un"
+      ],
+      "line": "Vs. 29a",
+      "raw": "x[ [ -wa ta-ke-e-ḫa-ú-un",
+      "words": [
+        "takehaun"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-ap-ra-aš-šu-un",
+        "a-am-mi-iš-ma"
+      ],
+      "line": "Vs. 30a",
+      "raw": "[ [ [ [ [-w]a ḫa-ap-ra-aš-šu-un a-am-mi-iš-ma",
+      "words": [
+        "haprassun",
+        "ammisma"
+      ]
+    },
+    {
+      "intact": [
+        "nu-uš-ta-a-wa-ar"
+      ],
+      "line": "Vs. 31a",
+      "raw": "[ [ -ar nu-uš-ta-a-wa-ar",
+      "words": [
+        "nustawar"
+      ]
+    },
+    {
+      "intact": [
+        "eš-ta-a-wa-ar"
+      ],
+      "line": "Vs. 32a",
+      "raw": "[ [ -ma-a-i-ú eš-ta-a-wa-ar",
+      "words": [
+        "estawar"
+      ]
+    },
+    {
+      "intact": [
+        "a-am-mi-iš-ma",
+        "ú-te-la-a"
+      ],
+      "line": "Vs. 33a",
+      "raw": "[ [ -x a-am-mi-iš-ma ú-te-la-a",
+      "words": [
+        "ammisma",
+        "utela"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 34a",
+      "raw": "[ [ -nu-uš-ta-a-wa-ar",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-el-wa-ni",
+        "a-ša-a-ḫu"
+      ],
+      "line": "Vs. 35a",
+      "raw": "[ [ Dle-el-wa-ni a-ša-a-ḫu",
+      "words": [
+        "lelwani",
+        "asahu"
+      ]
+    },
+    {
+      "intact": [
+        "i-tu-ú-e",
+        "ú-wa-e-el"
+      ],
+      "line": "Vs. 36a",
+      "raw": "[ [ -ú-pe-eš i-tu-ú-e ú-wa-e-el",
+      "words": [
+        "itue",
+        "uwael"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "ḫa-na-a-ú"
+      ],
+      "line": "Vs. 37a",
+      "raw": "-i]l pa-la ḫa-na-a-ú",
+      "words": [
+        "pala",
+        "hanau"
+      ]
+    },
+    {
+      "intact": [
+        "le-e"
+      ],
+      "line": "Vs. 38a",
+      "raw": "]x-ḫa-an-ti Dta-a-ru-u-u[n] le-e",
+      "words": [
+        "le"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "a-aš-mi-iš"
+      ],
+      "line": "Vs. 39a",
+      "raw": "[ [ -wa pa-la a-aš-mi-iš za-x-[ [ -a-ú-e",
+      "words": [
+        "pala",
+        "asmis"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 40a",
+      "raw": "[ [ -ar nu-uš-ta-w[a-a-a]r",
+      "words": []
+    },
+    {
+      "intact": [
+        "pu-la-a-aš-ne"
+      ],
+      "line": "Vs. 41a",
+      "raw": "[ [ -a-aš-wa pu-la-a-aš-ne [e]š-ta-wa-ar",
+      "words": [
+        "pulasne"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 42a",
+      "raw": "[ [ [nu-uš-t]a-wa-ar",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 43a",
+      "raw": "[ [ x-ḫa-an-ti-ma pí-in-t[u-ug-ga]-ra-a-am",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 44a",
+      "raw": "[ [ x(-)zi-iš-ḫa te-w[a- [ -ne",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 45a",
+      "raw": "[ [ [-a]r nu-uš-t[a-wa-a]r",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 46a",
+      "raw": "[ [ -ḫa-an-ti an-ti-x[ [ -x-wa-a-aš-ša",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 47a",
+      "raw": "[ [ -a-wa-[a]r",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 48a",
+      "raw": "[ [ -a-wa-[a]r",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a-la-wa-e"
+      ],
+      "line": "Vs. 49a",
+      "raw": "[ [ [-l]u ka-a-la-wa-e [ [",
+      "words": [
+        "kalawae"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-mi-lu-u-up"
+      ],
+      "line": "Vs. 50a",
+      "raw": "[Dta-a-r]u-u-un le-e-mi-lu-u-up",
+      "words": [
+        "lemilup"
+      ]
+    },
+    {
+      "intact": [
+        "an-ti-i-u",
+        "i-wa-a-ak-ka-iš"
+      ],
+      "line": "Vs. 51a",
+      "raw": "[ [ -x-te an-ti-i-u i-wa-a-ak-ka-iš",
+      "words": [
+        "antiu",
+        "iwakkais"
+      ]
+    },
+    {
+      "intact": [
+        "tu-ú-un-ki"
+      ],
+      "line": "Vs. 52a",
+      "raw": "[ [ -x-[t]u tu-ú-un-ki Dta-ru-u-u[n",
+      "words": [
+        "tunki"
+      ]
+    },
+    {
+      "intact": [
+        "tu-ú-un-di"
+      ],
+      "line": "Vs. 53a",
+      "raw": "[[ [ [-u]n tu-ú-un-di",
+      "words": [
+        "tunti"
+      ]
+    },
+    {
+      "intact": [
+        "tu-un-ki",
+        "eš-ta-nu-ú-un"
+      ],
+      "line": "Vs. 54a",
+      "raw": "[ [ x tu-un-ki eš-ta-nu-ú-un",
+      "words": [
+        "tunki",
+        "estanun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 55a",
+      "raw": "[ [ -x-el",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-aš-wa-ti-iḫ-ma"
+      ],
+      "line": "Rs. 1a",
+      "raw": "[[ [ x a-aš-wa-ti-iḫ-ma",
+      "words": [
+        "aswatihma"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-at-te-e"
+      ],
+      "line": "Rs. 2a",
+      "raw": "[ [ [URUḫa-at-t]u-uš ka-a-at-te-e",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-we-e-el"
+      ],
+      "line": "Rs. 3a",
+      "raw": "[ [ x le-e-we-e-el",
+      "words": [
+        "lewel"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-ḫa-ak-ka-nu"
+      ],
+      "line": "Rs. 4a",
+      "raw": "[ [ x-ka-ma-a-aš-we-iš a-an-ḫa-ak-ka-nu",
+      "words": [
+        "anhakkanu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-an",
+        "ka-a-at-te"
+      ],
+      "line": "Rs. 5a",
+      "raw": "[ [ -wa-aš ta-ba-ar-na-an ka-a-at-te",
+      "words": [
+        "taparnan",
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "ta-wa-an-na-an-na"
+      ],
+      "line": "Rs. 6a",
+      "raw": "[ [ x-ka-ni-i-wa-aš MUNUSta-wa-an-na-an-na",
+      "words": [
+        "tawannanna"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-mu-u-ḫa-le-e"
+      ],
+      "line": "Rs. 7a",
+      "raw": "[ [ -e ka-a-mu-u-ḫa-le-e",
+      "words": [
+        "kamuhale"
+      ]
+    },
+    {
+      "intact": [
+        "wa-aš-tu-uš"
+      ],
+      "line": "Rs. 8a",
+      "raw": "[ [ -x-il wa-aš-tu-uš ta-a-ak-ku-u[r]",
+      "words": [
+        "wastus"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 9a",
+      "raw": "[ [ [ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "iš-ki-na-a-wa-ar"
+      ],
+      "line": "Rs. 10′a",
+      "raw": "[ [ x-wa iš-ki-na-a-wa-ar l[i- [ -x-zi-i-en",
+      "words": [
+        "iskinawar"
+      ]
+    },
+    {
+      "intact": [
+        "iš-ki-na-a-wa-ar"
+      ],
+      "line": "Rs. 11′a",
+      "raw": "[ [ [-i]š iš-ki-na-a-wa-ar pa-ak-[ku-pa]-ku-u",
+      "words": [
+        "iskinawar"
+      ]
+    },
+    {
+      "intact": [
+        "iš-ki-na-a-wa-ar"
+      ],
+      "line": "Rs. 12′a",
+      "raw": "[ [ -iš iš-ki-na-a-wa-ar",
+      "words": [
+        "iskinawar"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 13′a",
+      "raw": "[ [ [kur-k]u-u-pa-al a-[a]š-ḫa-aš-tu-úr",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-le-e-ek-ki-iš"
+      ],
+      "line": "Rs. 14′a",
+      "raw": "[ [ [wa-š]a-a-ḫi-in ḫa-le-e-ek-ki-iš",
+      "words": [
+        "halekkis"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 15′a",
+      "raw": "[ [ -a-na-a-an le-e-a-[le-e-ep]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 16′a",
+      "raw": "[ [ [ga-t]a-ak-ku-ú-mu-ú-un e[š-ša]-a-le-e-ep",
+      "words": []
+    },
+    {
+      "intact": [
+        "eš-ša-a-le-e-ep"
+      ],
+      "line": "Rs. 17′a",
+      "raw": "[ [ [wa-š]a-a-ḫi-in eš-ša-a-le-e-ep",
+      "words": [
+        "essalep"
+      ]
+    },
+    {
+      "intact": [
+        "te-eš-te-ta-nu",
+        "le-e-a-le-e-ep"
+      ],
+      "line": "Rs. 18′a",
+      "raw": "[ [ [wa-š]a-aḫ te-eš-te-ta-nu le-e-a-le-e-ep",
+      "words": [
+        "testetanu",
+        "lealep"
+      ]
+    },
+    {
+      "intact": [
+        "še-e-a-le-e-ep"
+      ],
+      "line": "Rs. 19′a",
+      "raw": "[ [ [Dk]a-taḫ-zi-wu-re-en še-e-a-le-e-ep",
+      "words": [
+        "sealep"
+      ]
+    },
+    {
+      "intact": [
+        "wa-aš-ḫa-ap"
+      ],
+      "line": "Rs. 20′a",
+      "raw": "[ [ -i-n[a] ip-[ [ -ú wa-aš-ḫa-ap",
+      "words": [
+        "washap"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 21′a",
+      "raw": "[ [ -pu",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.1",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "estan",
+    "lahzan",
+    "lewel",
+    "anteh",
+    "pala",
+    "astahhilma",
+    "semunamuna",
+    "taru",
+    "katte",
+    "leluwani",
+    "katte",
+    "estanhu",
+    "lewel",
+    "anteh",
+    "pala",
+    "anzarasma",
+    "katahziwuresu",
+    "welhu",
+    "tuluma",
+    "umarkup",
+    "ahpa",
+    "katahziwuri",
+    "uksupa",
+    "taluma",
+    "wamarkup",
+    "pala",
+    "anzarasma",
+    "ures",
+    "huzzassaisu",
+    "anamisa",
+    "hapalkian",
+    "kurkupal",
+    "iskinawar",
+    "muwakkupakku",
+    "misa",
+    "hapalkian",
+    "kalapupiset",
+    "kamar",
+    "istarrazil",
+    "hanuwapa",
+    "tupkarkaras",
+    "iwawaskel",
+    "zariumpa",
+    "tewapule",
+    "washap",
+    "aspu",
+    "pala",
+    "katahziwuri",
+    "pala",
+    "hapalkian",
+    "tetekuzzan",
+    "pala",
+    "ampusan",
+    "sahis",
+    "le",
+    "ampusan",
+    "kurtapi",
+    "ammis",
+    "katahziwuri",
+    "takehaun",
+    "haprassun",
+    "ammisma",
+    "nustawar",
+    "estawar",
+    "ammisma",
+    "utela",
+    "lelwani",
+    "asahu",
+    "itue",
+    "uwael",
+    "pala",
+    "hanau",
+    "le",
+    "pala",
+    "asmis",
+    "pulasne",
+    "kalawae",
+    "lemilup",
+    "antiu",
+    "iwakkais",
+    "tunki",
+    "tunti",
+    "tunki",
+    "estanun",
+    "aswatihma",
+    "katte",
+    "lewel",
+    "anhakkanu",
+    "taparnan",
+    "katte",
+    "tawannanna",
+    "kamuhale",
+    "wastus",
+    "iskinawar",
+    "iskinawar",
+    "iskinawar",
+    "halekkis",
+    "essalep",
+    "testetanu",
+    "lealep",
+    "sealep",
+    "washap"
+  ]
+}

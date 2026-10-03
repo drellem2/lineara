@@ -1,0 +1,99 @@
+{
+  "cth": "738",
+  "id": 314,
+  "lines": [
+    {
+      "intact": [
+        "te-li-pí-nu"
+      ],
+      "line": "Vs. 4′",
+      "raw": "-z]a-aš-ta Dte-li-pí-nu ma-a[š- [",
+      "words": [
+        "telipinu"
+      ]
+    },
+    {
+      "intact": [
+        "te-te-eš-ḫa-pí-in"
+      ],
+      "line": "Vs. 5′",
+      "raw": "Dte]-te-eš-ḫa-pí-in ma-aš-ta-a-ú-ru-x[ [",
+      "words": [
+        "teteshapin"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′",
+      "raw": "-t]a-i-li a-an-nu-u-ru-zi(-)x[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-li-pí-nu",
+        "ta-ba-ar-na"
+      ],
+      "line": "Vs. 7′",
+      "raw": "] Dte-li-pí-nu ta-ba-ar-na",
+      "words": [
+        "telipinu",
+        "taparna"
+      ]
+    },
+    {
+      "intact": [
+        "ú-wa-a-i-zi"
+      ],
+      "line": "Vs. 8′",
+      "raw": "]x-zi-iz-za-ia ú-wa-a-i-zi",
+      "words": [
+        "uwaizi"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na"
+      ],
+      "line": "Vs. 9′",
+      "raw": "] ta-ba-ar-na",
+      "words": [
+        "taparna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 10″",
+      "raw": "]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 11″",
+      "raw": "]x x-ma-wa-wi-pí-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 12″",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 13″",
+      "raw": "]x-zi",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.57",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "telipinu",
+    "teteshapin",
+    "telipinu",
+    "taparna",
+    "uwaizi",
+    "taparna"
+  ]
+}

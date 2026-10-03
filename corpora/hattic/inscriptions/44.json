@@ -1,15 +1,44 @@
 {
-  "category": "lexeme",
-  "gloss": "throne",
+  "cth": "612",
   "id": 44,
-  "is_bilingual": true,
-  "name": "ḫanwašuit",
-  "provenance": "Source of the theonym Ḫalmašuit.",
-  "source_citation": "Soysal, O. (2004). Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.",
-  "text": "ḫanwašuit",
-  "tier": "A",
-  "transliteration": "hanwasuit",
+  "lines": [
+    {
+      "intact": [
+        "ta-li-i-ša"
+      ],
+      "line": "Vs. I 20",
+      "raw": "ta-li-i-ša",
+      "words": [
+        "talisa"
+      ]
+    },
+    {
+      "intact": [
+        "mi-iš-ša"
+      ],
+      "line": "Rs. IV 22",
+      "raw": "mi-iš-ša",
+      "words": [
+        "missa"
+      ]
+    },
+    {
+      "intact": [
+        "me-iš-ša-a"
+      ],
+      "line": "Rs. VI 17",
+      "raw": "me-iš-ša-a",
+      "words": [
+        "meissa"
+      ]
+    }
+  ],
+  "manuscript": "KBo 4.9",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "hanwasuit"
+    "talisa",
+    "missa",
+    "meissa"
   ]
 }

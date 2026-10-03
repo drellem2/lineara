@@ -1,0 +1,183 @@
+{
+  "cth": "744",
+  "id": 435,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. II 1",
+      "raw": "]-te-wa",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-et-ti-wa"
+      ],
+      "line": "Vs. II 2",
+      "raw": "]x-ta-a-le-wa te-et-ti-waₓ",
+      "words": [
+        "tettiwa"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "ta-a-ḫe-el-ma"
+      ],
+      "line": "Vs. II 3",
+      "raw": "]x pa-la ta-a-ḫe-el-ma",
+      "words": [
+        "pala",
+        "tahelma"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-te-eš-tu"
+      ],
+      "line": "Vs. II 4",
+      "raw": "-n]u ḫa-te-eš-tu",
+      "words": [
+        "hatestu"
+      ]
+    },
+    {
+      "intact": [
+        "in-da-a"
+      ],
+      "line": "Vs. II 5",
+      "raw": "]x in-da-a",
+      "words": [
+        "inta"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 6",
+      "raw": "]-az-pa eš-ta-a-ak-tu-[w]e-en-t[u]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 7",
+      "raw": "]-ru-pa-a-ti",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-li",
+        "i-tu-u-ul-le-e"
+      ],
+      "line": "Vs. II 8",
+      "raw": "]x pa-li i-tu-u-ul-le-e",
+      "words": [
+        "pali",
+        "itulle"
+      ]
+    },
+    {
+      "intact": [
+        "šu-úr-ma-ik-ḫa-na"
+      ],
+      "line": "Vs. II 9",
+      "raw": "]x-šu-u-ut šu-úr-ma-ik-ḫa-na",
+      "words": [
+        "surmaikhana"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 10",
+      "raw": "]x-ḫa-a-na-ne-ša-az",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ta-ka-a-aḫ-za-aš"
+      ],
+      "line": "Vs. II 11",
+      "raw": "]x a-ta-ka-a-aḫ-za-aš",
+      "words": [
+        "atakahzas"
+      ]
+    },
+    {
+      "intact": [
+        "te-e-ḫe-et-wa"
+      ],
+      "line": "Vs. II 12",
+      "raw": "]x-ḫu te-e-ḫe-et-wa",
+      "words": [
+        "tehetwa"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-ta-i"
+      ],
+      "line": "Vs. II 13",
+      "raw": "] a-an-ta-i",
+      "words": [
+        "antai"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 14",
+      "raw": "]x-ta-i a-an-ta-i-x",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-mu-uḫ",
+        "a-an-ta-i-wa"
+      ],
+      "line": "Vs. II 15",
+      "raw": "l]i-mu-uḫ a-an-ta-i-wa",
+      "words": [
+        "limuh",
+        "antaiwa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 16",
+      "raw": "-r]u-mu-šu-mu a-[an-t]a-i-wa",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-an-ta-i-wa"
+      ],
+      "line": "Vs. II 17",
+      "raw": "a-an]-ta-i-wa",
+      "words": [
+        "antaiwa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 18",
+      "raw": "]x-ri",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.81",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tettiwa",
+    "pala",
+    "tahelma",
+    "hatestu",
+    "inta",
+    "pali",
+    "itulle",
+    "surmaikhana",
+    "atakahzas",
+    "tehetwa",
+    "antai",
+    "limuh",
+    "antaiwa",
+    "antaiwa"
+  ]
+}

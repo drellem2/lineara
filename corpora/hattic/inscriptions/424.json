@@ -1,0 +1,63 @@
+{
+  "cth": "744",
+  "id": 424,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 2′",
+      "raw": "-u-ḫu wu-u-ri-šu-u-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "mi-iš"
+      ],
+      "line": "Vs. 3′",
+      "raw": "[-g]a-am-za mi-iš x[",
+      "words": [
+        "mis"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′",
+      "raw": "[ x-mu-ur ga-az-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5′",
+      "raw": "[-i]p-pé ši-du-u[p",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′",
+      "raw": "[-t]e-še-e-pal ma-a-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-še-el-la"
+      ],
+      "line": "Vs. 7′",
+      "raw": "[ x ma-še-el-la ú-x[",
+      "words": [
+        "masella"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 8′",
+      "raw": "[ ḫa-a-pa(-)li-li(-)ú(-)tap-nu(-)[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 8.139",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "mis",
+    "masella"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "cth": "745",
+  "id": 493,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Rs.? 1′",
+      "raw": "]x x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 2′",
+      "raw": "]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 3′",
+      "raw": "]x(-)li-pí-i-in",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa",
+        "ga-ni-wa-šu"
+      ],
+      "line": "Rs.? 4′",
+      "raw": "(-)w]a ga-ni-wa-šu",
+      "words": [
+        "wa",
+        "kaniwasu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs.? 5′",
+      "raw": "]x[ x x[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.123",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wa",
+    "kaniwasu"
+  ]
+}

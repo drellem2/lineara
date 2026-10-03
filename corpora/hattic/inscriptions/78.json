@@ -1,15 +1,230 @@
 {
-  "category": "toponym",
-  "gloss": "town",
+  "cth": "627",
   "id": 78,
-  "is_bilingual": false,
-  "name": "Ankuwa",
-  "provenance": "Hattic toponym; see citation.",
-  "source_citation": "del Monte, G. F. & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC 6. Wiesbaden: Reichert.",
-  "text": "Ankuwa",
-  "tier": "B",
-  "transliteration": "ankuwa",
+  "lines": [
+    {
+      "intact": [],
+      "line": "{€6+4+7} r. Kol. 3′/3′/Vs. II 12",
+      "raw": "[ [ [l]e-ka-ra-am",
+      "words": []
+    },
+    {
+      "intact": [
+        "ú-li-i-wa-a",
+        "ú-li-in"
+      ],
+      "line": "{€8+11} 14′/Vs. 14′",
+      "raw": "ú-li-i-wa-a ú-li-in",
+      "words": [
+        "uliwa",
+        "ulin"
+      ]
+    },
+    {
+      "intact": [
+        "te-ú-ia-ra"
+      ],
+      "line": "{€11} Vs. 15′",
+      "raw": "te-ú-ia-ra te-e-[ [",
+      "words": [
+        "teuiara"
+      ]
+    },
+    {
+      "intact": [
+        "ú-li-wa-a-li-na-a",
+        "ta-aš-te-mu-ú"
+      ],
+      "line": "{€8+11} 16′/Vs. 16′",
+      "raw": "[t]a-aš-te-mu-ú ú-li-wa-a-li-na-a ta-aš-te-mu-ú",
+      "words": [
+        "uliwalina",
+        "tastemu"
+      ]
+    },
+    {
+      "intact": [
+        "la-ma-a",
+        "zi-ú-i-ia-al-li-na-a-ia"
+      ],
+      "line": "{€8+11} 17′/Vs. 17′",
+      "raw": "la-ma-a zi-ú-i-ia-al-li-na-a-ia",
+      "words": [
+        "lama",
+        "ziuiallinaia"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€8+11} 19′/Vs. 19′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€8+11} 20′/Vs. 20′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€8+5+11} 24′/1′/Vs. 24′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€8+5+11} 25′/2′/Vs. 25′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€5} 4′",
+      "raw": "i-i[m-pu-u [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫu-u-u"
+      ],
+      "line": "{€5} 9′",
+      "raw": "ḫu-u-u i-[im-pu [",
+      "words": [
+        "hu"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€7} Rs. III 3′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "ma-ia-aš-ka-am"
+      ],
+      "line": "{€9} Rs. IV 1′",
+      "raw": "[ [ [ma]-ia-aš-ka-am ma-ia-aš-ka-am",
+      "words": [
+        "maiaskam"
+      ]
+    },
+    {
+      "intact": [
+        "ma-ia-lu-ú-wa-i-u"
+      ],
+      "line": "{€9} Rs. IV 2′",
+      "raw": "ma-ia-lu-ú-wa-i-u",
+      "words": [
+        "maialuwaiu"
+      ]
+    },
+    {
+      "intact": [
+        "ma-ia-aš-ka-am"
+      ],
+      "line": "{€9} Rs. IV 3′",
+      "raw": "[ [ ma-ia-aš-ka-am",
+      "words": [
+        "maiaskam"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€9+10} Rs. IV 4′/lk. Kol. 2′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€10} lk. Kol. 3′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€10} lk. Kol. 6′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "ḫu-u-u"
+      ],
+      "line": "{€10} lk. Kol. 9′",
+      "raw": "ḫu-u-u",
+      "words": [
+        "hu"
+      ]
+    },
+    {
+      "intact": [
+        "lu-ú-wa-a-i-u"
+      ],
+      "line": "{€2} Rs.? 5′",
+      "raw": "lu-ú-wa-a-i-u i-[mu-ne]",
+      "words": [
+        "luwaiu"
+      ]
+    }
+  ],
+  "manuscript": "KBo 38.12+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "ankuwa"
+    "uliwa",
+    "ulin",
+    "teuiara",
+    "uliwalina",
+    "tastemu",
+    "lama",
+    "ziuiallinaia",
+    "aha",
+    "aha",
+    "aha",
+    "aha",
+    "hu",
+    "aha",
+    "maiaskam",
+    "maialuwaiu",
+    "maiaskam",
+    "aha",
+    "aha",
+    "aha",
+    "hu",
+    "luwaiu"
   ]
 }

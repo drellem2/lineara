@@ -1,0 +1,128 @@
+{
+  "cth": "745",
+  "id": 480,
+  "lines": [
+    {
+      "intact": [],
+      "line": "r. Kol. 1′",
+      "raw": "]x-x-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 2′",
+      "raw": "]-aḫ-šu-uḫ-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 3′",
+      "raw": "]x-ia-aḫ-ḫi-i-il [ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-la"
+      ],
+      "line": "r. Kol. 4′",
+      "raw": "-i]š pa-la a-aḫ-ta-wa-x[",
+      "words": [
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "a-aḫ-za-u-ul"
+      ],
+      "line": "r. Kol. 5′",
+      "raw": "-i]n pa-la a-aḫ-za-u-ul x",
+      "words": [
+        "pala",
+        "ahzaul"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "a-an-tág-ga-pu-ut"
+      ],
+      "line": "r. Kol. 6′",
+      "raw": "]-pu-te pa-la a-an-tág-ga-pu-ut",
+      "words": [
+        "pala",
+        "antakkaput"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 7′",
+      "raw": "-z]i-in te-et-ḫi-wa(-)pa-x[ [ x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 8′",
+      "raw": "[ x-zi-il a-an-na-ši-i[n [ x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 9′",
+      "raw": "[ -a-am-mi-iš te-eš-p[u- [ x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 10′",
+      "raw": "[ -zi-it [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 11′",
+      "raw": "[ [š]a-a-e-e[l",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 12′",
+      "raw": "[ [-ḫ]u-ut [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rd. 1′",
+      "raw": "[ -i-iš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rd. 2″",
+      "raw": "]x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rd. 3″",
+      "raw": "]-ta",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rd. 4″",
+      "raw": "]x-ma",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.100",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "pala",
+    "pala",
+    "ahzaul",
+    "pala",
+    "antakkaput"
+  ]
+}

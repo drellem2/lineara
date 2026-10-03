@@ -1,0 +1,500 @@
+{
+  "cth": "733",
+  "id": 247,
+  "lines": [
+    {
+      "intact": [
+        "ḫa-wi-wu-na-a-an"
+      ],
+      "line": "{€5} Vs. I 4",
+      "raw": "[ut-ḫ]u-ru-u AMAR-mi-en-te-el ḫa-wi-wu-na-a-an AMAR-mi-en-te-el",
+      "words": [
+        "hawiwunan"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-aš-ta-nu-e-el",
+        "ka-at-te"
+      ],
+      "line": "{€5} Vs. I 5",
+      "raw": "[ḫa-w]a-aš-ḫa-wi-i ḫa-aš-ta-nu-e-el DINGIR-ap ka-at-te",
+      "words": [
+        "hastanuel",
+        "katte"
+      ]
+    },
+    {
+      "intact": [
+        "eš-tu-u-pé-en-tuu-uḫ-kán-ti-i-u"
+      ],
+      "line": "{€5} Vs. I 6",
+      "raw": "[k]a-a-at-te eš-tu-u-pé-en-tu(-)u-uḫ-kán-ti-i-u",
+      "words": [
+        "estupentuhkantiu"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-ḫa-zu-wa-a-aḫ",
+        "am-mi-i-šu-u",
+        "ḫa-zu-ú-wa-ḫé-en-tu"
+      ],
+      "line": "{€5} Vs. I 7",
+      "raw": "[ le-e-ḫa-zu-wa-a-aḫ am-mi-i-šu-u ḫa-zu-ú-wa-ḫé-en-tu",
+      "words": [
+        "lehazuwah",
+        "ammisu",
+        "hazuwahentu"
+      ]
+    },
+    {
+      "intact": [
+        "am-pu-ú-tu",
+        "ḫa-pal-ki-a-an"
+      ],
+      "line": "{€5} Vs. I 8",
+      "raw": "[t]a-ḫa-a-ak-pí 8-in am-pu-ú-tu 〈〈x〉〉 ḫa-pal-ki-a-an",
+      "words": [
+        "amputu",
+        "hapalkian"
+      ]
+    },
+    {
+      "intact": [
+        "an-ka-zi-ip-ḫé-en-tu"
+      ],
+      "line": "{€5} Vs. I 9",
+      "raw": "[l]e-e-ki-wu-un an-ka-zi-ip-ḫé-en-tu",
+      "words": [
+        "ankaziphentu"
+      ]
+    },
+    {
+      "intact": [
+        "eš-tu-u-pé-e-tu",
+        "u-te-wu-uš-ne"
+      ],
+      "line": "{€5} Vs. I 10",
+      "raw": "[ [ -lu-u-up eš-tu-u-pé-e-tu u-te-wu-uš-ne KI.MIN",
+      "words": [
+        "estupetu",
+        "utewusne"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-ma-al-ḫi-ip"
+      ],
+      "line": "{€5} Vs. I 11",
+      "raw": "[ [-l]i-i-ip KI.3 ka-a-n[a]-ḫa-ap-zu ka-a-ma-al-ḫi-ip",
+      "words": [
+        "kamalhip"
+      ]
+    },
+    {
+      "intact": [
+        "u-up-ta-a-wu-eš",
+        "u-wa-a",
+        "ka-li-iš-tu"
+      ],
+      "line": "{€5} Vs. I 12",
+      "raw": "[ [ -ka-a-za-ra u-up-ta-a-wu-eš u-wa-a ka-li-iš-tu",
+      "words": [
+        "uptawues",
+        "uwa",
+        "kalistu"
+      ]
+    },
+    {
+      "intact": [
+        "uš-šu-uk-ki-wi-iš"
+      ],
+      "line": "{€4+5} 1′/Vs. I 13",
+      "raw": "[uš-š]u-uk-ka-i-wa-a-e uš-šu-uk-ki-wi-iš",
+      "words": [
+        "ussukkiwis"
+      ]
+    },
+    {
+      "intact": [
+        "uš-šu-ú-up-pu"
+      ],
+      "line": "{€4+5} 2′/Vs. I 14",
+      "raw": "[uš-š]u-uk-ka-wa-al-wa-la-at uš-šu-ú-up-pu wu-u-[u]r-tu",
+      "words": [
+        "ussuppu"
+      ]
+    },
+    {
+      "intact": [
+        "kat-te-e"
+      ],
+      "line": "{€4+5} 3′/Vs. I 15",
+      "raw": "[te]-pu-u-ut pa-[l]a kat-te-e [ [",
+      "words": [
+        "katte"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€4+5} 4′/Vs. I 16",
+      "raw": "[k]a-a-at-te te-k[u-un-ku-u]ḫ-ḫu-u-a MUNUS.LUGAL KI.M[IN [DUMUMEŠ-ŠU [KI.3",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€4+5} 5′/Vs. I 17",
+      "raw": "[[DUMU.DUMUMEŠ-Š]U KI.4 [ÉRINMEŠ-ŠU [KI].5 K[UR-SÚ [ta-ia-a-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€4} 6′",
+      "raw": "[[ka-zi-i]n-wa [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€6} lk. Kol. 1′",
+      "raw": "[ [-u]n",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€6} lk. Kol. 2′",
+      "raw": "MUNUS.LUGAL KI].MIN DUMUMEŠ-ŠU KI.3",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ia-a-an"
+      ],
+      "line": "{€6} lk. Kol. 3′",
+      "raw": "KUR-SÚ t]a-ia-a-an",
+      "words": [
+        "taian"
+      ]
+    },
+    {
+      "intact": [
+        "pa-la",
+        "ta-i-ma-a-an"
+      ],
+      "line": "{€6} lk. Kol. 4′",
+      "raw": "pa-l]a ta-i-ma-a-an KI.MIN",
+      "words": [
+        "pala",
+        "taiman"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€6} lk. Kol. 5′",
+      "raw": "-u]n-pí",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-ep-ka-aḫ-ḫi-il-la"
+      ],
+      "line": "{€6} lk. Kol. 6′",
+      "raw": "t]e-ep-ka-aḫ-ḫi-il-la",
+      "words": [
+        "tepkahhilla"
+      ]
+    },
+    {
+      "intact": [
+        "tap-pé-e-er"
+      ],
+      "line": "{€6} lk. Kol. 7′",
+      "raw": "] tap-pé-e-er",
+      "words": [
+        "tapper"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ru"
+      ],
+      "line": "{€6} lk. Kol. 9′",
+      "raw": "Dt]a-a-ru",
+      "words": [
+        "taru"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ru"
+      ],
+      "line": "{€6} lk. Kol. 10′",
+      "raw": "ta-a-ru] ḫa-wa-aš-ḫa-[wi-i]",
+      "words": [
+        "taru"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€6} lk. Kol. 11′",
+      "raw": "eš-tu-u-pu]-un-tu(-)u-[uḫ-kán-ti-i-u]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€6} lk. Kol. 12′",
+      "raw": "]x x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 1′",
+      "raw": "w[a-la-a-aḫ [le-e [ḫa-zu-wa-a-aḫ [am-mi-i-šu-u [ḫa-zu-ú-wa-ḫé-en-tu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 2′",
+      "raw": "[ta-[ḫa-a-ak-pí [8-in [am-pu-ú-tu [ḫa-pal-ki-a-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 3′",
+      "raw": "[le-e-[ki-wu-un [an-ka-zi-ip-ḫé-en-tu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 4′",
+      "raw": "[a-re-e-u [[u-ka-li-i-iš [ka-te-e [ḫa-ma-zu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 5′",
+      "raw": "[pa-la [u-t[a-we-e-eš [uš-šu-uk-ki-we-e [uš-šu-uk-ki-wi-iš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 6′",
+      "raw": "[uš-šu-up-k[a-wa-al-wa-la-at [uš-šu-ú-up-pu [KUR-tu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 7′",
+      "raw": "[te-pu-u-ut [[pa-la [kat-te-e",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 8′",
+      "raw": "[ka-a-at-te [t[e-ku-un-ku-uḫ-ḫu-u-a [MUNUS.LUGAL [KI.MIN [DINGIRMEŠ-ŠU [KI.3",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 9′",
+      "raw": "[DUMU.DUMUMEŠ-ŠU [KI.4 [[ÉRINMEŠ-ŠU [KI.5 [KUR-SÚ [ta-ia-a-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 10′",
+      "raw": "[ka-zi-in [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 11′",
+      "raw": "[ta-ḫa-ta-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 12′",
+      "raw": "[[UR]U[k]a-a-ku-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€5} Vs. II 13′",
+      "raw": "[[ [ x-eš-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€6} r. Kol. 1′",
+      "raw": "[[ [ [ḫa-wi-wu]-na-a-[an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€6} r. Kol. 2′",
+      "raw": "[[ [ x ḫa-wa-aš-ḫa-wi-[pí",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€6} r. Kol. 3′",
+      "raw": "[[ [ -na zi-lu-wa-a-lu-w[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€6} r. Kol. 8′",
+      "raw": "[ut-ḫu-ru-u [te-et-aḫ-ḫi-wa-a-la [ḫa-wi-w[u-na-a-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€6} r. Kol. 9′",
+      "raw": "[te-et-aḫ-ḫi-wa-a-la [ḫa-wa-aš-ḫa-wi-[pí",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€6} r. Kol. 10′",
+      "raw": "[DINGIR-ap [ka-a-at-taḫ [pa-ra-a-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-a-ru"
+      ],
+      "line": "{€6+1+2} r. Kol. 14′/3′",
+      "raw": "[URUka₄-li-mu-na-du-a [ḫa-wi-wu-[n]a-a-an ta-a-ru [",
+      "words": [
+        "taru"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-i-ú",
+        "ma-a-at-ḫa-li"
+      ],
+      "line": "{€1+2} r. Kol. 15′/4′",
+      "raw": "[[ḫa-wa-aš-ḫa-w]i-pí ḫa-i-ú ma-a-at-ḫa-li DINGIR-a[p [ka-a-at-te",
+      "words": [
+        "haiu",
+        "mathali"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€1+2+7} r. Kol. 19′/8′/Vs.(?) II 1′",
+      "raw": "[[ [ x-zi-ta-i-e-et ḫa-wi-wu-na-a-[a]n",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-wa-aš-ḫa-wi-i-pí"
+      ],
+      "line": "{€1+2+7} r. Kol. 20′/9′/Vs.(?) II 2′",
+      "raw": "[ [ [-zi-ta-i]-e-et ḫa-wa-aš-ḫa-wi-i-pí",
+      "words": [
+        "hawashawipi"
+      ]
+    },
+    {
+      "intact": [
+        "zi-lu-wa-a-lu-wa",
+        "ka-a-at-ti"
+      ],
+      "line": "{€2+7} 10′/Vs.(?) II 3′",
+      "raw": "[ [ x zi-lu-wa-a-lu-wa DINGIR-ap ka-a-at-ti",
+      "words": [
+        "ziluwaluwa",
+        "katti"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€7} Vs.(?) II 8′",
+      "raw": "[ [ [-t]a-a-al ḫa-wi-wu-na-a-[an [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€7} Vs.(?) II 9′",
+      "raw": "[ [ [ḫ]a-wa-aš-ḫa-wi-i-pí [ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a-at-te",
+        "nam-ma"
+      ],
+      "line": "{€7} Vs.(?) II 10′",
+      "raw": "[ [ [DINGIR-a]p ka-a-at-te nam-ma [ [",
+      "words": [
+        "katte",
+        "namma"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€7} r. Rd. 1′",
+      "raw": "[ x",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-wa-aš-ḫa-wi-i-pí"
+      ],
+      "line": "{€7} r. Rd. 2′",
+      "raw": "ḫa-wa-aš-ḫa-wi]-i-pí",
+      "words": [
+        "hawashawipi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€5} Rs. IV 1′",
+      "raw": "[ [ [ḫa-wa-aš]-ḫa-wi-i-pí ŠA DIN[GIRMEŠ",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 63.126+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "hawiwunan",
+    "hastanuel",
+    "katte",
+    "estupentuhkantiu",
+    "lehazuwah",
+    "ammisu",
+    "hazuwahentu",
+    "amputu",
+    "hapalkian",
+    "ankaziphentu",
+    "estupetu",
+    "utewusne",
+    "kamalhip",
+    "uptawues",
+    "uwa",
+    "kalistu",
+    "ussukkiwis",
+    "ussuppu",
+    "katte",
+    "taian",
+    "pala",
+    "taiman",
+    "tepkahhilla",
+    "tapper",
+    "taru",
+    "taru",
+    "taru",
+    "haiu",
+    "mathali",
+    "hawashawipi",
+    "ziluwaluwa",
+    "katti",
+    "katte",
+    "namma",
+    "hawashawipi"
+  ]
+}

@@ -1,15 +1,39 @@
 {
-  "category": "theonym",
-  "gloss": "goddess 'the queen'",
+  "cth": "450",
   "id": 19,
-  "is_bilingual": false,
-  "name": "Kataḫḫa",
-  "provenance": "Deified title; cf. kataḫ 'queen'.",
-  "source_citation": "Klinger, J. (1996). Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden: Harrassowitz.",
-  "text": "Kataḫḫa",
-  "tier": "A",
-  "transliteration": "katahha",
+  "lines": [
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": " {€1} Vs. I 45′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": " {€1} Vs. II 42′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Rs. III 6′",
+      "raw": "[a-ḫa-a",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 39.8+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "katahha"
+    "aha",
+    "aha"
   ]
 }

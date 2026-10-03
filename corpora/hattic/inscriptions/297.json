@@ -1,0 +1,156 @@
+{
+  "cth": "738",
+  "id": 297,
+  "lines": [
+    {
+      "intact": [
+        "da-a-ú-úr-wa-ra-ak"
+      ],
+      "line": "Rs. IV 15′",
+      "raw": "x[ [ da-a-ú-úr-wa-ra-ak",
+      "words": [
+        "taurwarak"
+      ]
+    },
+    {
+      "intact": [
+        "a-wa-ar-ru-pa",
+        "wa-ru-wa"
+      ],
+      "line": "Rs. IV 16′",
+      "raw": "[t]a-a-ú-úr-wa-ra-ak [ [ [t]a-ba-[a]r-na a-wa-ar-ru-pa wa-ru-wa",
+      "words": [
+        "awarrupa",
+        "waruwa"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia-az-zi-iz-zi",
+        "tu-u-ḫa-a-ša-i-li"
+      ],
+      "line": "Rs. IV 17′",
+      "raw": "i-ia-az-zi-iz-zi wa-ar-ru-w[a(-)z]i-iz-zi te-x-mar tu-u-ḫa-a-ša-i-li",
+      "words": [
+        "iazzizzi",
+        "tuhasaili"
+      ]
+    },
+    {
+      "intact": [
+        "i-wa-pa-ar-wa"
+      ],
+      "line": "Rs. IV 18′",
+      "raw": "i-wa-pa-ar-wa mta-ba-ar-n[a-an [l]i-wa-el",
+      "words": [
+        "iwaparwa"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia-lu-ul-la-ma",
+        "lu-ú-wa-i-ia",
+        "i-ia-lu-ul-la"
+      ],
+      "line": "Rs. IV 19′",
+      "raw": "i-ia-lu-ul-la-ma lu-ú-wa-i-ia i-ia-lu-ul-la",
+      "words": [
+        "ialullama",
+        "luwaia",
+        "ialulla"
+      ]
+    },
+    {
+      "intact": [
+        "a-az-za-ú-i",
+        "a-az-za-az-za-al-ma",
+        "te-li-pí-nu"
+      ],
+      "line": "Rs. IV 20′",
+      "raw": "a-az-za-ú-i a-az-za-az-za-al-ma [ [ x-at-ta Dte-li-pí-nu",
+      "words": [
+        "azzaui",
+        "azzazzalma",
+        "telipinu"
+      ]
+    },
+    {
+      "intact": [
+        "a-zi-iz-zi-ia"
+      ],
+      "line": "Rs. IV 21′",
+      "raw": "[ [ x x x x x Dte-te-eš-ḫ[a-pí [ [m]a-aš-[t]a-ḫu-ur-wa a-zi-iz-zi-ia",
+      "words": [
+        "azizzia"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia-ḫa-te-mu-wa-a-ti"
+      ],
+      "line": "Rs. IV 22′",
+      "raw": "[ [ x-la x[ [ x-mu-ú-na i-ia-ḫa-te-mu-wa-a-ti",
+      "words": [
+        "iahatemuwati"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia-aš-šu"
+      ],
+      "line": "Rs. IV 23′",
+      "raw": "[ [ [(-)m]u-wa-la i-ia-aš-šu",
+      "words": [
+        "iassu"
+      ]
+    },
+    {
+      "intact": [
+        "mi-i-li-ip"
+      ],
+      "line": "Rs. IV 24′",
+      "raw": "[ [ [MUNUSta-wa-n]a-an-na mi-i-li-ip",
+      "words": [
+        "milip"
+      ]
+    },
+    {
+      "intact": [
+        "ta-wa-na-an-na"
+      ],
+      "line": "Rs. IV 25′",
+      "raw": "[ [ [mi-i-li-i]p MUNUSta-wa-na-an-na",
+      "words": [
+        "tawananna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 26′",
+      "raw": "[ [ [eš-ta-w]u-úr-wa ta-ba-a[r-na",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 19.161",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "taurwarak",
+    "awarrupa",
+    "waruwa",
+    "iazzizzi",
+    "tuhasaili",
+    "iwaparwa",
+    "ialullama",
+    "luwaia",
+    "ialulla",
+    "azzaui",
+    "azzazzalma",
+    "telipinu",
+    "azizzia",
+    "iahatemuwati",
+    "iassu",
+    "milip",
+    "tawananna"
+  ]
+}

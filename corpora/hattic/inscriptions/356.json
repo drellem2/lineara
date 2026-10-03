@@ -1,0 +1,536 @@
+{
+  "cth": "743",
+  "id": 356,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 2′",
+      "raw": "[ [ x-ia",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 3′",
+      "raw": "[ [ [lu-u]l-la",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. I 5′",
+      "raw": "[ [ x-wa-a-ia",
+      "words": []
+    },
+    {
+      "intact": [
+        "lu-ul-la"
+      ],
+      "line": " {€1} Vs. I 6′",
+      "raw": "[ [ lu-ul-la",
+      "words": [
+        "lulla"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 3",
+      "raw": "[pa-ap-ša-na-ú-un [x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 4",
+      "raw": "[ma-aš [Dḫal-la-ra [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 8",
+      "raw": "[ta-a-i-li-ia [lu-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 11",
+      "raw": "[ta-a-ia [lu-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 14",
+      "raw": "[ú-wa-la [ta-a-i[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€1} Vs. II 17",
+      "raw": "[ú-wa-la(-)[",
+      "words": []
+    },
+    {
+      "intact": [
+        "da-a-i-ia"
+      ],
+      "line": " {€2} Vs. (II) 3′",
+      "raw": "-m]a da-a-i-ia",
+      "words": [
+        "taia"
+      ]
+    },
+    {
+      "intact": [
+        "lu-wa-ia"
+      ],
+      "line": " {€2} Vs. (II) 6′",
+      "raw": "]x lu-wa-ia",
+      "words": [
+        "luwaia"
+      ]
+    },
+    {
+      "intact": [
+        "pí-it-ta-ma-a-i-ú"
+      ],
+      "line": " {€2} Vs. (II) 10′",
+      "raw": "p]í-it-ta-ma-a-i-ú a-pé-e-ma-a[š]-ši",
+      "words": [
+        "pittamaiu"
+      ]
+    },
+    {
+      "intact": [
+        "pí-it-ta-ma-ar"
+      ],
+      "line": " {€2} Vs. (II) 11′",
+      "raw": "]x-ta-a-i pí-it-ta-ma-ar KI.MI[N]",
+      "words": [
+        "pittamar"
+      ]
+    },
+    {
+      "intact": [
+        "ki-mu-ut",
+        "ki-i-mu-ud-da"
+      ],
+      "line": " {€2} Vs. (II) 12′",
+      "raw": "]x ki-mu-ut ki-i-mu-ud-da ki-i-mu-u[d-d]a",
+      "words": [
+        "kimut",
+        "kimutta"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. (II) 14′",
+      "raw": "]x-ta KI.MIN",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-al-lu-wa-ia",
+        "a-pé-e-ma-aš-ši",
+        "ar-ku-wa-an-zi"
+      ],
+      "line": " {€2} Vs. (II) 16′",
+      "raw": "a]-al-lu-wa-ia a-pé-e-ma-aš-ši GAM-an ar-ku-wa-an-zi",
+      "words": [
+        "alluwaia",
+        "apemassi",
+        "arkuwanzi"
+      ]
+    },
+    {
+      "intact": [
+        "i-li-lu-wa-a-ia",
+        "la-a-ma",
+        "i-li-lu-wa-ia"
+      ],
+      "line": " {€2} Vs. (II) 17′",
+      "raw": "] i-li-lu-wa-a-ia la-a-ma i-li-lu-wa-ia",
+      "words": [
+        "ililuwaia",
+        "lama",
+        "ililuwaia"
+      ]
+    },
+    {
+      "intact": [
+        "pa-ia-lu-wa-a-ia",
+        "ḫa-a-ma-an-zi-ra-ḫu",
+        "iz-zi-it-ta-i-li-ú"
+      ],
+      "line": " {€2} Vs. (II) 20′",
+      "raw": "pa-i]a-lu-wa-a-ia ḫa-a-ma-an-zi-ra-ḫu iz-zi-it-ta-i-li-ú",
+      "words": [
+        "paialuwaia",
+        "hamanzirahu",
+        "izzittailiu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. (II) 21′",
+      "raw": "]x-wa-a-lu",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-a-aḫ-zu-aḫ-za",
+        "pa-ma-ak-ku-la-ma",
+        "i-ia",
+        "ú-wa-la",
+        "a-pé-e-ma-aš-ši"
+      ],
+      "line": " {€2} Vs. (II) 23′",
+      "raw": "ta-a-aḫ-z]u-aḫ-za pa-ma-ak-ku-la-ma i-ia ú-wa-la a-pé-e-ma-aš-ši",
+      "words": [
+        "tahzuahza",
+        "pamakkulama",
+        "ia",
+        "uwala",
+        "apemassi"
+      ]
+    },
+    {
+      "intact": [
+        "ḫal-la-ra",
+        "ta-a-aḫ-zu-uḫ-za",
+        "pa-ma-ak-ku-la-am-ma",
+        "a-lu-ul-la"
+      ],
+      "line": " {€2} Vs. (II) 25′",
+      "raw": "] Dḫal-la-ra ta-a-aḫ-zu-uḫ-za pa-ma-ak-ku-la-am-ma a-lu-ul-la",
+      "words": [
+        "hallara",
+        "tahzuhza",
+        "pamakkulamma",
+        "alulla"
+      ]
+    },
+    {
+      "intact": [
+        "ú-wa-la",
+        "a-pé-e-ma-aš-ši",
+        "ar-ku-wa-an-zi"
+      ],
+      "line": " {€2} Vs. (II) 27′",
+      "raw": "]-i-ia-x-ia ú-wa-la a-pé-e-ma-aš-ši GAM-an ar-ku-wa-an-zi",
+      "words": [
+        "uwala",
+        "apemassi",
+        "arkuwanzi"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-an",
+        "a-ri-in-na"
+      ],
+      "line": " {€2} Vs. (II) 29′",
+      "raw": "]x ta-ba-ar-na-an URUa-ri-in-na",
+      "words": [
+        "taparnan",
+        "arinna"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-ša-mu-ul-la"
+      ],
+      "line": " {€2} Vs. (II) 30′",
+      "raw": "]-ip-pí le-e-ša-mu-ul-la",
+      "words": [
+        "lesamulla"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na-an",
+        "a-ri-in-na"
+      ],
+      "line": " {€2} Vs. (II) 32′",
+      "raw": "ta-ba]-ar-na-an URUa-ri-in-na",
+      "words": [
+        "taparnan",
+        "arinna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. (II) 33′",
+      "raw": "le-e-š]a-mu-ul-l[a]",
+      "words": []
+    },
+    {
+      "intact": [
+        "eš",
+        "zi"
+      ],
+      "line": " {€2} Rs. (III) 3′",
+      "raw": "-p]í-lu-x x eš x zi x[ [",
+      "words": [
+        "es",
+        "zi"
+      ]
+    },
+    {
+      "intact": [
+        "i-le-el-li-ia",
+        "a-pé-e-ma-aš-ši"
+      ],
+      "line": " {€2} Rs. (III) 5′",
+      "raw": "i-le-e]l-li-ia a-pé-e-ma-aš-ši GAM-an ar-[ku-wa-an-zi]",
+      "words": [
+        "ilellia",
+        "apemassi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. (III) 6′",
+      "raw": "] i-le-el-li-i[a [",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-pé-e-ma-aš-ši",
+        "ar-ku-wa-an-zi"
+      ],
+      "line": " {€2} Rs. (III) 7′",
+      "raw": "-i]a a-pé-e-ma-aš-ši GAM-an ar-ku-wa-an-zi",
+      "words": [
+        "apemassi",
+        "arkuwanzi"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-i-ia"
+      ],
+      "line": " {€2} Rs. (III) 8′",
+      "raw": "]-a ta-a-i-ia i-li-il-li-i[a [",
+      "words": [
+        "taia"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-at-ma-a-ar",
+        "ḫa-ni-wa-šu-u"
+      ],
+      "line": " {€2} Rs. (III) 9′",
+      "raw": "] ḫa-at-ma-a-ar ḫa-ni-wa-šu-u a-pé-e-ma-[aš]-š[i]",
+      "words": [
+        "hatmar",
+        "haniwasu"
+      ]
+    },
+    {
+      "intact": [
+        "i-li-il-li-ia"
+      ],
+      "line": " {€2} Rs. (III) 10′",
+      "raw": "-t]a-a i-li-il-li-ia",
+      "words": [
+        "ilillia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. (III) 11′",
+      "raw": "]x-ia",
+      "words": []
+    },
+    {
+      "intact": [
+        "ki-ga-ap-pu",
+        "pí-id-du-ka-at-ti",
+        "a-pé-e-ma-aš-ši"
+      ],
+      "line": " {€2} Rs. (III) 12′",
+      "raw": "(-)ki-g]a-ap-pu pí-id-du-ka-at-ti a-pé-e-ma-aš-ši",
+      "words": [
+        "kikappu",
+        "pittukatti",
+        "apemassi"
+      ]
+    },
+    {
+      "intact": [
+        "ki-ga-ap-pu",
+        "pí-id-du-ka-at-ti"
+      ],
+      "line": " {€2} Rs. (III) 13′",
+      "raw": "](-)ki-ga-ap-pu pí-id-du-ka-at-ti KI.MIN",
+      "words": [
+        "kikappu",
+        "pittukatti"
+      ]
+    },
+    {
+      "intact": [
+        "i-ip-pí-zi-i-na-ar-nu"
+      ],
+      "line": " {€2} Rs. (III) 14′",
+      "raw": "i-ip-pí-zi]-i-na-ar-nu ḫu-u-un-zi-na-ar-n[u",
+      "words": [
+        "ippizinarnu"
+      ]
+    },
+    {
+      "intact": [
+        "i-ip-pí-zi-na-ar"
+      ],
+      "line": " {€2} Rs. (III) 15′",
+      "raw": "[ x-zi i-ip-pí-zi-na-ar",
+      "words": [
+        "ippizinar"
+      ]
+    },
+    {
+      "intact": [
+        "a-pé-e-ma-aš-ši"
+      ],
+      "line": " {€2} Rs. (III) 17′",
+      "raw": "-k]a-lu-uk-ka₄-lu a-pé-e-ma-aš-ši GAM-an",
+      "words": [
+        "apemassi"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-lu-uk-ka-lu"
+      ],
+      "line": " {€2} Rs. (III) 18′",
+      "raw": "-n]i ka-a-lu-uk-ka₄-lu KI.MIN",
+      "words": [
+        "kalukkalu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ú-ri-aš-pu",
+        "a-pé-e-ma-aš-ši"
+      ],
+      "line": " {€2} Rs. (III) 19′",
+      "raw": "t]a-a-ú-ri-aš-pu a-pé-e-ma-aš-ši GAM-an",
+      "words": [
+        "tauriaspu",
+        "apemassi"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ú-ri-aš-pu"
+      ],
+      "line": " {€2} Rs. (III) 20′",
+      "raw": "] ta-a-ú-ri-aš-pu KI.MIN",
+      "words": [
+        "tauriaspu"
+      ]
+    },
+    {
+      "intact": [
+        "i-u-ma-aš-wi",
+        "a-pé-e-ma-aš-ši"
+      ],
+      "line": " {€2} Rs. (III) 21′",
+      "raw": "](-)i-u-ma-aš-wi a-pé-e-ma-aš-ši [GAM-an]",
+      "words": [
+        "iumaswi",
+        "apemassi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. (III) 22′",
+      "raw": "]x-i-u-ma-aš-wi K[I.MIN]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. (III) 23′",
+      "raw": "-az-z]i-ku-u-ru a-pé-e-[ma-aš-š]i GAM-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. (III) 24′",
+      "raw": "]x-az-z[i-ku-u-ru [K]I.MIN",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. (III) 25′",
+      "raw": "]x x[ [ x-aš-na-an-ḫu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. (III) 32′",
+      "raw": "]x-il-la",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.107+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lulla",
+    "taia",
+    "luwaia",
+    "pittamaiu",
+    "pittamar",
+    "kimut",
+    "kimutta",
+    "alluwaia",
+    "apemassi",
+    "arkuwanzi",
+    "ililuwaia",
+    "lama",
+    "ililuwaia",
+    "paialuwaia",
+    "hamanzirahu",
+    "izzittailiu",
+    "tahzuahza",
+    "pamakkulama",
+    "ia",
+    "uwala",
+    "apemassi",
+    "hallara",
+    "tahzuhza",
+    "pamakkulamma",
+    "alulla",
+    "uwala",
+    "apemassi",
+    "arkuwanzi",
+    "taparnan",
+    "arinna",
+    "lesamulla",
+    "taparnan",
+    "arinna",
+    "es",
+    "zi",
+    "ilellia",
+    "apemassi",
+    "apemassi",
+    "arkuwanzi",
+    "taia",
+    "hatmar",
+    "haniwasu",
+    "ilillia",
+    "kikappu",
+    "pittukatti",
+    "apemassi",
+    "kikappu",
+    "pittukatti",
+    "ippizinarnu",
+    "ippizinar",
+    "apemassi",
+    "kalukkalu",
+    "tauriaspu",
+    "apemassi",
+    "tauriaspu",
+    "iumaswi",
+    "apemassi"
+  ]
+}

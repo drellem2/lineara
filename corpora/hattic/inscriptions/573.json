@@ -1,0 +1,147 @@
+{
+  "cth": "745",
+  "id": 573,
+  "lines": [
+    {
+      "intact": [
+        "ki-i-ip"
+      ],
+      "line": "Vs. 1′",
+      "raw": "ki-i-ip l[a",
+      "words": [
+        "kip"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2′",
+      "raw": "[a-an-ba-la-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 3′",
+      "raw": "[i-ta-a-ba [ḫa-a-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′",
+      "raw": "[i-ta-a-ba [ḫa-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5′",
+      "raw": "[še-e-et [gi-zé-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′",
+      "raw": "[še-e-et [gi-z[é-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 7′",
+      "raw": "[[t-ta]-a x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 8′",
+      "raw": "[[ [ x [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 1′",
+      "raw": "[ḫ[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 2′",
+      "raw": "[l[i-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 3′",
+      "raw": "[a-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 4′",
+      "raw": "[x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 5′",
+      "raw": "[w[a-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 6′",
+      "raw": "[l[i-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Rd. 1",
+      "raw": "[ x x-ia-ma le-e-ne-ša(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Rd. 2",
+      "raw": "[ x-a-an-tu-u-ma te-e-up(-)nu(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Rd. 3",
+      "raw": "[ [t]e-e du-ú-up-x-nu-ú-ne-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-wa-aš"
+      ],
+      "line": "lk. Rd. 4",
+      "raw": "[ ḫa-wa-aš tu-ú-i(-)l[i-",
+      "words": [
+        "hawas"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "lk. Rd. 5",
+      "raw": "[ x-an-tu-u-ma te-e-pí-n[u(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Rd. 6",
+      "raw": "[ -tu wu-ru-un-te(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Rd. 7",
+      "raw": "[ -ḫu-na-a-an še-e[l(-)",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.36",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kip",
+    "hawas"
+  ]
+}

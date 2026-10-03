@@ -1,0 +1,46 @@
+{
+  "cth": "744",
+  "id": 417,
+  "lines": [
+    {
+      "intact": [
+        "te-li-pí-nu-ú"
+      ],
+      "line": "1′",
+      "raw": "Dte-l]i-pí-nu-ú [",
+      "words": [
+        "telipinu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ x-wu-ru-ú a[n-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ [De]š-ta-nu-ú [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ [ḫ]u-up-pár-ra-a[n",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[ x-pa-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 61.235",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "telipinu"
+  ]
+}

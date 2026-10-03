@@ -1,0 +1,93 @@
+{
+  "cth": "745",
+  "id": 542,
+  "lines": [
+    {
+      "intact": [],
+      "line": "lk. Kol. 1′",
+      "raw": "[ [ x x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 2′",
+      "raw": "[ [ x-ša-zu-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 3′",
+      "raw": "[ [ x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 4′",
+      "raw": "[ [ -we-el-an-ni",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 5′",
+      "raw": "[ [ [-t]e",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-at-te-en"
+      ],
+      "line": "lk. Kol. 6′",
+      "raw": "[ [ ka-at-te-en",
+      "words": [
+        "katten"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 7′",
+      "raw": "[ [ (-)wa-ḫé-e-wu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 8′",
+      "raw": "[ [ -aḫ-ra",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a"
+      ],
+      "line": "lk. Kol. 9′",
+      "raw": "[ [ -x ma-a",
+      "words": [
+        "ma"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "lk. Kol. 10′",
+      "raw": "[ [ -x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 1′",
+      "raw": "x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "r. Kol. 2′",
+      "raw": "[x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 64.198",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "katten",
+    "ma"
+  ]
+}

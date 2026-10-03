@@ -1,0 +1,80 @@
+{
+  "cth": "743",
+  "id": 366,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x-ḫu ta-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ x-at ka-az-zu-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-ma-a-ia-a"
+      ],
+      "line": "4′",
+      "raw": "[ pa-ma-a-ia-a URUlu-ú-[",
+      "words": [
+        "pamaia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ [zi-i]n-ku-ru-wa-aš",
+      "words": []
+    },
+    {
+      "intact": [
+        "lu-wa-a-ia"
+      ],
+      "line": "6′",
+      "raw": "]x-ma-ak-ku-ú-wa(-)ta-a-ia lu-wa-a-ia",
+      "words": [
+        "luwaia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "]x-ma-ak-ku-ú-wa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "]-pí",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-e-er"
+      ],
+      "line": "9′",
+      "raw": "]x te-e-er",
+      "words": [
+        "ter"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "]x x[ [ x-ar [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.40",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "pamaia",
+    "luwaia",
+    "ter"
+  ]
+}

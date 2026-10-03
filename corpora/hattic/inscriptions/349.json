@@ -1,0 +1,93 @@
+{
+  "cth": "743",
+  "id": 349,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs.? 1′",
+      "raw": "[ [ x-ru",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na",
+        "le-e-wu-u-ur"
+      ],
+      "line": "Vs.? 2′",
+      "raw": "[ [ ta-ba-ar-na le-e-wu-u-ur",
+      "words": [
+        "taparna",
+        "lewur"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-wu-u-ur"
+      ],
+      "line": "Vs.? 3′",
+      "raw": "[ [ ta-wa-an-na-na le-e-wu-u-ur",
+      "words": [
+        "lewur"
+      ]
+    },
+    {
+      "intact": [
+        "ki-nu-nu-uš",
+        "nam-ma",
+        "a-še-eš-kán-zi"
+      ],
+      "line": "Vs.? 11′",
+      "raw": "[[ [ x-[a]p-ta-at ki-nu-nu-uš nam-ma Ú-UL a-še-eš-kán-zi [",
+      "words": [
+        "kinunus",
+        "namma",
+        "aseskanzi"
+      ]
+    },
+    {
+      "intact": [
+        "a-ri-e",
+        "iš-ta-an-na-a-an",
+        "i-pí-u-ḫi",
+        "ar-ku-wa-an-zi"
+      ],
+      "line": "Vs.? 13′",
+      "raw": "[[ [ x a-ri-e iš-ta-an-na-a-an i-pí-u-ḫi ar-ku-wa-an-zi [",
+      "words": [
+        "arie",
+        "istannan",
+        "ipiuhi",
+        "arkuwanzi"
+      ]
+    },
+    {
+      "intact": [
+        "i-pí-u-ḫi",
+        "ar-ku-wa-an-zi"
+      ],
+      "line": "Vs.? 14′",
+      "raw": "[ i-pí-u-ḫi ar-ku-wa-an-zi",
+      "words": [
+        "ipiuhi",
+        "arkuwanzi"
+      ]
+    }
+  ],
+  "manuscript": "KBo 37.68",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "taparna",
+    "lewur",
+    "lewur",
+    "kinunus",
+    "namma",
+    "aseskanzi",
+    "arie",
+    "istannan",
+    "ipiuhi",
+    "arkuwanzi",
+    "ipiuhi",
+    "arkuwanzi"
+  ]
+}

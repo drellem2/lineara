@@ -1,0 +1,127 @@
+{
+  "cth": "741",
+  "id": 332,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€2} Vs. I 1′",
+      "raw": "[ [m]a-a-š[a [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Vs. I 2′",
+      "raw": "[ [m]a-a-iz-zi x [ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "wa-a-aḫ-ga-u-un"
+      ],
+      "line": " {€2+1} Vs. I 3′/1′",
+      "raw": "wa-a-aḫ-ga-u-un w[u-u]-ti-ia [ [",
+      "words": [
+        "wahkaun"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a",
+        "wi-ú-ul-la",
+        "wi-ú-ul-la",
+        "wi-ú-ul-la"
+      ],
+      "line": " {€2+1} Vs. I 5′/3′",
+      "raw": "ma-a wi-ú-ul-la wi-ú-ul-la wi-ú-ul-la",
+      "words": [
+        "ma",
+        "wiulla",
+        "wiulla",
+        "wiulla"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a-iz-zi",
+        "wi-ú-ul-la",
+        "wi-ú-ul-la"
+      ],
+      "line": " {€2+1} Vs. I 6′/4′",
+      "raw": "ma-a-iz-zi wi-ú-ul-la wi-ú-ul-la",
+      "words": [
+        "maizzi",
+        "wiulla",
+        "wiulla"
+      ]
+    },
+    {
+      "intact": [
+        "ša-ḫa-pu-na",
+        "wi-ú-ul-la"
+      ],
+      "line": " {€2+1} Vs. I 7′/5′",
+      "raw": "ša-ḫa-pu-na wi-ú-ul-la",
+      "words": [
+        "sahapuna",
+        "wiulla"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. IV 1′",
+      "raw": "a-lu-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. IV 2′",
+      "raw": "[[š]i-ip-ši-e[l",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. IV 3′",
+      "raw": "[ma-aš-ga-ú-ba-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. IV 4′",
+      "raw": "[ši-ip-ši-el [k[a-at-taḫ",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. IV 5′",
+      "raw": "[da-ḫa-ia [zi-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. IV 6′",
+      "raw": "[an-tu-ḫa-ia-za-a[n(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. IV 7′",
+      "raw": "[[ [ x-ta-x x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.21+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "wahkaun",
+    "ma",
+    "wiulla",
+    "wiulla",
+    "wiulla",
+    "maizzi",
+    "wiulla",
+    "wiulla",
+    "sahapuna",
+    "wiulla"
+  ]
+}

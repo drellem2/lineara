@@ -1,0 +1,447 @@
+{
+  "cth": "736",
+  "id": 291,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. I 1′",
+      "raw": "[ [ x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 2′",
+      "raw": "[URU]ta-a-wa-na-ma [ [ x[ [ (-)ú(-)x[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "úši-ip-zi-il"
+      ],
+      "line": "Vs. I 3′",
+      "raw": "[ [ x ú(-)ši-ip-zi-il l[e- [",
+      "words": [
+        "usipzil"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 4′",
+      "raw": "[ [ -we-et-ta-ri i-le-e[l-li-wa [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 5′",
+      "raw": "[UR]Uḫa-at-tu-uš x [ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "la-ia-li-na"
+      ],
+      "line": "Vs. I 6′",
+      "raw": "[l]a-ia-li-na la-ia-li-na t[a- [",
+      "words": [
+        "laialina"
+      ]
+    },
+    {
+      "intact": [
+        "te-ta-wa-en",
+        "ta-ḫu-ḫi-in-na"
+      ],
+      "line": "Vs. I 7′",
+      "raw": "[al-l]a te-ta-wa-en ta-ḫu-ḫi-in-na [ [",
+      "words": [
+        "tetawaen",
+        "tahuhinna"
+      ]
+    },
+    {
+      "intact": [
+        "a-la-al"
+      ],
+      "line": "Vs. I 8′",
+      "raw": "[ [ [t]a-ḫu-ḫe-en-na a-la-al URUta-ú-wa-[na-ma [",
+      "words": [
+        "alal"
+      ]
+    },
+    {
+      "intact": [
+        "wu-u-ur"
+      ],
+      "line": "Vs. I 9′",
+      "raw": "[a-a]l-le-e wu-u-ur ma-[ [",
+      "words": [
+        "wur"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 10′",
+      "raw": "[kat-t]e(-)eš-ta-wa-ar wa-ši-ú-[i-nu [",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-li-na",
+        "li-i-na"
+      ],
+      "line": "Vs. I 11′",
+      "raw": "a-li-na li-i-na wa-wa-zi-[il [",
+      "words": [
+        "alina",
+        "lina"
+      ]
+    },
+    {
+      "intact": [
+        "wa-wa-aḫ"
+      ],
+      "line": "Vs. I 12′",
+      "raw": "wa-wa-aḫ ša-pa-li-i-l[i- [",
+      "words": [
+        "wawah"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ni-ta",
+        "ta-a-ni-ta"
+      ],
+      "line": "Vs. I 13′",
+      "raw": "ta-a-ni-ta ta-a-ni-ta [ [",
+      "words": [
+        "tanita",
+        "tanita"
+      ]
+    },
+    {
+      "intact": [
+        "ku-u-ur-ku-pu-ú-un-tu-u"
+      ],
+      "line": "Vs. I 14′",
+      "raw": "ku-u-ur-ku-pu-ú-un-tu-u ta-[ [",
+      "words": [
+        "kurkupuntu"
+      ]
+    },
+    {
+      "intact": [
+        "a-an-ta-nu-ma",
+        "eš-ka-a-at-taḫ"
+      ],
+      "line": "Vs. I 15′",
+      "raw": "a-an-ta-nu-ma eš-ka-a-at-taḫ [ [",
+      "words": [
+        "antanuma",
+        "eskattah"
+      ]
+    },
+    {
+      "intact": [
+        "a-wa-an-ta-nu-ma"
+      ],
+      "line": "Vs. I 16′",
+      "raw": "a-wa-an-ta-nu-ma aš-ka-a-at-[taḫ [",
+      "words": [
+        "awantanuma"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 17′",
+      "raw": "le-e-wa-ḫa-a-x[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "la-a-ta-i",
+        "la-a-ta-a-i-e"
+      ],
+      "line": "Vs. I 18′",
+      "raw": "la-a-ta-i la-a-ta-a-i-e [ [",
+      "words": [
+        "latai",
+        "lataie"
+      ]
+    },
+    {
+      "intact": [
+        "ḫu-ul-la"
+      ],
+      "line": "Vs. I 19′",
+      "raw": "Dḫu-ul-la le-e-[ [",
+      "words": [
+        "hulla"
+      ]
+    },
+    {
+      "intact": [
+        "ma-aḫ-ḫu-uš-ḫu-un-tu-u-ma"
+      ],
+      "line": "Vs. I 20′",
+      "raw": "ma-aḫ-ḫu-uš-ḫu-un-tu-u-ma [ [",
+      "words": [
+        "mahhushuntuma"
+      ]
+    },
+    {
+      "intact": [
+        "la-a-ta-i-e",
+        "la-a-ta-i-e"
+      ],
+      "line": "Vs. I 21′",
+      "raw": "la-a-ta-i-e la-a-ta-i-e [ [",
+      "words": [
+        "lataie",
+        "lataie"
+      ]
+    },
+    {
+      "intact": [
+        "ḫu-ul-la"
+      ],
+      "line": "Vs. I 22′",
+      "raw": "Dḫu-ul-la [ [",
+      "words": [
+        "hulla"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 1",
+      "raw": "[ [ x-ta-ni-ta mu-ú-ta-n[i- [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 2",
+      "raw": "[ [ [ši]-ip-zi-il te-e-k[a- [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ma-a-i-e",
+        "ta-a-i-e"
+      ],
+      "line": "Rs. IV 3 ",
+      "raw": "ma-a-i-e ta-a-i-e ta-wa-nu-x[ [",
+      "words": [
+        "maie",
+        "taie"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-el-wa-a-at-pa"
+      ],
+      "line": "Rs. IV 4",
+      "raw": "le-e-el-wa-a-at-pa [ [",
+      "words": [
+        "lelwatpa"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-at-tu-uš"
+      ],
+      "line": "Rs. IV 5",
+      "raw": "URUḫa-at-tu-uš te-e-ka-a-at-taḫ(-)[ [",
+      "words": [
+        "hattus"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a-i",
+        "ta-a-i-e",
+        "ta-a-wa-na"
+      ],
+      "line": "Rs. IV 6",
+      "raw": "ma-a-i ta-a-i-e URUta-a-wa-na [ [",
+      "words": [
+        "mai",
+        "taie",
+        "tawana"
+      ]
+    },
+    {
+      "intact": [
+        "ti-na-ḫi-iz-ti",
+        "wu-ru-u-un"
+      ],
+      "line": "Rs. IV 7",
+      "raw": "ti-na-ḫi-iz-ti wu-ru-u-un te-wa-[ [",
+      "words": [
+        "tinahizti",
+        "wurun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "la-a-i-li-na",
+        "i-ia-li-na"
+      ],
+      "line": "Rs. IV 8",
+      "raw": "la-a-i-li-na i-ia-li-na [ [",
+      "words": [
+        "lailina",
+        "ialina"
+      ]
+    },
+    {
+      "intact": [
+        "ni-im-ḫu-tu-un",
+        "zi-lu-wa-lu-wa"
+      ],
+      "line": "Rs. IV 9",
+      "raw": "ni-im-ḫu-tu-un zi-lu-wa-lu-wa [ [",
+      "words": [
+        "nimhutun",
+        "ziluwaluwa"
+      ]
+    },
+    {
+      "intact": [
+        "ni-im-ḫu-tu-un",
+        "zi-lu-wa-lu-wa"
+      ],
+      "line": "Rs. IV 10",
+      "raw": "ni-im-ḫu-tu-un zi-lu-wa-lu-wa [ [",
+      "words": [
+        "nimhutun",
+        "ziluwaluwa"
+      ]
+    },
+    {
+      "intact": [
+        "ni-im-ḫu-tu-un",
+        "zi-lu-wa-lu-wa"
+      ],
+      "line": "Rs. IV 11",
+      "raw": "ni-im-ḫu-tu-un zi-lu-wa-lu-wa [ [",
+      "words": [
+        "nimhutun",
+        "ziluwaluwa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 12",
+      "raw": "[t]e-ka-a(-)ták-zu-ú pí-il-lu[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 13",
+      "raw": "[t]e-e-ka-me-e le-e-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 14",
+      "raw": "[t]e-e-ḫa-pa-aš-ti te-e-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 15",
+      "raw": "[pí-i]l-lu zi-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 16",
+      "raw": "[ni-i]m-ḫu-tu-un zi-[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-a-i-tu-u"
+      ],
+      "line": "Rs. IV 17",
+      "raw": "[ [ x ta-a-i-tu-u [ [",
+      "words": [
+        "taitu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 18",
+      "raw": "[ [ [-a]n-ta-i-il [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 19",
+      "raw": "[le-e]-wa-ḫa-i-[ip-pí-in [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 22",
+      "raw": "[ [ [-t]a-ru ka-a-t[a-ru-u [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 23",
+      "raw": "[ [ -ú-uš le-[ [",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 28.59",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "usipzil",
+    "laialina",
+    "tetawaen",
+    "tahuhinna",
+    "alal",
+    "wur",
+    "alina",
+    "lina",
+    "wawah",
+    "tanita",
+    "tanita",
+    "kurkupuntu",
+    "antanuma",
+    "eskattah",
+    "awantanuma",
+    "latai",
+    "lataie",
+    "hulla",
+    "mahhushuntuma",
+    "lataie",
+    "lataie",
+    "hulla",
+    "maie",
+    "taie",
+    "lelwatpa",
+    "hattus",
+    "mai",
+    "taie",
+    "tawana",
+    "tinahizti",
+    "wurun",
+    "lailina",
+    "ialina",
+    "nimhutun",
+    "ziluwaluwa",
+    "nimhutun",
+    "ziluwaluwa",
+    "nimhutun",
+    "ziluwaluwa",
+    "taitu"
+  ]
+}

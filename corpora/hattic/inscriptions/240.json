@@ -1,0 +1,148 @@
+{
+  "cth": "733",
+  "id": 240,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "] li-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ 2-ŠU 8-i[n(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ [z]i-ni-eš-ru-uḫ x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "zi-i-u"
+      ],
+      "line": "4′",
+      "raw": "[ x-še-un zi-i-u ú-up-p[í-in",
+      "words": [
+        "ziu"
+      ]
+    },
+    {
+      "intact": [
+        "an-na"
+      ],
+      "line": "5′",
+      "raw": "[ [-w]i-iš an-na ú-uš-pí-iš-pa(-)ḫ[a-",
+      "words": [
+        "anna"
+      ]
+    },
+    {
+      "intact": [
+        "tu-ú-ti"
+      ],
+      "line": "6′",
+      "raw": "[ x-pí-in-pa tu-ú-ti ḫa-ta-x[",
+      "words": [
+        "tuti"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-tu-u",
+        "ú-up-pí-in",
+        "ú-i-wi",
+        "pa-la"
+      ],
+      "line": "7′",
+      "raw": "[[ [ 3 ka-a-tu-u ú-up-pí-in ú-i-wi pa-la [",
+      "words": [
+        "katu",
+        "uppin",
+        "uiwi",
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-aš-tu-wa-re-e-et",
+        "ḫa-wa-aš-ḫa-wi-i-pí"
+      ],
+      "line": "9′",
+      "raw": "ka-a-aš-tu-wa-re-e-et ḫa-wa-aš-ḫa-wi-i-pí ka-i[a-",
+      "words": [
+        "kastuwaret",
+        "hawashawipi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "10′",
+      "raw": "[DINGIR-ap [ka-a-at-taḫ [QA-TAM-MA [ma-a-al-di",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "12′",
+      "raw": "[[ḫ]a-pí-pu-na-a-an Dš[u]-l[i-i]n-kat-te ḫa-wa-aš-ḫa-wi-i-p[í",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "13′",
+      "raw": "[[ka-a-a]t-te LUGAL-te eš-tu-u-pé-en-tu(-)u-uḫ-kán-ti-u(-)k[i-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "14′",
+      "raw": "[[ [ [ [ x-li-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-a-ti-ti"
+      ],
+      "line": "16′",
+      "raw": "[[ [ [ḫa-wa-aš-ḫ]a-wi-i-pí ka-a-ti-ti [",
+      "words": [
+        "katiti"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-aḫ-aš"
+      ],
+      "line": "17′",
+      "raw": "[[ [ x-da-ḫa-aš ka-a-aḫ-aš x[",
+      "words": [
+        "kahas"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "18′",
+      "raw": "[[ [ x ḫa-wa-aš-ḫ[a-wi]-i-[pí",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 25.120",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ziu",
+    "anna",
+    "tuti",
+    "katu",
+    "uppin",
+    "uiwi",
+    "pala",
+    "kastuwaret",
+    "hawashawipi",
+    "katiti",
+    "kahas"
+  ]
+}

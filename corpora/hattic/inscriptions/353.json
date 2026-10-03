@@ -1,0 +1,39 @@
+{
+  "cth": "743",
+  "id": 353,
+  "lines": [
+    {
+      "intact": [
+        "a-pé-e-ma-aš-ši"
+      ],
+      "line": "7′",
+      "raw": "[ x-ši-ú a-pé-e-ma-aš-ši [",
+      "words": [
+        "apemassi"
+      ]
+    },
+    {
+      "intact": [
+        "a-re-el-la"
+      ],
+      "line": "10″",
+      "raw": "[ [la-a-i-i]a a-re-el-la a-p[é-e-ma-aš-ši [kat-ta-an [ar-ku-wa-an-zi",
+      "words": [
+        "arella"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "11″",
+      "raw": "[ x-i-ia a-re-el-l[a-",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 53.223",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "apemassi",
+    "arella"
+  ]
+}

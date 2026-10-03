@@ -1,0 +1,31 @@
+{
+  "cth": "738",
+  "id": 300,
+  "lines": [
+    {
+      "intact": [
+        "zi-i-ú-i-ia-ra",
+        "zi-i-ú-i-ia-ra"
+      ],
+      "line": " {€1+2} 8′/6′",
+      "raw": "zi-i-ú-i-ia-ra zi-i-ú-i-ia-ra ta-aš-[t]e-i-mu [",
+      "words": [
+        "ziuiara",
+        "ziuiara"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€1} 12′",
+      "raw": "[ [ x-el wa-i-e-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 20.79+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ziuiara",
+    "ziuiara"
+  ]
+}

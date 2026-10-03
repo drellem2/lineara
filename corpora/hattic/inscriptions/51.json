@@ -1,15 +1,22 @@
 {
-  "category": "lexeme",
-  "gloss": "children (le- plural)",
+  "cth": "626",
   "id": 51,
-  "is_bilingual": false,
-  "name": "le-binu",
-  "provenance": "Hattic lexeme; see citation.",
-  "source_citation": "'Hattische Sprache', de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.",
-  "text": "le-binu",
-  "tier": "A",
-  "transliteration": "lepinu",
+  "lines": [
+    {
+      "intact": [
+        "mi-iš-ša"
+      ],
+      "line": "r. Kol. 2′",
+      "raw": "mi-iš-ša",
+      "words": [
+        "missa"
+      ]
+    }
+  ],
+  "manuscript": "KBo 34.161",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "lepinu"
+    "missa"
   ]
 }

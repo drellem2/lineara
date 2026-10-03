@@ -1,0 +1,109 @@
+{
+  "cth": "735",
+  "id": 270,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 1′",
+      "raw": "[ [ -aḫ-zi ku-ú-u[p",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2′",
+      "raw": "[[ [ -uk-ka-aḫ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 3′",
+      "raw": "[[ [ x wa-a-aš-ḫa-wú-〈〈x〉〉-[un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′",
+      "raw": "[[ [ wa-za-ri-i-iš-tu[",
+      "words": []
+    },
+    {
+      "intact": [
+        "kal-la-aḫ"
+      ],
+      "line": "Vs. 5′",
+      "raw": "[[ [ x-e-nu(-)at-ti kal-la-aḫ li-si-i[n",
+      "words": [
+        "kallah"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 1",
+      "raw": "[[ [ x x x-i",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-ne-e"
+      ],
+      "line": "Rs. 2",
+      "raw": "[ [ x te-ne-e",
+      "words": [
+        "tene"
+      ]
+    },
+    {
+      "intact": [
+        "i-ku-ú"
+      ],
+      "line": "Rs. 3",
+      "raw": "[ [ x-a-i-il i-ku-ú",
+      "words": [
+        "iku"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 4",
+      "raw": "[ [ (-)te-ep-ka-a-aš-ša",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-a-ma"
+      ],
+      "line": "Rs. 5",
+      "raw": "[ [ pa-a-ma [",
+      "words": [
+        "pama"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 6",
+      "raw": "[[ [ [ú]-wa-a-aš-ḫé-er [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 7",
+      "raw": "[[ [ [-d]u-uk-kam [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 8",
+      "raw": "[[ [ x x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.39",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "kallah",
+    "tene",
+    "iku",
+    "pama"
+  ]
+}

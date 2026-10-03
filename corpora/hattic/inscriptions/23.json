@@ -1,15 +1,1281 @@
 {
-  "category": "theonym",
-  "gloss": "fate goddess",
+  "cth": "591",
   "id": 23,
-  "is_bilingual": false,
-  "name": "Papaya",
-  "provenance": "Hattic theonym; see citation.",
-  "source_citation": "Taracha, P. (2009). Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27. Wiesbaden: Harrassowitz.",
-  "text": "Papaya",
-  "tier": "B",
-  "transliteration": "papaya",
+  "lines": [
+    {
+      "intact": [
+        "nu-ú",
+        "te-e",
+        "ták-ki-ḫal",
+        "ta-ba-ar-na"
+      ],
+      "line": "Vs. I 20",
+      "raw": "nu-ú te-e ták-ki-ḫal ta-ba-ar-na",
+      "words": [
+        "nu",
+        "te",
+        "takkihal",
+        "taparna"
+      ]
+    },
+    {
+      "intact": [
+        "ša-i-il"
+      ],
+      "line": "Vs. I 21",
+      "raw": "ša-i-il zi-ip-t[i-p]í-il",
+      "words": [
+        "sail"
+      ]
+    },
+    {
+      "intact": [
+        "tu-u-ḫu-ru-up-te-eš"
+      ],
+      "line": "Vs. I 22",
+      "raw": "tu-u-ḫu-ru-up-te-eš e[š-t]a-pár-ti-li-iš",
+      "words": [
+        "tuhuruptes"
+      ]
+    },
+    {
+      "intact": [
+        "šu-un-ti",
+        "tu-un-ti",
+        "pa-la-a"
+      ],
+      "line": "Vs. I 23",
+      "raw": "šu-un-ti tu-un-ti [ [ pa-la-a",
+      "words": [
+        "sunti",
+        "tunti",
+        "pala"
+      ]
+    },
+    {
+      "intact": [
+        "wu-ur-u-mu-ú"
+      ],
+      "line": "Vs. I 24",
+      "raw": "wu-ur-u-mu-ú ta-x[ [ -ra",
+      "words": [
+        "wurumu"
+      ]
+    },
+    {
+      "intact": [
+        "wu-ru-ú-ši-mu-ú"
+      ],
+      "line": "Vs. I 25",
+      "raw": "wu-ru-ú-ši-mu-ú x[ [ x-ra",
+      "words": [
+        "wurusimu"
+      ]
+    },
+    {
+      "intact": [
+        "a-na-a-ḫu",
+        "mi-ša-a"
+      ],
+      "line": "Vs. I 26",
+      "raw": "a-na-a-ḫu mi-ša-a [ [ [ša-a-i]-il",
+      "words": [
+        "anahu",
+        "misa"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 27",
+      "raw": "zi-ip-ti-wa-i[l [ x-ma-a",
+      "words": []
+    },
+    {
+      "intact": [
+        "wu-ú-ru-ši-mu-ú"
+      ],
+      "line": "Vs. I 28",
+      "raw": "wu-ú-ru-ši-mu-ú [le-wu-u]-ur",
+      "words": [
+        "wurusimu"
+      ]
+    },
+    {
+      "intact": [
+        "ku-un-ku-na-a"
+      ],
+      "line": "Vs. I 29",
+      "raw": "ku-un-ku-na-a m[a [ -ma",
+      "words": [
+        "kunkuna"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na"
+      ],
+      "line": "Vs. I 30",
+      "raw": "ta-ba-ar-na [ [ -u",
+      "words": [
+        "taparna"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-na-ḫi-iš"
+      ],
+      "line": "Vs. I 31",
+      "raw": "ka-a-na-ḫi-iš [ [ -iš",
+      "words": [
+        "kanahis"
+      ]
+    },
+    {
+      "intact": [
+        "ša-a-i-u"
+      ],
+      "line": "Vs. I 32",
+      "raw": "ša-a-i-u ši-e-[ga-a-ra]-an",
+      "words": [
+        "saiu"
+      ]
+    },
+    {
+      "intact": [
+        "kur-ku-pé-en-na"
+      ],
+      "line": "Vs. I 33",
+      "raw": "kur-ku-pé-en-na [ši-e-ga-a-ra-a]n",
+      "words": [
+        "kurkupenna"
+      ]
+    },
+    {
+      "intact": [
+        "wu-ru-še-mu-ú"
+      ],
+      "line": "Vs. I 34",
+      "raw": "wu-ru-še-mu-ú [ši-e-ga-a-ra-a]m",
+      "words": [
+        "wurusemu"
+      ]
+    },
+    {
+      "intact": [
+        "nu-ú-pa-še"
+      ],
+      "line": "Vs. I 35",
+      "raw": "nu-ú-pa-še wu-[ú-ru-še-mu-ú",
+      "words": [
+        "nupase"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 36",
+      "raw": "URUa-ri-in-n[a [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ši-pa-ḫa-ar"
+      ],
+      "line": "Vs. I 37",
+      "raw": "ši-pa-ḫa-ar x[ [",
+      "words": [
+        "sipahar"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 38",
+      "raw": "li-iḫ-zu-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 39",
+      "raw": "eš-ta-pár-t[i-li-iš [ [-z]i-iš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 40",
+      "raw": "ta-pár-ši-x[ [ [URU]a-ri-in-na-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 41",
+      "raw": "ša-i-i[l [ [-w]u-nu-un",
+      "words": []
+    },
+    {
+      "intact": [
+        "u-mu-ú",
+        "wu-ru-še-mu-ú"
+      ],
+      "line": "Vs. I 42",
+      "raw": "u-mu-ú [ [ [-n]a-a wu-ru-še-mu-ú",
+      "words": [
+        "umu",
+        "wurusemu"
+      ]
+    },
+    {
+      "intact": [
+        "ša-i-u",
+        "kur-ku-pé-en-na"
+      ],
+      "line": "Vs. I 43",
+      "raw": "ša-i-u [ši-e-ga-ra]-a-an kur-ku-pé-en-na",
+      "words": [
+        "saiu",
+        "kurkupenna"
+      ]
+    },
+    {
+      "intact": [
+        "me-ez-zu-ul-la-an"
+      ],
+      "line": "Vs. I 44",
+      "raw": "ši-e-ga-a-[ra-an] Dme-ez-zu-ul-la-an",
+      "words": [
+        "mezzullan"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 45",
+      "raw": "ši-e-g[a-a-ra]-an",
+      "words": []
+    },
+    {
+      "intact": [
+        "kur-ku-pé-en-na"
+      ],
+      "line": "Vs. I 46",
+      "raw": "nu-wa-a-š[i [Dme-ez-z]u-ul-la kur-ku-pé-en-na",
+      "words": [
+        "kurkupenna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 47",
+      "raw": "ki-i-š[a(-) [ x-iz-zi",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 48",
+      "raw": "ša-ḫa-r[u(-) x-al-wa-pí-iz-za",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 49",
+      "raw": "ša-ḫa-[ru(-) [ x-wa-aš-ke-e-eš",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-wa-aš"
+      ],
+      "line": "Vs. I 50",
+      "raw": "a-wa-aš [ [ x(-)wa-re-e-eš",
+      "words": [
+        "awas"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 51",
+      "raw": "ma-w[a [ - x-ip-ra",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 52",
+      "raw": "pa-[ [ -da",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 62′",
+      "raw": "zi-i[z-zi-in-na [Dḫa-an-wa-šu-ú-it]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 63′",
+      "raw": "kal-ga-[le-en-na]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 64′",
+      "raw": "ta-az-[za-aš-ne-e-er [kur-ku-we-en-na]",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-aš-ši-e-ga-ra-a-am"
+      ],
+      "line": "Vs. II 1",
+      "raw": "ta-aš-ši-e-ga-ra-a-am",
+      "words": [
+        "tassiekaram"
+      ]
+    },
+    {
+      "intact": [
+        "wu-ru-še-mu-ú",
+        "ta-aš-ši-e-ga-ra-a-am"
+      ],
+      "line": "Vs. II 2",
+      "raw": "wu-ru-še-mu-ú ta-aš-ši-e-ga-ra-a-am",
+      "words": [
+        "wurusemu",
+        "tassiekaram"
+      ]
+    },
+    {
+      "intact": [
+        "nu-ú-pa-a-ši",
+        "wu-ú-ru-še-mu-ú"
+      ],
+      "line": "Vs. II 3",
+      "raw": "nu-ú-pa-a-ši wu-ú-ru-še-mu-ú",
+      "words": [
+        "nupasi",
+        "wurusemu"
+      ]
+    },
+    {
+      "intact": [
+        "kur-ku-pé-en-na",
+        "ta-ba-ar-na"
+      ],
+      "line": "Vs. II 4",
+      "raw": "kur-ku-pé-en-na ta-ba-ar-na",
+      "words": [
+        "kurkupenna",
+        "taparna"
+      ]
+    },
+    {
+      "intact": [
+        "li-iḫ-zi-iḫ-ku-wa-a-aš"
+      ],
+      "line": "Vs. II 5",
+      "raw": "li-iḫ-zi-iḫ-ku-wa-a-aš",
+      "words": [
+        "lihzihkuwas"
+      ]
+    },
+    {
+      "intact": [
+        "i-ma-ḫu",
+        "ša-i-il"
+      ],
+      "line": "Vs. II 19",
+      "raw": "i-ma-ḫu ša-i-il",
+      "words": [
+        "imahu",
+        "sail"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-at-ti",
+        "kur-ku-pé-en-na"
+      ],
+      "line": "Vs. II 20",
+      "raw": "ka-a-at-ti kur-ku-pé-en-na",
+      "words": [
+        "katti",
+        "kurkupenna"
+      ]
+    },
+    {
+      "intact": [
+        "wi-du-uš",
+        "ka-a-pár-wu-u-ur"
+      ],
+      "line": "Vs. II 21",
+      "raw": "wi-du-uš ka-a-pár-wu-u-ur",
+      "words": [
+        "witus",
+        "kaparwur"
+      ]
+    },
+    {
+      "intact": [
+        "wa-aš-ḫa-wu-un",
+        "li-ig-ga-ra-a-an"
+      ],
+      "line": "Vs. II 22",
+      "raw": "wa-aš-ḫa-wu-un li-ig-ga-ra-a-an",
+      "words": [
+        "washawun",
+        "likkaran"
+      ]
+    },
+    {
+      "intact": [
+        "wu-ru-še-mu-ú",
+        "kur-ku-wi-en-na"
+      ],
+      "line": "Vs. II 23",
+      "raw": "wu-ru-še-mu-ú kur-ku-wi-en-na",
+      "words": [
+        "wurusemu",
+        "kurkuwienna"
+      ]
+    },
+    {
+      "intact": [
+        "eš-ta-a-we-er",
+        "wa-ri-ul-li"
+      ],
+      "line": "Vs. II 24",
+      "raw": "eš-ta-a-we-er wa-ri-ul-li",
+      "words": [
+        "estawer",
+        "wariulli"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 25",
+      "raw": "zi-ip-ti-wa-〈〈x〉〉-il",
+      "words": []
+    },
+    {
+      "intact": [
+        "eš-ta-pár-ti-li-iš"
+      ],
+      "line": "Vs. II 26",
+      "raw": "eš-ta-pár-ti-li-iš",
+      "words": [
+        "estapartilis"
+      ]
+    },
+    {
+      "intact": [
+        "mi-i-ša-a",
+        "ša-a-i-il"
+      ],
+      "line": "Vs. II 49",
+      "raw": "mi-i-ša-a ša-a-i-il",
+      "words": [
+        "misa",
+        "sail"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ip-ti-pa-a-i-il"
+      ],
+      "line": "Vs. II 50",
+      "raw": "zi-ip-ti-pa-a-i-il",
+      "words": [
+        "ziptipail"
+      ]
+    },
+    {
+      "intact": [
+        "ša-a-i-u",
+        "li-ig-ga-ra-a-an"
+      ],
+      "line": "Vs. II 51",
+      "raw": "ša-a-i-u li-ig-ga-ra-a-an",
+      "words": [
+        "saiu",
+        "likkaran"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 52",
+      "raw": "[ku]r-ša-a-we-en-na-a",
+      "words": []
+    },
+    {
+      "intact": [
+        "ša-a-ru-u"
+      ],
+      "line": "Vs. II 53",
+      "raw": "[li-i]g-ga-ra-a-an ša-a-ru-u",
+      "words": [
+        "saru"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 54",
+      "raw": "[li-i]g-ga-ra-a-〈〈an〉〉-an",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 55",
+      "raw": "[nu-ú-pa-a-li [ša]-a-ru-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na"
+      ],
+      "line": "Vs. II 56",
+      "raw": "[ [ ta-ba-ar-na",
+      "words": [
+        "taparna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 57",
+      "raw": "[ [ -e-šu-ú",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 58",
+      "raw": "[ [ -ši-el",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 59",
+      "raw": "[ [ -pu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 60",
+      "raw": "[ [ [te-ḫu-uz-z]i-ia",
+      "words": []
+    },
+    {
+      "intact": [
+        "ša-a-i-u"
+      ],
+      "line": "Vs. III 1",
+      "raw": "ša-a-i-u li-ig-ga-[ra-a-an]",
+      "words": [
+        "saiu"
+      ]
+    },
+    {
+      "intact": [
+        "kur-ku-we-en-na-a"
+      ],
+      "line": "Vs. III 2",
+      "raw": "kur-ku-we-en-na-a li-ig-[ga-ra-a-an]",
+      "words": [
+        "kurkuwenna"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ip-pa-la-an-ti"
+      ],
+      "line": "Vs. III 3",
+      "raw": "zi-ip-pa-la-an-ti",
+      "words": [
+        "zippalanti"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 4",
+      "raw": "li-ig-ga-ra-a-〈an〉 nu-ú-pa-a-[li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 5",
+      "raw": "[zi-ip-pa-la-an-ti-ia [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 6",
+      "raw": "[kur-ku-we-en-na-a [tu-u-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 7",
+      "raw": "[ša-a-i-il [za-a-pa-ga [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 8",
+      "raw": "[zi-ia-aḫ-šu-un [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 9",
+      "raw": "[ma-aš-pu [le-wu-[u-ur",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 10",
+      "raw": "[te-ḫu-uz-zi-[ia",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 20",
+      "raw": "[zi-iz-[zi-in-na",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 21",
+      "raw": "[Dḫa-[an-wa-šu-ú-i-it",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 22",
+      "raw": "[kal-[ga-le-en-na",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 23",
+      "raw": "[wa-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 24",
+      "raw": "[kur-[ku-we-en-na",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 25",
+      "raw": "[[ [ -x-ga-ra-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 26",
+      "raw": "[[ [ x-ap-te",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 27",
+      "raw": "[ [ [š]a-a-i-il",
+      "words": []
+    },
+    {
+      "intact": [
+        "i-ma-a-ḫa",
+        "ša-a-i-il"
+      ],
+      "line": "Vs. III 50",
+      "raw": "i-ma-a-ḫa ša-a-i-il",
+      "words": [
+        "imaha",
+        "sail"
+      ]
+    },
+    {
+      "intact": [
+        "ú-ug-ga",
+        "wa-ar-wu-u"
+      ],
+      "line": "Vs. III 51",
+      "raw": "ú-ug-ga wa-ar-wu-u",
+      "words": [
+        "ukka",
+        "warwu"
+      ]
+    },
+    {
+      "intact": [
+        "šu-ug-ga",
+        "wa-ar-wa-aš-ḫa-ap"
+      ],
+      "line": "Vs. III 52",
+      "raw": "šu-ug-ga wa-ar-wa-aš-ḫa-ap",
+      "words": [
+        "sukka",
+        "warwashap"
+      ]
+    },
+    {
+      "intact": [
+        "zi-ip-ti-pa-i-il"
+      ],
+      "line": "Vs. III 53",
+      "raw": "zi-ip-ti-pa-i-il",
+      "words": [
+        "ziptipail"
+      ]
+    },
+    {
+      "intact": [
+        "ka-at-ti",
+        "kur-ku-we-en-na"
+      ],
+      "line": "Vs. III 54",
+      "raw": "ka-at-ti kur-ku-we-en-na",
+      "words": [
+        "katti",
+        "kurkuwenna"
+      ]
+    },
+    {
+      "intact": [
+        "pí-i-du-uš",
+        "ka-a-pár-wu-u-un"
+      ],
+      "line": "Vs. III 55",
+      "raw": "pí-i-du-uš ka-a-pár-wu-u-un",
+      "words": [
+        "pitus",
+        "kaparwun"
+      ]
+    },
+    {
+      "intact": [
+        "wa-aš-ḫa-wu-ú-un"
+      ],
+      "line": "Vs. III 56",
+      "raw": "wa-aš-ḫa-wu-ú-un",
+      "words": [
+        "washawun"
+      ]
+    },
+    {
+      "intact": [
+        "li-ig-ga-ra-a-an"
+      ],
+      "line": "Vs. III 57",
+      "raw": "li-ig-ga-ra-a-an",
+      "words": [
+        "likkaran"
+      ]
+    },
+    {
+      "intact": [
+        "wa-ru-ú-še-mu"
+      ],
+      "line": "Vs. III 58",
+      "raw": "wa-ru-ú-še-mu kur-ku-pé-en-n[a",
+      "words": [
+        "warusemu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 59",
+      "raw": "[[eš-t]a-[a-w]e-e-er[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. III 60",
+      "raw": "[[ [ [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. V 54″",
+      "raw": "[[ta]-ba-a[r-na]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. V 55″",
+      "raw": "x-ḫa-a-an(-)[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-aš-ḫu-uz"
+      ],
+      "line": "Rs. V 56″",
+      "raw": "a-aš-ḫu-uz [ [",
+      "words": [
+        "ashuz"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. V 57″",
+      "raw": "le-e-wa(-)ḫ[u(-) [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. V 58″",
+      "raw": "le-e-wa(-)ku-ú(-)[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. V 59″",
+      "raw": "eš-ta-a-pár-ti-l[i-iš [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. VI 2",
+      "raw": "[ša-a-i-u [li-ig-ga-ra-a-a[m",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. VI 3",
+      "raw": "[li-ig-ga-ra-a-am [ḫa-wa-an-t[a-li-i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. VI 4",
+      "raw": "[li-ig-ga-ra-a-am [nu-ú-pa-l[i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. VI 5",
+      "raw": "[ḫa-wa-an-ta-li-i [kur-ku-we-e[n-na",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. VI 6",
+      "raw": "[ta-ba-ar-na [wa-a-ra-i-šu [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. VI 7",
+      "raw": "[ḫa-ap-tu-u-ru [še-ep-še-[il [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-ia-aḫ-šu",
+        "du-up-pu"
+      ],
+      "line": "Rs. VI 8",
+      "raw": "ka-ia-aḫ-šu du-up-pu li-wu-u-[ur [",
+      "words": [
+        "kaiahsu",
+        "tuppu"
+      ]
+    },
+    {
+      "intact": [
+        "te-ḫu-uz-zi-ia",
+        "wa-ḫa-a"
+      ],
+      "line": "Rs. VI 9",
+      "raw": "te-ḫu-uz-zi-ia wa-ḫa-a iz-zi-[wa- [",
+      "words": [
+        "tehuzzia",
+        "waha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a",
+        "kur-ku-we-en-na"
+      ],
+      "line": "Rs. VI 10",
+      "raw": "a-ḫa-a kur-ku-we-en-na li-iz-zi-ip-t[i-wa-i-il",
+      "words": [
+        "aha",
+        "kurkuwenna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. VI 11",
+      "raw": "[ta-ba-ar-na [li-iz-zi-ip-ti-wa-i-i[l]",
+      "words": []
+    },
+    {
+      "intact": [
+        "nu-ú-pa-li",
+        "ta-ba-ar-na",
+        "kur-ku-pé-en-na"
+      ],
+      "line": "Rs. VI 12",
+      "raw": "nu-ú-pa-li ta-ba-ar-na kur-ku-pé-en-na",
+      "words": [
+        "nupali",
+        "taparna",
+        "kurkupenna"
+      ]
+    },
+    {
+      "intact": [
+        "pa-ak-kat-te-en-na",
+        "li-ik-ka-at-ti"
+      ],
+      "line": "Rs. VI 13",
+      "raw": "pa-ak-kat-te-en-na li-ik-ka-at-ti",
+      "words": [
+        "pakkattenna",
+        "likkatti"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia-aḫ-šu-ú",
+        "le-e-wa-at-ka-at-ti"
+      ],
+      "line": "Rs. VI 14",
+      "raw": "i-ia-aḫ-šu-ú le-e-wa-at-ka-at-ti",
+      "words": [
+        "iahsu",
+        "lewatkatti"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-ep-pí-nu-ú",
+        "le-e-ep-ak-ku-ú"
+      ],
+      "line": "Rs. VI 15",
+      "raw": "le-e-ep-pí-nu-ú le-e-ep-ak-ku-ú",
+      "words": [
+        "leppinu",
+        "lepakku"
+      ]
+    },
+    {
+      "intact": [
+        "le-e-wa-ru-un",
+        "eš-ta-a-pár-ti-li-iš"
+      ],
+      "line": "Rs. VI 16",
+      "raw": "le-e-wa-ru-un eš-ta-a-pár-ti-li-iš",
+      "words": [
+        "lewarun",
+        "estapartilis"
+      ]
+    },
+    {
+      "intact": [
+        "wa-a-ḫa-a",
+        "iz-zi-wa-ḫa-a",
+        "kur-ku-we-en-na"
+      ],
+      "line": "Rs. VI 20",
+      "raw": "wa-a-ḫa-a iz-zi-wa-ḫa-a kur-ku-we-en-na",
+      "words": [
+        "waha",
+        "izziwaha",
+        "kurkuwenna"
+      ]
+    },
+    {
+      "intact": [
+        "iz-zi-ip-ti-pí-i-il",
+        "ta-ba-ar-na-aš"
+      ],
+      "line": "Rs. VI 21",
+      "raw": "iz-zi-ip-ti-pí-i-il ta-ba-ar-na-aš",
+      "words": [
+        "izziptipil",
+        "taparnas"
+      ]
+    },
+    {
+      "intact": [
+        "iz-zi-ip-ti-pí-i-il",
+        "nu-ú-pa-a-ši"
+      ],
+      "line": "Rs. VI 22",
+      "raw": "iz-zi-ip-ti-pí-i-il nu-ú-pa-a-ši",
+      "words": [
+        "izziptipil",
+        "nupasi"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na",
+        "kur-ku-we-en-na"
+      ],
+      "line": "Rs. VI 23",
+      "raw": "ta-ba-ar-na kur-ku-we-en-na",
+      "words": [
+        "taparna",
+        "kurkuwenna"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-at-taḫ-na-a",
+        "li-ka-a-at-taḫ"
+      ],
+      "line": "Rs. VI 24",
+      "raw": "ka-a-at-taḫ-na-a li-ka-a-at-taḫ",
+      "words": [
+        "kattahna",
+        "likattah"
+      ]
+    },
+    {
+      "intact": [
+        "i-ia-aḫ-šu-ú",
+        "še-e-wa-ka-at-taḫ"
+      ],
+      "line": "Rs. VI 25",
+      "raw": "i-ia-aḫ-šu-ú še-e-wa-ka-at-taḫ",
+      "words": [
+        "iahsu",
+        "sewakattah"
+      ]
+    },
+    {
+      "intact": [
+        "še-ep-pí-nu",
+        "še-e-wa-ak-ku-ú"
+      ],
+      "line": "Rs. VI 26",
+      "raw": "še-ep-pí-nu še-e-wa-ak-ku-ú",
+      "words": [
+        "seppinu",
+        "sewakku"
+      ]
+    },
+    {
+      "intact": [
+        "še-e-wu-ru-ú",
+        "eš-ta-a-pár-ti-li-iš"
+      ],
+      "line": "Rs. VI 27",
+      "raw": "še-e-wu-ru-ú eš-ta-a-pár-ti-li-iš",
+      "words": [
+        "sewuru",
+        "estapartilis"
+      ]
+    },
+    {
+      "intact": [
+        "zi-iz-zi-in-na",
+        "ḫa-an-wa-šu-ú-i-it"
+      ],
+      "line": "Rs. VI 32",
+      "raw": "zi-iz-zi-in-na Dḫa-an-wa-šu-ú-i-it",
+      "words": [
+        "zizzinna",
+        "hanwasuit"
+      ]
+    },
+    {
+      "intact": [
+        "kal-ga-le-en-na",
+        "wi-u-ul"
+      ],
+      "line": "Rs. VI 33",
+      "raw": "kal-ga-le-en-na wi-u-ul",
+      "words": [
+        "kalkalenna",
+        "wiul"
+      ]
+    },
+    {
+      "intact": [
+        "ta-az-za-aš-ne-e-er",
+        "kur-ku-we-en-na"
+      ],
+      "line": "Rs. VI 34",
+      "raw": "ta-az-za-aš-ne-e-er kur-ku-we-en-na",
+      "words": [
+        "tazzasner",
+        "kurkuwenna"
+      ]
+    },
+    {
+      "intact": [
+        "ta-aš-ši-ig-ga-ra-a-am",
+        "ka-am-ma-ma-a"
+      ],
+      "line": "Rs. VI 35",
+      "raw": "ta-aš-ši-ig-ga-ra-a-am ka-am-ma-ma-a",
+      "words": [
+        "tassikkaram",
+        "kammama"
+      ]
+    },
+    {
+      "intact": [
+        "ta-aš-ši-ig-ga-ra-a-am",
+        "nu-ú-pa-a-ši"
+      ],
+      "line": "Rs. VI 36",
+      "raw": "ta-aš-ši-ig-ga-ra-a-am nu-ú-pa-a-ši",
+      "words": [
+        "tassikkaram",
+        "nupasi"
+      ]
+    },
+    {
+      "intact": [
+        "ka-am-ma-ma",
+        "kur-ku-we-en-na"
+      ],
+      "line": "Rs. VI 37",
+      "raw": "ka-am-ma-ma kur-ku-we-en-na",
+      "words": [
+        "kammama",
+        "kurkuwenna"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na"
+      ],
+      "line": "Rs. VI 38",
+      "raw": "ta-ba-ar-na li-iḫ-zi-ku-wa-a-[aš",
+      "words": [
+        "taparna"
+      ]
+    }
+  ],
+  "manuscript": "KUB 1.17",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "papaya"
+    "nu",
+    "te",
+    "takkihal",
+    "taparna",
+    "sail",
+    "tuhuruptes",
+    "sunti",
+    "tunti",
+    "pala",
+    "wurumu",
+    "wurusimu",
+    "anahu",
+    "misa",
+    "wurusimu",
+    "kunkuna",
+    "taparna",
+    "kanahis",
+    "saiu",
+    "kurkupenna",
+    "wurusemu",
+    "nupase",
+    "sipahar",
+    "umu",
+    "wurusemu",
+    "saiu",
+    "kurkupenna",
+    "mezzullan",
+    "kurkupenna",
+    "awas",
+    "tassiekaram",
+    "wurusemu",
+    "tassiekaram",
+    "nupasi",
+    "wurusemu",
+    "kurkupenna",
+    "taparna",
+    "lihzihkuwas",
+    "imahu",
+    "sail",
+    "katti",
+    "kurkupenna",
+    "witus",
+    "kaparwur",
+    "washawun",
+    "likkaran",
+    "wurusemu",
+    "kurkuwienna",
+    "estawer",
+    "wariulli",
+    "estapartilis",
+    "misa",
+    "sail",
+    "ziptipail",
+    "saiu",
+    "likkaran",
+    "saru",
+    "taparna",
+    "saiu",
+    "kurkuwenna",
+    "zippalanti",
+    "imaha",
+    "sail",
+    "ukka",
+    "warwu",
+    "sukka",
+    "warwashap",
+    "ziptipail",
+    "katti",
+    "kurkuwenna",
+    "pitus",
+    "kaparwun",
+    "washawun",
+    "likkaran",
+    "warusemu",
+    "ashuz",
+    "kaiahsu",
+    "tuppu",
+    "tehuzzia",
+    "waha",
+    "aha",
+    "kurkuwenna",
+    "nupali",
+    "taparna",
+    "kurkupenna",
+    "pakkattenna",
+    "likkatti",
+    "iahsu",
+    "lewatkatti",
+    "leppinu",
+    "lepakku",
+    "lewarun",
+    "estapartilis",
+    "waha",
+    "izziwaha",
+    "kurkuwenna",
+    "izziptipil",
+    "taparnas",
+    "izziptipil",
+    "nupasi",
+    "taparna",
+    "kurkuwenna",
+    "kattahna",
+    "likattah",
+    "iahsu",
+    "sewakattah",
+    "seppinu",
+    "sewakku",
+    "sewuru",
+    "estapartilis",
+    "zizzinna",
+    "hanwasuit",
+    "kalkalenna",
+    "wiul",
+    "tazzasner",
+    "kurkuwenna",
+    "tassikkaram",
+    "kammama",
+    "tassikkaram",
+    "nupasi",
+    "kammama",
+    "kurkuwenna",
+    "taparna"
   ]
 }

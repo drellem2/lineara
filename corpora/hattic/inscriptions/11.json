@@ -1,15 +1,95 @@
 {
-  "category": "theonym",
-  "gloss": "war god",
+  "cth": "450",
   "id": 11,
-  "is_bilingual": false,
-  "name": "Šulinkatte",
-  "provenance": "Hattic theonym; see citation.",
-  "source_citation": "Taracha, P. (2009). Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27. Wiesbaden: Harrassowitz.",
-  "text": "Šulinkatte",
-  "tier": "A",
-  "transliteration": "sulinkatte",
+  "lines": [
+    {
+      "intact": [],
+      "line": "{€2+} Vs. I 43",
+      "raw": "[a-ḫa-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2} Vs. II 43",
+      "raw": "[a-ḫa-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "{€2+} Rs. III 12",
+      "raw": "[a-ḫa-a",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€2} Rs. III 20",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€2} Rs. III 28",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€2} Rs. III 36",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€2} Rs. III 41",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€2} Rs. III 46",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    },
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "{€2+} Rs. III 50",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    }
+  ],
+  "manuscript": "KUB 30.21+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "sulinkatte"
+    "aha",
+    "aha",
+    "aha",
+    "aha",
+    "aha",
+    "aha"
   ]
 }

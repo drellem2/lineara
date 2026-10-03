@@ -1,0 +1,33 @@
+{
+  "cth": "738",
+  "id": 301,
+  "lines": [
+    {
+      "intact": [
+        "ta-aš-ša-ni-in-na"
+      ],
+      "line": "Vs. 12′",
+      "raw": "[ [ta]-aš-ša-ni-in-na ta-aš-ša-ni-in-na ša-x[",
+      "words": [
+        "tassaninna"
+      ]
+    },
+    {
+      "intact": [
+        "te-ep-pí-in"
+      ],
+      "line": "Vs. 13′",
+      "raw": "[ [t]a-aš-ša-ni-in-na te-ep-pí-in 〈〈x〉〉 ma-ša-a(-)[",
+      "words": [
+        "teppin"
+      ]
+    }
+  ],
+  "manuscript": "KBo 21.100",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tassaninna",
+    "teppin"
+  ]
+}

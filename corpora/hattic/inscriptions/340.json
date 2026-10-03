@@ -1,0 +1,137 @@
+{
+  "cth": "743",
+  "id": 340,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. II 1",
+      "raw": "[ [ [-na]-a-eš [še-mi-ši-il-ma",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 2",
+      "raw": "[i-ia-i[p- [ x x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 3",
+      "raw": "lu-u[l-la",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 4",
+      "raw": "[lu-ul-la [lu-u[l-l]a du-t[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 5",
+      "raw": "[Dka-at-taḫ-ḫi-in [i-ia-ip-t[i-pí-iš",
+      "words": []
+    },
+    {
+      "intact": [
+        "lu-ul-la",
+        "lu-ul-la"
+      ],
+      "line": "Vs. II 7",
+      "raw": "lu-ul-la lu-ul-la lu-[ul-la",
+      "words": [
+        "lulla",
+        "lulla"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 8",
+      "raw": "[URUú-lu-uš-na-a-eš(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 9",
+      "raw": "[zi-il-li-i[n",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 1′",
+      "raw": "[[mi-i]š-ka-a[n(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 2′",
+      "raw": "[[ [ [-n]a-a-eš še-mi-ši-il-m[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 3′",
+      "raw": "[[du-t]a-a URUú-lu-u[š(-)na-a-eš",
+      "words": []
+    },
+    {
+      "intact": [
+        "zi-il-li-in"
+      ],
+      "line": "Rs. III 4′",
+      "raw": "[[du]-ta-a zi-il-li-in x[",
+      "words": [
+        "zillin"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-ḫa-ia"
+      ],
+      "line": "Rs. III 5′",
+      "raw": "[[du]-ta-a Dta-a-ḫa-ia mi-iš-k[a-",
+      "words": [
+        "tahaia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 6′",
+      "raw": "[x-na-a-eš [še-mi-ši-il-ma [u-ru-ti-ia-a[n",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 7′",
+      "raw": "[eš-ki-mi-iš [ku-ru-wa-aš [ka-mi-li-ip [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 8′",
+      "raw": "[[i-i]a-a-ip-ti-pí-iš i-ia-ip-ti-p[í-iš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 9′",
+      "raw": "[[lu-ul-la-a]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. III 10′",
+      "raw": "[lu-ul-la-a [l]u-ul-la-a du-ta-[a",
+      "words": []
+    }
+  ],
+  "manuscript": "Fragm. Jendryschik",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lulla",
+    "lulla",
+    "zillin",
+    "tahaia"
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "cth": "746",
+  "id": 605,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 1′a",
+      "raw": "]-i[t]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 2′a",
+      "raw": "]-un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 3′a",
+      "raw": "]-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 4′a",
+      "raw": "]-te",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 5′a",
+      "raw": "]-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 6′a",
+      "raw": "]-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 7′a",
+      "raw": "]-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 8′a",
+      "raw": "]-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 9′a",
+      "raw": "]-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 10′a",
+      "raw": "]-ta",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 11′a",
+      "raw": "]-er",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 12′a",
+      "raw": "]x-aḫ-tu",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 13′a",
+      "raw": "]-eš 〈〈x〉〉",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. lk. Kol. 14′a",
+      "raw": "]-li [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 6′b",
+      "raw": "ti-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 7′b",
+      "raw": "[TÚG [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 8′b",
+      "raw": "[iš-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 9′b",
+      "raw": "[iš-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 10′b",
+      "raw": "[du-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 11′b",
+      "raw": "[a-l[i-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. r. Kol. 12′b",
+      "raw": "[še-e-[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 1′",
+      "raw": "[ [ḫ]u-z[i",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 2′",
+      "raw": "[ x p[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 3′",
+      "raw": "[ x",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 4′",
+      "raw": "]x-ḫu-wa [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 5′",
+      "raw": "[ x-uz-za-aš-x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-aš-pé-e-et"
+      ],
+      "line": "Rs. lk. Kol. 6′",
+      "raw": "[ x-il-la-ma ta-aš-pé-e-et",
+      "words": [
+        "taspet"
+      ]
+    },
+    {
+      "intact": [
+        "pé-e-ru-uš"
+      ],
+      "line": "Rs. lk. Kol. 7′",
+      "raw": "-p]a-ma pé-e-ru-uš",
+      "words": [
+        "perus"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 8′",
+      "raw": "]x-az-zi-il",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. lk. Kol. 9′",
+      "raw": "]x[ [ [-i]l",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 1.56",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "taspet",
+    "perus"
+  ]
+}

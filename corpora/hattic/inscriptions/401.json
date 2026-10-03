@@ -1,0 +1,222 @@
+{
+  "cth": "744",
+  "id": 401,
+  "lines": [
+    {
+      "intact": [],
+      "line": "Vs. 1′",
+      "raw": "] ke-e-[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 2′",
+      "raw": "]x-ma [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 3′",
+      "raw": "]x ta-az-zu-wa-š[i [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 4′",
+      "raw": "]x-x-x-x-an-a-mu wa-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 5′",
+      "raw": "]x ku-uš-ši-e-mu-ku-li-x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. 6′",
+      "raw": "]-ta-ak-ša-an ta-a-i[a [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ni",
+        "ta-az-zu-wa-ši-ú-i-nu"
+      ],
+      "line": "Vs. 7′",
+      "raw": "n]i ta-az-zu-wa-ši-ú-i-nu [ [",
+      "words": [
+        "ni",
+        "tazzuwasiuinu"
+      ]
+    },
+    {
+      "intact": [
+        "ku-ne-ra"
+      ],
+      "line": "Vs. 8′",
+      "raw": "]x ku-ne-ra iš-kat-te-e[ [",
+      "words": [
+        "kunera"
+      ]
+    },
+    {
+      "intact": [
+        "pa",
+        "za-li-nu-i-nu"
+      ],
+      "line": "Vs. 9′",
+      "raw": "p]a za-li-nu-i-nu [ [",
+      "words": [
+        "pa",
+        "zalinuinu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. 12′",
+      "raw": "t]a-az-zu-wa-ši-[ [",
+      "words": []
+    },
+    {
+      "intact": [
+        "li-na-a-i-u",
+        "a-li-na"
+      ],
+      "line": "Rs. 1",
+      "raw": "l]i-na-a-i-u a-li-na [ [",
+      "words": [
+        "linaiu",
+        "alina"
+      ]
+    },
+    {
+      "intact": [
+        "li-na-a-i-u",
+        "a-li-na"
+      ],
+      "line": "Rs. 2",
+      "raw": "] li-na-a-i-u a-li-na [ [",
+      "words": [
+        "linaiu",
+        "alina"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 3",
+      "raw": "]x(-)iš-ku-ú-uz-zi-ne 〈〈x x〉〉 ša-i-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "la-še-e",
+        "la-la-e"
+      ],
+      "line": "Rs. 4",
+      "raw": "[ x-i 𒉽 la-še-e la-la-e ma-al-ḫi-i[p",
+      "words": [
+        "lase",
+        "lalae"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 5",
+      "raw": "[(-)w]a-ar-wa-ši-i-ú-ni",
+      "words": []
+    },
+    {
+      "intact": [
+        "ka-al-li-ku-uz-zi-ne"
+      ],
+      "line": "Rs. 6",
+      "raw": "k]a-al-li-ku-uz-zi-ne",
+      "words": [
+        "kallikuzzine"
+      ]
+    },
+    {
+      "intact": [
+        "ka-a-aš-ša-i-li"
+      ],
+      "line": "Rs. 7",
+      "raw": "]x-ma-ḫu ka-a-aš-ša-i-li ka-az-te-ma-[",
+      "words": [
+        "kassaili"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Rs. 8",
+      "raw": "[ x-ik-ma-aš-ka-ia-ru",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 9",
+      "raw": "] 𒉽 𒉽 𒉽 [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 10",
+      "raw": "[ 𒉽 𒉽 𒉽 𒉽 [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 11",
+      "raw": "[ 𒉽 𒉽 𒉽 𒉽 [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 12",
+      "raw": "[ x-te-ia [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 13",
+      "raw": "[ [t]a-a-ḫu-ru-ú-š[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 14",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 15",
+      "raw": "[ [-z]i-la-ši(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. 16",
+      "raw": "[ šu-u A[N",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.94",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ni",
+    "tazzuwasiuinu",
+    "kunera",
+    "pa",
+    "zalinuinu",
+    "linaiu",
+    "alina",
+    "linaiu",
+    "alina",
+    "lase",
+    "lalae",
+    "kallikuzzine",
+    "kassaili"
+  ]
+}

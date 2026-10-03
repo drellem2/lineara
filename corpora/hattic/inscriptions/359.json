@@ -1,0 +1,204 @@
+{
+  "cth": "743",
+  "id": 359,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "](-)ḫal-x-x-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ x-it-ḫu [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ x [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "4′",
+      "raw": "[ [a-re-e]l-la [",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-ap-ta-nu-ut-ta-ti"
+      ],
+      "line": "5′",
+      "raw": "[ [ta-a-i-w]u-ur-nu pa-ap-ta-nu-ut-ta-ti [",
+      "words": [
+        "paptanuttati"
+      ]
+    },
+    {
+      "intact": [
+        "ta-a-i-wu-ur-nu"
+      ],
+      "line": "6′",
+      "raw": "[ x-ta-ga-aḫ-zi ta-a-i-wu-ur-nu [",
+      "words": [
+        "taiwurnu"
+      ]
+    },
+    {
+      "intact": [
+        "a-re-el-la",
+        "la-a-i-ia"
+      ],
+      "line": "7′",
+      "raw": "[ -e a-re-el-la la-a-i-ia a-re-el-l[a",
+      "words": [
+        "arella",
+        "laia"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na"
+      ],
+      "line": "8′",
+      "raw": "[ [t]a-ia-aḫ-ku-un ma-a(-)〈〈aš〉〉 ta-ba-ar-na",
+      "words": [
+        "taparna"
+      ]
+    },
+    {
+      "intact": [
+        "ta-i-aḫ-ku-na"
+      ],
+      "line": "9′",
+      "raw": "[ x-e-ḫu ta-i-aḫ-ku-na ma-a(-)〈〈aš〉〉 ta-ba-ar-[na",
+      "words": [
+        "taiahkuna"
+      ]
+    },
+    {
+      "intact": [
+        "la-a-i-ia",
+        "a-re-el-la"
+      ],
+      "line": "10′",
+      "raw": "[ la-a-i-ia a-re-el-la [",
+      "words": [
+        "laia",
+        "arella"
+      ]
+    },
+    {
+      "intact": [
+        "ma-a",
+        "wa-a-ra-a-i-u"
+      ],
+      "line": "11′",
+      "raw": "[ [t]a-ia-aḫ-ku-un-na ma-a wa-a-ra-a-i-u a-p[é-e-ma-aš-ši",
+      "words": [
+        "ma",
+        "waraiu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ia-aḫ-ku-na",
+        "ma-a"
+      ],
+      "line": "12′",
+      "raw": "[ x-e-ḫu ta-ia-aḫ-ku-na ma-a wa-a-[ra-a-i-u",
+      "words": [
+        "taiahkuna",
+        "ma"
+      ]
+    },
+    {
+      "intact": [
+        "a-re-el-la"
+      ],
+      "line": "13′",
+      "raw": "[ [l]a-a-ia a-re-el-la [",
+      "words": [
+        "arella"
+      ]
+    },
+    {
+      "intact": [
+        "la-a-i-ia",
+        "a-lu-ul-la"
+      ],
+      "line": "16′",
+      "raw": "[ [a-lu-u]l-la la-a-i-ia a-lu-ul-la [",
+      "words": [
+        "laia",
+        "alulla"
+      ]
+    },
+    {
+      "intact": [
+        "tu-ḫa-wu-ra-el"
+      ],
+      "line": "17′",
+      "raw": "[ [pa-at-t]u-mi-li tu-ḫa-wu-ra-el a-p[é-e-ma-aš-ši",
+      "words": [
+        "tuhawurael"
+      ]
+    },
+    {
+      "intact": [
+        "pa-at-tu-mi-li"
+      ],
+      "line": "18′",
+      "raw": "[ x pa-at-tu-mi-li tu-ḫa-wu-r[a-el",
+      "words": [
+        "pattumili"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-tu-ḫa-nu-wa"
+      ],
+      "line": "20′",
+      "raw": "[ [-š]a pa-a-tu-ḫa-nu-wa a-pé-e-ma-aš-š[i",
+      "words": [
+        "patuhanuwa"
+      ]
+    },
+    {
+      "intact": [
+        "pa-a-tu-ḫa-nu-wa"
+      ],
+      "line": "21′",
+      "raw": "[ x-ša pa-a-tu-ḫa-nu-wa [",
+      "words": [
+        "patuhanuwa"
+      ]
+    }
+  ],
+  "manuscript": "KUB 28.112",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "paptanuttati",
+    "taiwurnu",
+    "arella",
+    "laia",
+    "taparna",
+    "taiahkuna",
+    "laia",
+    "arella",
+    "ma",
+    "waraiu",
+    "taiahkuna",
+    "ma",
+    "arella",
+    "laia",
+    "alulla",
+    "tuhawurael",
+    "pattumili",
+    "patuhanuwa",
+    "patuhanuwa"
+  ]
+}

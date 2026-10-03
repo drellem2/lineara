@@ -1,0 +1,62 @@
+{
+  "cth": "745",
+  "id": 568,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "[ [ x te-ep-pu-ú-l[i-i-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[[ [ [t]e-ep-pu-ú-li-i-a [",
+      "words": []
+    },
+    {
+      "intact": [
+        "taḫ-ru-e-ša-an"
+      ],
+      "line": "3′",
+      "raw": "[[ [ [t]e-e-ep MUNUStaḫ-ru-e-ša-an te-e-[ep",
+      "words": [
+        "tahruesan"
+      ]
+    },
+    {
+      "intact": [
+        "te-e-wa-ru-u-ki-it"
+      ],
+      "line": "4′",
+      "raw": "[[ [ [-e]p te-e-wa-ru-u-ki-it",
+      "words": [
+        "tewarukit"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "5′",
+      "raw": "[ [ [te-e-w]a-ap-pu-le-e-a",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-mi-i-ša"
+      ],
+      "line": "6′",
+      "raw": "[ [ x te-mi-i-ša",
+      "words": [
+        "temisa"
+      ]
+    }
+  ],
+  "manuscript": "KUB 45.86",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tahruesan",
+    "tewarukit",
+    "temisa"
+  ]
+}

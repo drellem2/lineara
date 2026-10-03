@@ -1,0 +1,39 @@
+{
+  "cth": "725",
+  "id": 190,
+  "lines": [
+    {
+      "intact": [
+        "šu-li-in-kat-te"
+      ],
+      "line": "1′",
+      "raw": "Dšu]-li-in-kat-te [ka-at-ti",
+      "words": [
+        "sulinkatte"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "2′",
+      "raw": "[ [ú-un-ḫu]-pí",
+      "words": []
+    },
+    {
+      "intact": [
+        "pí-iz-zi-i"
+      ],
+      "line": "6′",
+      "raw": "pí]-iz-zi-i",
+      "words": [
+        "pizzi"
+      ]
+    }
+  ],
+  "manuscript": "KBo 48.79",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "sulinkatte",
+    "pizzi"
+  ]
+}

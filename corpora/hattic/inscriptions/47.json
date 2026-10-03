@@ -1,15 +1,22 @@
 {
-  "category": "lexeme",
-  "gloss": "king (title)",
+  "cth": "613",
   "id": 47,
-  "is_bilingual": false,
-  "name": "tabarna",
-  "provenance": "Hittite royal title (labarna/tabarna) of probable Hattic origin.",
-  "source_citation": "Kammenhuber, A. (1969). 'Hattisch.' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden: Brill.",
-  "text": "tabarna",
-  "tier": "B",
-  "transliteration": "taparna",
+  "lines": [
+    {
+      "intact": [
+        "a-ḫa-a"
+      ],
+      "line": "Vs. II 15′",
+      "raw": "a-ḫa-a",
+      "words": [
+        "aha"
+      ]
+    }
+  ],
+  "manuscript": "KBo 39.91",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
   "words": [
-    "taparna"
+    "aha"
   ]
 }

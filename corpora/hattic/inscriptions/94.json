@@ -1,0 +1,87 @@
+{
+  "cth": "627",
+  "id": 94,
+  "lines": [
+    {
+      "intact": [
+        "ta-a-i-e",
+        "lu-wa-i-u-ma-aš-ši"
+      ],
+      "line": "{€1} Rs. III 4",
+      "raw": "ta-a-i-e lu-wa-i-u-ma-aš-ši",
+      "words": [
+        "taie",
+        "luwaiumassi"
+      ]
+    },
+    {
+      "intact": [
+        "wa-du-e-et",
+        "iš-ki-wu-ur-nu-ú"
+      ],
+      "line": "{€1} Rs. III 6",
+      "raw": "wa-du-e-et iš-ki-wu-ur-nu-ú",
+      "words": [
+        "watuet",
+        "iskiwurnu"
+      ]
+    },
+    {
+      "intact": [
+        "eš-ki-wu-u-ur-nu"
+      ],
+      "line": "{€1} Rs. III 10",
+      "raw": "[d]u-e-et eš-ki-wu-u-ur-nu",
+      "words": [
+        "eskiwurnu"
+      ]
+    },
+    {
+      "intact": [
+        "wa-du-e-it",
+        "eš-ki-wu-u-ur-nu"
+      ],
+      "line": "{€1} Rs. III 15",
+      "raw": "wa-du-e-it eš-ki-wu-u-ur-nu",
+      "words": [
+        "watueit",
+        "eskiwurnu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€1} Rs. III 16",
+      "raw": "l[i x",
+      "words": []
+    },
+    {
+      "intact": [
+        "am-pu-u-pí-li"
+      ],
+      "line": "{€2} Vs. 7′",
+      "raw": "[[ am-pu-u-pí-li [",
+      "words": [
+        "ampupili"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "{€2} Vs. 8′",
+      "raw": "[[ ma-le-e-lu-x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KUB 48.7+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "taie",
+    "luwaiumassi",
+    "watuet",
+    "iskiwurnu",
+    "eskiwurnu",
+    "watueit",
+    "eskiwurnu",
+    "ampupili"
+  ]
+}

@@ -1,0 +1,651 @@
+{
+  "cth": "731",
+  "id": 222,
+  "lines": [
+    {
+      "intact": [
+        "la-a-i-lu-wa-a-i-u",
+        "ú-wa-la-i",
+        "la-a-i-ú-wa-a-i"
+      ],
+      "line": "Vs. I 1",
+      "raw": "l]a-a-i-lu-wa-a-i-u ú-wa-la-i x-x-x la-a-i-ú-wa-a-i [",
+      "words": [
+        "lailuwaiu",
+        "uwalai",
+        "laiuwai"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 2",
+      "raw": "[ [-w]a-a-wi-en-da-a-aš ta-ak-x-[ [ x-ú",
+      "words": []
+    },
+    {
+      "intact": [
+        "ta-a-šu-u-ú-ḫi"
+      ],
+      "line": "Vs. I 3",
+      "raw": "-e]n ta-a-šu-u-ú-ḫi wu-u-ru-un-k[at-ta-i-nu",
+      "words": [
+        "tasuhi"
+      ]
+    },
+    {
+      "intact": [
+        "wu-u-ru-un-kat-ta-i-nu"
+      ],
+      "line": "Vs. I 4",
+      "raw": "[ [(-)t]a-a-šu-u wu-u-ru-un-kat-ta-i-nu [",
+      "words": [
+        "wurunkattainu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-al-la-ú"
+      ],
+      "line": "Vs. I 5",
+      "raw": "(-)t]a-al-la-ú ḫa-an-wa-a-šu-i-ši-i-x[ [",
+      "words": [
+        "tallau"
+      ]
+    },
+    {
+      "intact": [
+        "wu-u-ru-un-kat-ta-i-nu",
+        "wu-u-ru-un-kat-ta-la-aš-ḫa"
+      ],
+      "line": "Vs. I 6",
+      "raw": "]x-in-za-ap-wi wu-u-ru-un-kat-ta-i-nu wu-u-ru-un-kat-ta-la-aš-ḫa",
+      "words": [
+        "wurunkattainu",
+        "wurunkattalasha"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ba-ar-na",
+        "wa-wa-ia-aš-ḫa-ip-wi",
+        "ḫa-nu-ni-iš-ḫa-wi-i"
+      ],
+      "line": "Vs. I 7",
+      "raw": "]-nu ta-ba-ar-na wa-wa-ia-aš-ḫa-ip-wi ḫa-nu-ni-iš-ḫa-wi-i",
+      "words": [
+        "taparna",
+        "wawaiashaipwi",
+        "hanunishawi"
+      ]
+    },
+    {
+      "intact": [
+        "wa-a-ma",
+        "zi-it-ḫa-ri",
+        "ḫa-a-ša-ma-an-na-ad-da"
+      ],
+      "line": "Vs. I 8",
+      "raw": "]x-ši-i wa-a-ma zi-it-ḫa-ri ḫa-a-ša-ma-an-na-ad-da",
+      "words": [
+        "wama",
+        "zithari",
+        "hasamannatta"
+      ]
+    },
+    {
+      "intact": [
+        "zi-it-ḫa-ri",
+        "ḫa-a-šama-an-na-ad-da"
+      ],
+      "line": "Vs. I 9",
+      "raw": "-w]a-a-ma zi-it-ḫa-ri ḫa-a-ša(-)ma-an-na-ad-da",
+      "words": [
+        "zithari",
+        "hasamannatta"
+      ]
+    },
+    {
+      "intact": [
+        "aš-ta-az-zu-um-mu",
+        "zu-ru-uš-du",
+        "da-a-ḫa-ip-wi"
+      ],
+      "line": "Vs. I 10",
+      "raw": "]-a aš-ta-az-zu-um-mu zu-ru-uš-du da-a-ḫa-ip-wi",
+      "words": [
+        "astazzummu",
+        "zurustu",
+        "tahaipwi"
+      ]
+    },
+    {
+      "intact": [
+        "aš-ta-az-zu-um-mu",
+        "zu-ru-uš-du",
+        "da-a-ḫa-a-ip-wi"
+      ],
+      "line": "Vs. I 11",
+      "raw": "aš-t]a-az-zu-um-mu zu-ru-uš-du da-a-ḫa-a-ip-wi",
+      "words": [
+        "astazzummu",
+        "zurustu",
+        "tahaipwi"
+      ]
+    },
+    {
+      "intact": [
+        "da-a-ḫa-ap-wa-az-zi-i"
+      ],
+      "line": "Vs. I 12",
+      "raw": "]x da-a-ḫa-ap-wa-az-zi-i",
+      "words": [
+        "tahapwazzi"
+      ]
+    },
+    {
+      "intact": [
+        "ták-ki-ḫa-a-šu",
+        "wi-ia-aš-taḫ-ḫu",
+        "kán-du-u-ḫa-la-aš-ta-ra"
+      ],
+      "line": "Vs. I 13",
+      "raw": "-u]š-ta 〈〈ḪA〉〉 ták-ki-ḫa-a-šu wi-ia-aš-taḫ-ḫu kán-du-u-ḫa-la-aš-ta-ra",
+      "words": [
+        "takkihasu",
+        "wiastahhu",
+        "kantuhalastara"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-ip-wi-ia",
+        "ták-ki-ḫa-aš",
+        "kaz-zu-um-mu"
+      ],
+      "line": "Vs. I 14",
+      "raw": "]x ḫa-ip-wi-ia ták-ki-ḫa-aš kaz-zu-um-mu za-x-ip-wi-ia",
+      "words": [
+        "haipwia",
+        "takkihas",
+        "kazzummu"
+      ]
+    },
+    {
+      "intact": [
+        "kaz-zu-um-mu",
+        "ma-a",
+        "ta-ki-ḫa-a-šu",
+        "ši-ip-ši-la",
+        "a-aš-ḫu-u-wa-a-na-a"
+      ],
+      "line": "Vs. I 15",
+      "raw": "k]az-zu-um-mu ma-a ta-ki-ḫa-a-šu ši-ip-ši-la a-aš-ḫu-u-wa-a-na-a",
+      "words": [
+        "kazzummu",
+        "ma",
+        "takihasu",
+        "sipsila",
+        "ashuwana"
+      ]
+    },
+    {
+      "intact": [
+        "aš-ḫu-u-wa-an-na",
+        "ma-a",
+        "wi-en-da-a-wu-u-ra"
+      ],
+      "line": "Vs. I 16",
+      "raw": "]-a aš-ḫu-u-wa-an-na ma-a wi-en-da-a-wu-u-ra",
+      "words": [
+        "ashuwanna",
+        "ma",
+        "wientawura"
+      ]
+    },
+    {
+      "intact": [
+        "kap-wa-ri-il-li"
+      ],
+      "line": "Vs. I 17",
+      "raw": "ka]p-wa-ri-il-li",
+      "words": [
+        "kapwarilli"
+      ]
+    },
+    {
+      "intact": [
+        "kap-wa-ri-il-li"
+      ],
+      "line": "Vs. I 18",
+      "raw": "]x-u-ul-la kap-wa-ri-il-li",
+      "words": [
+        "kapwarilli"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-a-ni-i",
+        "i-ia-šu-li"
+      ],
+      "line": "Vs. I 19",
+      "raw": "-w]a-ri-il-la-wa-ad-da ḫa-a-ni-i i-ia-šu-li",
+      "words": [
+        "hani",
+        "iasuli"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 20",
+      "raw": "]x x x[ [ [-l]a-a-aš-da-ra",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 21",
+      "raw": "]x-da",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 24′",
+      "raw": "[ [ x a-aš-x-it-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 25′",
+      "raw": "[[ [ x-am-ma-a-ḫu-u [",
+      "words": []
+    },
+    {
+      "intact": [
+        "ḫa-a-ap-ta-aš-ga",
+        "ša-am-ma-an-da"
+      ],
+      "line": "Vs. I 26′",
+      "raw": "[[ [ [-w]a ḫa-a-ap-ta-aš-ga ša-am-ma-an-da x[",
+      "words": [
+        "haptaska",
+        "sammanta"
+      ]
+    },
+    {
+      "intact": [
+        "ḫa-a-ap-ta-aš-ga",
+        "ša-am-ma-an-da"
+      ],
+      "line": "Vs. I 27′",
+      "raw": "[[ [ ḫa-a-ap-ta-aš-ga ša-am-ma-an-da x[",
+      "words": [
+        "haptaska",
+        "sammanta"
+      ]
+    },
+    {
+      "intact": [
+        "ša-am-ma-an-da"
+      ],
+      "line": "Vs. I 28′",
+      "raw": "[[ [ ša-am-ma-an-da i[a]-al-la-wa-x[",
+      "words": [
+        "sammanta"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 29′",
+      "raw": "[[ [ x-aš kaz-zu-ú-wa(-)[ x x-ti [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 30′",
+      "raw": "[[ [ x-ša DUTU-u-ru-ni-te ša-at-x(-)x[",
+      "words": []
+    },
+    {
+      "intact": [
+        "la-a-da-ni-i-da"
+      ],
+      "line": "Vs. I 31′",
+      "raw": "[[ [ x-x-x-da la-a-da-ni-i-da [",
+      "words": [
+        "latanita"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 32′",
+      "raw": "[[ [ -e-an-ni-ta [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 33′",
+      "raw": "[[ [ x-x-ga-ši-mu(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 34′",
+      "raw": "[[ [ x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 4′",
+      "raw": "[[ [ x-i-ia ú-wa-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "ga-ad-da-ḫi"
+      ],
+      "line": "Vs. II 5′",
+      "raw": "[ša-a-ḫ[a- [ x-x[ [ x ga-ad-da-ḫi Dš[u-",
+      "words": [
+        "kattahi"
+      ]
+    },
+    {
+      "intact": [
+        "ga-ad-da-aḫ-ḫi"
+      ],
+      "line": "Vs. II 6′",
+      "raw": "[ša-a-ḫa-a-x[ [ x-ma-zi-it ga-ad-da-aḫ-ḫi ma-a-ta-x[",
+      "words": [
+        "kattahhi"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 7′",
+      "raw": "[iš-ga-a-ḫa-ar [wa-a-ma [wu-u-ra [Dšu-li-i[n-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 8′",
+      "raw": "[iš-ga-a-ḫa-ar [wa-a-ma [wu-u-ra [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 9′",
+      "raw": "[iš-ga-a-ḫa-ar [wa-a-ma [ta-a-da-an-zi [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 10′",
+      "raw": "[ma-a-ša-ḫa-wu-u-uš [la-a-wu-u-ur [Dšu-li-in-ka[t-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 11′",
+      "raw": "[ma-a-ša-ḫa-wu-u-uš [la-a-wu-u-ur [ša-a-ḫa-wu-u-un [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 12′",
+      "raw": "[ma-a-tu [tu-u-uḫ-ḫu-up-ši-i [Dšu-li-in-kat-ta-i-n[u(-)",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 13′",
+      "raw": "[ma-a-tu [tu-u-uḫ-ḫu-up-ši-i [tu-uḫ-ḫa-nu [la-a-aḫ-ši-i [[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 14′",
+      "raw": "[tu-uḫ-ḫa-nu [wa-a-ma [la-a-aḫ-ši-i [la-a-mu [pa-a-pa-[",
+      "words": []
+    },
+    {
+      "intact": [
+        "pa-a-pa-a-i-ia-a"
+      ],
+      "line": "Vs. II 15′",
+      "raw": "[x[ [ x-wa-a-mu pa-a-pa-a-i-ia-a",
+      "words": [
+        "papaia"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 16′",
+      "raw": "x[ [ x-ši-i šu-up-ka(-)ú-wa-ḫu-ri-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 17′",
+      "raw": "[[ [ [t]u-uk-ḫa-a-li-i-na-a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 18′",
+      "raw": "[ [ tu-uk-ḫa-a-li-[i-na-a]",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 19′",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 21′",
+      "raw": "[[ [ [-w]a-an-ni-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 22′",
+      "raw": "[[ [ x ku-u-r[u-",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 23′",
+      "raw": "[[ [ -na",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 24′",
+      "raw": "[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 25′",
+      "raw": "[ [ x-in-nu-u",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 26′",
+      "raw": "[ [ x-ap-zu-u-uḫ",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 27′",
+      "raw": "[ [ x-pí tu-ul-li-i[n(-)",
+      "words": []
+    },
+    {
+      "intact": [
+        "ú-mi-in"
+      ],
+      "line": "Vs. II 28′",
+      "raw": "[[ [ (-)pa-la-a ú-mi-in zu-u-[",
+      "words": [
+        "umin"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 29′",
+      "raw": "[[ [ -ú-un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 30′",
+      "raw": "[ [ -un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 31′",
+      "raw": "[ [ x-ḫa-wu-u-un [ [ -x-ra-a-i-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-et-wa-a-ḫa"
+      ],
+      "line": "Vs. II 32′",
+      "raw": "[ [ x[ [ x-x-ra-a-i-u te-et-wa-a-ḫa",
+      "words": [
+        "tetwaha"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 33′",
+      "raw": "x[ [ x-š[a(-) [ x-li-wa-a[t(-) [ x-x-x-ḫa",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 34′",
+      "raw": "iš-ta-a-an-x[ [ li-i-k[a- [ [-m]u-un",
+      "words": []
+    },
+    {
+      "intact": [
+        "a-ša-a"
+      ],
+      "line": "Vs. II 35′",
+      "raw": "a-ša-a pa-a-[",
+      "words": [
+        "asa"
+      ]
+    },
+    {
+      "intact": [
+        "zi-iš-ḫa-wu-u-un"
+      ],
+      "line": "Vs. II 36′",
+      "raw": "[[ [ x-x-x te-[ [ x zi-iš-ḫa-wu-u-un",
+      "words": [
+        "zishawun"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 37′",
+      "raw": "ú-un-tu-wa-[ [ x-ú-un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 38′",
+      "raw": "[ [ x-tu-wa-[ [ -wi-iš",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 39′",
+      "raw": "[ [ x[ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 40′",
+      "raw": "[ [ x-ik-z[i(-) [ -in",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 41′",
+      "raw": "[ [ -un",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs. II 42′",
+      "raw": "[ [ -u",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.11",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "lailuwaiu",
+    "uwalai",
+    "laiuwai",
+    "tasuhi",
+    "wurunkattainu",
+    "tallau",
+    "wurunkattainu",
+    "wurunkattalasha",
+    "taparna",
+    "wawaiashaipwi",
+    "hanunishawi",
+    "wama",
+    "zithari",
+    "hasamannatta",
+    "zithari",
+    "hasamannatta",
+    "astazzummu",
+    "zurustu",
+    "tahaipwi",
+    "astazzummu",
+    "zurustu",
+    "tahaipwi",
+    "tahapwazzi",
+    "takkihasu",
+    "wiastahhu",
+    "kantuhalastara",
+    "haipwia",
+    "takkihas",
+    "kazzummu",
+    "kazzummu",
+    "ma",
+    "takihasu",
+    "sipsila",
+    "ashuwana",
+    "ashuwanna",
+    "ma",
+    "wientawura",
+    "kapwarilli",
+    "kapwarilli",
+    "hani",
+    "iasuli",
+    "haptaska",
+    "sammanta",
+    "haptaska",
+    "sammanta",
+    "sammanta",
+    "latanita",
+    "kattahi",
+    "kattahhi",
+    "papaia",
+    "umin",
+    "tetwaha",
+    "asa",
+    "zishawun"
+  ]
+}

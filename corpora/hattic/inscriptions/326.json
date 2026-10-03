@@ -1,0 +1,77 @@
+{
+  "cth": "741",
+  "id": 326,
+  "lines": [
+    {
+      "intact": [
+        "i-li-na-a"
+      ],
+      "line": "Vs. I 6",
+      "raw": "i-li-na-a mu-ú-wa-li-n[a",
+      "words": [
+        "ilina"
+      ]
+    },
+    {
+      "intact": [
+        "te-eg-ga-ḫu-le-e",
+        "te-ka-a"
+      ],
+      "line": "Vs. I 8",
+      "raw": "te-eg-ga-ḫu-le-e te-ka-a [te-ka-ḫu-li",
+      "words": [
+        "tekkahule",
+        "teka"
+      ]
+    },
+    {
+      "intact": [
+        "li-na-a"
+      ],
+      "line": "Vs. I 11",
+      "raw": "li-na-a mu-ú-wa-li-[na",
+      "words": [
+        "lina"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs. I 13",
+      "raw": "[te-eg-ga-ḫu-li [te-ka [te-k[a-ḫu-li",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 2′",
+      "raw": "[i-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 3′",
+      "raw": "[a-wa-an-[ta",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 4′",
+      "raw": "[an-ka-la-w[a",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Rs. IV 6′",
+      "raw": "[i-ia-i-[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 14.117",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "ilina",
+    "tekkahule",
+    "teka",
+    "lina"
+  ]
+}

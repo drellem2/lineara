@@ -1,0 +1,80 @@
+{
+  "cth": "745",
+  "id": 494,
+  "lines": [
+    {
+      "intact": [],
+      "line": "1′",
+      "raw": "]x-u-pí-in-ta-a [",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-wa-il-la"
+      ],
+      "line": "2′",
+      "raw": "[ -ú-ri-ma te-wa-il-la [",
+      "words": [
+        "tewailla"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "3′",
+      "raw": "[ x-ia",
+      "words": []
+    },
+    {
+      "intact": [
+        "in-ta-a"
+      ],
+      "line": "4′",
+      "raw": "]-ú-wa in-ta-a te-ez-za-aš-ma-a-ra(-)[",
+      "words": [
+        "inta"
+      ]
+    },
+    {
+      "intact": [
+        "iš-ḫu-ši-iš-za-ma-a"
+      ],
+      "line": "5′",
+      "raw": "[-u]l-la iš-ḫu-ši-iš-za-ma-a [",
+      "words": [
+        "ishusiszama"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "6′",
+      "raw": "[ x ka-a-lu-ul(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "7′",
+      "raw": "[ x te-ep-ta-li(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "8′",
+      "raw": "[ x te-ep-ta-[l]i(-)[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "9′",
+      "raw": "[ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.124",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "tewailla",
+    "inta",
+    "ishusiszama"
+  ]
+}

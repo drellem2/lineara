@@ -1,0 +1,54 @@
+{
+  "cth": "743",
+  "id": 345,
+  "lines": [
+    {
+      "intact": [],
+      "line": " {€1+2} 7′/Vs. 7′",
+      "raw": "[ma-ia-aš-ka-[am [ [",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. 8",
+      "raw": "[ [-l]i-u-un-na",
+      "words": []
+    },
+    {
+      "intact": [
+        "te-te-eš-ḫa-pí",
+        "ku-ru-uš-ša-ap-pí"
+      ],
+      "line": " {€2} Rs. 9",
+      "raw": "Dt]e-te-eš-ḫa-pí ku-ru-uš-ša-ap-pí [",
+      "words": [
+        "teteshapi",
+        "kurussappi"
+      ]
+    },
+    {
+      "intact": [
+        "li-u-un-na"
+      ],
+      "line": " {€2} Rs. 10",
+      "raw": "[ [(-)l]i-u-un-na li-u-un-na [",
+      "words": [
+        "liunna"
+      ]
+    },
+    {
+      "intact": [],
+      "line": " {€2} Rs. 11",
+      "raw": "[ [ku-ru-u]š-ta-ap-pí p[u- [ x[",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.52+",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "teteshapi",
+    "kurussappi",
+    "liunna"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "cth": "743",
+  "id": 351,
+  "lines": [
+    {
+      "intact": [
+        "ša-ḫa-a-wa-aš",
+        "ma-aš-ta-i-li-u"
+      ],
+      "line": "Vs.? 3′",
+      "raw": "š]a-ḫa-a-wa-aš ma-aš-ta-i-li-u",
+      "words": [
+        "sahawas",
+        "mastailiu"
+      ]
+    },
+    {
+      "intact": [
+        "ta-ru-li-il-li-i-in"
+      ],
+      "line": "Vs.? 5′",
+      "raw": "]-u-ur ta-ru-li-il-li-i-in",
+      "words": [
+        "tarulillin"
+      ]
+    },
+    {
+      "intact": [
+        "ta-i-e-lu-wa-i-u"
+      ],
+      "line": "Vs.? 6′",
+      "raw": "ta-i-e-lu-wa-i-u",
+      "words": [
+        "taieluwaiu"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 7′",
+      "raw": "]-u",
+      "words": []
+    },
+    {
+      "intact": [
+        "le-e-lu-wa-ni-i"
+      ],
+      "line": "Vs.? 9′",
+      "raw": "D]le-e-lu-wa-ni-i ka[t-te",
+      "words": [
+        "leluwani"
+      ]
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 10′",
+      "raw": "[ a-ru-u-še-e-x[",
+      "words": []
+    },
+    {
+      "intact": [],
+      "line": "Vs.? 11′",
+      "raw": "[ [-p]u [",
+      "words": []
+    }
+  ],
+  "manuscript": "KBo 37.70",
+  "source_citation": "Thesaurus Linguarum Hethaeorum digitalis (TLHdig), Beta Version 0.2. Hethitologie-Portal Mainz. XML dataset, Zenodo, https://doi.org/10.5281/zenodo.15459134 (CC BY 4.0); online at https://www.hethport.uni-wuerzburg.de/TLHdig/.",
+  "url": "https://doi.org/10.5281/zenodo.15459134",
+  "words": [
+    "sahawas",
+    "mastailiu",
+    "tarulillin",
+    "taieluwaiu",
+    "leluwani"
+  ]
+}
