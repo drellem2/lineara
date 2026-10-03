@@ -33,8 +33,27 @@ Identical to every substrate pool since v10; no post-hoc changes:
     median(control top-20).** Anything else is FAIL. A FAIL ships as a
     clean negative.
 
-Interpretation rules (pm-lineara 2026-10-03 10:50Z, fixed before the run)
-=========================================================================
+Interpretation rules, v2 (pm-lineara 2026-10-03 review of mg-7f4db; fixed before the v2 run, mg-a38bf)
+=====================================================================================================
+These replace the v32 rules below for the re-run on the edition-sourced
+pool. They change how a verdict is read, not the criterion above.
+
+1. The pool has **124 entries** (mg-7f4db: forms read off viewed IA
+   scans of Kammenhuber 1969 / Schuster 1974, each with URL + page +
+   quote, checked by ``scripts/verify_hattic_sources.py``). That is above
+   the v21 bar of 80, so the v32 data-quality excuse no longer applies.
+2. **A FAIL reads as a FAIL**: the signal did not appear for an
+   unrelated isolate, which is *weak* evidence FOR the gate's
+   specificity. **A PASS reads as before**: it supports the v15
+   generic-structure reading, not substrate affinity.
+3. The hattic LM is now trained on **TLHdig running text** (3,213
+   tokens / 1,940 types). LM/pool overlap is 56 of 124 pool surfaces
+   (9.1% of LM tokens), against v32's 72 of 72. The own-LM readout is
+   therefore only **partly circular**: report it with the overlap, do
+   not lean on it.
+
+Interpretation rules, v32 (pm-lineara 2026-10-03 10:50Z; historical record of the first run)
+============================================================================================
 1. The pool has **72 entries**, below the v21 bar of 80 (deliberately
    not padded). This is stated beside the p-value in the report.
 2. The hattic LM corpus and the hattic pool are the **same 72 lexical
@@ -52,16 +71,18 @@ Interpretation rules (pm-lineara 2026-10-03 10:50Z, fixed before the run)
 
 Output
 ======
-  results/rollup.bayesian_posterior.hattic.md
+  results/rollup.bayesian_posterior.hattic.md (v32)
+  results/rollup.bayesian_posterior.hattic.v2.md (v2, via --out-name)
 
 Usage
 =====
-  python3 scripts/hattic_gate.py [--summary-json PATH]
+  python3 scripts/hattic_gate.py [--out-name NAME] [--summary-json PATH]
 """
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import sys
@@ -142,31 +163,30 @@ def render(ev: dict, sub_rows: list[dict], ctrl_rows: list[dict]) -> str:
     lines: list[str] = []
     lines.append(
         "# Hattic specificity probe — pre-registered right-tail bayesian "
-        "gate (mg-7b882)\n"
+        "gate (mg-7b882; v2 re-run mg-a38bf)\n"
     )
     if ev["gate"] == "PASS":
         verdict = (
             f"**Verdict against the pre-registered criterion: PASS** — "
-            f"`hattic` (n={_N_POOL_ENTRIES} pool entries, below the v21 "
+            f"`hattic` (n={_N_POOL_ENTRIES} pool entries, above the v21 "
             f"bar of 80) vs `{_CONTROL}`, one-tailed MW p={_fmt_p(p)}; "
             f"median top-{_TOP_K_GATE} posterior {ms:.4f} vs {mc:.4f} "
             f"(gap {ms - mc:+.4f}). Hattic is an unrelated Anatolian "
             f"isolate run as a specificity probe: a PASS is evidence that "
             f"the gate rewards generic natural-language structure (the "
-            f"v15 reading), not substrate affinity with Linear A. It "
-            f"holds regardless of the forms' collation accuracy."
+            f"v15 reading), not substrate affinity with Linear A."
         )
     else:
         verdict = (
             f"**Verdict against the pre-registered criterion: FAIL** — "
-            f"`hattic` (n={_N_POOL_ENTRIES} pool entries, below the v21 "
+            f"`hattic` (n={_N_POOL_ENTRIES} pool entries, above the v21 "
             f"bar of 80) vs `{_CONTROL}`, one-tailed MW p={_fmt_p(p)}; "
             f"median top-{_TOP_K_GATE} posterior {ms:.4f} vs {mc:.4f} "
-            f"(gap {ms - mc:+.4f}). Per the pre-registered "
-            f"interpretation rules this FAIL is **inconclusive on data "
-            f"quality** (hand-keyed, uncollated lexical forms; 72 < 80 "
-            f"entries), not evidence that the gate's signal is "
-            f"substrate-specific."
+            f"(gap {ms - mc:+.4f}). Per the v2 interpretation rules "
+            f"(fixed before the run) a FAIL on the edition-sourced pool "
+            f"reads as a FAIL: the signal did not appear for an "
+            f"unrelated isolate, which is **weak evidence for the "
+            f"gate's specificity**."
         )
     lines.append(verdict + "\n")
 
@@ -249,25 +269,31 @@ def render(ev: dict, sub_rows: list[dict], ctrl_rows: list[dict]) -> str:
         )
     lines.append("")
 
-    lines.append("## Interpretation rules (fixed before the run)\n")
+    lines.append("## Interpretation rules (v2, fixed before the run)\n")
     lines.append(
-        f"- **Pool size.** {_N_POOL_ENTRIES} entries, below the v21 bar "
-        f"of 80; not padded.\n"
-        f"- **Circularity.** The `hattic` LM is trained on the same 72 "
-        f"lexical citation forms that make up the pool. The own-LM "
-        f"readout in the cross-LM matrix is inflated by construction and "
-        f"is not evidence. This gate is less exposed, because "
-        f"`{_CONTROL}` is sampled from the same bigram statistics and is "
-        f"scored under the same LM; that is a mitigation, not immunity.\n"
-        f"- **Collation.** Forms are hand-keyed and not collated against "
-        f"Soysal 2004 / the printed editions (`corpora/hattic.README.md`). "
-        f"A PASS supports generic structure regardless; a FAIL is "
-        f"inconclusive on data quality.\n"
+        f"- **Pool size.** {_N_POOL_ENTRIES} entries, above the v21 bar "
+        f"of 80; not padded. Forms are read off viewed scans of "
+        f"Kammenhuber 1969 / Schuster 1974 with URL, page and quote "
+        f"(`pools/hattic.README.md`, `scripts/verify_hattic_sources.py`).\n"
+        f"- **Reading.** A FAIL reads as a FAIL: weak evidence for "
+        f"specificity. A PASS supports the v15 generic-structure "
+        f"reading, not substrate affinity.\n"
+        f"- **Circularity.** The `hattic` LM is trained on TLHdig "
+        f"running text (3,213 tokens / 1,940 types). 56 of the "
+        f"{_N_POOL_ENTRIES} pool surfaces also occur as LM word types "
+        f"(9.1% of LM tokens; v32 was 72 of 72). The own-LM readout is "
+        f"partly circular and is reported, not leaned on. `{_CONTROL}` "
+        f"is scored under the same LM, which mitigates this for the "
+        f"gate itself.\n"
+        f"- **v32 record.** The first run (72 hand-keyed forms, LM = "
+        f"pool) is kept in `results/hattic_gate_summary.json` and "
+        f"`results/rollup.bayesian_posterior.hattic.md`.\n"
     )
 
     lines.append("## Notes\n")
     lines.append(
-        f"- Metric: `{_METRIC}`. LM: `hattic` (α=1.0, 72 lexical forms; "
+        f"- Metric: `{_METRIC}`. LM: `hattic` (α=1.0, TLHdig running "
+        f"text, 1,940 word types; "
         f"`harness/external_phoneme_models/hattic.json`).\n"
         f"- Gate: top-{_TOP_K_GATE} by posterior_mean only (credibility "
         f"n_min={_NMIN} shown in the leaderboard, not used by the gate).\n"
@@ -311,6 +337,9 @@ def main(argv: list[str] | None = None) -> int:
         "substrate_pool": _SUBSTRATE,
         "control_pool": _CONTROL,
         "n_pool_entries": _N_POOL_ENTRIES,
+        "pool_sha256": hashlib.sha256(
+            (args.pools_dir / f"{_SUBSTRATE}.yaml").read_bytes()
+        ).hexdigest(),
         "n_substrate_top": ev["n_substrate_top"],
         "n_control_top": ev["n_control_top"],
         "median_substrate_top": ev["median_substrate_top"],

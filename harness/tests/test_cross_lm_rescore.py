@@ -147,5 +147,60 @@ class CrossLMSeenTest(unittest.TestCase):
             self.assertEqual(len(seen), 2)
 
 
+class CrossLMForceRescoreTest(unittest.TestCase):
+    """--force-rescore (mg-a38bf): a rebuilt LM under an existing name
+    must be rescored even though (hash, language) is already present."""
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.cross = _load_module("cross_lm_rescore", _CROSS_LM_PATH)
+
+    def _run(self, tmp: Path, force: bool) -> dict:
+        return self.cross.run(
+            corpus_path=_REPO_ROOT / "corpus" / "all.jsonl",
+            results_dir=tmp / "results",
+            auto_dir=tmp / "auto",
+            auto_sig_dir=tmp / "auto_sig",
+            ext_model_dir=_REPO_ROOT / "harness" / "external_phoneme_models",
+            pools=["aquitanian"],
+            note="test",
+            progress_every=0,
+            repo_root=_REPO_ROOT,
+            dispatch={"aquitanian": "hattic"},
+            sidecar_tag="t",
+            force_rescore=force,
+        )
+
+    def test_force_rescore_ignores_cache(self) -> None:
+        manifest = _REPO_ROOT / "hypotheses" / "auto" / "aquitanian.manifest.jsonl"
+        first = manifest.read_text(encoding="utf-8").splitlines()[0]
+        h = json.loads(first)["hypothesis_hash"]
+        with tempfile.TemporaryDirectory() as tmp_s:
+            tmp = Path(tmp_s)
+            (tmp / "auto").mkdir()
+            (tmp / "results").mkdir()
+            (tmp / "auto" / "aquitanian.manifest.jsonl").write_text(
+                first + "\n", encoding="utf-8"
+            )
+            (tmp / "results" / "experiments.external_phoneme_perplexity_v0.jsonl").write_text(
+                json.dumps({
+                    "metric": "external_phoneme_perplexity_v0",
+                    "hypothesis_hash": h,
+                    "language": "hattic",
+                }) + "\n",
+                encoding="utf-8",
+            )
+            # Control: without the flag the cached pair is skipped.
+            cached = self._run(tmp, force=False)
+            self.assertEqual((cached["scored"], cached["skipped_resumed"]), (0, 1))
+            forced = self._run(tmp, force=True)
+            self.assertEqual((forced["scored"], forced["skipped_resumed"]), (1, 0))
+            out = (tmp / "results" / "experiments.external_phoneme_perplexity_v0.t.jsonl")
+            rows = [json.loads(l) for l in out.read_text(encoding="utf-8").splitlines()]
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(rows[0]["language"], "hattic")
+            self.assertEqual(rows[0]["hypothesis_hash"], h)
+
+
 if __name__ == "__main__":
     unittest.main()

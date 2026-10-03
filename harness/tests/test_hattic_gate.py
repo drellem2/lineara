@@ -72,14 +72,30 @@ class HatticGateTest(unittest.TestCase):
         ev = self.gate.evaluate(rows, list(rows))
         self.assertEqual(ev["gate"], "FAIL")
 
-    def test_fail_text_is_inconclusive_on_data_quality(self) -> None:
+    def test_fail_text_follows_v2_interpretation_rules(self) -> None:
+        # v2 rules (fixed before the mg-a38bf run): on the edition-sourced
+        # 124-entry pool a FAIL reads as weak evidence for specificity, no
+        # longer as "inconclusive on data quality".
         rows = self._rows([0.5 + 0.01 * i for i in range(30)])
         for r in rows:
             r.update(pool_kind="hattic", credibility=1.0, effective_score=r["posterior_mean"])
         ev = self.gate.evaluate(rows, list(rows))
         text = self.gate.render(ev, rows, [])
-        self.assertIn("inconclusive on data quality", text)
-        self.assertIn("72", text)
+        self.assertIn("weak evidence for the gate's specificity", text)
+        self.assertNotIn("inconclusive on data quality", text)
+        self.assertIn("n=124", text)
+
+    def test_pass_text_supports_generic_structure(self) -> None:
+        sub = self._rows([0.9 + 0.001 * i for i in range(30)])
+        ctrl = self._rows([0.5 + 0.001 * i for i in range(30)])
+        for r in sub:
+            r.update(pool_kind="hattic", credibility=1.0, effective_score=r["posterior_mean"])
+        for r in ctrl:
+            r.update(pool_kind="control_hattic_bigram", credibility=1.0, effective_score=r["posterior_mean"])
+        ev = self.gate.evaluate(sub, ctrl)
+        text = self.gate.render(ev, sub, ctrl)
+        self.assertIn("PASS", text)
+        self.assertIn("generic natural-language structure", text)
 
 
 class PoolLoaderSkipsNonPoolYamlTest(unittest.TestCase):

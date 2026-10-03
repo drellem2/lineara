@@ -168,7 +168,9 @@ _TOPONYM_UNDER_ETEOCRETAN_DISPATCH: dict[str, str] = {
 # ``<pool>_under_hattic`` rescores each pre-existing substrate pool +
 # its gate control under the Hattic LM. The Hattic LM is trained on the
 # same 72 lexical forms as the Hattic pool, so only the latter direction
-# is free of own-LM circularity.
+# is free of own-LM circularity. mg-7f4db rebuilt the LM from TLHdig
+# running text (56/124 pool surfaces overlap); mg-a38bf re-ran these
+# modes with --force-rescore.
 _HATTIC_MATRIX_DISPATCH: dict[str, dict[str, str]] = {
     **{
         f"hattic_under_{lm}": {"hattic": lm, "control_hattic_bigram": lm}
@@ -307,6 +309,7 @@ def run(
     repo_root: Path,
     dispatch: dict[str, str] | None = None,
     sidecar_tag: str | None = None,
+    force_rescore: bool = False,
 ) -> dict:
     if dispatch is None:
         dispatch = _CROSS_LM_DISPATCH
@@ -353,11 +356,20 @@ def run(
     # rows for this metric (primary + per-metric sidecar + every tagged
     # sidecar). Without this, a tagged-sidecar re-run would re-rescore
     # rows that legacy runs wrote to a different file.
+    #
+    # ``force_rescore`` (mg-a38bf) ignores existing rows: needed when an
+    # LM is rebuilt under the same name (hattic, mg-7f4db), because the
+    # cache is keyed on (hash, language) and would otherwise keep the
+    # old LM's scores. The rollup loader takes the newest row per
+    # (hash, language) by ran_at, so the appended rows supersede the
+    # old ones without editing them. Duplicates within one run are
+    # still skipped.
     seen_paths = _all_metric_paths(results_dir)
-    seen = _load_seen(*seen_paths)
+    seen = set() if force_rescore else _load_seen(*seen_paths)
     print(
         f"seen ({_METRIC}): {len(seen)} (hash, language) pairs across "
-        f"{len(seen_paths)} files; writing to {sidecar_path.name}",
+        f"{len(seen_paths)} files{' (force_rescore: cache ignored)' if force_rescore else ''}; "
+        f"writing to {sidecar_path.name}",
         file=sys.stderr,
     )
 
@@ -545,6 +557,15 @@ def main(argv: list[str] | None = None) -> int:
         default=500,
         help="Print a progress line every N scored rows (default: %(default)s).",
     )
+    parser.add_argument(
+        "--force-rescore",
+        action="store_true",
+        help=(
+            "Ignore the (hash, language) resume cache and append a fresh "
+            "row for every hypothesis. Used by mg-a38bf after the hattic "
+            "LM was rebuilt under the same name."
+        ),
+    )
     parser.add_argument("--repo-root", type=Path, default=_REPO_ROOT)
     args = parser.parse_args(argv)
 
@@ -579,6 +600,7 @@ def main(argv: list[str] | None = None) -> int:
         repo_root=args.repo_root,
         dispatch=dispatch,
         sidecar_tag=args.sidecar_tag,
+        force_rescore=args.force_rescore,
     )
     print(json.dumps(summary, indent=2))
     return 0
