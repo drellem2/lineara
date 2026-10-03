@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_pin_HT_1_19_21
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''pin''
+  pinned to HT 1 tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: pin
+  phonemes:
+  - p
+  - i
+  - n
+  gloss_hint: noun of unknown meaning
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 1
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB08: p
+    AB60: i
+    AB06: n

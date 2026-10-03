@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hakkazuel_KN_Zf_13_1_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hakkazuel''
+  pinned to KN Zf 13 tokens [1..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hakkazuel
+  phonemes:
+  - h
+  - a
+  - k
+  - k
+  - a
+  - z
+  - u
+  - e
+  - l
+  gloss_hint: cupbearer (cult functionary)
+  citation: Kammenhuber 1969, p. 435, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n450
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 9
+  sign_to_phoneme:
+    AB27: h
+    AB24: a
+    AB41: k
+    AB07: k
+    A301: a
+    AB39: z
+    AB44: u
+    AB03: e
+    AB57: l

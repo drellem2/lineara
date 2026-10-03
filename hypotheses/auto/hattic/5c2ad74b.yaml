@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_narak_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''narak''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: narak
+  phonemes:
+  - n
+  - a
+  - r
+  - a
+  - k
+  gloss_hint: place name (Nerik)
+  citation: Kammenhuber 1969, p. 461, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n476
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: n
+    AB26: a
+    AB78: r
+    AB76: a
+    AB10: k

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_ippi_HT_123b_25_28
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''ippi''
+  pinned to HT 123b tokens [25..28].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: ippi
+  phonemes:
+  - i
+  - p
+  - p
+  - i
+  gloss_hint: small
+  citation: Kammenhuber 1969, p. 437, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n452
+equation:
+  inscription_id: HT 123b
+  span:
+  - 25
+  - 28
+  sign_to_phoneme:
+    AB69: i
+    AB02: p
+    AB07: p
+    AB01: i

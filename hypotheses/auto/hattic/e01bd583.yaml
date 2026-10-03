@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_pala_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''pala''
+  pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: pala
+  phonemes:
+  - p
+  - a
+  - l
+  - a
+  gloss_hint: and, then
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: p
+    AB58: a
+    AB47: l
+    AB04: a

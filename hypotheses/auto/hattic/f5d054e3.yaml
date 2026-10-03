@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sepsep_KN_Zc_6_5_10
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sepsep''
+  pinned to KN Zc 6 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sepsep
+  phonemes:
+  - s
+  - e
+  - p
+  - s
+  - e
+  - p
+  gloss_hint: shoe, sandal
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    AB07: s
+    AB01: e
+    AB67: p
+    AB37: s
+    AB03: e
+    AB81: p

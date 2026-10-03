@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kastip_KN_Zf_13_6_11
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kastip''
+  pinned to KN Zf 13 tokens [6..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kastip
+  phonemes:
+  - k
+  - a
+  - s
+  - t
+  - i
+  - p
+  gloss_hint: gate
+  citation: Kammenhuber 1969, p. 480, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n495
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 11
+  sign_to_phoneme:
+    AB39: k
+    AB44: a
+    AB03: s
+    AB57: t
+    AB59: i
+    AB53: p

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kasuh_HT_Zb_158b_1_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kasuh''
+  pinned to HT Zb 158b tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kasuh
+  phonemes:
+  - k
+  - a
+  - s
+  - u
+  - h
+  gloss_hint: to protect
+  citation: Kammenhuber 1969, p. 528, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n543
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB67: k
+    AB53: a
+    AB04: s
+    AB28: u
+    AB57: h

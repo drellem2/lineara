@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_pin_ARKH_1a_10_12
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''pin''
+  pinned to ARKH 1a tokens [10..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: pin
+  phonemes:
+  - p
+  - i
+  - n
+  gloss_hint: noun of unknown meaning
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 10
+  - 12
+  sign_to_phoneme:
+    AB08: p
+    AB58: i
+    AB73: n

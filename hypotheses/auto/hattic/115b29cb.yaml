@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tahaia_HT_Zb_158b_0_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tahaia''
+  pinned to HT Zb 158b tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tahaia
+  phonemes:
+  - t
+  - a
+  - h
+  - a
+  - i
+  - a
+  gloss_hint: barber
+  citation: Kammenhuber 1969, p. 435, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n450
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB58: t
+    AB67: a
+    AB53: h
+    AB04: a
+    AB28: i
+    AB57: a

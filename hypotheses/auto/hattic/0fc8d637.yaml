@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_parsiel_KN_Zf_13_6_12
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''parsiel''
+  pinned to KN Zf 13 tokens [6..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: parsiel
+  phonemes:
+  - p
+  - a
+  - r
+  - s
+  - i
+  - e
+  - l
+  gloss_hint: statue-worshipper (cult functionary)
+  citation: Kammenhuber 1969, p. 435, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n450
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 12
+  sign_to_phoneme:
+    AB39: p
+    AB44: a
+    AB03: r
+    AB57: s
+    AB59: i
+    AB53: e
+    AB09: l

@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kut_HT_1_20_22
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kut''
+  pinned to HT 1 tokens [20..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kut
+  phonemes:
+  - k
+  - u
+  - t
+  gloss_hint: soul
+  citation: Kammenhuber 1969, p. 462, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n477
+equation:
+  inscription_id: HT 1
+  span:
+  - 20
+  - 22
+  sign_to_phoneme:
+    AB60: k
+    AB06: u
+    AB27: t

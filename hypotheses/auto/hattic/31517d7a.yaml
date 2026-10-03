@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_pala_HT_104_19_22
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''pala''
+  pinned to HT 104 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: pala
+  phonemes:
+  - p
+  - a
+  - l
+  - a
+  gloss_hint: and, then
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 104
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB03: p
+    AB01: a
+    AB58: l
+    AB37: a

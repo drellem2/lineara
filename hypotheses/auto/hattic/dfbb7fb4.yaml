@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sahtaril_KN_Zc_7_14_21
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sahtaril''
+  pinned to KN Zc 7 tokens [14..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sahtaril
+  phonemes:
+  - s
+  - a
+  - h
+  - t
+  - a
+  - r
+  - i
+  - l
+  gloss_hint: a cult functionary
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 21
+  sign_to_phoneme:
+    AB57: s
+    AB31: a
+    AB60: h
+    AB08: t
+    AB06: a
+    AB24: r
+    AB40: i
+    AB39: l

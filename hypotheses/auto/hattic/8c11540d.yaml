@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zaparwa_KN_Zf_13_12_18
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zaparwa''
+  pinned to KN Zf 13 tokens [12..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zaparwa
+  phonemes:
+  - z
+  - a
+  - p
+  - a
+  - r
+  - w
+  - a
+  gloss_hint: deity name
+  citation: Kammenhuber 1969, p. 433, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n448
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 18
+  sign_to_phoneme:
+    AB09: z
+    AB04: a
+    AB53: p
+    AB23: a
+    AB08: r
+    AB57: w
+    AB81: a

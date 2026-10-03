@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_arinna_HT_Zb_159_0_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''arinna''
+  pinned to HT Zb 159 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: arinna
+  phonemes:
+  - a
+  - r
+  - i
+  - n
+  - n
+  - a
+  gloss_hint: place name
+  citation: Kammenhuber 1969, p. 461, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n476
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: a
+    AB06: r
+    AB55: i
+    AB41: n
+    AB57: n
+    AB09: a

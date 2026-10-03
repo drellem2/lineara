@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tuttushial_KN_Zf_13_0_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tuttushial''
+  pinned to KN Zf 13 tokens [0..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tuttushial
+  phonemes:
+  - t
+  - u
+  - t
+  - t
+  - u
+  - s
+  - h
+  - i
+  - a
+  - l
+  gloss_hint: a court official
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 9
+  sign_to_phoneme:
+    AB08: t
+    AB27: u
+    AB24: t
+    AB41: t
+    AB07: u
+    A301: s
+    AB39: h
+    AB44: i
+    AB03: a
+    AB57: l

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sahis_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sahis''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sahis
+  phonemes:
+  - s
+  - a
+  - h
+  - i
+  - s
+  gloss_hint: a kind of wood
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: s
+    AB07: a
+    AB06: h
+    AB58: i
+    AB77: s

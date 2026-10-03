@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_malhip_HT_Zb_159_0_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''malhip''
+  pinned to HT Zb 159 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: malhip
+  phonemes:
+  - m
+  - a
+  - l
+  - h
+  - i
+  - p
+  gloss_hint: good
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462;
+    Schuster 1974, p. 101, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n118
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: m
+    AB06: a
+    AB55: l
+    AB41: h
+    AB57: i
+    AB09: p

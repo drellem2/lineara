@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zihar_KN_Zf_13_5_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zihar''
+  pinned to KN Zf 13 tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zihar
+  phonemes:
+  - z
+  - i
+  - h
+  - a
+  - r
+  gloss_hint: wood
+  citation: Schuster 1974, p. 103, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n120
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    A301: z
+    AB39: i
+    AB44: h
+    AB03: a
+    AB57: r

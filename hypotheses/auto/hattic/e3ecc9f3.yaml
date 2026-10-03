@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_ziher_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''ziher''
+  pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: ziher
+  phonemes:
+  - z
+  - i
+  - h
+  - e
+  - r
+  gloss_hint: to hide
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: z
+    AB03: i
+    AB81: h
+    AB55: e
+    AB10: r

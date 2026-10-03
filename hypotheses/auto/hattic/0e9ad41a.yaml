@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_katah_KN_Zc_6_19_24
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''katah''
+  pinned to KN Zc 6 tokens [19..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: katah
+  phonemes:
+  - k
+  - a
+  - t
+  - a
+  - h
+  gloss_hint: queen
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 24
+  sign_to_phoneme:
+    AB03: k
+    AB81: a
+    AB55: t
+    AB10: a
+    AB28: h

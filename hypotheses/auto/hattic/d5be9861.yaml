@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tetekuzzan_KN_Zf_13_4_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tetekuzzan''
+  pinned to KN Zf 13 tokens [4..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tetekuzzan
+  phonemes:
+  - t
+  - e
+  - t
+  - e
+  - k
+  - u
+  - z
+  - z
+  - a
+  - n
+  gloss_hint: hearth
+  citation: Kammenhuber 1969, p. 479, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n494
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 13
+  sign_to_phoneme:
+    AB07: t
+    A301: e
+    AB39: t
+    AB44: e
+    AB03: k
+    AB57: u
+    AB59: z
+    AB53: z
+    AB09: a
+    AB04: n

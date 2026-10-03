@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hutu_HT_128a_5_8
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hutu''
+  pinned to HT 128a tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hutu
+  phonemes:
+  - h
+  - u
+  - t
+  - u
+  gloss_hint: to rise
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB69: h
+    AB26: u
+    AB56: t
+    AB09: u

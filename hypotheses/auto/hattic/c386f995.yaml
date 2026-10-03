@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kapnu_ARKH_5_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kapnu''
+  pinned to ARKH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kapnu
+  phonemes:
+  - k
+  - a
+  - p
+  - n
+  - u
+  gloss_hint: verb of unknown meaning
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: k
+    AB51: a
+    AB30: p
+    AB59: n
+    AB06: u

@@ -1,0 +1,40 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tittahzilat_KN_Zf_13_3_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tittahzilat''
+  pinned to KN Zf 13 tokens [3..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tittahzilat
+  phonemes:
+  - t
+  - i
+  - t
+  - t
+  - a
+  - h
+  - z
+  - i
+  - l
+  - a
+  - t
+  gloss_hint: throne
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 13
+  sign_to_phoneme:
+    AB41: t
+    AB07: i
+    A301: t
+    AB39: t
+    AB44: a
+    AB03: h
+    AB57: z
+    AB59: i
+    AB53: l
+    AB09: a
+    AB04: t

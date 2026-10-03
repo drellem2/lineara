@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hattus_KN_Zf_13_5_10
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hattus''
+  pinned to KN Zf 13 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hattus
+  phonemes:
+  - h
+  - a
+  - t
+  - t
+  - u
+  - s
+  gloss_hint: place name (Ḫattuša)
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    A301: h
+    AB39: a
+    AB44: t
+    AB03: t
+    AB57: u
+    AB59: s

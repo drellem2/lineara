@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sahis_HT_128a_5_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sahis''
+  pinned to HT 128a tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sahis
+  phonemes:
+  - s
+  - a
+  - h
+  - i
+  - s
+  gloss_hint: a kind of wood
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB69: s
+    AB26: a
+    AB56: h
+    AB09: i
+    AB13: s

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tittah_KN_Zc_7_16_21
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tittah''
+  pinned to KN Zc 7 tokens [16..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tittah
+  phonemes:
+  - t
+  - i
+  - t
+  - t
+  - a
+  - h
+  gloss_hint: great, exalted
+  citation: Schuster 1974, p. 126, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n143
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 16
+  - 21
+  sign_to_phoneme:
+    AB60: t
+    AB08: i
+    AB06: t
+    AB24: t
+    AB40: a
+    AB39: h

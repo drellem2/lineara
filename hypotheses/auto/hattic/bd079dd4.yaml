@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_niwas_KN_Zf_13_4_8
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''niwas''
+  pinned to KN Zf 13 tokens [4..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: niwas
+  phonemes:
+  - n
+  - i
+  - w
+  - a
+  - s
+  gloss_hint: to sit
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 8
+  sign_to_phoneme:
+    AB07: n
+    A301: i
+    AB39: w
+    AB44: a
+    AB03: s

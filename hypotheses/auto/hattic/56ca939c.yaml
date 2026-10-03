@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_lahzan_HT_122b_13_18
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''lahzan''
+  pinned to HT 122b tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: lahzan
+  phonemes:
+  - l
+  - a
+  - h
+  - z
+  - a
+  - n
+  gloss_hint: place name
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB08: l
+    AB60: a
+    AB65: h
+    AB10: z
+    AB45: a
+    AB17: n

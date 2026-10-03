@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_suwa_HT_13_30_33
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''suwa''
+  pinned to HT 13 tokens [30..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: suwa
+  phonemes:
+  - s
+  - u
+  - w
+  - a
+  gloss_hint: to set, place
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+equation:
+  inscription_id: HT 13
+  span:
+  - 30
+  - 33
+  sign_to_phoneme:
+    AB28: s
+    AB51: u
+    AB24: w
+    AB41: a

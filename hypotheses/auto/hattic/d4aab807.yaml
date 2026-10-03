@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hapras_KN_Zc_7_14_19
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hapras''
+  pinned to KN Zc 7 tokens [14..19].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hapras
+  phonemes:
+  - h
+  - a
+  - p
+  - r
+  - a
+  - s
+  gloss_hint: panther
+  citation: Kammenhuber 1969, p. 479, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n494
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 19
+  sign_to_phoneme:
+    AB57: h
+    AB31: a
+    AB60: p
+    AB08: r
+    AB06: a
+    AB24: s

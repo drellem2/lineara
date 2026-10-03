@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sinit_HT_Zb_158b_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sinit''
+  pinned to HT Zb 158b tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sinit
+  phonemes:
+  - s
+  - i
+  - n
+  - i
+  - t
+  gloss_hint: copper
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB58: s
+    AB67: i
+    AB53: n
+    AB04: i
+    AB28: t

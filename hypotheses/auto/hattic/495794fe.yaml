@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kantis_SY_Za_4_0_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kantis''
+  pinned to SY Za 4 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kantis
+  phonemes:
+  - k
+  - a
+  - n
+  - t
+  - i
+  - s
+  gloss_hint: noun of unknown meaning
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: k
+    AB59: a
+    AB28: n
+    A301: t
+    AB54: i
+    AB57: s

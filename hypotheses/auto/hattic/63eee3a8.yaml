@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tiuz_ARKH_1a_21_24
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tiuz''
+  pinned to ARKH 1a tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tiuz
+  phonemes:
+  - t
+  - i
+  - u
+  - z
+  gloss_hint: rock
+  citation: Schuster 1974, p. 93, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n110
+equation:
+  inscription_id: ARKH 1a
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB73: t
+    AB67: i
+    AB31: u
+    AB24: z

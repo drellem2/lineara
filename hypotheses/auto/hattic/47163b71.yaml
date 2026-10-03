@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_taru_HT_12_0_3
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''taru''
+  pinned to HT 12 tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: taru
+  phonemes:
+  - t
+  - a
+  - r
+  - u
+  gloss_hint: storm god
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 12
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB16: t
+    AB37: a
+    AB01: r
+    AB04: u

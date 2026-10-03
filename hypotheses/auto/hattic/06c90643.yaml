@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zinar_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zinar''
+  pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zinar
+  phonemes:
+  - z
+  - i
+  - n
+  - a
+  - r
+  gloss_hint: music (instrument)
+  citation: Kammenhuber 1969, p. 437, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n452
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: z
+    AB67: i
+    AB59: n
+    AB06: a
+    AB41: r

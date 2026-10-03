@@ -1,0 +1,23 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_pu_ARKH_2_8_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''pu''
+  pinned to ARKH 2 tokens [8..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: pu
+  phonemes:
+  - p
+  - u
+  gloss_hint: to make
+  citation: Kammenhuber 1969, p. 528, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n543;
+    Schuster 1974, p. 89, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n106
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 8
+  - 9
+  sign_to_phoneme:
+    AB08: p
+    AB41: u

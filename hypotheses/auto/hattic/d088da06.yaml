@@ -1,0 +1,39 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_istarrazil_KN_Zf_13_1_10
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''istarrazil''
+  pinned to KN Zf 13 tokens [1..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: istarrazil
+  phonemes:
+  - i
+  - s
+  - t
+  - a
+  - r
+  - r
+  - a
+  - z
+  - i
+  - l
+  gloss_hint: earth
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462;
+    Schuster 1974, p. 107, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n124
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 10
+  sign_to_phoneme:
+    AB27: i
+    AB24: s
+    AB41: t
+    AB07: a
+    A301: r
+    AB39: r
+    AB44: a
+    AB03: z
+    AB57: i
+    AB59: l

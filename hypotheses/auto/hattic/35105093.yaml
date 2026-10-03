@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_welwahisi_KN_Zf_13_3_11
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''welwahisi''
+  pinned to KN Zf 13 tokens [3..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: welwahisi
+  phonemes:
+  - w
+  - e
+  - l
+  - w
+  - a
+  - h
+  - i
+  - s
+  - i
+  gloss_hint: deity name ('U̯aₐḫiši of the house')
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 11
+  sign_to_phoneme:
+    AB41: w
+    AB07: e
+    A301: l
+    AB39: w
+    AB44: a
+    AB03: h
+    AB57: i
+    AB59: s
+    AB53: i

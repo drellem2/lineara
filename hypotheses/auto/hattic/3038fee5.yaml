@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hanwasuit_KN_Zf_13_3_11
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hanwasuit''
+  pinned to KN Zf 13 tokens [3..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hanwasuit
+  phonemes:
+  - h
+  - a
+  - n
+  - w
+  - a
+  - s
+  - u
+  - i
+  - t
+  gloss_hint: throne (goddess)
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 11
+  sign_to_phoneme:
+    AB41: h
+    AB07: a
+    A301: n
+    AB39: w
+    AB44: a
+    AB03: s
+    AB57: u
+    AB59: i
+    AB53: t

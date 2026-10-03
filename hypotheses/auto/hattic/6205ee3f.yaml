@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hantipsuwa_KN_Zf_13_2_11
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hantipsuwa''
+  pinned to KN Zf 13 tokens [2..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hantipsuwa
+  phonemes:
+  - h
+  - a
+  - n
+  - t
+  - i
+  - p
+  - s
+  - u
+  - w
+  - a
+  gloss_hint: cook (title)
+  citation: Kammenhuber 1969, p. 496, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n511
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 11
+  sign_to_phoneme:
+    AB24: h
+    AB41: a
+    AB07: n
+    A301: t
+    AB39: i
+    AB44: p
+    AB03: s
+    AB57: u
+    AB59: w
+    AB53: a

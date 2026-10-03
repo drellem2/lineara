@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_ippulasne_KN_Zf_13_4_12
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''ippulasne''
+  pinned to KN Zf 13 tokens [4..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: ippulasne
+  phonemes:
+  - i
+  - p
+  - p
+  - u
+  - l
+  - a
+  - s
+  - n
+  - e
+  gloss_hint: a kind of bread
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 12
+  sign_to_phoneme:
+    AB07: i
+    A301: p
+    AB39: p
+    AB44: u
+    AB03: l
+    AB57: a
+    AB59: s
+    AB53: n
+    AB09: e

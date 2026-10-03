@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_nes_ARKH_5_2_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''nes''
+  pinned to ARKH 5 tokens [2..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: nes
+  phonemes:
+  - n
+  - e
+  - s
+  gloss_hint: to lay
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542
+equation:
+  inscription_id: ARKH 5
+  span:
+  - 2
+  - 4
+  sign_to_phoneme:
+    AB30: n
+    AB59: e
+    AB06: s

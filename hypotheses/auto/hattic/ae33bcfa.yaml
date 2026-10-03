@@ -1,0 +1,42 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_muwakkupakku_KN_Zf_13_0_11
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''muwakkupakku''
+  pinned to KN Zf 13 tokens [0..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: muwakkupakku
+  phonemes:
+  - m
+  - u
+  - w
+  - a
+  - k
+  - k
+  - u
+  - p
+  - a
+  - k
+  - k
+  - u
+  gloss_hint: hammer (or similar)
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 11
+  sign_to_phoneme:
+    AB08: m
+    AB27: u
+    AB24: w
+    AB41: a
+    AB07: k
+    A301: k
+    AB39: u
+    AB44: p
+    AB03: a
+    AB57: k
+    AB59: k
+    AB53: u

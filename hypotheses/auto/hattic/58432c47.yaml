@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kasparuiah_KN_Zf_13_2_11
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kasparuiah''
+  pinned to KN Zf 13 tokens [2..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kasparuiah
+  phonemes:
+  - k
+  - a
+  - s
+  - p
+  - a
+  - r
+  - u
+  - i
+  - a
+  - h
+  gloss_hint: deity name
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 11
+  sign_to_phoneme:
+    AB24: k
+    AB41: a
+    AB07: s
+    A301: p
+    AB39: a
+    AB44: r
+    AB03: u
+    AB57: i
+    AB59: a
+    AB53: h

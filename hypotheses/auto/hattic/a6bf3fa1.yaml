@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_shap_HT_115a_37_40
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''shap''
+  pinned to HT 115a tokens [37..40].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: shap
+  phonemes:
+  - s
+  - h
+  - a
+  - p
+  gloss_hint: god
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 115a
+  span:
+  - 37
+  - 40
+  sign_to_phoneme:
+    AB08: s
+    AB09: h
+    AB57: a
+    A718: p

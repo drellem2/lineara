@@ -1,0 +1,16 @@
+{
+  "substrate_pool": "hattic",
+  "control_pool": "control_hattic_bigram",
+  "n_pool_entries": 124,
+  "pool_sha256": "7eaed0ac2735d3da2d4487844c6c79854fde584b61ad7078216cc9f3de62c1be",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.9807692307692307,
+  "median_control_top": 0.9083333333333333,
+  "median_gap": 0.0724358974358974,
+  "mean_substrate_top": 0.97,
+  "mean_control_top": 0.9156492277767153,
+  "mw_u_substrate": 321.0,
+  "mw_p_one_tail": 0.0004219849903919215,
+  "gate": "PASS"
+}

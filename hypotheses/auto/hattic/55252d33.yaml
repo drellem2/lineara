@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_wel_ARKH_2_14_16
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''wel''
+  pinned to ARKH 2 tokens [14..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: wel
+  phonemes:
+  - w
+  - e
+  - l
+  gloss_hint: house
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 14
+  - 16
+  sign_to_phoneme:
+    AB79: w
+    A301: e
+    AB09: l

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_witu_HT_123b_25_28
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''witu''
+  pinned to HT 123b tokens [25..28].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: witu
+  phonemes:
+  - w
+  - i
+  - t
+  - u
+  gloss_hint: noun of unknown meaning
+  citation: Kammenhuber 1969, p. 466, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n481
+equation:
+  inscription_id: HT 123b
+  span:
+  - 25
+  - 28
+  sign_to_phoneme:
+    AB69: w
+    AB02: i
+    AB07: t
+    AB01: u

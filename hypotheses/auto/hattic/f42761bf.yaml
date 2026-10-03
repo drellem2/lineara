@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kun_ARKH_2_21_23
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kun''
+  pinned to ARKH 2 tokens [21..23].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kun
+  phonemes:
+  - k
+  - u
+  - n
+  gloss_hint: to see
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541;
+    Schuster 1974, p. 105, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n122
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 21
+  - 23
+  sign_to_phoneme:
+    AB08: k
+    AB58: u
+    AB50: n

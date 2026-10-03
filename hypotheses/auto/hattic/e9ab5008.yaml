@@ -1,0 +1,31 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sterah_HT_Zb_158b_0_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sterah''
+  pinned to HT Zb 158b tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sterah
+  phonemes:
+  - s
+  - t
+  - e
+  - r
+  - a
+  - h
+  gloss_hint: noun of unknown meaning (le-šteraḫ glossed 'his hide(s)' on p. 481 per
+    mg-78856)
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB58: s
+    AB67: t
+    AB53: e
+    AB04: r
+    AB28: a
+    AB57: h

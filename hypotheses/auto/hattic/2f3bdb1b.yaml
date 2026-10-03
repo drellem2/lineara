@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_pipizil_KN_Zf_13_12_18
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''pipizil''
+  pinned to KN Zf 13 tokens [12..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: pipizil
+  phonemes:
+  - p
+  - i
+  - p
+  - i
+  - z
+  - i
+  - l
+  gloss_hint: wind
+  citation: Kammenhuber 1969, p. 466, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n481
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 18
+  sign_to_phoneme:
+    AB09: p
+    AB04: i
+    AB53: p
+    AB23: i
+    AB08: z
+    AB57: i
+    AB81: l

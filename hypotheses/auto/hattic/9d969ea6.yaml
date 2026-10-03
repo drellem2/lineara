@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_wakku_KN_Zc_7_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''wakku''
+  pinned to KN Zc 7 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: wakku
+  phonemes:
+  - w
+  - a
+  - k
+  - k
+  - u
+  gloss_hint: troop(s)
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: w
+    AB77: a
+    AB55: k
+    AB74: k
+    AB37: u

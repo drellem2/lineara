@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tittah_HT_122b_13_18
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tittah''
+  pinned to HT 122b tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tittah
+  phonemes:
+  - t
+  - i
+  - t
+  - t
+  - a
+  - h
+  gloss_hint: great, exalted
+  citation: Schuster 1974, p. 126, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n143
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB08: t
+    AB60: i
+    AB65: t
+    AB10: t
+    AB45: a
+    AB17: h

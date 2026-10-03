@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_karam_KH_5_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''karam''
+  pinned to KH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: karam
+  phonemes:
+  - k
+  - a
+  - r
+  - a
+  - m
+  gloss_hint: libation vessel / drink
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: k
+    AB01: a
+    AB67: r
+    AB41: a
+    AB77: m

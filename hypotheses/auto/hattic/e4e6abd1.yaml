@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hutu_ARKH_4a_19_22
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hutu''
+  pinned to ARKH 4a tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hutu
+  phonemes:
+  - h
+  - u
+  - t
+  - u
+  gloss_hint: to rise
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB39: h
+    AB37: u
+    AB24: t
+    AB08: u

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zaras_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zaras''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zaras
+  phonemes:
+  - z
+  - a
+  - r
+  - a
+  - s
+  gloss_hint: to call
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: z
+    AB07: a
+    AB06: r
+    AB58: a
+    AB77: s

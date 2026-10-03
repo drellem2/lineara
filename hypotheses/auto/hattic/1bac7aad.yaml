@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sulinkatte_KN_Zf_13_1_10
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sulinkatte''
+  pinned to KN Zf 13 tokens [1..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sulinkatte
+  phonemes:
+  - s
+  - u
+  - l
+  - i
+  - n
+  - k
+  - a
+  - t
+  - t
+  - e
+  gloss_hint: deity name
+  citation: Kammenhuber 1969, p. 497, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n512
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 10
+  sign_to_phoneme:
+    AB27: s
+    AB24: u
+    AB41: l
+    AB07: i
+    A301: n
+    AB39: k
+    AB44: a
+    AB03: t
+    AB57: t
+    AB59: e

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sinit_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sinit''
+  pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sinit
+  phonemes:
+  - s
+  - i
+  - n
+  - i
+  - t
+  gloss_hint: copper
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: s
+    AB67: i
+    AB59: n
+    AB06: i
+    AB41: t

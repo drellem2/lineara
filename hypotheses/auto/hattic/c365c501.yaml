@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_katteshapi_KN_Zf_13_3_12
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''katteshapi''
+  pinned to KN Zf 13 tokens [3..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: katteshapi
+  phonemes:
+  - k
+  - a
+  - t
+  - t
+  - e
+  - s
+  - h
+  - a
+  - p
+  - i
+  gloss_hint: deity name ('king-god')
+  citation: Kammenhuber 1969, p. 495, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n510
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 12
+  sign_to_phoneme:
+    AB41: k
+    AB07: a
+    A301: t
+    AB39: t
+    AB44: e
+    AB03: s
+    AB57: h
+    AB59: a
+    AB53: p
+    AB09: i

@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_suwa_ARKH_2_21_24
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''suwa''
+  pinned to ARKH 2 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: suwa
+  phonemes:
+  - s
+  - u
+  - w
+  - a
+  gloss_hint: to set, place
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB08: s
+    AB58: u
+    AB50: w
+    AB54: a

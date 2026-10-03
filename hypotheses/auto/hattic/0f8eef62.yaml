@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hawet_GO_Wc_1a_1_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hawet''
+  pinned to GO Wc 1a tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hawet
+  phonemes:
+  - h
+  - a
+  - w
+  - e
+  - t
+  gloss_hint: verb of unknown meaning
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB31: h
+    AB58: a
+    AB80: w
+    AB28: e
+    AB09: t

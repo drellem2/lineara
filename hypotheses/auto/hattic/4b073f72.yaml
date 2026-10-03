@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sakil_HT_115a_9_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sakil''
+  pinned to HT 115a tokens [9..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sakil
+  phonemes:
+  - s
+  - a
+  - k
+  - i
+  - l
+  gloss_hint: noun of unknown meaning
+  citation: Kammenhuber 1969, p. 466, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n481
+equation:
+  inscription_id: HT 115a
+  span:
+  - 9
+  - 13
+  sign_to_phoneme:
+    AB53: s
+    AB59: a
+    AB80: k
+    AB55: i
+    AB40: l

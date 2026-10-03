@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_katah_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''katah''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: katah
+  phonemes:
+  - k
+  - a
+  - t
+  - a
+  - h
+  gloss_hint: queen
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: k
+    AB26: a
+    AB78: t
+    AB76: a
+    AB10: h

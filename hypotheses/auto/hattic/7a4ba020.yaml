@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_iah_HT_104_19_21
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''iah''
+  pinned to HT 104 tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: iah
+  phonemes:
+  - i
+  - a
+  - h
+  gloss_hint: sky
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461
+equation:
+  inscription_id: HT 104
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB03: i
+    AB01: a
+    AB58: h

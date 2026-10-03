@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zinar_HT_Zb_159_1_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zinar''
+  pinned to HT Zb 159 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zinar
+  phonemes:
+  - z
+  - i
+  - n
+  - a
+  - r
+  gloss_hint: music (instrument)
+  citation: Kammenhuber 1969, p. 437, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n452
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB06: z
+    AB55: i
+    AB41: n
+    AB57: a
+    AB09: r

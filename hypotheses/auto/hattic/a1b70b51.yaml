@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tuntu_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tuntu''
+  pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tuntu
+  phonemes:
+  - t
+  - u
+  - n
+  - t
+  - u
+  gloss_hint: verb of unknown meaning
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: t
+    AB03: u
+    AB81: n
+    AB55: t
+    AB10: u

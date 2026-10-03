@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sahis_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sahis''
+  pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sahis
+  phonemes:
+  - s
+  - a
+  - h
+  - i
+  - s
+  gloss_hint: a kind of wood
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: s
+    AB03: a
+    AB81: h
+    AB55: i
+    AB10: s

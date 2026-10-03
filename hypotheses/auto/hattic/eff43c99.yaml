@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_huzzassai_KN_Zf_13_1_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''huzzassai''
+  pinned to KN Zf 13 tokens [1..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: huzzassai
+  phonemes:
+  - h
+  - u
+  - z
+  - z
+  - a
+  - s
+  - s
+  - a
+  - i
+  gloss_hint: mighty (?) smith
+  citation: Kammenhuber 1969, p. 436, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n451
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 9
+  sign_to_phoneme:
+    AB27: h
+    AB24: u
+    AB41: z
+    AB07: z
+    A301: a
+    AB39: s
+    AB44: s
+    AB03: a
+    AB57: i

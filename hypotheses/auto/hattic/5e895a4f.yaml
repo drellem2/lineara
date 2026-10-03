@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tumil_HT_117a_38_42
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tumil''
+  pinned to HT 117a tokens [38..42].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tumil
+  phonemes:
+  - t
+  - u
+  - m
+  - i
+  - l
+  gloss_hint: rain
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 117a
+  span:
+  - 38
+  - 42
+  sign_to_phoneme:
+    AB73: t
+    AB26: u
+    AB59: m
+    AB60: i
+    AB27: l

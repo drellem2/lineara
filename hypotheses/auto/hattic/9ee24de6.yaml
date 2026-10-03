@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_huru_HT_110a_0_3
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''huru''
+  pinned to HT 110a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: huru
+  phonemes:
+  - h
+  - u
+  - r
+  - u
+  gloss_hint: to be gracious(?)
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB41: h
+    AB51: u
+    AB34: r
+    AB81: u

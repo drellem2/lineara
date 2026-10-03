@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_antiu_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''antiu''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: antiu
+  phonemes:
+  - a
+  - n
+  - t
+  - i
+  - u
+  gloss_hint: to stand
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: a
+    AB07: n
+    AB06: t
+    AB58: i
+    AB77: u

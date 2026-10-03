@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zuh_ARKH_2_22_24
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zuh''
+  pinned to ARKH 2 tokens [22..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zuh
+  phonemes:
+  - z
+  - u
+  - h
+  gloss_hint: garment
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 22
+  - 24
+  sign_to_phoneme:
+    AB58: z
+    AB50: u
+    AB54: h

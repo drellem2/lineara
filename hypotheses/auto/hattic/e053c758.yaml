@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tumil_KN_Zc_7_16_20
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tumil''
+  pinned to KN Zc 7 tokens [16..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tumil
+  phonemes:
+  - t
+  - u
+  - m
+  - i
+  - l
+  gloss_hint: rain
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 16
+  - 20
+  sign_to_phoneme:
+    AB60: t
+    AB08: u
+    AB06: m
+    AB24: i
+    AB40: l

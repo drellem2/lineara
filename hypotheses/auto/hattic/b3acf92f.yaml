@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sakil_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sakil''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sakil
+  phonemes:
+  - s
+  - a
+  - k
+  - i
+  - l
+  gloss_hint: noun of unknown meaning
+  citation: Kammenhuber 1969, p. 466, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n481
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: s
+    AB31: a
+    AB58: k
+    AB80: i
+    AB28: l

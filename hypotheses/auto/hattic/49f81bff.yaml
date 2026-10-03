@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_munamuna_KN_Zf_13_6_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''munamuna''
+  pinned to KN Zf 13 tokens [6..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: munamuna
+  phonemes:
+  - m
+  - u
+  - n
+  - a
+  - m
+  - u
+  - n
+  - a
+  gloss_hint: foundation stone
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 6
+  - 13
+  sign_to_phoneme:
+    AB39: m
+    AB44: u
+    AB03: n
+    AB57: a
+    AB59: m
+    AB53: u
+    AB09: n
+    AB04: a

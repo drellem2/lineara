@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zintuhi_KN_Zf_13_2_8
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zintuhi''
+  pinned to KN Zf 13 tokens [2..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zintuhi
+  phonemes:
+  - z
+  - i
+  - n
+  - t
+  - u
+  - h
+  - i
+  gloss_hint: granddaughter; maiden(?)
+  citation: Kammenhuber 1969, p. 460, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n475
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 2
+  - 8
+  sign_to_phoneme:
+    AB24: z
+    AB41: i
+    AB07: n
+    A301: t
+    AB39: u
+    AB44: h
+    AB03: i

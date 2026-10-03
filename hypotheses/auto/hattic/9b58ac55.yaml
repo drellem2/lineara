@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hawet_HT_117a_38_42
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hawet''
+  pinned to HT 117a tokens [38..42].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hawet
+  phonemes:
+  - h
+  - a
+  - w
+  - e
+  - t
+  gloss_hint: verb of unknown meaning
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: HT 117a
+  span:
+  - 38
+  - 42
+  sign_to_phoneme:
+    AB73: h
+    AB26: a
+    AB59: w
+    AB60: e
+    AB27: t

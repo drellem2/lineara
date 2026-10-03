@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tittah_SY_Za_4_0_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tittah''
+  pinned to SY Za 4 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tittah
+  phonemes:
+  - t
+  - i
+  - t
+  - t
+  - a
+  - h
+  gloss_hint: great, exalted
+  citation: Schuster 1974, p. 126, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n143
+equation:
+  inscription_id: SY Za 4
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: t
+    AB59: i
+    AB28: t
+    A301: t
+    AB54: a
+    AB57: h

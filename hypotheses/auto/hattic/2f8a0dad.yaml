@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sepsep_HT_95a_21_26
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sepsep''
+  pinned to HT 95a tokens [21..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sepsep
+  phonemes:
+  - s
+  - e
+  - p
+  - s
+  - e
+  - p
+  gloss_hint: shoe, sandal
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 95a
+  span:
+  - 21
+  - 26
+  sign_to_phoneme:
+    AB07: s
+    AB45: e
+    AB26: p
+    AB78: s
+    AB76: e
+    AB10: p

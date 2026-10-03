@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kapnu_KN_Zf_13_1_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kapnu''
+  pinned to KN Zf 13 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kapnu
+  phonemes:
+  - k
+  - a
+  - p
+  - n
+  - u
+  gloss_hint: verb of unknown meaning
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB27: k
+    AB24: a
+    AB41: p
+    AB07: n
+    A301: u

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tahaia_KN_Zc_6_18_24
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tahaia''
+  pinned to KN Zc 6 tokens [18..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tahaia
+  phonemes:
+  - t
+  - a
+  - h
+  - a
+  - i
+  - a
+  gloss_hint: barber
+  citation: Kammenhuber 1969, p. 435, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n450
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 24
+  sign_to_phoneme:
+    AB06: t
+    AB03: a
+    AB81: h
+    AB55: a
+    AB10: i
+    AB28: a

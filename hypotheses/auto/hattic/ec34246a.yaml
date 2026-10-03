@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kasuh_KH_60_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kasuh''
+  pinned to KH 60 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kasuh
+  phonemes:
+  - k
+  - a
+  - s
+  - u
+  - h
+  gloss_hint: to protect
+  citation: Kammenhuber 1969, p. 528, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n543
+equation:
+  inscription_id: KH 60
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB60: k
+    AB67: a
+    AB59: s
+    AB06: u
+    AB41: h

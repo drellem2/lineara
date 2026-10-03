@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_taparna_KN_Zf_13_7_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''taparna''
+  pinned to KN Zf 13 tokens [7..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: taparna
+  phonemes:
+  - t
+  - a
+  - p
+  - a
+  - r
+  - n
+  - a
+  gloss_hint: ruler
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 7
+  - 13
+  sign_to_phoneme:
+    AB44: t
+    AB03: a
+    AB57: p
+    AB59: a
+    AB53: r
+    AB09: n
+    AB04: a

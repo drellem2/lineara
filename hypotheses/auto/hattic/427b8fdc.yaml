@@ -1,0 +1,22 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_ur_ARKH_4a_14_16
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''ur''
+  pinned to ARKH 4a tokens [14..16].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: ur
+  phonemes:
+  - u
+  - r
+  gloss_hint: well, spring
+  citation: Kammenhuber 1969, p. 462, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n477
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 14
+  - 16
+  sign_to_phoneme:
+    AB58: u
+    AB47: r

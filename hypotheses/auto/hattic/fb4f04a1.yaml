@@ -1,0 +1,27 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_alep_HT_104_5_8
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''alep''
+  pinned to HT 104 tokens [5..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: alep
+  phonemes:
+  - a
+  - l
+  - e
+  - p
+  gloss_hint: word, thing
+  citation: Kammenhuber 1969, p. 446, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n461;
+    Schuster 1974, p. 96, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n113
+equation:
+  inscription_id: HT 104
+  span:
+  - 5
+  - 8
+  sign_to_phoneme:
+    AB01: a
+    AB81: l
+    AB09: e
+    AB24: p

@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zihar_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zihar''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zihar
+  phonemes:
+  - z
+  - i
+  - h
+  - a
+  - r
+  gloss_hint: wood
+  citation: Schuster 1974, p. 103, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n120
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: z
+    AB31: i
+    AB58: h
+    AB80: a
+    AB28: r

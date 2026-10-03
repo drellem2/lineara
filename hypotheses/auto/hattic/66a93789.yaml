@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hapalki_KN_Zf_13_1_7
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hapalki''
+  pinned to KN Zf 13 tokens [1..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hapalki
+  phonemes:
+  - h
+  - a
+  - p
+  - a
+  - l
+  - k
+  - i
+  gloss_hint: iron
+  citation: Kammenhuber 1969, p. 436, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n451
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 7
+  sign_to_phoneme:
+    AB27: h
+    AB24: a
+    AB41: p
+    AB07: a
+    A301: l
+    AB39: k
+    AB44: i

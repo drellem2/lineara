@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_ures_HT_117a_39_42
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''ures''
+  pinned to HT 117a tokens [39..42].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: ures
+  phonemes:
+  - u
+  - r
+  - e
+  - s
+  gloss_hint: smith
+  citation: Kammenhuber 1969, p. 436, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n451
+equation:
+  inscription_id: HT 117a
+  span:
+  - 39
+  - 42
+  sign_to_phoneme:
+    AB26: u
+    AB59: r
+    AB60: e
+    AB27: s

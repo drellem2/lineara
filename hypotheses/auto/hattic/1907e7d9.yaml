@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_huzzia_KN_Zf_13_12_17
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''huzzia''
+  pinned to KN Zf 13 tokens [12..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: huzzia
+  phonemes:
+  - h
+  - u
+  - z
+  - z
+  - i
+  - a
+  gloss_hint: Old Hittite royal name
+  citation: Kammenhuber 1969, p. 432, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n447
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 17
+  sign_to_phoneme:
+    AB09: h
+    AB04: u
+    AB53: z
+    AB23: z
+    AB08: i
+    AB57: a

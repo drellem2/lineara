@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tiuz_HT_13_30_33
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tiuz''
+  pinned to HT 13 tokens [30..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tiuz
+  phonemes:
+  - t
+  - i
+  - u
+  - z
+  gloss_hint: rock
+  citation: Schuster 1974, p. 93, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n110
+equation:
+  inscription_id: HT 13
+  span:
+  - 30
+  - 33
+  sign_to_phoneme:
+    AB28: t
+    AB51: i
+    AB24: u
+    AB41: z

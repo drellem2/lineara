@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kun_HT_104_19_21
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kun''
+  pinned to HT 104 tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kun
+  phonemes:
+  - k
+  - u
+  - n
+  gloss_hint: to see
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541;
+    Schuster 1974, p. 105, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n122
+equation:
+  inscription_id: HT 104
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB03: k
+    AB01: u
+    AB58: n

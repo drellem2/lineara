@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kapnu_HT_Wc_3017a_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kapnu''
+  pinned to HT Wc 3017a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kapnu
+  phonemes:
+  - k
+  - a
+  - p
+  - n
+  - u
+  gloss_hint: verb of unknown meaning
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: HT Wc 3017a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB16: k
+    AB81: a
+    AB27: p
+    AB06: n
+    A306: u

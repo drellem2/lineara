@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_wae_GO_Wc_1a_3_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''wae''
+  pinned to GO Wc 1a tokens [3..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: wae
+  phonemes:
+  - w
+  - a
+  - e
+  gloss_hint: tool(s)
+  citation: Kammenhuber 1969, p. 480, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n495;
+    Schuster 1974, p. 97, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n114
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 3
+  - 5
+  sign_to_phoneme:
+    AB80: w
+    AB28: a
+    AB09: e

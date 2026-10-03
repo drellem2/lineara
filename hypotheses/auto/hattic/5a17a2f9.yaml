@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zari_HT_117a_72_75
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zari''
+  pinned to HT 117a tokens [72..75].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zari
+  phonemes:
+  - z
+  - a
+  - r
+  - i
+  gloss_hint: man, human
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 117a
+  span:
+  - 72
+  - 75
+  sign_to_phoneme:
+    AB01: z
+    AB24: a
+    AB81: r
+    AB37: i

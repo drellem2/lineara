@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_antiu_KN_Zc_7_17_21
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''antiu''
+  pinned to KN Zc 7 tokens [17..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: antiu
+  phonemes:
+  - a
+  - n
+  - t
+  - i
+  - u
+  gloss_hint: to stand
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 17
+  - 21
+  sign_to_phoneme:
+    AB08: a
+    AB06: n
+    AB24: t
+    AB40: i
+    AB39: u

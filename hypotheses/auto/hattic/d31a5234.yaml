@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kuwa_HT_115a_10_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kuwa''
+  pinned to HT 115a tokens [10..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kuwa
+  phonemes:
+  - k
+  - u
+  - w
+  - a
+  gloss_hint: to seize
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542
+equation:
+  inscription_id: HT 115a
+  span:
+  - 10
+  - 13
+  sign_to_phoneme:
+    AB59: k
+    AB80: u
+    AB55: w
+    AB40: a

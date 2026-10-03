@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kahhir_HT_Zb_159_0_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kahhir''
+  pinned to HT Zb 159 tokens [0..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kahhir
+  phonemes:
+  - k
+  - a
+  - h
+  - h
+  - i
+  - r
+  gloss_hint: to administer
+  citation: Kammenhuber 1969, p. 526, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n541
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 0
+  - 5
+  sign_to_phoneme:
+    AB08: k
+    AB06: a
+    AB55: h
+    AB41: h
+    AB57: i
+    AB09: r

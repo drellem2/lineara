@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sahis_GO_Wc_1a_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sahis''
+  pinned to GO Wc 1a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sahis
+  phonemes:
+  - s
+  - a
+  - h
+  - i
+  - s
+  gloss_hint: a kind of wood
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: s
+    AB31: a
+    AB58: h
+    AB80: i
+    AB28: s

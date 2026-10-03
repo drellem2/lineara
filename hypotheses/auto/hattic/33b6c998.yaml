@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_wunan_KN_Zc_6_18_22
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''wunan''
+  pinned to KN Zc 6 tokens [18..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: wunan
+  phonemes:
+  - w
+  - u
+  - n
+  - a
+  - n
+  gloss_hint: mortal
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 22
+  sign_to_phoneme:
+    AB06: w
+    AB03: u
+    AB81: n
+    AB55: a
+    AB10: n

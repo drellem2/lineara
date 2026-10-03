@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_ziapa_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''ziapa''
+  pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: ziapa
+  phonemes:
+  - z
+  - i
+  - a
+  - p
+  - a
+  gloss_hint: mountains
+  citation: Kammenhuber 1969, p. 466, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n481
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: z
+    AB45: i
+    AB80: a
+    A323: p
+    AB06: a

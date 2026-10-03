@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_wulasne_KN_Zf_13_5_11
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''wulasne''
+  pinned to KN Zf 13 tokens [5..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: wulasne
+  phonemes:
+  - w
+  - u
+  - l
+  - a
+  - s
+  - n
+  - e
+  gloss_hint: bread
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 11
+  sign_to_phoneme:
+    A301: w
+    AB39: u
+    AB44: l
+    AB03: a
+    AB57: s
+    AB59: n
+    AB53: e

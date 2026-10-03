@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zar_HT_103_19_21
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zar''
+  pinned to HT 103 tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zar
+  phonemes:
+  - z
+  - a
+  - r
+  gloss_hint: sheep
+  citation: Kammenhuber 1969, p. 462, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n477
+equation:
+  inscription_id: HT 103
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB01: z
+    AB81: a
+    AB09: r

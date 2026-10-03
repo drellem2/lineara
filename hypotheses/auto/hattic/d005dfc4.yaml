@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tiuz_HT_104_19_22
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tiuz''
+  pinned to HT 104 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tiuz
+  phonemes:
+  - t
+  - i
+  - u
+  - z
+  gloss_hint: rock
+  citation: Schuster 1974, p. 93, https://archive.org/details/die-hattisch-hethitischen-bilinguen/page/n110
+equation:
+  inscription_id: HT 104
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB03: t
+    AB01: i
+    AB58: u
+    AB37: z

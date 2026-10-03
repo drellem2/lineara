@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_ziapa_HT_Wc_3010_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''ziapa''
+  pinned to HT Wc 3010 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: ziapa
+  phonemes:
+  - z
+  - i
+  - a
+  - p
+  - a
+  gloss_hint: mountains
+  citation: Kammenhuber 1969, p. 466, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n481
+equation:
+  inscription_id: HT Wc 3010
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    A333: z
+    AB07: i
+    AB06: a
+    AB58: p
+    AB77: a

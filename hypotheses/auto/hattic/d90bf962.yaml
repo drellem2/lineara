@@ -1,0 +1,24 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_put_ARKH_4b_11_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''put''
+  pinned to ARKH 4b tokens [11..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: put
+  phonemes:
+  - p
+  - u
+  - t
+  gloss_hint: to be
+  citation: Kammenhuber 1969, p. 528, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n543
+equation:
+  inscription_id: ARKH 4b
+  span:
+  - 11
+  - 13
+  sign_to_phoneme:
+    AB08: p
+    AB67: u
+    AB02: t

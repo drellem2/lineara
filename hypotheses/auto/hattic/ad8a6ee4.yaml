@@ -1,0 +1,44 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_wurunkattainu_KN_Zf_13_0_12
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''wurunkattainu''
+  pinned to KN Zf 13 tokens [0..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: wurunkattainu
+  phonemes:
+  - w
+  - u
+  - r
+  - u
+  - n
+  - k
+  - a
+  - t
+  - t
+  - a
+  - i
+  - n
+  - u
+  gloss_hint: deity name ('child of the king of the land')
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 12
+  sign_to_phoneme:
+    AB08: w
+    AB27: u
+    AB24: r
+    AB41: u
+    AB07: n
+    A301: k
+    AB39: a
+    AB44: t
+    AB03: t
+    AB57: a
+    AB59: i
+    AB53: n
+    AB09: u

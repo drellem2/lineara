@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hapras_HT_122b_13_18
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hapras''
+  pinned to HT 122b tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hapras
+  phonemes:
+  - h
+  - a
+  - p
+  - r
+  - a
+  - s
+  gloss_hint: panther
+  citation: Kammenhuber 1969, p. 479, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n494
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB08: h
+    AB60: a
+    AB65: p
+    AB10: r
+    AB45: a
+    AB17: s

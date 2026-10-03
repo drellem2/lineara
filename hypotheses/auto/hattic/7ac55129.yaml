@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_halawes_KN_Zc_6_4_10
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''halawes''
+  pinned to KN Zc 6 tokens [4..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: halawes
+  phonemes:
+  - h
+  - a
+  - l
+  - a
+  - w
+  - e
+  - s
+  gloss_hint: a cult functionary
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 4
+  - 10
+  sign_to_phoneme:
+    AB08: h
+    AB07: a
+    AB01: l
+    AB67: a
+    AB37: w
+    AB03: e
+    AB81: s

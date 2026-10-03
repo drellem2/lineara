@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_asah_HT_115a_0_3
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''asah''
+  pinned to HT 115a tokens [0..3].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: asah
+  phonemes:
+  - a
+  - s
+  - a
+  - h
+  gloss_hint: bad, evil
+  citation: Kammenhuber 1969, p. 447, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n462
+equation:
+  inscription_id: HT 115a
+  span:
+  - 0
+  - 3
+  sign_to_phoneme:
+    AB47: a
+    AB55: s
+    AB60: a
+    AB56: h

@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tuhkante_KN_Zf_13_1_8
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tuhkante''
+  pinned to KN Zf 13 tokens [1..8].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tuhkante
+  phonemes:
+  - t
+  - u
+  - h
+  - k
+  - a
+  - n
+  - t
+  - e
+  gloss_hint: high dignitary, always a king's son
+  citation: Kammenhuber 1969, p. 433, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n448
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 8
+  sign_to_phoneme:
+    AB27: t
+    AB24: u
+    AB41: h
+    AB07: k
+    A301: a
+    AB39: n
+    AB44: t
+    AB03: e

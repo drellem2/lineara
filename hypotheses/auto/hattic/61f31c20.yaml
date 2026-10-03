@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kuru_HT_117a_8_11
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kuru''
+  pinned to HT 117a tokens [8..11].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kuru
+  phonemes:
+  - k
+  - u
+  - r
+  - u
+  gloss_hint: to see
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542
+equation:
+  inscription_id: HT 117a
+  span:
+  - 8
+  - 11
+  sign_to_phoneme:
+    AB10: k
+    AB73: u
+    AB06: r
+    AB41: u

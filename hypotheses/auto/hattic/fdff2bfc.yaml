@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_ziher_HT_Zb_158b_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''ziher''
+  pinned to HT Zb 158b tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: ziher
+  phonemes:
+  - z
+  - i
+  - h
+  - e
+  - r
+  gloss_hint: to hide
+  citation: Kammenhuber 1969, p. 529, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n544
+equation:
+  inscription_id: HT Zb 158b
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB58: z
+    AB67: i
+    AB53: h
+    AB04: e
+    AB28: r

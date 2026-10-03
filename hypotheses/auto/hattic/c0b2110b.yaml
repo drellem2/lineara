@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kuwa_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kuwa''
+  pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kuwa
+  phonemes:
+  - k
+  - u
+  - w
+  - a
+  gloss_hint: to seize
+  citation: Kammenhuber 1969, p. 527, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n542
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: k
+    AB58: u
+    AB47: w
+    AB04: a

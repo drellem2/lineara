@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_anna_ARKH_2_9_12
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''anna''
+  pinned to ARKH 2 tokens [9..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: anna
+  phonemes:
+  - a
+  - n
+  - n
+  - a
+  gloss_hint: this
+  citation: Kammenhuber 1969, p. 535, https://archive.org/details/friedrich-reiner-kammenhuber-neumann-heubeck-altkleinasiatische-sprachen-1969/page/n550
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 9
+  - 12
+  sign_to_phoneme:
+    AB41: a
+    AB01: n
+    AB05: n
+    AB28: a
