@@ -11115,3 +11115,93 @@ the next ticket.
 `scripts/{extract_tlhdig_hattic,build_hattic_corpus,build_hattic_pool,verify_hattic_sources}.py`,
 `corpora/hattic.README.md`, `pools/hattic.README.md`; tests in
 `harness/tests/test_build_hattic.py`.
+
+## Findings from mg-a38bf (Hattic v2: pre-registered gate + 5×5 cross-LM matrix on the edition-sourced pool, 2026-10-03)
+
+This is a re-run of the mg-7b882 Hattic specificity probe on the pool
+and LM rebuilt by mg-7f4db (124 forms from viewed scans of Kammenhuber
+1969 / Schuster 1974; LM from TLHdig running text). **The criterion is
+unchanged** from `00e7eea03`: top-20 `hattic` vs top-20
+`control_hattic_bigram` posteriors under the `hattic` LM, one-tailed
+Mann-Whitney, PASS iff p < 0.05 and the substrate median is higher.
+Two commits came before any v2 output. `380f93540` changed only the n
+pin (72 → 124). `0b287263b` fixed the v2 interpretation rules from
+pm-lineara's mg-7f4db review: n ≥ 80, so a FAIL would read as a FAIL
+(weak evidence *for* specificity) and a PASS supports the v15
+generic-structure reading. The own-LM readout is partly circular and is
+reported, not leaned on.
+
+* **Gate verdict: PASS.** p = 4.22e-04 (U = 321.0), n = 124 pool
+  entries (top-20 vs top-20). Median top-20 posterior is 0.9808 vs
+  0.9083, a gap of **+0.072**. The mean-of-means gap is +0.054 (not part
+  of the gate). Under the pre-registered v2 rules this **supports the
+  v15 reading**: the gate rewards generic natural-language structure in
+  an unrelated Anatolian isolate. It is not evidence of affinity with
+  Linear A. `results/hattic_gate_summary.v2.json`,
+  `results/rollup.bayesian_posterior.hattic.v2.md`.
+* **Own-LM readout (partly circular, not leaned on).** 56 of the 124
+  pool surfaces are LM word types (9.1% of LM tokens; v32 had 72/72).
+  10 of the top-20 `hattic` surfaces are among those 56. That is 50%,
+  against a 45% base rate in the pool, so the top of the ranking is not
+  enriched for LM-overlap forms. Hattic does **not** score best under
+  its own LM: the gap is larger under Eteocretan (+0.106, p = 9.2e-06)
+  and Basque (+0.082), and the own-LM gap equals Etruscan's (+0.072).
+  The PASS does not depend on the own LM. The Hattic row passes under
+  all four non-Hattic LMs, and none of those cells is circular.
+* **Specificity read against Eteocretan / Aquitanian / Etruscan.**
+  Own-LM gates: Eteocretan p = 4.1e-06 / +0.201, Aquitanian 3.2e-05 /
+  +0.030, Etruscan 5.2e-04 / +0.059, **Hattic 4.2e-04 / +0.072**.
+  Hattic passes at about Etruscan's strength, with a larger gap than
+  Aquitanian or Etruscan. Only Eteocretan stands clearly above it. An
+  isolate with no claimed relation to Linear A reaching the band of the
+  substrate candidates is the outcome that the v15 generic-structure
+  reading predicts and a substrate-specific reading does not.
+  Eteocretan's gap stays about 3× larger. This probe gives no grounds to
+  call that gap generic, and none to call it specific either.
+* **Hattic row: 5/5 PASS**, the only pool to PASS under every LM.
+  Basque p = 0.042 (+0.082), Etruscan 4.7e-05 (+0.072), Mycenaean Greek
+  0.002 (+0.038), Eteocretan 9.2e-06 (+0.106), own 4.2e-04 (+0.072).
+  The Eteocretan row is 4/5. These cells were not pre-registered tests,
+  but 5/5 at α = 0.05 is far above chance (~0.25 expected).
+* **Hattic column: 2/4 non-own pools PASS under the rebuilt Hattic
+  LM.** Aquitanian p = 0.038 (+0.012) and toponym 0.031 (+0.074) PASS.
+  Etruscan 0.420 (+0.007) and Eteocretan 0.991 (−0.061) FAIL. Eteocretan
+  under the Hattic LM is still the one strongly inverted cell (v32
+  −0.071).
+* **v32 → v2 delta.** Gate FAIL p = 0.393, gap +0.005 (n = 72) → **PASS
+  p = 4.2e-04, gap +0.072 (n = 124)**. Hattic row 1/5 PASS → 5/5. Hattic
+  column 0/4 → 2/4 (aquitanian 0.155 → 0.038, toponym 0.052 → 0.031,
+  etruscan 0.575 → 0.420, eteocretan 0.965 → 0.991). The v32 negative
+  gaps under Basque / Etruscan / Eteocretan (−0.122 / −0.100 / −0.037)
+  are now positive. The v32 "inconclusive on data quality" verdict is
+  superseded: on edition-sourced data the probe answers, and the answer
+  is generic structure. The v32 results were an artefact of the
+  72-form, LM = pool data. All 16 non-Hattic cells are identical to the
+  v32 matrix. The matrix headline still reads "own-LM dominance HOLDS
+  for 3/5" (aquitanian and hattic not).
+* **Rows and labelling.** Results are append-only. v2 rows were
+  appended to the same sidecars as v32: 7,888 own-LM + 31,552 cross-LM
+  rows in `.hattic.jsonl` (now 50.6 MB) and 47,135 rows in
+  `.under_hattic_lm.jsonl` (now 80.2 MB; one more full Hattic-LM
+  re-run there would cross the 100 MB push cap, so use a new tag). Every
+  v2 row's `notes` starts `mg-a38bf hattic-v2` and names
+  `pool=hattic.yaml@sha256:7eaed0ac2735`,
+  `control=control_hattic_bigram.yaml@sha256:3b2fc4446149` and
+  `lm=hattic.json@sha256:aef047cd4155`. v32 rows carry
+  `mg-7b882 …`. The rollup loader keeps the newest row per (hash, LM)
+  by `ran_at`, so v2 supersedes v32 wherever hashes coincide: 50
+  control hypotheses, and every `<pool>_under_hattic` hypothesis. All
+  7,888 hattic/control manifest hashes were checked to resolve to a v2
+  row.
+* **Tooling.** `cross_lm_rescore.py --force-rescore`. The resume cache
+  keys on (hash, language), so without the flag the rebuilt `hattic`
+  LM's column would have been skipped silently and kept its v32 scores.
+  `run_sweep --force-rescore` already existed and was used for the
+  same reason.
+* **Artifacts.** v32 files are kept (`hattic_gate_summary.json`,
+  `rollup.bayesian_posterior.hattic.md`, `*.under_*_lm.md`,
+  `v23_cell_summaries/*.json`). v2 files sit alongside them as `*.v2.*`
+  and `v23_cell_summaries/v2/`. `rollup.cross_lm_matrix.md` was
+  regenerated in place; v32's copy is at `91bd0f13e`.
+  `hypotheses/auto/{hattic,control_hattic_bigram}` were regenerated:
+  3,944 candidates each, cap 50/entry.
