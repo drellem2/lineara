@@ -12,7 +12,7 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator
 
-from . import HARNESS_VERSION
+from . import HARNESS_VERSION, results_io
 from .corpus import build_stream, corpus_snapshot, load_records, sign_position_fingerprints
 from .hypothesis import (
     SHAPE_CANDIDATE_EQUATION_V1,
@@ -409,8 +409,9 @@ def score_hypothesis(
 
 
 def append_row(row: dict, results_path: Path = _DEFAULT_RESULTS) -> None:
-    results_path.parent.mkdir(parents=True, exist_ok=True)
-    with results_path.open("a", encoding="utf-8") as fh:
+    # mg-1c82a: rolls to ``<name>.shards/NNNN.jsonl`` before the file
+    # passes results_io.SHARD_MAX_BYTES (GitHub's 100 MB push cap).
+    with results_io.ShardedAppender(results_path) as fh:
         fh.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 

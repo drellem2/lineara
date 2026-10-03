@@ -65,7 +65,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import yaml  # noqa: E402
 from jsonschema import Draft202012Validator  # noqa: E402
 
-from harness import HARNESS_VERSION  # noqa: E402
+from harness import HARNESS_VERSION, results_io  # noqa: E402
 from harness.corpus import build_stream, corpus_snapshot, load_records  # noqa: E402
 from harness.external_phoneme_model import ExternalPhonemeModel  # noqa: E402
 from harness.metrics import external_phoneme_perplexity_v0  # noqa: E402
@@ -411,20 +411,18 @@ def _existing_score_rows(
     """(hypothesis_hash, language) → most-recent-by-ran_at row in the
     chic sidecar. Used to skip rescoring on resume runs."""
     out: dict[tuple[str, str], dict] = {}
-    if not sidecar.exists():
-        return out
-    with sidecar.open("r", encoding="utf-8") as fh:
-        for line in fh:
-            line = line.strip()
-            if not line:
-                continue
-            row = json.loads(line)
-            if row.get("metric") != _METRIC:
-                continue
-            key = (row.get("hypothesis_hash", ""), row.get("language", ""))
-            cur = out.get(key)
-            if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
-                out[key] = row
+    # mg-1c82a: base file + any ``<name>.shards/NNNN.jsonl``.
+    for line in results_io.iter_lines(sidecar):
+        line = line.strip()
+        if not line:
+            continue
+        row = json.loads(line)
+        if row.get("metric") != _METRIC:
+            continue
+        key = (row.get("hypothesis_hash", ""), row.get("language", ""))
+        cur = out.get(key)
+        if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
+            out[key] = row
     return out
 
 
@@ -446,10 +444,9 @@ def score_candidates(
     """Score every manifest row under ``lm`` and append rows to the
     chic sidecar. Skip rows already present (resume support).
     """
-    sidecar.parent.mkdir(parents=True, exist_ok=True)
     new_rows: list[dict] = []
     started = time.monotonic()
-    with sidecar.open("a", encoding="utf-8") as fh:
+    with results_io.ShardedAppender(sidecar) as fh:
         for i, m_row in enumerate(manifest_rows, 1):
             key = (m_row["hypothesis_hash"], snapshot, _METRIC)
             if key in seen:

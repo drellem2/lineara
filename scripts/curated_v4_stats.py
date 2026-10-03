@@ -37,6 +37,10 @@ from pathlib import Path
 
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from harness import results_io  # noqa: E402
 _DEFAULT_MANIFEST = (
     _REPO_ROOT / "hypotheses" / "curated" / "CONSTRUCTION.manifest.jsonl"
 )
@@ -70,12 +74,12 @@ def _load_manifest(path: Path) -> dict[str, dict]:
 
 def _load_results(path: Path) -> list[dict]:
     rows: list[dict] = []
-    with path.open("r", encoding="utf-8") as fh:
-        for line in fh:
-            line = line.strip()
-            if not line:
-                continue
-            rows.append(json.loads(line))
+    # mg-1c82a: base file + any ``<name>.shards/NNNN.jsonl``.
+    for line in results_io.iter_lines(path):
+        line = line.strip()
+        if not line:
+            continue
+        rows.append(json.loads(line))
     return rows
 
 

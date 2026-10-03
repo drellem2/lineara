@@ -11397,3 +11397,55 @@ from `pools/eteocretan.yaml` on this branch.
 * A within-right-tail discrimination test for Hattic, analogous to
   v15's real-vs-conjectural split. No such test was pre-registered for
   this probe.
+
+## Findings from mg-1c82a (sharded result streams under GitHub's 100 MB push cap, 2026-10-03)
+
+There is no new metric value here. This entry records a storage layout
+and a limit that it removes.
+
+* **The problem.** Five `results/*.jsonl` streams had grown to between
+  50.6 and 98.2 MB: `experiments.jsonl` 98.2 MB,
+  `…perplexity_v0.jsonl` 89.0, `.under_hattic_lm` 80.2,
+  `.polluted_levels` 73.0 and `.hattic` 50.6. The streams are
+  append-only, so one more full Hattic-LM rescore (about 40 MB per
+  run) would have pushed a blob over GitHub's 100 MB hard limit.
+* **The layout.** A logical stream `results/<name>.jsonl` is now the
+  base file plus `results/<name>.shards/NNNN.jsonl`.
+  `harness/results_io.py` provides `ShardedAppender`, which writes
+  whole rows and rolls to a new shard before any file passes 40 MiB.
+  It also provides `iter_lines`, which reads base + shards in order.
+  Every results writer uses the appender: `run_sweep`,
+  `cross_lm_rescore`, `harness.run.append_row` and `chic_substrate_run`.
+  Every results reader uses `iter_lines`: `per_surface_bayesian_rollup`
+  (and through it `hattic_gate`, `v23_cross_lm_matrix` and the other
+  gates), `cross_lm_rescore`, `run_sweep`, `rollup`, `paired_diff_*`,
+  `curated_v4_stats`, `score_curated_v4` and `chic_substrate_run`. The
+  shard directory does not end in `.jsonl`, so the existing
+  `experiments.<metric>.*.jsonl` tag globs never match it.
+* **Resharding the five files.** The five files were split once with
+  `results_io.reshard`. For each file the base + shards concatenate
+  byte-for-byte (same sha256) to the pre-split file, so no row was
+  edited, dropped or reordered. The largest file is now 41.9 MB. The
+  earlier commits still carry the old blobs, because history was not
+  rewritten.
+* **Byte-identical re-runs.** These outputs were compared before and
+  after the change and are byte-identical: `hattic_gate`
+  (md + summary JSON, which also matches the committed
+  `rollup.bayesian_posterior.hattic.v2.md`), `v23_cross_lm_matrix`
+  (md + JSON, which also matches the committed
+  `rollup.cross_lm_matrix.md`), `per_surface_bayesian_rollup`
+  (aquitanian), `rollup.py` composite, `curated_v4_stats`,
+  `compare_substrate_vs_control` and `compare_scholar_proposed`.
+* **Positive control.** A reader patched to ignore shards changes the
+  matrix output, so the comparison can detect a reader that drops
+  shards.
+* **Guard.** `harness/tests/test_results_io.py` fails if any
+  git-tracked file under `results/` reaches 50 MB.
+* **Limitation.** `build_chic_v6` and `build_linear_a_v26` rewrite their
+  outputs in full (2.2 and 13.4 MB) rather than appending, so they were
+  left alone. The size test still covers them.
+* **Pre-existing failures.** `paired_diff_rollup` fails with
+  `KeyError: 'pool'` on the CHIC YAMLs in `pools/`, and
+  `rollup.py --metric local_fit_v1` fails with a `TypeError` on a
+  `bigram_term: null` row. Both failures happen on `main` before this
+  change too and are not addressed here.

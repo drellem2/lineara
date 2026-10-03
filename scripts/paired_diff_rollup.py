@@ -70,6 +70,10 @@ import yaml
 
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from harness import results_io  # noqa: E402
 _DEFAULT_RESULTS = _REPO_ROOT / "results" / "experiments.jsonl"
 _DEFAULT_AUTO = _REPO_ROOT / "hypotheses" / "auto"
 _DEFAULT_POOLS = _REPO_ROOT / "pools"
@@ -147,25 +151,23 @@ def _load_result_rows(results_path: Path, metric: str) -> dict[str, dict]:
     out: dict[str, dict] = {}
     paths = [results_path]
     sidecar = _sidecar_path(metric)
-    if sidecar.exists() and sidecar.resolve() != results_path.resolve():
+    if results_io.exists(sidecar) and sidecar.resolve() != results_path.resolve():
         paths.append(sidecar)
     for path in paths:
-        if not path.exists():
-            continue
-        with path.open("r", encoding="utf-8") as fh:
-            for line in fh:
-                line = line.strip()
-                if not line:
-                    continue
-                row = json.loads(line)
-                if row.get("metric") != metric:
-                    continue
-                h = row.get("hypothesis_hash")
-                if not h:
-                    continue
-                cur = out.get(h)
-                if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
-                    out[h] = row
+        # mg-1c82a: base file + any ``<name>.shards/NNNN.jsonl``.
+        for line in results_io.iter_lines(path):
+            line = line.strip()
+            if not line:
+                continue
+            row = json.loads(line)
+            if row.get("metric") != metric:
+                continue
+            h = row.get("hypothesis_hash")
+            if not h:
+                continue
+            cur = out.get(h)
+            if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
+                out[h] = row
     return out
 
 

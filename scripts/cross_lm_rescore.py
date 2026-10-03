@@ -46,7 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from jsonschema import Draft202012Validator
 
-from harness import HARNESS_VERSION
+from harness import HARNESS_VERSION, results_io
 from harness.corpus import build_stream, corpus_snapshot, load_records
 from harness.external_phoneme_model import ExternalPhonemeModel
 from harness.hypothesis import (
@@ -210,21 +210,19 @@ def _load_seen(*paths: Path) -> set[tuple[str, str]]:
     during a resume."""
     seen: set[tuple[str, str]] = set()
     for path in paths:
-        if not path.exists():
-            continue
-        with path.open("r", encoding="utf-8") as fh:
-            for line in fh:
-                line = line.strip()
-                if not line:
-                    continue
-                row = json.loads(line)
-                if row.get("metric") != _METRIC:
-                    continue
-                h = row.get("hypothesis_hash")
-                lang = row.get("language", "")
-                if not h:
-                    continue
-                seen.add((h, lang))
+        # mg-1c82a: base file + any ``<name>.shards/NNNN.jsonl``.
+        for line in results_io.iter_lines(path):
+            line = line.strip()
+            if not line:
+                continue
+            row = json.loads(line)
+            if row.get("metric") != _METRIC:
+                continue
+            h = row.get("hypothesis_hash")
+            lang = row.get("language", "")
+            if not h:
+                continue
+            seen.add((h, lang))
     return seen
 
 
@@ -238,11 +236,7 @@ def _all_metric_paths(results_dir: Path) -> list[Path]:
     ``--sidecar-tag <tag>`` does not duplicate rows that already exist
     in a different (e.g. legacy) sidecar.
     """
-    out: list[Path] = [
-        results_dir / "experiments.jsonl",
-        results_dir / f"experiments.{_METRIC}.jsonl",
-    ]
-    out.extend(sorted(results_dir.glob(f"experiments.{_METRIC}.*.jsonl")))
+    out = results_io.metric_stream_paths(results_dir, _METRIC)
     # Deduplicate while preserving order.
     seen: set[Path] = set()
     deduped: list[Path] = []
@@ -397,8 +391,10 @@ def run(
 
     print(f"work: {len(work)} hypotheses to rescore", file=sys.stderr)
 
-    sidecar_path.parent.mkdir(parents=True, exist_ok=True)
-    fh = sidecar_path.open("a", encoding="utf-8")
+    # mg-1c82a: append to the last shard, rolling to a new
+    # ``<sidecar>.shards/NNNN.jsonl`` before any file passes
+    # results_io.SHARD_MAX_BYTES (GitHub's 100 MB push cap).
+    fh = results_io.ShardedAppender(sidecar_path)
     started = time.monotonic()
     scored = 0
     skipped = 0

@@ -71,6 +71,10 @@ from pathlib import Path
 
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from harness import results_io  # noqa: E402
 _DEFAULT_RESULTS_DIR = _REPO_ROOT / "results"
 _DEFAULT_AUTO = _REPO_ROOT / "hypotheses" / "auto"
 _DEFAULT_AUTO_SIG = _REPO_ROOT / "hypotheses" / "auto_signatures"
@@ -176,30 +180,24 @@ def _load_score_rows(results_dir: Path) -> dict[tuple[str, str], dict]:
     # (e.g. ``experiments.external_phoneme_perplexity_v0.polluted.jsonl``,
     # added in mg-6b73 to keep individual files under GitHub's 100 MB
     # push-size limit).
-    paths = [
-        results_dir / "experiments.jsonl",
-        results_dir / f"experiments.{_METRIC}.jsonl",
-    ]
-    paths.extend(sorted(results_dir.glob(f"experiments.{_METRIC}.*.jsonl")))
-    for path in paths:
-        if not path.exists():
-            continue
-        with path.open("r", encoding="utf-8") as fh:
-            for line in fh:
-                line = line.strip()
-                if not line:
-                    continue
-                row = json.loads(line)
-                if row.get("metric") != _METRIC:
-                    continue
-                h = row.get("hypothesis_hash")
-                if not h:
-                    continue
-                lang = row.get("language", "")
-                key = (h, lang)
-                cur = out.get(key)
-                if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
-                    out[key] = row
+    # mg-1c82a: each stream may be sharded (``<name>.shards/NNNN.jsonl``);
+    # iter_lines reads base + shards in stream order.
+    for path in results_io.metric_stream_paths(results_dir, _METRIC):
+        for line in results_io.iter_lines(path):
+            line = line.strip()
+            if not line:
+                continue
+            row = json.loads(line)
+            if row.get("metric") != _METRIC:
+                continue
+            h = row.get("hypothesis_hash")
+            if not h:
+                continue
+            lang = row.get("language", "")
+            key = (h, lang)
+            cur = out.get(key)
+            if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
+                out[key] = row
     return out
 
 

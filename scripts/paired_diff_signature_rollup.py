@@ -52,6 +52,10 @@ from pathlib import Path
 
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from harness import results_io  # noqa: E402
 _DEFAULT_RESULTS_DIR = _REPO_ROOT / "results"
 _DEFAULT_AUTO_SIG = _REPO_ROOT / "hypotheses" / "auto_signatures"
 
@@ -88,22 +92,20 @@ def _load_score_rows(results_dir: Path) -> dict[str, dict]:
         results_dir / f"experiments.{_METRIC}.jsonl",
     ]
     for path in paths:
-        if not path.exists():
-            continue
-        with path.open("r", encoding="utf-8") as fh:
-            for line in fh:
-                line = line.strip()
-                if not line:
-                    continue
-                row = json.loads(line)
-                if row.get("metric") != _METRIC:
-                    continue
-                h = row.get("hypothesis_hash")
-                if not h:
-                    continue
-                cur = out.get(h)
-                if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
-                    out[h] = row
+        # mg-1c82a: base file + any ``<name>.shards/NNNN.jsonl``.
+        for line in results_io.iter_lines(path):
+            line = line.strip()
+            if not line:
+                continue
+            row = json.loads(line)
+            if row.get("metric") != _METRIC:
+                continue
+            h = row.get("hypothesis_hash")
+            if not h:
+                continue
+            cur = out.get(h)
+            if cur is None or row.get("ran_at", "") > cur.get("ran_at", ""):
+                out[h] = row
     return out
 
 

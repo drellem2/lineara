@@ -42,7 +42,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import yaml
 from jsonschema import Draft202012Validator
 
-from harness import HARNESS_VERSION
+from harness import HARNESS_VERSION, results_io
 from harness.corpus import (
     build_stream,
     corpus_snapshot,
@@ -306,21 +306,19 @@ def _existing_runs(
                 if sp.resolve() != results_path.resolve() and sp not in paths:
                     paths.append(sp)
     for p in paths:
-        if not p.exists():
-            continue
-        with p.open("r", encoding="utf-8") as fh:
-            for line in fh:
-                line = line.strip()
-                if not line:
-                    continue
-                row = json.loads(line)
-                seen.add(
-                    (
-                        row["hypothesis_hash"],
-                        row.get("corpus_snapshot", ""),
-                        row.get("metric", ""),
-                    )
+        # mg-1c82a: base file + any ``<name>.shards/NNNN.jsonl``.
+        for line in results_io.iter_lines(p):
+            line = line.strip()
+            if not line:
+                continue
+            row = json.loads(line)
+            seen.add(
+                (
+                    row["hypothesis_hash"],
+                    row.get("corpus_snapshot", ""),
+                    row.get("metric", ""),
                 )
+            )
     return seen
 
 
@@ -765,18 +763,21 @@ def run(
     # ``source_pool`` tag to keep individual files under cap.
     metric_streams: dict[str, "object"] = {}
     metric_pool_streams: dict[tuple[str, str], "object"] = {}
-    primary_fh = results_path.open("a", encoding="utf-8")
+    #
+    # mg-1c82a: every stream is a results_io.ShardedAppender, which rolls
+    # to ``<name>.shards/NNNN.jsonl`` before any file passes
+    # results_io.SHARD_MAX_BYTES, so no single file nears the cap.
+    primary_fh = results_io.ShardedAppender(results_path)
     sidecar_fhs: list = [primary_fh]
     for m in metrics:
         if m in _SIDECAR_METRICS:
             sp = _sidecar_path(repo_root, m)
-            sp.parent.mkdir(parents=True, exist_ok=True)
-            fh = sp.open("a", encoding="utf-8")
+            fh = results_io.ShardedAppender(sp)
             metric_streams[m] = fh
             sidecar_fhs.append(fh)
             for tag in sorted(set(_PER_POOL_SIDECAR_TAG.values())):
                 tagged_path = _sidecar_path(repo_root, m, tag)
-                tagged_fh = tagged_path.open("a", encoding="utf-8")
+                tagged_fh = results_io.ShardedAppender(tagged_path)
                 metric_pool_streams[(m, tag)] = tagged_fh
                 sidecar_fhs.append(tagged_fh)
         else:

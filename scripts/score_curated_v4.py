@@ -24,6 +24,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from harness import results_io
 from harness.run import append_row, score_hypothesis
 
 
@@ -39,21 +40,19 @@ _METRICS = (
 
 def _existing_keys(results_path: Path) -> set[tuple[str, str, str]]:
     seen: set[tuple[str, str, str]] = set()
-    if not results_path.exists():
-        return seen
-    with results_path.open("r", encoding="utf-8") as fh:
-        for line in fh:
-            line = line.strip()
-            if not line:
-                continue
-            row = json.loads(line)
-            seen.add(
-                (
-                    row["hypothesis_hash"],
-                    row.get("corpus_snapshot", ""),
-                    row.get("metric", ""),
-                )
+    # mg-1c82a: base file + any ``<name>.shards/NNNN.jsonl``.
+    for line in results_io.iter_lines(results_path):
+        line = line.strip()
+        if not line:
+            continue
+        row = json.loads(line)
+        seen.add(
+            (
+                row["hypothesis_hash"],
+                row.get("corpus_snapshot", ""),
+                row.get("metric", ""),
             )
+        )
     return seen
 
 
