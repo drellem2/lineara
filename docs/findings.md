@@ -2560,6 +2560,7 @@ Aquitanian / Etruscan surfaces is the missing certification.
     substrate pools (Phoenician, Sumerian, Hattic); domain-expert
     review of top-K. The findings_summary.md document spells these
     out as the remaining work for full publication.
+    *(Forward pointer, 2026-10-03: Hattic was later run as a specificity probe; see "Findings from mg-7e966" below.)*
   * **See also.** `docs/findings_summary.md` for the manuscript-shape
     consolidation; `results/rollup.bayesian_posterior.linear_b_carryover.md`
     for the full positive-control top-K leaderboard;
@@ -3429,6 +3430,7 @@ the narrower-but-defensible register.
   Younger ingest for numerals + line breaks; additional substrate
   pools (Phoenician, Sumerian, Hattic). The methodology paper's
   §5.3 enumerates these explicitly.
+  *(Forward pointer, 2026-10-03: Hattic was later run as a specificity probe; see "Findings from mg-7e966" below.)*
 
 The natural next step is **Daniel's editorial choice of target
 venue** — once that is made, the LaTeX / formatting / reference
@@ -4955,6 +4957,7 @@ matrix builder is pure-function over the same. No RNG anywhere.
 - **Eteocretan bilingual decoding.** Methodologically distinct.
 - **Phoenician / Sumerian / Hattic substrate pools.** v15 settled
   the methodological limit; deferred indefinitely.
+  *(Forward pointer, 2026-10-03: Hattic was later run as a specificity probe; see "Findings from mg-7e966" below.)*
 - **GORILA / Younger ingest.** Different scope.
 - **LaTeX / journal submission.** Out of polecat scope.
 
@@ -5199,6 +5202,7 @@ from `per_sign_consensus_local`). No RNG anywhere.
 - **Eteocretan bilingual decoding.** Methodologically distinct.
 - **Phoenician / Sumerian / Hattic substrate pools.** v15 settled
   the methodological limit; deferred indefinitely.
+  *(Forward pointer, 2026-10-03: Hattic was later run as a specificity probe; see "Findings from mg-7e966" below.)*
 - **GORILA / Younger ingest.** Different scope.
 - **LaTeX / journal submission.** Out of polecat scope.
 
@@ -5390,6 +5394,7 @@ correction noted above.
   read; out of polecat scope.
 - **No additional substrate pools.** Phoenician / Sumerian /
   Hattic remain deferred per v15.
+  *(Forward pointer, 2026-10-03: Hattic was later run as a specificity probe; see "Findings from mg-7e966" below.)*
 
 ### Out of scope (deferred to subsequent editorial work)
 
@@ -7796,6 +7801,7 @@ quantitative claims, so no new mismatch could be introduced.
   syllabary specialist's read; out of polecat scope.
 - **No additional substrate pools.** Phoenician / Sumerian /
   Hattic remain deferred per v15.
+  *(Forward pointer, 2026-10-03: Hattic was later run as a specificity probe; see "Findings from mg-7e966" below.)*
 - **No corpus-expansion ingest.** The full GORILA Za-series
   ingest, the manual O&G 1996 audit on near-#312 / near-#328
   entries, and any genuinely-dual-script CMS sealstone-catalog
@@ -10857,3 +10863,185 @@ same docstring before the run.
   on the CHIC sign / anchor YAMLs in `pools/`, which have no `pool:`
   key. Both now skip such files. Before this fix, any sweep or gate on
   main crashed.
+
+## Findings from mg-7e966 (v32 — Hattic specificity probe: write-up and interpretation against v15 and handoff §D.3, 2026-10-03)
+
+Final slice of the temporary Hattic-only revival (Daniel via mayor,
+2026-10-03). This entry adds no new runs. It reads the two previous
+slices together and answers the question they were built for:
+**pool** mg-7e7d6 (merged 0986c0b7c, verdict partial) and **run**
+mg-7b882 (merged 91bd0f13e). The version label is v32 because v31 is
+reserved for the deferred manuscript polish (handoff §C/§E). The
+section's factual content is in the two entries just above. This one
+adds the interpretation and does not repeat their tables.
+
+### Headline
+
+**The Hattic probe does not settle whether the framework's signal is
+specific or generic. The v15 claim stands unchanged.**
+
+* The pre-registered test is the own-LM right-tail gate: `hattic`
+  against `control_hattic_bigram`, both under the `hattic` LM. It
+  **FAILs**, p = 0.393 (U = 210.5), median top-20 posterior 0.8750
+  vs 0.8697 (gap +0.005), on **72 pool entries, below the v21 bar
+  of 80**.
+* Under the interpretation rules fixed before the run (pm-lineara,
+  2026-10-03 10:50Z), a FAIL on this pool is **inconclusive on data
+  quality**. It is not evidence that the signal is substrate-specific.
+  The forms are hand-keyed citation forms, not collated against Soysal
+  2004 or the printed editions, and there are fewer than 80 of them.
+* So the probe did not give the clean outcome handoff §D.3 asked for
+  ("if the framework PASSes on [an unrelated control language] too,
+  we are picking up generic structure"). There was no PASS to read as
+  generic. Under the rules, the FAIL also cannot be read as specific.
+
+### Interpretive read
+
+**Against v15 (mg-7ecb).** v15 found that the right-tail gate PASSes
+for any pool with enough character-bigram overlap with the LM, even
+when the pool's phoneme distribution is not the substrate's. Its
+example was Greek-shape conjecturals clearing the gate under the
+Basque LM (p = 2.0e-03), with real-vs-conjectural discrimination
+appearing only *within* the right tail. The Hattic results give that
+reading no new support from the pre-registered cell, and they do not
+contradict it:
+
+1. **Own-LM gate (pre-registered): FAIL, inconclusive.** If Hattic
+   had PASSed about as strongly as Eteocretan, Aquitanian or Etruscan
+   (own-LM p = 4.1e-06 / 3.2e-05 / 5.2e-04), that would have
+   supported the generic-structure reading whatever the collation
+   accuracy. It did not. On cleaner data, a FAIL here would lean
+   toward specificity, but the rules forbid that reading on this
+   corpus. The rules were set before the run, and this write-up keeps
+   them.
+2. **Hattic under the Mycenaean Greek LM: PASS (p = 0.004, gap
+   +0.059).** This is the one result that leans toward generic
+   structure: an unrelated pool clears the gate under an unrelated
+   LM. The cell is not circular. It has the same shape as the v15
+   point that the gate can PASS without any substrate affinity. It
+   carries little weight, though. It was not the pre-registered test,
+   and 1 PASS among the 8 new non-own cells at α = 0.05 is not far
+   above the ~0.4 PASSes expected by chance. Both of these points
+   were already noted in mg-7b882.
+3. **Hattic under the Basque / Etruscan / Eteocretan LMs: negative
+   gaps (−0.122 / −0.100 / −0.037), all FAIL.** Compare Eteocretan,
+   which PASSes under every non-Hattic LM, and Aquitanian, which
+   PASSes under 2 of 3 foreign non-Hattic LMs. Read naively, the
+   gate does not reward an unrelated language under most of the
+   Aegean / old-European LMs, which looks like specificity. That
+   reading is **not supported** by this pool, for two reasons. First,
+   the data-quality caveat covers these cells too. Second, the
+   mg-7e7d6 normalisation reduces Hattic to a 16-letter inventory
+   that is heavy in `h` and has no `o`, `b`, `d`, `g` or `f`. A
+   negative gap can therefore come from transliteration convention
+   (ḫ→h, merged voicing) meeting another LM's alphabet, rather than
+   from linguistic distance. Nothing here separates those two
+   explanations.
+4. **Hattic LM column: no other pool PASSes under the Hattic LM.**
+   The p-values are Aquitanian 0.155, Etruscan 0.575, toponym 0.052
+   and Eteocretan 0.965. The Basque and Eteocretan LMs act as broad
+   "substrate-shaped" detectors, but the Hattic LM does not. At 614
+   tokens it is the smallest LM in the repo, and this cannot be told
+   apart from LM noise. It is reported, not interpreted.
+5. **Own-LM dominance: Hattic's own cell is not its best cell.** Its
+   own gap (+0.005) is smaller than its gap under Mycenaean Greek
+   (+0.059). This readout is **circular by construction**, because
+   the LM corpus is exactly the 72 pool forms. It is not evidence
+   either way. The main gate is less affected, because the control is
+   sampled from the same bigram statistics, but that is a mitigation,
+   not immunity.
+
+**Against handoff §D.3.** §D.3 asked whether the population-level
+signal is "Old-European-specific or a generic Bronze-Age-writing-system
+property", and said a PASS on an unrelated control would weaken the
+positive claim. **The question remains open.** The Hattic probe did not
+weaken the positive claim, because there was no own-LM PASS. It did not
+strengthen it either, because the FAIL is inconclusive on data quality.
+The one generic-leaning cell (Hattic × Mycenaean Greek) is too weak to
+move the manuscript's claim. The claim stays as v15 left it: the gate
+detects LM-phonotactic kinship at the population level, it is
+permissive toward any pool with enough bigram overlap, and it does not
+support per-sign reading claims.
+
+**Net verdict: inconclusive.** Generic structure is not shown by the
+pre-registered test. Specificity is not shown because of data quality.
+The v15 reading is unchanged.
+
+### Pre-registered acceptance gate
+
+Restated for the audit trail. The criterion was committed in
+`scripts/hattic_gate.py` (00e7eea03) before any run output, and it is
+identical to every substrate pool since v10:
+
+* Top-20 `hattic` vs top-20 `control_hattic_bigram` per-surface
+  posterior means under the `hattic` LM. One-tailed Mann-Whitney U
+  (substrate > control). **PASS iff p < 0.05 and median(substrate) >
+  median(control).**
+* **Result: FAIL**, U = 210.5, p = 3.931e-01, medians 0.8750 vs
+  0.8697 (gap +0.0053), n = 72 pool entries (< 80). The mean-of-means
+  gap of +0.0271 is informational and not part of the gate.
+* Interpretation rules (fixed 10:50Z, before the run): (1) report
+  72 < 80 beside the p-value; (2) the own-LM readout is circular, and
+  cross-LM cells with other pools under the Hattic LM are not; (3) a
+  PASS supports generic structure whatever the collation accuracy, and
+  a FAIL is inconclusive on data quality. All three are applied above.
+
+### Artifacts shipped
+
+* This section, plus one-line forward pointers to it added under the
+  six earlier entries that list Hattic as deferred (v12 mg-4664
+  out-of-scope list; v16 mg-d5ed cleanup list; v23 mg-b599 and v24
+  mg-c103 next-step lists; v25 mg-36bd and v27 mg-b731 limitations). The earlier text is not rewritten,
+  because findings.md is append-only.
+* No code, results or pool changes. `docs/findings_summary.md` (the
+  paused manuscript) is **not** edited. Folding Hattic into the paper
+  is Daniel's call on revival, and v31 polish stays deferred under the
+  2026-05-06 pause directive.
+* Underlying artifacts (from mg-7e7d6 / mg-7b882):
+  `corpora/hattic.README.md`, `pools/hattic.yaml`,
+  `pools/control_hattic_bigram.yaml`,
+  `harness/external_phoneme_models/hattic.json`,
+  `scripts/hattic_gate.py`,
+  `results/rollup.bayesian_posterior.hattic.md`,
+  `results/rollup.cross_lm_matrix.md` (5×5).
+
+### Reproducibility
+
+`python3 scripts/hattic_gate.py --summary-json <path>` was re-run on
+this branch from the committed result sidecars. It reproduces
+mg-7b882's figures exactly (U = 210.5, p = 0.3931, median gap
++0.00525, FAIL), and the regenerated
+`results/rollup.bayesian_posterior.hattic.md` is byte-identical to the
+committed one (`git status` clean afterwards). The cross-LM figures
+quoted above are read from `results/rollup.cross_lm_matrix.md` as
+committed by mg-7b882. They were not recomputed here.
+
+### Limitations
+
+* **72 entries, below the v21 bar of 80.** Not padded.
+* **The LM corpus is the pool.** The `hattic` LM is trained on the
+  same 72 lexical citation forms (614 tokens). The own-LM readout is
+  circular. The main gate is mitigated, not immune.
+* **Uncollated, hand-keyed forms.** They are not checked against
+  Soysal 2004 or the printed editions. The asymmetry is fixed by the
+  rules: a FAIL is inconclusive, and a PASS would still have counted.
+* **Lexical, not running text.** CTH 725–745 running text was not
+  keyed. 41 of the 72 forms are names, so the bigram statistics lean
+  toward onomastic compounds.
+* **Normalisation to 16 letters** (š/s merged, ḫ→h, stop voicing
+  merged, f→w) confounds every cross-LM cell with transliteration
+  convention.
+* **One probe language.** §D.3 named Hurrian, Hittite and Phoenician.
+  Hattic alone cannot stand in for "unrelated Bronze-Age language" in
+  general.
+
+### Out of scope
+
+* `docs/findings_summary.md` and the v31 manuscript polish (deferred
+  per Daniel's 2026-05-06 pause directive).
+* Collating the Hattic forms against the printed editions, keying
+  running text from CTH 725–745, or training a Hattic LM on text kept
+  apart from the pool. Any of these would be needed before a Hattic
+  FAIL could count as evidence of specificity.
+* Further §D.3 control languages (Hurrian, Hittite, Phoenician) and
+  the other handoff §D directions. These are Daniel's call on revival.
