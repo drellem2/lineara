@@ -36,15 +36,14 @@ class HatticGateTest(unittest.TestCase):
         self.assertEqual(self.gate._SUBSTRATE, "hattic")
         self.assertEqual(self.gate._CONTROL, "control_hattic_bigram")
 
-    def test_pool_size_is_the_v32_registration(self) -> None:
-        # The gate was pre-registered and run against the v32 pool of 72
-        # hand-keyed forms. mg-7f4db rebuilt pools/hattic.yaml from
-        # published editions (124 entries), so the registered constant no
-        # longer matches the YAML. It stays pinned as the v32 record; a
-        # re-run on the rebuilt pool needs its own pre-registration.
-        self.assertEqual(self.gate._N_POOL_ENTRIES, 72)
+    def test_pool_size_matches_pool_yaml(self) -> None:
+        # v32 registered 72 (hand-keyed forms). mg-7f4db rebuilt
+        # pools/hattic.yaml from published editions (124 entries); mg-a38bf
+        # updated only this n pin before the v2 run. The decision rule
+        # (top-20 vs top-20, one-tailed MW, p < 0.05) is unchanged.
+        self.assertEqual(self.gate._N_POOL_ENTRIES, 124)
         text = (_REPO_ROOT / "pools" / "hattic.yaml").read_text(encoding="utf-8")
-        self.assertEqual(text.count("surface:"), 124)
+        self.assertEqual(text.count("surface:"), self.gate._N_POOL_ENTRIES)
 
     def test_gate_rule(self) -> None:
         v = self.gate.gate_verdict

@@ -93,7 +93,7 @@ _DEFAULT_POOLS = _REPO_ROOT / "pools"
 
 _SUBSTRATE = "hattic"
 _CONTROL = "control_hattic_bigram"
-_N_POOL_ENTRIES = 72
+_N_POOL_ENTRIES = 124
 
 # Pre-registered constants. Do not change after the run.
 _NMIN = 10
