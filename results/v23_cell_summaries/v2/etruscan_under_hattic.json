@@ -1,0 +1,17 @@
+{
+  "substrate_pool": "etruscan",
+  "control_pool": "control_etruscan",
+  "lm": "hattic",
+  "lm_label": "Hattic",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.9245014245014245,
+  "median_control_top": 0.9179271708683473,
+  "median_gap": 0.006574253633077176,
+  "mean_substrate_top": 0.9210941373441374,
+  "mean_control_top": 0.9169056764113389,
+  "mean_gap": 0.0041884609327984546,
+  "mw_u_substrate": 208.0,
+  "mw_p_one_tail": 0.41951550751816846,
+  "gate": "FAIL"
+}

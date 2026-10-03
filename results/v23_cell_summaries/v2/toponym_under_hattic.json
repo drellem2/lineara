@@ -1,0 +1,17 @@
+{
+  "substrate_pool": "toponym",
+  "control_pool": "control_toponym_bigram",
+  "lm": "hattic",
+  "lm_label": "Hattic",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.9711538461538461,
+  "median_control_top": 0.8973684210526316,
+  "median_gap": 0.07378542510121455,
+  "mean_substrate_top": 0.9458424908424907,
+  "mean_control_top": 0.9106117107675287,
+  "mean_gap": 0.035230780074962054,
+  "mw_u_substrate": 269.0,
+  "mw_p_one_tail": 0.030820792825242083,
+  "gate": "PASS"
+}

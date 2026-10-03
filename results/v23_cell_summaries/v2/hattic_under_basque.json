@@ -1,0 +1,17 @@
+{
+  "substrate_pool": "hattic",
+  "control_pool": "control_hattic_bigram",
+  "lm": "basque",
+  "lm_label": "Basque",
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.9807692307692307,
+  "median_control_top": 0.8982758620689655,
+  "median_gap": 0.08249336870026525,
+  "mean_substrate_top": 0.9435302197802198,
+  "mean_control_top": 0.9125572354744369,
+  "mean_gap": 0.03097298430578288,
+  "mw_u_substrate": 263.5,
+  "mw_p_one_tail": 0.042398703801757476,
+  "gate": "PASS"
+}
