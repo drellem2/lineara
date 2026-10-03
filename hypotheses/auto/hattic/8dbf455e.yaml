@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_katahha_KN_Zf_13_12_18
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''katahha''
+  pinned to KN Zf 13 tokens [12..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: katahha
+  phonemes:
+  - k
+  - a
+  - t
+  - a
+  - h
+  - h
+  - a
+  gloss_hint: goddess 'the queen'
+  citation: 'Corpus record(s) 19 (corpora/hattic/inscriptions/). Klinger, J. (1996).
+    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
+    Harrassowitz.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 18
+  sign_to_phoneme:
+    AB09: k
+    AB04: a
+    AB53: t
+    AB23: a
+    AB08: h
+    AB57: h
+    AB81: a

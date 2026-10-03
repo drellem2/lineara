@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_wasezzili_KN_Zf_13_1_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''wasezzili''
+  pinned to KN Zf 13 tokens [1..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: wasezzili
+  phonemes:
+  - w
+  - a
+  - s
+  - e
+  - z
+  - z
+  - i
+  - l
+  - i
+  gloss_hint: god
+  citation: 'Corpus record(s) 18 (corpora/hattic/inscriptions/). Klinger, J. (1996).
+    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
+    Harrassowitz.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 9
+  sign_to_phoneme:
+    AB27: w
+    AB24: a
+    AB41: s
+    AB07: e
+    A301: z
+    AB39: z
+    AB44: i
+    AB03: l
+    AB57: i

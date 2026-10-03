@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_lewae_KN_Zc_7_16_20
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''lewae''
+  pinned to KN Zc 7 tokens [16..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: lewae
+  phonemes:
+  - l
+  - e
+  - w
+  - a
+  - e
+  gloss_hint: implements
+  citation: Corpus record(s) 54 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 16
+  - 20
+  sign_to_phoneme:
+    AB60: l
+    AB08: e
+    AB06: w
+    AB24: a
+    AB40: e

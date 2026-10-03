@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zalpa_HT_31_29_33
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zalpa''
+  pinned to HT 31 tokens [29..33].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zalpa
+  phonemes:
+  - z
+  - a
+  - l
+  - p
+  - a
+  gloss_hint: town on the Black Sea coast
+  citation: 'Corpus record(s) 75 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+equation:
+  inscription_id: HT 31
+  span:
+  - 29
+  - 33
+  sign_to_phoneme:
+    AB67: z
+    AB45: a
+    AB80: l
+    A323: p
+    AB06: a

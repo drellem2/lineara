@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_inar_HT_1_19_22
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''inar''
+  pinned to HT 1 tokens [19..22].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: inar
+  phonemes:
+  - i
+  - n
+  - a
+  - r
+  gloss_hint: tutelary goddess
+  citation: 'Corpus record(s) 13 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+equation:
+  inscription_id: HT 1
+  span:
+  - 19
+  - 22
+  sign_to_phoneme:
+    AB08: i
+    AB60: n
+    AB06: a
+    AB27: r

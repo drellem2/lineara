@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_hilamar_KN_Zc_7_14_20
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''hilamar''
+  pinned to KN Zc 7 tokens [14..20].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: hilamar
+  phonemes:
+  - h
+  - i
+  - l
+  - a
+  - m
+  - a
+  - r
+  gloss_hint: temple gate-house
+  citation: 'Corpus record(s) 42 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 20
+  sign_to_phoneme:
+    AB57: h
+    AB31: i
+    AB60: l
+    AB08: a
+    AB06: m
+    AB24: a
+    AB40: r

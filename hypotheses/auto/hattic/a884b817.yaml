@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tete_ARKH_4a_13_17
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tete''
+  pinned to ARKH 4a tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tete
+  phonemes:
+  - t
+  - e
+  - t
+  - e
+  gloss_hint: great
+  citation: 'Corpus record(s) 43 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: ARKH 4a
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB45: t
+    AB58: e
+    AB47: t
+    AB04: e

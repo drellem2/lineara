@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_pampa_HT_128a_5_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''pampa''
+  pinned to HT 128a tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: pampa
+  phonemes:
+  - p
+  - a
+  - m
+  - p
+  - a
+  gloss_hint: king of Ḫatti in the Narām-Sîn tradition
+  citation: 'Corpus record(s) 84 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB69: p
+    AB26: a
+    AB56: m
+    AB09: p
+    AB13: a

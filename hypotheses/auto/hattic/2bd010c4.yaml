@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_mezulla_KN_Zf_13_1_7
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''mezulla''
+  pinned to KN Zf 13 tokens [1..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: mezulla
+  phonemes:
+  - m
+  - e
+  - z
+  - u
+  - l
+  - l
+  - a
+  gloss_hint: daughter of the sun goddess
+  citation: 'Corpus record(s) 14 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 7
+  sign_to_phoneme:
+    AB27: m
+    AB24: e
+    AB41: z
+    AB07: u
+    A301: l
+    AB39: l
+    AB44: a

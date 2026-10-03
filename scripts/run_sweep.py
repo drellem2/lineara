@@ -279,6 +279,10 @@ def build_pool_registry(pools_dir: Path) -> dict[str, dict]:
         return registry
     for path in sorted(pools_dir.glob("*.yaml")):
         pool = load_pool(path)
+        # Non-pool YAMLs (e.g. the CHIC sign / anchor inventories) share
+        # pools/ but carry no ``pool`` key; they are not candidate pools.
+        if not isinstance(pool, dict) or "pool" not in pool:
+            continue
         registry[pool["pool"]] = build_pool_context(pool)
     return registry
 

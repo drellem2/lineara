@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zahpuna_KN_Zf_13_12_18
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zahpuna''
+  pinned to KN Zf 13 tokens [12..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zahpuna
+  phonemes:
+  - z
+  - a
+  - h
+  - p
+  - u
+  - n
+  - a
+  gloss_hint: goddess
+  citation: 'Corpus record(s) 20 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 18
+  sign_to_phoneme:
+    AB09: z
+    AB04: a
+    AB53: h
+    AB23: p
+    AB08: u
+    AB57: n
+    AB81: a

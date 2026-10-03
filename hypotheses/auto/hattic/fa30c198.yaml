@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_halmasuit_KN_Zf_13_4_12
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''halmasuit''
+  pinned to KN Zf 13 tokens [4..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: halmasuit
+  phonemes:
+  - h
+  - a
+  - l
+  - m
+  - a
+  - s
+  - u
+  - i
+  - t
+  gloss_hint: throne goddess
+  citation: 'Corpus record(s) 6 (corpora/hattic/inscriptions/). Klinger, J. (1996).
+    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
+    Harrassowitz. Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 12
+  sign_to_phoneme:
+    AB07: h
+    A301: a
+    AB39: l
+    AB44: m
+    AB03: a
+    AB57: s
+    AB59: u
+    AB53: i
+    AB09: t

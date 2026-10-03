@@ -1,0 +1,42 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_katahzipuri_KN_Zf_13_3_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''katahzipuri''
+  pinned to KN Zf 13 tokens [3..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: katahzipuri
+  phonemes:
+  - k
+  - a
+  - t
+  - a
+  - h
+  - z
+  - i
+  - p
+  - u
+  - r
+  - i
+  gloss_hint: goddess (Hittite Kamrušepa)
+  citation: 'Corpus record(s) 8 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 13
+  sign_to_phoneme:
+    AB41: k
+    AB07: a
+    A301: t
+    AB39: a
+    AB44: h
+    AB03: z
+    AB57: i
+    AB59: p
+    AB53: u
+    AB09: r
+    AB04: i

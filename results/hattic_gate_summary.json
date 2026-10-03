@@ -1,0 +1,15 @@
+{
+  "substrate_pool": "hattic",
+  "control_pool": "control_hattic_bigram",
+  "n_pool_entries": 72,
+  "n_substrate_top": 20,
+  "n_control_top": 20,
+  "median_substrate_top": 0.875,
+  "median_control_top": 0.8697478991596639,
+  "median_gap": 0.005252100840336116,
+  "mean_substrate_top": 0.8694551282051283,
+  "mean_control_top": 0.8423056644942688,
+  "mw_u_substrate": 210.5,
+  "mw_p_one_tail": 0.3931082239316718,
+  "gate": "FAIL"
+}

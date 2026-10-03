@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_papaya_KN_Zc_6_19_25
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''papaya''
+  pinned to KN Zc 6 tokens [19..25].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: papaya
+  phonemes:
+  - p
+  - a
+  - p
+  - a
+  - y
+  - a
+  gloss_hint: fate goddess
+  citation: 'Corpus record(s) 23 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 19
+  - 25
+  sign_to_phoneme:
+    AB03: p
+    AB81: a
+    AB55: p
+    AB10: a
+    AB28: y
+    AB79: a

@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tawiniya_KN_Zf_13_5_12
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tawiniya''
+  pinned to KN Zf 13 tokens [5..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tawiniya
+  phonemes:
+  - t
+  - a
+  - w
+  - i
+  - n
+  - i
+  - y
+  - a
+  gloss_hint: town
+  citation: 'Corpus record(s) 74 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 12
+  sign_to_phoneme:
+    A301: t
+    AB39: a
+    AB44: w
+    AB03: i
+    AB57: n
+    AB59: i
+    AB53: y
+    AB09: a

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_wurun_HT_Zb_159_1_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''wurun''
+  pinned to HT Zb 159 tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: wurun
+  phonemes:
+  - w
+  - u
+  - r
+  - u
+  - n
+  gloss_hint: of the land (genitive -un)
+  citation: 'Corpus record(s) 36 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: HT Zb 159
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB06: w
+    AB55: u
+    AB41: r
+    AB57: u
+    AB09: n

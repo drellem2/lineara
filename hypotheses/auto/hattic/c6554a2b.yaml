@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_lepinu_KN_Zf_13_13_18
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''lepinu''
+  pinned to KN Zf 13 tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: lepinu
+  phonemes:
+  - l
+  - e
+  - p
+  - i
+  - n
+  - u
+  gloss_hint: children (le- plural)
+  citation: Corpus record(s) 51 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB04: l
+    AB53: e
+    AB23: p
+    AB08: i
+    AB57: n
+    AB81: u

@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_wazari_KN_Zf_13_8_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''wazari''
+  pinned to KN Zf 13 tokens [8..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: wazari
+  phonemes:
+  - w
+  - a
+  - z
+  - a
+  - r
+  - i
+  gloss_hint: humankind (collective)
+  citation: 'Corpus record(s) 41 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 8
+  - 13
+  sign_to_phoneme:
+    AB03: w
+    AB57: a
+    AB59: z
+    AB53: a
+    AB09: r
+    AB04: i

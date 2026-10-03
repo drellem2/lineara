@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_taru_HT_110a_1_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''taru''
+  pinned to HT 110a tokens [1..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: taru
+  phonemes:
+  - t
+  - a
+  - r
+  - u
+  gloss_hint: storm god
+  citation: 'Corpus record(s) 3 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: HT 110a
+  span:
+  - 1
+  - 4
+  sign_to_phoneme:
+    AB51: t
+    AB34: a
+    AB81: r
+    AB73: u

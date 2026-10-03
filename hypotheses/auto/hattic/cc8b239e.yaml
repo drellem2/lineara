@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_washap_KN_Zc_6_18_24
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''washap''
+  pinned to KN Zc 6 tokens [18..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: washap
+  phonemes:
+  - w
+  - a
+  - s
+  - h
+  - a
+  - p
+  gloss_hint: gods (collective wa- + šḫap)
+  citation: 'Corpus record(s) 34 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 18
+  - 24
+  sign_to_phoneme:
+    AB06: w
+    AB03: a
+    AB81: s
+    AB55: h
+    AB10: a
+    AB28: p

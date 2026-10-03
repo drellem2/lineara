@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_estan_KN_Zf_13_5_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''estan''
+  pinned to KN Zf 13 tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: estan
+  phonemes:
+  - e
+  - s
+  - t
+  - a
+  - n
+  gloss_hint: sun god
+  citation: 'Corpus record(s) 1 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    A301: e
+    AB39: s
+    AB44: t
+    AB03: a
+    AB57: n

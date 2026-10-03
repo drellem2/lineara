@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_halentu_KN_Zf_13_12_18
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''halentu''
+  pinned to KN Zf 13 tokens [12..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: halentu
+  phonemes:
+  - h
+  - a
+  - l
+  - e
+  - n
+  - t
+  - u
+  gloss_hint: palace
+  citation: 'Corpus record(s) 48 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 12
+  - 18
+  sign_to_phoneme:
+    AB09: h
+    AB04: a
+    AB53: l
+    AB23: e
+    AB08: n
+    AB57: t
+    AB81: u

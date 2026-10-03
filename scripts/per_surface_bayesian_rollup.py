@@ -233,7 +233,9 @@ def _load_pool_phonemes(pools_dir: Path) -> dict[str, list[list[str]]]:
     for path in sorted(pools_dir.glob("*.yaml")):
         with path.open("r", encoding="utf-8") as fh:
             doc = yaml.load(fh, Loader=_StringDateLoader)
-        if not doc:
+        # Non-pool YAMLs (e.g. the CHIC sign / anchor inventories) share
+        # pools/ but carry no ``pool`` key; they are not candidate pools.
+        if not doc or "pool" not in doc:
             continue
         pool = doc["pool"]
         out[pool] = [list(e["phonemes"]) for e in doc.get("entries", [])]

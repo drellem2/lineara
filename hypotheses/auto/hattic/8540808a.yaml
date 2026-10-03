@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zashapuna_KN_Zf_13_5_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zashapuna''
+  pinned to KN Zf 13 tokens [5..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zashapuna
+  phonemes:
+  - z
+  - a
+  - s
+  - h
+  - a
+  - p
+  - u
+  - n
+  - a
+  gloss_hint: chief goddess of Kaštama
+  citation: 'Corpus record(s) 21 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 5
+  - 13
+  sign_to_phoneme:
+    A301: z
+    AB39: a
+    AB44: s
+    AB03: h
+    AB57: a
+    AB59: p
+    AB53: u
+    AB09: n
+    AB04: a

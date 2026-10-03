@@ -77,5 +77,30 @@ class HatticGateTest(unittest.TestCase):
         self.assertIn("72", text)
 
 
+class PoolLoaderSkipsNonPoolYamlTest(unittest.TestCase):
+    """pools/ also holds CHIC sign / anchor YAMLs with no ``pool`` key;
+    the run_sweep registry and the rollup loader must skip them rather
+    than KeyError (mg-7b882)."""
+
+    def test_real_pools_dir_loads(self) -> None:
+        rollup = _load_module(
+            "per_surface_bayesian_rollup",
+            _REPO_ROOT / "scripts" / "per_surface_bayesian_rollup.py",
+        )
+        sweep = _load_module("run_sweep", _REPO_ROOT / "scripts" / "run_sweep.py")
+        pools_dir = _REPO_ROOT / "pools"
+        # Positive control: at least one YAML in pools/ lacks a pool key.
+        missing = [
+            p for p in pools_dir.glob("*.yaml")
+            if not any(l.startswith("pool:") for l in p.read_text(encoding="utf-8").splitlines())
+        ]
+        self.assertTrue(missing)
+        phonemes = rollup._load_pool_phonemes(pools_dir)
+        self.assertIn("hattic", phonemes)
+        self.assertEqual(len(phonemes["hattic"]), 72)
+        registry = sweep.build_pool_registry(pools_dir)
+        self.assertIn("control_hattic_bigram", registry)
+
+
 if __name__ == "__main__":
     unittest.main()

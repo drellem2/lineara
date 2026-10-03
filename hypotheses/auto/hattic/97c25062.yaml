@@ -1,0 +1,34 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_huzziya_KN_Zf_13_3_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''huzziya''
+  pinned to KN Zf 13 tokens [3..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: huzziya
+  phonemes:
+  - h
+  - u
+  - z
+  - z
+  - i
+  - y
+  - a
+  gloss_hint: Old Hittite royal name
+  citation: 'Corpus record(s) 85 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 9
+  sign_to_phoneme:
+    AB41: h
+    AB07: u
+    A301: z
+    AB39: z
+    AB44: i
+    AB03: y
+    AB57: a

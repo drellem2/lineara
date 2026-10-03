@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_telipinu_KN_Zf_13_3_10
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''telipinu''
+  pinned to KN Zf 13 tokens [3..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: telipinu
+  phonemes:
+  - t
+  - e
+  - l
+  - i
+  - p
+  - i
+  - n
+  - u
+  gloss_hint: vegetation / fertility god
+  citation: 'Corpus record(s) 12 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 10
+  sign_to_phoneme:
+    AB41: t
+    AB07: e
+    A301: l
+    AB39: i
+    AB44: p
+    AB03: i
+    AB57: n
+    AB59: u

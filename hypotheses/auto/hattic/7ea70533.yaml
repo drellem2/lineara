@@ -1,0 +1,26 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sul_HT_1_19_21
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sul''
+  pinned to HT 1 tokens [19..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sul
+  phonemes:
+  - s
+  - u
+  - l
+  gloss_hint: let, leave (verb stem)
+  citation: Corpus record(s) 57 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+equation:
+  inscription_id: HT 1
+  span:
+  - 19
+  - 21
+  sign_to_phoneme:
+    AB08: s
+    AB60: u
+    AB06: l

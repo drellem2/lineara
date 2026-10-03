@@ -1,0 +1,40 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_sulinkatte_KN_Zf_13_3_12
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''sulinkatte''
+  pinned to KN Zf 13 tokens [3..12].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: sulinkatte
+  phonemes:
+  - s
+  - u
+  - l
+  - i
+  - n
+  - k
+  - a
+  - t
+  - t
+  - e
+  gloss_hint: war god
+  citation: 'Corpus record(s) 11 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 3
+  - 12
+  sign_to_phoneme:
+    AB41: s
+    AB07: u
+    A301: l
+    AB39: i
+    AB44: n
+    AB03: k
+    AB57: a
+    AB59: t
+    AB53: t
+    AB09: e

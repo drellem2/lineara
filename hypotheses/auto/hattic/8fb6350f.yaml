@@ -1,0 +1,40 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zippalanta_KN_Zf_13_4_13
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zippalanta''
+  pinned to KN Zf 13 tokens [4..13].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zippalanta
+  phonemes:
+  - z
+  - i
+  - p
+  - p
+  - a
+  - l
+  - a
+  - n
+  - t
+  - a
+  gloss_hint: cult city
+  citation: 'Corpus record(s) 72 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 4
+  - 13
+  sign_to_phoneme:
+    AB07: z
+    A301: i
+    AB39: p
+    AB44: p
+    AB03: a
+    AB57: l
+    AB59: a
+    AB53: n
+    AB09: t
+    AB04: a

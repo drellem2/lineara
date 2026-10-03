@@ -1,0 +1,37 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_teteshapi_KN_Zf_13_1_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''teteshapi''
+  pinned to KN Zf 13 tokens [1..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: teteshapi
+  phonemes:
+  - t
+  - e
+  - t
+  - e
+  - s
+  - h
+  - a
+  - p
+  - i
+  gloss_hint: '''great goddess'''
+  citation: 'Corpus record(s) 10 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 9
+  sign_to_phoneme:
+    AB27: t
+    AB24: e
+    AB41: t
+    AB07: e
+    A301: s
+    AB39: h
+    AB44: a
+    AB03: p
+    AB57: i

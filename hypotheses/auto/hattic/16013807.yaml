@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tete_HT_122b_32_35
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tete''
+  pinned to HT 122b tokens [32..35].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tete
+  phonemes:
+  - t
+  - e
+  - t
+  - e
+  gloss_hint: great
+  citation: 'Corpus record(s) 43 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: HT 122b
+  span:
+  - 32
+  - 35
+  sign_to_phoneme:
+    AB11: t
+    AB05: e
+    AB81: t
+    AB02: e

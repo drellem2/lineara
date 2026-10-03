@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zalpa_HT_110a_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zalpa''
+  pinned to HT 110a tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zalpa
+  phonemes:
+  - z
+  - a
+  - l
+  - p
+  - a
+  gloss_hint: town on the Black Sea coast
+  citation: 'Corpus record(s) 75 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+equation:
+  inscription_id: HT 110a
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB41: z
+    AB51: a
+    AB34: l
+    AB81: p
+    AB73: a

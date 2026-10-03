@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_alep_HT_123b_25_28
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''alep''
+  pinned to HT 123b tokens [25..28].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: alep
+  phonemes:
+  - a
+  - l
+  - e
+  - p
+  gloss_hint: tongue, word
+  citation: 'Corpus record(s) 39 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: HT 123b
+  span:
+  - 25
+  - 28
+  sign_to_phoneme:
+    AB69: a
+    AB02: l
+    AB07: e
+    AB01: p

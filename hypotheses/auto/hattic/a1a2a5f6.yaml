@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_lewae_HT_128a_5_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''lewae''
+  pinned to HT 128a tokens [5..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: lewae
+  phonemes:
+  - l
+  - e
+  - w
+  - a
+  - e
+  gloss_hint: implements
+  citation: Corpus record(s) 54 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+equation:
+  inscription_id: HT 128a
+  span:
+  - 5
+  - 9
+  sign_to_phoneme:
+    AB69: l
+    AB26: e
+    AB56: w
+    AB09: a
+    AB13: e

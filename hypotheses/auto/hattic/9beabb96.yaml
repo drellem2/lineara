@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_ankuwa_HT_122b_13_18
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''ankuwa''
+  pinned to HT 122b tokens [13..18].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: ankuwa
+  phonemes:
+  - a
+  - n
+  - k
+  - u
+  - w
+  - a
+  gloss_hint: town
+  citation: 'Corpus record(s) 78 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+equation:
+  inscription_id: HT 122b
+  span:
+  - 13
+  - 18
+  sign_to_phoneme:
+    AB08: a
+    AB60: n
+    AB65: k
+    AB10: u
+    AB45: w
+    AB17: a

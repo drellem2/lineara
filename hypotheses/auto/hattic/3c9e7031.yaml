@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tuhkanti_KN_Zc_7_14_21
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tuhkanti''
+  pinned to KN Zc 7 tokens [14..21].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tuhkanti
+  phonemes:
+  - t
+  - u
+  - h
+  - k
+  - a
+  - n
+  - t
+  - i
+  gloss_hint: crown prince (title)
+  citation: 'Corpus record(s) 45 (corpora/hattic/inscriptions/). Kammenhuber, A. (1969).
+    ''Hattisch.'' In Altkleinasiatische Sprachen, HdO I/2.1-2/2: 428-546. Leiden:
+    Brill.'
+equation:
+  inscription_id: KN Zc 7
+  span:
+  - 14
+  - 21
+  sign_to_phoneme:
+    AB57: t
+    AB31: u
+    AB60: h
+    AB08: k
+    AB06: a
+    AB24: n
+    AB40: t
+    AB39: i

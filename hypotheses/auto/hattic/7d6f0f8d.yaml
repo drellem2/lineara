@@ -1,0 +1,25 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_an_ARKH_2_16_17
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''an''
+  pinned to ARKH 2 tokens [16..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: an
+  phonemes:
+  - a
+  - n
+  gloss_hint: sea
+  citation: 'Corpus record(s) 59 (corpora/hattic/inscriptions/). Bischoff, A. M. (2023).
+    ''Some new Hattian-Hittite correspondences from the quasi-bilingual text of CTH
+    733.'' Hungarian Assyriological Review 4: 95-109 (CC BY-NC 4.0). Gloss rests on
+    a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: ARKH 2
+  span:
+  - 16
+  - 17
+  sign_to_phoneme:
+    AB09: a
+    AB45: n

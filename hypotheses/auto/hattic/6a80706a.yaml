@@ -1,0 +1,36 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kuzanisu_KN_Zf_13_0_7
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kuzanisu''
+  pinned to KN Zf 13 tokens [0..7].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kuzanisu
+  phonemes:
+  - k
+  - u
+  - z
+  - a
+  - n
+  - i
+  - s
+  - u
+  gloss_hint: goddess
+  citation: 'Corpus record(s) 24 (corpora/hattic/inscriptions/). Klinger, J. (1996).
+    Untersuchungen zur Rekonstruktion der hattischen Kultschicht. StBoT 37. Wiesbaden:
+    Harrassowitz.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 0
+  - 7
+  sign_to_phoneme:
+    AB08: k
+    AB27: u
+    AB24: z
+    AB41: a
+    AB07: n
+    A301: i
+    AB39: s
+    AB44: u

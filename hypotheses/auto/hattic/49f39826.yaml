@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_lezuh_GO_Wc_1a_1_5
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''lezuh''
+  pinned to GO Wc 1a tokens [1..5].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: lezuh
+  phonemes:
+  - l
+  - e
+  - z
+  - u
+  - h
+  gloss_hint: cloths
+  citation: Corpus record(s) 53 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+equation:
+  inscription_id: GO Wc 1a
+  span:
+  - 1
+  - 5
+  sign_to_phoneme:
+    AB31: l
+    AB58: e
+    AB80: z
+    AB28: u
+    AB09: h

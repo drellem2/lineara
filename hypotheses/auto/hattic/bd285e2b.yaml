@@ -1,0 +1,32 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_katapa_KN_Zc_6_5_10
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''katapa''
+  pinned to KN Zc 6 tokens [5..10].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: katapa
+  phonemes:
+  - k
+  - a
+  - t
+  - a
+  - p
+  - a
+  gloss_hint: town
+  citation: 'Corpus record(s) 83 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+equation:
+  inscription_id: KN Zc 6
+  span:
+  - 5
+  - 10
+  sign_to_phoneme:
+    AB07: k
+    AB01: a
+    AB67: t
+    AB37: a
+    AB03: p
+    AB81: a

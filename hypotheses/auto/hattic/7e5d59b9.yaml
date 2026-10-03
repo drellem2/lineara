@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_nuwa_HT_123b_25_28
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''nuwa''
+  pinned to HT 123b tokens [25..28].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: nuwa
+  phonemes:
+  - n
+  - u
+  - w
+  - a
+  gloss_hint: come (verb stem)
+  citation: Corpus record(s) 55 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+equation:
+  inscription_id: HT 123b
+  span:
+  - 25
+  - 28
+  sign_to_phoneme:
+    AB69: n
+    AB02: u
+    AB07: w
+    AB01: a

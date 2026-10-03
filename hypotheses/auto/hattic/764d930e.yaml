@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_kait_HT_120_21_24
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''kait''
+  pinned to HT 120 tokens [21..24].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: kait
+  phonemes:
+  - k
+  - a
+  - i
+  - t
+  gloss_hint: grain goddess
+  citation: 'Corpus record(s) 9 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+equation:
+  inscription_id: HT 120
+  span:
+  - 21
+  - 24
+  sign_to_phoneme:
+    AB67: k
+    AB27: a
+    AB59: i
+    AB06: t

@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_katah_KH_5_0_4
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''katah''
+  pinned to KH 5 tokens [0..4].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: katah
+  phonemes:
+  - k
+  - a
+  - t
+  - a
+  - h
+  gloss_hint: queen
+  citation: 'Corpus record(s) 31 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: KH 5
+  span:
+  - 0
+  - 4
+  sign_to_phoneme:
+    AB08: k
+    AB01: a
+    AB67: t
+    AB41: a
+    AB77: h

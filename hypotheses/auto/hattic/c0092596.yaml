@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_tastenuwa_KN_Zf_13_1_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''tastenuwa''
+  pinned to KN Zf 13 tokens [1..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: tastenuwa
+  phonemes:
+  - t
+  - a
+  - s
+  - t
+  - e
+  - n
+  - u
+  - w
+  - a
+  gloss_hint: he should not come
+  citation: Corpus record(s) 56 (corpora/hattic/inscriptions/). 'Hattische Sprache',
+    de.wikipedia.org (accessed 2026-10-03), summarising the morphological analysis
+    of Soysal 2004; forms cross-checked against Soysal 2004 by citation only.
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 9
+  sign_to_phoneme:
+    AB27: t
+    AB24: a
+    AB41: s
+    AB07: t
+    A301: e
+    AB39: n
+    AB44: u
+    AB03: w
+    AB57: a

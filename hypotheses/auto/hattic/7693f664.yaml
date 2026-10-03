@@ -1,0 +1,28 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_zari_HT_104_6_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''zari''
+  pinned to HT 104 tokens [6..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: zari
+  phonemes:
+  - z
+  - a
+  - r
+  - i
+  gloss_hint: mortal, man
+  citation: 'Corpus record(s) 40 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: HT 104
+  span:
+  - 6
+  - 9
+  sign_to_phoneme:
+    AB81: z
+    AB09: a
+    AB24: r
+    AB37: i

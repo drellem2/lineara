@@ -1,0 +1,38 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_istustaya_KN_Zf_13_1_9
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''istustaya''
+  pinned to KN Zf 13 tokens [1..9].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: istustaya
+  phonemes:
+  - i
+  - s
+  - t
+  - u
+  - s
+  - t
+  - a
+  - y
+  - a
+  gloss_hint: fate goddess
+  citation: 'Corpus record(s) 22 (corpora/hattic/inscriptions/). Taracha, P. (2009).
+    Religions of Second Millennium Anatolia. Dresdner Beiträge zur Hethitologie 27.
+    Wiesbaden: Harrassowitz.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 1
+  - 9
+  sign_to_phoneme:
+    AB27: i
+    AB24: s
+    AB41: t
+    AB07: u
+    A301: s
+    AB39: t
+    AB44: a
+    AB03: y
+    AB57: a

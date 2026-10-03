@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_ashap_KN_Zf_13_13_17
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''ashap''
+  pinned to KN Zf 13 tokens [13..17].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: ashap
+  phonemes:
+  - a
+  - s
+  - h
+  - a
+  - p
+  gloss_hint: god
+  citation: 'Corpus record(s) 33 (corpora/hattic/inscriptions/). Soysal, O. (2004).
+    Hattischer Wortschatz in hethitischer Textüberlieferung. HdO I/74. Leiden: Brill.
+    Gloss rests on a Hattic-Hittite bilingual correspondence.'
+equation:
+  inscription_id: KN Zf 13
+  span:
+  - 13
+  - 17
+  sign_to_phoneme:
+    AB04: a
+    AB53: s
+    AB23: h
+    AB08: a
+    AB57: p

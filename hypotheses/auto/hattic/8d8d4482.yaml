@@ -1,0 +1,30 @@
+schema_version: candidate_equation.v1
+name: auto_hattic_nerik_HT_95a_22_26
+description: 'Auto-generated candidate equation: pool=''hattic'' entry surface=''nerik''
+  pinned to HT 95a tokens [22..26].'
+author: scripts/generate_candidates.py
+created: '2026-05-04'
+source_pool: hattic
+root:
+  surface: nerik
+  phonemes:
+  - n
+  - e
+  - r
+  - i
+  - k
+  gloss_hint: cult city of the storm god
+  citation: 'Corpus record(s) 71 (corpora/hattic/inscriptions/). del Monte, G. F.
+    & Tischler, J. (1978). Die Orts- und Gewässernamen der hethitischen Texte. RGTC
+    6. Wiesbaden: Reichert.'
+equation:
+  inscription_id: HT 95a
+  span:
+  - 22
+  - 26
+  sign_to_phoneme:
+    AB45: n
+    AB26: e
+    AB78: r
+    AB76: i
+    AB10: k
